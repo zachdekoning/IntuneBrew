@@ -1,0 +1,9 @@
+{
+  "name": "Slack",
+  "description": "Team communication and collaboration software",
+  "version": "4.40.133",
+  "url": "https://downloads.slack-edge.com/desktop-releases/mac/arm64/4.40.133/Slack-4.40.133-macOS.dmg",
+  "bundleId": null,
+  "homepage": "https://slack.com/",
+  "fileName": "Slack-4.40.133-macOS.dmg"
+}
