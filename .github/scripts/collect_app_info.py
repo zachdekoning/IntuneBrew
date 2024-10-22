@@ -14,18 +14,30 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/intune-company-portal.json"
 ]
 
+def find_bundle_id(json_string):
+    regex_patterns = {
+        'pkgutil': r'(?s)"pkgutil"\s*:\s*(?:\[\s*"([^"]+)"(?:,\s*"([^"]+)")?\s*\]|\s*"([^"]+)")',
+        'quit': r'(?s)"quit"\s*:\s*(?:\[\s*"([^"]+)"(?:,\s*"([^"]+)")?\s*\]|\s*"([^"]+)")',
+        'launchctl': r'(?s)"launchctl"\s*:\s*(?:\[\s*"([^"]+)"(?:,\s*"([^"]+)")?\s*\]|\s*"([^"]+)")'
+    }
+
+    for key, pattern in regex_patterns.items():
+        match = re.search(pattern, json_string)
+        if match:
+            if match.group(1):
+                return match.group(1)
+            elif match.group(3):
+                return match.group(3)
+
+    return None
+
 def get_homebrew_app_info(json_url):
     response = requests.get(json_url)
     response.raise_for_status()
     data = response.json()
+    json_string = json.dumps(data)
 
-    bundle_id = None
-    for key in ['pkgutil', 'quit', 'launchctl']:
-        if key in data:
-            bundle_id = data[key]
-            if isinstance(bundle_id, list):
-                bundle_id = bundle_id[0]
-            break
+    bundle_id = find_bundle_id(json_string)
 
     return {
         "name": data["name"][0],
@@ -38,11 +50,8 @@ def get_homebrew_app_info(json_url):
     }
 
 def sanitize_filename(name):
-    # Remove any characters that are not alphanumeric, space, or hyphen
     sanitized = re.sub(r'[^\w\s-]', '', name)
-    # Replace spaces with underscores
     sanitized = sanitized.replace(' ', '_')
-    # Convert to lowercase
     return sanitized.lower()
 
 def main():
