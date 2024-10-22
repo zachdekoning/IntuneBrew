@@ -3,7 +3,7 @@
   "description": "Web browser",
   "version": "131.0.3",
   "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/131.0.3/mac/en-US/Firefox%20131.0.3.dmg",
-  "bundleId": null,
+  "bundleId": "org.mozilla.firefox",
   "homepage": "https://www.mozilla.org/firefox/",
   "fileName": "Firefox%20131.0.3.dmg"
 }
