@@ -1,0 +1,9 @@
+{
+    "spotify": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/spotify.json",
+    "mozilla_firefox": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/mozilla_firefox.json",
+    "zoom": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zoom.json",
+    "company_portal": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/company_portal.json",
+    "microsoft_teams": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/microsoft_teams.json",
+    "slack": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/slack.json",
+    "google_chrome": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/google_chrome.json"
+}
