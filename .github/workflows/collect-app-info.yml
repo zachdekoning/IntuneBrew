@@ -2,7 +2,7 @@ name: Collect App Information
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Run daily at midnight UTC
+    - cron: "0 0 * * *" # Update Apps daily at midnight
   workflow_dispatch: # Allow manual triggering
 
 jobs:
@@ -27,10 +27,30 @@ jobs:
       - name: Collect app information
         run: python .github/scripts/collect_app_info.py
 
+      - name: Create supported_apps.json
+        run: |
+          python - <<EOF
+          import json
+          import os
+
+          apps_folder = "Apps"
+          supported_apps = {}
+
+          for filename in os.listdir(apps_folder):
+              if filename.endswith(".json"):
+                  app_name = os.path.splitext(filename)[0]
+                  supported_apps[app_name] = f"https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/{filename}"
+
+          with open("supported_apps.json", "w") as f:
+              json.dump(supported_apps, f, indent=4)
+
+          print("Created supported_apps.json")
+          EOF
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add Apps/*.json
-          git commit -m "Update app information" || exit 0
+          git add Apps/*.json supportedapps.json
+          git commit -m "Update app information and supported apps list" || exit 0
           git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
