@@ -2,6 +2,8 @@
 
 IntuneBrew is a PowerShell-based tool that simplifies the process of uploading and managing macOS applications in Microsoft Intune. It automates the entire workflow from downloading apps to uploading them to Intune, complete with proper metadata and logos.
 
+![IntuneBrew Demo](IntuneBrew_Demo.gif)
+
 > [!IMPORTANT]
 > 🚧 **Public Preview Notice**
 > 
@@ -12,8 +14,6 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 > - 💡 [Request Features](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=enhancement)
 >
 > Thank you for being an early adopter! 🙏
-
-![IntuneBrew Demo](IntuneBrew_Demo.gif)
 
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
