@@ -13,7 +13,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 >
 > Thank you for being an early adopter! 🙏
 
-![IntuneBrew Demo](IntuneBrew_Demo.mp4)
+![IntuneBrew Demo](IntuneBrew_Demo.gif)
 
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
