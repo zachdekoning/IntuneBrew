@@ -70,7 +70,12 @@ Currently supported applications include:
 - Mozilla Firefox
 - Google Chrome
 - Spotify
-
+- Notion
+- 1Password
+- VLC
+- Adobe Acrobat Reader
+- Visual Studio Code
+  
 ## 🔧 Configuration
 
 ### Azure App Registration

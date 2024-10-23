@@ -11,7 +11,12 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/slack.json",
     "https://formulae.brew.sh/api/cask/microsoft-teams.json",
     "https://formulae.brew.sh/api/cask/spotify.json",
-    "https://formulae.brew.sh/api/cask/intune-company-portal.json"
+    "https://formulae.brew.sh/api/cask/intune-company-portal.json",
+    "https://formulae.brew.sh/api/cask/1password.json",
+    "https://formulae.brew.sh/api/cask/notion.json",
+    "https://formulae.brew.sh/api/cask/vlc.json",
+    "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
+    "https://formulae.brew.sh/api/cask/visual-studio-code.json"
 ]
 
 def find_bundle_id(json_string):
