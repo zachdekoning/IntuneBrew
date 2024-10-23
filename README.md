@@ -13,7 +13,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 >
 > Thank you for being an early adopter! 🙏
 
-![IntuneBrew Demo](demo.gif)
+![IntuneBrew Demo](IntuneBrew_Demo.mp4)
 
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
@@ -68,7 +68,7 @@ Currently supported applications include:
 - KeePassXC
 - Microsoft Teams
 - Mozilla Firefox
-- Parallels
+- Parallels Desktop
 - Slack
 - Spotify
 - Windows App
