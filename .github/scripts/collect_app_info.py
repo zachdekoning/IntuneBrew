@@ -12,12 +12,11 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/microsoft-teams.json",
     "https://formulae.brew.sh/api/cask/spotify.json",
     "https://formulae.brew.sh/api/cask/intune-company-portal.json",
-    "https://formulae.brew.sh/api/cask/1password.json",
-    "https://formulae.brew.sh/api/cask/notion.json",
-    "https://formulae.brew.sh/api/cask/vlc.json",
     "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
-    "https://formulae.brew.sh/api/cask/visual-studio-code.json"
-]
+    "https://formulae.brew.sh/api/cask/windows-app.json",
+    "https://formulae.brew.sh/api/cask/parallels.json",
+    "https://formulae.brew.sh/api/cask/keepassxc.json"
+    ]
 
 def find_bundle_id(json_string):
     regex_patterns = {
@@ -69,6 +68,13 @@ def main():
             display_name = app_info['name']
             file_name = f"{sanitize_filename(display_name)}.json"
             file_path = os.path.join(apps_folder, file_name)
+
+            # Check if file exists and read existing bundle ID
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    if existing_data.get("bundleId") and app_info["bundleId"] is None:
+                        app_info["bundleId"] = existing_data["bundleId"]
 
             with open(file_path, "w") as f:
                 json.dump(app_info, f, indent=2)

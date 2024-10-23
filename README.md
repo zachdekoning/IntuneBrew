@@ -70,11 +70,10 @@ Currently supported applications include:
 - Mozilla Firefox
 - Google Chrome
 - Spotify
-- Notion
-- 1Password
-- VLC
+- Parallels
+- KeePassXC
+- Windows App
 - Adobe Acrobat Reader
-- Visual Studio Code
   
 ## 🔧 Configuration
 
