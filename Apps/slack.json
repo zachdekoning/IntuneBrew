@@ -1,9 +1,9 @@
 {
   "name": "Slack",
   "description": "Team communication and collaboration software",
-  "version": "4.40.133",
-  "url": "https://downloads.slack-edge.com/desktop-releases/mac/arm64/4.40.133/Slack-4.40.133-macOS.dmg",
+  "version": "4.41.96",
+  "url": "https://downloads.slack-edge.com/desktop-releases/mac/arm64/4.41.96/Slack-4.41.96-macOS.dmg",
   "bundleId": "com.tinyspeck.slackmacgap",
   "homepage": "https://slack.com/",
-  "fileName": "Slack-4.40.133-macOS.dmg"
+  "fileName": "Slack-4.41.96-macOS.dmg"
 }
