@@ -1,0 +1,9 @@
+{
+  "name": "Parallels Desktop",
+  "description": "Desktop virtualization software",
+  "version": "20.1.0-55732",
+  "url": "https://download.parallels.com/desktop/v20/20.1.0-55732/ParallelsDesktop-20.1.0-55732.dmg",
+  "bundleId": null,
+  "homepage": "https://www.parallels.com/products/desktop/",
+  "fileName": "ParallelsDesktop-20.1.0-55732.dmg"
+}
