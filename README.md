@@ -62,17 +62,17 @@ Follow the interactive prompts to:
 ### Supported Applications
 
 Currently supported applications include:
-- Company Portal
-- Microsoft Teams
-- Slack
-- Zoom
-- Mozilla Firefox
-- Google Chrome
-- Spotify
-- Parallels
-- KeePassXC
-- Windows App
 - Adobe Acrobat Reader
+- Company Portal
+- Google Chrome
+- KeePassXC
+- Microsoft Teams
+- Mozilla Firefox
+- Parallels
+- Slack
+- Spotify
+- Windows App
+- Zoom
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
