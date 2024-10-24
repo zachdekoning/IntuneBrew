@@ -475,12 +475,12 @@ function Write-ColoredTable {
     $lineSeparator = "+----------------------------+----------------------+----------------------+-----------------+"
     
     Write-Host $lineSeparator
-    Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f "App Name", "GitHub Version", "Intune Version", "Status") -ForegroundColor Cyan
+    Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f "App Name", "Latest Version", "Intune Version", "Status") -ForegroundColor Cyan
     Write-Host $lineSeparator
 
     foreach ($row in $TableData) {
         $color = $row.StatusColor
-        Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f $row.'App Name', $row.'GitHub Version', $row.'Intune Version', $row.Status) -ForegroundColor $color
+        Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f $row.'App Name', $row.'Latest Version', $row.'Intune Version', $row.Status) -ForegroundColor $color
         Write-Host $lineSeparator
     }
 }
