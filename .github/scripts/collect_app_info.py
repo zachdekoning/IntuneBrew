@@ -2,6 +2,8 @@ import json
 import os
 import requests
 import re
+import fileinput
+from pathlib import Path
 
 # Array of Homebrew cask JSON URLs
 homebrew_cask_urls = [
@@ -15,7 +17,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
     "https://formulae.brew.sh/api/cask/windows-app.json",
     "https://formulae.brew.sh/api/cask/parallels.json",
-    "https://formulae.brew.sh/api/cask/keepassxc.json"
+    "https://formulae.brew.sh/api/cask/keepassxc.json",
+    "https://formulae.brew.sh/api/cask/synology-drive.json"
     ]
 
 def find_bundle_id(json_string):
@@ -58,14 +61,53 @@ def sanitize_filename(name):
     sanitized = sanitized.replace(' ', '_')
     return sanitized.lower()
 
+def update_readme_apps(apps_list):
+    readme_path = Path(__file__).parent.parent.parent / "README.md"
+    if not readme_path.exists():
+        print("README.md not found")
+        return
+
+    # Read the entire README
+    with open(readme_path, 'r') as f:
+        content = f.read()
+
+    # Find the supported applications section
+    start_marker = "Currently supported applications include:"
+    end_marker = "> [!NOTE]"
+    
+    start_idx = content.find(start_marker)
+    end_idx = content.find(end_marker)
+    
+    if start_idx == -1 or end_idx == -1:
+        print("Couldn't find the supported applications section in README.md")
+        return
+
+    # Format the new apps list
+    apps_list_formatted = "\n".join(f"- {app}" for app in sorted(apps_list))
+    
+    # Construct the new content
+    new_content = (
+        content[:start_idx + len(start_marker)] +
+        "\n" + apps_list_formatted + "\n\n" +
+        content[end_idx:]
+    )
+
+    # Write the updated content back to README.md
+    with open(readme_path, 'w') as f:
+        f.write(new_content)
+
 def main():
     apps_folder = "Apps"
     os.makedirs(apps_folder, exist_ok=True)
+    
+    # List to store app display names
+    supported_apps = []
 
     for url in homebrew_cask_urls:
         try:
             app_info = get_homebrew_app_info(url)
             display_name = app_info['name']
+            supported_apps.append(display_name)
             file_name = f"{sanitize_filename(display_name)}.json"
             file_path = os.path.join(apps_folder, file_name)
 
@@ -82,6 +124,9 @@ def main():
             print(f"Saved app information for {display_name} to {file_path}")
         except Exception as e:
             print(f"Error processing {url}: {str(e)}")
+
+    # Update the README with the current list of supported apps
+    update_readme_apps(supported_apps)
 
 if __name__ == "__main__":
     main()
