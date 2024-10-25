@@ -368,20 +368,31 @@ function Is-NewerVersion($githubVersion, $intuneVersion) {
         $ghVersion = $githubVersion -replace '-.*$'
         $itVersion = $intuneVersion -replace '-.*$'
 
-        # Compare the cleaned version numbers
-        $ghVersionObj = [Version]$ghVersion
-        $itVersionObj = [Version]$itVersion
+        # Handle versions with commas (e.g., "3.5.1,16101")
+        $ghVersionParts = $ghVersion -split ','
+        $itVersionParts = $itVersion -split ','
 
-        # If main versions are equal, compare the full string including build numbers
-        if ($ghVersionObj -eq $itVersionObj) {
-            return $githubVersion -ne $intuneVersion
+        # Compare main version numbers first
+        $ghMainVersion = [Version]($ghVersionParts[0])
+        $itMainVersion = [Version]($itVersionParts[0])
+
+        if ($ghMainVersion -ne $itMainVersion) {
+            return ($ghMainVersion -gt $itMainVersion)
         }
 
-        return ($ghVersionObj -gt $itVersionObj)
+        # If main versions are equal and there are build numbers
+        if ($ghVersionParts.Length -gt 1 -and $itVersionParts.Length -gt 1) {
+            $ghBuild = [int]$ghVersionParts[1]
+            $itBuild = [int]$itVersionParts[1]
+            return $ghBuild -gt $itBuild
+        }
+
+        # If versions are exactly equal
+        return $githubVersion -ne $intuneVersion
     }
     catch {
-        Write-Host "Version comparison failed: GitHubVersion='$githubVersion', IntuneVersion='$intuneVersion'. Assuming new version is available." -ForegroundColor Yellow
-        return $true
+        Write-Host "Version comparison failed: GitHubVersion='$githubVersion', IntuneVersion='$intuneVersion'. Assuming versions are equal." -ForegroundColor Yellow
+        return $false
     }
 }
 
