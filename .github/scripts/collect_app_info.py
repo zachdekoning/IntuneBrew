@@ -67,6 +67,9 @@ def update_readme_apps(apps_list):
         print("README.md not found")
         return
 
+    print(f"Updating README at: {readme_path}")
+    print(f"Apps to add: {sorted(apps_list)}")
+
     # Read the entire README
     with open(readme_path, 'r') as f:
         content = f.read()
@@ -79,7 +82,9 @@ def update_readme_apps(apps_list):
     end_idx = content.find(end_marker)
     
     if start_idx == -1 or end_idx == -1:
-        print("Couldn't find the supported applications section in README.md")
+        print("Couldn't find the markers in README.md")
+        print(f"Start marker found: {start_idx != -1}")
+        print(f"End marker found: {end_idx != -1}")
         return
 
     # Format the new apps list
@@ -95,6 +100,7 @@ def update_readme_apps(apps_list):
     # Write the updated content back to README.md
     with open(readme_path, 'w') as f:
         f.write(new_content)
+    print("README.md has been updated")
 
 def main():
     apps_folder = "Apps"
