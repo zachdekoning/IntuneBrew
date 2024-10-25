@@ -71,6 +71,7 @@ Currently supported applications include:
 - Parallels Desktop
 - Slack
 - Spotify
+- Synology Drive
 - Windows App
 - Zoom
 
