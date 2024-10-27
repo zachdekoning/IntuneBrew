@@ -3,7 +3,7 @@
   "description": "Multimedia player",
   "version": "3.0.21",
   "url": "https://get.videolan.org/vlc/3.0.21/macosx/vlc-3.0.21-arm64.dmg",
-  "bundleId": null,
+  "bundleId": "org.videolan.vlc",
   "homepage": "https://www.videolan.org/vlc/",
   "fileName": "vlc-3.0.21-arm64.dmg"
 }

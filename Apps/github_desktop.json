@@ -3,7 +3,7 @@
   "description": "Desktop client for GitHub repositories",
   "version": "3.4.8-e3aa0782",
   "url": "https://desktop.githubusercontent.com/releases/3.4.8-e3aa0782/GitHubDesktop-arm64.zip",
-  "bundleId": null,
+  "bundleId": "com.github.GitHubClient",
   "homepage": "https://desktop.github.com/",
   "fileName": "GitHubDesktop-arm64.zip"
 }
