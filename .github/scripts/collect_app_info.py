@@ -22,9 +22,7 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/grammarly-desktop.json",
     "https://formulae.brew.sh/api/cask/todoist.json",
     "https://formulae.brew.sh/api/cask/xmind.json",
-    "https://formulae.brew.sh/api/cask/github.json",
     "https://formulae.brew.sh/api/cask/docker.json",
-    "https://formulae.brew.sh/api/cask/visual-studio-code.json",
     "https://formulae.brew.sh/api/cask/vlc.json"
     ]
 
