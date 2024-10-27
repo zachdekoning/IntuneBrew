@@ -18,7 +18,14 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/windows-app.json",
     "https://formulae.brew.sh/api/cask/parallels.json",
     "https://formulae.brew.sh/api/cask/keepassxc.json",
-    "https://formulae.brew.sh/api/cask/synology-drive.json"
+    "https://formulae.brew.sh/api/cask/synology-drive.json",
+    "https://formulae.brew.sh/api/cask/grammarly-desktop.json",
+    "https://formulae.brew.sh/api/cask/todoist.json",
+    "https://formulae.brew.sh/api/cask/xmind.json",
+    "https://formulae.brew.sh/api/cask/github.json",
+    "https://formulae.brew.sh/api/cask/docker.json",
+    "https://formulae.brew.sh/api/cask/visual-studio-code.json",
+    "https://formulae.brew.sh/api/cask/vlc.json"
     ]
 
 def find_bundle_id(json_string):
