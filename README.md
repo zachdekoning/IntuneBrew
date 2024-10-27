@@ -64,15 +64,22 @@ Follow the interactive prompts to:
 Currently supported applications include:
 - Adobe Acrobat Reader
 - Company Portal
+- Docker Desktop
+- GitHub Desktop
 - Google Chrome
+- Grammarly Desktop
 - KeePassXC
 - Microsoft Teams
+- Microsoft Visual Studio Code
 - Mozilla Firefox
 - Parallels Desktop
 - Slack
 - Spotify
 - Synology Drive
+- Todoist
+- VLC media player
 - Windows App
+- XMind
 - Zoom
 
 > [!NOTE]
