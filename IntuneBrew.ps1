@@ -11,8 +11,8 @@
     File Name      : IntuneBrew.ps1
     Author         : Ugur Koc
     Prerequisite   : PowerShell 7+, Microsoft Graph PowerShell SDK
-    Version        : 0.2 Preview
-    Date           : 2024-10-23
+    Version        : 0.3 Preview
+    Date           : 2024-10-27
 
 .LINK
     https://github.com/ugurkocde/IntuneBrew
