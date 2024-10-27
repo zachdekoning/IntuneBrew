@@ -31,8 +31,8 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.2 Public Preview" -ForegroundColor Yellow -NoNewline
-Write-Host " | Last updated: " -NoNewline; Write-Host "2024-10-23" -ForegroundColor Magenta
+Write-Host " | Version" -NoNewline; Write-Host " 0.3 Public Preview" -ForegroundColor Yellow -NoNewline
+Write-Host " | Last updated: " -NoNewline; Write-Host "2024-10-27" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
 Write-Host ""
@@ -256,42 +256,93 @@ function UploadFileToAzureStorage($sasUri, $filepath) {
     $fileSize = (Get-Item $filepath).Length
     $totalBlocks = [Math]::Ceiling($fileSize / $blockSize)
     
-    $fileStream = [System.IO.File]::OpenRead($filepath)
-    $blockId = 0
-    $blockList = [System.Xml.Linq.XDocument]::Parse('<?xml version="1.0" encoding="utf-8"?><BlockList />')
-    $blockBuffer = [byte[]]::new($blockSize)
+    $maxRetries = 3
+    $retryCount = 0
+    $uploadSuccess = $false
 
-    Write-Host "Uploading file to Azure Storage:"
-    Write-Host "Total size: $([Math]::Round($fileSize / 1MB, 2)) MB"
-    Write-Host "Block size: $($blockSize / 1MB) MB"
-    Write-Host ""
-    
-    while ($bytesRead = $fileStream.Read($blockBuffer, 0, $blockSize)) {
-        $id = [System.Convert]::ToBase64String([System.BitConverter]::GetBytes([int]$blockId))
-        $blockList.Root.Add([System.Xml.Linq.XElement]::new("Latest", $id))
+    while (-not $uploadSuccess -and $retryCount -lt $maxRetries) {
+        try {
+            $fileStream = [System.IO.File]::OpenRead($filepath)
+            $blockId = 0
+            $blockList = [System.Xml.Linq.XDocument]::Parse('<?xml version="1.0" encoding="utf-8"?><BlockList />')
+            $blockBuffer = [byte[]]::new($blockSize)
 
-        Invoke-WebRequest -Method Put "$sasUri&comp=block&blockid=$id" -Headers @{"x-ms-blob-type" = "BlockBlob" } `
-            -Body ([byte[]]($blockBuffer[0..$($bytesRead - 1)])) | Out-Null
+            Write-Host "`nUploading file to Azure Storage (Attempt $($retryCount + 1) of $maxRetries):"
+            Write-Host "Total size: $([Math]::Round($fileSize / 1MB, 2)) MB"
+            Write-Host "Block size: $($blockSize / 1MB) MB"
+            Write-Host ""
+            
+            while ($bytesRead = $fileStream.Read($blockBuffer, 0, $blockSize)) {
+                $id = [System.Convert]::ToBase64String([System.BitConverter]::GetBytes([int]$blockId))
+                $blockList.Root.Add([System.Xml.Linq.XElement]::new("Latest", $id))
 
-        $percentComplete = [Math]::Round(($blockId + 1) / $totalBlocks * 100, 1)
-        $uploadedMB = [Math]::Min(
-            [Math]::Round(($blockId + 1) * $blockSize / 1MB, 1),
-            [Math]::Round($fileSize / 1MB, 1)
-        )
-        $totalMB = [Math]::Round($fileSize / 1MB, 1)
-        
-        # Clear the current line and write the progress
-        Write-Host "`rProgress: [$($percentComplete)%] $uploadedMB MB / $totalMB MB" -NoNewline
-        
-        $blockId++
+                $uploadBlockSuccess = $false
+                $blockRetries = 3
+                while (-not $uploadBlockSuccess -and $blockRetries -gt 0) {
+                    try {
+                        Invoke-WebRequest -Method Put "$sasUri&comp=block&blockid=$id" `
+                            -Headers @{"x-ms-blob-type" = "BlockBlob" } `
+                            -Body ([byte[]]($blockBuffer[0..$($bytesRead - 1)])) `
+                            -ErrorAction Stop | Out-Null
+                        $uploadBlockSuccess = $true
+                    }
+                    catch {
+                        $blockRetries--
+                        if ($blockRetries -gt 0) {
+                            Write-Host "Retrying block upload..." -ForegroundColor Yellow
+                            Start-Sleep -Seconds 2
+                        }
+                        else {
+                            throw
+                        }
+                    }
+                }
+
+                $percentComplete = [Math]::Round(($blockId + 1) / $totalBlocks * 100, 1)
+                $uploadedMB = [Math]::Min(
+                    [Math]::Round(($blockId + 1) * $blockSize / 1MB, 1),
+                    [Math]::Round($fileSize / 1MB, 1)
+                )
+                $totalMB = [Math]::Round($fileSize / 1MB, 1)
+                
+                Write-Host "`rProgress: [$($percentComplete)%] $uploadedMB MB / $totalMB MB" -NoNewline
+                
+                $blockId++
+            }
+            
+            Write-Host ""
+            
+            $fileStream.Close()
+
+            Invoke-RestMethod -Method Put "$sasUri&comp=blocklist" -Body $blockList | Out-Null
+            $uploadSuccess = $true
+        }
+        catch {
+            $retryCount++
+            if ($retryCount -lt $maxRetries) {
+                Write-Host "`nUpload failed. Retrying in 5 seconds..." -ForegroundColor Yellow
+                Start-Sleep -Seconds 5
+                
+                # Request a new SAS token
+                Write-Host "Requesting new upload URL..." -ForegroundColor Yellow
+                $newFileStatus = Invoke-MgGraphRequest -Method GET -Uri $fileStatusUri
+                if ($newFileStatus.azureStorageUri) {
+                    $sasUri = $newFileStatus.azureStorageUri
+                    Write-Host "Received new upload URL" -ForegroundColor Green
+                }
+            }
+            else {
+                Write-Host "`nFailed to upload file after $maxRetries attempts." -ForegroundColor Red
+                Write-Host "Error: $_" -ForegroundColor Red
+                throw
+            }
+        }
+        finally {
+            if ($fileStream) {
+                $fileStream.Close()
+            }
+        }
     }
-    
-    # Add a newline after the progress is complete
-    Write-Host ""
-    
-    $fileStream.Close()
-
-    Invoke-RestMethod -Method Put "$sasUri&comp=blocklist" -Body $blockList | Out-Null
 }
 
 # Validates GitHub URL format for security
@@ -753,3 +804,4 @@ foreach ($jsonUrl in $githubJsonUrls) {
 Write-Host "`n🎉 All operations completed successfully!" -ForegroundColor Green
 Disconnect-MgGraph > $null 2>&1
 Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
+

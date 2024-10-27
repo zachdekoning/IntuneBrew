@@ -1,9 +1,0 @@
-{
-  "name": "Microsoft Visual Studio Code",
-  "description": "Open-source code editor",
-  "version": "1.94.2",
-  "url": "https://update.code.visualstudio.com/1.94.2/darwin-arm64/stable",
-  "bundleId": "com.microsoft.VSCode",
-  "homepage": "https://code.visualstudio.com/",
-  "fileName": "stable"
-}
