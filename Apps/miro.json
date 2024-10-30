@@ -3,7 +3,7 @@
   "description": "Online collaborative whiteboard platform",
   "version": "0.8.74",
   "url": "https://desktop.miro.com/platforms/darwin-arm64/Install-Miro.dmg",
-  "bundleId": null,
+  "bundleId": "com.electron.realtimeboard",
   "homepage": "https://miro.com/",
   "fileName": "Install-Miro.dmg"
 }
