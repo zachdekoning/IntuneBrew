@@ -4,6 +4,7 @@ import requests
 import re
 import fileinput
 from pathlib import Path
+import subprocess
 
 # Array of Homebrew cask JSON URLs
 homebrew_cask_urls = [
@@ -25,6 +26,11 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/docker.json",
     "https://formulae.brew.sh/api/cask/vlc.json"
     ]
+
+# Custom scraper scripts to run
+custom_scrapers = [
+    ".github/scripts/scrapers/1password.sh"
+]
 
 def find_bundle_id(json_string):
     regex_patterns = {
@@ -111,9 +117,22 @@ def main():
     apps_folder = "Apps"
     os.makedirs(apps_folder, exist_ok=True)
     
-    # List to store app display names
     supported_apps = []
 
+    # Run custom scrapers
+    for scraper in custom_scrapers:
+        try:
+            subprocess.run([scraper], check=True)
+            # Get the app name from the JSON file created by the scraper
+            json_file = os.path.join(apps_folder, os.path.basename(scraper).replace('.sh', '.json'))
+            if os.path.exists(json_file):
+                with open(json_file, 'r') as f:
+                    app_data = json.load(f)
+                    supported_apps.append(app_data['name'])
+        except Exception as e:
+            print(f"Error running scraper {scraper}: {str(e)}")
+
+    # Process Homebrew cask URLs
     for url in homebrew_cask_urls:
         try:
             app_info = get_homebrew_app_info(url)
@@ -122,7 +141,6 @@ def main():
             file_name = f"{sanitize_filename(display_name)}.json"
             file_path = os.path.join(apps_folder, file_name)
 
-            # Check if file exists and read existing bundle ID
             if os.path.exists(file_path):
                 with open(file_path, "r") as f:
                     existing_data = json.load(f)

@@ -19,6 +19,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Make scrapers executable
+        run: chmod +x .github/scripts/scrapers/*.sh
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
