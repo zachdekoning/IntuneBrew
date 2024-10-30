@@ -24,7 +24,12 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/todoist.json",
     "https://formulae.brew.sh/api/cask/xmind.json",
     "https://formulae.brew.sh/api/cask/docker.json",
-    "https://formulae.brew.sh/api/cask/vlc.json"
+    "https://formulae.brew.sh/api/cask/vlc.json",
+    "https://formulae.brew.sh/api/cask/bitwarden.json",
+    "https://formulae.brew.sh/api/cask/figma.json",
+    "https://formulae.brew.sh/api/cask/miro.json",
+    "https://formulae.brew.sh/api/cask/postman.json",
+    "https://formulae.brew.sh/api/cask/the-unarchiver.json"
     ]
 
 # Custom scraper scripts to run
