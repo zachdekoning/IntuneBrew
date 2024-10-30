@@ -64,7 +64,6 @@ Follow the interactive prompts to:
 Currently supported applications include:
 - 1Password
 - Adobe Acrobat Reader
-- Android Studio
 - Bitwarden
 - Blender
 - Canva
