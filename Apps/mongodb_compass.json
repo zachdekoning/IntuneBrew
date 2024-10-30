@@ -1,0 +1,9 @@
+{
+  "name": "MongoDB Compass",
+  "description": "Interactive tool for analyzing MongoDB data",
+  "version": "1.44.5",
+  "url": "https://downloads.mongodb.com/compass/mongodb-compass-1.44.5-darwin-arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://www.mongodb.com/products/compass",
+  "fileName": "mongodb-compass-1.44.5-darwin-arm64.dmg"
+}

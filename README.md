@@ -74,6 +74,7 @@ Currently supported applications include:
 - KeePassXC
 - Microsoft Teams
 - Miro
+- MongoDB Compass
 - Mozilla Firefox
 - Parallels Desktop
 - Slack
@@ -82,6 +83,7 @@ Currently supported applications include:
 - Synology Drive
 - Todoist
 - VLC media player
+- Webex Teams
 - Windows App
 - XMind
 - Zoom
