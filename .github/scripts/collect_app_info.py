@@ -28,7 +28,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/bitwarden.json",
     "https://formulae.brew.sh/api/cask/miro.json",
     "https://formulae.brew.sh/api/cask/snagit.json",
-    "https://formulae.brew.sh/api/cask/android-studio.json",
     "https://formulae.brew.sh/api/cask/canva.json",
     "https://formulae.brew.sh/api/cask/blender.json"
     ]
