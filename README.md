@@ -62,6 +62,7 @@ Follow the interactive prompts to:
 ### Supported Applications
 
 Currently supported applications include:
+- 1Password
 - Adobe Acrobat Reader
 - Company Portal
 - Docker Desktop
