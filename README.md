@@ -64,15 +64,21 @@ Follow the interactive prompts to:
 Currently supported applications include:
 - 1Password
 - Adobe Acrobat Reader
+- Android Studio
+- Bitwarden
+- Blender
+- Canva
 - Company Portal
 - Docker Desktop
 - Google Chrome
 - Grammarly Desktop
 - KeePassXC
 - Microsoft Teams
+- Miro
 - Mozilla Firefox
 - Parallels Desktop
 - Slack
+- Snagit
 - Spotify
 - Synology Drive
 - Todoist

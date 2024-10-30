@@ -1,20 +1,26 @@
 {
     "xmind": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/xmind.json",
     "spotify": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/spotify.json",
+    "canva": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/canva.json",
     "1password": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/1password.json",
     "mozilla_firefox": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/mozilla_firefox.json",
+    "snagit": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/snagit.json",
     "windows_app": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/windows_app.json",
     "docker_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/docker_desktop.json",
     "zoom": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zoom.json",
+    "android_studio": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/android_studio.json",
     "grammarly_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/grammarly_desktop.json",
     "company_portal": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/company_portal.json",
     "parallels_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/parallels_desktop.json",
+    "miro": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/miro.json",
     "synology_drive": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/synology_drive.json",
     "adobe_acrobat_reader": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/adobe_acrobat_reader.json",
+    "bitwarden": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/bitwarden.json",
     "todoist": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/todoist.json",
     "microsoft_teams": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/microsoft_teams.json",
     "vlc_media_player": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/vlc_media_player.json",
     "slack": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/slack.json",
     "google_chrome": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/google_chrome.json",
-    "keepassxc": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/keepassxc.json"
+    "keepassxc": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/keepassxc.json",
+    "blender": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/blender.json"
 }
