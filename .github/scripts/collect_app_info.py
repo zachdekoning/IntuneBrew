@@ -109,7 +109,6 @@ def update_readme_apps(apps_list):
                 apps_info.append({
                     'name': data['name'],
                     'version': data['version'],
-                    'last_updated': app_json.stat().st_mtime,
                     'logo': logo_file
                 })
             except Exception as e:
@@ -121,14 +120,13 @@ def update_readme_apps(apps_list):
     # Create the new table content
     table_content = """### 📱 Supported Applications
 
-| Logo | Application | Latest Version | Last Updated |
-|------|------------|----------------|--------------|
+| Application | Latest Version |
+|-------------|----------------|
 """
     
     for app in apps_info:
-        last_updated = datetime.fromtimestamp(app['last_updated']).strftime('%Y-%m-%d')
         logo_cell = f"<img src='{app['logo']}' width='32' height='32'>" if app['logo'] else "❌"
-        table_content += f"| {logo_cell} | {app['name']} | {app['version']} | {last_updated} |\n"
+        table_content += f"| {logo_cell} {app['name']} | {app['version']} |\n"
 
     # Add note about requesting new apps
     table_content += "\n> [!NOTE]\n"
