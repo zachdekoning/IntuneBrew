@@ -137,8 +137,8 @@ def update_readme_apps(apps_list):
     with open(readme_path, 'r') as f:
         content = f.read()
 
-    # Find the supported applications section
-    start_marker = "### Supported Applications"
+    # Find the supported applications section using the correct marker
+    start_marker = "### 📱 Supported Applications"
     end_marker = "## 🔧 Configuration"
     
     start_idx = content.find(start_marker)
@@ -146,6 +146,8 @@ def update_readme_apps(apps_list):
     
     if start_idx == -1 or end_idx == -1:
         print("Couldn't find the markers in README.md")
+        print(f"Start marker found: {start_idx != -1}")
+        print(f"End marker found: {end_idx != -1}")
         return
 
     # Construct the new content
