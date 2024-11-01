@@ -59,34 +59,35 @@ Follow the interactive prompts to:
 3. Monitor the upload progress
 4. View the results in Intune
 
-### Supported Applications
+### 📱 Supported Applications
 
-Currently supported applications include:
-- 1Password
-- Adobe Acrobat Reader
-- Bitwarden
-- Blender
-- Canva
-- Company Portal
-- Docker Desktop
-- Google Chrome
-- Grammarly Desktop
-- KeePassXC
-- Microsoft Teams
-- Miro
-- MongoDB Compass
-- Mozilla Firefox
-- Parallels Desktop
-- Slack
-- Snagit
-- Spotify
-- Synology Drive
-- Todoist
-- VLC media player
-- Webex Teams
-- Windows App
-- XMind
-- Zoom
+| Logo | Application | Latest Version | Last Updated |
+|------|------------|----------------|--------------|
+| <img src='Logos/1password.png' width='32' height='32'> | 1Password | 8.10.50 | 2024-11-01 |
+| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> | Adobe Acrobat Reader | 24.004.20219 | 2024-11-01 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> | Bitwarden | 2024.10.2 | 2024-11-01 |
+| <img src='Logos/blender.png' width='32' height='32'> | Blender | 4.2.3 | 2024-11-01 |
+| <img src='Logos/canva.png' width='32' height='32'> | Canva | 1.97.0 | 2024-11-01 |
+| <img src='Logos/company_portal.png' width='32' height='32'> | Company Portal | 5.2409.1 | 2024-11-01 |
+| <img src='Logos/docker_desktop.png' width='32' height='32'> | Docker Desktop | 4.35.1,173168 | 2024-11-01 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> | Google Chrome | 130.0.6723.92 | 2024-11-01 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> | Grammarly Desktop | 1.93.5.0 | 2024-11-01 |
+| <img src='Logos/keepassxc.png' width='32' height='32'> | KeePassXC | 2.7.9 | 2024-11-01 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> | Microsoft Teams | 24277.3502.3161.3007 | 2024-11-01 |
+| <img src='Logos/miro.png' width='32' height='32'> | Miro | 0.8.74 | 2024-11-01 |
+| <img src='Logos/mongodb_compass.png' width='32' height='32'> | MongoDB Compass | 1.44.6 | 2024-11-01 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> | Mozilla Firefox | 132.0 | 2024-11-01 |
+| <img src='Logos/parallels_desktop.png' width='32' height='32'> | Parallels Desktop | 20.1.1-55740 | 2024-11-01 |
+| <img src='Logos/slack.png' width='32' height='32'> | Slack | 4.41.97 | 2024-11-01 |
+| <img src='Logos/snagit.png' width='32' height='32'> | Snagit | 2024.3.2 | 2024-11-01 |
+| <img src='Logos/spotify.png' width='32' height='32'> | Spotify | 1.2.49.439 | 2024-11-01 |
+| <img src='Logos/synology_drive.png' width='32' height='32'> | Synology Drive | 3.5.1,16101 | 2024-11-01 |
+| <img src='Logos/todoist.png' width='32' height='32'> | Todoist | 9.9.0 | 2024-11-01 |
+| <img src='Logos/vlc_media_player.png' width='32' height='32'> | VLC media player | 3.0.21 | 2024-11-01 |
+| <img src='Logos/webex_teams.png' width='32' height='32'> | Webex Teams | 44.10.1.31028 | 2024-11-01 |
+| <img src='Logos/windows_app.png' width='32' height='32'> | Windows App | 11.0.6 | 2024-11-01 |
+| <img src='Logos/xmind.png' width='32' height='32'> | XMind | 24.10.01101-202410201844 | 2024-11-01 |
+| <img src='Logos/zoom.png' width='32' height='32'> | Zoom | 6.2.6.41824 | 2024-11-01 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
