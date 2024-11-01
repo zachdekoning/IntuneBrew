@@ -126,7 +126,7 @@ def update_readme_apps(apps_list):
     
     for app in apps_info:
         logo_cell = f"<img src='{app['logo']}' width='32' height='32'>" if app['logo'] else "❌"
-        table_content += f"| {logo_cell} {app['name']} | {app['version']} |\n"
+        table_content += f"| <div style='display: flex; align-items: center; gap: 8px;'>{logo_cell} {app['name']}</div> | {app['version']} |\n"
 
     # Add note about requesting new apps
     table_content += "\n> [!NOTE]\n"
