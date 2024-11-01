@@ -5,6 +5,7 @@ import re
 import fileinput
 from pathlib import Path
 import subprocess
+from datetime import datetime
 
 # Array of Homebrew cask JSON URLs
 homebrew_cask_urls = [
@@ -81,44 +82,86 @@ def sanitize_filename(name):
 
 def update_readme_apps(apps_list):
     readme_path = Path(__file__).parent.parent.parent / "README.md"
+    logos_path = Path(__file__).parent.parent.parent / "Logos"
     if not readme_path.exists():
         print("README.md not found")
         return
 
     print(f"Updating README at: {readme_path}")
-    print(f"Apps to add: {sorted(apps_list)}")
+
+    # Read all app JSON files to get versions
+    apps_folder = Path(__file__).parent.parent.parent / "Apps"
+    apps_info = []
+    
+    for app_json in apps_folder.glob("*.json"):
+        app_name = app_json.stem
+        # Look for matching logo file (trying both .png and .ico)
+        logo_file = None
+        for ext in ['.png', '.ico']:
+            potential_logo = logos_path / f"{app_name}{ext}"
+            if potential_logo.exists():
+                logo_file = f"Logos/{app_name}{ext}"
+                break
+
+        with open(app_json, 'r') as f:
+            try:
+                data = json.load(f)
+                apps_info.append({
+                    'name': data['name'],
+                    'version': data['version'],
+                    'last_updated': app_json.stat().st_mtime,
+                    'logo': logo_file
+                })
+            except Exception as e:
+                print(f"Error reading {app_json}: {e}")
+
+    # Sort apps by name
+    apps_info.sort(key=lambda x: x['name'].lower())
+
+    # Create the new table content
+    table_content = """### 📱 Supported Applications
+
+| Logo | Application | Latest Version | Last Updated |
+|------|------------|----------------|--------------|
+"""
+    
+    for app in apps_info:
+        last_updated = datetime.fromtimestamp(app['last_updated']).strftime('%Y-%m-%d')
+        logo_cell = f"<img src='{app['logo']}' width='32' height='32'>" if app['logo'] else "❌"
+        table_content += f"| {logo_cell} | {app['name']} | {app['version']} | {last_updated} |\n"
+
+    # Add note about requesting new apps
+    table_content += "\n> [!NOTE]\n"
+    table_content += "> Missing an app? Feel free to [request additional app support]"
+    table_content += "(https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!\n"
 
     # Read the entire README
     with open(readme_path, 'r') as f:
         content = f.read()
 
     # Find the supported applications section
-    start_marker = "Currently supported applications include:"
-    end_marker = "> [!NOTE]"
+    start_marker = "### Supported Applications"
+    end_marker = "## 🔧 Configuration"
     
     start_idx = content.find(start_marker)
     end_idx = content.find(end_marker)
     
     if start_idx == -1 or end_idx == -1:
         print("Couldn't find the markers in README.md")
-        print(f"Start marker found: {start_idx != -1}")
-        print(f"End marker found: {end_idx != -1}")
         return
 
-    # Format the new apps list
-    apps_list_formatted = "\n".join(f"- {app}" for app in sorted(apps_list))
-    
     # Construct the new content
     new_content = (
-        content[:start_idx + len(start_marker)] +
-        "\n" + apps_list_formatted + "\n\n" +
+        content[:start_idx] +
+        table_content +
+        "\n" +
         content[end_idx:]
     )
 
     # Write the updated content back to README.md
     with open(readme_path, 'w') as f:
         f.write(new_content)
-    print("README.md has been updated")
+    print("README.md has been updated with the new table format including logos")
 
 def main():
     apps_folder = "Apps"
