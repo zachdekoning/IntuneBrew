@@ -80,8 +80,8 @@ def get_homebrew_app_info(json_url):
     }
 
 def sanitize_filename(name):
-    sanitized = re.sub(r'[^\w\s-]', '', name)
-    sanitized = sanitized.replace(' ', '_')
+    sanitized = name.replace(' ', '_')
+    sanitized = re.sub(r'[^\w_]', '', sanitized)
     return sanitized.lower()
 
 def update_readme_apps(apps_list):
@@ -103,9 +103,14 @@ def update_readme_apps(apps_list):
         app_name = app_json.stem
         # Look for matching logo file (trying both .png and .ico)
         logo_file = None
+        
+        # Convert app name to the standardized format (with underscores)
+        standardized_name = sanitize_filename(app_name)
+        
         for ext in ['.png', '.ico']:
             # Case-insensitive search for logo files
-            potential_logos = [f for f in os.listdir(logos_path) if f.lower() == f"{app_name}{ext}".lower()]
+            potential_logos = [f for f in os.listdir(logos_path) 
+                             if f.lower() == f"{standardized_name}{ext}".lower()]
             if potential_logos:
                 logo_file = f"Logos/{potential_logos[0]}"
                 break
