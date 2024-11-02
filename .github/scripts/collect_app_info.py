@@ -100,29 +100,29 @@ def update_readme_apps(apps_list):
     missing_logos = []
     
     for app_json in apps_folder.glob("*.json"):
-        app_name = app_json.stem
-        # Look for matching logo file (trying both .png and .ico)
-        logo_file = None
-        
-        # Convert app name to the standardized format (with underscores)
-        standardized_name = sanitize_filename(app_name)
-        
-        for ext in ['.png', '.ico']:
-            # Case-insensitive search for logo files
-            potential_logos = [f for f in os.listdir(logos_path) 
-                             if f.lower() == f"{standardized_name}{ext}".lower()]
-            if potential_logos:
-                logo_file = f"Logos/{potential_logos[0]}"
-                break
-        
-        if not logo_file:
-            missing_logos.append(app_name)
-
+        # Read the JSON file to get the display name
         with open(app_json, 'r') as f:
             try:
                 data = json.load(f)
+                display_name = data['name']
+                # Convert display name to filename format
+                logo_name = sanitize_filename(display_name)
+                
+                # Look for matching logo file (trying both .png and .ico)
+                logo_file = None
+                for ext in ['.png', '.ico']:
+                    # Case-insensitive search for logo files
+                    potential_logos = [f for f in os.listdir(logos_path) 
+                                     if f.lower() == f"{logo_name}{ext}".lower()]
+                    if potential_logos:
+                        logo_file = f"Logos/{potential_logos[0]}"
+                        break
+                
+                if not logo_file:
+                    missing_logos.append(display_name)
+
                 apps_info.append({
-                    'name': data['name'],
+                    'name': display_name,
                     'version': data['version'],
                     'logo': logo_file
                 })
@@ -136,7 +136,8 @@ def update_readme_apps(apps_list):
             print(f"   - {app}")
         print("\nExpected logo files (case-insensitive):")
         for app in missing_logos:
-            print(f"   - {app}.png or {app}.ico")
+            logo_name = sanitize_filename(app)
+            print(f"   - {logo_name}.png or {logo_name}.ico")
         print("\n")
     else:
         print("✅ All apps have logos!\n")
