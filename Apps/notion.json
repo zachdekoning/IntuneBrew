@@ -1,0 +1,9 @@
+{
+  "name": "Notion",
+  "description": "App to write, plan, collaborate, and get organised",
+  "version": "3.18.0",
+  "url": "https://desktop-release.notion-static.com/Notion-3.18.0-arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://www.notion.so/",
+  "fileName": "Notion-3.18.0-arm64.dmg"
+}

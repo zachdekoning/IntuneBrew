@@ -77,6 +77,7 @@ Follow the interactive prompts to:
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.8.74 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.6 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 3.18.0 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
 | ❌ Remote Help | 1.0.2404171 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.97 |
