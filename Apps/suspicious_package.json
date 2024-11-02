@@ -1,0 +1,9 @@
+{
+  "name": "Suspicious Package",
+  "description": "Application for inspecting installer packages",
+  "version": "4.5,1213",
+  "url": "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg",
+  "bundleId": null,
+  "homepage": "https://www.mothersruin.com/software/SuspiciousPackage/",
+  "fileName": "SuspiciousPackage.dmg"
+}
