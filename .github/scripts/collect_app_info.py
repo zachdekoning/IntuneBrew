@@ -91,11 +91,13 @@ def update_readme_apps(apps_list):
         print("README.md not found")
         return
 
-    print(f"Updating README at: {readme_path}")
+    print(f"\n📋 Checking logos for all apps...")
+    print(f"Looking in: {logos_path}\n")
 
     # Read all app JSON files to get versions
     apps_folder = Path(__file__).parent.parent.parent / "Apps"
     apps_info = []
+    missing_logos = []
     
     for app_json in apps_folder.glob("*.json"):
         app_name = app_json.stem
@@ -107,6 +109,9 @@ def update_readme_apps(apps_list):
             if potential_logos:
                 logo_file = f"Logos/{potential_logos[0]}"
                 break
+        
+        if not logo_file:
+            missing_logos.append(app_name)
 
         with open(app_json, 'r') as f:
             try:
@@ -118,6 +123,18 @@ def update_readme_apps(apps_list):
                 })
             except Exception as e:
                 print(f"Error reading {app_json}: {e}")
+
+    # Print missing logos summary
+    if missing_logos:
+        print("❌ Missing logos for the following apps:")
+        for app in missing_logos:
+            print(f"   - {app}")
+        print("\nExpected logo files (case-insensitive):")
+        for app in missing_logos:
+            print(f"   - {app}.png or {app}.ico")
+        print("\n")
+    else:
+        print("✅ All apps have logos!\n")
 
     # Sort apps by name
     apps_info.sort(key=lambda x: x['name'].lower())
