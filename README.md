@@ -63,31 +63,31 @@ Follow the interactive prompts to:
 
 | Application | Latest Version |
 |-------------|----------------|
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/1password.png' width='32' height='32'> 1Password</div> | 8.10.50 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader</div> | 24.004.20219 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden</div> | 2024.10.2 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/blender.png' width='32' height='32'> Blender</div> | 4.2.3 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/canva.png' width='32' height='32'> Canva</div> | 1.97.0 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/company_portal.png' width='32' height='32'> Company Portal</div> | 5.2409.1 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop</div> | 4.35.1,173168 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome</div> | 130.0.6723.92 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop</div> | 1.93.5.0 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC</div> | 2.7.9 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams</div> | 24277.3502.3161.3007 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/miro.png' width='32' height='32'> Miro</div> | 0.8.74 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass</div> | 1.44.6 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox</div> | 132.0 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop</div> | 20.1.1-55740 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/slack.png' width='32' height='32'> Slack</div> | 4.41.97 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/snagit.png' width='32' height='32'> Snagit</div> | 2024.3.2 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/spotify.png' width='32' height='32'> Spotify</div> | 1.2.49.439 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive</div> | 3.5.1,16101 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/todoist.png' width='32' height='32'> Todoist</div> | 9.9.0 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player</div> | 3.0.21 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams</div> | 44.10.1.31028 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/windows_app.png' width='32' height='32'> Windows App</div> | 11.0.6 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/xmind.png' width='32' height='32'> XMind</div> | 24.10.01101-202410201844 |
-| <div style='display: flex; align-items: center; gap: 8px;'><img src='Logos/zoom.png' width='32' height='32'> Zoom</div> | 6.2.6.41824 |
+| <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.50 |
+| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.004.20219 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.10.2 |
+| <img src='Logos/blender.png' width='32' height='32'> Blender | 4.2.3 |
+| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.97.0 |
+| <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2409.1 |
+| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.35.1,173168 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 130.0.6723.92 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.93.5.0 |
+| <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24277.3502.3161.3007 |
+| <img src='Logos/miro.png' width='32' height='32'> Miro | 0.8.74 |
+| <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.6 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0 |
+| <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
+| <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.97 |
+| <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.3.2 |
+| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.49.439 |
+| <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16101 |
+| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.0 |
+| <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
+| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.10.1.31028 |
+| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.6 |
+| <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.2.6.41824 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
