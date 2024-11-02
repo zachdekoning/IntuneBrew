@@ -2,8 +2,10 @@
 
 # Script to fetch latest Remote Help information and generate JSON
 
-# Get the latest version number from Microsoft's documentation
-VERSION=$(curl -s "https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos" | grep -o "most recent version of Remote Help is.*" | cut -d'"' -f1 | cut -d' ' -f8)
+# Get the latest version number from Microsoft's documentation and clean up HTML tags
+VERSION=$(curl -s "https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos" | 
+         grep -o "<strong>[0-9.]*</strong>" | 
+         sed 's/<[^>]*>//g')
 
 # Check if we got a valid version
 if [ -z "$VERSION" ]; then
