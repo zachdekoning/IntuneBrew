@@ -32,7 +32,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/canva.json",
     "https://formulae.brew.sh/api/cask/blender.json",
     "https://formulae.brew.sh/api/cask/webex.json",
-    "https://formulae.brew.sh/api/cask/mongodb-compass.json"
+    "https://formulae.brew.sh/api/cask/mongodb-compass.json",
+    "https://formulae.brew.sh/api/cask/suspicious-package.json"
     ]
 
 # Custom scraper scripts to run
