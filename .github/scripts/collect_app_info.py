@@ -102,9 +102,10 @@ def update_readme_apps(apps_list):
         # Look for matching logo file (trying both .png and .ico)
         logo_file = None
         for ext in ['.png', '.ico']:
-            potential_logo = logos_path / f"{app_name}{ext}"
-            if potential_logo.exists():
-                logo_file = f"Logos/{app_name}{ext}"
+            # Case-insensitive search for logo files
+            potential_logos = [f for f in os.listdir(logos_path) if f.lower() == f"{app_name}{ext}".lower()]
+            if potential_logos:
+                logo_file = f"Logos/{potential_logos[0]}"
                 break
 
         with open(app_json, 'r') as f:
