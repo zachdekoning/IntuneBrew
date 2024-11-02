@@ -78,6 +78,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.6 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
+| ❌ Remote Help | <strong>1.0.2404171</strong>.</p> |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.97 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.3.2 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.49.439 |
