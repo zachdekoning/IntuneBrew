@@ -5,5 +5,6 @@
   "url": "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/6.4.0/361/macarm64/ACCCx6_4_0_361.dmg",
   "bundleId": "com.adobe.acc.AdobeCreativeCloud",
   "homepage": "https://www.adobe.com/creativecloud.html",
-  "fileName": "ACCCx6_4_0_361.dmg"
+  "fileName": "ACCCx6_4_0_361.dmg",
+  "previous_version": "6.4.0.361"
 }

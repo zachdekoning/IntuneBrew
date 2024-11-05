@@ -5,5 +5,6 @@
   "url": "https://redirector.gvt1.com/edgedl/android/studio/install/2024.2.1.11/android-studio-2024.2.1.11-mac_arm.dmg",
   "bundleId": null,
   "homepage": "https://developer.android.com/studio/",
-  "fileName": "android-studio-2024.2.1.11-mac_arm.dmg"
+  "fileName": "android-studio-2024.2.1.11-mac_arm.dmg",
+  "previous_version": "2024.2.1.11"
 }
