@@ -5,5 +5,6 @@
   "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20211.4.6008.arm64.dmg",
   "bundleId": "com.dropbox.DropboxMacUpdate.agent",
   "homepage": "https://www.dropbox.com/",
-  "fileName": "Dropbox%20211.4.6008.arm64.dmg"
+  "fileName": "Dropbox%20211.4.6008.arm64.dmg",
+  "previous_version": "211.4.6008"
 }
