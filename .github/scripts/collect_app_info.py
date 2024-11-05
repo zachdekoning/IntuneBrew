@@ -192,13 +192,89 @@ def update_readme_apps(apps_list):
         f.write(new_content)
     print("README.md has been updated with the new table format including logos")
 
+def update_readme_with_latest_changes(apps_info):
+    readme_path = Path(__file__).parent.parent.parent / "README.md"
+    
+    # Read current README content
+    with open(readme_path, 'r') as f:
+        content = f.read()
+
+    # Prepare the updates section
+    updates_section = "\n## 🔄 Latest Updates\n\n"
+    updates_section += f"*Last checked: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC*\n\n"
+
+    # Get version changes
+    version_changes = []
+    for app in apps_info:
+        try:
+            with open(f"Apps/{sanitize_filename(app['name'])}.json", 'r') as f:
+                current_data = json.load(f)
+                if 'previous_version' in current_data and current_data['version'] != current_data['previous_version']:
+                    version_changes.append({
+                        'name': app['name'],
+                        'old_version': current_data['previous_version'],
+                        'new_version': current_data['version']
+                    })
+        except Exception as e:
+            print(f"Error checking version history for {app['name']}: {e}")
+
+    if version_changes:
+        updates_section += "| Application | Previous Version | New Version |\n"
+        updates_section += "|-------------|-----------------|-------------|\n"
+        for change in version_changes:
+            updates_section += f"| {change['name']} | {change['old_version']} | {change['new_version']} |\n"
+    else:
+        updates_section += "> All applications are up to date! 🎉\n"
+
+    # Find where to insert the updates section (before the Configuration section)
+    config_marker = "## 🔧 Configuration"
+    if config_marker in content:
+        parts = content.split(config_marker)
+        
+        # Remove existing updates section if it exists
+        if "## 🔄 Latest Updates" in parts[0]:
+            parts[0] = parts[0].split("## 🔄 Latest Updates")[0]
+        
+        # Add the new updates section
+        new_content = parts[0] + updates_section + "\n" + config_marker + parts[1]
+        
+        # Write the updated content back to README.md
+        with open(readme_path, 'w') as f:
+            f.write(new_content)
+
 def main():
     apps_folder = "Apps"
     os.makedirs(apps_folder, exist_ok=True)
     
     supported_apps = []
+    apps_info = []
 
-    # Run custom scrapers
+    # Process Homebrew cask URLs
+    for url in homebrew_cask_urls:
+        try:
+            app_info = get_homebrew_app_info(url)
+            display_name = app_info['name']
+            supported_apps.append(display_name)
+            file_name = f"{sanitize_filename(display_name)}.json"
+            file_path = os.path.join(apps_folder, file_name)
+
+            # Store previous version if file exists
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    app_info["previous_version"] = existing_data.get("version")
+                    if existing_data.get("bundleId") and app_info["bundleId"] is None:
+                        app_info["bundleId"] = existing_data["bundleId"]
+
+            with open(file_path, "w") as f:
+                json.dump(app_info, f, indent=2)
+
+            apps_info.append(app_info)
+            print(f"Saved app information for {display_name} to {file_path}")
+        except Exception as e:
+            print(f"Error processing {url}: {str(e)}")
+
+    # Run custom scrapers and update apps_info accordingly
     for scraper in custom_scrapers:
         try:
             subprocess.run([scraper], check=True)
@@ -211,30 +287,9 @@ def main():
         except Exception as e:
             print(f"Error running scraper {scraper}: {str(e)}")
 
-    # Process Homebrew cask URLs
-    for url in homebrew_cask_urls:
-        try:
-            app_info = get_homebrew_app_info(url)
-            display_name = app_info['name']
-            supported_apps.append(display_name)
-            file_name = f"{sanitize_filename(display_name)}.json"
-            file_path = os.path.join(apps_folder, file_name)
-
-            if os.path.exists(file_path):
-                with open(file_path, "r") as f:
-                    existing_data = json.load(f)
-                    if existing_data.get("bundleId") and app_info["bundleId"] is None:
-                        app_info["bundleId"] = existing_data["bundleId"]
-
-            with open(file_path, "w") as f:
-                json.dump(app_info, f, indent=2)
-
-            print(f"Saved app information for {display_name} to {file_path}")
-        except Exception as e:
-            print(f"Error processing {url}: {str(e)}")
-
-    # Update the README with the current list of supported apps
+    # Update the README with both the apps table and latest changes
     update_readme_apps(supported_apps)
+    update_readme_with_latest_changes(apps_info)
 
 if __name__ == "__main__":
     main()
