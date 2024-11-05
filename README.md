@@ -76,7 +76,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24277.3502.3161.3007 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.8.74 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.6 |
-| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0.1 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 3.18.0 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
