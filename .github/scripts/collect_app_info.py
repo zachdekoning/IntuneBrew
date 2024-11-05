@@ -226,21 +226,35 @@ def update_readme_with_latest_changes(apps_info):
     else:
         updates_section += "> All applications are up to date! 🎉\n"
 
-    # Find where to insert the updates section (before the Configuration section)
-    config_marker = "## 🔧 Configuration"
-    if config_marker in content:
-        parts = content.split(config_marker)
-        
-        # Remove existing updates section if it exists
-        if "## 🔄 Latest Updates" in parts[0]:
-            parts[0] = parts[0].split("## 🔄 Latest Updates")[0]
-        
-        # Add the new updates section
-        new_content = parts[0] + updates_section + "\n" + config_marker + parts[1]
-        
-        # Write the updated content back to README.md
-        with open(readme_path, 'w') as f:
-            f.write(new_content)
+    # Find where to insert the updates section (after the Public Preview notice)
+    preview_notice_end = "Thank you for being an early adopter! 🙏"
+    features_section = "## ✨ Features"
+    
+    if preview_notice_end in content and features_section in content:
+        parts = content.split(preview_notice_end, 1)
+        if len(parts) == 2:
+            second_parts = parts[1].split(features_section, 1)
+            if len(second_parts) == 2:
+                # Remove existing updates section if it exists
+                if "## 🔄 Latest Updates" in second_parts[0]:
+                    second_parts[0] = "\n\n"
+                
+                # Construct new content with updates section in the new location
+                new_content = (
+                    parts[0] + 
+                    preview_notice_end + 
+                    "\n\n" +
+                    updates_section +
+                    features_section +
+                    second_parts[1]
+                )
+                
+                # Write the updated content back to README.md
+                with open(readme_path, 'w') as f:
+                    f.write(new_content)
+                return
+    
+    print("Could not find the correct location to insert the updates section")
 
 def main():
     apps_folder = "Apps"
