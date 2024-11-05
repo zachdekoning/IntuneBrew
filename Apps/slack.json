@@ -5,5 +5,6 @@
   "url": "https://downloads.slack-edge.com/desktop-releases/mac/arm64/4.41.97/Slack-4.41.97-macOS.dmg",
   "bundleId": "com.tinyspeck.slackmacgap",
   "homepage": "https://slack.com/",
-  "fileName": "Slack-4.41.97-macOS.dmg"
+  "fileName": "Slack-4.41.97-macOS.dmg",
+  "previous_version": "4.41.97"
 }

@@ -97,6 +97,13 @@ Follow the interactive prompts to:
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
 
+
+## 🔄 Latest Updates
+
+*Last checked: 2024-11-05 09:24 UTC*
+
+> All applications are up to date! 🎉
+
 ## 🔧 Configuration
 
 ### Azure App Registration

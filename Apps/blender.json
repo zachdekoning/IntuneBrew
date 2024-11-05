@@ -5,5 +5,6 @@
   "url": "https://download.blender.org/release/Blender4.2/blender-4.2.3-macos-arm64.dmg",
   "bundleId": "org.blenderfoundation.blender.savedState",
   "homepage": "https://www.blender.org/",
-  "fileName": "blender-4.2.3-macos-arm64.dmg"
+  "fileName": "blender-4.2.3-macos-arm64.dmg",
+  "previous_version": "4.2.3"
 }

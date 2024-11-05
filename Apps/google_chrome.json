@@ -5,5 +5,6 @@
   "url": "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg",
   "bundleId": "com.google.keystone.agent",
   "homepage": "https://www.google.com/chrome/",
-  "fileName": "googlechrome.dmg"
+  "fileName": "googlechrome.dmg",
+  "previous_version": "130.0.6723.92"
 }
