@@ -5,5 +5,6 @@
   "url": "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable-arm64/171.121/Brave-Browser-arm64.dmg",
   "bundleId": null,
   "homepage": "https://brave.com/",
-  "fileName": "Brave-Browser-arm64.dmg"
+  "fileName": "Brave-Browser-arm64.dmg",
+  "previous_version": "1.71.121.0"
 }

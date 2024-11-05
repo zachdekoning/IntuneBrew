@@ -1,0 +1,9 @@
+{
+  "name": "UTM",
+  "description": "Virtual machines UI using QEMU",
+  "version": "4.5.4",
+  "url": "https://github.com/utmapp/UTM/releases/download/v4.5.4/UTM.dmg",
+  "bundleId": "com.utmapp.UTM",
+  "homepage": "https://mac.getutm.app/",
+  "fileName": "UTM.dmg"
+}

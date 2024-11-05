@@ -1,0 +1,9 @@
+{
+  "name": "Krisp",
+  "description": "Noise cancelling application",
+  "version": "2.46.11",
+  "url": "https://cdn.krisp.ai/mp/mn/2.46/mac/Krisp_2.46.11_arm64.pkg",
+  "bundleId": "ai.krisp.krispMac*",
+  "homepage": "https://krisp.ai/",
+  "fileName": "Krisp_2.46.11_arm64.pkg"
+}
