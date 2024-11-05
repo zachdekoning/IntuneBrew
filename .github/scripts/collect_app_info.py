@@ -41,7 +41,15 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/adobe-creative-cloud.json",
     "https://formulae.brew.sh/api/cask/anydesk.json",
     "https://formulae.brew.sh/api/cask/android-studio.json",
-    "https://formulae.brew.sh/api/cask/brave-browser.json"
+    "https://formulae.brew.sh/api/cask/brave-browser.json",
+    "https://formulae.brew.sh/api/cask/evernote.json",
+    "https://formulae.brew.sh/api/cask/dropbox.json",
+    "https://formulae.brew.sh/api/cask/krisp.json",
+    "https://formulae.brew.sh/api/cask/obsidian.json",
+    "https://formulae.brew.sh/api/cask/rstudio.json",
+    "https://formulae.brew.sh/api/cask/utm.json",
+    "https://formulae.brew.sh/api/cask/tableau.json",
+    "https://formulae.brew.sh/api/cask/vnc-viewer.json"
     ]
 
 # Custom scraper scripts to run
