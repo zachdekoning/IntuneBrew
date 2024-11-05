@@ -80,11 +80,12 @@ Follow the interactive prompts to:
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 3.18.0 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.31.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.97 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.3.2 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.49.439 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
-| <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16101 |
+| <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.0 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
