@@ -5,5 +5,6 @@
   "url": "https://desktop.docker.com/mac/main/arm64/173168/Docker.dmg",
   "bundleId": "com.docker.docker",
   "homepage": "https://www.docker.com/products/docker-desktop",
-  "fileName": "Docker.dmg"
+  "fileName": "Docker.dmg",
+  "previous_version": "4.35.1,173168"
 }

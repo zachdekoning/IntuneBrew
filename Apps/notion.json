@@ -5,5 +5,6 @@
   "url": "https://desktop-release.notion-static.com/Notion-3.18.0-arm64.dmg",
   "bundleId": "notion.id",
   "homepage": "https://www.notion.so/",
-  "fileName": "Notion-3.18.0-arm64.dmg"
+  "fileName": "Notion-3.18.0-arm64.dmg",
+  "previous_version": "3.18.0"
 }
