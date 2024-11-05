@@ -18,7 +18,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-05 14:46 UTC*
+*Last checked: 2024-11-05 14:47 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
