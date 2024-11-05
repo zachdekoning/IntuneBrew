@@ -1,0 +1,9 @@
+{
+  "name": "DeepL",
+  "description": "AI-powered language translator",
+  "version": "1.0",
+  "url": "https://www.deepl.com/macos/download/bigsur/DeepL.dmg",
+  "bundleId": "com.linguee.DeepLCopyTranslator",
+  "homepage": "https://www.deepl.com/",
+  "fileName": "DeepL.dmg"
+}

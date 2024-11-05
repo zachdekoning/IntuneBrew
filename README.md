@@ -18,7 +18,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-05 14:47 UTC*
+*Last checked: 2024-11-05 14:48 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -75,11 +75,13 @@ Follow the interactive prompts to:
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.4.0.361 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
+| <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.10.2 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.2.3 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.71.121.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.97.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2409.1 |
+| <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.35.1,173168 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 211.4.6008 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |

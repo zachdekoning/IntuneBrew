@@ -1,0 +1,9 @@
+{
+  "name": "Asana",
+  "description": "Project management and team collaboration tool",
+  "version": "1.0",
+  "url": "https://desktop-downloads.asana.com/darwin_universal/prod/latest/Asana.dmg",
+  "bundleId": "com.asana.app",
+  "homepage": "https://asana.com/",
+  "fileName": "Asana.dmg"
+}
