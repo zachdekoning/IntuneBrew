@@ -18,9 +18,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-05 09:31 UTC*
+*Last checked: 2024-11-05 13:43 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Grammarly Desktop | 1.93.5.0 | 1.94.0.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -70,14 +72,19 @@ Follow the interactive prompts to:
 | Application | Latest Version |
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.50 |
+| ❌ Adobe Acrobat Pro DC | 24.004.20219 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.004.20219 |
+| <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.4.0.361 |
+| <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.11 |
+| <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.10.2 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.2.3 |
+| ❌ Brave | 1.71.121.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.97.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2409.1 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.35.1,173168 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 130.0.6723.92 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.93.5.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.94.0.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24277.3502.3161.3007 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.8.74 |
