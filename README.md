@@ -1,13 +1,30 @@
-<h1 align="center">🍺 IntuneBrew</h1>
-
 ![IntuneBrew_Header](https://github.com/user-attachments/assets/c036ff17-ecad-4615-a7b5-6ffbd3d4ebf1)
+
+<h1 align="center">🍺 IntuneBrew</h1>
 
 IntuneBrew is a PowerShell-based tool that simplifies the process of uploading and managing macOS applications in Microsoft Intune. It automates the entire workflow from downloading apps to uploading them to Intune, complete with proper metadata and logos.
 
-## Demo
+## 📚 Table of Contents
+- [📚 Table of Contents](#-table-of-contents)
+- [🚨 Public Preview Notice](#-public-preview-notice)
+- [✨ Features](#-features)
+- [🎬 Demo](#-demo)
+- [🚀 Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [📝 Usage](#-usage)
+  - [Basic Usage](#basic-usage)
+  - [📱 Supported Applications](#-supported-applications)
+- [🔧 Configuration](#-configuration)
+  - [Azure App Registration](#azure-app-registration)
+- [🤔 Troubleshooting](#-troubleshooting)
+  - [Common Issues](#common-issues)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📞 Support](#-support)
 
-![IntuneBrew Demo](IntuneBrew_Demo.gif)
-
+## 🚨 Public Preview Notice
 > [!IMPORTANT]
 > 🚧 **Public Preview Notice**
 > 
@@ -19,12 +36,6 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 >
 > Thank you for being an early adopter! 🙏
 
-
-## 🔄 Latest Updates
-
-*Last checked: 2024-11-05 14:48 UTC*
-
-> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -35,6 +46,8 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 - 🎯 Smart duplicate detection
 - 💫 Bulk upload support
 
+## 🎬 Demo
+![IntuneBrew Demo](IntuneBrew_Demo.gif)
 ## 🚀 Getting Started
 
 ### Prerequisites
