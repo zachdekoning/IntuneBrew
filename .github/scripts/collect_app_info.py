@@ -35,7 +35,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/mongodb-compass.json",
     "https://formulae.brew.sh/api/cask/suspicious-package.json",
     "https://formulae.brew.sh/api/cask/teamviewer-quicksupport.json",
-    "https://formulae.brew.sh/api/cask/notion.json"
+    "https://formulae.brew.sh/api/cask/notion.json",
+    "https://formulae.brew.sh/api/cask/signal.json"
     ]
 
 # Custom scraper scripts to run
