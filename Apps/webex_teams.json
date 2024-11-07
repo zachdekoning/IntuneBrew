@@ -1,7 +1,7 @@
 {
   "name": "Webex Teams",
   "description": "Video communication and virtual meeting platform",
-  "version": "44.10.1.31028",
+  "version": "44.11.0.31172",
   "url": "https://binaries.webex.com/webex-macos-apple-silicon/Webex.dmg",
   "bundleId": "com.cisco.webex",
   "homepage": "https://www.webex.com/",
