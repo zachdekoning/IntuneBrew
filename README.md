@@ -39,16 +39,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-07 00:15 UTC*
+*Last checked: 2024-11-08 00:14 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 130.0.6723.92 | 130.0.6723.117 |
-| Grammarly Desktop | 1.94.0.0 | 1.94.1.0 |
-| Webex Teams | 44.10.1.31028 | 44.11.0.31172 |
-| Adobe Acrobat Pro DC | 24.004.20219 | 24.004.20243 |
-| Brave | 1.71.121.0 | 1.71.123.0 |
-| Tableau Desktop | 2024.2.3 | 2024.2.4 |
+| Signal | 7.31.0 | 7.32.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -128,7 +123,7 @@ Follow the interactive prompts to:
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.12.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.09.1,394 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.31.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.32.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.97 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.3.2 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.49.439 |
