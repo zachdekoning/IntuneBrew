@@ -39,11 +39,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-08 00:14 UTC*
+*Last checked: 2024-11-09 00:14 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Signal | 7.31.0 | 7.32.0 |
+> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
