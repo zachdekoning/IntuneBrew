@@ -39,13 +39,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-13 00:15 UTC*
+*Last checked: 2024-11-14 00:14 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Mozilla Firefox | 132.0.1 | 132.0.2 |
-| Dropbox | 211.4.6008 | 212.4.5767 |
-| Obsidian | 1.7.5 | 1.7.6 |
+| Google Chrome | 130.0.6723.117 | 131.0.6778.70 |
+| Grammarly Desktop | 1.94.1.0 | 1.95.4.0 |
+| Bitwarden | 2024.10.2 | 2024.11.0 |
+| Signal | 7.32.0 | 7.33.0 |
+| Brave | 1.71.123.0 | 1.73.89.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -102,17 +104,17 @@ Follow the interactive prompts to:
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
-| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.10.2 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.11.0 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.2.3 |
-| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.71.123.0 |
+| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.89.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.97.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2409.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.35.1,173168 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 212.4.5767 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
-| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 130.0.6723.117 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.94.1.0 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.70 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.95.4.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.46.11 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24277.3502.3161.3007 |
@@ -125,7 +127,7 @@ Follow the interactive prompts to:
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.12.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.09.1,394 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.32.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.33.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.97 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.3.2 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.49.439 |
