@@ -1,8 +1,8 @@
 {
   "name": "Zoom",
   "description": "Video communication and virtual meeting platform",
-  "version": "6.2.6.41824",
-  "url": "https://cdn.zoom.us/prod/6.2.6.41824/arm64/zoomusInstallerFull.pkg",
+  "version": "6.2.10.43047",
+  "url": "https://cdn.zoom.us/prod/6.2.10.43047/arm64/zoomusInstallerFull.pkg",
   "bundleId": "us.zoom.pkg.videomeeting",
   "homepage": "https://www.zoom.us/",
   "fileName": "zoomusInstallerFull.pkg",

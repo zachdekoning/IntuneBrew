@@ -39,9 +39,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-18 00:16 UTC*
+*Last checked: 2024-11-19 00:15 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Zoom | 6.2.6.41824 | 6.2.10.43047 |
+| Microsoft Teams | 24277.3502.3161.3007 | 24295.606.3238.6194 |
+| Docker Desktop | 4.35.1,173168 | 4.36.0,175267 |
+| Obsidian | 1.7.6 | 1.7.7 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -104,19 +109,19 @@ Follow the interactive prompts to:
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.97.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2409.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
-| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.35.1,173168 |
+| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.36.0,175267 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 212.4.5767 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.70 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.95.4.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.46.11 |
-| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24277.3502.3161.3007 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.606.3238.6194 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.8.74 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.6 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0.2 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.0.0 |
-| <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.6 |
+| <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.12.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
@@ -135,7 +140,7 @@ Follow the interactive prompts to:
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.11.0.31172 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.6 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
-| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.2.6.41824 |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.2.10.43047 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
