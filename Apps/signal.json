@@ -1,10 +1,10 @@
 {
   "name": "Signal",
   "description": "Instant messaging application focusing on security",
-  "version": "7.33.0",
-  "url": "https://updates.signal.org/desktop/signal-desktop-mac-arm64-7.33.0.dmg",
+  "version": "7.34.0",
+  "url": "https://updates.signal.org/desktop/signal-desktop-mac-arm64-7.34.0.dmg",
   "bundleId": "org.whispersystems.signal-desktop",
   "homepage": "https://signal.org/",
-  "fileName": "signal-desktop-mac-arm64-7.33.0.dmg",
+  "fileName": "signal-desktop-mac-arm64-7.34.0.dmg",
   "previous_version": "7.33.0"
 }
