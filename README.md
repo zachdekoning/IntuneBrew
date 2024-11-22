@@ -39,14 +39,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-21 00:16 UTC*
+*Last checked: 2024-11-22 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 131.0.6778.70 | 131.0.6778.86 |
-| MongoDB Compass | 1.44.6 | 1.44.7 |
-| Signal | 7.33.0 | 7.34.0 |
-| Brave | 1.73.89.0 | 1.73.91.0 |
+| Spotify | 1.2.50.335 | 1.2.51.345 |
+| Bitwarden | 2024.11.1 | 2024.11.2 |
+| Real VNC Viewer | 7.12.1 | 7.13.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -103,7 +102,7 @@ Follow the interactive prompts to:
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
-| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.11.1 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.11.2 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.0 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.91.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.97.0 |
@@ -123,13 +122,13 @@ Follow the interactive prompts to:
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.0.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
-| <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.12.1 |
+| <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.0 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.09.1,394 |
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.34.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.98 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
-| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.50.335 |
+| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.51.345 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.2.4 |
