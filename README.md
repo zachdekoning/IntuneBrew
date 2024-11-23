@@ -39,13 +39,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-22 00:16 UTC*
+*Last checked: 2024-11-23 00:15 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Spotify | 1.2.50.335 | 1.2.51.345 |
-| Bitwarden | 2024.11.1 | 2024.11.2 |
-| Real VNC Viewer | 7.12.1 | 7.13.0 |
+| Todoist | 9.9.0 | 9.9.3 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -133,7 +131,7 @@ Follow the interactive prompts to:
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.2.4 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
-| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.0 |
+| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.3 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.5.4 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.11.1.31236 |
