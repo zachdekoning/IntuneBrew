@@ -39,11 +39,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-23 00:15 UTC*
+*Last checked: 2024-11-24 00:17 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Todoist | 9.9.0 | 9.9.3 |
+> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
