@@ -39,9 +39,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-25 00:16 UTC*
+*Last checked: 2024-11-26 00:16 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Windows App | 11.0.6 | 11.0.7 |
+| Miro | 0.8.74 | 0.9.78 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -112,7 +115,7 @@ Follow the interactive prompts to:
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.46.11 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.606.3238.6194 |
-| <img src='Logos/miro.png' width='32' height='32'> Miro | 0.8.74 |
+| <img src='Logos/miro.png' width='32' height='32'> Miro | 0.9.78 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.7 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0.2 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.0.0 |
@@ -133,7 +136,7 @@ Follow the interactive prompts to:
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.5.4 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.11.1.31236 |
-| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.6 |
+| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.7 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.2.10.43047 |
 
