@@ -39,12 +39,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-26 00:16 UTC*
+*Last checked: 2024-11-27 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Windows App | 11.0.6 | 11.0.7 |
-| Miro | 0.8.74 | 0.9.78 |
+| Mozilla Firefox | 132.0.2 | 133.0 |
+| Canva | 1.97.0 | 1.99.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -104,7 +104,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.11.2 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.0 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.91.0 |
-| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.97.0 |
+| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.99.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2409.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.36.0,175267 |
@@ -117,7 +117,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.606.3238.6194 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.9.78 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.7 |
-| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 132.0.2 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 133.0 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.0.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
