@@ -39,12 +39,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-27 00:16 UTC*
+*Last checked: 2024-11-28 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Mozilla Firefox | 132.0.2 | 133.0 |
-| Canva | 1.97.0 | 1.99.0 |
+| Zoom | 6.2.10.43047 | 6.2.11.43613 |
+| Grammarly Desktop | 1.96.0.0 | 1.97.1.0 |
+| Todoist | 9.9.3 | 9.9.4 |
+| UTM | 4.5.4 | 4.6.2 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -111,7 +113,7 @@ Follow the interactive prompts to:
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 212.4.5767 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.86 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.96.0.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.97.1.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.46.11 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.606.3238.6194 |
@@ -132,13 +134,13 @@ Follow the interactive prompts to:
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.2.4 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
-| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.3 |
-| <img src='Logos/utm.png' width='32' height='32'> UTM | 4.5.4 |
+| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.4 |
+| <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.2 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.11.1.31236 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.7 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
-| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.2.10.43047 |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.2.11.43613 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
