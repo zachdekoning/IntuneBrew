@@ -39,14 +39,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-11-28 00:16 UTC*
+*Last checked: 2024-11-29 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Zoom | 6.2.10.43047 | 6.2.11.43613 |
-| Grammarly Desktop | 1.96.0.0 | 1.97.1.0 |
-| Todoist | 9.9.3 | 9.9.4 |
-| UTM | 4.5.4 | 4.6.2 |
+| Parallels Desktop | 20.1.1-55740 | 20.1.2-55742 |
+| Krisp | 2.46.11 | 2.51.3 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -115,14 +113,14 @@ Follow the interactive prompts to:
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.86 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.97.1.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
-| <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.46.11 |
+| <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.606.3238.6194 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.9.78 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.44.7 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 133.0 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.0.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
-| <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.1-55740 |
+| <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.2-55742 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.0 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.09.1,394 |
