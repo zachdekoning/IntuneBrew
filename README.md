@@ -39,9 +39,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-02 00:17 UTC*
+*Last checked: 2024-12-03 00:17 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Android Studio | 2024.2.1.11 | 2024.2.1.12 |
+| Tableau Desktop | 2024.2.4 | 2024.3.1 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -95,7 +98,7 @@ Follow the interactive prompts to:
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.004.20272 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.004.20219 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.4.0.361 |
-| <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.11 |
+| <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.12 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.11.2 |
@@ -127,7 +130,7 @@ Follow the interactive prompts to:
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.51.345 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
-| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.2.4 |
+| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.1 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.4 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.2 |
