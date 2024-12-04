@@ -1,10 +1,10 @@
 {
   "name": "Dropbox",
   "description": "Client for the Dropbox cloud storage service",
-  "version": "212.4.5767",
-  "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20212.4.5767.arm64.dmg",
+  "version": "213.4.4597",
+  "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20213.4.4597.arm64.dmg",
   "bundleId": "com.dropbox.DropboxMacUpdate.agent",
   "homepage": "https://www.dropbox.com/",
-  "fileName": "Dropbox%20212.4.5767.arm64.dmg",
+  "fileName": "Dropbox%20213.4.4597.arm64.dmg",
   "previous_version": "212.4.5767"
 }
