@@ -39,16 +39,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-05 00:16 UTC*
+*Last checked: 2024-12-06 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 131.0.6778.86 | 131.0.6778.109 |
-| Webex Teams | 44.11.1.31236 | 44.12.0.31359 |
-| MongoDB Compass | 1.44.7 | 1.45.0 |
-| Notion | 4.1.0 | 4.1.1 |
-| Signal | 7.34.0 | 7.35.0 |
-| Brave | 1.73.91.0 | 1.73.97.0 |
+| Spotify | 1.2.51.345 | 1.2.52.442 |
+| Company Portal | 5.2409.1 | 5.2410.1 |
+| Grammarly Desktop | 1.98.1.0 | 1.98.2.0 |
+| Notion | 4.1.1 | 4.1.2 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -109,20 +107,20 @@ Follow the interactive prompts to:
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.0 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.97.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.99.0 |
-| <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2409.1 |
+| <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2410.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.36.0,175267 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 213.4.4597 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.109 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.98.1.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.98.2.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.606.3238.6194 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.9.78 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.0 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 133.0 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.1.1 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.1.2 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.2-55742 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.0 |
@@ -131,7 +129,7 @@ Follow the interactive prompts to:
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.35.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.104 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
-| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.51.345 |
+| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.52.442 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.1 |
