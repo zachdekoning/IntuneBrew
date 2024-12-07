@@ -39,14 +39,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-06 00:16 UTC*
+*Last checked: 2024-12-07 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Spotify | 1.2.51.345 | 1.2.52.442 |
-| Company Portal | 5.2409.1 | 5.2410.1 |
-| Grammarly Desktop | 1.98.1.0 | 1.98.2.0 |
-| Notion | 4.1.1 | 4.1.2 |
+| Signal | 7.35.0 | 7.35.1 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -126,7 +123,7 @@ Follow the interactive prompts to:
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.0 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.09.1,394 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.35.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.35.1 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.104 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.52.442 |
