@@ -1,8 +1,8 @@
 {
   "name": "Grammarly Desktop",
   "description": "Grammarly for desktop",
-  "version": "1.98.2.0",
-  "url": "https://download-mac.grammarly.com/versions/1.98.2.0/Grammarly.dmg",
+  "version": "1.99.1.0",
+  "url": "https://download-mac.grammarly.com/versions/1.99.1.0/Grammarly.dmg",
   "bundleId": "com.grammarly.keyboard",
   "homepage": "https://www.grammarly.com/desktop",
   "fileName": "Grammarly.dmg",
