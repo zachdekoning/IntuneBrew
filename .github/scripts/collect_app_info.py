@@ -51,7 +51,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/tableau.json",
     "https://formulae.brew.sh/api/cask/vnc-viewer.json",
     "https://formulae.brew.sh/api/cask/powershell.json",
-    "https://formulae.brew.sh/api/cask/utm.json",
     "https://formulae.brew.sh/api/cask/betterdisplay.json",
     "https://formulae.brew.sh/api/cask/raycast.json"
     ]
