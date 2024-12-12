@@ -39,11 +39,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-12 12:23 UTC*
+*Last checked: 2024-12-12 12:39 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Notion | 4.1.2 | 4.2.0 |
+> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -100,7 +98,7 @@ Follow the interactive prompts to:
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.12 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
-| ❌ BetterDisplay | 3.2.1 |
+| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.2.1 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.11.2 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.1 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.101.0 |
@@ -114,7 +112,6 @@ Follow the interactive prompts to:
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.99.2.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
-| ❌ Microsoft PowerShell 7 | 7.4.6 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.606.3238.6194 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.9.78 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.0 |
@@ -122,8 +119,8 @@ Follow the interactive prompts to:
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.2.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.2-55742 |
-| ❌ PowerShell | 7.4.6 |
-| ❌ Raycast | 1.87.5 |
+| <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.87.5 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.0 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.09.1,394 |
