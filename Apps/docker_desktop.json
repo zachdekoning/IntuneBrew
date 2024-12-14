@@ -6,5 +6,5 @@
   "bundleId": "com.docker.docker",
   "homepage": "https://www.docker.com/products/docker-desktop",
   "fileName": "Docker.dmg",
-  "previous_version": "4.36.0,175267"
+  "previous_version": "4.37.0,178034"
 }
