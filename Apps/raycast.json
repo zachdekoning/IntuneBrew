@@ -1,8 +1,8 @@
 {
   "name": "Raycast",
   "description": "Control your tools with a few keystrokes",
-  "version": "1.87.5",
-  "url": "https://releases.raycast.com/releases/1.87.5/download?build=arm",
+  "version": "1.88.3",
+  "url": "https://releases.raycast.com/releases/1.88.3/download?build=arm",
   "bundleId": "com.raycast.macos",
   "homepage": "https://raycast.com/",
   "fileName": "download?build=arm",

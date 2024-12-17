@@ -39,9 +39,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-16 00:17 UTC*
+*Last checked: 2024-12-17 00:16 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Zoom | 6.2.11.43613 | 6.3.0.44805 |
+| Windows App | 11.0.7 | 11.0.8 |
+| RStudio | 2024.09.1,394 | 2024.12.0,467 |
+| Raycast | 1.87.5 | 1.88.3 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -120,10 +125,10 @@ Follow the interactive prompts to:
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.2-55742 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.87.5 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.88.3 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
-| <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.09.1,394 |
+| <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.36.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
@@ -136,9 +141,9 @@ Follow the interactive prompts to:
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.3 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.12.0.31359 |
-| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.7 |
+| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.8 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
-| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.2.11.43613 |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.0.44805 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
