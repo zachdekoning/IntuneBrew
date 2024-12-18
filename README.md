@@ -39,14 +39,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-17 00:16 UTC*
+*Last checked: 2024-12-18 00:15 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Zoom | 6.2.11.43613 | 6.3.0.44805 |
-| Windows App | 11.0.7 | 11.0.8 |
-| RStudio | 2024.09.1,394 | 2024.12.0,467 |
-| Raycast | 1.87.5 | 1.88.3 |
+| Grammarly Desktop | 1.99.3.0 | 1.100.1.0 |
+| Bitwarden | 2024.12.0 | 2024.12.1 |
+| Blender | 4.3.1 | 4.3.2 |
+| Webex Teams | 44.12.0.31359 | 44.12.1.31417 |
+| Dropbox | 213.4.4597 | 214.4.5217 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -104,17 +105,17 @@ Follow the interactive prompts to:
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.2.1 |
-| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.12.0 |
-| <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.1 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.12.1 |
+| <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.101.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.100.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2410.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.0,178034 |
-| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 213.4.4597 |
+| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 214.4.5217 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.140 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.99.3.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.100.1.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24295.615.3297.8324 |
@@ -140,7 +141,7 @@ Follow the interactive prompts to:
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.5 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.3 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
-| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.12.0.31359 |
+| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.12.1.31417 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.8 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.0.44805 |
