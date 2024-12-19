@@ -1,8 +1,8 @@
 {
   "name": "Docker Desktop",
   "description": "App to build and share containerised applications and microservices",
-  "version": "4.37.0,178034",
-  "url": "https://desktop.docker.com/mac/main/arm64/178034/Docker.dmg",
+  "version": "4.37.1,178610",
+  "url": "https://desktop.docker.com/mac/main/arm64/178610/Docker.dmg",
   "bundleId": "com.docker.docker",
   "homepage": "https://www.docker.com/products/docker-desktop",
   "fileName": "Docker.dmg",

@@ -39,15 +39,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-18 00:15 UTC*
+*Last checked: 2024-12-19 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Grammarly Desktop | 1.99.3.0 | 1.100.1.0 |
-| Bitwarden | 2024.12.0 | 2024.12.1 |
-| Blender | 4.3.1 | 4.3.2 |
-| Webex Teams | 44.12.0.31359 | 44.12.1.31417 |
-| Dropbox | 213.4.4597 | 214.4.5217 |
+| Docker Desktop | 4.37.0,178034 | 4.37.1,178610 |
+| Raycast | 1.88.3 | 1.88.4 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -111,7 +108,7 @@ Follow the interactive prompts to:
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.100.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2410.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
-| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.0,178034 |
+| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.1,178610 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 214.4.5217 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.140 |
@@ -126,7 +123,7 @@ Follow the interactive prompts to:
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.2-55742 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.88.3 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.88.4 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
