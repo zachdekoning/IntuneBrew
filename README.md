@@ -51,13 +51,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-21 00:14 UTC*
+*Last checked: 2024-12-22 00:16 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Microsoft Teams | 24295.615.3297.8324 | 24335.204.3298.2649 |
-| Parallels Desktop | 20.1.2-55742 | 20.1.3-55743 |
-| Grammarly Desktop | 1.100.1.0 | 1.100.2.0 |
+| Spotify | 1.2.52.442 | 1.2.53.438 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -143,7 +141,7 @@ Follow the interactive prompts to:
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.36.1 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
-| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.52.442 |
+| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.53.438 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.1 |
