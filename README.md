@@ -51,11 +51,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-22 00:16 UTC*
+*Last checked: 2024-12-23 00:15 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Spotify | 1.2.52.442 | 1.2.53.438 |
+> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
