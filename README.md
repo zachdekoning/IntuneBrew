@@ -51,9 +51,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-23 00:15 UTC*
+*Last checked: 2024-12-24 00:15 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Zoom | 6.3.0.44805 | 6.3.1.45300 |
+| UTM | 4.6.3 | 4.6.4 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -145,12 +148,12 @@ Follow the interactive prompts to:
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.1 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.5 |
-| <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.3 |
+| <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.12.1.31417 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.8 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
-| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.0.44805 |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.1.45300 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
