@@ -51,9 +51,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-26 00:15 UTC*
+*Last checked: 2024-12-27 00:15 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| XMind | 24.10.01101-202410201844 | 24.12.04124-202412250704 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -149,7 +151,7 @@ Follow the interactive prompts to:
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.12.1.31417 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.8 |
-| <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.10.01101-202410201844 |
+| <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.12.04124-202412250704 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.1.45300 |
 
 > [!NOTE]

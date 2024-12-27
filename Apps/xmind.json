@@ -1,10 +1,10 @@
 {
   "name": "XMind",
   "description": "Mind mapping and brainstorming tool",
-  "version": "24.10.01101-202410201844",
-  "url": "https://dl3.xmind.net/Xmind-for-macOS-24.10.01101-202410201844.dmg",
+  "version": "24.12.04124-202412250704",
+  "url": "https://dl3.xmind.net/Xmind-for-macOS-24.12.04124-202412250704.dmg",
   "bundleId": "net.xmind.XMind.desktop",
   "homepage": "https://www.xmind.net/",
-  "fileName": "Xmind-for-macOS-24.10.01101-202410201844.dmg",
+  "fileName": "Xmind-for-macOS-24.12.04124-202412250704.dmg",
   "previous_version": "24.10.01101-202410201844"
 }
