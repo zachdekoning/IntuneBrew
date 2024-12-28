@@ -51,11 +51,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2024-12-27 00:15 UTC*
+*Last checked: 2024-12-28 00:15 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| XMind | 24.10.01101-202410201844 | 24.12.04124-202412250704 |
+| Canva | 1.100.0 | 1.101.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -116,7 +116,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.12.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.104.0 |
-| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.100.0 |
+| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.101.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2410.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.1,178610 |
