@@ -29,6 +29,10 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
   - [📱 Supported Applications](#-supported-applications)
 - [🔧 Configuration](#-configuration)
   - [Azure App Registration](#azure-app-registration)
+  - [Certificate-Based Authentication](#certificate-based-authentication)
+  - [App JSON Structure](#app-json-structure)
+- [🔄 Version Management](#-version-management)
+- [🛠️ Error Handling](#-error-handling)
 - [🤔 Troubleshooting](#-troubleshooting)
   - [Common Issues](#common-issues)
 - [🤝 Contributing](#-contributing)
@@ -56,6 +60,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
 | Canva | 1.100.0 | 1.101.0 |
+
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -65,9 +70,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 - 🔐 Secure authentication with Microsoft Graph API
 - 🎯 Smart duplicate detection
 - 💫 Bulk upload support
+- 🔁 Automatic retry mechanism for failed uploads
+- 🔒 Secure file encryption for uploads
+- 📈 Real-time progress monitoring
 
 ## 🎬 Demo
 ![IntuneBrew Demo](IntuneBrew_Demo.gif)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -76,6 +85,8 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 - Microsoft Graph PowerShell SDK
 - Azure App Registration with appropriate permissions OR Manual Connection via Interactive Sign-In
 - Windows or macOS operating system
+- Stable internet connection for large file uploads
+- Sufficient disk space for temporary file processing
 
 ### Installation
 
@@ -168,6 +179,76 @@ Follow the interactive prompts to:
     - $appid = '<YourAppIdHere>' # App ID of the App Registration
     - $tenantid = '<YourTenantIdHere>' # Tenant ID of your EntraID
     - $certThumbprint = '<YourCertificateThumbprintHere>' # Thumbprint of the certificate associated with the App Registration
+
+### Certificate-Based Authentication
+
+1. Generate a self-signed certificate:
+```powershell
+$cert = New-SelfSignedCertificate -Subject "CN=IntuneBrew" -CertStoreLocation "Cert:\CurrentUser\My" -KeyExportPolicy Exportable -KeySpec Signature -KeyLength 2048 -KeyAlgorithm RSA -HashAlgorithm SHA256 -NotAfter (Get-Date).AddYears(2)
+```
+
+2. Export the certificate:
+```powershell
+$pwd = ConvertTo-SecureString -String "YourPassword" -Force -AsPlainText
+Export-PfxCertificate -Cert $cert -FilePath "IntuneBrew.pfx" -Password $pwd
+```
+
+3. Upload to Azure App Registration:
+   - Go to your App Registration in Azure Portal
+   - Navigate to "Certificates & secrets"
+   - Upload the public key portion of your certificate
+
+### App JSON Structure
+
+Apps are defined in JSON files with the following structure:
+```json
+{
+    "name": "Application Name",
+    "description": "Application Description",
+    "version": "1.0.0",
+    "url": "https://download.url/app.dmg",
+    "bundleId": "com.example.app",
+    "homepage": "https://app.homepage.com",
+    "fileName": "app.dmg"
+}
+```
+
+## 🔄 Version Management
+
+IntuneBrew implements sophisticated version comparison logic:
+- Handles various version formats (semantic versioning, build numbers)
+- Supports complex version strings (e.g., "1.2.3,45678")
+- Manages version-specific updates and rollbacks
+- Provides clear version difference visualization
+
+Version comparison rules:
+1. Main version numbers are compared first (1.2.3 vs 1.2.4)
+2. Build numbers are compared if main versions match
+3. Special handling for complex version strings with build identifiers
+
+## 🛠️ Error Handling
+
+IntuneBrew includes robust error handling mechanisms:
+
+1. **Upload Retry Logic**
+   - Automatic retry for failed uploads (up to 3 attempts)
+   - Exponential backoff between retries
+   - New SAS token generation for expired URLs
+
+2. **File Processing**
+   - Temporary file cleanup
+   - Handle locked files
+   - Memory management for large files
+
+3. **Network Issues**
+   - Connection timeout handling
+   - Bandwidth throttling
+   - Resume interrupted uploads
+
+4. **Authentication**
+   - Token refresh handling
+   - Certificate expiration checks
+   - Fallback to interactive login
 
 ## 🤔 Troubleshooting
 
