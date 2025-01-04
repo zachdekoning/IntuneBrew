@@ -55,9 +55,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-03 00:15 UTC*
+*Last checked: 2025-01-04 00:14 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Spotify | 1.2.53.438 | 1.2.53.440 |
+| Company Portal | 5.2410.1 | 5.2412.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -125,7 +128,7 @@ Follow the interactive prompts to:
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.104.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.101.0 |
-| <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2410.1 |
+| <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.1,178610 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 214.4.5217 |
@@ -149,7 +152,7 @@ Follow the interactive prompts to:
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.36.1 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
-| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.53.438 |
+| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.53.440 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.1 |
