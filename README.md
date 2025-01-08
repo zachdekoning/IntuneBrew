@@ -55,11 +55,16 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-07 00:15 UTC*
+*Last checked: 2025-01-08 00:15 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Zoom | 6.3.1.45300 | 6.3.5.46181 |
+| Google Chrome | 131.0.6778.205 | 131.0.6778.265 |
+| Mozilla Firefox | 133.0.3 | 134.0 |
+| Grammarly Desktop | 1.100.2.0 | 1.101.2.0 |
+| Webex Teams | 44.12.1.31417 | 45.1.0.31549 |
+| Notion | 4.2.0 | 4.3.0 |
+| Dropbox | 214.4.5217 | 215.4.7202 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -130,17 +135,17 @@ Follow the interactive prompts to:
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.1,178610 |
-| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 214.4.5217 |
+| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 215.4.7202 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
-| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.205 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.100.2.0 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.265 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.101.2.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.204.3298.2649 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.9.78 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.0 |
-| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 133.0.3 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.2.0 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.3-55743 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
@@ -159,7 +164,7 @@ Follow the interactive prompts to:
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.5 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
-| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 44.12.1.31417 |
+| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.8 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.12.04124-202412250704 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.5.46181 |
