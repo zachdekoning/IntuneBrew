@@ -55,16 +55,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-08 00:15 UTC*
+*Last checked: 2025-01-09 00:15 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 131.0.6778.205 | 131.0.6778.265 |
-| Mozilla Firefox | 133.0.3 | 134.0 |
-| Grammarly Desktop | 1.100.2.0 | 1.101.2.0 |
-| Webex Teams | 44.12.1.31417 | 45.1.0.31549 |
-| Notion | 4.2.0 | 4.3.0 |
-| Dropbox | 214.4.5217 | 215.4.7202 |
+| Todoist | 9.9.5 | 9.9.6 |
+| Signal | 7.36.1 | 7.37.0 |
+| Brave | 1.73.104.0 | 1.73.105.0 |
+| Tableau Desktop | 2024.3.1 | 2024.3.2 |
+| BetterDisplay | 3.2.1 | 3.3.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -127,10 +126,10 @@ Follow the interactive prompts to:
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.12 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
-| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.2.1 |
+| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.0 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2024.12.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
-| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.104.0 |
+| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.105.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.101.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
@@ -153,15 +152,15 @@ Follow the interactive prompts to:
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.36.1 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.37.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.53.440 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
-| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.1 |
+| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.2 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
-| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.5 |
+| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.6 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
