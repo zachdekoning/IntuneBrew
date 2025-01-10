@@ -55,15 +55,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-09 00:15 UTC*
+*Last checked: 2025-01-10 00:15 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Todoist | 9.9.5 | 9.9.6 |
-| Signal | 7.36.1 | 7.37.0 |
-| Brave | 1.73.104.0 | 1.73.105.0 |
-| Tableau Desktop | 2024.3.1 | 2024.3.2 |
-| BetterDisplay | 3.2.1 | 3.3.0 |
+| XMind | 24.12.04124-202412250704 | 25.01.01061-202501070704 |
+| Docker Desktop | 4.37.1,178610 | 4.37.2,179585 |
+| Android Studio | 2024.2.1.12 | 2024.2.2.13 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -123,7 +121,7 @@ Follow the interactive prompts to:
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20320 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.004.20272 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.4.0.361 |
-| <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.1.12 |
+| <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.13 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.0 |
@@ -133,7 +131,7 @@ Follow the interactive prompts to:
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.101.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
-| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.1,178610 |
+| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 215.4.7202 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.265 |
@@ -165,7 +163,7 @@ Follow the interactive prompts to:
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.8 |
-| <img src='Logos/xmind.png' width='32' height='32'> XMind | 24.12.04124-202412250704 |
+| <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.5.46181 |
 
 > [!NOTE]
