@@ -55,13 +55,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-10 00:15 UTC*
+*Last checked: 2025-01-11 00:15 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| XMind | 24.12.04124-202412250704 | 25.01.01061-202501070704 |
-| Docker Desktop | 4.37.1,178610 | 4.37.2,179585 |
-| Android Studio | 2024.2.1.12 | 2024.2.2.13 |
+| Parallels Desktop | 20.1.3-55743 | 20.2.0-55872 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -144,7 +142,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
-| <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.1.3-55743 |
+| <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.88.4 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
