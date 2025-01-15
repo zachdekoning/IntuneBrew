@@ -1,10 +1,10 @@
 {
   "name": "Bitwarden",
   "description": "Desktop password and login vault",
-  "version": "2024.12.1",
-  "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2024.12.1/Bitwarden-2024.12.1-universal.dmg",
+  "version": "2025.1.0",
+  "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.1.0/Bitwarden-2025.1.0-universal.dmg",
   "bundleId": "com.bitwarden.desktop",
   "homepage": "https://bitwarden.com/",
-  "fileName": "Bitwarden-2024.12.1-universal.dmg",
+  "fileName": "Bitwarden-2025.1.0-universal.dmg",
   "previous_version": "2024.12.1"
 }
