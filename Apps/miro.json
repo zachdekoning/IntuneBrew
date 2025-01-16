@@ -6,5 +6,5 @@
   "bundleId": "com.electron.realtimeboard",
   "homepage": "https://miro.com/",
   "fileName": "Install-Miro.dmg",
-  "previous_version": "0.9.78"
+  "previous_version": "0.10.80"
 }

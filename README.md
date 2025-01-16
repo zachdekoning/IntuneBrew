@@ -55,14 +55,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-15 00:15 UTC*
+*Last checked: 2025-01-16 00:14 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Mozilla Firefox | 134.0 | 134.0.1 |
-| Grammarly Desktop | 1.101.3.0 | 1.102.0.0 |
-| Bitwarden | 2024.12.1 | 2025.1.0 |
-| Miro | 0.9.78 | 0.10.80 |
+| Google Chrome | 131.0.6778.265 | 132.0.6834.84 |
+| Windows App | 11.0.8 | 11.0.9 |
+| MongoDB Compass | 1.45.0 | 1.45.1 |
+| Signal | 7.37.0 | 7.38.0 |
+| Brave | 1.73.105.0 | 1.74.48.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -128,20 +129,20 @@ Follow the interactive prompts to:
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.0 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.0 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
-| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.73.105.0 |
+| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.48.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.101.0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 215.4.7202 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
-| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 131.0.6778.265 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.84 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.102.0.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.204.3298.2649 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
-| <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.0 |
+| <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.1 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.1 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
@@ -151,7 +152,7 @@ Follow the interactive prompts to:
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.37.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.38.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.53.440 |
@@ -163,7 +164,7 @@ Follow the interactive prompts to:
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
-| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.8 |
+| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.9 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.5.46181 |
 
