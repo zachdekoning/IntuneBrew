@@ -55,15 +55,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-16 00:14 UTC*
+*Last checked: 2025-01-17 00:14 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 131.0.6778.265 | 132.0.6834.84 |
-| Windows App | 11.0.8 | 11.0.9 |
-| MongoDB Compass | 1.45.0 | 1.45.1 |
-| Signal | 7.37.0 | 7.38.0 |
-| Brave | 1.73.105.0 | 1.74.48.0 |
+| Zoom | 6.3.5.46181 | 6.3.6.47101 |
+| Raycast | 1.88.4 | 1.89.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -148,7 +145,7 @@ Follow the interactive prompts to:
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.88.4 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.89.0 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
@@ -166,7 +163,7 @@ Follow the interactive prompts to:
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.9 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
-| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.5.46181 |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
