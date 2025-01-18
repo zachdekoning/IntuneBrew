@@ -55,12 +55,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-17 00:14 UTC*
+*Last checked: 2025-01-18 00:14 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Zoom | 6.3.5.46181 | 6.3.6.47101 |
-| Raycast | 1.88.4 | 1.89.0 |
+| Microsoft Teams | 24335.204.3298.2649 | 24335.207.3345.5574 |
+| Adobe Acrobat Reader | 24.004.20272 | 24.005.20320 |
+| Bitwarden | 2025.1.0 | 2025.1.1 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -118,13 +119,13 @@ Follow the interactive prompts to:
 | Application | Latest Version |
 |-------------|----------------|
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20320 |
-| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.004.20272 |
+| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20320 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.4.0.361 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.13 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.0 |
-| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.0 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.48.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.101.0 |
@@ -137,7 +138,7 @@ Follow the interactive prompts to:
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.102.0.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
-| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.204.3298.2649 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.207.3345.5574 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.1 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.1 |
