@@ -35,7 +35,7 @@ jobs:
       - name: Build PKG
         run: |
           echo "Building PKG file for ${{ env.FILENAME }}..."
-          pkgbuild --install-location /Applications --component ~/Desktop/${{ env.FILENAME }}.app ~/Desktop/${{ env.FILENAME }}.pkg
+          pkgbuild --install-location /Applications --component "~/Desktop/${{ env.FILENAME }}.app" "~/Desktop/${{ env.FILENAME }}.pkg"
           echo "PKG build completed successfully"
 
       - name: Upload to Azure Blob Storage with SAS
