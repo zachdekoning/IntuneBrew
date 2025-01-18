@@ -42,6 +42,6 @@ jobs:
         run: |
           echo "Uploading PKG to Azure Blob Storage..."
           curl -X PUT -H "x-ms-blob-type: BlockBlob" \
-            -T ~/Desktop/${{ env.FILENAME }}.pkg \
+            -T "$HOME/Desktop/${{ env.FILENAME }}.pkg" \
             "${{ secrets.BLOB_SAS_URL }}/${{ env.FILENAME }}.pkg${{ secrets.BLOB_SAS_TOKEN }}"
           echo "Upload to Azure Blob Storage completed successfully"
