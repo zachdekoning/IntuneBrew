@@ -1,4 +1,4 @@
-name: Build GitHub Desktop PKG
+name: Build VS Code PKG
 
 on:
   workflow_dispatch:
@@ -11,17 +11,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download GitHub Desktop
+      - name: Download VS Code
         run: |
-          echo "Downloading GitHub Desktop ARM64 version..."
-          curl -L -o ~/Desktop/GitHubDesktop.zip "https://desktop.githubusercontent.com/releases/3.4.13-c968496f/GitHubDesktop-arm64.zip"
+          echo "Downloading VS Code ARM64 version..."
+          curl -L -o ~/Desktop/VSCode.zip "https://update.code.visualstudio.com/1.96.4/darwin-arm64/stable"
           echo "Download completed successfully"
 
-      - name: Unzip GitHub Desktop
+      - name: Unzip VS Code
         run: |
-          echo "Unzipping GitHub Desktop to Desktop..."
+          echo "Unzipping VS Code to Desktop..."
           cd ~/Desktop
-          unzip GitHubDesktop.zip
+          unzip VSCode.zip
           echo "Unzip completed successfully"
 
       - name: Get App Name
