@@ -40,8 +40,8 @@ jobs:
 
       - name: Upload to Azure Blob Storage with SAS
         run: |
+          echo "Installing AzCopy..."
+          brew install azcopy
           echo "Uploading PKG to Azure Blob Storage..."
-          curl -X PUT -H "x-ms-blob-type: BlockBlob" \
-            -T "$HOME/Desktop/${{ env.FILENAME }}.pkg" \
-            "${{ secrets.BLOB_SAS_URL }}/${{ env.FILENAME }}.pkg${{ secrets.BLOB_SAS_TOKEN }}"
+          azcopy copy "$HOME/Desktop/${{ env.FILENAME }}.pkg" "${{ secrets.BLOB_SAS_URL }}/${{ env.FILENAME }}.pkg${{ secrets.BLOB_SAS_TOKEN }}"
           echo "Upload to Azure Blob Storage completed successfully"
