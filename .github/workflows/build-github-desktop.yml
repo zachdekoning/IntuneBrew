@@ -38,10 +38,16 @@ jobs:
           pkgbuild --install-location /Applications --component "$HOME/Desktop/${{ env.FILENAME }}.app" "$HOME/Desktop/${{ env.FILENAME }}.pkg"
           echo "PKG build completed successfully"
 
-      - name: Upload to Azure Blob Storage with SAS
+      - name: Upload to Azure Blob Storage
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
         run: |
-          echo "Installing AzCopy..."
-          brew install azcopy
+          echo "Installing Azure CLI..."
+          brew install azure-cli
           echo "Uploading PKG to Azure Blob Storage..."
-          azcopy copy "$HOME/Desktop/${{ env.FILENAME }}.pkg" "${{ secrets.BLOB_SAS_URL }}/${{ env.FILENAME }}.pkg${{ secrets.BLOB_SAS_TOKEN }}"
+          az storage blob upload \
+            --container-name pkg \
+            --file "$HOME/Desktop/${{ env.FILENAME }}.pkg" \
+            --name "${{ env.FILENAME }}.pkg" \
+            --overwrite true
           echo "Upload to Azure Blob Storage completed successfully"
