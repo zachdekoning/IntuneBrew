@@ -1,0 +1,53 @@
+name: Build GitHub Desktop PKG
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download GitHub Desktop
+        run: |
+          echo "Downloading GitHub Desktop ARM64 version..."
+          curl -L -o ~/Desktop/GitHubDesktop.zip "https://desktop.githubusercontent.com/releases/3.4.13-c968496f/GitHubDesktop-arm64.zip"
+          echo "Download completed successfully"
+
+      - name: Unzip GitHub Desktop
+        run: |
+          echo "Unzipping GitHub Desktop to Desktop..."
+          cd ~/Desktop
+          unzip GitHubDesktop.zip
+          echo "Unzip completed successfully"
+
+      - name: Get App Name
+        run: |
+          echo "Finding extracted application name..."
+          cd ~/Desktop
+          FileName=$(ls | grep '\.app$' | sed 's/\.app$//')
+          echo "Found application: $FileName"
+          echo "FILENAME=$FileName" >> $GITHUB_ENV
+
+      - name: Build PKG
+        run: |
+          echo "Building PKG file for ${{ env.FILENAME }}..."
+          pkgbuild --install-location /Applications --component ~/Desktop/${{ env.FILENAME }}.app ~/Desktop/${{ env.FILENAME }}.pkg
+          echo "PKG build completed successfully"
+
+      - name: Upload to Azure Storage
+        uses: azure/cli@v1
+        with:
+          inlineScript: |
+            echo "Uploading PKG to Azure Storage..."
+            az storage blob upload \
+              --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
+              --container-name ${{ secrets.AZURE_CONTAINER_NAME }} \
+              --name "${{ env.FILENAME }}.pkg" \
+              --file ~/Desktop/${{ env.FILENAME }}.pkg \
+              --auth-mode key \
+              --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+            echo "Upload to Azure Storage completed successfully"
