@@ -91,8 +91,11 @@ jobs:
               continue
             fi
             
-            # Check if package already exists in Azure
-            if az storage blob exists --container-name pkg --name "${app_name}_${version}.pkg" --query "exists" --output tsv | grep -q "true"; then
+            # List existing versions of this app in Azure storage
+            existing_versions=$(az storage blob list --container-name pkg --prefix "${app_name}_" --query "[].name" -o tsv)
+            
+            # Check if the exact version already exists
+            if echo "$existing_versions" | grep -q "^${app_name}_${version}.pkg$"; then
               echo "Package ${app_name}_${version}.pkg already exists in Azure storage. Skipping..."
               # Update the JSON file with Azure URL and correct filename
               azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
@@ -102,20 +105,31 @@ jobs:
             
             # Download app
             echo "Downloading $app_name..."
-            curl -L -o ~/Desktop/${app_name}.zip "$url"
-            
-            # Unzip app
-            echo "Unzipping $app_name..."
-            cd ~/Desktop
-            # Extract while excluding __MACOSX directory
-            unzip -q -d "${app_name}_extracted" ${app_name}.zip
+            download_path="~/Desktop/${app_name}"
+            if [[ "$url" == *".zip" ]]; then
+              curl -L -o "${download_path}.zip" "$url"
+              # Extract zip while excluding __MACOSX directory
+              unzip -q -d "${app_name}_extracted" "${download_path}.zip"
+              rm "${download_path}.zip"
+            elif [[ "$url" == *".tar.xz" ]]; then
+              curl -L -o "${download_path}.tar.xz" "$url"
+              # Extract tar.xz
+              mkdir -p "${app_name}_extracted"
+              tar -xf "${download_path}.tar.xz" -C "${app_name}_extracted"
+              rm "${download_path}.tar.xz"
+            else
+              curl -L -o "${download_path}.zip" "$url"
+              # Default to zip extraction
+              unzip -q -d "${app_name}_extracted" "${download_path}.zip"
+              rm "${download_path}.zip"
+            fi
             
             # Find .app file, excluding __MACOSX directory
             app_file=$(find "${app_name}_extracted" -type d -name "*.app" ! -path "*/__MACOSX/*" -print -quit)
             if [ -z "$app_file" ]; then
               echo "No .app file found for $app_name"
               cd "$WORKSPACE_DIR"
-              rm -rf "${app_name}_extracted" ${app_name}.zip
+              rm -rf "${app_name}_extracted"
               continue
             fi
             
@@ -131,12 +145,22 @@ jobs:
               --name "${app_name}_${version}.pkg" \
               --overwrite true
 
+            # Delete older versions of this app from Azure storage
+            if [ ! -z "$existing_versions" ]; then
+              echo "Cleaning up older versions of $app_name..."
+              echo "$existing_versions" | while read -r blob_name; do
+                if [ ! -z "$blob_name" ] && [ "$blob_name" != "${app_name}_${version}.pkg" ]; then
+                  echo "Deleting old version: $blob_name"
+                  az storage blob delete --container-name pkg --name "$blob_name"
+                fi
+              done
+            fi
+
             # Update the JSON file with Azure URL and correct filename
             azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
             jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
             
             # Cleanup
-            rm -f ${app_name}.zip ${app_name}_${version}.pkg
             rm -rf "${app_name}_extracted"
             
             # Return to workspace directory

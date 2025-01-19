@@ -13,7 +13,10 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/microsoft-azure-storage-explorer.json",
     "https://formulae.brew.sh/api/cask/figma.json",
     "https://formulae.brew.sh/api/cask/postman.json",
-    "https://formulae.brew.sh/api/cask/fantastical.json"
+    "https://formulae.brew.sh/api/cask/fantastical.json",
+    "https://formulae.brew.sh/api/cask/iterm2.json",
+    "https://formulae.brew.sh/api/cask/sublime-text.json",
+    "https://formulae.brew.sh/api/cask/vivaldi.json"
 ]
 
 homebrew_cask_urls = [
@@ -60,7 +63,7 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/vnc-viewer.json",
     "https://formulae.brew.sh/api/cask/powershell.json",
     "https://formulae.brew.sh/api/cask/betterdisplay.json",
-    "https://formulae.brew.sh/api/cask/raycast.json"
+    "https://formulae.brew.sh/api/cask/orbstack.json"
 ]
 
 # Custom scraper scripts to run
