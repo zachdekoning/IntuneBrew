@@ -94,9 +94,9 @@ jobs:
             # Check if package already exists in Azure
             if az storage blob exists --container-name pkg --name "${app_name}_${version}.pkg" --query "exists" --output tsv | grep -q "true"; then
               echo "Package ${app_name}_${version}.pkg already exists in Azure storage. Skipping..."
-              # Update the JSON file with Azure URL even if we skip building
+              # Update the JSON file with Azure URL and correct filename
               azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
-              jq --arg url "$azure_url" '.url = $url' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+              jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
               continue
             fi
             
@@ -131,9 +131,9 @@ jobs:
               --name "${app_name}_${version}.pkg" \
               --overwrite true
 
-            # Update the JSON file with Azure URL after successful upload
+            # Update the JSON file with Azure URL and correct filename
             azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
-            jq --arg url "$azure_url" '.url = $url' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+            jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
             
             # Cleanup
             rm -f ${app_name}.zip ${app_name}_${version}.pkg
