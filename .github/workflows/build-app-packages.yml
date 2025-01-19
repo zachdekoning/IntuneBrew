@@ -132,7 +132,7 @@ jobs:
               --overwrite true
 
             # Update the JSON file with Azure URL after successful upload
-            azure_url="https://intunebrewpkg.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
+            azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
             jq --arg url "$azure_url" '.url = $url' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
             
             # Cleanup
