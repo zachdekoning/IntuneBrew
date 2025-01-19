@@ -3,7 +3,7 @@
   "description": "Desktop client for GitHub repositories",
   "version": "3.4.13-c968496f",
   "url": "https://intunebrew.blob.core.windows.net/pkg/github_desktop_3.4.13-c968496f.pkg",
-  "bundleId": null,
+  "bundleId": "com.github.GitHubClient",
   "homepage": "https://desktop.github.com/",
   "fileName": "github_desktop_3.4.13-c968496f.pkg",
   "type": "app"
