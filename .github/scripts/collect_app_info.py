@@ -8,6 +8,11 @@ import subprocess
 from datetime import datetime
 
 # Array of Homebrew cask JSON URLs
+app_urls = [
+    "https://formulae.brew.sh/api/cask/visual-studio-code.json",  # Example app needing special packaging
+    # Add more apps that need zip extraction and pkg building
+]
+
 homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/google-chrome.json",
     "https://formulae.brew.sh/api/cask/zoom.json",
@@ -53,7 +58,7 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/powershell.json",
     "https://formulae.brew.sh/api/cask/betterdisplay.json",
     "https://formulae.brew.sh/api/cask/raycast.json"
-    ]
+]
 
 # Custom scraper scripts to run
 custom_scrapers = [
@@ -80,7 +85,7 @@ def find_bundle_id(json_string):
 
     return None
 
-def get_homebrew_app_info(json_url):
+def get_homebrew_app_info(json_url, needs_packaging=False):
     response = requests.get(json_url)
     response.raise_for_status()
     data = response.json()
@@ -88,7 +93,7 @@ def get_homebrew_app_info(json_url):
 
     bundle_id = find_bundle_id(json_string)
 
-    return {
+    app_info = {
         "name": data["name"][0],
         "description": data["desc"],
         "version": data["version"],
@@ -97,6 +102,11 @@ def get_homebrew_app_info(json_url):
         "homepage": data["homepage"],
         "fileName": os.path.basename(data["url"])
     }
+    
+    if needs_packaging:
+        app_info["type"] = "app"
+    
+    return app_info
 
 def sanitize_filename(name):
     sanitized = name.replace(' ', '_')
@@ -281,7 +291,32 @@ def main():
     supported_apps = []
     apps_info = []
 
-    # Process Homebrew cask URLs
+    # Process apps that need special packaging
+    for url in app_urls:
+        try:
+            app_info = get_homebrew_app_info(url, needs_packaging=True)
+            display_name = app_info['name']
+            supported_apps.append(display_name)
+            file_name = f"{sanitize_filename(display_name)}.json"
+            file_path = os.path.join(apps_folder, file_name)
+
+            # Store previous version if file exists
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    app_info["previous_version"] = existing_data.get("version")
+                    if existing_data.get("bundleId") and app_info["bundleId"] is None:
+                        app_info["bundleId"] = existing_data["bundleId"]
+
+            with open(file_path, "w") as f:
+                json.dump(app_info, f, indent=2)
+
+            apps_info.append(app_info)
+            print(f"Saved app information for {display_name} to {file_path}")
+        except Exception as e:
+            print(f"Error processing {url}: {str(e)}")
+
+    # Process regular Homebrew cask URLs
     for url in homebrew_cask_urls:
         try:
             app_info = get_homebrew_app_info(url)

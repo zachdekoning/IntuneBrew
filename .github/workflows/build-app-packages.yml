@@ -1,0 +1,95 @@
+name: Build App Packages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # Run daily at midnight
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Collect app information
+        run: python .github/scripts/collect_app_info.py
+
+      - name: Find apps needing packaging
+        id: find-apps
+        run: |
+          echo "Finding apps that need special packaging..."
+          apps_to_build=()
+          for file in Apps/*.json; do
+            if [ -f "$file" ]; then
+              type=$(jq -r '.type // empty' "$file")
+              if [ "$type" = "app" ]; then
+                app_name=$(basename "$file" .json)
+                url=$(jq -r '.url' "$file")
+                apps_to_build+=("$app_name:$url")
+              fi
+            fi
+          done
+          echo "APPS_TO_BUILD=${apps_to_build[*]}" >> $GITHUB_ENV
+          echo "Found apps: ${apps_to_build[*]}"
+
+      - name: Install Azure CLI
+        if: env.APPS_TO_BUILD != ''
+        run: |
+          brew install azure-cli
+
+      - name: Process apps
+        if: env.APPS_TO_BUILD != ''
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+        run: |
+          for app_info in $APPS_TO_BUILD; do
+            IFS=':' read -r app_name url <<< "$app_info"
+            
+            echo "Processing $app_name..."
+            
+            # Download app
+            echo "Downloading $app_name..."
+            curl -L -o ~/Desktop/${app_name}.zip "$url"
+            
+            # Unzip app
+            echo "Unzipping $app_name..."
+            cd ~/Desktop
+            unzip -q ${app_name}.zip
+            
+            # Find .app file
+            app_file=$(find . -maxdepth 2 -name "*.app" -print -quit)
+            if [ -z "$app_file" ]; then
+              echo "No .app file found for $app_name"
+              continue
+            fi
+            
+            # Build PKG
+            echo "Building PKG for $app_name..."
+            pkgbuild --install-location /Applications --component "$app_file" "${app_name}.pkg"
+            
+            # Upload to Azure
+            echo "Uploading $app_name to Azure Blob Storage..."
+            az storage blob upload \
+              --container-name pkg \
+              --file "${app_name}.pkg" \
+              --name "${app_name}.pkg" \
+              --overwrite true
+            
+            # Cleanup
+            rm -f ${app_name}.zip ${app_name}.pkg
+            rm -rf *.app
+            
+            echo "Completed processing $app_name"
+          done
