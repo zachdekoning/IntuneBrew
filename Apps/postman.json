@@ -2,7 +2,7 @@
   "name": "Postman",
   "description": "Collaboration platform for API development",
   "version": "11.28.4",
-  "url": "https://intunebrewpkg.blob.core.windows.net/pkg/postman_11.28.4.pkg",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/postman_11.28.4.pkg",
   "bundleId": "com.postmanlabs.mac",
   "homepage": "https://www.postman.com/",
   "fileName": "osx_arm64",

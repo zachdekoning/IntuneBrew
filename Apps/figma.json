@@ -2,7 +2,7 @@
   "name": "Figma",
   "description": "Collaborative team software",
   "version": "124.7.4",
-  "url": "https://intunebrewpkg.blob.core.windows.net/pkg/figma_124.7.4.pkg",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/figma_124.7.4.pkg",
   "bundleId": "com.figma.Desktop",
   "homepage": "https://www.figma.com/",
   "fileName": "Figma-124.7.4.zip",
