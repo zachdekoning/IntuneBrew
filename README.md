@@ -55,7 +55,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-19 13:24 UTC*
+*Last checked: 2025-01-19 13:32 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -131,13 +131,13 @@ Follow the interactive prompts to:
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 215.4.7202 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
-| ❌ Fantastical | 4.0.4 |
-| ❌ Figma | 124.7.4 |
+| <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.4 |
+| <img src='Logos/figma.png' width='32' height='32'> Figma | 124.7.4 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.84 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.102.0.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
-| ❌ Microsoft Azure Storage Explorer | 1.37.0 |
+| <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.207.3345.5574 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.96.4 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
@@ -146,7 +146,7 @@ Follow the interactive prompts to:
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
-| ❌ Postman | 11.28.4 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.28.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.89.0 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
