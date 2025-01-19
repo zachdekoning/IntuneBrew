@@ -72,6 +72,16 @@ jobs:
             
             echo "Processing $app_name..."
             
+            # Get version from JSON file
+            version=$(jq -r '.version' "Apps/${app_name}.json")
+            echo "Version: $version"
+            
+            # Check if package already exists in Azure
+            if az storage blob exists --container-name pkg --name "${app_name}_${version}.pkg" --output tsv; then
+              echo "Package ${app_name}_${version}.pkg already exists in Azure storage. Skipping..."
+              continue
+            fi
+            
             # Download app
             echo "Downloading $app_name..."
             curl -L -o ~/Desktop/${app_name}.zip "$url"
@@ -88,21 +98,21 @@ jobs:
               continue
             fi
             
-            # Build PKG
-            echo "Building PKG for $app_name..."
-            pkgbuild --install-location /Applications --component "$app_file" "${app_name}.pkg"
+            # Build PKG with version in filename
+            echo "Building PKG for $app_name version $version..."
+            pkgbuild --install-location /Applications --component "$app_file" "${app_name}_${version}.pkg"
             
-            # Upload to Azure
-            echo "Uploading $app_name to Azure Blob Storage..."
+            # Upload to Azure with version in filename
+            echo "Uploading $app_name version $version to Azure Blob Storage..."
             az storage blob upload \
               --container-name pkg \
-              --file "${app_name}.pkg" \
-              --name "${app_name}.pkg" \
+              --file "${app_name}_${version}.pkg" \
+              --name "${app_name}_${version}.pkg" \
               --overwrite true
             
             # Cleanup
-            rm -f ${app_name}.zip ${app_name}.pkg
+            rm -f ${app_name}.zip ${app_name}_${version}.pkg
             rm -rf *.app
             
-            echo "Completed processing $app_name"
+            echo "Completed processing $app_name version $version"
           done
