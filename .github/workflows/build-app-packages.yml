@@ -69,14 +69,6 @@ jobs:
           print("Created supported_apps.json")
           EOF
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add Apps/*.json supported_apps.json README.md
-          git commit -m "Update app information and supported apps list" || exit 0
-          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-
       - name: Process apps
         if: env.APPS_TO_BUILD != ''
         env:
@@ -152,3 +144,11 @@ jobs:
             
             echo "Completed processing $app_name version $version"
           done
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Apps/*.json supported_apps.json README.md
+          git commit -m "Update app information and supported apps list" || exit 0
+          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
