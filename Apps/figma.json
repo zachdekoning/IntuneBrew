@@ -3,7 +3,7 @@
   "description": "Collaborative team software",
   "version": "124.7.4",
   "url": "https://desktop.figma.com/mac-arm/Figma-124.7.4.zip",
-  "bundleId": null,
+  "bundleId": "com.figma.Desktop",
   "homepage": "https://www.figma.com/",
   "fileName": "Figma-124.7.4.zip",
   "type": "app"
