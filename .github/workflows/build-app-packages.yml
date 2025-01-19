@@ -77,7 +77,7 @@ jobs:
             echo "Version: $version"
             
             # Check if package already exists in Azure
-            if az storage blob exists --container-name pkg --name "${app_name}_${version}.pkg" --output tsv; then
+            if az storage blob exists --container-name pkg --name "${app_name}_${version}.pkg" --query "exists" --output tsv | grep -q "true"; then
               echo "Package ${app_name}_${version}.pkg already exists in Azure storage. Skipping..."
               continue
             fi
