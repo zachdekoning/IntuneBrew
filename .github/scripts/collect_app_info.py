@@ -62,7 +62,7 @@ homebrew_cask_urls = [
 
 # Custom scraper scripts to run
 custom_scrapers = [
-    ".github/scripts/scrapers/1password.sh",
+    #".github/scripts/scrapers/1password.sh",
     ".github/scripts/scrapers/remotehelp.sh",
     ".github/scripts/scrapers/deepl.sh",
     ".github/scripts/scrapers/asana.sh"
