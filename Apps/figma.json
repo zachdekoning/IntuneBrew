@@ -6,5 +6,6 @@
   "bundleId": "com.figma.Desktop",
   "homepage": "https://www.figma.com/",
   "fileName": "Figma-124.7.4.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "124.7.4"
 }
