@@ -9,7 +9,7 @@ from datetime import datetime
 
 # Array of Homebrew cask JSON URLs
 app_urls = [
-    "https://formulae.brew.sh/api/cask/visual-studio-code.json",  # Example app needing special packaging
+    "https://formulae.brew.sh/api/cask/visual-studio-code.json",  # VS Code needs special packaging
     # Add more apps that need zip extraction and pkg building
 ]
 
@@ -294,14 +294,17 @@ def main():
     # Process apps that need special packaging
     for url in app_urls:
         try:
+            print(f"\nProcessing special app URL: {url}")
             app_info = get_homebrew_app_info(url, needs_packaging=True)
             display_name = app_info['name']
+            print(f"Got app info for: {display_name}")
             supported_apps.append(display_name)
             file_name = f"{sanitize_filename(display_name)}.json"
             file_path = os.path.join(apps_folder, file_name)
 
             # Store previous version if file exists
             if os.path.exists(file_path):
+                print(f"Found existing file for {display_name}")
                 with open(file_path, "r") as f:
                     existing_data = json.load(f)
                     app_info["previous_version"] = existing_data.get("version")
@@ -310,11 +313,13 @@ def main():
 
             with open(file_path, "w") as f:
                 json.dump(app_info, f, indent=2)
+                print(f"Successfully wrote {file_path} with type 'app' flag")
 
             apps_info.append(app_info)
             print(f"Saved app information for {display_name} to {file_path}")
         except Exception as e:
-            print(f"Error processing {url}: {str(e)}")
+            print(f"Error processing special app {url}: {str(e)}")
+            print(f"Full error details: ", e)
 
     # Process regular Homebrew cask URLs
     for url in homebrew_cask_urls:
