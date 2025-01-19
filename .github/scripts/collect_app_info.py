@@ -310,13 +310,14 @@ def main():
             file_path = os.path.join(apps_folder, file_name)
             print(f"📝 Attempting to write to: {os.path.abspath(file_path)}")
 
-            # Store previous version if file exists
+            # Store previous version and preserve existing bundle ID if file exists
             if os.path.exists(file_path):
                 print(f"Found existing file for {display_name}")
                 with open(file_path, "r") as f:
                     existing_data = json.load(f)
                     app_info["previous_version"] = existing_data.get("version")
-                    if existing_data.get("bundleId") and app_info["bundleId"] is None:
+                    # Preserve existing bundle ID if it exists
+                    if existing_data.get("bundleId"):
                         app_info["bundleId"] = existing_data["bundleId"]
 
             with open(file_path, "w") as f:
