@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/fantastical_4.0.4.pkg",
   "bundleId": "com.flexibits.fantastical2.mac",
   "homepage": "https://flexibits.com/fantastical",
-  "fileName": "Fantastical_4.0.4.zip",
+  "fileName": "fantastical_4.0.4.pkg",
   "type": "app",
   "previous_version": "4.0.4"
 }

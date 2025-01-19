@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/microsoft_visual_studio_code_1.96.4.pkg",
   "bundleId": "com.microsoft.VSCode",
   "homepage": "https://code.visualstudio.com/",
-  "fileName": "stable",
+  "fileName": "microsoft_visual_studio_code_1.96.4.pkg",
   "type": "app",
   "previous_version": "1.96.4"
 }
