@@ -49,11 +49,6 @@ jobs:
           echo "APPS_TO_BUILD=${apps_to_build[*]}" >> $GITHUB_ENV
           echo "Found apps: ${apps_to_build[*]}"
 
-      - name: Install Azure CLI
-        if: env.APPS_TO_BUILD != ''
-        run: |
-          brew install azure-cli
-
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
