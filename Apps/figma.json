@@ -1,0 +1,10 @@
+{
+  "name": "Figma",
+  "description": "Collaborative team software",
+  "version": "124.7.4",
+  "url": "https://desktop.figma.com/mac-arm/Figma-124.7.4.zip",
+  "bundleId": null,
+  "homepage": "https://www.figma.com/",
+  "fileName": "Figma-124.7.4.zip",
+  "type": "app"
+}
