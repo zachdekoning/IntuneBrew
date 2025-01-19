@@ -85,13 +85,15 @@ jobs:
             # Unzip app
             echo "Unzipping $app_name..."
             cd ~/Desktop
-            unzip -q ${app_name}.zip
+            # Extract while excluding __MACOSX directory
+            unzip -q -d "${app_name}_extracted" ${app_name}.zip
             
-            # Find .app file
-            app_file=$(find . -maxdepth 2 -name "*.app" -print -quit)
+            # Find .app file, excluding __MACOSX directory
+            app_file=$(find "${app_name}_extracted" -type d -name "*.app" ! -path "*/__MACOSX/*" -print -quit)
             if [ -z "$app_file" ]; then
               echo "No .app file found for $app_name"
               cd "$WORKSPACE_DIR"
+              rm -rf "${app_name}_extracted" ${app_name}.zip
               continue
             fi
             
@@ -109,7 +111,7 @@ jobs:
             
             # Cleanup
             rm -f ${app_name}.zip ${app_name}_${version}.pkg
-            rm -rf *.app
+            rm -rf "${app_name}_extracted"
             
             # Return to workspace directory
             cd "$WORKSPACE_DIR"
