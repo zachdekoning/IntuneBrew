@@ -105,20 +105,23 @@ jobs:
             
             # Download app
             echo "Downloading $app_name..."
-            download_path="~/Desktop/${app_name}"
+            download_path="$HOME/Desktop/${app_name}"
             if [[ "$url" == *".zip" ]]; then
               curl -L -o "${download_path}.zip" "$url"
+              cd "$HOME/Desktop"
               # Extract zip while excluding __MACOSX directory
               unzip -q -d "${app_name}_extracted" "${download_path}.zip"
               rm "${download_path}.zip"
             elif [[ "$url" == *".tar.xz" ]]; then
               curl -L -o "${download_path}.tar.xz" "$url"
+              cd "$HOME/Desktop"
               # Extract tar.xz
               mkdir -p "${app_name}_extracted"
               tar -xf "${download_path}.tar.xz" -C "${app_name}_extracted"
               rm "${download_path}.tar.xz"
             else
               curl -L -o "${download_path}.zip" "$url"
+              cd "$HOME/Desktop"
               # Default to zip extraction
               unzip -q -d "${app_name}_extracted" "${download_path}.zip"
               rm "${download_path}.zip"
