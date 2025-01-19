@@ -95,12 +95,12 @@ def get_homebrew_app_info(json_url, needs_packaging=False):
     json_string = json.dumps(data)
 
     bundle_id = find_bundle_id(json_string)
-    
-    # Get the base app info
+
     app_info = {
         "name": data["name"][0],
         "description": data["desc"],
         "version": data["version"],
+        "url": data["url"],
         "bundleId": bundle_id,
         "homepage": data["homepage"],
         "fileName": os.path.basename(data["url"])
@@ -108,11 +108,6 @@ def get_homebrew_app_info(json_url, needs_packaging=False):
     
     if needs_packaging:
         app_info["type"] = "app"
-        # For apps that need packaging, use Azure Blob Storage URL
-        sanitized_name = sanitize_filename(app_info["name"])
-        app_info["url"] = f"https://intunebrewpkg.blob.core.windows.net/pkg/{sanitized_name}_{app_info['version']}.pkg"
-    else:
-        app_info["url"] = data["url"]
     
     return app_info
 
