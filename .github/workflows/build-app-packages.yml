@@ -67,13 +67,14 @@ jobs:
         env:
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
         run: |
+          WORKSPACE_DIR=$(pwd)
           for app_info in $APPS_TO_BUILD; do
             IFS=':' read -r app_name url <<< "$app_info"
             
             echo "Processing $app_name..."
             
             # Get version from JSON file
-            version=$(jq -r '.version' "Apps/${app_name}.json")
+            version=$(jq -r '.version' "$WORKSPACE_DIR/Apps/${app_name}.json")
             echo "Version: $version"
             
             # Check if package already exists in Azure
@@ -95,6 +96,7 @@ jobs:
             app_file=$(find . -maxdepth 2 -name "*.app" -print -quit)
             if [ -z "$app_file" ]; then
               echo "No .app file found for $app_name"
+              cd "$WORKSPACE_DIR"
               continue
             fi
             
@@ -113,6 +115,9 @@ jobs:
             # Cleanup
             rm -f ${app_name}.zip ${app_name}_${version}.pkg
             rm -rf *.app
+            
+            # Return to workspace directory
+            cd "$WORKSPACE_DIR"
             
             echo "Completed processing $app_name version $version"
           done
