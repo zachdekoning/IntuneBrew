@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -51,6 +53,14 @@ jobs:
         if: env.APPS_TO_BUILD != ''
         run: |
           brew install azure-cli
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Apps/*.json supported_apps.json README.md
+          git commit -m "Update app information and supported apps list" || exit 0
+          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
 
       - name: Process apps
         if: env.APPS_TO_BUILD != ''
