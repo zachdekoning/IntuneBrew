@@ -1,0 +1,10 @@
+{
+  "name": "Postman",
+  "description": "Collaboration platform for API development",
+  "version": "11.28.4",
+  "url": "https://dl.pstmn.io/download/version/11.28.4/osx_arm64",
+  "bundleId": null,
+  "homepage": "https://www.postman.com/",
+  "fileName": "osx_arm64",
+  "type": "app"
+}
