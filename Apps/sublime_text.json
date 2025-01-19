@@ -6,5 +6,6 @@
   "bundleId": "com.sublimetext.4",
   "homepage": "https://www.sublimetext.com/",
   "fileName": "sublime_text_4189.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "4189"
 }

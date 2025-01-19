@@ -55,7 +55,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-19 15:43 UTC*
+*Last checked: 2025-01-19 16:15 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -133,9 +133,10 @@ Follow the interactive prompts to:
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.4 |
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 124.7.4 |
+| <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.13-c968496f |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.84 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.102.0.0 |
-| ❌ iTerm2 | 3.5.11 |
+| <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
@@ -146,7 +147,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.1 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
-| ❌ OrbStack | 1.9.4_18819 |
+| <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.4_18819 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.28.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
@@ -158,14 +159,14 @@ Follow the interactive prompts to:
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.55.235 |
-| ❌ Sublime Text | 4189 |
+| <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4189 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.2 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.7 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
-| ❌ Vivaldi | 7.0.3495.29 |
+| <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.0.3495.29 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.9 |
