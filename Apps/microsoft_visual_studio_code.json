@@ -2,10 +2,10 @@
   "name": "Microsoft Visual Studio Code",
   "description": "Open-source code editor",
   "version": "1.96.4",
+  "url": "https://update.code.visualstudio.com/1.96.4/darwin-arm64/stable",
   "bundleId": "com.microsoft.VSCode",
   "homepage": "https://code.visualstudio.com/",
   "fileName": "stable",
   "type": "app",
-  "url": "https://intunebrewpkg.blob.core.windows.net/pkg/microsoft_visual_studio_code_1.96.4.pkg",
   "previous_version": "1.96.4"
 }
