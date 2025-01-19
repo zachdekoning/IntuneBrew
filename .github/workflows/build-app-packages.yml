@@ -92,9 +92,19 @@ jobs:
             version=$(jq -r '.version' "$WORKSPACE_DIR/Apps/${app_name}.json")
             echo "Version: $version"
             
+            # Check if this is an app that needs packaging
+            is_app_type=$(jq -r '.type == "app"' "$WORKSPACE_DIR/Apps/${app_name}.json")
+            if [ "$is_app_type" != "true" ]; then
+              echo "Skipping URL update for $app_name as it's not of type 'app'"
+              continue
+            fi
+            
             # Check if package already exists in Azure
             if az storage blob exists --container-name pkg --name "${app_name}_${version}.pkg" --query "exists" --output tsv | grep -q "true"; then
               echo "Package ${app_name}_${version}.pkg already exists in Azure storage. Skipping..."
+              # Update the JSON file with Azure URL even if we skip building
+              azure_url="https://intunebrewpkg.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
+              jq --arg url "$azure_url" '.url = $url' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
               continue
             fi
             
@@ -128,6 +138,10 @@ jobs:
               --file "${app_name}_${version}.pkg" \
               --name "${app_name}_${version}.pkg" \
               --overwrite true
+
+            # Update the JSON file with Azure URL after successful upload
+            azure_url="https://intunebrewpkg.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
+            jq --arg url "$azure_url" '.url = $url' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
             
             # Cleanup
             rm -f ${app_name}.zip ${app_name}_${version}.pkg
