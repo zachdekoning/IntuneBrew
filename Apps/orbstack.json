@@ -3,7 +3,7 @@
   "description": "Replacement for Docker Desktop",
   "version": "1.9.4_18819",
   "url": "https://cdn-updates.orbstack.dev/arm64/OrbStack_v1.9.4_18819_arm64.dmg",
-  "bundleId": null,
+  "bundleId": "dev.kdrag0n.MacVirt",
   "homepage": "https://orbstack.dev/",
   "fileName": "OrbStack_v1.9.4_18819_arm64.dmg"
 }
