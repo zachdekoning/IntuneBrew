@@ -16,7 +16,8 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/fantastical.json",
     "https://formulae.brew.sh/api/cask/iterm2.json",
     "https://formulae.brew.sh/api/cask/sublime-text.json",
-    "https://formulae.brew.sh/api/cask/vivaldi.json"
+    "https://formulae.brew.sh/api/cask/vivaldi.json",
+    "https://formulae.brew.sh/api/cask/github.json"
 ]
 
 homebrew_cask_urls = [
