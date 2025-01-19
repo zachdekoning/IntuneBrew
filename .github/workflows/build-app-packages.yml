@@ -22,7 +22,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests
-          brew install jq
 
       - name: Make scrapers executable
         run: chmod +x .github/scripts/scrapers/*.sh

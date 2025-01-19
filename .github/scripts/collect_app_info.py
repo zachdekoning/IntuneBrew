@@ -9,8 +9,7 @@ from datetime import datetime
 
 # Array of Homebrew cask JSON URLs
 app_urls = [
-    "https://formulae.brew.sh/api/cask/visual-studio-code.json",  # VS Code needs special packaging
-    # Add more apps that need zip extraction and pkg building
+    "https://formulae.brew.sh/api/cask/visual-studio-code.json"
 ]
 
 homebrew_cask_urls = [
@@ -287,6 +286,9 @@ def update_readme_with_latest_changes(apps_info):
 def main():
     apps_folder = "Apps"
     os.makedirs(apps_folder, exist_ok=True)
+    print(f"\n📁 Apps folder absolute path: {os.path.abspath(apps_folder)}")
+    print(f"📁 Apps folder exists: {os.path.exists(apps_folder)}")
+    print(f"📁 Apps folder is writable: {os.access(apps_folder, os.W_OK)}\n")
     
     supported_apps = []
     apps_info = []
@@ -300,7 +302,9 @@ def main():
             print(f"Got app info for: {display_name}")
             supported_apps.append(display_name)
             file_name = f"{sanitize_filename(display_name)}.json"
+            print(f"🔍 Sanitized filename: {file_name}")
             file_path = os.path.join(apps_folder, file_name)
+            print(f"📝 Attempting to write to: {os.path.abspath(file_path)}")
 
             # Store previous version if file exists
             if os.path.exists(file_path):
