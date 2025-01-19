@@ -9,7 +9,11 @@ from datetime import datetime
 
 # Array of Homebrew cask JSON URLs
 app_urls = [
-    "https://formulae.brew.sh/api/cask/visual-studio-code.json"
+    "https://formulae.brew.sh/api/cask/visual-studio-code.json",
+    "https://formulae.brew.sh/api/cask/microsoft-azure-storage-explorer.json",
+    "https://formulae.brew.sh/api/cask/figma.json",
+    "https://formulae.brew.sh/api/cask/postman.json",
+    "https://formulae.brew.sh/api/cask/fantastical.json"
 ]
 
 homebrew_cask_urls = [
