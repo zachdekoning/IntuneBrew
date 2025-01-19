@@ -1,0 +1,10 @@
+{
+  "name": "Sublime Text",
+  "description": "Text editor for code, markup and prose",
+  "version": "4189",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/sublime_text_4189.pkg",
+  "bundleId": "com.sublimetext.4",
+  "homepage": "https://www.sublimetext.com/",
+  "fileName": "sublime_text_4189.pkg",
+  "type": "app"
+}
