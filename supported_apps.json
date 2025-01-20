@@ -58,7 +58,6 @@
     "parallels_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/parallels_desktop.json",
     "postman": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/postman.json",
     "powershell": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/powershell.json",
-    "raycast": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/raycast.json",
     "real_vnc_viewer": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/real_vnc_viewer.json",
     "remotehelp": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/remotehelp.json",
     "rstudio": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/rstudio.json",

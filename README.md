@@ -19,6 +19,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 ## 📚 Table of Contents
 - [📚 Table of Contents](#-table-of-contents)
 - [🚨 Public Preview Notice](#-public-preview-notice)
+- [🔄 Latest Updates](#-latest-updates)
 - [✨ Features](#-features)
 - [🎬 Demo](#-demo)
 - [🚀 Getting Started](#-getting-started)
@@ -32,7 +33,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
   - [Certificate-Based Authentication](#certificate-based-authentication)
   - [App JSON Structure](#app-json-structure)
 - [🔄 Version Management](#-version-management)
-- [🛠️ Error Handling](#-error-handling)
+- [🛠️ Error Handling](#️-error-handling)
 - [🤔 Troubleshooting](#-troubleshooting)
   - [Common Issues](#common-issues)
 - [🤝 Contributing](#-contributing)
@@ -173,7 +174,6 @@ Follow the interactive prompts to:
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.28.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.89.0 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
