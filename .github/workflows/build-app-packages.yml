@@ -193,7 +193,7 @@ jobs:
             jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
             
             # Cleanup
-            rm -rf "${app_name}_extracted"
+            sudo rm -rf "${app_name}_extracted"
             
             # Return to workspace directory
             cd "$WORKSPACE_DIR"
