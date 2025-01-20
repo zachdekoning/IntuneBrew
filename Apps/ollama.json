@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://ollama.ai/",
   "fileName": "ollama_0.5.7.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.5.7"
 }

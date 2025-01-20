@@ -5,5 +5,6 @@
   "url": "https://download.documentfoundation.org/libreoffice/stable/24.8.4/mac/aarch64/LibreOffice_24.8.4_MacOS_aarch64.dmg",
   "bundleId": null,
   "homepage": "https://www.libreoffice.org/",
-  "fileName": "LibreOffice_24.8.4_MacOS_aarch64.dmg"
+  "fileName": "LibreOffice_24.8.4_MacOS_aarch64.dmg",
+  "previous_version": "24.8.4"
 }

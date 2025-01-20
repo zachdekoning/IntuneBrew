@@ -6,5 +6,6 @@
   "bundleId": "com.axosoft.gitkraken",
   "homepage": "https://www.gitkraken.com/",
   "fileName": "gitkraken_10.6.1.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "10.6.1"
 }

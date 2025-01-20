@@ -5,5 +5,6 @@
   "url": "https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-1.2.5-mac.pkg",
   "bundleId": "com.yubico.ykman",
   "homepage": "https://developers.yubico.com/yubikey-manager-qt/",
-  "fileName": "yubikey-manager-qt-1.2.5-mac.pkg"
+  "fileName": "yubikey-manager-qt-1.2.5-mac.pkg",
+  "previous_version": "1.2.5"
 }
