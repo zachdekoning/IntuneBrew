@@ -119,6 +119,13 @@ jobs:
               mkdir -p "${app_name}_extracted"
               tar -xf "${download_path}.tar.xz" -C "${app_name}_extracted"
               rm "${download_path}.tar.xz"
+            elif [[ "$url" == *".tar.gz" ]]; then
+              curl -L -o "${download_path}.tar.gz" "$url"
+              cd "$HOME/Desktop"
+              # Extract tar.gz
+              mkdir -p "${app_name}_extracted"
+              tar -xzf "${download_path}.tar.gz" -C "${app_name}_extracted"
+              rm "${download_path}.tar.gz"
             else
               curl -L -o "${download_path}.zip" "$url"
               cd "$HOME/Desktop"
