@@ -55,9 +55,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-20 00:23 UTC*
+*Last checked: 2025-01-20 18:57 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Sublime Text | 4189 | 4192 |
+| 1Password | 8.10.19 | 8.10.56 |
+| Asana | 1.0 | 2.3.0 |
+| DeepL | 1.0 | 25.1.11615133 |
+| Canva | 1.101.0 | 1.102.0 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -114,20 +120,25 @@ Follow the interactive prompts to:
 
 | Application | Latest Version |
 |-------------|----------------|
-| <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.19 |
+| <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.56 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20320 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20320 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.4.0.361 |
+| ❌ Alfred | 5.5.1,2273 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.13 |
+| ❌ Anki | 24.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
-| <img src='Logos/asana.png' width='32' height='32'> Asana | 1.0 |
+| <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
+| ❌ AWS Corretto JDK | 21.0.5.11.1 |
+| ❌ BBEdit | 15.1.3 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.0 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.48.0 |
-| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.101.0 |
+| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.102.0 |
+| ❌ CapCut | 3.3.0.1159 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/deepl.png' width='32' height='32'> DeepL | 1.0 |
+| <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 215.4.7202 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
@@ -159,12 +170,14 @@ Follow the interactive prompts to:
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.55.235 |
-| <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4189 |
+| <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.2 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
+| ❌ Termius | 9.12.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.7 |
+| ❌ Transmit | 5.10.6 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.0.3495.29 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
