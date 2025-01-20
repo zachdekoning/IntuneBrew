@@ -63,6 +63,9 @@ jobs:
                   app_name = os.path.splitext(filename)[0]
                   supported_apps[app_name] = f"https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/{filename}"
 
+          # Sort the dictionary alphabetically by keys
+          supported_apps = dict(sorted(supported_apps.items()))
+
           with open("supported_apps.json", "w") as f:
               json.dump(supported_apps, f, indent=4)
 
