@@ -28,7 +28,8 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/bartender.json",
     "https://formulae.brew.sh/api/cask/basecamp.json",
     "https://formulae.brew.sh/api/cask/domzilla-caffeine.json",
-    "https://formulae.brew.sh/api/cask/claude.json"
+    "https://formulae.brew.sh/api/cask/claude.json",
+    "https://formulae.brew.sh/api/cask/cursor.json"
 ]
 
 homebrew_cask_urls = [
@@ -83,7 +84,14 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/anki.json",
     "https://formulae.brew.sh/api/cask/netbeans.json",
     "https://formulae.brew.sh/api/cask/audacity.json",
-    "https://formulae.brew.sh/api/cask/chatgpt.json"
+    "https://formulae.brew.sh/api/cask/chatgpt.json",
+    "https://formulae.brew.sh/api/cask/citrix-workspace.json",
+    "https://formulae.brew.sh/api/cask/datagrip.json",
+    "https://formulae.brew.sh/api/cask/discord.json",
+    "https://formulae.brew.sh/api/cask/duckduckgo.json",
+    "https://formulae.brew.sh/api/cask/elgato-wave-link.json",
+    "https://formulae.brew.sh/api/cask/elgato-camera-hub.json",
+    "https://formulae.brew.sh/api/cask/elgato-stream-deck.json"
 ]
 
 # Custom scraper scripts to run
