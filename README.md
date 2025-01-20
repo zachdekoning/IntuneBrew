@@ -55,7 +55,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-20 19:09 UTC*
+*Last checked: 2025-01-20 19:44 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -138,11 +138,19 @@ Follow the interactive prompts to:
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.102.0 |
 | ❌ CapCut | 3.3.0.1159 |
 | ❌ ChatGPT | 1.2025.009,1737138094 |
+| ❌ Citrix Workspace | 24.11.0.55 |
 | ❌ Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
+| ❌ Cursor | 0.44.11,250103fqxdt5u9z |
+| ❌ DataGrip | 2024.3.3,243.23654.19 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
+| ❌ Discord | 0.0.332 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 215.4.7202 |
+| ❌ DuckDuckGo | 1.122.0,346 |
+| ❌ Elgato Camera Hub | 1.11.0.4022 |
+| ❌ Elgato Stream Deck | 6.8.1.21263 |
+| ❌ Elgato Wave Link | 1.10.1.2293 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
 | <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.4 |
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 124.7.4 |

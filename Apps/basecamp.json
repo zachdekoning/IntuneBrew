@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://basecamp.com/help/3,2.3.16/guides/apps/mac",
   "fileName": "basecamp_3,2.3.16.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3,2.3.16"
 }

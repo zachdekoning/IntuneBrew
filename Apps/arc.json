@@ -6,5 +6,6 @@
   "bundleId": "company.thebrowser.Browser",
   "homepage": "https://arc.net/",
   "fileName": "arc_1.78.1,57736.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.78.1,57736"
 }
