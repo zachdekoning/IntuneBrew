@@ -17,7 +17,12 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/iterm2.json",
     "https://formulae.brew.sh/api/cask/sublime-text.json",
     "https://formulae.brew.sh/api/cask/vivaldi.json",
-    "https://formulae.brew.sh/api/cask/github.json"
+    "https://formulae.brew.sh/api/cask/github.json",
+    "https://formulae.brew.sh/api/cask/transmit.json",
+    "https://formulae.brew.sh/api/cask/1password.json",
+    "https://formulae.brew.sh/api/cask/alfred.json",
+    "https://formulae.brew.sh/api/cask/asana.json",
+    "https://formulae.brew.sh/api/cask/deepl.json"
 ]
 
 homebrew_cask_urls = [
@@ -64,15 +69,17 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/vnc-viewer.json",
     "https://formulae.brew.sh/api/cask/powershell.json",
     "https://formulae.brew.sh/api/cask/betterdisplay.json",
-    "https://formulae.brew.sh/api/cask/orbstack.json"
+    "https://formulae.brew.sh/api/cask/orbstack.json",
+    "https://formulae.brew.sh/api/cask/capcut.json",
+    "https://formulae.brew.sh/api/cask/bbedit.json",
+    "https://formulae.brew.sh/api/cask/termius.json",
+    "https://formulae.brew.sh/api/cask/corretto@21.json",
+    "https://formulae.brew.sh/api/cask/anki.json"
 ]
 
 # Custom scraper scripts to run
 custom_scrapers = [
-    #".github/scripts/scrapers/1password.sh",
     ".github/scripts/scrapers/remotehelp.sh",
-    ".github/scripts/scrapers/deepl.sh",
-    ".github/scripts/scrapers/asana.sh"
 ]
 
 def find_bundle_id(json_string):
