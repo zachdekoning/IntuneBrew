@@ -29,7 +29,16 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/basecamp.json",
     "https://formulae.brew.sh/api/cask/domzilla-caffeine.json",
     "https://formulae.brew.sh/api/cask/claude.json",
-    "https://formulae.brew.sh/api/cask/cursor.json"
+    "https://formulae.brew.sh/api/cask/cursor.json",
+    "https://formulae.brew.sh/api/cask/flux.json",
+    "https://formulae.brew.sh/api/cask/gitkraken.json",
+    "https://formulae.brew.sh/api/cask/godot.json",
+    "https://formulae.brew.sh/api/cask/hp-easy-admin.json",
+    "https://formulae.brew.sh/api/formula/vim.json",
+    "https://formulae.brew.sh/api/cask/notion-calendar.json",
+    "https://formulae.brew.sh/api/cask/notion-calendar.json",
+    "https://formulae.brew.sh/api/cask/ollama.json",
+    "https://formulae.brew.sh/api/cask/pdf-expert.json"
 ]
 
 homebrew_cask_urls = [
@@ -91,7 +100,26 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/duckduckgo.json",
     "https://formulae.brew.sh/api/cask/elgato-wave-link.json",
     "https://formulae.brew.sh/api/cask/elgato-camera-hub.json",
-    "https://formulae.brew.sh/api/cask/elgato-stream-deck.json"
+    "https://formulae.brew.sh/api/cask/elgato-stream-deck.json",
+    "https://formulae.brew.sh/api/cask/drawio.json",
+    "https://formulae.brew.sh/api/cask/foxit-pdf-editor.json",
+    "https://formulae.brew.sh/api/cask/gimp.json",
+    "https://formulae.brew.sh/api/cask/geany.json",
+    "https://formulae.brew.sh/api/cask/goland.json",
+    "https://formulae.brew.sh/api/cask/google-drive.json",
+    "https://formulae.brew.sh/api/cask/santa.json",
+    "https://formulae.brew.sh/api/cask/intellij-idea-ce.json",
+    "https://formulae.brew.sh/api/cask/keeper-password-manager.json",
+    "https://formulae.brew.sh/api/cask/libreoffice.json",
+    "https://formulae.brew.sh/api/cask/podman-desktop.json",
+    "https://formulae.brew.sh/api/cask/pycharm-ce.json",
+    "https://formulae.brew.sh/api/cask/splashtop-business.json",
+    "https://formulae.brew.sh/api/cask/tailscale.json",
+    "https://formulae.brew.sh/api/cask/webstorm.json",
+    "https://formulae.brew.sh/api/cask/wireshark.json",
+    "https://formulae.brew.sh/api/cask/xmind.json",
+    "https://formulae.brew.sh/api/cask/yubico-yubikey-manager.json",
+    "https://formulae.brew.sh/api/cask/imazing.json"
 ]
 
 # Custom scraper scripts to run

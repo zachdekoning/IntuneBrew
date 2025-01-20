@@ -54,6 +54,7 @@ jobs:
           python - <<EOF
           import json
           import os
+          import re
 
           apps_folder = "Apps"
           supported_apps = {}
@@ -69,7 +70,25 @@ jobs:
           with open("supported_apps.json", "w") as f:
               json.dump(supported_apps, f, indent=4)
 
-          print("Created supported_apps.json")
+          # Update README with total number of apps
+          total_apps = len(supported_apps)
+          with open("README.md", "r") as f:
+              readme_content = f.read()
+
+          # Update or add the total apps count
+          apps_count_pattern = r"Total number of supported apps: \d+"
+          new_apps_count = f"Total number of supported apps: {total_apps}"
+
+          if re.search(apps_count_pattern, readme_content):
+              readme_content = re.sub(apps_count_pattern, new_apps_count, readme_content)
+          else:
+              # Add after the first heading if count doesn't exist
+              readme_content = re.sub(r"(# .+?\n)", f"\\1\n{new_apps_count}\n", readme_content, 1)
+
+          with open("README.md", "w") as f:
+              f.write(readme_content)
+
+          print(f"Created supported_apps.json with alphabetically sorted entries and updated README.md with {total_apps} apps")
           EOF
 
       - name: Process apps
