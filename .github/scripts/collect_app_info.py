@@ -22,7 +22,13 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/1password.json",
     "https://formulae.brew.sh/api/cask/alfred.json",
     "https://formulae.brew.sh/api/cask/asana.json",
-    "https://formulae.brew.sh/api/cask/deepl.json"
+    "https://formulae.brew.sh/api/cask/deepl.json",
+    "https://formulae.brew.sh/api/cask/arc.json",
+    "https://formulae.brew.sh/api/cask/azure-data-studio.json",
+    "https://formulae.brew.sh/api/cask/bartender.json",
+    "https://formulae.brew.sh/api/cask/basecamp.json",
+    "https://formulae.brew.sh/api/cask/domzilla-caffeine.json",
+    "https://formulae.brew.sh/api/cask/claude.json"
 ]
 
 homebrew_cask_urls = [
@@ -74,7 +80,10 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/bbedit.json",
     "https://formulae.brew.sh/api/cask/termius.json",
     "https://formulae.brew.sh/api/cask/corretto@21.json",
-    "https://formulae.brew.sh/api/cask/anki.json"
+    "https://formulae.brew.sh/api/cask/anki.json",
+    "https://formulae.brew.sh/api/cask/netbeans.json",
+    "https://formulae.brew.sh/api/cask/audacity.json",
+    "https://formulae.brew.sh/api/cask/chatgpt.json"
 ]
 
 # Custom scraper scripts to run
