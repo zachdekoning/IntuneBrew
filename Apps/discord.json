@@ -5,5 +5,6 @@
   "url": "https://dl.discordapp.net/apps/osx/0.0.332/Discord.dmg",
   "bundleId": null,
   "homepage": "https://discord.com/",
-  "fileName": "Discord.dmg"
+  "fileName": "Discord.dmg",
+  "previous_version": "0.0.332"
 }

@@ -16,7 +16,8 @@
 
 IntuneBrew is a PowerShell-based tool that simplifies the process of uploading and managing macOS applications in Microsoft Intune. It automates the entire workflow from downloading apps to uploading them to Intune, complete with proper metadata and logos.
 
-## 📚 Table of Contents
+#
+Total number of supported apps: 106
 - [📚 Table of Contents](#-table-of-contents)
 - [🚨 Public Preview Notice](#-public-preview-notice)
 - [🔄 Latest Updates](#-latest-updates)
@@ -56,7 +57,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-20 19:44 UTC*
+*Last checked: 2025-01-20 20:51 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -147,20 +148,35 @@ Follow the interactive prompts to:
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | ❌ Discord | 0.0.332 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
+| ❌ draw.io Desktop | 26.0.4 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 215.4.7202 |
 | ❌ DuckDuckGo | 1.122.0,346 |
 | ❌ Elgato Camera Hub | 1.11.0.4022 |
 | ❌ Elgato Stream Deck | 6.8.1.21263 |
 | ❌ Elgato Wave Link | 1.10.1.2293 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4,20240910164757,a2e60a8d876a07eded5d212fa56ba45214114ad0 |
+| ❌ f.lux | 42.2 |
 | <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.4 |
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 124.7.4 |
+| ❌ Foxit PDF Editor | 13.1.6 |
+| ❌ Geany | 2.0 |
+| ❌ GIMP | 2.10.38,1 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.13-c968496f |
+| ❌ GitKraken | 10.6.1 |
+| ❌ Godot Engine | 4.3 |
+| ❌ Goland | 2024.3.2,243.23654.119 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.84 |
+| ❌ Google Drive | 102.0.2 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.102.0.0 |
+| ❌ HP Easy Admin | 2.15.0,240916 |
+| ❌ iMazing | 3.0.6,21166 |
+| ❌ IntelliJ IDEA Community Edition | 2024.3.2,243.23654.117 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
+| ❌ Jetbrains PyCharm Community Edition | 2024.3.1.1,243.22562.220 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
+| ❌ Keeper Password Manager | 17.0.0 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
+| ❌ LibreOffice | 24.8.4 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.207.3345.5574 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.96.4 |
@@ -169,22 +185,29 @@ Follow the interactive prompts to:
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.1 |
 | ❌ NetBeans IDE | 24 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
+| ❌ Notion Calendar | 1.126.0,250106suuhlwrt4 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
+| ❌ Ollama | 0.5.7 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.4_18819 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
+| ❌ PDF Expert | 3.10.10,1086 |
+| ❌ Podman Desktop | 1.15.0 |
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.28.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.4.6 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
+| ❌ Santa | 2024.9 |
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.38.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.41.105 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
+| ❌ Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.55.235 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.2 |
+| ❌ Tailscale | 1.78.1 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | ❌ Termius | 9.12.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.7 |
@@ -193,8 +216,11 @@ Follow the interactive prompts to:
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.0.3495.29 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
+| ❌ WebStorm | 2024.3.2,243.23654.120 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.9 |
+| ❌ Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
+| ❌ Yubikey Manager | 1.2.5 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]

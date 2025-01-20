@@ -1,0 +1,9 @@
+{
+  "name": "Google Drive",
+  "description": "Client for the Google Drive storage service",
+  "version": "102.0.2",
+  "url": "https://dl.google.com/drive-file-stream/5-percent/GoogleDrive.dmg",
+  "bundleId": "com.google.pkg.Keystone",
+  "homepage": "https://www.google.com/drive/",
+  "fileName": "GoogleDrive.dmg"
+}
