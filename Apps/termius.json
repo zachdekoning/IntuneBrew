@@ -5,5 +5,6 @@
   "url": "https://autoupdate.termius.com/mac-arm64/Termius.dmg",
   "bundleId": null,
   "homepage": "https://www.termius.com/",
-  "fileName": "Termius.dmg"
+  "fileName": "Termius.dmg",
+  "previous_version": "9.12.0"
 }

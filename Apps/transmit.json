@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://panic.com/transmit/",
   "fileName": "transmit_5.10.6.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.10.6"
 }
