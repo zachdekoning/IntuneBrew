@@ -55,15 +55,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-20 18:57 UTC*
+*Last checked: 2025-01-20 19:09 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Sublime Text | 4189 | 4192 |
-| 1Password | 8.10.19 | 8.10.56 |
-| Asana | 1.0 | 2.3.0 |
-| DeepL | 1.0 | 25.1.11615133 |
-| Canva | 1.101.0 | 1.102.0 |
+> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -128,15 +122,23 @@ Follow the interactive prompts to:
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.13 |
 | ❌ Anki | 24.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
+| ❌ Arc | 1.78.1,57736 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
+| ❌ Audacity | 3.7.1 |
 | ❌ AWS Corretto JDK | 21.0.5.11.1 |
+| ❌ Azure Data Studio | 1.50.0 |
+| ❌ Bartender | 5.2.7 |
+| ❌ Basecamp | 3,2.3.16 |
 | ❌ BBEdit | 15.1.3 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.0 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.48.0 |
+| ❌ Caffeine | 1.4.3 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.102.0 |
 | ❌ CapCut | 3.3.0.1159 |
+| ❌ ChatGPT | 1.2025.009,1737138094 |
+| ❌ Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
@@ -156,6 +158,7 @@ Follow the interactive prompts to:
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.1 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.1 |
+| ❌ NetBeans IDE | 24 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.4_18819 |
