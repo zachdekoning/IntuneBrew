@@ -6,5 +6,6 @@
   "bundleId": "com.github.GitHubClient",
   "homepage": "https://desktop.github.com/",
   "fileName": "github_desktop_3.4.13-c968496f.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.4.13-c968496f"
 }
