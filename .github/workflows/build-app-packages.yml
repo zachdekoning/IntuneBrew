@@ -76,7 +76,7 @@ jobs:
               readme_content = f.read()
 
           # Create a badge-style apps count
-          apps_count_pattern = r"Apps Available.*?\d+"
+          apps_count_pattern = r"Supported Apps.*?\d+"
           new_apps_badge = f'    <img src="https://img.shields.io/badge/Apps_Available-{total_apps}-2ea44f?style=flat" alt="Apps Available"/>'
 
           if re.search(apps_count_pattern, readme_content):
