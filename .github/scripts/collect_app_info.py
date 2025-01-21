@@ -38,7 +38,6 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/notion-calendar.json",
     "https://formulae.brew.sh/api/cask/notion-calendar.json",
     "https://formulae.brew.sh/api/cask/ollama.json",
-    "https://formulae.brew.sh/api/cask/pdf-expert.json"
 ]
 
 homebrew_cask_urls = [
