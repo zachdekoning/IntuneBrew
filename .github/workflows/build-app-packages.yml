@@ -77,7 +77,7 @@ jobs:
 
           # Create a badge-style apps count
           apps_count_pattern = r"Apps Available.*?\d+"
-          new_apps_badge = f'  <p>    \n    <a>\n      <img src="https://img.shields.io/badge/Apps_Available-{total_apps}-2ea44f?style=flat" alt="TotalApps"/>\n    </a>\n  </p>'
+          new_apps_badge = f'  <p>    \n    <a href="#-supported-applications">\n      <img src="https://img.shields.io/badge/Apps_Available-{total_apps}-2ea44f?style=flat" alt="TotalApps"/>\n    </a>\n  </p>'
 
           if re.search(apps_count_pattern, readme_content):
               # Update existing apps count
