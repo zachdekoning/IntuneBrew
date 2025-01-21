@@ -59,9 +59,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-21 16:30 UTC*
+*Last checked: 2025-01-21 16:48 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Mozilla Firefox | 134.0.1 | 134.0.2 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -184,7 +186,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.96.4 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.1 |
-| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.1 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.2 |
 | ❌ NetBeans IDE | 24 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
 | ❌ Notion Calendar | 1.126.0,250106suuhlwrt4 |
