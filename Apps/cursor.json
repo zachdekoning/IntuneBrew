@@ -1,11 +1,11 @@
 {
   "name": "Cursor",
   "description": "Write, edit, and chat about your code with AI",
-  "version": "0.45.0,250120dh9ezx9pg",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/cursor_0.45.0,250120dh9ezx9pg.pkg",
+  "version": "0.45.1,2501213ljml5byg",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/cursor_0.45.1,2501213ljml5byg.pkg",
   "bundleId": null,
   "homepage": "https://cursor.sh/",
-  "fileName": "cursor_0.45.0,250120dh9ezx9pg.pkg",
+  "fileName": "cursor_0.45.1,2501213ljml5byg.pkg",
   "type": "app",
-  "previous_version": "0.44.11,250103fqxdt5u9z"
+  "previous_version": "0.45.0,250120dh9ezx9pg"
 }
