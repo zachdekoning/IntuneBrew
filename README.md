@@ -12,11 +12,6 @@
     </a>
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
-  <p>    
-    <a>
-      <img src="https://img.shields.io/badge/Apps_Available-106-2ea44f?style=flat" alt="TotalApps"/>
-    </a>
-
   <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-106-2ea44f?style=flat" alt="TotalApps"/>
