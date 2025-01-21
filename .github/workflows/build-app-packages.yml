@@ -77,11 +77,11 @@ jobs:
 
           # Create a badge-style apps count
           apps_count_pattern = r"Apps Available.*?\d+"
-          new_apps_badge = f'    <a>\n      <img src="https://img.shields.io/badge/Apps_Available-{total_apps}-2ea44f?style=flat" alt="Total Apps"/>\n    </a>'
+          new_apps_badge = f'    <a href="#-supported-applications">\n      <img src="https://img.shields.io/badge/Apps_Available-{total_apps}-2ea44f?style=flat" alt="Total Apps"/>\n    </a>'
 
           if re.search(apps_count_pattern, readme_content):
               # Update existing apps count
-              readme_content = re.sub(r'<a\s*>.*?Apps Available.*?</a>', new_apps_badge, readme_content, flags=re.DOTALL)
+              readme_content = re.sub(r'<a.*?>.*?Apps Available.*?</a>', new_apps_badge, readme_content, flags=re.DOTALL)
           else:
               # Add after the license badge
               readme_content = re.sub(r'(license.*?MIT.*?</a>)', f'\\1\n{new_apps_badge}', readme_content, flags=re.DOTALL)
