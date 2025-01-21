@@ -16,6 +16,11 @@
     <a>
       <img src="https://img.shields.io/badge/Apps_Available-106-2ea44f?style=flat" alt="TotalApps"/>
     </a>
+
+  <p>
+    <a href="#-supported-applications">
+      <img src="https://img.shields.io/badge/Apps_Available-106-2ea44f?style=flat" alt="TotalApps"/>
+    </a>
   </p>
 </div>
 
@@ -61,7 +66,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-21 17:49 UTC*
+*Last checked: 2025-01-21 17:52 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
