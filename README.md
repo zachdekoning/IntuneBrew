@@ -57,9 +57,11 @@ Total number of supported apps: 106
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-20 20:56 UTC*
+*Last checked: 2025-01-21 00:22 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Cursor | 0.44.11,250103fqxdt5u9z | 0.45.0,250120dh9ezx9pg |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -143,7 +145,7 @@ Follow the interactive prompts to:
 | ❌ Citrix Workspace | 24.11.0.55 |
 | ❌ Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| ❌ Cursor | 0.44.11,250103fqxdt5u9z |
+| ❌ Cursor | 0.45.0,250120dh9ezx9pg |
 | ❌ DataGrip | 2024.3.3,243.23654.19 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | ❌ Discord | 0.0.332 |
