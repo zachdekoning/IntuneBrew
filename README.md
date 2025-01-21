@@ -12,12 +12,14 @@
     </a>
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
-</div>
+    <a href="#-supported-applications">
+      <img src="https://img.shields.io/badge/Apps_Available-106-2ea44f?style=flat" alt="Total Apps"/>
+    </a>
+
 
 IntuneBrew is a PowerShell-based tool that simplifies the process of uploading and managing macOS applications in Microsoft Intune. It automates the entire workflow from downloading apps to uploading them to Intune, complete with proper metadata and logos.
 
 #
-Total number of supported apps: 106
 - [📚 Table of Contents](#-table-of-contents)
 - [🚨 Public Preview Notice](#-public-preview-notice)
 - [🔄 Latest Updates](#-latest-updates)
@@ -57,11 +59,14 @@ Total number of supported apps: 106
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-21 00:22 UTC*
+*Last checked: 2025-01-21 16:24 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Cursor | 0.44.11,250103fqxdt5u9z | 0.45.0,250120dh9ezx9pg |
+| GitHub Desktop | 3.4.13-c968496f | 3.4.14-eaabef15 |
+| Cursor | 0.45.0,250120dh9ezx9pg | 0.45.1,2501213ljml5byg |
+| Grammarly Desktop | 1.102.0.0 | 1.103.0.0 |
+| OrbStack | 1.9.4_18819 | 1.9.5_18849 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -145,7 +150,7 @@ Follow the interactive prompts to:
 | ❌ Citrix Workspace | 24.11.0.55 |
 | ❌ Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| ❌ Cursor | 0.45.0,250120dh9ezx9pg |
+| ❌ Cursor | 0.45.1,2501213ljml5byg |
 | ❌ DataGrip | 2024.3.3,243.23654.19 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | ❌ Discord | 0.0.332 |
@@ -163,13 +168,13 @@ Follow the interactive prompts to:
 | ❌ Foxit PDF Editor | 13.1.6 |
 | ❌ Geany | 2.0 |
 | ❌ GIMP | 2.10.38,1 |
-| <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.13-c968496f |
+| <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.14-eaabef15 |
 | ❌ GitKraken | 10.6.1 |
 | ❌ Godot Engine | 4.3 |
 | ❌ Goland | 2024.3.2,243.23654.119 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.84 |
 | ❌ Google Drive | 102.0.2 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.102.0.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.103.0.0 |
 | ❌ HP Easy Admin | 2.15.0,240916 |
 | ❌ iMazing | 3.0.6,21166 |
 | ❌ IntelliJ IDEA Community Edition | 2024.3.2,243.23654.117 |
@@ -190,7 +195,7 @@ Follow the interactive prompts to:
 | ❌ Notion Calendar | 1.126.0,250106suuhlwrt4 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | ❌ Ollama | 0.5.7 |
-| <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.4_18819 |
+| <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.5_18849 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | ❌ PDF Expert | 3.10.10,1086 |
 | ❌ Podman Desktop | 1.15.0 |
