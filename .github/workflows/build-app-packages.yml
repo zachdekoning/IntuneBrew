@@ -75,20 +75,26 @@ jobs:
           with open("README.md", "r") as f:
               readme_content = f.read()
 
-          # Update or add the total apps count
+          # Create a badge-style apps count and place it under the title
           apps_count_pattern = r"Total number of supported apps: \d+"
-          new_apps_count = f"Total number of supported apps: {total_apps}"
+          new_apps_badge = f'    <a href="#-supported-applications">\n      <img src="https://img.shields.io/badge/Apps_Available-{total_apps}-2ea44f?style=flat" alt="Total Apps"/>\n    </a>'
 
           if re.search(apps_count_pattern, readme_content):
-              readme_content = re.sub(apps_count_pattern, new_apps_count, readme_content)
+              # Remove old style count if it exists
+              readme_content = re.sub(r"\nTotal number of supported apps: \d+\n", "\n", readme_content)
+
+          # Add the badge under the title div
+          if "</div>" in readme_content:
+              # Find the first closing div tag (which should be after the existing badges)
+              readme_content = re.sub(r"(</div>)", f"{new_apps_badge}\n\\1", readme_content, count=1)
           else:
-              # Add after the first heading if count doesn't exist
-              readme_content = re.sub(r"(# .+?\n)", f"\\1\n{new_apps_count}\n", readme_content, 1)
+              # Fallback: add after the title
+              readme_content = re.sub(r"(</h1>)", f"\\1\n<div align=\"center\">\n{new_apps_badge}\n</div>", readme_content)
 
           with open("README.md", "w") as f:
               f.write(readme_content)
 
-          print(f"Created supported_apps.json with alphabetically sorted entries and updated README.md with {total_apps} apps")
+          print(f"Created supported_apps.json with alphabetically sorted entries and updated README.md with {total_apps} apps badge")
           EOF
 
       - name: Process apps
