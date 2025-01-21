@@ -73,7 +73,6 @@
     "ollama": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/ollama.json",
     "orbstack": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/orbstack.json",
     "parallels_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/parallels_desktop.json",
-    "pdf_expert": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/pdf_expert.json",
     "podman_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/podman_desktop.json",
     "postman": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/postman.json",
     "powershell": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/powershell.json",
