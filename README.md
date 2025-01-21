@@ -12,11 +12,13 @@
     </a>
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
-    <a >
-      <img src="https://img.shields.io/badge/Apps_Available-106-2ea44f?style=flat" alt="Total Apps"/>
+  <p>    
+    <a>
+      <img src="https://img.shields.io/badge/Apps_Available-106-2ea44f?style=flat" alt="TotalApps"/>
     </a>
-</div>  
-
+  </p>
+</div>
+
 IntuneBrew is a PowerShell-based tool that simplifies the process of uploading and managing macOS applications in Microsoft Intune. It automates the entire workflow from downloading apps to uploading them to Intune, complete with proper metadata and logos.
 
 #
