@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-      <p>
+        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-107-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -62,9 +62,17 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-22 00:22 UTC*
+*Last checked: 2025-01-23 00:22 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| GitHub Desktop | 3.4.14-eaabef15 | 3.4.15-3fea2a10 |
+| Basecamp | 3,2.3.16 | 3,2.4.0 |
+| Krisp | 2.51.3 | 2.54.6 |
+| BetterDisplay | 3.3.0 | 3.3.2 |
+| AWS Corretto JDK | 21.0.5.11.1 | 21.0.6.7.1 |
+| ChatGPT | 1.2025.009,1737138094 | 1.2025.014,1737150122 |
+| Google Drive | 102.0.2 | 103.0.1 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -132,19 +140,19 @@ Follow the interactive prompts to:
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.78.1,57736 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.1 |
-| <img src='Logos/aws_corretto_jdk.png' width='32' height='32'> AWS Corretto JDK | 21.0.5.11.1 |
+| <img src='Logos/aws_corretto_jdk.png' width='32' height='32'> AWS Corretto JDK | 21.0.6.7.1 |
 | <img src='Logos/azure_data_studio.png' width='32' height='32'> Azure Data Studio | 1.50.0 |
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.2.7 |
-| <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3,2.3.16 |
+| <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3,2.4.0 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.3 |
-| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.0 |
+| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.2 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.48.0 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.4.3 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.102.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
-| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.009,1737138094 |
+| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.014,1737150122 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.0.55 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
@@ -166,12 +174,12 @@ Follow the interactive prompts to:
 | <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.6 |
 | <img src='Logos/geany.png' width='32' height='32'> Geany | 2.0 |
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38,1 |
-| <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.14-eaabef15 |
+| <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.15-3fea2a10 |
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.2 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2,243.23654.119 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.84 |
-| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 102.0.2 |
+| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.1 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.103.1.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0,240916 |
 | ❌ iMazing | 3.0.6,21166 |
@@ -181,7 +189,7 @@ Follow the interactive prompts to:
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2024.3.1.1,243.22562.220 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.0.0 |
-| <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.51.3 |
+| <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.54.6 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 24.8.4 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.207.3345.5574 |
@@ -191,7 +199,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.2 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.3.0 |
-| <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.126.0,250106suuhlwrt4 |
+| <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.127.0,250121ji52u08fs |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.7.7 |
 | <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.7 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.5_18849 |
