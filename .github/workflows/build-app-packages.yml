@@ -1,0 +1,211 @@
+name: Build App Packages and Collect App Information
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # Run daily at midnight
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Make scrapers executable
+        run: chmod +x .github/scripts/scrapers/*.sh
+
+      - name: Collect app information
+        run: python .github/scripts/collect_app_info.py
+
+      - name: Find apps needing packaging
+        id: find-apps
+        run: |
+          echo "Finding apps that need special packaging..."
+          apps_to_build=()
+          for file in Apps/*.json; do
+            if [ -f "$file" ]; then
+              type=$(jq -r '.type // empty' "$file")
+              if [ "$type" = "app" ]; then
+                app_name=$(basename "$file" .json)
+                url=$(jq -r '.url' "$file")
+                apps_to_build+=("$app_name:$url")
+              fi
+            fi
+          done
+          echo "APPS_TO_BUILD=${apps_to_build[*]}" >> $GITHUB_ENV
+          echo "Found apps: ${apps_to_build[*]}"
+
+      - name: Create supported_apps.json
+        run: |
+          python - <<EOF
+          import json
+          import os
+          import re
+
+          apps_folder = "Apps"
+          supported_apps = {}
+
+          for filename in os.listdir(apps_folder):
+              if filename.endswith(".json"):
+                  app_name = os.path.splitext(filename)[0]
+                  supported_apps[app_name] = f"https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/{filename}"
+
+          # Sort the dictionary alphabetically by keys
+          supported_apps = dict(sorted(supported_apps.items()))
+
+          with open("supported_apps.json", "w") as f:
+              json.dump(supported_apps, f, indent=4)
+
+          # Update README with total number of apps
+          total_apps = len(supported_apps)
+          with open("README.md", "r") as f:
+              readme_content = f.read()
+
+          # Create a badge-style apps count
+          apps_count_pattern = r'<p>\s*<a href="#-supported-applications">\s*<img src="https://img\.shields\.io/badge/Apps_Available-\d+-2ea44f\?style=flat"[^>]*>\s*</a>\s*</p>'
+          new_apps_badge = f'  <p>\n    <a href="#-supported-applications">\n      <img src="https://img.shields.io/badge/Apps_Available-{total_apps}-2ea44f?style=flat" alt="TotalApps"/>\n    </a>\n  </p>'
+
+          # Replace the existing badge with the new one, or add if not found
+          if re.search(apps_count_pattern, readme_content):
+              readme_content = re.sub(apps_count_pattern, new_apps_badge, readme_content)
+          else:
+              # If no badge exists, add after the first paragraph in the centered div
+              readme_content = re.sub(r'(  </p>)\n</div>', f'\\1\n{new_apps_badge}\n</div>', readme_content)
+
+          with open("README.md", "w") as f:
+              f.write(readme_content)
+
+          print(f"Updated README.md with {total_apps} apps badge")
+          EOF
+
+      - name: Process apps
+        if: env.APPS_TO_BUILD != ''
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+        run: |
+          WORKSPACE_DIR=$(pwd)
+          for app_info in $APPS_TO_BUILD; do
+            IFS=':' read -r app_name url <<< "$app_info"
+            
+            echo "Processing $app_name..."
+            
+            # Get version from JSON file
+            version=$(jq -r '.version' "$WORKSPACE_DIR/Apps/${app_name}.json")
+            echo "Version: $version"
+            
+            # Check if this is an app that needs packaging
+            is_app_type=$(jq -r '.type == "app"' "$WORKSPACE_DIR/Apps/${app_name}.json")
+            if [ "$is_app_type" != "true" ]; then
+              echo "Skipping URL update for $app_name as it's not of type 'app'"
+              continue
+            fi
+            
+            # List existing versions of this app in Azure storage
+            existing_versions=$(az storage blob list --container-name pkg --prefix "${app_name}_" --query "[].name" -o tsv)
+            
+            # Check if the exact version already exists
+            if echo "$existing_versions" | grep -q "^${app_name}_${version}.pkg$"; then
+              echo "Package ${app_name}_${version}.pkg already exists in Azure storage. Skipping..."
+              # Update the JSON file with Azure URL and correct filename
+              azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
+              jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+              continue
+            fi
+            
+            # Download app
+            echo "Downloading $app_name..."
+            download_path="$HOME/Desktop/${app_name}"
+            if [[ "$url" == *".zip" ]]; then
+              curl -L -o "${download_path}.zip" "$url"
+              cd "$HOME/Desktop"
+              # Extract zip while excluding __MACOSX directory
+              unzip -q -d "${app_name}_extracted" "${download_path}.zip"
+              rm "${download_path}.zip"
+            elif [[ "$url" == *".tar.xz" ]]; then
+              curl -L -o "${download_path}.tar.xz" "$url"
+              cd "$HOME/Desktop"
+              # Extract tar.xz
+              mkdir -p "${app_name}_extracted"
+              tar -xf "${download_path}.tar.xz" -C "${app_name}_extracted"
+              rm "${download_path}.tar.xz"
+            elif [[ "$url" == *".tar.gz" ]]; then
+              curl -L -o "${download_path}.tar.gz" "$url"
+              cd "$HOME/Desktop"
+              # Extract tar.gz
+              mkdir -p "${app_name}_extracted"
+              tar -xzf "${download_path}.tar.gz" -C "${app_name}_extracted"
+              rm "${download_path}.tar.gz"
+            else
+              curl -L -o "${download_path}.zip" "$url"
+              cd "$HOME/Desktop"
+              # Default to zip extraction
+              unzip -q -d "${app_name}_extracted" "${download_path}.zip"
+              rm "${download_path}.zip"
+            fi
+            
+            # Find .app file, excluding __MACOSX directory
+            app_file=$(find "${app_name}_extracted" -type d -name "*.app" ! -path "*/__MACOSX/*" -print -quit)
+            if [ -z "$app_file" ]; then
+              echo "No .app file found for $app_name"
+              cd "$WORKSPACE_DIR"
+              rm -rf "${app_name}_extracted"
+              continue
+            fi
+            
+            # Build PKG with version in filename
+            echo "Building PKG for $app_name version $version..."
+            pkgbuild --install-location /Applications --component "$app_file" "${app_name}_${version}.pkg"
+            
+            # Upload to Azure with version in filename
+            echo "Uploading $app_name version $version to Azure Blob Storage..."
+            az storage blob upload \
+              --container-name pkg \
+              --file "${app_name}_${version}.pkg" \
+              --name "${app_name}_${version}.pkg" \
+              --overwrite true
+
+            # Delete older versions of this app from Azure storage
+            if [ ! -z "$existing_versions" ]; then
+              echo "Cleaning up older versions of $app_name..."
+              echo "$existing_versions" | while read -r blob_name; do
+                if [ ! -z "$blob_name" ] && [ "$blob_name" != "${app_name}_${version}.pkg" ]; then
+                  echo "Deleting old version: $blob_name"
+                  az storage blob delete --container-name pkg --name "$blob_name"
+                fi
+              done
+            fi
+
+            # Update the JSON file with Azure URL and correct filename
+            azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
+            jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+            
+            # Cleanup
+            sudo rm -rf "${app_name}_extracted"
+            
+            # Return to workspace directory
+            cd "$WORKSPACE_DIR"
+            
+            echo "Completed processing $app_name version $version"
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Apps/*.json supported_apps.json README.md
+          git commit -m "Update app information and supported apps list" || exit 0
+          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git

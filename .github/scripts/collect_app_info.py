@@ -8,6 +8,39 @@ import subprocess
 from datetime import datetime
 
 # Array of Homebrew cask JSON URLs
+app_urls = [
+    "https://formulae.brew.sh/api/cask/visual-studio-code.json",
+    "https://formulae.brew.sh/api/cask/microsoft-azure-storage-explorer.json",
+    "https://formulae.brew.sh/api/cask/figma.json",
+    "https://formulae.brew.sh/api/cask/postman.json",
+    "https://formulae.brew.sh/api/cask/fantastical.json",
+    "https://formulae.brew.sh/api/cask/iterm2.json",
+    "https://formulae.brew.sh/api/cask/sublime-text.json",
+    "https://formulae.brew.sh/api/cask/vivaldi.json",
+    "https://formulae.brew.sh/api/cask/github.json",
+    "https://formulae.brew.sh/api/cask/transmit.json",
+    "https://formulae.brew.sh/api/cask/1password.json",
+    "https://formulae.brew.sh/api/cask/alfred.json",
+    "https://formulae.brew.sh/api/cask/asana.json",
+    "https://formulae.brew.sh/api/cask/deepl.json",
+    "https://formulae.brew.sh/api/cask/arc.json",
+    "https://formulae.brew.sh/api/cask/azure-data-studio.json",
+    "https://formulae.brew.sh/api/cask/bartender.json",
+    "https://formulae.brew.sh/api/cask/basecamp.json",
+    "https://formulae.brew.sh/api/cask/domzilla-caffeine.json",
+    "https://formulae.brew.sh/api/cask/claude.json",
+    "https://formulae.brew.sh/api/cask/cursor.json",
+    "https://formulae.brew.sh/api/cask/flux.json",
+    "https://formulae.brew.sh/api/cask/gitkraken.json",
+    "https://formulae.brew.sh/api/cask/godot.json",
+    "https://formulae.brew.sh/api/cask/hp-easy-admin.json",
+    "https://formulae.brew.sh/api/formula/vim.json",
+    "https://formulae.brew.sh/api/cask/notion-calendar.json",
+    "https://formulae.brew.sh/api/cask/notion-calendar.json",
+    "https://formulae.brew.sh/api/cask/ollama.json",
+    "https://formulae.brew.sh/api/cask/pdf-expert.json"
+]
+
 homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/google-chrome.json",
     "https://formulae.brew.sh/api/cask/zoom.json",
@@ -52,15 +85,47 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/vnc-viewer.json",
     "https://formulae.brew.sh/api/cask/powershell.json",
     "https://formulae.brew.sh/api/cask/betterdisplay.json",
-    "https://formulae.brew.sh/api/cask/raycast.json"
-    ]
+    "https://formulae.brew.sh/api/cask/orbstack.json",
+    "https://formulae.brew.sh/api/cask/capcut.json",
+    "https://formulae.brew.sh/api/cask/bbedit.json",
+    "https://formulae.brew.sh/api/cask/termius.json",
+    "https://formulae.brew.sh/api/cask/corretto@21.json",
+    "https://formulae.brew.sh/api/cask/anki.json",
+    "https://formulae.brew.sh/api/cask/netbeans.json",
+    "https://formulae.brew.sh/api/cask/audacity.json",
+    "https://formulae.brew.sh/api/cask/chatgpt.json",
+    "https://formulae.brew.sh/api/cask/citrix-workspace.json",
+    "https://formulae.brew.sh/api/cask/datagrip.json",
+    "https://formulae.brew.sh/api/cask/discord.json",
+    "https://formulae.brew.sh/api/cask/duckduckgo.json",
+    "https://formulae.brew.sh/api/cask/elgato-wave-link.json",
+    "https://formulae.brew.sh/api/cask/elgato-camera-hub.json",
+    "https://formulae.brew.sh/api/cask/elgato-stream-deck.json",
+    "https://formulae.brew.sh/api/cask/drawio.json",
+    "https://formulae.brew.sh/api/cask/foxit-pdf-editor.json",
+    "https://formulae.brew.sh/api/cask/gimp.json",
+    "https://formulae.brew.sh/api/cask/geany.json",
+    "https://formulae.brew.sh/api/cask/goland.json",
+    "https://formulae.brew.sh/api/cask/google-drive.json",
+    "https://formulae.brew.sh/api/cask/santa.json",
+    "https://formulae.brew.sh/api/cask/intellij-idea-ce.json",
+    "https://formulae.brew.sh/api/cask/keeper-password-manager.json",
+    "https://formulae.brew.sh/api/cask/libreoffice.json",
+    "https://formulae.brew.sh/api/cask/podman-desktop.json",
+    "https://formulae.brew.sh/api/cask/pycharm-ce.json",
+    "https://formulae.brew.sh/api/cask/splashtop-business.json",
+    "https://formulae.brew.sh/api/cask/tailscale.json",
+    "https://formulae.brew.sh/api/cask/webstorm.json",
+    "https://formulae.brew.sh/api/cask/wireshark.json",
+    "https://formulae.brew.sh/api/cask/xmind.json",
+    "https://formulae.brew.sh/api/cask/yubico-yubikey-manager.json",
+    "https://formulae.brew.sh/api/cask/imazing.json",
+    "https://formulae.brew.sh/api/cask/imazing-profile-editor.json"
+]
 
 # Custom scraper scripts to run
 custom_scrapers = [
-    ".github/scripts/scrapers/1password.sh",
     ".github/scripts/scrapers/remotehelp.sh",
-    ".github/scripts/scrapers/deepl.sh",
-    ".github/scripts/scrapers/asana.sh"
 ]
 
 def find_bundle_id(json_string):
@@ -80,7 +145,7 @@ def find_bundle_id(json_string):
 
     return None
 
-def get_homebrew_app_info(json_url):
+def get_homebrew_app_info(json_url, needs_packaging=False):
     response = requests.get(json_url)
     response.raise_for_status()
     data = response.json()
@@ -88,7 +153,7 @@ def get_homebrew_app_info(json_url):
 
     bundle_id = find_bundle_id(json_string)
 
-    return {
+    app_info = {
         "name": data["name"][0],
         "description": data["desc"],
         "version": data["version"],
@@ -97,6 +162,11 @@ def get_homebrew_app_info(json_url):
         "homepage": data["homepage"],
         "fileName": os.path.basename(data["url"])
     }
+    
+    if needs_packaging:
+        app_info["type"] = "app"
+    
+    return app_info
 
 def sanitize_filename(name):
     sanitized = name.replace(' ', '_')
@@ -277,11 +347,47 @@ def update_readme_with_latest_changes(apps_info):
 def main():
     apps_folder = "Apps"
     os.makedirs(apps_folder, exist_ok=True)
+    print(f"\n📁 Apps folder absolute path: {os.path.abspath(apps_folder)}")
+    print(f"📁 Apps folder exists: {os.path.exists(apps_folder)}")
+    print(f"📁 Apps folder is writable: {os.access(apps_folder, os.W_OK)}\n")
     
     supported_apps = []
     apps_info = []
 
-    # Process Homebrew cask URLs
+    # Process apps that need special packaging
+    for url in app_urls:
+        try:
+            print(f"\nProcessing special app URL: {url}")
+            app_info = get_homebrew_app_info(url, needs_packaging=True)
+            display_name = app_info['name']
+            print(f"Got app info for: {display_name}")
+            supported_apps.append(display_name)
+            file_name = f"{sanitize_filename(display_name)}.json"
+            print(f"🔍 Sanitized filename: {file_name}")
+            file_path = os.path.join(apps_folder, file_name)
+            print(f"📝 Attempting to write to: {os.path.abspath(file_path)}")
+
+            # Store previous version and preserve existing bundle ID if file exists
+            if os.path.exists(file_path):
+                print(f"Found existing file for {display_name}")
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    app_info["previous_version"] = existing_data.get("version")
+                    # Preserve existing bundle ID if it exists
+                    if existing_data.get("bundleId"):
+                        app_info["bundleId"] = existing_data["bundleId"]
+
+            with open(file_path, "w") as f:
+                json.dump(app_info, f, indent=2)
+                print(f"Successfully wrote {file_path} with type 'app' flag")
+
+            apps_info.append(app_info)
+            print(f"Saved app information for {display_name} to {file_path}")
+        except Exception as e:
+            print(f"Error processing special app {url}: {str(e)}")
+            print(f"Full error details: ", e)
+
+    # Process regular Homebrew cask URLs
     for url in homebrew_cask_urls:
         try:
             app_info = get_homebrew_app_info(url)

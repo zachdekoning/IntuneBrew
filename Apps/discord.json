@@ -1,0 +1,10 @@
+{
+  "name": "Discord",
+  "description": "Voice and text chat software",
+  "version": "0.0.333",
+  "url": "https://dl.discordapp.net/apps/osx/0.0.333/Discord.dmg",
+  "bundleId": null,
+  "homepage": "https://discord.com/",
+  "fileName": "Discord.dmg",
+  "previous_version": "0.0.333"
+}
