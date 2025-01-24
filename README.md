@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-          <p>
+            <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-107-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -62,23 +62,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-24 00:22 UTC*
+*Last checked: 2025-01-24 23:40 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Vivaldi | 7.0.3495.29 | 7.1.3570.39 |
-| Arc | 1.78.1,57736 | 1.79.0,57949 |
-| Caffeine | 1.4.3 | 1.5 |
-| Google Chrome | 132.0.6834.84 | 132.0.6834.111 |
-| Bitwarden | 2025.1.1 | 2025.1.2 |
-| Notion | 4.3.0 | 4.4.0 |
-| Signal | 7.38.0 | 7.39.0 |
-| Adobe Acrobat Pro DC | 24.005.20320 | 24.005.20393 |
-| Adobe Creative Cloud | 6.4.0.361 | 6.5.0.348 |
-| Brave | 1.74.48.0 | 1.74.50.0 |
-| PowerShell | 7.4.6 | 7.5.0 |
-| IntelliJ IDEA Community Edition | 2024.3.2,243.23654.117 | 2024.3.2.1,243.23654.153 |
-| WebStorm | 2024.3.2,243.23654.120 | 2024.3.2.1,243.23654.157 |
+| Postman | 11.28.4 | 11.29.5 |
+| Cursor | 0.45.1,2501213ljml5byg | 0.45.2,250123mhituoa6o |
+| draw.io Desktop | 26.0.4 | 26.0.7 |
+| Goland | 2024.3.2,243.23654.119 | 2024.3.2.1,243.23654.166 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -162,12 +153,12 @@ Follow the interactive prompts to:
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.0.55 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.1,2501213ljml5byg |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.2,250123mhituoa6o |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.3,243.23654.19 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.333 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
-| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.4 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.7 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 216.4.4420 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.122.0,346 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
@@ -183,7 +174,7 @@ Follow the interactive prompts to:
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.15-3fea2a10 |
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.2 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
-| <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2,243.23654.119 |
+| <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2.1,243.23654.166 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.111 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.1 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.103.1.0 |
@@ -212,7 +203,7 @@ Follow the interactive prompts to:
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.10,1086 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.15.0 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.28.4 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.29.5 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
