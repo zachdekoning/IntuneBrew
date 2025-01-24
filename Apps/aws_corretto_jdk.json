@@ -6,5 +6,5 @@
   "bundleId": "com.amazon.corretto.21",
   "homepage": "https://corretto.aws/",
   "fileName": "amazon-corretto-21.0.6.7.1-macosx-aarch64.pkg",
-  "previous_version": "21.0.5.11.1"
+  "previous_version": "21.0.6.7.1"
 }
