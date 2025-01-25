@@ -166,8 +166,7 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/windsurf.json",
     "https://formulae.brew.sh/api/cask/freecad.json",
     "https://formulae.brew.sh/api/cask/insomnia.json",
-    "https://formulae.brew.sh/api/cask/flameshot.json",
-    "https://formulae.brew.sh/api/cask/imazing-profile-editor.json"
+    "https://formulae.brew.sh/api/cask/flameshot.json"
 ]
 
 # Custom scraper scripts to run
