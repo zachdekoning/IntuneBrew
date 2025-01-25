@@ -41,7 +41,14 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/pdf-expert.json",
     "https://formulae.brew.sh/api/cask/wine-stable.json",
     "https://formulae.brew.sh/api/cask/alt-tab.json",
-    "https://formulae.brew.sh/api/cask/maccy.json"
+    "https://formulae.brew.sh/api/cask/maccy.json",
+    "https://formulae.brew.sh/api/cask/whatsapp.json",
+    "https://formulae.brew.sh/api/cask/mitmproxy.json",
+    "https://formulae.brew.sh/api/cask/telegram.json",
+    "https://formulae.brew.sh/api/cask/jordanbaird-ice.json",
+    "https://formulae.brew.sh/api/cask/appcleaner.json",
+    "https://formulae.brew.sh/api/cask/cyberduck.json",
+    "https://formulae.brew.sh/api/cask/logi-options+.json"
 ]
 
 homebrew_cask_urls = [
@@ -135,7 +142,31 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/microsoft-auto-update.json",
     "https://formulae.brew.sh/api/cask/temurin.json",
     "https://formulae.brew.sh/api/cask/bruno.json",
-    "https://formulae.brew.sh/api/cask/zed.json"
+    "https://formulae.brew.sh/api/cask/zed.json",
+    "https://formulae.brew.sh/api/cask/virtualbox.json",
+    "https://formulae.brew.sh/api/cask/kitty.json",
+    "https://formulae.brew.sh/api/cask/db-browser-for-sqlite.json",
+    "https://formulae.brew.sh/api/cask/alacritty.json",
+    "https://formulae.brew.sh/api/cask/pgadmin4.json",
+    "https://formulae.brew.sh/api/cask/iina.json",
+    "https://formulae.brew.sh/api/cask/karabiner-elements.json",
+    "https://formulae.brew.sh/api/cask/mactex.json",
+    "https://formulae.brew.sh/api/cask/microsoft-edge.json",
+    "https://formulae.brew.sh/api/cask/calibre.json",
+    "https://formulae.brew.sh/api/cask/obs.json",
+    "https://formulae.brew.sh/api/cask/keka.json",
+    "https://formulae.brew.sh/api/cask/balenaetcher.json",
+    "https://formulae.brew.sh/api/cask/rancher.json",
+    "https://formulae.brew.sh/api/cask/vscodium.json",
+    "https://formulae.brew.sh/api/cask/mounty.json",
+    "https://formulae.brew.sh/api/cask/microsoft-office.json",
+    "https://formulae.brew.sh/api/cask/transmission.json",
+    "https://formulae.brew.sh/api/cask/shottr.json",
+    "https://formulae.brew.sh/api/cask/clipy.json",
+    "https://formulae.brew.sh/api/cask/windsurf.json",
+    "https://formulae.brew.sh/api/cask/freecad.json",
+    "https://formulae.brew.sh/api/cask/insomnia.json",
+    "https://formulae.brew.sh/api/cask/flameshot.json"
 ]
 
 # Custom scraper scripts to run
