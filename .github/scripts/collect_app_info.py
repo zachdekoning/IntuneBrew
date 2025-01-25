@@ -38,7 +38,10 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/notion-calendar.json",
     "https://formulae.brew.sh/api/cask/notion-calendar.json",
     "https://formulae.brew.sh/api/cask/ollama.json",
-    "https://formulae.brew.sh/api/cask/pdf-expert.json"
+    "https://formulae.brew.sh/api/cask/pdf-expert.json",
+    "https://formulae.brew.sh/api/cask/wine-stable.json",
+    "https://formulae.brew.sh/api/cask/alt-tab.json",
+    "https://formulae.brew.sh/api/cask/maccy.json"
 ]
 
 homebrew_cask_urls = [
@@ -121,7 +124,18 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/yubico-yubikey-manager.json",
     "https://formulae.brew.sh/api/cask/imazing.json",
     "https://formulae.brew.sh/api/cask/imazing-profile-editor.json",
-    "https://formulae.brew.sh/api/cask/ghostty.json"
+    "https://formulae.brew.sh/api/cask/ghostty.json",
+    "https://formulae.brew.sh/api/cask/git-credential-manager.json",
+    "https://formulae.brew.sh/api/cask/gstreamer-runtime.json",
+    "https://formulae.brew.sh/api/cask/macfuse.json",
+    "https://formulae.brew.sh/api/cask/raycast.json",
+    "https://formulae.brew.sh/api/cask/zulu.json",
+    "https://formulae.brew.sh/api/cask/stats.json",
+    "https://formulae.brew.sh/api/cask/rectangle.json",
+    "https://formulae.brew.sh/api/cask/microsoft-auto-update.json",
+    "https://formulae.brew.sh/api/cask/temurin.json",
+    "https://formulae.brew.sh/api/cask/bruno.json",
+    "https://formulae.brew.sh/api/cask/zed.json"
 ]
 
 # Custom scraper scripts to run
