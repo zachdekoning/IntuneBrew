@@ -5,5 +5,6 @@
   "url": "https://releases.raycast.com/releases/1.89.1/download?build=arm",
   "bundleId": "com.raycast.macos",
   "homepage": "https://raycast.com/",
-  "fileName": "download?build=arm"
+  "fileName": "download?build=arm",
+  "previous_version": "1.89.1"
 }

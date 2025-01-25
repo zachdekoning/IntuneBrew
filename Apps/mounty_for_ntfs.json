@@ -1,0 +1,9 @@
+{
+  "name": "Mounty for NTFS",
+  "description": "Re-mounts write-protected NTFS volumes",
+  "version": "2.4",
+  "url": "https://mounty.app/releases/Mounty-2.4.dmg",
+  "bundleId": null,
+  "homepage": "https://mounty.app/",
+  "fileName": "Mounty-2.4.dmg"
+}

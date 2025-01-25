@@ -5,5 +5,6 @@
   "url": "https://gstreamer.freedesktop.org/data/pkg/osx/1.24.11/gstreamer-1.0-1.24.11-universal.pkg",
   "bundleId": null,
   "homepage": "https://gstreamer.freedesktop.org/",
-  "fileName": "gstreamer-1.0-1.24.11-universal.pkg"
+  "fileName": "gstreamer-1.0-1.24.11-universal.pkg",
+  "previous_version": "1.24.11"
 }

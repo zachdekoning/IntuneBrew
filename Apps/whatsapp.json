@@ -1,0 +1,10 @@
+{
+  "name": "WhatsApp",
+  "description": "Native desktop client for WhatsApp",
+  "version": "2.24.25.94",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/whatsapp_2.24.25.94.pkg",
+  "bundleId": null,
+  "homepage": "https://www.whatsapp.com/",
+  "fileName": "whatsapp_2.24.25.94.pkg",
+  "type": "app"
+}

@@ -5,5 +5,6 @@
   "url": "https://github.com/exelban/stats/releases/download/v2.11.26/Stats.dmg",
   "bundleId": "eu.exelban.Stats",
   "homepage": "https://github.com/exelban/stats",
-  "fileName": "Stats.dmg"
+  "fileName": "Stats.dmg",
+  "previous_version": "2.11.26"
 }

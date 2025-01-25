@@ -1,0 +1,10 @@
+{
+  "name": "mitmproxy",
+  "description": "Intercept, modify, replay, save HTTP/S traffic",
+  "version": "11.1.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/mitmproxy_11.1.0.pkg",
+  "bundleId": null,
+  "homepage": "https://mitmproxy.org/",
+  "fileName": "mitmproxy_11.1.0.pkg",
+  "type": "app"
+}

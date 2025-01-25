@@ -1,0 +1,9 @@
+{
+  "name": "calibre",
+  "description": "E-books management software",
+  "version": "7.24.0",
+  "url": "https://download.calibre-ebook.com/7.24.0/calibre-7.24.0.dmg",
+  "bundleId": null,
+  "homepage": "https://calibre-ebook.com/",
+  "fileName": "calibre-7.24.0.dmg"
+}
