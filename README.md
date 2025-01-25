@@ -13,9 +13,9 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-              <p>
+                <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-107-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-108-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -62,9 +62,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-25 00:21 UTC*
+*Last checked: 2025-01-25 08:41 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Cursor | 0.45.2,250123mhituoa6o | 0.45.3,250124b0rcj0qql |
+| Google Drive | 103.0.1 | 103.0.3 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -148,7 +151,7 @@ Follow the interactive prompts to:
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.0.55 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.2,250123mhituoa6o |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.3,250124b0rcj0qql |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.3,243.23654.19 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.333 |
@@ -165,13 +168,14 @@ Follow the interactive prompts to:
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 124.7.4 |
 | <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.6 |
 | <img src='Logos/geany.png' width='32' height='32'> Geany | 2.0 |
+| ❌ Ghostty | 1.0.1 |
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38,1 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.15-3fea2a10 |
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.2 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2.1,243.23654.166 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.111 |
-| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.1 |
+| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.3 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.103.1.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0,240916 |
 | ❌ iMazing | 3.0.6,21166 |
