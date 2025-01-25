@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-            <p>
+              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-107-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -62,14 +62,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-24 23:40 UTC*
+*Last checked: 2025-01-25 00:21 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Postman | 11.28.4 | 11.29.5 |
-| Cursor | 0.45.1,2501213ljml5byg | 0.45.2,250123mhituoa6o |
-| draw.io Desktop | 26.0.4 | 26.0.7 |
-| Goland | 2024.3.2,243.23654.119 | 2024.3.2.1,243.23654.166 |
+> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
