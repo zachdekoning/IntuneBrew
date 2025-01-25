@@ -81,7 +81,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 - 🔒 Secure file encryption for uploads
 - 📈 Real-time progress monitoring
 
-## 🎬 Demo
+## 🎬 Demo (New one is recorded ASAP because a lot has changed since this demo)
 ![IntuneBrew Demo](IntuneBrew_Demo.gif)
 
 ## 🚀 Getting Started
