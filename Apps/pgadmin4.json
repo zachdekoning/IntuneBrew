@@ -5,5 +5,6 @@
   "url": "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v8.14/macos/pgadmin4-8.14-arm64.dmg",
   "bundleId": null,
   "homepage": "https://www.pgadmin.org/",
-  "fileName": "pgadmin4-8.14-arm64.dmg"
+  "fileName": "pgadmin4-8.14-arm64.dmg",
+  "previous_version": "8.14"
 }

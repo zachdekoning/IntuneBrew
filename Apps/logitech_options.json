@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.logitech.com/en-us/software/logi-options-plus.html",
   "fileName": "logitech_options_1.85.655119.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.85.655119"
 }

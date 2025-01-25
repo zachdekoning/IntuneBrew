@@ -5,5 +5,6 @@
   "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/32cc7c00-5d56-4296-81bc-798f79706d6c/MicrosoftEdge-132.0.2957.127.pkg",
   "bundleId": "com.microsoft.edgemac",
   "homepage": "https://www.microsoft.com/en-us/edge?form=",
-  "fileName": "MicrosoftEdge-132.0.2957.127.pkg"
+  "fileName": "MicrosoftEdge-132.0.2957.127.pkg",
+  "previous_version": "132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c"
 }

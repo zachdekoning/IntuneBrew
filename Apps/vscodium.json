@@ -5,5 +5,6 @@
   "url": "https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium.arm64.1.96.4.25017.dmg",
   "bundleId": null,
   "homepage": "https://github.com/VSCodium/vscodium",
-  "fileName": "VSCodium.arm64.1.96.4.25017.dmg"
+  "fileName": "VSCodium.arm64.1.96.4.25017.dmg",
+  "previous_version": "1.96.4.25017"
 }

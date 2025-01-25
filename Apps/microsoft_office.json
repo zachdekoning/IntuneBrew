@@ -5,5 +5,6 @@
   "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_16.93.25011212_Installer.pkg",
   "bundleId": "com.microsoft.autoupdate2",
   "homepage": "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac/",
-  "fileName": "Microsoft_365_and_Office_16.93.25011212_Installer.pkg"
+  "fileName": "Microsoft_365_and_Office_16.93.25011212_Installer.pkg",
+  "previous_version": "16.93.25011212"
 }

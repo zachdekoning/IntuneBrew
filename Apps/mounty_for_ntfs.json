@@ -5,5 +5,6 @@
   "url": "https://mounty.app/releases/Mounty-2.4.dmg",
   "bundleId": null,
   "homepage": "https://mounty.app/",
-  "fileName": "Mounty-2.4.dmg"
+  "fileName": "Mounty-2.4.dmg",
+  "previous_version": "2.4"
 }

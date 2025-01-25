@@ -5,5 +5,6 @@
   "url": "https://github.com/aonez/Keka/releases/download/v1.4.7/Keka-1.4.7.dmg",
   "bundleId": null,
   "homepage": "https://www.keka.io/",
-  "fileName": "Keka-1.4.7.dmg"
+  "fileName": "Keka-1.4.7.dmg",
+  "previous_version": "1.4.7"
 }

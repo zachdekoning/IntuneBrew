@@ -5,5 +5,6 @@
   "url": "https://github.com/kovidgoyal/kitty/releases/download/v0.39.0/kitty-0.39.0.dmg",
   "bundleId": null,
   "homepage": "https://github.com/kovidgoyal/kitty",
-  "fileName": "kitty-0.39.0.dmg"
+  "fileName": "kitty-0.39.0.dmg",
+  "previous_version": "0.39.0"
 }

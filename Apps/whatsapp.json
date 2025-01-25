@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.whatsapp.com/",
   "fileName": "whatsapp_2.24.25.94.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.24.25.94"
 }

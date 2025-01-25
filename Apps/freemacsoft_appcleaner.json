@@ -6,5 +6,6 @@
   "bundleId": "net.freemacsoft.AppCleaner",
   "homepage": "https://freemacsoft.net/appcleaner/",
   "fileName": "freemacsoft_appcleaner_3.6.8.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.6.8"
 }
