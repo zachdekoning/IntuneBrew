@@ -1,0 +1,9 @@
+{
+  "name": "GStreamer runtime package",
+  "description": "Open Source Multimedia Framework",
+  "version": "1.24.11",
+  "url": "https://gstreamer.freedesktop.org/data/pkg/osx/1.24.11/gstreamer-1.0-1.24.11-universal.pkg",
+  "bundleId": null,
+  "homepage": "https://gstreamer.freedesktop.org/",
+  "fileName": "gstreamer-1.0-1.24.11-universal.pkg"
+}

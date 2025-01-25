@@ -1,0 +1,9 @@
+{
+  "name": "Zed",
+  "description": "Multiplayer code editor",
+  "version": "0.170.2",
+  "url": "https://zed.dev/api/releases/stable/0.170.2/Zed-aarch64.dmg",
+  "bundleId": null,
+  "homepage": "https://zed.dev/",
+  "fileName": "Zed-aarch64.dmg"
+}

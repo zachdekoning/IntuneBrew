@@ -13,9 +13,9 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                <p>
+                  <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-108-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-122-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -62,12 +62,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-25 08:41 UTC*
+*Last checked: 2025-01-25 08:51 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Cursor | 0.45.2,250123mhituoa6o | 0.45.3,250124b0rcj0qql |
-| Google Drive | 103.0.1 | 103.0.3 |
+> All applications are up to date! 🎉
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -129,6 +126,7 @@ Follow the interactive prompts to:
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20320 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.5.0.348 |
 | <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.5.1,2273 |
+| ❌ AltTab | 7.19.1 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.13 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 24.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
@@ -136,6 +134,7 @@ Follow the interactive prompts to:
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.1 |
 | <img src='Logos/aws_corretto_jdk.png' width='32' height='32'> AWS Corretto JDK | 21.0.6.7.1 |
+| ❌ Azul Zulu Java Standard Edition Development Kit | 23.0.2,23.32.11 |
 | <img src='Logos/azure_data_studio.png' width='32' height='32'> Azure Data Studio | 1.50.0 |
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.2.7 |
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3,2.4.0 |
@@ -144,6 +143,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.2 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.50.0 |
+| ❌ Bruno | 1.38.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.102.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
@@ -159,6 +159,7 @@ Follow the interactive prompts to:
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.7 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 216.4.4420 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.122.0,346 |
+| ❌ Eclipse Temurin Java Development Kit | 23.0.2,7 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
 | <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 1.10.1.2293 |
@@ -170,6 +171,7 @@ Follow the interactive prompts to:
 | <img src='Logos/geany.png' width='32' height='32'> Geany | 2.0 |
 | ❌ Ghostty | 1.0.1 |
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38,1 |
+| ❌ Git Credential Manager | 2.6.1 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.15-3fea2a10 |
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.2 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
@@ -177,6 +179,7 @@ Follow the interactive prompts to:
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.111 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.3 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.103.1.0 |
+| ❌ GStreamer runtime package | 1.24.11 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0,240916 |
 | ❌ iMazing | 3.0.6,21166 |
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2,304501 |
@@ -187,6 +190,9 @@ Follow the interactive prompts to:
 | <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.0.0 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.54.6 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 24.8.4 |
+| ❌ Maccy | 2.3.0 |
+| ❌ macFUSE | 4.8.3 |
+| ❌ Microsoft Auto Update | 4.77.24121924 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.207.3345.5574 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.96.4 |
@@ -204,7 +210,9 @@ Follow the interactive prompts to:
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.15.0 |
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.29.5 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.89.1 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
+| ❌ Rectangle | 0.85 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2024.9 |
@@ -213,6 +221,7 @@ Follow the interactive prompts to:
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.55.235 |
+| ❌ Stats | 2.11.26 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
@@ -228,9 +237,11 @@ Follow the interactive prompts to:
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.2.1,243.23654.157 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.9 |
+| ❌ WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
+| ❌ Zed | 0.170.2 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]
