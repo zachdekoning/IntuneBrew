@@ -120,7 +120,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/xmind.json",
     "https://formulae.brew.sh/api/cask/yubico-yubikey-manager.json",
     "https://formulae.brew.sh/api/cask/imazing.json",
-    "https://formulae.brew.sh/api/cask/imazing-profile-editor.json"
+    "https://formulae.brew.sh/api/cask/imazing-profile-editor.json",
+    "https://formulae.brew.sh/api/cask/ghostty.json"
 ]
 
 # Custom scraper scripts to run
