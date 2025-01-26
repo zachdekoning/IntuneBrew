@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                      <p>
+                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-153-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -62,7 +62,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-25 12:47 UTC*
+*Last checked: 2025-01-26 00:22 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
