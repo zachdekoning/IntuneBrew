@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                        <p>
+                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-153-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -62,9 +62,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-26 00:22 UTC*
+*Last checked: 2025-01-27 00:23 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Cursor | 0.45.3,250124b0rcj0qql | 0.45.4,250126vgr3vztvj |
+| Stats | 2.11.26 | 2.11.27 |
+| VSCodium | 1.96.4.25017 | 1.96.4.25026 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -154,7 +158,7 @@ Follow the interactive prompts to:
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.3,250124b0rcj0qql |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.4,250126vgr3vztvj |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.2,42722 |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.3,243.23654.19 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
@@ -247,7 +251,7 @@ Follow the interactive prompts to:
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.55.235 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.26 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.27 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
@@ -262,7 +266,7 @@ Follow the interactive prompts to:
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.1.3570.39 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
-| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.96.4.25017 |
+| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.96.4.25026 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.2.1,243.23654.157 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.24.25.94 |
