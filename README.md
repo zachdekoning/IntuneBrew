@@ -90,26 +90,17 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 ### Prerequisites
 
 - PowerShell 7.0 or higher
-- Microsoft Graph PowerShell SDK
+- Microsoft.Graph.Authentication Module must be installed
 - Azure App Registration with appropriate permissions OR Manual Connection via Interactive Sign-In
 - Windows or macOS operating system
-- Stable internet connection for large file uploads
-- Sufficient disk space for temporary file processing
-
-### Installation
-
-1. Clone the repository:
-2. Install required PowerShell modules:
-
-```powershell
-Install-Module Microsoft.Graph.Authentication -Scope CurrentUser
-```
-
-3. Configure your environment variables or update the config file with your Azure AD details.
 
 ## 📝 Usage
 
 ### Basic Usage
+
+Download the script: IntuneBrew.ps1
+
+Run the script:
 
 ```powershell
 .\IntuneBrew.ps1
