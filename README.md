@@ -13,9 +13,9 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                <p>
+                                  <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-153-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-155-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -63,15 +63,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-28 14:17 UTC*
+*Last checked: 2025-01-28 18:55 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Postman | 11.29.5 | 11.30.1 |
-| Telegram for macOS | 11.6,270262 | 11.7,270736 |
-| MongoDB Compass | 1.45.1 | 1.45.2 |
-| Podman Desktop | 1.15.0 | 1.16.0 |
-| Jetbrains PyCharm Community Edition | 2024.3.1.1,243.22562.220 | 2024.3.2,243.23654.177 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -205,6 +199,7 @@ Follow the interactive prompts to:
 | <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.39.0 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.54.6 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 24.8.4 |
+| <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.8,4 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.85.655119 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.8.3 |
@@ -218,7 +213,7 @@ Follow the interactive prompts to:
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.0 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.2 |
-| ❌ Mountain Duck | 4.17.2,22563 |
+| <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.2,22563 |
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.2 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
@@ -235,6 +230,7 @@ Follow the interactive prompts to:
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.16.0 |
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.30.1 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
+| <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.17.1 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.89.1 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
