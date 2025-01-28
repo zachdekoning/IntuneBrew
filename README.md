@@ -13,9 +13,9 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                            <p>
+                              <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-153-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-154-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -61,14 +61,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-28 00:22 UTC*
+*Last checked: 2025-01-28 08:37 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| DuckDuckGo | 1.122.0,346 | 1.123.0,349 |
-| draw.io Desktop | 26.0.7 | 26.0.9 |
-| Stats | 2.11.27 | 2.11.28 |
-| Zed | 0.170.2 | 0.170.4 |
+| Termius | 9.12.0 | 9.13.1 |
+| Discord | 0.0.333 | 0.0.334 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -154,7 +152,7 @@ Follow the interactive prompts to:
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.3,243.23654.19 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
-| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.333 |
+| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.334 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.9 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 216.4.4420 |
@@ -213,6 +211,7 @@ Follow the interactive prompts to:
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.0 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.1 |
+| ❌ Mountain Duck | 4.17.2,22563 |
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.2 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
@@ -250,7 +249,7 @@ Follow the interactive prompts to:
 | <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.78.1 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.6,270262 |
-| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.12.0 |
+| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.13.1 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.9.7 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.6 |
