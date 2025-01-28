@@ -3,7 +3,7 @@
   "description": "Data management tool that enables working with SQL Server",
   "version": "1.50.0",
   "url": "https://intunebrew.blob.core.windows.net/pkg/azure_data_studio_1.50.0.pkg",
-  "bundleId": null,
+  "bundleId": "com.azuredatastudio.oss",
   "homepage": "https://docs.microsoft.com/en-us/sql/azure-data-studio/",
   "fileName": "azure_data_studio_1.50.0.pkg",
   "type": "app",

@@ -48,7 +48,8 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/jordanbaird-ice.json",
     "https://formulae.brew.sh/api/cask/appcleaner.json",
     "https://formulae.brew.sh/api/cask/cyberduck.json",
-    "https://formulae.brew.sh/api/cask/logi-options+.json"
+    "https://formulae.brew.sh/api/cask/logi-options+.json",
+    "https://formulae.brew.sh/api/cask/mountain-duck.json"
 ]
 
 homebrew_cask_urls = [
