@@ -48,7 +48,8 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/jordanbaird-ice.json",
     "https://formulae.brew.sh/api/cask/appcleaner.json",
     "https://formulae.brew.sh/api/cask/cyberduck.json",
-    "https://formulae.brew.sh/api/cask/logi-options+.json"
+    "https://formulae.brew.sh/api/cask/logi-options+.json",
+    "https://formulae.brew.sh/api/cask/mountain-duck.json"
 ]
 
 homebrew_cask_urls = [
@@ -133,7 +134,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/imazing-profile-editor.json",
     "https://formulae.brew.sh/api/cask/ghostty.json",
     "https://formulae.brew.sh/api/cask/git-credential-manager.json",
-    "https://formulae.brew.sh/api/cask/gstreamer-runtime.json",
     "https://formulae.brew.sh/api/cask/macfuse.json",
     "https://formulae.brew.sh/api/cask/raycast.json",
     "https://formulae.brew.sh/api/cask/zulu.json",

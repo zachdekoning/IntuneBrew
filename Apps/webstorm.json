@@ -3,7 +3,7 @@
   "description": "JavaScript IDE",
   "version": "2024.3.2.1,243.23654.157",
   "url": "https://download.jetbrains.com/webstorm/WebStorm-2024.3.2.1-aarch64.dmg",
-  "bundleId": null,
+  "bundleId": "com.jetbrains.WebStorm",
   "homepage": "https://www.jetbrains.com/webstorm/",
   "fileName": "WebStorm-2024.3.2.1-aarch64.dmg",
   "previous_version": "2024.3.2.1,243.23654.157"

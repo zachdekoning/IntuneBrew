@@ -3,7 +3,7 @@
   "description": "Text, code, and markup editor",
   "version": "15.1.3",
   "url": "https://s3.amazonaws.com/BBSW-download/BBEdit_15.1.3.dmg",
-  "bundleId": null,
+  "bundleId": "com.barebones.bbedit",
   "homepage": "https://www.barebones.com/products/bbedit/",
   "fileName": "BBEdit_15.1.3.dmg",
   "previous_version": "15.1.3"
