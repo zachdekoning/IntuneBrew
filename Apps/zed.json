@@ -3,7 +3,7 @@
   "description": "Multiplayer code editor",
   "version": "0.170.4",
   "url": "https://zed.dev/api/releases/stable/0.170.4/Zed-aarch64.dmg",
-  "bundleId": null,
+  "bundleId": "dev.zed.Zed",
   "homepage": "https://zed.dev/",
   "fileName": "Zed-aarch64.dmg",
   "previous_version": "0.170.4"

@@ -134,7 +134,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/imazing-profile-editor.json",
     "https://formulae.brew.sh/api/cask/ghostty.json",
     "https://formulae.brew.sh/api/cask/git-credential-manager.json",
-    "https://formulae.brew.sh/api/cask/gstreamer-runtime.json",
     "https://formulae.brew.sh/api/cask/macfuse.json",
     "https://formulae.brew.sh/api/cask/raycast.json",
     "https://formulae.brew.sh/api/cask/zulu.json",
