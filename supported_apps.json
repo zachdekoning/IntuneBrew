@@ -1,5 +1,6 @@
 {
     "1password": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/1password.json",
+    "acorn": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/acorn.json",
     "adobe_acrobat_pro_dc": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/adobe_acrobat_pro_dc.json",
     "adobe_acrobat_reader": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/adobe_acrobat_reader.json",
     "adobe_creative_cloud": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/adobe_creative_cloud.json",
