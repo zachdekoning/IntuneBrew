@@ -88,6 +88,7 @@
     "maccy": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/maccy.json",
     "macfuse": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/macfuse.json",
     "mactex": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/mactex.json",
+    "menubar_stats": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/menubar_stats.json",
     "microsoft_auto_update": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/microsoft_auto_update.json",
     "microsoft_azure_storage_explorer": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/microsoft_azure_storage_explorer.json",
     "microsoft_edge": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/microsoft_edge.json",
@@ -131,6 +132,7 @@
     "stats": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/stats.json",
     "sublime_text": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/sublime_text.json",
     "suspicious_package": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/suspicious_package.json",
+    "sync": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/sync.json",
     "synology_drive": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/synology_drive.json",
     "tableau_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/tableau_desktop.json",
     "tailscale": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/tailscale.json",
@@ -154,5 +156,6 @@
     "xmind": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/xmind.json",
     "yubikey_manager": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/yubikey_manager.json",
     "zed": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zed.json",
+    "zen_browser": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zen_browser.json",
     "zoom": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zoom.json"
 }

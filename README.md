@@ -13,9 +13,9 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                    <p>
+                                      <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-156-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-159-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -63,7 +63,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-28 20:49 UTC*
+*Last checked: 2025-01-28 21:04 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -205,6 +205,7 @@ Follow the interactive prompts to:
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.8.3 |
 | <img src='Logos/mactex.png' width='32' height='32'> MacTeX | 2024.0312 |
+| <img src='Logos/menubar_stats.png' width='32' height='32'> MenuBar Stats | 3.9 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.77.24121924 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c |
@@ -248,6 +249,7 @@ Follow the interactive prompts to:
 | <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.28 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
+| <img src='Logos/sync.png' width='32' height='32'> Sync | 2.2.48 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.2 |
 | <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.78.1 |
@@ -271,6 +273,7 @@ Follow the interactive prompts to:
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.170.4 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.2b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]

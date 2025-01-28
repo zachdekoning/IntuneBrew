@@ -1,0 +1,9 @@
+{
+  "name": "Sync",
+  "description": "Store, share and access files from anywhere",
+  "version": "2.2.48",
+  "url": "https://www.sync.com/download/apple/Sync-2.2.48.dmg",
+  "bundleId": "com.sync.desktop",
+  "homepage": "https://www.sync.com/",
+  "fileName": "Sync-2.2.48.dmg"
+}
