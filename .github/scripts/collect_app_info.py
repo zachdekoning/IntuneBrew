@@ -50,7 +50,8 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/cyberduck.json",
     "https://formulae.brew.sh/api/cask/logi-options+.json",
     "https://formulae.brew.sh/api/cask/mountain-duck.json",
-    "https://formulae.brew.sh/api/cask/acorn.json"
+    "https://formulae.brew.sh/api/cask/acorn.json",
+    "https://formulae.brew.sh/api/cask/menubar-stats.json"
 ]
 
 homebrew_cask_urls = [
@@ -169,7 +170,9 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/insomnia.json",
     "https://formulae.brew.sh/api/cask/flameshot.json",
     "https://formulae.brew.sh/api/cask/lm-studio.json",
-    "https://formulae.brew.sh/api/cask/privileges.json"
+    "https://formulae.brew.sh/api/cask/privileges.json",
+    "https://formulae.brew.sh/api/cask/zen-browser.json",
+    "https://formulae.brew.sh/api/cask/sync.json"
 ]
 
 # Custom scraper scripts to run
