@@ -13,9 +13,9 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                  <p>
+                                    <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-155-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-156-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -63,7 +63,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-28 18:55 UTC*
+*Last checked: 2025-01-28 20:49 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -117,6 +117,7 @@ Follow the interactive prompts to:
 | Application | Latest Version |
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.58 |
+| <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.0.1 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20393 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20320 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.5.0.348 |
