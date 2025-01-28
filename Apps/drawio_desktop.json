@@ -1,10 +1,10 @@
 {
   "name": "draw.io Desktop",
   "description": "Online diagram software",
-  "version": "26.0.7",
-  "url": "https://github.com/jgraph/drawio-desktop/releases/download/v26.0.7/draw.io-arm64-26.0.7.dmg",
+  "version": "26.0.9",
+  "url": "https://github.com/jgraph/drawio-desktop/releases/download/v26.0.9/draw.io-arm64-26.0.9.dmg",
   "bundleId": null,
   "homepage": "https://www.diagrams.net/",
-  "fileName": "draw.io-arm64-26.0.7.dmg",
+  "fileName": "draw.io-arm64-26.0.9.dmg",
   "previous_version": "26.0.7"
 }

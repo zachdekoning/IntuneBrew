@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                          <p>
+                            <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-153-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -61,13 +61,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-27 00:23 UTC*
+*Last checked: 2025-01-28 00:22 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Cursor | 0.45.3,250124b0rcj0qql | 0.45.4,250126vgr3vztvj |
-| Stats | 2.11.26 | 2.11.27 |
-| VSCodium | 1.96.4.25017 | 1.96.4.25026 |
+| DuckDuckGo | 1.122.0,346 | 1.123.0,349 |
+| draw.io Desktop | 26.0.7 | 26.0.9 |
+| Stats | 2.11.27 | 2.11.28 |
+| Zed | 0.170.2 | 0.170.4 |
 ## ✨ Features
 - 🚀 Automated app uploads to Microsoft Intune
 - 📦 Supports both .dmg and .pkg files
@@ -155,9 +156,9 @@ Follow the interactive prompts to:
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.333 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.37.2,179585 |
-| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.7 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.9 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 216.4.4420 |
-| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.122.0,346 |
+| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.123.0,349 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2,7 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
@@ -241,7 +242,7 @@ Follow the interactive prompts to:
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.55.235 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.27 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.28 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
@@ -266,7 +267,7 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.170.2 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.170.4 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]
