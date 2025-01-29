@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                      <p>
+                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-159-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -63,9 +63,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-28 21:04 UTC*
+*Last checked: 2025-01-29 00:22 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| GitKraken | 10.6.2 | 10.6.3 |
+| Google Chrome | 132.0.6834.111 | 132.0.6834.160 |
+| Microsoft Teams | 24335.207.3345.5574 | 25007.203.3361.6689 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -178,10 +182,10 @@ Follow the interactive prompts to:
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38,1 |
 | <img src='Logos/git_credential_manager.png' width='32' height='32'> Git Credential Manager | 2.6.1 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.15-3fea2a10 |
-| <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.2 |
+| <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.3 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2.1,243.23654.166 |
-| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.111 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.160 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.3 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.103.1.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0,240916 |
@@ -210,7 +214,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.93.25011212 |
-| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 24335.207.3345.5574 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25007.203.3361.6689 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.96.4 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.0 |
