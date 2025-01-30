@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                        <p>
+                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-159-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -63,13 +63,18 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-29 00:22 UTC*
+*Last checked: 2025-01-30 00:21 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| GitKraken | 10.6.2 | 10.6.3 |
-| Google Chrome | 132.0.6834.111 | 132.0.6834.160 |
-| Microsoft Teams | 24335.207.3345.5574 | 25007.203.3361.6689 |
+| Cursor | 0.45.4,250126vgr3vztvj | 0.45.5,250128loaeyulq8 |
+| Grammarly Desktop | 1.103.1.0 | 1.104.1.0 |
+| Signal | 7.39.0 | 7.40.0 |
+| Brave | 1.74.50.0 | 1.74.51.0 |
+| ChatGPT | 1.2025.014,1737150122 | 1.2025.021,1737774839 |
+| DataGrip | 2024.3.3,243.23654.19 | 2024.3.4,243.23654.183 |
+| IntelliJ IDEA Community Edition | 2024.3.2.1,243.23654.153 | 2024.3.2.2,243.23654.189 |
+| Zed | 0.170.4 | 0.171.3 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -143,20 +148,20 @@ Follow the interactive prompts to:
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.3 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.3 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
-| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.50.0 |
+| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.51.0 |
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.38.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.24.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.102.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
-| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.014,1737150122 |
+| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.021,1737774839 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.0.55 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.4,250126vgr3vztvj |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.5,250128loaeyulq8 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.2,42722 |
-| <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.3,243.23654.19 |
+| <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.4,243.23654.183 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.334 |
@@ -187,14 +192,14 @@ Follow the interactive prompts to:
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2.1,243.23654.166 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.160 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.3 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.103.1.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.104.1.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0,240916 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
 | <img src='Logos/iina.png' width='32' height='32'> IINA | 1.3.5,141 |
 | <img src='Logos/imazing.png' width='32' height='32'> iMazing | 3.0.6,21166 |
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2,304501 |
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.0 |
-| <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.2.1,243.23654.153 |
+| <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.2.2,243.23654.189 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2024.3.2,243.23654.177 |
 | <img src='Logos/karabiner_elements.png' width='32' height='32'> Karabiner Elements | 15.3.0 |
@@ -245,7 +250,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2024.9 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.39.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.40.0 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.42.115 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
@@ -276,7 +281,7 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.170.4 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.171.3 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.2b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
