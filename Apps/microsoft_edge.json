@@ -1,10 +1,10 @@
 {
   "name": "Microsoft Edge",
   "description": "Multi-platform web browser",
-  "version": "132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c",
-  "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/32cc7c00-5d56-4296-81bc-798f79706d6c/MicrosoftEdge-132.0.2957.127.pkg",
+  "version": "132.0.2957.140,ee31fad8-29f2-4106-8a9b-9d59d949dbe3",
+  "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/ee31fad8-29f2-4106-8a9b-9d59d949dbe3/MicrosoftEdge-132.0.2957.140.pkg",
   "bundleId": "com.microsoft.edgemac",
   "homepage": "https://www.microsoft.com/en-us/edge?form=",
-  "fileName": "MicrosoftEdge-132.0.2957.127.pkg",
+  "fileName": "MicrosoftEdge-132.0.2957.140.pkg",
   "previous_version": "132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c"
 }

@@ -107,6 +107,7 @@
     "obs": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/obs.json",
     "obsidian": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/obsidian.json",
     "ollama": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/ollama.json",
+    "onedrive": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/onedrive.json",
     "oracle_virtualbox": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/oracle_virtualbox.json",
     "orbstack": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/orbstack.json",
     "parallels_desktop": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/parallels_desktop.json",

@@ -13,9 +13,9 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                            <p>
+                                              <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-159-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-160-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -63,23 +63,16 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-31 00:22 UTC*
+*Last checked: 2025-01-31 09:57 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Postman | 11.30.1 | 11.30.3 |
-| Vivaldi | 7.1.3570.39 | 7.1.3570.42 |
-| Arc | 1.79.0,57949 | 1.79.1,58230 |
-| Azure Data Studio | 1.50.0 | 1.51.0 |
-| Cursor | 0.45.5,250128loaeyulq8 | 0.45.7,250130nr6eorv84 |
-| Spotify | 1.2.55.235 | 1.2.56.502 |
-| Todoist | 9.9.7 | 9.10.0 |
-| Docker Desktop | 4.37.2,179585 | 4.38.0,181591 |
-| Obsidian | 1.7.7 | 1.8.3 |
-| Tableau Desktop | 2024.3.2 | 2024.3.3 |
-| Raycast | 1.89.1 | 1.90.0 |
-| Windsurf | 1.2.2,be4251dfb74e60e80fa973d61f3505da1ac9032e | 1.2.4,7f3de2bfc56b2f76334027e4d55dd26daa003035 |
-| LM Studio | 0.3.8,4 | 0.3.9,4 |
+| Postman | 11.30.3 | 11.30.4 |
+| Basecamp | 3,2.4.0 | 3,2.4.1 |
+| Tailscale | 1.78.1 | 1.80.0 |
+| Ghostty | 1.0.1 | 1.1.0 |
+| Microsoft Edge | 132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c | 132.0.2957.140,ee31fad8-29f2-4106-8a9b-9d59d949dbe3 |
+| LM Studio | 0.3.9,4 | 0.3.9,5 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -148,7 +141,7 @@ Follow the interactive prompts to:
 | <img src='Logos/azul_zulu_java_standard_edition_development_kit.png' width='32' height='32'> Azul Zulu Java Standard Edition Development Kit | 23.0.2,23.32.11 |
 | <img src='Logos/azure_data_studio.png' width='32' height='32'> Azure Data Studio | 1.51.0 |
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.2.7 |
-| <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3,2.4.0 |
+| <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3,2.4.1 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.3 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.3 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.3 |
@@ -188,7 +181,7 @@ Follow the interactive prompts to:
 | <img src='Logos/freecad.png' width='32' height='32'> FreeCAD | 1.0.0 |
 | <img src='Logos/freemacsoft_appcleaner.png' width='32' height='32'> FreeMacSoft AppCleaner | 3.6.8 |
 | <img src='Logos/geany.png' width='32' height='32'> Geany | 2.0 |
-| <img src='Logos/ghostty.png' width='32' height='32'> Ghostty | 1.0.1 |
+| <img src='Logos/ghostty.png' width='32' height='32'> Ghostty | 1.1.0 |
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38,1 |
 | <img src='Logos/git_credential_manager.png' width='32' height='32'> Git Credential Manager | 2.6.1 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.15-3fea2a10 |
@@ -214,7 +207,7 @@ Follow the interactive prompts to:
 | <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.39.0 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.54.6 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 24.8.4 |
-| <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.9,4 |
+| <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.9,5 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.85.655119 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.8.3 |
@@ -222,7 +215,7 @@ Follow the interactive prompts to:
 | <img src='Logos/menubar_stats.png' width='32' height='32'> MenuBar Stats | 3.9 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.77.24121924 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
-| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c |
+| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 132.0.2957.140,ee31fad8-29f2-4106-8a9b-9d59d949dbe3 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.93.25011212 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25007.203.3361.6689 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.96.4 |
@@ -238,13 +231,14 @@ Follow the interactive prompts to:
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.1 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.3 |
 | <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.7 |
+| <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 24.244.1204.0003 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6,167084 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.5_18849 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.10,1086 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 8.14 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.16.0 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.30.3 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.30.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.17.1 |
@@ -266,7 +260,7 @@ Follow the interactive prompts to:
 | <img src='Logos/sync.png' width='32' height='32'> Sync | 2.2.48 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.1,16102 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.3 |
-| <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.78.1 |
+| <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.80.0 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.7,270736 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.13.1 |
