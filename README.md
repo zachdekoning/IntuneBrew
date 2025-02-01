@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                              <p>
+                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-160-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -63,16 +63,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-31 09:57 UTC*
+*Last checked: 2025-02-01 00:24 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Postman | 11.30.3 | 11.30.4 |
-| Basecamp | 3,2.4.0 | 3,2.4.1 |
-| Tailscale | 1.78.1 | 1.80.0 |
-| Ghostty | 1.0.1 | 1.1.0 |
-| Microsoft Edge | 132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c | 132.0.2957.140,ee31fad8-29f2-4106-8a9b-9d59d949dbe3 |
-| LM Studio | 0.3.9,4 | 0.3.9,5 |
+| Adobe Acrobat Pro DC | 24.005.20393 | 24.005.20400 |
+| Obsidian | 1.8.3 | 1.8.4 |
+| Zed | 0.171.3 | 0.171.4 |
+| Zen Browser | 1.7.2b | 1.7.4b |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -125,7 +123,7 @@ Follow the interactive prompts to:
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.58 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.0.1 |
-| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20393 |
+| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20400 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20320 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.5.0.348 |
 | <img src='Logos/alacritty.png' width='32' height='32'> Alacritty | 0.15.0 |
@@ -229,7 +227,7 @@ Follow the interactive prompts to:
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.4.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.127.0,250121ji52u08fs |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.1 |
-| <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.3 |
+| <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.4 |
 | <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.7 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 24.244.1204.0003 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6,167084 |
@@ -280,8 +278,8 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.171.3 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.2b |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.171.4 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.4b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]
