@@ -41,7 +41,7 @@
 
 .PARAMETER Upload
  Specifies a list of app names to upload directly, bypassing the manual selection process.
- Example: IntuneBrew -Upload "google_chrome", "firefox", "visual_studio_code"
+ Example: IntuneBrew -Upload google_chrome, visual_studio_code
 
 #>
 
