@@ -1,25 +1,40 @@
-﻿<#
-.SYNOPSIS
-    IntuneBrew - Automated Intune app deployment using Homebrew cask information.
+﻿<#PSScriptInfo
 
-.DESCRIPTION
-    This script automates the process of deploying macOS applications to Microsoft Intune
-    using information from Homebrew casks. It fetches app details, creates Intune policies,
-    and manages the deployment process.
+.VERSION 0.3
 
-.NOTES
-    File Name      : IntuneBrew.ps1
-    Author         : Ugur Koc
-    Prerequisite   : PowerShell 7+, Microsoft Graph PowerShell SDK
-    Version        : 0.3 Preview
-    Date           : 2024-10-27
+.GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 
-.LINK
-    https://github.com/ugurkocde/IntuneBrew
+.AUTHOR ugurk
 
-.EXAMPLE
-    .\IntuneBrew.ps1
+.COPYRIGHT
+
+.TAGS
+
+.LICENSEURI https://github.com/ugurkocde/IntuneBrew/blob/main/LICENSE
+
+.PROJECTURI https://github.com/ugurkocde/IntuneBrew
+
+.ICONURI
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS
+
+.EXTERNALSCRIPTDEPENDENCIES
+
+.RELEASENOTES
+
+
+.PRIVATEDATA
+
 #>
+
+<# 
+
+.DESCRIPTION 
+ This script automates the process of deploying macOS applications to Microsoft Intune using information from Homebrew casks. It fetches app details, creates Intune policies, and manages the deployment process.
+
+#> 
 
 Write-Host "
 ___       _                    ____                    
