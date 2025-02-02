@@ -5,5 +5,6 @@
   "url": "https://oneclient.sfx.ms/Mac/Installers/24.244.1204.0003/universal/OneDrive.pkg",
   "bundleId": "com.microsoft.OneDrive",
   "homepage": "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage",
-  "fileName": "OneDrive.pkg"
+  "fileName": "OneDrive.pkg",
+  "previous_version": "24.244.1204.0003"
 }

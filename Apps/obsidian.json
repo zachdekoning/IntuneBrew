@@ -1,10 +1,10 @@
 {
   "name": "Obsidian",
   "description": "Knowledge base that works on top of a local folder of plain text Markdown files",
-  "version": "1.8.3",
-  "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.3/Obsidian-1.8.3.dmg",
+  "version": "1.8.4",
+  "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.4/Obsidian-1.8.4.dmg",
   "bundleId": "md.obsidian",
   "homepage": "https://obsidian.md/",
-  "fileName": "Obsidian-1.8.3.dmg",
-  "previous_version": "1.8.3"
+  "fileName": "Obsidian-1.8.4.dmg",
+  "previous_version": "1.8.4"
 }

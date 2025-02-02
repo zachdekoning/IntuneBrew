@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/ugurkocde/IntuneAssignmentChecker?style=flat" alt="License"/>
   </p>
   <p>
-                                              <p>
+                                                  <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-160-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -63,16 +63,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-01-31 09:57 UTC*
+*Last checked: 2025-02-02 00:23 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Postman | 11.30.3 | 11.30.4 |
-| Basecamp | 3,2.4.0 | 3,2.4.1 |
-| Tailscale | 1.78.1 | 1.80.0 |
-| Ghostty | 1.0.1 | 1.1.0 |
-| Microsoft Edge | 132.0.2957.127,32cc7c00-5d56-4296-81bc-798f79706d6c | 132.0.2957.140,ee31fad8-29f2-4106-8a9b-9d59d949dbe3 |
-| LM Studio | 0.3.9,4 | 0.3.9,5 |
+| Cursor | 0.45.7,250130nr6eorv84 | 0.45.8,250201b44xw1x2k |
+| BetterDisplay | 3.3.3 | 3.3.4 |
+| Zed | 0.171.4 | 0.171.6 |
+| kitty | 0.39.0 | 0.39.1 |
+| Windsurf | 1.2.4,7f3de2bfc56b2f76334027e4d55dd26daa003035 | 1.2.5,b195fa8f6708b2d32692f64ba2809ad303f79173 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -125,7 +124,7 @@ Follow the interactive prompts to:
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.58 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.0.1 |
-| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20393 |
+| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20400 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20320 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.5.0.348 |
 | <img src='Logos/alacritty.png' width='32' height='32'> Alacritty | 0.15.0 |
@@ -143,7 +142,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.2.7 |
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3,2.4.1 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.3 |
-| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.3 |
+| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.4 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.1.3 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.74.51.0 |
@@ -157,7 +156,7 @@ Follow the interactive prompts to:
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.7,250130nr6eorv84 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.8,250201b44xw1x2k |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.2,42722 |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.4,243.23654.183 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
@@ -204,7 +203,7 @@ Follow the interactive prompts to:
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.0.0 |
 | <img src='Logos/keka.png' width='32' height='32'> Keka | 1.4.7 |
-| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.39.0 |
+| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.39.1 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.54.6 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 24.8.4 |
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.9,5 |
@@ -229,7 +228,7 @@ Follow the interactive prompts to:
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.4.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.127.0,250121ji52u08fs |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.1 |
-| <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.3 |
+| <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.4 |
 | <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.7 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 24.244.1204.0003 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6,167084 |
@@ -275,13 +274,13 @@ Follow the interactive prompts to:
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.2.1,243.23654.157 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.24.25.94 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.0.9 |
-| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.2.4,7f3de2bfc56b2f76334027e4d55dd26daa003035 |
+| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.2.5,b195fa8f6708b2d32692f64ba2809ad303f79173 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.171.3 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.2b |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.171.6 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.4b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]
