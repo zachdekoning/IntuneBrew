@@ -1,6 +1,11 @@
-﻿<#PSScriptInfo
+﻿param(
+    [Parameter(Mandatory = $false)]
+    [string[]]$Upload
+)
 
-.VERSION 0.3
+<#PSScriptInfo
+
+.VERSION 0.3.1
 
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 
@@ -16,7 +21,7 @@
 
 .ICONURI
 
-.EXTERNALMODULEDEPENDENCIES 
+.EXTERNALMODULEDEPENDENCIES
 
 .REQUIREDSCRIPTS
 
@@ -29,12 +34,16 @@
 
 #>
 
-<# 
+<#
 
-.DESCRIPTION 
+.DESCRIPTION
  This script automates the process of deploying macOS applications to Microsoft Intune using information from Homebrew casks. It fetches app details, creates Intune policies, and manages the deployment process.
 
-#> 
+.PARAMETER Upload
+ Specifies a list of app names to upload directly, bypassing the manual selection process.
+ Example: IntuneBrew -Upload "google_chrome", "firefox", "visual_studio_code"
+
+#>
 
 Write-Host "
 ___       _                    ____                    
@@ -131,28 +140,44 @@ try {
     # Fetch the supported apps JSON
     $supportedApps = Invoke-RestMethod -Uri $supportedAppsUrl -Method Get
 
-    # Allow user to select which apps to process
-    Write-Host "`nAvailable applications:" -ForegroundColor Cyan
-    # Add Sort-Object to sort the app names alphabetically
-    $supportedApps.PSObject.Properties | 
-    Sort-Object Name | 
-    ForEach-Object { 
-        Write-Host "  - $($_.Name)" 
-    }
-    Write-Host "`nEnter app names separated by commas (or 'all' for all apps):"
-    $selectedApps = Read-Host
-
-    if ($selectedApps.Trim().ToLower() -eq 'all') {
-        $githubJsonUrls = $supportedApps.PSObject.Properties.Value
-    }
-    else {
-        $selectedAppsList = $selectedApps.Split(',') | ForEach-Object { $_.Trim().ToLower() }
-        foreach ($app in $selectedAppsList) {
-            if ($supportedApps.PSObject.Properties.Name -contains $app) {
-                $githubJsonUrls += $supportedApps.$app
+    # Process apps based on command line parameter or allow manual selection
+    if ($Upload) {
+        Write-Host "`nProcessing specified applications:" -ForegroundColor Cyan
+        foreach ($app in $Upload) {
+            $appName = $app.Trim().ToLower()
+            Write-Host "  - $appName"
+            if ($supportedApps.PSObject.Properties.Name -contains $appName) {
+                $githubJsonUrls += $supportedApps.$appName
             }
             else {
-                Write-Host "Warning: '$app' is not a supported application" -ForegroundColor Yellow
+                Write-Host "Warning: '$appName' is not a supported application" -ForegroundColor Yellow
+            }
+        }
+    }
+    else {
+        # Allow user to select which apps to process
+        Write-Host "`nAvailable applications:" -ForegroundColor Cyan
+        # Add Sort-Object to sort the app names alphabetically
+        $supportedApps.PSObject.Properties |
+        Sort-Object Name |
+        ForEach-Object {
+            Write-Host "  - $($_.Name)"
+        }
+        Write-Host "`nEnter app names separated by commas (or 'all' for all apps):"
+        $selectedApps = Read-Host
+
+        if ($selectedApps.Trim().ToLower() -eq 'all') {
+            $githubJsonUrls = $supportedApps.PSObject.Properties.Value
+        }
+        else {
+            $selectedAppsList = $selectedApps.Split(',') | ForEach-Object { $_.Trim().ToLower() }
+            foreach ($app in $selectedAppsList) {
+                if ($supportedApps.PSObject.Properties.Name -contains $app) {
+                    $githubJsonUrls += $supportedApps.$app
+                }
+                else {
+                    Write-Host "Warning: '$app' is not a supported application" -ForegroundColor Yellow
+                }
             }
         }
     }
@@ -578,48 +603,52 @@ if ($appsToUpload.Count -eq 0) {
     exit 0
 }
 
-# Create custom message based on app statuses
-$newApps = @($appsToUpload | Where-Object { $_.IntuneVersion -eq 'Not in Intune' })
-$updatableApps = @($appsToUpload | Where-Object { $_.IntuneVersion -ne 'Not in Intune' -and (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion) })
-
-# Construct the message
-if (($newApps.Length + $updatableApps.Length) -eq 0) {
-    $message = "`nNo new or updatable apps found. Exiting..."
-    Write-Host $message -ForegroundColor Yellow
+# Check if there are apps to process
+if (($appsToUpload.Count) -eq 0) {
+    Write-Host "`nNo new or updatable apps found. Exiting..." -ForegroundColor Yellow
     Disconnect-MgGraph > $null 2>&1
     Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
     exit 0
 }
-elseif (($newApps.Length + $updatableApps.Length) -eq 1) {
-    # Check if it's a new app or an update
-    if ($newApps.Length -eq 1) {
-        $message = "`nDo you want to upload this new app ($($newApps[0].Name)) to Intune? (y/n)"
-    }
-    elseif ($updatableApps.Length -eq 1) {
-        $message = "`nDo you want to update this app ($($updatableApps[0].Name)) in Intune? (y/n)"
+
+# Skip confirmation if using -Upload parameter
+if (-not $Upload) {
+    # Create custom message based on app statuses
+    $newApps = @($appsToUpload | Where-Object { $_.IntuneVersion -eq 'Not in Intune' })
+    $updatableApps = @($appsToUpload | Where-Object { $_.IntuneVersion -ne 'Not in Intune' -and (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion) })
+
+    # Construct the message
+    if (($newApps.Length + $updatableApps.Length) -eq 1) {
+        # Check if it's a new app or an update
+        if ($newApps.Length -eq 1) {
+            $message = "`nDo you want to upload this new app ($($newApps[0].Name)) to Intune? (y/n)"
+        }
+        elseif ($updatableApps.Length -eq 1) {
+            $message = "`nDo you want to update this app ($($updatableApps[0].Name)) in Intune? (y/n)"
+        }
+        else {
+            $message = "`nDo you want to process this app? (y/n)"
+        }
     }
     else {
-        $message = "`nDo you want to process this app? (y/n)"
+        $statusParts = @()
+        if ($newApps.Length -gt 0) {
+            $statusParts += "$($newApps.Length) new app$(if($newApps.Length -gt 1){'s'}) to upload"
+        }
+        if ($updatableApps.Length -gt 0) {
+            $statusParts += "$($updatableApps.Length) app$(if($updatableApps.Length -gt 1){'s'}) to update"
+        }
+        $message = "`nFound $($statusParts -join ' and '). Do you want to continue? (y/n)"
     }
-}
-else {
-    $statusParts = @()
-    if ($newApps.Length -gt 0) {
-        $statusParts += "$($newApps.Length) new app$(if($newApps.Length -gt 1){'s'}) to upload"
-    }
-    if ($updatableApps.Length -gt 0) {
-        $statusParts += "$($updatableApps.Length) app$(if($updatableApps.Length -gt 1){'s'}) to update"
-    }
-    $message = "`nFound $($statusParts -join ' and '). Do you want to continue? (y/n)"
-}
 
-# Prompt user to continue
-$continue = Read-Host -Prompt $message
-if ($continue -ne "y") {
-    Write-Host "Operation cancelled by user." -ForegroundColor Yellow
-    Disconnect-MgGraph > $null 2>&1
-    Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
-    exit 0
+    # Prompt user to continue
+    $continue = Read-Host -Prompt $message
+    if ($continue -ne "y") {
+        Write-Host "Operation cancelled by user." -ForegroundColor Yellow
+        Disconnect-MgGraph > $null 2>&1
+        Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
+        exit 0
+    }
 }
 
 # Main script for uploading only newer apps
