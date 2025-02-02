@@ -55,7 +55,7 @@ ___       _                    ____
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
 Write-Host " | Version" -NoNewline; Write-Host " 0.3.1" -ForegroundColor Yellow -NoNewline
-Write-Host " | Last updated: " -NoNewline; Write-Host "2024-02-02" -ForegroundColor Magenta
+Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-02" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
 Write-Host "You can sponsor the development of this project at https://github.com/sponsors/ugurkocde" -ForegroundColor Red
