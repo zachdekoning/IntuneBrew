@@ -23,6 +23,11 @@
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-160-2ea44f?style=flat" alt="TotalApps"/>
     </a>
+
+  <p>
+    <a href="#-supported-applications">
+      <img src="https://img.shields.io/badge/Apps_Available-160-2ea44f?style=flat" alt="TotalApps"/>
+    </a>
   </p>
 </div>
 
@@ -69,15 +74,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-02 00:23 UTC*
+*Last checked: 2025-02-03 00:23 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Cursor | 0.45.7,250130nr6eorv84 | 0.45.8,250201b44xw1x2k |
-| BetterDisplay | 3.3.3 | 3.3.4 |
-| Zed | 0.171.4 | 0.171.6 |
-| kitty | 0.39.0 | 0.39.1 |
-| Windsurf | 1.2.4,7f3de2bfc56b2f76334027e4d55dd26daa003035 | 1.2.5,b195fa8f6708b2d32692f64ba2809ad303f79173 |
+| Signal | 7.40.0 | 7.40.1 |
+| Stats | 2.11.28 | 2.11.29 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -254,12 +256,12 @@ Follow the interactive prompts to:
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.0,467 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2024.9 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.40.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.40.1 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.42.115 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.56.502 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.28 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.29 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5,1213 |
 | <img src='Logos/sync.png' width='32' height='32'> Sync | 2.2.48 |
