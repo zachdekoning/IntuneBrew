@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-  <p>
+    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-160-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,12 +70,18 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-03 00:23 UTC*
+*Last checked: 2025-02-04 00:22 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Signal | 7.40.0 | 7.40.1 |
-| Stats | 2.11.28 | 2.11.29 |
+| Postman | 11.30.4 | 11.31.0 |
+| GitHub Desktop | 3.4.15-3fea2a10 | 3.4.16-ba997388 |
+| Cursor | 0.45.8,250201b44xw1x2k | 0.45.9,250202tgstl42dt |
+| Slack | 4.42.115 | 4.42.117 |
+| Adobe Acrobat Reader | 24.005.20320 | 24.005.20400 |
+| Canva | 1.102.0 | 1.103.0 |
+| Discord | 0.0.334 | 0.0.335 |
+| DuckDuckGo | 1.123.0,349 | 1.124.0,353 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -129,7 +135,7 @@ Follow the interactive prompts to:
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.58 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.0.1 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20400 |
-| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20320 |
+| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20400 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.5.0.348 |
 | <img src='Logos/alacritty.png' width='32' height='32'> Alacritty | 0.15.0 |
 | <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.5.1,2273 |
@@ -153,23 +159,23 @@ Follow the interactive prompts to:
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.38.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.24.0 |
-| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.102.0 |
+| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.103.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
 | <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.021,1737774839 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.0.55 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.8,250201b44xw1x2k |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.9,250202tgstl42dt |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.2,42722 |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.4,243.23654.183 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.1.11615133 |
-| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.334 |
+| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.335 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0,181591 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.9 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 216.4.4420 |
-| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.123.0,349 |
+| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.124.0,353 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2,7 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
@@ -187,7 +193,7 @@ Follow the interactive prompts to:
 | <img src='Logos/ghostty.png' width='32' height='32'> Ghostty | 1.1.0 |
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38,1 |
 | <img src='Logos/git_credential_manager.png' width='32' height='32'> Git Credential Manager | 2.6.1 |
-| <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.15-3fea2a10 |
+| <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.16-ba997388 |
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.3 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2.1,243.23654.166 |
@@ -241,7 +247,7 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.10,1086 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 8.14 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.16.0 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.30.4 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.31.0 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.17.1 |
@@ -253,7 +259,7 @@ Follow the interactive prompts to:
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2024.9 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.40.1 |
-| <img src='Logos/slack.png' width='32' height='32'> Slack | 4.42.115 |
+| <img src='Logos/slack.png' width='32' height='32'> Slack | 4.42.117 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2024.4.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.56.502 |
