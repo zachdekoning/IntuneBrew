@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-    <p>
+      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-160-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,18 +70,17 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-04 00:22 UTC*
+*Last checked: 2025-02-05 00:22 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Postman | 11.30.4 | 11.31.0 |
-| GitHub Desktop | 3.4.15-3fea2a10 | 3.4.16-ba997388 |
-| Cursor | 0.45.8,250201b44xw1x2k | 0.45.9,250202tgstl42dt |
-| Slack | 4.42.115 | 4.42.117 |
-| Adobe Acrobat Reader | 24.005.20320 | 24.005.20400 |
-| Canva | 1.102.0 | 1.103.0 |
-| Discord | 0.0.334 | 0.0.335 |
-| DuckDuckGo | 1.123.0,349 | 1.124.0,353 |
+| 1Password | 8.10.58 | 8.10.60 |
+| Google Chrome | 132.0.6834.160 | 133.0.6943.54 |
+| Mozilla Firefox | 134.0.2 | 135.0 |
+| Grammarly Desktop | 1.104.1.0 | 1.105.0.0 |
+| Dropbox | 216.4.4420 | 217.4.4417 |
+| ChatGPT | 1.2025.021,1737774839 | 1.2025.031,1738605767 |
+| Podman Desktop | 1.16.0 | 1.16.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -132,7 +131,7 @@ Follow the interactive prompts to:
 
 | Application | Latest Version |
 |-------------|----------------|
-| <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.58 |
+| <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.60 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.0.1 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20400 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20400 |
@@ -161,7 +160,7 @@ Follow the interactive prompts to:
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.24.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.103.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
-| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.021,1737774839 |
+| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.031,1738605767 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.0.55 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
@@ -174,7 +173,7 @@ Follow the interactive prompts to:
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.335 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0,181591 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.9 |
-| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 216.4.4420 |
+| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 217.4.4417 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.124.0,353 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2,7 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
@@ -197,9 +196,9 @@ Follow the interactive prompts to:
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.3 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2.1,243.23654.166 |
-| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 132.0.6834.160 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 133.0.6943.54 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.3 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.104.1.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.105.0.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0,240916 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
 | <img src='Logos/iina.png' width='32' height='32'> IINA | 1.3.5,141 |
@@ -233,7 +232,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.2 |
 | <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.2,22563 |
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
-| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 134.0.2 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 135.0 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.4.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.127.0,250121ji52u08fs |
@@ -246,7 +245,7 @@ Follow the interactive prompts to:
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.10,1086 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 8.14 |
-| <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.16.0 |
+| <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.16.1 |
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.31.0 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
