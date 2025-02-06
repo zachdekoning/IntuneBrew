@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-            <p>
+              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-161-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,20 +70,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-06 11:52 UTC*
+*Last checked: 2025-02-06 11:58 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Postman | 11.31.0 | 11.31.3 |
-| Vivaldi | 7.1.3570.42 | 7.1.3570.47 |
-| Cursor | 0.45.9,250202tgstl42dt | 0.45.10,250205buadkzpea |
-| WhatsApp | 2.24.25.94 | 2.25.1.83 |
-| mitmproxy | 11.1.0 | 11.1.2 |
-| Logitech Options+ | 1.85.655119 | 1.86.669369 |
-| Signal | 7.40.1 | 7.41.0 |
-| Raycast | 1.90.0 | 1.91.0 |
-| Zed | 0.171.6 | 0.172.8 |
-| Windsurf | 1.2.5,b195fa8f6708b2d32692f64ba2809ad303f79173 | 1.2.6,d08b8ea13d580d24be204c76e5dd1651d7234cd2 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -210,7 +199,7 @@ Follow the interactive prompts to:
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.0 |
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.2.2,243.23654.189 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
-| ❌ Jabra Direct | 6.21.01701 |
+| <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2024.3.2,243.23654.177 |
 | <img src='Logos/karabiner_elements.png' width='32' height='32'> Karabiner Elements | 15.3.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
