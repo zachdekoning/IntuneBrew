@@ -62,7 +62,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/microsoft-teams.json",
     "https://formulae.brew.sh/api/cask/spotify.json",
     "https://formulae.brew.sh/api/cask/intune-company-portal.json",
-    "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
     "https://formulae.brew.sh/api/cask/windows-app.json",
     "https://formulae.brew.sh/api/cask/parallels.json",
     "https://formulae.brew.sh/api/cask/keepassxc.json",
@@ -80,10 +79,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/webex.json",
     "https://formulae.brew.sh/api/cask/mongodb-compass.json",
     "https://formulae.brew.sh/api/cask/suspicious-package.json",
-    "https://formulae.brew.sh/api/cask/teamviewer-quicksupport.json",
     "https://formulae.brew.sh/api/cask/notion.json",
     "https://formulae.brew.sh/api/cask/signal.json",
-    "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
     "https://formulae.brew.sh/api/cask/adobe-creative-cloud.json",
     "https://formulae.brew.sh/api/cask/anydesk.json",
     "https://formulae.brew.sh/api/cask/android-studio.json",
@@ -180,6 +177,8 @@ homebrew_cask_urls = [
 pkg_in_dmg_urls = [
     "https://formulae.brew.sh/api/cask/jabra-direct.json",
     "https://formulae.brew.sh/api/cask/nomachine.json",
+    "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
+    "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json"
 ]
 
 # Custom scraper scripts to run
