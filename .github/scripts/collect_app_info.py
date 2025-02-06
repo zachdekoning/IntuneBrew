@@ -179,6 +179,7 @@ homebrew_cask_urls = [
 # Add new array for apps with PKG inside DMG
 pkg_in_dmg_urls = [
     "https://formulae.brew.sh/api/cask/jabra-direct.json",
+    "https://formulae.brew.sh/api/cask/nomachine.json",
 ]
 
 # Custom scraper scripts to run
