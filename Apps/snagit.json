@@ -3,7 +3,7 @@
   "description": "Screen capture software",
   "version": "2024.4.0",
   "url": "https://download.techsmith.com/snagitmac/releases/2440/snagit.dmg",
-  "bundleId": "com.techsmith.snagit",
+  "bundleId": "com.TechSmith.Snagit2024",
   "homepage": "https://www.techsmith.com/screen-capture.html",
   "fileName": "snagit.dmg",
   "previous_version": "2024.4.0"
