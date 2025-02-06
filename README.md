@@ -20,9 +20,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-              <p>
+                <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-161-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-162-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -70,7 +70,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-06 11:58 UTC*
+*Last checked: 2025-02-06 15:04 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -227,6 +227,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 135.0 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
+| <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1_2 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.4.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.127.0,250121ji52u08fs |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.1 |
