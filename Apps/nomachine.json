@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.nomachine.com/",
   "fileName": "nomachine_8.16.1_2.pkg",
-  "type": "pkg_in_dmg"
+  "type": "pkg_in_dmg",
+  "previous_version": "8.16.1_2"
 }
