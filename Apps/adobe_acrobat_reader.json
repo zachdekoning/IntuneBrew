@@ -1,10 +1,11 @@
 {
   "name": "Adobe Acrobat Reader",
   "description": "View, print, and comment on PDF documents",
-  "version": "24.005.20320",
-  "url": "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/2400520320/AcroRdrDC_2400520320_MUI.dmg",
+  "version": "24.005.20400",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/adobe_acrobat_reader_24.005.20400.pkg",
   "bundleId": "com.adobe.Reader",
   "homepage": "https://www.adobe.com/acrobat/pdf-reader.html",
-  "fileName": "AcroRdrDC_2400520320_MUI.dmg",
-  "previous_version": "24.005.20320"
+  "fileName": "adobe_acrobat_reader_24.005.20400.pkg",
+  "type": "pkg_in_dmg",
+  "previous_version": "24.005.20400"
 }

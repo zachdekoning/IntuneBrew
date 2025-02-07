@@ -62,7 +62,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/microsoft-teams.json",
     "https://formulae.brew.sh/api/cask/spotify.json",
     "https://formulae.brew.sh/api/cask/intune-company-portal.json",
-    "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
     "https://formulae.brew.sh/api/cask/windows-app.json",
     "https://formulae.brew.sh/api/cask/parallels.json",
     "https://formulae.brew.sh/api/cask/keepassxc.json",
@@ -80,10 +79,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/webex.json",
     "https://formulae.brew.sh/api/cask/mongodb-compass.json",
     "https://formulae.brew.sh/api/cask/suspicious-package.json",
-    "https://formulae.brew.sh/api/cask/teamviewer-quicksupport.json",
     "https://formulae.brew.sh/api/cask/notion.json",
     "https://formulae.brew.sh/api/cask/signal.json",
-    "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
     "https://formulae.brew.sh/api/cask/adobe-creative-cloud.json",
     "https://formulae.brew.sh/api/cask/anydesk.json",
     "https://formulae.brew.sh/api/cask/android-studio.json",
@@ -176,6 +173,15 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/sync.json"
 ]
 
+# Add new array for apps with PKG inside DMG
+pkg_in_dmg_urls = [
+    "https://formulae.brew.sh/api/cask/jabra-direct.json",
+    "https://formulae.brew.sh/api/cask/nomachine.json",
+    "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
+    "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
+    "https://formulae.brew.sh/api/cask/openvpn-connect.json"    
+]
+
 # Custom scraper scripts to run
 custom_scrapers = [
     ".github/scripts/scrapers/remotehelp.sh",
@@ -198,7 +204,7 @@ def find_bundle_id(json_string):
 
     return None
 
-def get_homebrew_app_info(json_url, needs_packaging=False):
+def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False):
     response = requests.get(json_url)
     response.raise_for_status()
     data = response.json()
@@ -218,6 +224,8 @@ def get_homebrew_app_info(json_url, needs_packaging=False):
     
     if needs_packaging:
         app_info["type"] = "app"
+    elif is_pkg_in_dmg:
+        app_info["type"] = "pkg_in_dmg"
     
     return app_info
 
@@ -464,6 +472,32 @@ def main():
             print(f"Saved app information for {display_name} to {file_path}")
         except Exception as e:
             print(f"Error processing {url}: {str(e)}")
+
+    # Process pkg_in_dmg apps
+    for url in pkg_in_dmg_urls:
+        try:
+            print(f"\nProcessing PKG in DMG app URL: {url}")
+            app_info = get_homebrew_app_info(url, is_pkg_in_dmg=True)
+            display_name = app_info['name']
+            supported_apps.append(display_name)
+            file_name = f"{sanitize_filename(display_name)}.json"
+            file_path = os.path.join(apps_folder, file_name)
+
+            # Store previous version if file exists
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    app_info["previous_version"] = existing_data.get("version")
+                    if existing_data.get("bundleId") and app_info["bundleId"] is None:
+                        app_info["bundleId"] = existing_data["bundleId"]
+
+            with open(file_path, "w") as f:
+                json.dump(app_info, f, indent=2)
+
+            apps_info.append(app_info)
+            print(f"Saved app information for {display_name} to {file_path}")
+        except Exception as e:
+            print(f"Error processing PKG in DMG app {url}: {str(e)}")
 
     # Run custom scrapers and update apps_info accordingly
     for scraper in custom_scrapers:
