@@ -63,52 +63,172 @@ Write-Host ""
 
 
 # Authentication START
-# App registration details required for certificate-based authentication
-$appid = '<YourAppIdHere>' # Enterprise App (Service Principal) App ID
-$tenantid = '<YourTenantIdHere>' # Your tenant ID
-$certThumbprint = '<YourCertificateThumbprintHere>' # Certificate thumbprint from your certificate store
 
 # Required Graph API permissions for app functionality
 $requiredPermissions = @(
     "DeviceManagementApps.ReadWrite.All"
 )
 
-# Check if App ID, Tenant ID, or Certificate Thumbprint are set correctly
-if (-not $appid -or $appid -eq '<YourAppIdHere>' -or
-    -not $tenantid -or $tenantid -eq '<YourTenantIdHere>' -or
-    -not $certThumbprint -or $certThumbprint -eq '<YourCertificateThumbprintHere>') {
+# Function to validate JSON configuration file
+function Test-AuthConfig {
+    param (
+        [string]$Path
+    )
     
-    Write-Host "App ID, Tenant ID, or Certificate Thumbprint is missing or not set correctly." -ForegroundColor Red
+    if (-not (Test-Path $Path)) {
+        Write-Host "Error: Configuration file not found at path: $Path" -ForegroundColor Red
+        return $false
+    }
     
-    # Fallback to interactive sign-in if certificate-based authentication details are not provided
-    $manualConnection = Read-Host "Would you like to attempt a manual interactive connection? (y/n)"
-    if ($manualConnection -eq 'y') {
-        Write-Host "Attempting manual interactive connection..." -ForegroundColor Yellow
-        try {
-            $permissionsList = $requiredPermissions -join ', '
-            $connectionResult = Connect-MgGraph -Scopes $permissionsList -NoWelcome -ErrorAction Stop
-            Write-Host "Successfully connected to Microsoft Graph using interactive sign-in." -ForegroundColor Green
-        }
-        catch {
-            Write-Host "Failed to connect to Microsoft Graph via interactive sign-in. Error: $_" -ForegroundColor Red
-            exit
+    try {
+        $config = Get-Content $Path | ConvertFrom-Json
+        return $true
+    }
+    catch {
+        Write-Host "Error: Invalid JSON format in configuration file" -ForegroundColor Red
+        return $false
+    }
+}
+
+# Function to authenticate using certificate
+function Connect-WithCertificate {
+    param (
+        [string]$ConfigPath
+    )
+    
+    $config = Get-Content $ConfigPath | ConvertFrom-Json
+    
+    if (-not $config.appId -or -not $config.tenantId -or -not $config.certificateThumbprint) {
+        Write-Host "Error: Configuration file must contain appId, tenantId, and certificateThumbprint" -ForegroundColor Red
+        return $false
+    }
+    
+    try {
+        Connect-MgGraph -ClientId $config.appId -TenantId $config.tenantId -CertificateThumbprint $config.certificateThumbprint -NoWelcome -ErrorAction Stop
+        Write-Host "Successfully connected to Microsoft Graph using certificate-based authentication." -ForegroundColor Green
+        return $true
+    }
+    catch {
+        Write-Host "Failed to connect to Microsoft Graph using certificate. Error: $_" -ForegroundColor Red
+        return $false
+    }
+}
+
+# Function to authenticate using client secret
+function Connect-WithClientSecret {
+    param (
+        [string]$ConfigPath
+    )
+    
+    $config = Get-Content $ConfigPath | ConvertFrom-Json
+    
+    if (-not $config.appId -or -not $config.tenantId -or -not $config.clientSecret) {
+        Write-Host "Error: Configuration file must contain appId, tenantId, and clientSecret" -ForegroundColor Red
+        return $false
+    }
+    
+    try {
+        $SecureClientSecret = ConvertTo-SecureString -String $config.clientSecret -AsPlainText -Force
+        $ClientSecretCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $config.appId, $SecureClientSecret
+        Connect-MgGraph -TenantId $config.tenantId -ClientSecretCredential $ClientSecretCredential -NoWelcome -ErrorAction Stop
+        Write-Host "Successfully connected to Microsoft Graph using client secret authentication." -ForegroundColor Green
+        return $true
+    }
+    catch {
+        Write-Host "Failed to connect to Microsoft Graph using client secret. Error: $_" -ForegroundColor Red
+        return $false
+    }
+}
+
+# Function to authenticate interactively
+function Connect-Interactive {
+    try {
+        $permissionsList = $requiredPermissions -join ','
+        Connect-MgGraph -Scopes $permissionsList -NoWelcome -ErrorAction Stop
+        Write-Host "Successfully connected to Microsoft Graph using interactive sign-in." -ForegroundColor Green
+        return $true
+    }
+    catch {
+        Write-Host "Failed to connect to Microsoft Graph via interactive sign-in. Error: $_" -ForegroundColor Red
+        return $false
+    }
+}
+
+# Function to show file picker dialog
+function Show-FilePickerDialog {
+    param (
+        [string]$Title = "Select JSON Configuration File",
+        [string]$Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*"
+    )
+    
+    Add-Type -AssemblyName System.Windows.Forms
+    
+    # Create a temporary form to own the dialog
+    $form = New-Object System.Windows.Forms.Form
+    $form.TopMost = $true
+    $form.Opacity = 0
+    
+    # Show the form without activating it
+    $form.Show()
+    $form.Location = New-Object System.Drawing.Point(-32000, -32000)
+    
+    # Create and configure the dialog
+    $dialog = New-Object System.Windows.Forms.OpenFileDialog
+    $dialog.Title = $Title
+    $dialog.Filter = $Filter
+    $dialog.CheckFileExists = $true
+    $dialog.Multiselect = $false
+    
+    # Show dialog with the form as owner
+    try {
+        if ($dialog.ShowDialog($form) -eq [System.Windows.Forms.DialogResult]::OK) {
+            return $dialog.FileName
         }
     }
-    else {
-        Write-Host "Script execution cancelled by user." -ForegroundColor Red
+    finally {
+        # Clean up the temporary form
+        $form.Close()
+        $form.Dispose()
+    }
+    return $null
+}
+
+# Display authentication options
+Write-Host "`nChoose authentication method:" -ForegroundColor Cyan
+Write-Host "1. App Registration with Certificate"
+Write-Host "2. App Registration with Secret"
+Write-Host "3. Interactive Session with Admin Account"
+$authChoice = Read-Host "`nEnter your choice (1-3)"
+
+$authenticated = $false
+
+switch ($authChoice) {
+    "1" {
+        Write-Host "`nPlease select the certificate configuration JSON file..." -ForegroundColor Yellow
+        $configPath = Show-FilePickerDialog -Title "Select Certificate Configuration JSON File"
+        if ($configPath -and (Test-AuthConfig $configPath)) {
+            $authenticated = Connect-WithCertificate $configPath
+        }
+    }
+    "2" {
+        Write-Host "`nPlease select the client secret configuration JSON file..." -ForegroundColor Yellow
+        $configPath = Show-FilePickerDialog -Title "Select Client Secret Configuration JSON File"
+        if ($configPath -and (Test-AuthConfig $configPath)) {
+            $authenticated = Connect-WithClientSecret $configPath
+        }
+    }
+    "3" {
+        $authenticated = Connect-Interactive
+    }
+    default {
+        Write-Host "Invalid choice. Please select 1, 2, or 3." -ForegroundColor Red
         exit
     }
 }
-else {
-    # Connect to Microsoft Graph using certificate-based authentication
-    try {
-        $connectionResult = Connect-MgGraph -ClientId $appid -TenantId $tenantid -CertificateThumbprint $certThumbprint -NoWelcome -ErrorAction Stop
-        Write-Host "Successfully connected to Microsoft Graph using certificate-based authentication." -ForegroundColor Green
-    }
-    catch {
-        Write-Host "Failed to connect to Microsoft Graph. Error: $_" -ForegroundColor Red
-        exit
-    }
+
+if (-not $authenticated) {
+    Write-Host "Authentication failed. Exiting script." -ForegroundColor Red
+    exit
 }
 
 # Check and display the current permissions
@@ -126,7 +246,7 @@ if ($missingPermissions.Count -gt 0) {
 
 Write-Host "All required permissions are present." -ForegroundColor Green
 
-# Auhentication END
+# Authentication END
 
 # Import required modules
 Import-Module Microsoft.Graph.Authentication

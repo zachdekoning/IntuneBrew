@@ -1,0 +1,5 @@
+{
+  "appId": "your-app-id",
+  "tenantId": "your-tenant-id",
+  "certificateThumbprint": "your-certificate-thumbprint"
+}
