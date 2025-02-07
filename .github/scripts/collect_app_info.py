@@ -178,7 +178,8 @@ pkg_in_dmg_urls = [
     "https://formulae.brew.sh/api/cask/jabra-direct.json",
     "https://formulae.brew.sh/api/cask/nomachine.json",
     "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
-    "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json"
+    "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
+    "https://formulae.brew.sh/api/cask/openvpn-connect.json"    
 ]
 
 # Custom scraper scripts to run
