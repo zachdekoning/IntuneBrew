@@ -1,0 +1,11 @@
+{
+  "name": "NoMachine",
+  "description": "Remote desktop software",
+  "version": "8.16.1_2",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/nomachine_8.16.1_2.pkg",
+  "bundleId": null,
+  "homepage": "https://www.nomachine.com/",
+  "fileName": "nomachine_8.16.1_2.pkg",
+  "type": "pkg_in_dmg",
+  "previous_version": "8.16.1_2"
+}

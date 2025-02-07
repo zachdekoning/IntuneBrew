@@ -103,6 +103,7 @@
     "mounty_for_ntfs": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/mounty_for_ntfs.json",
     "mozilla_firefox": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/mozilla_firefox.json",
     "netbeans_ide": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/netbeans_ide.json",
+    "nomachine": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/nomachine.json",
     "notion": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/notion.json",
     "notion_calendar": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/notion_calendar.json",
     "obs": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/obs.json",
