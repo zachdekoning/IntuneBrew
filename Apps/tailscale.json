@@ -6,5 +6,5 @@
   "bundleId": "com.tailscale.ipn.macsys",
   "homepage": "https://tailscale.com/",
   "fileName": "Tailscale-1.80.1-macos.pkg",
-  "previous_version": "1.80.0"
+  "previous_version": "1.80.1"
 }

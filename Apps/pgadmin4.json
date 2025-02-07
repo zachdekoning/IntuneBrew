@@ -6,5 +6,5 @@
   "bundleId": "org.pgadmin.pgadmin4",
   "homepage": "https://www.pgadmin.org/",
   "fileName": "pgadmin4-9.0-arm64.dmg",
-  "previous_version": "8.14"
+  "previous_version": "9.0"
 }
