@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                    <p>
+                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-163-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,15 +70,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-07 07:21 UTC*
+*Last checked: 2025-02-08 00:22 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Postman | 11.31.3 | 11.31.4 |
-| Notion | 4.4.0 | 4.5.0 |
-| Elgato Wave Link | 1.10.1.2293 | 2.0.4.3719 |
-| Zed | 0.172.8 | 0.172.9 |
-| calibre | 7.24.0 | 7.25.0 |
+| Cursor | 0.45.10,250205buadkzpea | 0.45.11,250207y6nbaw5qc |
+| Citrix Workspace | 24.11.0.55 | 24.11.10.22 |
+| Raycast | 1.91.0 | 1.91.1 |
+| Zed | 0.172.9 | 0.172.10 |
+| Zen Browser | 1.7.4b | 1.7.5b |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -159,11 +159,11 @@ Follow the interactive prompts to:
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.103.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
 | <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.031,1738605767 |
-| <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.0.55 |
+| <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8,323bb7701662920a3dd34e453243cce6baff27c0 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.10,250205buadkzpea |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.11,250207y6nbaw5qc |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.2,42722 |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.4,243.23654.183 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
@@ -240,7 +240,7 @@ Follow the interactive prompts to:
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.4 |
 | <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.7 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 24.244.1204.0003 |
-| ❌ OpenVPN Connect client | 3.6.0,5410 |
+| <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.0,5410 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6,167084 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.5_18849 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
@@ -251,7 +251,7 @@ Follow the interactive prompts to:
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.17.1 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.91.0 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.91.1 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
@@ -289,8 +289,8 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.172.9 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.4b |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.172.10 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.5b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
 > [!NOTE]
