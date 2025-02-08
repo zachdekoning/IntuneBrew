@@ -3,7 +3,7 @@
   "description": "Data science software focusing on R and Python",
   "version": "2024.12.0",
   "url": "https://download1.rstudio.org/electron/macos/RStudio-2024.12.0-467.dmg",
-  "bundleId": null,
+  "bundleId": "com.rstudio.desktop",
   "homepage": "https://posit.co/products/open-source/rstudio/",
   "fileName": "RStudio-2024.12.0-467.dmg"
 }

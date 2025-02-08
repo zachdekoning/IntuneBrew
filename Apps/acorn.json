@@ -3,7 +3,7 @@
   "description": "Image editor focused on simplicity",
   "version": "8.0.1",
   "url": "https://intunebrew.blob.core.windows.net/pkg/acorn_8.0.1.pkg",
-  "bundleId": null,
+  "bundleId": "com.flyingmeat.Acorn8",
   "homepage": "https://flyingmeat.com/acorn/",
   "fileName": "acorn_8.0.1.pkg",
   "type": "app",

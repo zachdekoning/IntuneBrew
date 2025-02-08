@@ -3,7 +3,7 @@
   "description": "IDE for Python programming - Community Edition",
   "version": "2024.3.2",
   "url": "https://download.jetbrains.com/python/pycharm-community-2024.3.2-aarch64.dmg",
-  "bundleId": null,
+  "bundleId": "com.jetbrains.pycharm.ce",
   "homepage": "https://www.jetbrains.com/pycharm/",
   "fileName": "pycharm-community-2024.3.2-aarch64.dmg"
 }

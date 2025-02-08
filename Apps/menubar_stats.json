@@ -3,7 +3,7 @@
   "description": "System monitor with temperature & fans plugins",
   "version": "3.9",
   "url": "https://intunebrew.blob.core.windows.net/pkg/menubar_stats_3.9.pkg",
-  "bundleId": null,
+  "bundleId": "com.fabriceleyne.menubarstats",
   "homepage": "https://seense.com/menubarstats/",
   "fileName": "menubar_stats_3.9.pkg",
   "type": "app",

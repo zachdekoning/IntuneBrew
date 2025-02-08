@@ -3,7 +3,7 @@
   "description": "Write, edit, and chat about your code with AI",
   "version": "0.45.11",
   "url": "https://intunebrew.blob.core.windows.net/pkg/cursor_0.45.11.pkg",
-  "bundleId": null,
+  "bundleId": "com.todesktop.230313mzl4w4u92",
   "homepage": "https://www.cursor.com/",
   "fileName": "cursor_0.45.11.pkg",
   "type": "app"
