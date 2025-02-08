@@ -1,0 +1,10 @@
+{
+  "name": "HP Easy Admin",
+  "description": "Tool to directly download HP printing and/or scanning drivers",
+  "version": "2.15.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/hp_easy_admin_2.15.0.pkg",
+  "bundleId": null,
+  "homepage": "https://support.hp.com/",
+  "fileName": "hp_easy_admin_2.15.0.pkg",
+  "type": "app"
+}

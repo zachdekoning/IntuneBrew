@@ -1,0 +1,9 @@
+{
+  "name": "DuckDuckGo",
+  "description": "Web browser focusing on privacy",
+  "version": "1.124.1",
+  "url": "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-1.124.1.355.dmg",
+  "bundleId": null,
+  "homepage": "https://duckduckgo.com/",
+  "fileName": "duckduckgo-1.124.1.355.dmg"
+}
