@@ -6,5 +6,6 @@
   "bundleId": "com.anthropic.claudefordesktop",
   "homepage": "https://claude.ai/download",
   "fileName": "claude_0.7.8.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.7.8"
 }

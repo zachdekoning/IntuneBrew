@@ -6,5 +6,6 @@
   "bundleId": "com.hp.hp-easy-admin",
   "homepage": "https://support.hp.com/",
   "fileName": "hp_easy_admin_2.15.0.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.15.0"
 }

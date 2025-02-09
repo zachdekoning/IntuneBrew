@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                        <p>
+                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-163-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,18 +70,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-08 12:56 UTC*
+*Last checked: 2025-02-09 00:24 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Alfred | 5.5.1,2273 | 5.5.1 |
-| Arc | 1.79.1,58230 | 1.79.1 |
-| Basecamp | 3,2.4.1 | 3 |
-| Suspicious Package | 4.5,1213 | 4.5 |
-| GIMP | 2.10.38,1 | 2.10.38 |
-| LibreOffice | 24.8.4 | 25.2.0 |
-| LM Studio | 0.3.9,5 | 0.3.9 |
-| Zen Browser | 1.7.5b | 1.7.6b |
+| ChatGPT | 1.2025.031 | 1.2025.032 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -161,7 +154,7 @@ Follow the interactive prompts to:
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.25.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.103.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
-| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.031 |
+| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.032 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.8 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |

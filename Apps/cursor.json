@@ -6,5 +6,6 @@
   "bundleId": "com.todesktop.230313mzl4w4u92",
   "homepage": "https://www.cursor.com/",
   "fileName": "cursor_0.45.11.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.45.11"
 }

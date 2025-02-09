@@ -6,5 +6,6 @@
   "bundleId": "io.mountainduck",
   "homepage": "https://mountainduck.io/",
   "fileName": "mountain_duck_4.17.2.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "4.17.2"
 }

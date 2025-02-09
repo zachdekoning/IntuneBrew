@@ -5,5 +5,6 @@
   "url": "https://download.jetbrains.com/python/pycharm-community-2024.3.2-aarch64.dmg",
   "bundleId": "com.jetbrains.pycharm.ce",
   "homepage": "https://www.jetbrains.com/pycharm/",
-  "fileName": "pycharm-community-2024.3.2-aarch64.dmg"
+  "fileName": "pycharm-community-2024.3.2-aarch64.dmg",
+  "previous_version": "2024.3.2"
 }
