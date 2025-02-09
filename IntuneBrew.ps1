@@ -1,6 +1,6 @@
 ﻿<#PSScriptInfo
 
-.VERSION 0.3.2
+.VERSION 0.3.3
 
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 
@@ -38,10 +38,17 @@
  Specifies a list of app names to upload directly, bypassing the manual selection process.
  Example: IntuneBrew -Upload google_chrome, visual_studio_code
 
+.PARAMETER UpdateAll
+ Updates all applications that have a newer version available in Intune.
+ Example: IntuneBrew -UpdateAll
+
 #>
 param(
     [Parameter(Mandatory = $false)]
-    [string[]]$Upload
+    [string[]]$Upload,
+    
+    [Parameter(Mandatory = $false)]
+    [switch]$UpdateAll
 )
 
 Write-Host "
@@ -54,8 +61,8 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.3.2" -ForegroundColor Yellow -NoNewline
-Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-07" -ForegroundColor Magenta
+Write-Host " | Version" -NoNewline; Write-Host " 0.3.3" -ForegroundColor Yellow -NoNewline
+Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-09" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
 Write-Host "You can sponsor the development of this project at https://github.com/sponsors/ugurkocde" -ForegroundColor Red
@@ -259,7 +266,7 @@ try {
     # Fetch the supported apps JSON
     $supportedApps = Invoke-RestMethod -Uri $supportedAppsUrl -Method Get
 
-    # Process apps based on command line parameter or allow manual selection
+    # Process apps based on command line parameters or allow manual selection
     if ($Upload) {
         Write-Host "`nProcessing specified applications:" -ForegroundColor Cyan
         foreach ($app in $Upload) {
@@ -272,6 +279,11 @@ try {
                 Write-Host "Warning: '$appName' is not a supported application" -ForegroundColor Yellow
             }
         }
+    }
+    elseif ($UpdateAll) {
+        Write-Host "`nChecking existing Intune applications for available updates..." -ForegroundColor Cyan
+        $githubJsonUrls = $supportedApps.PSObject.Properties.Value
+        Write-Host "(Note: Only applications already in Intune will be checked for updates)" -ForegroundColor Yellow
     }
     else {
         # Allow user to select which apps to process
@@ -523,8 +535,15 @@ function Is-ValidUrl {
 # Retrieves and compares app versions between Intune and GitHub
 function Get-IntuneApps {
     $intuneApps = @()
+    $totalApps = $githubJsonUrls.Count
+    $currentApp = 0
+
+    Write-Host "`nChecking app versions in Intune..." -ForegroundColor Cyan
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan
 
     foreach ($jsonUrl in $githubJsonUrls) {
+        $currentApp++
+        
         # Check if the URL is valid
         if (-not (Is-ValidUrl $jsonUrl)) {
             continue
@@ -533,11 +552,12 @@ function Get-IntuneApps {
         # Fetch GitHub app info
         $appInfo = Get-GitHubAppInfo $jsonUrl
         if ($appInfo -eq $null) {
-            Write-Host "Failed to fetch app info for $jsonUrl. Skipping." -ForegroundColor Yellow
+            Write-Host "[$currentApp/$totalApps] Failed to fetch app info for $jsonUrl. Skipping." -ForegroundColor Yellow
             continue
         }
 
         $appName = $appInfo.name
+        Write-Host "[$currentApp/$totalApps] 🔍 Checking: $appName" -ForegroundColor Yellow -NoNewline
 
         # Fetch Intune app info
         $intuneQueryUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=(isof('microsoft.graph.macOSDmgApp') or isof('microsoft.graph.macOSPkgApp')) and displayName eq '$appName'"
@@ -546,13 +566,23 @@ function Get-IntuneApps {
             $response = Invoke-MgGraphRequest -Uri $intuneQueryUri -Method Get
             if ($response.value.Count -gt 0) {
                 $intuneApp = $response.value[0]
+                $intuneVersion = $intuneApp.primaryBundleVersion
+                $githubVersion = $appInfo.version
+                
+                if (Is-NewerVersion $githubVersion $intuneVersion) {
+                    Write-Host " → Update available ($intuneVersion → $githubVersion)" -ForegroundColor Green
+                } else {
+                    Write-Host " → Up to date ($intuneVersion)" -ForegroundColor Gray
+                }
+                
                 $intuneApps += [PSCustomObject]@{
                     Name          = $intuneApp.displayName
-                    IntuneVersion = $intuneApp.primaryBundleVersion
-                    GitHubVersion = $appInfo.version
+                    IntuneVersion = $intuneVersion
+                    GitHubVersion = $githubVersion
                 }
             }
             else {
+                Write-Host " → Not in Intune" -ForegroundColor Gray
                 $intuneApps += [PSCustomObject]@{
                     Name          = $appName
                     IntuneVersion = 'Not in Intune'
@@ -561,10 +591,11 @@ function Get-IntuneApps {
             }
         }
         catch {
-            Write-Host "Error fetching Intune app info for '$appName': $_"
+            Write-Host "`nError fetching Intune app info for '$appName': $_" -ForegroundColor Red
         }
     }
 
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan
     return $intuneApps
 }
 
@@ -663,56 +694,65 @@ Write-Host "Fetching current Intune app versions..."
 $intuneAppVersions = Get-IntuneApps
 Write-Host ""
 
-# Prepare table data
-$tableData = @()
-foreach ($app in $intuneAppVersions) {
-    if ($app.IntuneVersion -eq 'Not in Intune') {
-        $status = "Not in Intune"
-        $statusColor = "Red"
-    }
-    elseif (Is-NewerVersion $app.GitHubVersion $app.IntuneVersion) {
-        $status = "Update Available"
-        $statusColor = "Yellow"
-    }
-    else {
-        $status = "Up-to-date"
-        $statusColor = "Green"
+# Only show the table if not using UpdateAll
+if (-not $UpdateAll) {
+    # Prepare table data
+    $tableData = @()
+    foreach ($app in $intuneAppVersions) {
+        if ($app.IntuneVersion -eq 'Not in Intune') {
+            $status = "Not in Intune"
+            $statusColor = "Red"
+        }
+        elseif (Is-NewerVersion $app.GitHubVersion $app.IntuneVersion) {
+            $status = "Update Available"
+            $statusColor = "Yellow"
+        }
+        else {
+            $status = "Up-to-date"
+            $statusColor = "Green"
+        }
+
+        $tableData += [PSCustomObject]@{
+            "App Name"       = $app.Name
+            "Latest Version" = $app.GitHubVersion
+            "Intune Version" = $app.IntuneVersion
+            "Status"         = $status
+            "StatusColor"    = $statusColor
+        }
     }
 
-    $tableData += [PSCustomObject]@{
-        "App Name"       = $app.Name
-        "Latest Version" = $app.GitHubVersion
-        "Intune Version" = $app.IntuneVersion
-        "Status"         = $status
-        "StatusColor"    = $statusColor
-    }
-}
+    # Function to write colored table
+    function Write-ColoredTable {
+        param (
+            $TableData
+        )
 
-# Function to write colored table
-function Write-ColoredTable {
-    param (
-        $TableData
-    )
-
-    $lineSeparator = "+----------------------------+----------------------+----------------------+-----------------+"
-    
-    Write-Host $lineSeparator
-    Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f "App Name", "Latest Version", "Intune Version", "Status") -ForegroundColor Cyan
-    Write-Host $lineSeparator
-
-    foreach ($row in $TableData) {
-        $color = $row.StatusColor
-        Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f $row.'App Name', $row.'Latest Version', $row.'Intune Version', $row.Status) -ForegroundColor $color
+        $lineSeparator = "+----------------------------+----------------------+----------------------+-----------------+"
+        
         Write-Host $lineSeparator
-    }
-}
+        Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f "App Name", "Latest Version", "Intune Version", "Status") -ForegroundColor Cyan
+        Write-Host $lineSeparator
 
-# Display the colored table with lines
-Write-ColoredTable $tableData
+        foreach ($row in $TableData) {
+            $color = $row.StatusColor
+            Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f $row.'App Name', $row.'Latest Version', $row.'Intune Version', $row.Status) -ForegroundColor $color
+            Write-Host $lineSeparator
+        }
+    }
+
+    # Display the colored table with lines
+    Write-ColoredTable $tableData
+}
 
 # Filter apps that need to be uploaded
-$appsToUpload = $intuneAppVersions | Where-Object { 
-    $_.IntuneVersion -eq 'Not in Intune' -or (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion)
+$appsToUpload = $intuneAppVersions | Where-Object {
+    if ($UpdateAll) {
+        # For UpdateAll, only include apps that are in Intune and have updates
+        $_.IntuneVersion -ne 'Not in Intune' -and (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion)
+    } else {
+        # For normal operation, include both new and updatable apps
+        $_.IntuneVersion -eq 'Not in Intune' -or (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion)
+    }
 }
 
 if ($appsToUpload.Count -eq 0) {
@@ -730,8 +770,8 @@ if (($appsToUpload.Count) -eq 0) {
     exit 0
 }
 
-# Skip confirmation if using -Upload parameter
-if (-not $Upload) {
+# Skip confirmation if using -Upload or -UpdateAll parameter
+if (-not $Upload -and -not $UpdateAll) {
     # Create custom message based on app statuses
     $newApps = @($appsToUpload | Where-Object { $_.IntuneVersion -eq 'Not in Intune' })
     $updatableApps = @($appsToUpload | Where-Object { $_.IntuneVersion -ne 'Not in Intune' -and (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion) })
