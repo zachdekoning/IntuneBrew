@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                <p>
+                                  <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-163-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,9 +70,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-10 12:11 UTC*
+*Last checked: 2025-02-10 18:08 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Arc | 1.79.1 | 1.81.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -134,7 +136,7 @@ Follow the interactive prompts to:
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.13 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 24.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
-| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.79.1 |
+| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.81.0 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.1 |
 | <img src='Logos/aws_corretto_jdk.png' width='32' height='32'> AWS Corretto JDK | 21.0.6.7.1 |
