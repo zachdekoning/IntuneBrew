@@ -1,6 +1,6 @@
 ﻿<#PSScriptInfo
 
-.VERSION 0.3.3
+.VERSION 0.3.4
 
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 
@@ -61,8 +61,8 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.3.3" -ForegroundColor Yellow -NoNewline
-Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-09" -ForegroundColor Magenta
+Write-Host " | Version" -NoNewline; Write-Host " 0.3.4" -ForegroundColor Yellow -NoNewline
+Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-10" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
 Write-Host "You can sponsor the development of this project at https://github.com/sponsors/ugurkocde" -ForegroundColor Red
@@ -424,7 +424,7 @@ function EncryptFile($sourceFile) {
 
 # Handles chunked upload of large files to Azure Storage
 function UploadFileToAzureStorage($sasUri, $filepath) {
-    $blockSize = 4 * 1024 * 1024 # 4 MiB
+    $blockSize = 8 * 1024 * 1024 # 8 MiB
     $fileSize = (Get-Item $filepath).Length
     $totalBlocks = [Math]::Ceiling($fileSize / $blockSize)
     
@@ -811,18 +811,21 @@ if (-not $Upload -and -not $UpdateAll) {
 }
 
 # Main script for uploading only newer apps
-foreach ($jsonUrl in $githubJsonUrls) {
-    $appInfo = Get-GitHubAppInfo -jsonUrl $jsonUrl
+foreach ($app in $appsToUpload) {
+    # Find the corresponding JSON URL for this app
+    $jsonUrl = $githubJsonUrls | Where-Object {
+        $appInfo = Get-GitHubAppInfo -jsonUrl $_
+        $appInfo -and $appInfo.name -eq $app.Name
+    } | Select-Object -First 1
 
-    if ($appInfo -eq $null) {
-        Write-Host "`n❌ Failed to fetch app info for $jsonUrl. Skipping." -ForegroundColor Red
+    if (-not $jsonUrl) {
+        Write-Host "`n❌ Could not find JSON URL for $($app.Name). Skipping." -ForegroundColor Red
         continue
     }
 
-    # Check if this app needs to be uploaded/updated
-    $currentApp = $intuneAppVersions | Where-Object { $_.Name -eq $appInfo.name }
-    if ($currentApp -and $currentApp.IntuneVersion -ne 'Not in Intune' -and 
-        !(Is-NewerVersion $appInfo.version $currentApp.IntuneVersion)) {
+    $appInfo = Get-GitHubAppInfo -jsonUrl $jsonUrl
+    if ($appInfo -eq $null) {
+        Write-Host "`n❌ Failed to fetch app info for $jsonUrl. Skipping." -ForegroundColor Red
         continue
     }
 
