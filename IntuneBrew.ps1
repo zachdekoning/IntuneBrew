@@ -1,6 +1,6 @@
 ﻿<#PSScriptInfo
 
-.VERSION 0.3.4
+.VERSION 0.3.5
 
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 
@@ -61,7 +61,7 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.3.4" -ForegroundColor Yellow -NoNewline
+Write-Host " | Version" -NoNewline; Write-Host " 0.3.5" -ForegroundColor Yellow -NoNewline
 Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-10" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
@@ -565,19 +565,22 @@ function Get-IntuneApps {
         try {
             $response = Invoke-MgGraphRequest -Uri $intuneQueryUri -Method Get
             if ($response.value.Count -gt 0) {
-                $intuneApp = $response.value[0]
-                $intuneVersion = $intuneApp.primaryBundleVersion
+                $intuneVersions = $response.value | ForEach-Object { $_.primaryBundleVersion }
                 $githubVersion = $appInfo.version
+                $latestIntuneVersion = $intuneVersions | Sort-Object -Descending | Select-Object -First 1
                 
-                if (Is-NewerVersion $githubVersion $intuneVersion) {
-                    Write-Host " → Update available ($intuneVersion → $githubVersion)" -ForegroundColor Green
+                # Check if GitHub version is newer than ALL installed versions
+                $needsUpdate = $intuneVersions | ForEach-Object { Is-NewerVersion $githubVersion $_ } | Where-Object { $_ -eq $true }
+                
+                if ($needsUpdate.Count -eq $intuneVersions.Count) {
+                    Write-Host " → Update available ($latestIntuneVersion → $githubVersion)" -ForegroundColor Green
                 } else {
-                    Write-Host " → Up to date ($intuneVersion)" -ForegroundColor Gray
+                    Write-Host " → Up to date ($latestIntuneVersion)" -ForegroundColor Gray
                 }
                 
                 $intuneApps += [PSCustomObject]@{
-                    Name          = $intuneApp.displayName
-                    IntuneVersion = $intuneVersion
+                    Name          = $appName
+                    IntuneVersion = $latestIntuneVersion
                     GitHubVersion = $githubVersion
                 }
             }
