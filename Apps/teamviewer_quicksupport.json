@@ -6,5 +6,6 @@
   "bundleId": "com.teamviewer.TeamViewerQS",
   "homepage": "https://www.teamviewer.com/",
   "fileName": "TeamViewerQS.dmg",
-  "previous_version": "15"
+  "previous_version": "15",
+  "changelog": "https://community.teamviewer.com/English/categories/change-logs-en"
 }

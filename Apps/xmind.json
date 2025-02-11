@@ -6,5 +6,6 @@
   "bundleId": "net.xmind.vana.app",
   "homepage": "https://www.xmind.net/",
   "fileName": "Xmind-for-macOS-25.01.01061-202501070704.dmg",
-  "previous_version": "25.01.01061-202501070704"
+  "previous_version": "25.01.01061-202501070704",
+  "changelog": "https://xmind.app/desktop/release-notes/"
 }
