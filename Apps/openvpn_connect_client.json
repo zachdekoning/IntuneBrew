@@ -8,5 +8,5 @@
   "fileName": "openvpn_connect_client_3.6.1.pkg",
   "type": "pkg_in_dmg",
   "previous_version": "3.6.0",
-  "changelog": "https://openvpn.net/client-connect-release-notes/"
+  "changelog": "https://openvpn.net/connect-docs/macos-release-notes.html"
 }
