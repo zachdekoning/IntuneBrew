@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                    <p>
+                                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-163-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,13 +70,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-11 00:28 UTC*
+*Last checked: 2025-02-11 06:08 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Claude | 0.7.8 | 0.7.9 |
-| Discord | 0.0.335 | 0.0.336 |
-| Microsoft Edge | 132.0.2957.140 | 133.0.3065.59 |
+| Postman | 11.31.4 | 11.32.1 |
+| Zed | 0.172.10 | 0.172.11 |
+| OpenVPN Connect client | 3.6.0 | 3.6.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -238,14 +238,14 @@ Follow the interactive prompts to:
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.4 |
 | <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.7 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 24.244.1204.0003 |
-| <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.0 |
+| <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.1 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.9.5_18849 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.0-55872 |
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.10 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.0 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.16.1 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.31.4 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.32.1 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.17.1 |
@@ -287,7 +287,7 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.172.10 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.172.11 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.6b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.6.47101 |
 
