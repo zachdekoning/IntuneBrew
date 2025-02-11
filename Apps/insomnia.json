@@ -6,5 +6,6 @@
   "bundleId": "com.insomnia.app",
   "homepage": "https://insomnia.rest/",
   "fileName": "Insomnia.Core-10.3.0.dmg",
-  "previous_version": "10.3.0"
+  "previous_version": "10.3.0",
+  "changelog": "https://github.com/Kong/insomnia/releases"
 }

@@ -6,5 +6,6 @@
   "bundleId": "com.microsoft.autoupdate2",
   "homepage": "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac/",
   "fileName": "Microsoft_365_and_Office_16.93.25011212_Installer.pkg",
-  "previous_version": "16.93.25011212"
+  "previous_version": "16.93.25011212",
+  "changelog": "https://learn.microsoft.com/en-us/officeupdates/release-notes-office-for-mac"
 }
