@@ -7,5 +7,6 @@
   "homepage": "https://maccy.app/",
   "fileName": "maccy_2.3.0.pkg",
   "type": "app",
-  "previous_version": "2.3.0"
+  "previous_version": "2.3.0",
+  "changelog": "https://github.com/p0deje/Maccy/releases"
 }

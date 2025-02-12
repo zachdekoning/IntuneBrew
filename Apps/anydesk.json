@@ -6,5 +6,6 @@
   "bundleId": "com.philandro.anydesk",
   "homepage": "https://anydesk.com/",
   "fileName": "anydesk.dmg",
-  "previous_version": "8.1.4"
+  "previous_version": "8.1.4",
+  "changelog": "https://anydesk.com/en/changelog/mac-os"
 }

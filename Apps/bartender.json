@@ -7,5 +7,6 @@
   "homepage": "https://www.macbartender.com/",
   "fileName": "bartender_5.2.7.pkg",
   "type": "app",
-  "previous_version": "5.2.7"
+  "previous_version": "5.2.7",
+  "changelog": "https://www.macbartender.com/Bartender5/release_notes/"
 }

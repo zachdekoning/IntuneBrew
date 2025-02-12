@@ -6,5 +6,6 @@
   "bundleId": "com.bitwarden.desktop",
   "homepage": "https://bitwarden.com/",
   "fileName": "Bitwarden-2025.1.4-universal.dmg",
-  "previous_version": "2025.1.4"
+  "previous_version": "2025.1.4",
+  "changelog": "https://github.com/bitwarden/clients/releases"
 }

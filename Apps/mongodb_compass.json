@@ -6,5 +6,6 @@
   "bundleId": "com.mongodb.compass",
   "homepage": "https://www.mongodb.com/products/compass",
   "fileName": "mongodb-compass-1.45.2-darwin-arm64.dmg",
-  "previous_version": "1.45.2"
+  "previous_version": "1.45.2",
+  "changelog": "https://www.mongodb.com/docs/compass/current/release-notes/"
 }

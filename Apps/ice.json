@@ -7,5 +7,6 @@
   "homepage": "https://icemenubar.app/",
   "fileName": "ice_0.11.12.pkg",
   "type": "app",
-  "previous_version": "0.11.12"
+  "previous_version": "0.11.12",
+  "changelog": "https://github.com/jordanbaird/Ice/releases"
 }
