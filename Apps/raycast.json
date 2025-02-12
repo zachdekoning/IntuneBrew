@@ -6,6 +6,5 @@
   "bundleId": "com.raycast.macos",
   "homepage": "https://raycast.com/",
   "fileName": "download?build=arm",
-  "previous_version": "1.91.1",
-  "changelog": "https://raycast.com/changelog"
+  "previous_version": "1.91.1"
 }

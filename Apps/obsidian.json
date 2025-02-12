@@ -6,6 +6,5 @@
   "bundleId": "md.obsidian",
   "homepage": "https://obsidian.md/",
   "fileName": "Obsidian-1.8.4.dmg",
-  "previous_version": "1.8.4",
-  "changelog": "https://github.com/obsidianmd/obsidian-releases/releases"
+  "previous_version": "1.8.4"
 }

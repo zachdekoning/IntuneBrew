@@ -6,6 +6,5 @@
   "bundleId": "org.apache.netbeans",
   "homepage": "https://netbeans.apache.org/",
   "fileName": "Apache-NetBeans-24.pkg",
-  "previous_version": "24",
-  "changelog": "https://netbeans.apache.org/download/index.html#release-notes"
+  "previous_version": "24"
 }

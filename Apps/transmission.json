@@ -6,6 +6,5 @@
   "bundleId": "org.m0k.transmission",
   "homepage": "https://transmissionbt.com/",
   "fileName": "Transmission-4.0.6.dmg",
-  "previous_version": "4.0.6",
-  "changelog": "https://github.com/transmission/transmission/releases/"
+  "previous_version": "4.0.6"
 }

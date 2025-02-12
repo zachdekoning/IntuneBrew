@@ -6,6 +6,5 @@
   "bundleId": "dev.zed.Zed",
   "homepage": "https://zed.dev/",
   "fileName": "Zed-aarch64.dmg",
-  "previous_version": "0.172.10",
-  "changelog": "https://zed.dev/releases/stable"
+  "previous_version": "0.172.11"
 }

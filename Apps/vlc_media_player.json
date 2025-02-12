@@ -6,6 +6,5 @@
   "bundleId": "org.videolan.vlc",
   "homepage": "https://www.videolan.org/vlc/",
   "fileName": "vlc-3.0.21-arm64.dmg",
-  "previous_version": "3.0.21",
-  "changelog": "https://www.videolan.org/vlc/releases/"
+  "previous_version": "3.0.21"
 }

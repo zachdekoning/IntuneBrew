@@ -6,6 +6,5 @@
   "bundleId": "io.balena.etcher.*",
   "homepage": "https://balena.io/etcher",
   "fileName": "balenaEtcher-1.19.25-arm64.dmg",
-  "previous_version": "1.19.25",
-  "changelog": "https://github.com/balena-io/etcher/releases"
+  "previous_version": "1.19.25"
 }

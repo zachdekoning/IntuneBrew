@@ -7,6 +7,5 @@
   "homepage": "https://seense.com/menubarstats/",
   "fileName": "menubar_stats_3.9.pkg",
   "type": "app",
-  "previous_version": "3.9",
-  "changelog": "https://seense.com/menubarstats/changelog/"
+  "previous_version": "3.9"
 }

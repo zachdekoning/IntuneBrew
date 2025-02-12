@@ -6,6 +6,5 @@
   "bundleId": "com.yubico.ykman",
   "homepage": "https://developers.yubico.com/yubikey-manager-qt/",
   "fileName": "yubikey-manager-qt-1.2.5-mac.pkg",
-  "previous_version": "1.2.5",
-  "changelog": "https://developers.yubico.com/yubikey-manager-qt/Releases/"
+  "previous_version": "1.2.5"
 }

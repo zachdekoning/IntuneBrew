@@ -6,6 +6,5 @@
   "bundleId": "com.TechSmith.Snagit2024",
   "homepage": "https://www.techsmith.com/screen-capture.html",
   "fileName": "snagit.dmg",
-  "previous_version": "2024.4.0",
-  "changelog": "https://support.techsmith.com/hc/en-us/articles/115006443147-Snagit-Mac-Version-History"
+  "previous_version": "2024.4.0"
 }

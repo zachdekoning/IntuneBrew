@@ -6,6 +6,5 @@
   "bundleId": "com.rstudio.desktop",
   "homepage": "https://posit.co/products/open-source/rstudio/",
   "fileName": "RStudio-2024.12.0-467.dmg",
-  "previous_version": "2024.12.0",
-  "changelog": "https://docs.posit.co/ide/news/"
+  "previous_version": "2024.12.0"
 }

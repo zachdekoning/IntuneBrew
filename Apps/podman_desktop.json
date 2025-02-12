@@ -6,6 +6,5 @@
   "bundleId": "io.podmandesktop.PodmanDesktop",
   "homepage": "https://podman-desktop.io/",
   "fileName": "podman-desktop-1.16.1-arm64.dmg",
-  "previous_version": "1.16.1",
-  "changelog": "https://github.com/containers/podman-desktop/releases"
+  "previous_version": "1.16.1"
 }

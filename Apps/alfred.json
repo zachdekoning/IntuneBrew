@@ -7,6 +7,5 @@
   "homepage": "https://www.alfredapp.com/",
   "fileName": "alfred_5.5.1.pkg",
   "type": "app",
-  "previous_version": "5.5.1",
-  "changelog": "https://www.alfredapp.com/changelog/"
+  "previous_version": "5.5.1"
 }

@@ -1,12 +1,11 @@
 {
   "name": "Fantastical",
   "description": "Calendar software",
-  "version": "4.0.4",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/fantastical_4.0.4.pkg",
+  "version": "4.0.5",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/fantastical_4.0.5.pkg",
   "bundleId": "com.flexibits.fantastical2.mac",
   "homepage": "https://flexibits.com/fantastical",
-  "fileName": "fantastical_4.0.4.pkg",
+  "fileName": "fantastical_4.0.5.pkg",
   "type": "app",
-  "previous_version": "4.0.4",
-  "changelog": "https://flexibits.com/fantastical/changelog"
+  "previous_version": "4.0.4"
 }

@@ -6,6 +6,5 @@
   "bundleId": "com.microsoft.edgemac",
   "homepage": "https://www.microsoft.com/en-us/edge?form=",
   "fileName": "MicrosoftEdge-133.0.3065.59.pkg",
-  "previous_version": "133.0.3065.59",
-  "changelog": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel"
+  "previous_version": "133.0.3065.59"
 }

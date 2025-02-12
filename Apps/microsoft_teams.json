@@ -6,6 +6,5 @@
   "bundleId": "com.microsoft.autoupdate2",
   "homepage": "https://www.microsoft.com/en/microsoft-teams/group-chat-software/",
   "fileName": "MicrosoftTeams.pkg",
-  "previous_version": "25007.203.3361.6689",
-  "changelog": "https://learn.microsoft.com/en-us/officeupdates/teams-app-versioning"
+  "previous_version": "25007.203.3361.6689"
 }

@@ -6,6 +6,5 @@
   "bundleId": "net.kovidgoyal.calibre",
   "homepage": "https://calibre-ebook.com/",
   "fileName": "calibre-7.25.0.dmg",
-  "previous_version": "7.25.0",
-  "changelog": "https://calibre-ebook.com/whats-new"
+  "previous_version": "7.25.0"
 }
