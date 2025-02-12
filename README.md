@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                        <p>
+                                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-163-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,22 +70,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-12 00:07 UTC*
+*Last checked: 2025-02-11 06:08 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Microsoft Visual Studio Code | 1.97.0 | 1.97.1 |
-| Fantastical | 4.0.4 | 4.0.5 |
-| Vivaldi | 7.1.3570.47 | 7.1.3570.48 |
-| Transmit | 5.10.6 | 5.10.7 |
-| Azure Data Studio | 1.51.0 | 1.51.1 |
-| GitKraken | 10.6.3 | 10.7.0 |
-| Grammarly Desktop | 1.105.0.0 | 1.106.0.0 |
-| Anki | 24.11 | 25.02 |
-| DuckDuckGo | 1.125.0 | 1.125.1 |
-| Google Drive | 103.0.3 | 104.0.1 |
-| Microsoft Office | 16.93.25011212 | 16.94.25020927 |
-| Insomnia | 10.3.0 | 10.3.1 |
+| Postman | 11.31.4 | 11.32.1 |
+| Zed | 0.172.10 | 0.172.11 |
+| OpenVPN Connect client | 3.6.0 | 3.6.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -145,14 +136,14 @@ Follow the interactive prompts to:
 | <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.5.1 |
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.19.1 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.13 |
-| <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
+| <img src='Logos/anki.png' width='32' height='32'> Anki | 24.11 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 8.1.4 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.81.0 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.1 |
 | <img src='Logos/aws_corretto_jdk.png' width='32' height='32'> AWS Corretto JDK | 21.0.6.7.1 |
 | <img src='Logos/azul_zulu_java_standard_edition_development_kit.png' width='32' height='32'> Azul Zulu Java Standard Edition Development Kit | 23.0.2 |
-| <img src='Logos/azure_data_studio.png' width='32' height='32'> Azure Data Studio | 1.51.1 |
+| <img src='Logos/azure_data_studio.png' width='32' height='32'> Azure Data Studio | 1.51.0 |
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.2.7 |
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.3 |
@@ -179,7 +170,7 @@ Follow the interactive prompts to:
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.9 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 217.4.4417 |
-| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.125.1 |
+| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.125.0 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
@@ -187,7 +178,7 @@ Follow the interactive prompts to:
 | <img src='Logos/etcher.png' width='32' height='32'> Etcher | 1.19.25 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
-| <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.5 |
+| <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.4 |
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 124.7.4 |
 | <img src='Logos/flameshot.png' width='32' height='32'> Flameshot | 12.1.0 |
 | <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.6 |
@@ -198,18 +189,18 @@ Follow the interactive prompts to:
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38 |
 | <img src='Logos/git_credential_manager.png' width='32' height='32'> Git Credential Manager | 2.6.1 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.16-ba997388 |
-| <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.7.0 |
+| <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.6.3 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.2.1 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 133.0.6943.54 |
-| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 104.0.1 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.106.0.0 |
+| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 103.0.3 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.105.0.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
 | <img src='Logos/iina.png' width='32' height='32'> IINA | 1.3.5 |
 | <img src='Logos/imazing.png' width='32' height='32'> iMazing | 3.0.6 |
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2 |
-| <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.1 |
+| <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.0 |
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.2.2 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
 | <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
@@ -230,9 +221,9 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.77.24121924 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 133.0.3065.59 |
-| <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.94.25020927 |
+| <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.93.25011212 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25007.203.3361.6689 |
-| <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.97.1 |
+| <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.97.0 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.80 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.2 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.2 |
@@ -282,9 +273,9 @@ Follow the interactive prompts to:
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.14.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.10.0 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
-| <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.7 |
+| <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.6 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
-| <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.1.3570.48 |
+| <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.1.3570.47 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.97.0.25037 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.1.0.31549 |

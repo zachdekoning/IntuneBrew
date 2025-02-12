@@ -6,5 +6,6 @@
   "bundleId": "com.elgato.StreamDeck",
   "homepage": "https://www.elgato.com/ww/en/s/downloads",
   "fileName": "Stream_Deck_6.8.1.21263.pkg",
-  "previous_version": "6.8.1.21263"
+  "previous_version": "6.8.1.21263",
+  "changelog": "https://help.elgato.com/hc/en-us/sections/5162671529357-Elgato-Stream-Deck-Software-Release-Notes"
 }

@@ -7,5 +7,6 @@
   "homepage": "https://www.postman.com/",
   "fileName": "postman_11.32.1.pkg",
   "type": "app",
-  "previous_version": "11.32.1"
+  "previous_version": "11.31.4",
+  "changelog": "https://www.postman.com/release-notes/postman-app/"
 }

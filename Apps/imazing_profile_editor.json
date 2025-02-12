@@ -6,5 +6,6 @@
   "bundleId": "com.DigiDNA.iMazingProfileEditorMac",
   "homepage": "https://imazing.com/profile-editor",
   "fileName": "iMazing_Profile_Editor_1.9.2.304501.dmg",
-  "previous_version": "1.9.2"
+  "previous_version": "1.9.2",
+  "changelog": "https://imazing.com/profile-editor/release-notes"
 }

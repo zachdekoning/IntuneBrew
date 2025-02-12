@@ -6,5 +6,6 @@
   "bundleId": "net.temurin.23.jdk",
   "homepage": "https://adoptium.net/",
   "fileName": "OpenJDK23U-jdk_aarch64_mac_hotspot_23.0.2_7.pkg",
-  "previous_version": "23.0.2"
+  "previous_version": "23.0.2",
+  "changelog": "https://adoptium.net/de/temurin/releases/?os=mac&version=23"
 }

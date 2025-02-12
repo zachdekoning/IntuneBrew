@@ -6,5 +6,6 @@
   "bundleId": "us.zoom.pkg.videomeeting",
   "homepage": "https://www.zoom.us/",
   "fileName": "zoomusInstallerFull.pkg",
-  "previous_version": "6.3.6.47101"
+  "previous_version": "6.3.6.47101",
+  "changelog": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061222"
 }

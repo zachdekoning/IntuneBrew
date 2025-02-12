@@ -6,5 +6,6 @@
   "bundleId": "com.obsproject.obs-studio",
   "homepage": "https://obsproject.com/",
   "fileName": "OBS-Studio-31.0.1-macOS-Apple.dmg",
-  "previous_version": "31.0.1"
+  "previous_version": "31.0.1",
+  "changelog": "https://github.com/obsproject/obs-studio/releases"
 }

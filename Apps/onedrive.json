@@ -6,5 +6,6 @@
   "bundleId": "com.microsoft.OneDrive",
   "homepage": "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage",
   "fileName": "OneDrive.pkg",
-  "previous_version": "24.244.1204.0003"
+  "previous_version": "24.244.1204.0003",
+  "changelog": "https://support.microsoft.com/en-us/office/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0"
 }
