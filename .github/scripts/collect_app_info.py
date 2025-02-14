@@ -436,13 +436,20 @@ def main():
                 print(f"Found existing file for {display_name}")
                 with open(file_path, "r") as f:
                     existing_data = json.load(f)
-                    # Preserve all existing data
+                    # Store the new version, url and previous_version
+                    new_version = app_info["version"]
+                    new_url = app_info["url"]
+                    previous_version = existing_data.get("version")
+                    
+                    # Preserve all existing data except version, url and previous_version
                     for key in existing_data:
-                        app_info[key] = existing_data[key]
-                    # Only update version, url and previous_version
-                    app_info["previous_version"] = existing_data.get("version")
-                    app_info["version"] = app_info["version"]
-                    app_info["url"] = app_info["url"]
+                        if key not in ["version", "url", "previous_version"]:
+                            app_info[key] = existing_data[key]
+                    
+                    # Update version, url and previous_version
+                    app_info["version"] = new_version
+                    app_info["url"] = new_url
+                    app_info["previous_version"] = previous_version
 
             with open(file_path, "w") as f:
                 json.dump(app_info, f, indent=2)
@@ -467,13 +474,20 @@ def main():
             if os.path.exists(file_path):
                 with open(file_path, "r") as f:
                     existing_data = json.load(f)
-                    # Preserve all existing data
+                    # Store the new version, url and previous_version
+                    new_version = app_info["version"]
+                    new_url = app_info["url"]
+                    previous_version = existing_data.get("version")
+                    
+                    # Preserve all existing data except version, url and previous_version
                     for key in existing_data:
-                        app_info[key] = existing_data[key]
-                    # Only update version, url and previous_version
-                    app_info["previous_version"] = existing_data.get("version")
-                    app_info["version"] = app_info["version"]
-                    app_info["url"] = app_info["url"]
+                        if key not in ["version", "url", "previous_version"]:
+                            app_info[key] = existing_data[key]
+                    
+                    # Update version, url and previous_version
+                    app_info["version"] = new_version
+                    app_info["url"] = new_url
+                    app_info["previous_version"] = previous_version
 
             with open(file_path, "w") as f:
                 json.dump(app_info, f, indent=2)
@@ -497,13 +511,20 @@ def main():
             if os.path.exists(file_path):
                 with open(file_path, "r") as f:
                     existing_data = json.load(f)
-                    # Preserve all existing data
+                    # Store the new version, url and previous_version
+                    new_version = app_info["version"]
+                    new_url = app_info["url"]
+                    previous_version = existing_data.get("version")
+                    
+                    # Preserve all existing data except version, url and previous_version
                     for key in existing_data:
-                        app_info[key] = existing_data[key]
-                    # Only update version, url and previous_version
-                    app_info["previous_version"] = existing_data.get("version")
-                    app_info["version"] = app_info["version"]
-                    app_info["url"] = app_info["url"]
+                        if key not in ["version", "url", "previous_version"]:
+                            app_info[key] = existing_data[key]
+                    
+                    # Update version, url and previous_version
+                    app_info["version"] = new_version
+                    app_info["url"] = new_url
+                    app_info["previous_version"] = previous_version
 
             with open(file_path, "w") as f:
                 json.dump(app_info, f, indent=2)
