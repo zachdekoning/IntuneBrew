@@ -6,6 +6,6 @@
   "bundleId": "app.zen-browser.zen",
   "homepage": "https://zen-browser.app/",
   "fileName": "zen.macos-universal.dmg",
-  "previous_version": "1.7.6b",
-  "changelog": "https://zen-browser.app/release-notes/"
+  "changelog": "https://zen-browser.app/release-notes/",
+  "previous_version": "1.7.6b"
 }

@@ -6,6 +6,6 @@
   "bundleId": "com.mothersruin.SuspiciousPackageApp",
   "homepage": "https://www.mothersruin.com/software/SuspiciousPackage/",
   "fileName": "SuspiciousPackage.dmg",
-  "previous_version": "4.5",
-  "changelog": "https://www.mothersruin.com/software/SuspiciousPackage/relnotes.html"
+  "changelog": "https://www.mothersruin.com/software/SuspiciousPackage/relnotes.html",
+  "previous_version": "4.5"
 }

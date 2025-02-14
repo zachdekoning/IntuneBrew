@@ -6,6 +6,6 @@
   "bundleId": "pro.betterdisplay.BetterDisplay",
   "homepage": "https://betterdisplay.pro/",
   "fileName": "BetterDisplay-v3.3.4.dmg",
-  "previous_version": "3.3.4",
-  "changelog": "https://github.com/waydabber/BetterDisplay/releases"
+  "changelog": "https://github.com/waydabber/BetterDisplay/releases",
+  "previous_version": "3.3.4"
 }

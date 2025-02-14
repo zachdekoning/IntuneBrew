@@ -6,6 +6,6 @@
   "bundleId": "com.cu4uc.mounty",
   "homepage": "https://mounty.app/",
   "fileName": "Mounty-2.4.dmg",
-  "previous_version": "2.4",
-  "changelog": "https://mounty.app/changelog/"
+  "changelog": "https://mounty.app/changelog/",
+  "previous_version": "2.4"
 }

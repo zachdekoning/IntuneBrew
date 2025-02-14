@@ -6,6 +6,6 @@
   "bundleId": "org.libreoffice.script",
   "homepage": "https://www.libreoffice.org/",
   "fileName": "LibreOffice_25.2.0_MacOS_aarch64.dmg",
-  "previous_version": "25.2.0",
-  "changelog": "https://www.libreoffice.org/download/release-notes/"
+  "changelog": "https://www.libreoffice.org/download/release-notes/",
+  "previous_version": "25.2.0"
 }

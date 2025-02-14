@@ -6,6 +6,6 @@
   "bundleId": "org.alacritty",
   "homepage": "https://github.com/alacritty/alacritty/",
   "fileName": "Alacritty-v0.15.0.dmg",
-  "previous_version": "0.15.0",
-  "changelog": "https://github.com/alacritty/alacritty/releases"
+  "changelog": "https://github.com/alacritty/alacritty/releases",
+  "previous_version": "0.15.0"
 }

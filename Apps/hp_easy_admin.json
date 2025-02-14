@@ -7,6 +7,6 @@
   "homepage": "https://support.hp.com/",
   "fileName": "hp_easy_admin_2.15.0.pkg",
   "type": "app",
-  "previous_version": "2.15.0",
-  "changelog": "https://support.hp.com/us-en/document/ish_5023611-5023632-16"
+  "changelog": "https://support.hp.com/us-en/document/ish_5023611-5023632-16",
+  "previous_version": "2.15.0"
 }

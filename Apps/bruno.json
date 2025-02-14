@@ -6,6 +6,6 @@
   "bundleId": "com.usebruno.app",
   "homepage": "https://www.usebruno.com/",
   "fileName": "bruno_1.38.1_arm64_mac.dmg",
-  "previous_version": "1.38.1",
-  "changelog": "https://github.com/usebruno/bruno/releases"
+  "changelog": "https://github.com/usebruno/bruno/releases",
+  "previous_version": "1.38.1"
 }

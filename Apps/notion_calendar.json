@@ -7,6 +7,6 @@
   "homepage": "https://www.notion.so/product/calendar",
   "fileName": "notion_calendar_1.127.0.pkg",
   "type": "app",
-  "previous_version": "1.127.0",
-  "changelog": "https://www.notion.so/help/calendar-changelog"
+  "changelog": "https://www.notion.so/help/calendar-changelog",
+  "previous_version": "1.127.0"
 }

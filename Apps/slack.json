@@ -6,6 +6,6 @@
   "bundleId": "com.tinyspeck.slackmacgap",
   "homepage": "https://slack.com/",
   "fileName": "Slack-4.42.117-macOS.dmg",
-  "previous_version": "4.42.117",
-  "changelog": "https://slack.com/changelog"
+  "changelog": "https://slack.com/changelog",
+  "previous_version": "4.42.117"
 }

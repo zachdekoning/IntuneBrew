@@ -6,6 +6,6 @@
   "bundleId": "com.tableausoftware.tableaudesktop",
   "homepage": "https://www.tableau.com/products/desktop",
   "fileName": "TableauDesktop-2024-3-3-arm64.dmg",
-  "previous_version": "2024.3.3",
-  "changelog": "https://www.tableau.com/support/releases/desktop"
+  "changelog": "https://www.tableau.com/support/releases/desktop",
+  "previous_version": "2024.3.3"
 }

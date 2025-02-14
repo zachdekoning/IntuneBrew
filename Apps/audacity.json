@@ -6,6 +6,6 @@
   "bundleId": "org.audacityteam.audacity",
   "homepage": "https://www.audacityteam.org/",
   "fileName": "audacity-macOS-3.7.1-arm64.dmg",
-  "previous_version": "3.7.1",
-  "changelog": "https://support.audacityteam.org/additional-resources/changelog"
+  "changelog": "https://support.audacityteam.org/additional-resources/changelog",
+  "previous_version": "3.7.1"
 }

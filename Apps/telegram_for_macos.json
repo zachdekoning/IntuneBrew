@@ -7,6 +7,6 @@
   "homepage": "https://macos.telegram.org/",
   "fileName": "telegram_for_macos_11.7.pkg",
   "type": "app",
-  "previous_version": "11.7",
-  "changelog": "https://macos.telegram.org/changelog"
+  "changelog": "https://macos.telegram.org/changelog",
+  "previous_version": "11.7"
 }

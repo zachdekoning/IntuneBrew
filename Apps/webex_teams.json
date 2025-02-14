@@ -1,11 +1,11 @@
 {
   "name": "Webex Teams",
   "description": "Video communication and virtual meeting platform",
-  "version": "45.1.0.31549",
+  "version": "45.2.0.31755",
   "url": "https://binaries.webex.com/webex-macos-apple-silicon/Webex.dmg",
   "bundleId": "com.cisco.webex",
   "homepage": "https://www.webex.com/",
   "fileName": "Webex.dmg",
-  "previous_version": "45.1.0.31549",
-  "changelog": "https://help.webex.com/en-us/article/mqkve8/Webex-App-|-Release-notes"
+  "changelog": "https://help.webex.com/en-us/article/mqkve8/Webex-App-|-Release-notes",
+  "previous_version": "45.1.0.31549"
 }

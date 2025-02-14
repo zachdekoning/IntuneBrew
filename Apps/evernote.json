@@ -6,6 +6,6 @@
   "bundleId": "com.evernote.Evernote",
   "homepage": "https://evernote.com/",
   "fileName": "Evernote-10.105.4-mac-ddl-stage-20240910164757-a2e60a8d876a07eded5d212fa56ba45214114ad0.dmg",
-  "previous_version": "10.105.4",
-  "changelog": "https://evernote.com/release-notes"
+  "changelog": "https://evernote.com/release-notes",
+  "previous_version": "10.105.4"
 }

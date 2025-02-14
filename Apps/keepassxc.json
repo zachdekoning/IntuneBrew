@@ -6,6 +6,6 @@
   "bundleId": "org.keepassxc.keepassxc",
   "homepage": "https://keepassxc.org/",
   "fileName": "KeePassXC-2.7.9-arm64.dmg",
-  "previous_version": "2.7.9",
-  "changelog": "https://github.com/keepassxreboot/keepassxc/releases"
+  "changelog": "https://github.com/keepassxreboot/keepassxc/releases",
+  "previous_version": "2.7.9"
 }

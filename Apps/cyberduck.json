@@ -7,6 +7,6 @@
   "homepage": "https://cyberduck.io/",
   "fileName": "cyberduck_9.1.2.pkg",
   "type": "app",
-  "previous_version": "9.1.2",
-  "changelog": "https://cyberduck.io/changelog/"
+  "changelog": "https://cyberduck.io/changelog/",
+  "previous_version": "9.1.2"
 }

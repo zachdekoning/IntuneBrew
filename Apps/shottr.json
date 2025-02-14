@@ -6,6 +6,6 @@
   "bundleId": "cc.ffitch.shottr",
   "homepage": "https://shottr.cc/",
   "fileName": "Shottr-1.8.1.dmg",
-  "previous_version": "1.8.1",
-  "changelog": "https://shottr.cc/#section-releasenotes"
+  "changelog": "https://shottr.cc/#section-releasenotes",
+  "previous_version": "1.8.1"
 }

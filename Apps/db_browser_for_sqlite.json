@@ -6,6 +6,6 @@
   "bundleId": "net.sourceforge.sqlitebrowser",
   "homepage": "https://sqlitebrowser.org/",
   "fileName": "DB.Browser.for.SQLite-v3.13.1.dmg",
-  "previous_version": "3.13.1",
-  "changelog": "https://sqlitebrowser.org/blog/"
+  "changelog": "https://sqlitebrowser.org/blog/",
+  "previous_version": "3.13.1"
 }

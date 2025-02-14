@@ -6,6 +6,6 @@
   "bundleId": "com.clipy-app.Clipy",
   "homepage": "https://clipy-app.com/",
   "fileName": "Clipy_1.2.1.dmg",
-  "previous_version": "1.2.1",
-  "changelog": "https://github.com/Clipy/Clipy/releases"
+  "changelog": "https://github.com/Clipy/Clipy/releases",
+  "previous_version": "1.2.1"
 }

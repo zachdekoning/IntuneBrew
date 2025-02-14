@@ -1,11 +1,11 @@
 {
   "name": "AnyDesk",
   "description": "Allows connection to a computer remotely",
-  "version": "8.1.4",
+  "version": "9.0.0",
   "url": "https://download.anydesk.com/anydesk.dmg",
   "bundleId": "com.philandro.anydesk",
   "homepage": "https://anydesk.com/",
   "fileName": "anydesk.dmg",
-  "previous_version": "8.1.4",
-  "changelog": "https://anydesk.com/en/changelog/mac-os"
+  "changelog": "https://anydesk.com/en/changelog/mac-os",
+  "previous_version": "8.1.4"
 }

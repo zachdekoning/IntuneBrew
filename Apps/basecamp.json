@@ -7,6 +7,6 @@
   "homepage": "https://basecamp.com/help/3,2.4.1/guides/apps/mac",
   "fileName": "basecamp_3.pkg",
   "type": "app",
-  "previous_version": "3",
-  "changelog": "https://basecamp.com/new"
+  "changelog": "https://basecamp.com/new",
+  "previous_version": "3"
 }

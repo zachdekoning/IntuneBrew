@@ -6,6 +6,6 @@
   "bundleId": "com.jgraph.drawio.desktop",
   "homepage": "https://www.diagrams.net/",
   "fileName": "draw.io-arm64-26.0.9.dmg",
-  "previous_version": "26.0.9",
-  "changelog": "https://github.com/jgraph/drawio-desktop/releases"
+  "changelog": "https://github.com/jgraph/drawio-desktop/releases",
+  "previous_version": "26.0.9"
 }

@@ -6,6 +6,6 @@
   "bundleId": "com.azulsystems.zulu.23",
   "homepage": "https://www.azul.com/downloads/",
   "fileName": "zulu23.32.11-ca-jdk23.0.2-macosx_aarch64.dmg",
-  "previous_version": "23.0.2",
-  "changelog": "https://docs.azul.com/core/release-notes"
+  "changelog": "https://docs.azul.com/core/release-notes",
+  "previous_version": "23.0.2"
 }
