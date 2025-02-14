@@ -5,7 +5,5 @@
   "url": "https://aka.ms/downloadremotehelpmacos",
   "bundleId": "com.microsoft.remotehelp",
   "homepage": "https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos",
-  "fileName": "RemoteHelp.pkg",
-  "previous_version": "1.0.2404171",
-  "changelog": "https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos"
+  "fileName": "RemoteHelp.pkg"
 }

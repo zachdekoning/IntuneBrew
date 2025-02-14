@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/caffeine_1.5.pkg",
   "bundleId": "net.domzilla.caffeine",
   "homepage": "https://www.caffeine-app.net/",
-  "fileName": "caffeine_1.5.pkg",
+  "fileName": "Caffeine_1.5.zip",
   "type": "app",
-  "previous_version": "1.5",
-  "changelog": "https://www.caffeine-app.net/"
+  "previous_version": "1.5"
 }

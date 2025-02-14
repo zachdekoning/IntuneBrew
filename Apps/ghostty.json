@@ -1,11 +1,10 @@
 {
   "name": "Ghostty",
   "description": "Terminal emulator that uses platform-native UI and GPU acceleration",
-  "version": "1.1.0",
-  "url": "https://release.files.ghostty.org/1.1.0/Ghostty.dmg",
+  "version": "1.1.2",
+  "url": "https://release.files.ghostty.org/1.1.2/Ghostty.dmg",
   "bundleId": "com.mitchellh.ghostty",
   "homepage": "https://ghostty.org/",
   "fileName": "Ghostty.dmg",
-  "previous_version": "1.1.0",
-  "changelog": "https://ghostty.org/docs/changelog"
+  "previous_version": "1.1.0"
 }

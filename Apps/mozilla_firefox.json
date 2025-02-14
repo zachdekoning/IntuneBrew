@@ -6,6 +6,5 @@
   "bundleId": "org.mozilla.firefox",
   "homepage": "https://www.mozilla.org/firefox/",
   "fileName": "Firefox%20135.0.dmg",
-  "previous_version": "135.0",
-  "changelog": "https://www.mozilla.org/en-US/firefox/releases/"
+  "previous_version": "135.0"
 }

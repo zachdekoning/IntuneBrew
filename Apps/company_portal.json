@@ -6,6 +6,5 @@
   "bundleId": "com.microsoft.CompanyPortal",
   "homepage": "https://docs.microsoft.com/en-us/mem/intune/user-help/enroll-your-device-in-intune-macos-cp",
   "fileName": "CompanyPortal_5.2412.0-Upgrade.pkg",
-  "previous_version": "5.2412.0",
-  "changelog": "https://docs.microsoft.com/en-us/mem/intune/user-help/enroll-your-device-in-intune-macos-cp"
+  "previous_version": "5.2412.0"
 }

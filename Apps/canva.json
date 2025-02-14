@@ -6,6 +6,5 @@
   "bundleId": "com.canva.CanvaDesktop",
   "homepage": "https://www.canva.com/",
   "fileName": "Canva-1.103.0-universal.dmg",
-  "previous_version": "1.103.0",
-  "changelog": "https://www.canva.com/help/canva-desktop-app/"
+  "previous_version": "1.103.0"
 }

@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/claude_0.7.9.pkg",
   "bundleId": "com.anthropic.claudefordesktop",
   "homepage": "https://claude.ai/download",
-  "fileName": "claude_0.7.9.pkg",
+  "fileName": "release-0.7.9-artifact-d08325fee2520711bb523b05571a3e83a9e3c4bc.zip",
   "type": "app",
-  "previous_version": "0.7.9",
-  "changelog": "https://docs.anthropic.com/en/release-notes/claude-apps"
+  "previous_version": "0.7.9"
 }

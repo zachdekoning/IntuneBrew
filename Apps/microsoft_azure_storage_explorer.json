@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/microsoft_azure_storage_explorer_1.37.0.pkg",
   "bundleId": "com.microsoft.StorageExplorer",
   "homepage": "https://azure.microsoft.com/en-us/features/storage-explorer/",
-  "fileName": "microsoft_azure_storage_explorer_1.37.0.pkg",
+  "fileName": "StorageExplorer-darwin-arm64.zip",
   "type": "app",
-  "previous_version": "1.37.0",
-  "changelog": "https://learn.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-relnotes"
+  "previous_version": "1.37.0"
 }

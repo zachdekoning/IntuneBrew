@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/cyberduck_9.1.2.pkg",
   "bundleId": "ch.sudo.cyberduck",
   "homepage": "https://cyberduck.io/",
-  "fileName": "cyberduck_9.1.2.pkg",
+  "fileName": "Cyberduck-9.1.2.42722.zip",
   "type": "app",
-  "previous_version": "9.1.2",
-  "changelog": "https://cyberduck.io/changelog/"
+  "previous_version": "9.1.2"
 }

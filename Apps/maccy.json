@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/maccy_2.3.0.pkg",
   "bundleId": "org.p0deje.Maccy",
   "homepage": "https://maccy.app/",
-  "fileName": "maccy_2.3.0.pkg",
+  "fileName": "Maccy.app.zip",
   "type": "app",
-  "previous_version": "2.3.0",
-  "changelog": "https://github.com/p0deje/Maccy/releases"
+  "previous_version": "2.3.0"
 }

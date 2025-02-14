@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/arc_1.81.0.pkg",
   "bundleId": "company.thebrowser.Browser",
   "homepage": "https://arc.net/",
-  "fileName": "arc_1.81.0.pkg",
+  "fileName": "Arc-1.81.0-58533.zip",
   "type": "app",
-  "previous_version": "1.81.0",
-  "changelog": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2025-Release-Notes"
+  "previous_version": "1.81.0"
 }

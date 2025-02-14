@@ -6,6 +6,5 @@
   "bundleId": "io.macfuse.installer.components.core",
   "homepage": "https://macfuse.github.io/",
   "fileName": "macfuse-4.8.3.dmg",
-  "previous_version": "4.8.3",
-  "changelog": "https://github.com/macfuse/macfuse/releases"
+  "previous_version": "4.8.3"
 }

@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/cursor_0.45.11.pkg",
   "bundleId": "com.todesktop.230313mzl4w4u92",
   "homepage": "https://www.cursor.com/",
-  "fileName": "cursor_0.45.11.pkg",
+  "fileName": "Cursor%200.45.11%20-%20Build%20250207y6nbaw5qc-arm64-mac.zip",
   "type": "app",
-  "previous_version": "0.45.11",
-  "changelog": "https://www.cursor.com/changelog"
+  "previous_version": "0.45.11"
 }

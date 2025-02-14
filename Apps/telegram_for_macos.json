@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/telegram_for_macos_11.7.pkg",
   "bundleId": "ru.keepcoder.Telegram",
   "homepage": "https://macos.telegram.org/",
-  "fileName": "telegram_for_macos_11.7.pkg",
+  "fileName": "Telegram-11.7.270736.app.zip",
   "type": "app",
-  "previous_version": "11.7",
-  "changelog": "https://macos.telegram.org/changelog"
+  "previous_version": "11.7"
 }

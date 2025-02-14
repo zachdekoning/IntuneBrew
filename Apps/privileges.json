@@ -6,6 +6,5 @@
   "bundleId": "corp.sap.privileges.pkg",
   "homepage": "https://github.com/SAP/macOS-enterprise-privileges",
   "fileName": "Privileges_2.1.0.pkg",
-  "previous_version": "2.1.0",
-  "changelog": "https://github.com/SAP/macOS-enterprise-privileges/releases"
+  "previous_version": "2.1.0"
 }

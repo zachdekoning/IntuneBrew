@@ -5,8 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/sublime_text_4192.pkg",
   "bundleId": "com.sublimetext.4",
   "homepage": "https://www.sublimetext.com/",
-  "fileName": "sublime_text_4192.pkg",
+  "fileName": "sublime_text_build_4192_mac.zip",
   "type": "app",
-  "previous_version": "4192",
-  "changelog": "https://www.sublimetext.com/docs/4.0/changes.html"
+  "previous_version": "4192"
 }
