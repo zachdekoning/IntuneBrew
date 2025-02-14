@@ -5,7 +5,8 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/flux_42.2.pkg",
   "bundleId": "org.herf.Flux",
   "homepage": "https://justgetflux.com/",
-  "fileName": "Flux42.2.zip",
+  "fileName": "flux_42.2.pkg",
   "type": "app",
-  "previous_version": "42.2"
+  "previous_version": "42.2",
+  "changelog": "https://justgetflux.com/news/pages/macversion/"
 }

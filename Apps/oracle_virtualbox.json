@@ -6,5 +6,6 @@
   "bundleId": "org.virtualbox.pkg.*",
   "homepage": "https://www.virtualbox.org/",
   "fileName": "VirtualBox-7.1.6-167084-macOSArm64.dmg",
-  "previous_version": "7.1.6"
+  "previous_version": "7.1.6",
+  "changelog": "https://www.virtualbox.org/wiki/Changelog"
 }

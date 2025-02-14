@@ -6,5 +6,6 @@
   "bundleId": "com.electron.realtimeboard",
   "homepage": "https://miro.com/",
   "fileName": "Install-Miro.dmg",
-  "previous_version": "0.10.80"
+  "previous_version": "0.10.80",
+  "changelog": "https://help.miro.com/hc/en-us/articles/360017572854-Desktop-app-release-notes"
 }

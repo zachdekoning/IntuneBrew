@@ -5,7 +5,8 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/adobe_acrobat_pro_dc_24.005.20400.pkg",
   "bundleId": "com.adobe.Acrobat.Pro",
   "homepage": "https://www.adobe.com/acrobat/pdf-reader.html",
-  "fileName": "Acrobat_DC_Web_WWMUI.dmg",
+  "fileName": "adobe_acrobat_pro_dc_24.005.20400.pkg",
   "type": "pkg_in_dmg",
-  "previous_version": "24.005.20400"
+  "previous_version": "24.005.20400",
+  "changelog": "https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html"
 }

@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/freemacsoft_appcleaner_3.6.8.pkg",
   "bundleId": "net.freemacsoft.AppCleaner",
   "homepage": "https://freemacsoft.net/appcleaner/",
-  "fileName": "AppCleaner_3.6.8.zip",
+  "fileName": "freemacsoft_appcleaner_3.6.8.pkg",
   "type": "app",
   "previous_version": "3.6.8"
 }

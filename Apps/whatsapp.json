@@ -5,7 +5,8 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/whatsapp_2.25.1.83.pkg",
   "bundleId": "net.whatsapp.WhatsApp",
   "homepage": "https://www.whatsapp.com/",
-  "fileName": "?version=2.25.1.83&extension=zip&configuration=Release&branch=relbranch",
+  "fileName": "whatsapp_2.25.1.83.pkg",
   "type": "app",
-  "previous_version": "2.25.1.83"
+  "previous_version": "2.25.1.83",
+  "changelog": "https://web.whatsapp.com/desktop/windows/release-notes"
 }

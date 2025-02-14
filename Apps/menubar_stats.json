@@ -5,7 +5,8 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/menubar_stats_3.9.pkg",
   "bundleId": "com.fabriceleyne.menubarstats",
   "homepage": "https://seense.com/menubarstats/",
-  "fileName": "mbs.zip",
+  "fileName": "menubar_stats_3.9.pkg",
   "type": "app",
-  "previous_version": "3.9"
+  "previous_version": "3.9",
+  "changelog": "https://seense.com/menubarstats/changelog/"
 }

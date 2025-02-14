@@ -6,5 +6,6 @@
   "bundleId": "com.google.santa",
   "homepage": "https://github.com/google/santa",
   "fileName": "santa-2024.9.dmg",
-  "previous_version": "2024.9"
+  "previous_version": "2024.9",
+  "changelog": "https://github.com/google/santa/releases"
 }

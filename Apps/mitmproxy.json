@@ -5,7 +5,8 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/mitmproxy_11.1.2.pkg",
   "bundleId": "org.mitmproxy",
   "homepage": "https://mitmproxy.org/",
-  "fileName": "mitmproxy-11.1.2-macos-arm64.tar.gz",
+  "fileName": "mitmproxy_11.1.2.pkg",
   "type": "app",
-  "previous_version": "11.1.2"
+  "previous_version": "11.1.2",
+  "changelog": "https://github.com/mitmproxy/mitmproxy/releases"
 }

@@ -5,7 +5,8 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/nomachine_8.16.1_2.pkg",
   "bundleId": "com.nomachine.nxdock",
   "homepage": "https://www.nomachine.com/",
-  "fileName": "nomachine_8.16.1_2.dmg",
+  "fileName": "nomachine_8.16.1_2.pkg",
   "type": "pkg_in_dmg",
-  "previous_version": "8.16.1_2"
+  "previous_version": "8.16.1_2",
+  "changelog": "https://www.nomachine.com/changelog"
 }

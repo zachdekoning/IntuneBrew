@@ -5,7 +5,8 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/acorn_8.0.1.pkg",
   "bundleId": "com.flyingmeat.Acorn8",
   "homepage": "https://flyingmeat.com/acorn/",
-  "fileName": "Acorn-8.0.1.zip",
+  "fileName": "acorn_8.0.1.pkg",
   "type": "app",
-  "previous_version": "8.0.1"
+  "previous_version": "8.0.1",
+  "changelog": "https://flyingmeat.com/acorn/releasenotes.html"
 }

@@ -6,5 +6,6 @@
   "bundleId": "com.aone.keka",
   "homepage": "https://www.keka.io/",
   "fileName": "Keka-1.4.7.dmg",
-  "previous_version": "1.4.7"
+  "previous_version": "1.4.7",
+  "changelog": "https://github.com/aonez/Keka/releases"
 }
