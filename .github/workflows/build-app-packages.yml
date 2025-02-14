@@ -101,6 +101,27 @@ jobs:
             
             echo "🔄 Processing $app_name..."
             
+            # Check if JSON file exists
+            if [ ! -f "$WORKSPACE_DIR/Apps/${app_name}.json" ]; then
+              echo "📝 JSON file for $app_name doesn't exist. Creating new JSON file..."
+              cat > "$WORKSPACE_DIR/Apps/${app_name}.json" << 'EOF'
+              {
+                "display_name": "APP_NAME",
+                "version": "0.0.0",
+                "url": "URL",
+                "type": "app",
+                "installer_type": "pkg",
+                "download_page": "",
+                "previous_version": ""
+              }
+          EOF
+              sed -i '' "s/APP_NAME/$app_name/g" "$WORKSPACE_DIR/Apps/${app_name}.json"
+              sed -i '' "s|URL|$url|g" "$WORKSPACE_DIR/Apps/${app_name}.json"
+              echo "✅ Created new JSON file for $app_name"
+            else
+              echo "📄 Using existing JSON file for $app_name"
+            fi
+            
             # Get version and type from JSON file
             version=$(jq -r '.version' "$WORKSPACE_DIR/Apps/${app_name}.json")
             app_type=$(jq -r '.type' "$WORKSPACE_DIR/Apps/${app_name}.json")
@@ -119,9 +140,11 @@ jobs:
             # Check if the exact version already exists
             if echo "$existing_versions" | grep -q "^${app_name}_${version}.pkg$"; then
               echo "Package ${app_name}_${version}.pkg already exists in Azure storage. Skipping..."
-              # Update the JSON file with Azure URL and correct filename
+              # Update the JSON file with Azure URL
               azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
-              jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+              # Get current version to store as previous_version
+              current_version=$(jq -r '.version' "$WORKSPACE_DIR/Apps/${app_name}.json")
+              jq --arg url "$azure_url" --arg version "$version" --arg prev_version "$current_version" '.url = $url | .version = $version | .previous_version = $prev_version' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
               continue
             fi
             
