@@ -1,0 +1,10 @@
+{
+  "name": "BusyCal",
+  "description": "Calendar software focusing on flexibility and reliability",
+  "version": "2024.4.3",
+  "url": "https://downloads.busymac.com/bcl-2024.4.3-2024-12-23-09-57.zip",
+  "bundleId": "com.busymac.busycal3.pkg",
+  "homepage": "https://busymac.com/busycal/index.html",
+  "fileName": "bcl-2024.4.3-2024-12-23-09-57.zip",
+  "type": "app"
+}

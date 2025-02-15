@@ -5,5 +5,6 @@
   "url": "https://github.com/dwarvesf/hidden/releases/download/v1.9/Hidden.Bar.1.9.dmg",
   "bundleId": "com.dwarvesv.minimalbar",
   "homepage": "https://github.com/dwarvesf/hidden/",
-  "fileName": "Hidden.Bar.1.9.dmg"
+  "fileName": "Hidden.Bar.1.9.dmg",
+  "previous_version": "1.9"
 }

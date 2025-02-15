@@ -5,5 +5,6 @@
   "url": "https://d1fqctmfkpkkcg.cloudfront.net/gifox/020605.00.dmg",
   "bundleId": "com.gifox.gifox2",
   "homepage": "https://gifox.io/",
-  "fileName": "020605.00.dmg"
+  "fileName": "020605.00.dmg",
+  "previous_version": "2.6.5"
 }

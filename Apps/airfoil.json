@@ -1,0 +1,10 @@
+{
+  "name": "Airfoil",
+  "description": "Sends audio from computer to outputs",
+  "version": "5.12.4",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/airfoil_5.12.4.pkg",
+  "bundleId": "com.rogueamoeba.Airfoil",
+  "homepage": "https://rogueamoeba.com/airfoil/mac/",
+  "fileName": "airfoil_5.12.4.pkg",
+  "type": "app"
+}
