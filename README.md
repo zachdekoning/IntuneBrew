@@ -20,9 +20,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                <p>
+                                                  <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-204-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-243-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -70,9 +70,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-15 11:21 UTC*
+*Last checked: 2025-02-15 15:12 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Apidog | 2.6.48 | 2.6.49 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -142,7 +144,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
 | ❌ Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.0 |
-| ❌ Apidog | 2.6.48 |
+| ❌ Apidog | 2.6.49 |
 | ❌ Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.82.1 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
@@ -157,8 +159,10 @@ Follow the interactive prompts to:
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.3 |
 | ❌ Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.4 |
+| ❌ BetterMouse | 1.6 |
 | ❌ BetterTouchTool | 5.199 |
 | ❌ BetterZip | 5.3.4 |
+| ❌ Beyond Compare | 5.0.5.30614 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.0 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | ❌ blip | 1.1.2 |
@@ -173,62 +177,98 @@ Follow the interactive prompts to:
 | ❌ BusyContacts | 2024.4.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.26.0 |
+| ❌ Calmly Writer | 2.0.56 |
+| ❌ Camtasia | 25.0.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.103.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
 | <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.036 |
+| ❌ Chrome Remote Desktop | 133.0.6943.7 |
+| ❌ Cisco Jabber | 20241220015538 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.7.9 |
 | ❌ CleanMyMac | 5.0.5 |
 | ❌ CLion | 2024.3.3 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
+| ❌ Cloudflare WARP | 2024.12.554.0 |
+| ❌ CodeEdit | 0.3.3 |
+| ❌ CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
+| ❌ Crystalfetch | 2.1.1 |
 | <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.11 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.2 |
 | ❌ DaisyDisk | 4.31 |
+| ❌ Dangerzone | 0.8.1 |
+| ❌ Dataflare | 1.9.3 |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.4 |
+| ❌ DataSpell | 2024.3.1.1 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
+| ❌ DbGate | 6.2.0 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.2.11691813 |
+| ❌ DevToys | 2.0.8.0 |
+| ❌ DevUtils | 1.17.0 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.336 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0 |
+| ❌ Doughnut | 2.0.1 |
+| ❌ Downie | 4.9.4 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.9 |
+| ❌ DrawBot | 3.131 |
+| ❌ DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 217.4.4417 |
+| ❌ DropDMG | 3.6.8 |
+| ❌ Dropshare | 5.58 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.125.1 |
+| ❌ EasyFind | 5.0.2 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2 |
+| ❌ Elephas | 10.12 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
 | <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.4.3719 |
+| ❌ Epic Games Launcher | 17.2.2 |
 | <img src='Logos/etcher.png' width='32' height='32'> Etcher | 1.19.25 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
 | <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.5 |
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 125.0.8 |
+| ❌ Fission | 2.8.8 |
 | <img src='Logos/flameshot.png' width='32' height='32'> Flameshot | 12.1.0 |
 | <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.6 |
 | <img src='Logos/freecad.png' width='32' height='32'> FreeCAD | 1.0.0 |
 | <img src='Logos/freemacsoft_appcleaner.png' width='32' height='32'> FreeMacSoft AppCleaner | 3.6.8 |
+| ❌ FSMonitor | 1.2 |
 | <img src='Logos/geany.png' width='32' height='32'> Geany | 2.0 |
+| ❌ Geekbench | 6.4.0 |
+| ❌ Geekbench AI | 1.2.0 |
+| ❌ Gemini | 2.9.11 |
 | <img src='Logos/ghostty.png' width='32' height='32'> Ghostty | 1.1.2 |
 | ❌ gifox | 2.6.5 |
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 2.10.38 |
 | <img src='Logos/git_credential_manager.png' width='32' height='32'> Git Credential Manager | 2.6.1 |
+| ❌ GitFinder | 1.7.10 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.16-ba997388 |
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.7.0 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.3 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.3 |
+| ❌ Google Ads Editor | 2.8 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 133.0.6943.99 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 104.0.4 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.106.1.0 |
+| ❌ Hammerspoon | 1.0.0 |
+| ❌ HazeOver | 1.9.4 |
 | ❌ Hidden Bar | 1.9 |
+| ❌ Home Assistant | 2024.12.2 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0 |
+| ❌ Hyper | 3.4.1 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
 | <img src='Logos/iina.png' width='32' height='32'> IINA | 1.3.5 |
 | <img src='Logos/imazing.png' width='32' height='32'> iMazing | 3.0.6 |
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2 |
 | ❌ Inkscape | 1.4.028868 |
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.1 |
+| ❌ Insta360 Studio | 5.5.0 |
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.3 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
 | <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
+| ❌ Jellyfin | 10.10.5 |
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2024.3.3 |
 | ❌ JetBrains Toolbox | 2.5.3 |
 | ❌ Jumpcut | 0.84 |
@@ -263,6 +303,7 @@ Follow the interactive prompts to:
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
 | <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1_2 |
 | ❌ NordVPN | 8.34.0 |
+| ❌ Nota Gyazo GIF | 9.7.2 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.5.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.127.0 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.1 |

@@ -1,0 +1,10 @@
+{
+  "name": "Hammerspoon",
+  "description": "Desktop automation application",
+  "version": "1.0.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/hammerspoon_1.0.0.pkg",
+  "bundleId": "org.hammerspoon.Hammerspoon",
+  "homepage": "https://www.hammerspoon.org/",
+  "fileName": "hammerspoon_1.0.0.pkg",
+  "type": "app"
+}

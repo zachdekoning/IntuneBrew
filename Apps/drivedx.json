@@ -1,0 +1,10 @@
+{
+  "name": "DriveDX",
+  "description": "Drive health diagnostic & monitoring tool",
+  "version": "1.12.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/drivedx_1.12.1.pkg",
+  "bundleId": null,
+  "homepage": "https://binaryfruit.com/drivedx",
+  "fileName": "drivedx_1.12.1.pkg",
+  "type": "app"
+}

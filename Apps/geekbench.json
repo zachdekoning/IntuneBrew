@@ -1,0 +1,10 @@
+{
+  "name": "Geekbench",
+  "description": "Tool to measure the computer system's performance",
+  "version": "6.4.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/geekbench_6.4.0.pkg",
+  "bundleId": null,
+  "homepage": "https://www.geekbench.com/",
+  "fileName": "geekbench_6.4.0.pkg",
+  "type": "app"
+}

@@ -5,5 +5,6 @@
   "url": "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.dmg",
   "bundleId": "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion",
   "homepage": "https://www.autodesk.com/products/fusion-360/overview",
-  "fileName": "Fusion%20Client%20Downloader.dmg"
+  "fileName": "Fusion%20Client%20Downloader.dmg",
+  "previous_version": "latest"
 }

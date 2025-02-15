@@ -1,0 +1,9 @@
+{
+  "name": "DrawBot",
+  "description": "Write Python scripts to generate two-dimensional graphics",
+  "version": "3.131",
+  "url": "https://github.com/typemytype/drawbot/releases/download/3.131/DrawBot.dmg",
+  "bundleId": null,
+  "homepage": "https://www.drawbot.com/",
+  "fileName": "DrawBot.dmg"
+}

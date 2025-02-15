@@ -5,5 +5,6 @@
   "url": "https://electron-app.any.do/Anydo-5.0.68-universal.dmg",
   "bundleId": null,
   "homepage": "https://www.any.do/",
-  "fileName": "Anydo-5.0.68-universal.dmg"
+  "fileName": "Anydo-5.0.68-universal.dmg",
+  "previous_version": "5.0.68"
 }

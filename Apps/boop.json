@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://boop.okat.best/",
   "fileName": "boop_1.4.0.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.4.0"
 }

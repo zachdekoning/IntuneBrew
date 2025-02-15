@@ -5,5 +5,6 @@
   "url": "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v3.13.680_Installer.dmg",
   "bundleId": null,
   "homepage": "https://www.boxcryptor.com/en/",
-  "fileName": "Boxcryptor_v3.13.680_Installer.dmg"
+  "fileName": "Boxcryptor_v3.13.680_Installer.dmg",
+  "previous_version": "3.13.680"
 }

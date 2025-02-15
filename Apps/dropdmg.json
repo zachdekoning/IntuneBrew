@@ -1,0 +1,9 @@
+{
+  "name": "DropDMG",
+  "description": "Create DMGs and other archives",
+  "version": "3.6.8",
+  "url": "https://c-command.com/downloads/DropDMG-3.6.8.dmg",
+  "bundleId": null,
+  "homepage": "https://c-command.com/dropdmg/",
+  "fileName": "DropDMG-3.6.8.dmg"
+}
