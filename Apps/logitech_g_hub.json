@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.logitechg.com/en-us/innovation/g-hub.html",
   "fileName": "logitech_g_hub_2025.1.673329.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2025.1.673329"
 }

@@ -209,6 +209,7 @@
     "raycast": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/raycast.json",
     "real_vnc_viewer": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/real_vnc_viewer.json",
     "rectangle": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/rectangle.json",
+    "remote_desktop_manager": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/remote_desktop_manager.json",
     "remotehelp": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/remotehelp.json",
     "rstudio": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/rstudio.json",
     "santa": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/santa.json",
