@@ -6,5 +6,6 @@
   "bundleId": "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion",
   "homepage": "https://www.autodesk.com/products/fusion-360/overview",
   "fileName": "Fusion%20Client%20Downloader.dmg",
+  "changelog": "https://help.autodesk.com/view/fusion360/ENU/",
   "previous_version": "latest"
 }
