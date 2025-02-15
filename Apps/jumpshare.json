@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://jumpshare.com/",
   "fileName": "jumpshare_3.3.13.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.3.13"
 }

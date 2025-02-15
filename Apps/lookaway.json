@@ -5,5 +5,6 @@
   "url": "https://github.com/mysticalbits/lookaway-releases/releases/download/1.10.2/LookAway.dmg",
   "bundleId": "com.mysticalbits.lookaway",
   "homepage": "https://lookaway.app/",
-  "fileName": "LookAway.dmg"
+  "fileName": "LookAway.dmg",
+  "previous_version": "1.10.2"
 }
