@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.geekbench.com/",
   "fileName": "geekbench_6.4.0.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "6.4.0"
 }

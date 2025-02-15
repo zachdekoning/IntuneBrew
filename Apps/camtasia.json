@@ -5,5 +5,6 @@
   "url": "https://download.techsmith.com/camtasiamac/releases/2500/Camtasia.dmg",
   "bundleId": null,
   "homepage": "https://www.techsmith.com/video-editor.html",
-  "fileName": "Camtasia.dmg"
+  "fileName": "Camtasia.dmg",
+  "previous_version": "25.0.0"
 }

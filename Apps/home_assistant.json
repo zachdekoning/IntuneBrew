@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://companion.home-assistant.io/",
   "fileName": "home_assistant_2024.12.2.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2024.12.2"
 }

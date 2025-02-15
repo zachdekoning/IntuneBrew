@@ -1,0 +1,9 @@
+{
+  "name": "Joplin",
+  "description": "Note taking and to-do application with synchronisation capabilities",
+  "version": "3.2.12",
+  "url": "https://github.com/laurent22/joplin/releases/download/v3.2.12/Joplin-3.2.12-arm64.DMG",
+  "bundleId": null,
+  "homepage": "https://joplinapp.org/",
+  "fileName": "Joplin-3.2.12-arm64.DMG"
+}

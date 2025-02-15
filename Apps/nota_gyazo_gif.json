@@ -6,5 +6,6 @@
   "bundleId": "com.gyazo.pkg",
   "homepage": "https://gyazo.com/",
   "fileName": "Gyazo-9.7.2.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "9.7.2"
 }

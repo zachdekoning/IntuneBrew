@@ -6,5 +6,6 @@
   "bundleId": "com.insta360.studio",
   "homepage": "https://www.insta360.com/",
   "fileName": "Insta360Studio_5.5.0_release_insta360(RC_build46)_20250120_121455_signed_1737346578362.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "5.5.0"
 }

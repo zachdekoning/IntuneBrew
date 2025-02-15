@@ -6,5 +6,6 @@
   "bundleId": "org.hammerspoon.Hammerspoon",
   "homepage": "https://www.hammerspoon.org/",
   "fileName": "hammerspoon_1.0.0.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.0.0"
 }

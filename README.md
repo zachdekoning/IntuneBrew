@@ -20,9 +20,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                  <p>
+                                                    <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-243-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-251-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -70,11 +70,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-15 15:12 UTC*
+*Last checked: 2025-02-15 16:55 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Apidog | 2.6.48 | 2.6.49 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -271,18 +269,26 @@ Follow the interactive prompts to:
 | ❌ Jellyfin | 10.10.5 |
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2024.3.3 |
 | ❌ JetBrains Toolbox | 2.5.3 |
+| ❌ Joplin | 3.2.12 |
 | ❌ Jumpcut | 0.84 |
+| ❌ Jumpshare | 3.3.13 |
 | <img src='Logos/karabiner_elements.png' width='32' height='32'> Karabiner Elements | 15.3.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.9 |
 | <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.1.0 |
 | <img src='Logos/keka.png' width='32' height='32'> Keka | 1.4.7 |
+| ❌ Keybase | 6.5.0 |
+| ❌ KeyClu | 0.29 |
 | <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.39.1 |
+| ❌ Klokki | 1.3.7 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.54.6 |
 | ❌ Krita | 5.2.9 |
+| ❌ LangGraph Studio | 0.0.36 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.0 |
 | ❌ Little Snitch | 6.2 |
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.9 |
+| ❌ Logitech G HUB | 2025.1.673329 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.86.669369 |
+| ❌ LookAway | 1.10.2 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.8.3 |
 | <img src='Logos/mactex.png' width='32' height='32'> MacTeX | 2024.0312 |

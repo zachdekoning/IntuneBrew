@@ -1,0 +1,10 @@
+{
+  "name": "Keybase",
+  "description": "End-to-end encryption software",
+  "version": "6.5.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/keybase_6.5.0.pkg",
+  "bundleId": "keybase.Helper",
+  "homepage": "https://keybase.io/",
+  "fileName": "keybase_6.5.0.pkg",
+  "type": "app"
+}

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://macpaw.com/gemini",
   "fileName": "gemini_2.9.11.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.9.11"
 }
