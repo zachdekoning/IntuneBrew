@@ -58,7 +58,15 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/daisydisk.json",
     "https://formulae.brew.sh/api/cask/cleanmymac.json",
     "https://formulae.brew.sh/api/cask/bettertouchtool.json",
-    "https://formulae.brew.sh/api/cask/battle-net.json"
+    "https://formulae.brew.sh/api/cask/battle-net.json",
+    "https://formulae.brew.sh/api/cask/betterzip.json",
+    "https://formulae.brew.sh/api/cask/blip.json",
+    "https://formulae.brew.sh/api/cask/boop.json",
+    "https://formulae.brew.sh/api/cask/busycal.json",
+    "https://formulae.brew.sh/api/cask/busycontacts.json",
+    "https://formulae.brew.sh/api/cask/beeper.json",
+    "https://formulae.brew.sh/api/cask/airfoil.json",
+    "https://formulae.brew.sh/api/cask/angry-ip-scanner.json"
 ]
 
 # DMG
@@ -192,7 +200,20 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/hiddenbar.json",
     "https://formulae.brew.sh/api/cask/steam.json",
     "https://formulae.brew.sh/api/cask/gifox.json",
-    "https://formulae.brew.sh/api/cask/inkscape.json"
+    "https://formulae.brew.sh/api/cask/inkscape.json",
+    "https://formulae.brew.sh/api/cask/boltai.json",
+    "https://formulae.brew.sh/api/cask/boxcryptor.json",
+    "https://formulae.brew.sh/api/cask/breaktimer.json",
+    "https://formulae.brew.sh/api/cask/anydo.json",
+    "https://formulae.brew.sh/api/cask/apidog.json",
+    "https://formulae.brew.sh/api/cask/apparency.json",
+    "https://formulae.brew.sh/api/cask/autodesk-fusion.json",
+    "https://formulae.brew.sh/api/cask/badgeify.json",
+    "https://formulae.brew.sh/api/cask/airtable.json",
+    "https://formulae.brew.sh/api/cask/airy.json",
+    "https://formulae.brew.sh/api/cask/amadine.json",
+    "https://formulae.brew.sh/api/cask/amazon-chime.json",
+    "https://formulae.brew.sh/api/cask/amazon-q.json"
 ]
 
 # PKG in DMG URLs
