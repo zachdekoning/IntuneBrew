@@ -202,8 +202,12 @@ pkg_in_dmg_urls = [
     "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
     "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
     "https://formulae.brew.sh/api/cask/openvpn-connect.json",
-    "https://formulae.brew.sh/api/cask/nordvpn.json",
     "https://formulae.brew.sh/api/cask/tailscale.json"
+]
+
+# PKG in PKG URLs
+pkg_in_pkg_urls = [
+    "https://formulae.brew.sh/api/cask/nordvpn.json"
 ]
 
 # Custom scraper scripts to run
@@ -228,7 +232,7 @@ def find_bundle_id(json_string):
 
     return None
 
-def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False):
+def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, is_pkg_in_pkg=False):
     response = requests.get(json_url)
     response.raise_for_status()
     data = response.json()
@@ -253,6 +257,8 @@ def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False):
         app_info["type"] = "app"
     elif is_pkg_in_dmg:
         app_info["type"] = "pkg_in_dmg"
+    elif is_pkg_in_pkg:
+        app_info["type"] = "pkg_in_pkg"
     
     return app_info
 
@@ -520,6 +526,43 @@ def main():
             print(f"Saved app information for {display_name} to {file_path}")
         except Exception as e:
             print(f"Error processing {url}: {str(e)}")
+
+    # Process pkg_in_pkg apps
+    for url in pkg_in_pkg_urls:
+        try:
+            print(f"\nProcessing PKG in PKG app URL: {url}")
+            app_info = get_homebrew_app_info(url, is_pkg_in_pkg=True)
+            display_name = app_info['name']
+            supported_apps.append(display_name)
+            file_name = f"{sanitize_filename(display_name)}.json"
+            file_path = os.path.join(apps_folder, file_name)
+
+            # For existing files, only update version, url and previous_version
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    # Store the new version, url and previous_version
+                    new_version = app_info["version"]
+                    new_url = app_info["url"]
+                    previous_version = existing_data.get("version")
+                    
+                    # Preserve all existing data except version, url and previous_version
+                    for key in existing_data:
+                        if key not in ["version", "url", "previous_version"]:
+                            app_info[key] = existing_data[key]
+                    
+                    # Update version, url and previous_version
+                    app_info["version"] = new_version
+                    app_info["url"] = new_url
+                    app_info["previous_version"] = previous_version
+
+            with open(file_path, "w") as f:
+                json.dump(app_info, f, indent=2)
+
+            apps_info.append(app_info)
+            print(f"Saved app information for {display_name} to {file_path}")
+        except Exception as e:
+            print(f"Error processing PKG in PKG app {url}: {str(e)}")
 
     # Process pkg_in_dmg apps
     for url in pkg_in_dmg_urls:

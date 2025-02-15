@@ -128,9 +128,9 @@ jobs:
             echo "📦 Version: $version"
             echo "🏷️ Type: $app_type"
             
-            # Skip if not an app or pkg_in_dmg type
-            if [ "$app_type" != "app" ] && [ "$app_type" != "pkg_in_dmg" ]; then
-              echo "⏭️ Skipping URL update for $app_name as it's not of type 'app' or 'pkg_in_dmg'"
+            # Skip if not a supported type
+            if [ "$app_type" != "app" ] && [ "$app_type" != "pkg_in_dmg" ] && [ "$app_type" != "pkg_in_pkg" ]; then
+              echo "⏭️ Skipping URL update for $app_name as it's not of type 'app', 'pkg_in_dmg', or 'pkg_in_pkg'"
               continue
             fi
             
@@ -148,7 +148,90 @@ jobs:
               continue
             fi
             
-            if [ "$app_type" = "pkg_in_dmg" ]; then
+            if [ "$app_type" = "pkg_in_pkg" ]; then
+              echo "🔍 Processing PKG in PKG for $app_name..."
+              echo "📥 Downloading PKG from: $url"
+              
+              # Set download path
+              download_path="$HOME/Desktop/${app_name}"
+              
+              # Download PKG
+              curl -L -o "${download_path}.pkg" "$url"
+              if [ $? -eq 0 ]; then
+                echo "✅ PKG download successful"
+                ls -lh "${download_path}.pkg"
+                
+                # Create temporary directory for extraction
+                echo "📂 Creating temporary directory for extraction"
+                temp_dir="${download_path}_extracted"
+                mkdir -p "$temp_dir"
+                
+                # Extract PKG
+                echo "🔓 Extracting outer PKG..."
+                pkgutil --expand "${download_path}.pkg" "$temp_dir"
+                
+                if [ $? -eq 0 ]; then
+                  echo "✅ PKG extraction successful"
+                  echo "📁 Extracted contents:"
+                  ls -R "$temp_dir"
+                  
+                  # Find inner PKG file
+                  echo "🔍 Searching for inner PKG file..."
+                  inner_pkg=$(find "$temp_dir" -name "*.pkg" -print -quit)
+                  
+                  if [ -n "$inner_pkg" ]; then
+                    echo "✅ Found inner PKG file: $inner_pkg"
+                    echo "📦 Package size: $(ls -lh "$inner_pkg" | awk '{print $5}')"
+                    
+                    # Copy inner PKG file with version in filename
+                    echo "📋 Copying inner PKG file to ${app_name}_${version}.pkg"
+                    cp "$inner_pkg" "${app_name}_${version}.pkg"
+                    
+                    # Upload to Azure
+                    echo "☁️ Uploading to Azure Blob Storage..."
+                    az storage blob upload \
+                      --container-name pkg \
+                      --file "${app_name}_${version}.pkg" \
+                      --name "${app_name}_${version}.pkg" \
+                      --overwrite true
+                    
+                    if [ $? -eq 0 ]; then
+                      echo "✅ Upload successful"
+                      
+                      # Update JSON with Azure URL
+                      echo "📝 Updating JSON file with new Azure URL..."
+                      azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
+                      jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+                      
+                      if [ $? -eq 0 ]; then
+                        echo "✅ JSON file updated successfully"
+                        echo "🔗 New URL: $azure_url"
+                      else
+                        echo "❌ Failed to update JSON file"
+                      fi
+                    else
+                      echo "❌ Failed to upload to Azure"
+                    fi
+                  else
+                    echo "❌ No inner PKG file found in extracted contents"
+                    echo "📁 Extracted contents:"
+                    ls -R "$temp_dir"
+                  fi
+                else
+                  echo "❌ Failed to extract PKG"
+                fi
+                
+                # Cleanup
+                echo "🧹 Cleaning up..."
+                echo "🗑️ Removing temporary files..."
+                rm -f "${download_path}.pkg"
+                rm -rf "$temp_dir"
+                echo "✨ Cleanup complete"
+              else
+                echo "❌ Failed to download PKG"
+              fi
+              
+            elif [ "$app_type" = "pkg_in_dmg" ]; then
               echo "🔍 Processing PKG in DMG for $app_name..."
               echo "📥 Downloading DMG from: $url"
               
