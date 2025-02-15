@@ -257,7 +257,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/klokki.json",
     "https://formulae.brew.sh/api/cask/langgraph-studio.json",
     "https://formulae.brew.sh/api/cask/lookaway.json",
-    "https://formulae.brew.sh/api/cask/joplin.json"
+    "https://formulae.brew.sh/api/cask/joplin.json",
+    "https://formulae.brew.sh/api/cask/remote-desktop-manager.json"
 ]
 
 # PKG in DMG URLs
