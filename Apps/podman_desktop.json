@@ -7,5 +7,5 @@
   "homepage": "https://podman-desktop.io/",
   "fileName": "podman-desktop-1.16.1-arm64.dmg",
   "changelog": "https://github.com/containers/podman-desktop/releases",
-  "previous_version": "1.16.1"
+  "previous_version": "1.16.2"
 }
