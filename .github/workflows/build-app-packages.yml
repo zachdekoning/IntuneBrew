@@ -152,6 +152,9 @@ jobs:
               echo "🔍 Processing PKG in DMG for $app_name..."
               echo "📥 Downloading DMG from: $url"
               
+              # Set download path
+              download_path="$HOME/Desktop/${app_name}"
+              
               # Download DMG
               curl -L -o "${download_path}.dmg" "$url"
               if [ $? -eq 0 ]; then
