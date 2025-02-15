@@ -7,7 +7,7 @@ from pathlib import Path
 import subprocess
 from datetime import datetime
 
-# Array of Homebrew cask JSON URLs
+# zip, tar etc
 app_urls = [
     "https://formulae.brew.sh/api/cask/visual-studio-code.json",
     "https://formulae.brew.sh/api/cask/microsoft-azure-storage-explorer.json",
@@ -51,9 +51,17 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/logi-options+.json",
     "https://formulae.brew.sh/api/cask/mountain-duck.json",
     "https://formulae.brew.sh/api/cask/acorn.json",
-    "https://formulae.brew.sh/api/cask/menubar-stats.json"
+    "https://formulae.brew.sh/api/cask/menubar-stats.json",
+    "https://formulae.brew.sh/api/formula/neovim.json",
+    "https://formulae.brew.sh/api/cask/sketch.json",
+    "https://formulae.brew.sh/api/cask/jumpcut.json",
+    "https://formulae.brew.sh/api/cask/daisydisk.json",
+    "https://formulae.brew.sh/api/cask/cleanmymac.json",
+    "https://formulae.brew.sh/api/cask/bettertouchtool.json",
+    "https://formulae.brew.sh/api/cask/battle-net.json"
 ]
 
+# DMG
 homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/google-chrome.json",
     "https://formulae.brew.sh/api/cask/zoom.json",
@@ -170,16 +178,32 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/lm-studio.json",
     "https://formulae.brew.sh/api/cask/privileges.json",
     "https://formulae.brew.sh/api/cask/zen-browser.json",
-    "https://formulae.brew.sh/api/cask/sync.json"
+    "https://formulae.brew.sh/api/cask/sync.json",
+    "https://formulae.brew.sh/api/cask/opera.json",
+    "https://formulae.brew.sh/api/cask/libreoffice.json",
+    "https://formulae.brew.sh/api/cask/protonvpn.json",
+    "https://formulae.brew.sh/api/cask/little-snitch.json",
+    "https://formulae.brew.sh/api/cask/micro-snitch.json",
+    "https://formulae.brew.sh/api/cask/jetbrains-toolbox.json",
+    "https://formulae.brew.sh/api/cask/clion.json",
+    "https://formulae.brew.sh/api/cask/krita.json",
+    "https://formulae.brew.sh/api/cask/textsniper.json",
+    "https://formulae.brew.sh/api/cask/onyx.json",
+    "https://formulae.brew.sh/api/cask/hiddenbar.json",
+    "https://formulae.brew.sh/api/cask/steam.json",
+    "https://formulae.brew.sh/api/cask/gifox.json",
+    "https://formulae.brew.sh/api/cask/inkscape.json"
 ]
 
-# Add new array for apps with PKG inside DMG
+# PKG in DMG URLs
 pkg_in_dmg_urls = [
     "https://formulae.brew.sh/api/cask/jabra-direct.json",
     "https://formulae.brew.sh/api/cask/nomachine.json",
     "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
     "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
-    "https://formulae.brew.sh/api/cask/openvpn-connect.json"    
+    "https://formulae.brew.sh/api/cask/openvpn-connect.json",
+    "https://formulae.brew.sh/api/cask/nordvpn.json",
+    "https://formulae.brew.sh/api/cask/tailscale.json"
 ]
 
 # Custom scraper scripts to run

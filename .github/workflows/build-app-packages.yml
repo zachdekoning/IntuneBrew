@@ -243,19 +243,44 @@ jobs:
                 unzip -q -d "${app_name}_extracted" "${download_path}.zip"
                 rm "${download_path}.zip"
               elif [[ "$url" == *".tar.xz" ]]; then
+                echo "📦 Processing tar.xz archive for $app_name..."
                 curl -L -o "${download_path}.tar.xz" "$url"
                 cd "$HOME/Desktop"
                 # Extract tar.xz
+                echo "📂 Creating extraction directory..."
                 mkdir -p "${app_name}_extracted"
+                echo "🔓 Extracting tar.xz archive..."
                 tar -xf "${download_path}.tar.xz" -C "${app_name}_extracted"
+                echo "🗑️ Cleaning up downloaded archive..."
                 rm "${download_path}.tar.xz"
+                echo "📁 Extracted contents:"
+                ls -R "${app_name}_extracted"
+              elif [[ "$url" == *".tar.bz2" ]]; then
+                echo "📦 Processing tar.bz2 archive for $app_name..."
+                curl -L -o "${download_path}.tar.bz2" "$url"
+                cd "$HOME/Desktop"
+                # Extract tar.bz2
+                echo "📂 Creating extraction directory..."
+                mkdir -p "${app_name}_extracted"
+                echo "🔓 Extracting tar.bz2 archive..."
+                tar -xjf "${download_path}.tar.bz2" -C "${app_name}_extracted"
+                echo "🗑️ Cleaning up downloaded archive..."
+                rm "${download_path}.tar.bz2"
+                echo "📁 Extracted contents:"
+                ls -R "${app_name}_extracted"
               elif [[ "$url" == *".tar.gz" ]]; then
+                echo "📦 Processing tar.gz archive for $app_name..."
                 curl -L -o "${download_path}.tar.gz" "$url"
                 cd "$HOME/Desktop"
                 # Extract tar.gz
+                echo "📂 Creating extraction directory..."
                 mkdir -p "${app_name}_extracted"
+                echo "🔓 Extracting tar.gz archive..."
                 tar -xzf "${download_path}.tar.gz" -C "${app_name}_extracted"
+                echo "🗑️ Cleaning up downloaded archive..."
                 rm "${download_path}.tar.gz"
+                echo "📁 Extracted contents:"
+                ls -R "${app_name}_extracted"
               else
                 curl -L -o "${download_path}.zip" "$url"
                 cd "$HOME/Desktop"
@@ -264,14 +289,18 @@ jobs:
                 rm "${download_path}.zip"
               fi
               
-              # Find .app file, excluding __MACOSX directory
+              # Find .app file recursively, excluding __MACOSX directory
+              echo "🔍 Searching for .app file recursively..."
               app_file=$(find "${app_name}_extracted" -type d -name "*.app" ! -path "*/__MACOSX/*" -print -quit)
               if [ -z "$app_file" ]; then
-                echo "No .app file found for $app_name"
+                echo "❌ No .app file found for $app_name"
+                echo "📁 Extracted contents:"
+                ls -R "${app_name}_extracted"
                 cd "$WORKSPACE_DIR"
                 rm -rf "${app_name}_extracted"
                 continue
               fi
+              echo "✅ Found .app file: $app_file"
               
               # Build PKG with version in filename
               echo "Building PKG for $app_name version $version..."
