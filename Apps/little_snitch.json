@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.obdev.at/products/littlesnitch/index.html",
   "fileName": "LittleSnitch-6.2.dmg",
+  "changelog": "https://www.obdev.at/products/littlesnitch/releasenotes.html",
   "previous_version": "6.2"
 }

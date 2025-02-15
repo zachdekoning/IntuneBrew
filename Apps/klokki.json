@@ -6,5 +6,6 @@
   "bundleId": "com.klokki-launcher",
   "homepage": "https://klokki.com/",
   "fileName": "Klokki.dmg",
+  "changelog": "https://klokki.com/changelog",
   "previous_version": "1.3.7"
 }

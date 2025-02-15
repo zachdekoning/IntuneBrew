@@ -6,5 +6,6 @@
   "bundleId": "com.tomjwatson.breaktimer",
   "homepage": "https://breaktimer.app/",
   "fileName": "BreakTimer.dmg",
+  "changelog": "https://github.com/tom-james-watson/breaktimer-app/releases",
   "previous_version": "1.3.2"
 }

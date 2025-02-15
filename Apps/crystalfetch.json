@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/TuringSoftware/CrystalFetch",
   "fileName": "CrystalFetch.dmg",
+  "changelog": "https://github.com/TuringSoftware/CrystalFetch/releases",
   "previous_version": "2.1.1"
 }

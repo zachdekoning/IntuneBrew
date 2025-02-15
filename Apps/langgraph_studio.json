@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://studio.langchain.com/",
   "fileName": "LangGraph-Studio-0.0.36-universal.dmg",
+  "changelog": "https://github.com/langchain-ai/langgraph-studio/releases",
   "previous_version": "0.0.36"
 }

@@ -7,5 +7,6 @@
   "homepage": "https://blip.net/",
   "fileName": "blip_1.1.2.pkg",
   "type": "app",
+  "changelog": "https://blip.net/changelog/",
   "previous_version": "1.1.2"
 }

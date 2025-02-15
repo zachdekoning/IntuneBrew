@@ -6,5 +6,6 @@
   "bundleId": "com.mysticalbits.lookaway",
   "homepage": "https://lookaway.app/",
   "fileName": "LookAway.dmg",
+  "changelog": "https://github.com/mysticalbits/lookaway-releases/releases",
   "previous_version": "1.10.2"
 }

@@ -6,5 +6,6 @@
   "bundleId": "com.pointum.hazeover",
   "homepage": "https://hazeover.com/",
   "fileName": "HazeOver.dmg",
+  "changelog": "https://hazeover.com/notes.html",
   "previous_version": "1.9.4"
 }

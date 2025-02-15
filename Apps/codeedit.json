@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.codeedit.app/",
   "fileName": "CodeEdit.dmg",
+  "changelog": "https://github.com/CodeEditApp/CodeEdit/releases",
   "previous_version": "0.3.3"
 }

@@ -7,5 +7,6 @@
   "homepage": "https://coderunnerapp.com/",
   "fileName": "coderunner_4.4.1.pkg",
   "type": "app",
+  "changelog": "https://coderunnerapp.com/changelog",
   "previous_version": "4.4.1"
 }

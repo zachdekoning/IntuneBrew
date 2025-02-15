@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.jetbrains.com/clion/",
   "fileName": "CLion-2024.3.3-aarch64.dmg",
+  "changelog": "https://www.jetbrains.com/clion/whatsnew/",
   "previous_version": "2024.3.3"
 }

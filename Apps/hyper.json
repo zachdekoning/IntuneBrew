@@ -7,5 +7,6 @@
   "homepage": "https://hyper.is/",
   "fileName": "hyper_3.4.1.pkg",
   "type": "app",
+  "changelog": "https://github.com/vercel/hyper/releases",
   "previous_version": "3.4.1"
 }

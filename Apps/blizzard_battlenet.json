@@ -7,5 +7,6 @@
   "homepage": "https://www.battle.net/",
   "fileName": "Blizzard Battle.net",
   "type": "app",
+  "changelog": "https://news.blizzard.com/en-us/battle-net/",
   "previous_version": "1.18.10.3141"
 }

@@ -7,5 +7,6 @@
   "homepage": "https://macitbetter.com/",
   "fileName": "betterzip_5.3.4.pkg",
   "type": "app",
+  "changelog": "https://macitbetter.com/BetterZip-Release-Notes/",
   "previous_version": "5.3.4"
 }

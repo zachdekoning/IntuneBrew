@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://aws.amazon.com/q/developer/",
   "fileName": "Amazon%20Q.dmg",
+  "changelog": "https://docs.aws.amazon.com/amazonq/latest/desktop-app-release-notes/release-notes.html",
   "previous_version": "1.6.1"
 }

@@ -6,5 +6,6 @@
   "bundleId": "com.eltima.Airy",
   "homepage": "https://www.airy-youtube-downloader.com/mac/",
   "fileName": "airy.dmg",
+  "changelog": "https://www.airy-youtube-downloader.com/mac/whats-new/",
   "previous_version": "3.29.2"
 }

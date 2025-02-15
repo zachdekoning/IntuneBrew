@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://c-command.com/dropdmg/",
   "fileName": "DropDMG-3.6.8.dmg",
+  "changelog": "https://c-command.com/dropdmg/help/change-log",
   "previous_version": "3.6.8"
 }

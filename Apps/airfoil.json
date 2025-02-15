@@ -7,5 +7,6 @@
   "homepage": "https://rogueamoeba.com/airfoil/mac/",
   "fileName": "airfoil_5.12.4.pkg",
   "type": "app",
+  "changelog": "https://rogueamoeba.com/airfoil/mac/releasenotes.php",
   "previous_version": "5.12.4"
 }
