@@ -215,7 +215,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/jetbrains-toolbox.json",
     "https://formulae.brew.sh/api/cask/clion.json",
     "https://formulae.brew.sh/api/cask/krita.json",
-    "https://formulae.brew.sh/api/cask/textsniper.json",
     "https://formulae.brew.sh/api/cask/onyx.json",
     "https://formulae.brew.sh/api/cask/hiddenbar.json",
     "https://formulae.brew.sh/api/cask/steam.json",
