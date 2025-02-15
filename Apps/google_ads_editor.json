@@ -1,0 +1,9 @@
+{
+  "name": "Google Ads Editor",
+  "description": "Managing your campaigns",
+  "version": "2.8",
+  "url": "https://dl.google.com/adwords_editor/Google_AdWords_Editor.dmg",
+  "bundleId": null,
+  "homepage": "https://ads.google.com/home/tools/ads-editor/",
+  "fileName": "Google_AdWords_Editor.dmg"
+}

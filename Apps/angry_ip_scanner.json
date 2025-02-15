@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://angryip.org/",
   "fileName": "angry_ip_scanner_3.9.1.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.9.1"
 }

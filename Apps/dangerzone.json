@@ -1,0 +1,9 @@
+{
+  "name": "Dangerzone",
+  "description": "Convert potentially dangerous PDFs or Office documents into safe PDFs",
+  "version": "0.8.1",
+  "url": "https://github.com/freedomofpress/dangerzone/releases/download/v0.8.1/Dangerzone-0.8.1-arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://dangerzone.rocks/",
+  "fileName": "Dangerzone-0.8.1-arm64.dmg"
+}

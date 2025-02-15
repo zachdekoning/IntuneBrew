@@ -6,5 +6,6 @@
   "bundleId": "com.busymac.busycontacts.pkg",
   "homepage": "https://www.busymac.com/busycontacts/index.html",
   "fileName": "bct-2024.4.1.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2024.4.1"
 }

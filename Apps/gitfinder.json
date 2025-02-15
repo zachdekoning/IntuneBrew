@@ -1,0 +1,9 @@
+{
+  "name": "GitFinder",
+  "description": "Git client with Finder integration",
+  "version": "1.7.10",
+  "url": "https://gitfinder.com/updates/GitFinder1_7_10.dmg",
+  "bundleId": "ag.zigz.GitFinder",
+  "homepage": "https://gitfinder.com/",
+  "fileName": "GitFinder1_7_10.dmg"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Fission",
+  "description": "Audio editor",
+  "version": "2.8.8",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/fission_2.8.8.pkg",
+  "bundleId": "com.rogueamoeba.Fission",
+  "homepage": "https://rogueamoeba.com/fission/",
+  "fileName": "fission_2.8.8.pkg",
+  "type": "app"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Jellyfin",
+  "description": "Media system",
+  "version": "10.10.5",
+  "url": "https://repo.jellyfin.org/files/server/macos/stable/v10.10.5/arm64/jellyfin_10.10.5-arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://jellyfin.org/",
+  "fileName": "jellyfin_10.10.5-arm64.dmg"
+}

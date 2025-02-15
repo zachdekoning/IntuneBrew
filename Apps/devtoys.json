@@ -1,0 +1,10 @@
+{
+  "name": "DevToys",
+  "description": "Utilities designed to make common development tasks easier",
+  "version": "2.0.8.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/devtoys_2.0.8.0.pkg",
+  "bundleId": null,
+  "homepage": "https://github.com/DevToys-app/DevToys",
+  "fileName": "devtoys_2.0.8.0.pkg",
+  "type": "app"
+}

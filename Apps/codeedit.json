@@ -1,0 +1,9 @@
+{
+  "name": "CodeEdit",
+  "description": "Code editor",
+  "version": "0.3.3",
+  "url": "https://github.com/CodeEditApp/CodeEdit/releases/download/v0.3.3/CodeEdit.dmg",
+  "bundleId": null,
+  "homepage": "https://www.codeedit.app/",
+  "fileName": "CodeEdit.dmg"
+}

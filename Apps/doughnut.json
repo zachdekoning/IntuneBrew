@@ -1,0 +1,9 @@
+{
+  "name": "Doughnut",
+  "description": "Podcast client",
+  "version": "2.0.1",
+  "url": "https://github.com/dyerc/Doughnut/releases/download/v2.0.1/Doughnut-2.0.1.dmg",
+  "bundleId": null,
+  "homepage": "https://github.com/dyerc/Doughnut/",
+  "fileName": "Doughnut-2.0.1.dmg"
+}
