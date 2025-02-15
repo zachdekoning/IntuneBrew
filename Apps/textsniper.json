@@ -1,0 +1,9 @@
+{
+  "name": "TextSniper",
+  "description": "Extract text from images and other digital documents",
+  "version": "1.11",
+  "url": "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper1.11.dmg",
+  "bundleId": "com.valerijs.boguckis.gumroad.TextSniper",
+  "homepage": "https://textsniper.app/",
+  "fileName": "TextSniper1.11.dmg"
+}

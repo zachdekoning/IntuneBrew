@@ -1,0 +1,9 @@
+{
+  "name": "CLion",
+  "description": "C and C++ IDE",
+  "version": "2024.3.3",
+  "url": "https://download.jetbrains.com/cpp/CLion-2024.3.3-aarch64.dmg",
+  "bundleId": null,
+  "homepage": "https://www.jetbrains.com/clion/",
+  "fileName": "CLion-2024.3.3-aarch64.dmg"
+}

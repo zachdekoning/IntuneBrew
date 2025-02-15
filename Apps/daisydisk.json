@@ -1,0 +1,11 @@
+{
+  "name": "DaisyDisk",
+  "description": "Disk space visualiser",
+  "version": "4.31",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/daisydisk_4.31.pkg",
+  "bundleId": "com.daisydiskapp.DaisyDiskAdminHelper",
+  "homepage": "https://daisydiskapp.com/",
+  "fileName": "DaisyDisk.zip",
+  "type": "app",
+  "previous_version": "4.31"
+}

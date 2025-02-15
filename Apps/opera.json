@@ -1,0 +1,9 @@
+{
+  "name": "Opera",
+  "description": "Web browser",
+  "version": "117.0.5408.32",
+  "url": "https://get.geo.opera.com/pub/opera/desktop/117.0.5408.32/mac/Opera_117.0.5408.32_Setup.dmg",
+  "bundleId": null,
+  "homepage": "https://www.opera.com/",
+  "fileName": "Opera_117.0.5408.32_Setup.dmg"
+}

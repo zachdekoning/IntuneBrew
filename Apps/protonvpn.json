@@ -1,0 +1,9 @@
+{
+  "name": "ProtonVPN",
+  "description": "VPN client focusing on security",
+  "version": "4.8.0",
+  "url": "https://protonvpn.com/download/macos/4.8.0/ProtonVPN_mac_v4.8.0.dmg",
+  "bundleId": "ch.protonvpn.mac",
+  "homepage": "https://protonvpn.com/",
+  "fileName": "ProtonVPN_mac_v4.8.0.dmg"
+}

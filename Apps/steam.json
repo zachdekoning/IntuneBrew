@@ -1,0 +1,9 @@
+{
+  "name": "Steam",
+  "description": "Video game digital distribution service",
+  "version": "4.0",
+  "url": "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg",
+  "bundleId": "com.valvesoftware.steam.ipctool",
+  "homepage": "https://store.steampowered.com/about/",
+  "fileName": "steam.dmg"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "JetBrains Toolbox",
+  "description": "JetBrains tools manager",
+  "version": "2.5.3",
+  "url": "https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.5.3.37797-arm64.dmg",
+  "bundleId": "com.jetbrains.toolbox",
+  "homepage": "https://www.jetbrains.com/toolbox-app/",
+  "fileName": "jetbrains-toolbox-2.5.3.37797-arm64.dmg"
+}
