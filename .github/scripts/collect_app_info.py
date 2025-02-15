@@ -66,7 +66,23 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/busycontacts.json",
     "https://formulae.brew.sh/api/cask/beeper.json",
     "https://formulae.brew.sh/api/cask/airfoil.json",
-    "https://formulae.brew.sh/api/cask/angry-ip-scanner.json"
+    "https://formulae.brew.sh/api/cask/angry-ip-scanner.json",
+    "https://formulae.brew.sh/api/cask/hammerspoon.json",
+    "https://formulae.brew.sh/api/cask/home-assistant.json",
+    "https://formulae.brew.sh/api/cask/hyper.json",
+    "https://formulae.brew.sh/api/cask/fsmonitor.json",
+    "https://formulae.brew.sh/api/cask/fission.json",
+    "https://formulae.brew.sh/api/cask/geekbench.json",
+    "https://formulae.brew.sh/api/cask/geekbench-ai.json",
+    "https://formulae.brew.sh/api/cask/gemini.json",
+    "https://formulae.brew.sh/api/cask/coderunner.json",
+    "https://formulae.brew.sh/api/cask/devtoys.json",
+    "https://formulae.brew.sh/api/cask/drivedx.json",
+    "https://formulae.brew.sh/api/cask/dropshare.json",
+    "https://formulae.brew.sh/api/cask/easyfind.json",
+    "https://formulae.brew.sh/api/cask/beyond-compare.json",
+    "https://formulae.brew.sh/api/cask/cap.json",
+    "https://formulae.brew.sh/api/cask/bettermouse.json"
 ]
 
 # DMG
@@ -213,7 +229,28 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/airy.json",
     "https://formulae.brew.sh/api/cask/amadine.json",
     "https://formulae.brew.sh/api/cask/amazon-chime.json",
-    "https://formulae.brew.sh/api/cask/amazon-q.json"
+    "https://formulae.brew.sh/api/cask/amazon-q.json",
+    "https://formulae.brew.sh/api/cask/google-ads-editor.json",
+    "https://formulae.brew.sh/api/cask/google-drive.json",
+    "https://formulae.brew.sh/api/cask/hazeover.json",
+    "https://formulae.brew.sh/api/cask/jellyfin.json",
+    "https://formulae.brew.sh/api/cask/gitfinder.json",
+    "https://formulae.brew.sh/api/cask/codeedit.json",
+    "https://formulae.brew.sh/api/cask/crystalfetch.json",
+    "https://formulae.brew.sh/api/cask/dangerzone.json",
+    "https://formulae.brew.sh/api/cask/dataflare.json",
+    "https://formulae.brew.sh/api/cask/dataspell.json",
+    "https://formulae.brew.sh/api/cask/dbgate.json",
+    "https://formulae.brew.sh/api/cask/devutils.json",
+    "https://formulae.brew.sh/api/cask/doughnut.json",
+    "https://formulae.brew.sh/api/cask/downie.json",
+    "https://formulae.brew.sh/api/cask/drawbot.json",
+    "https://formulae.brew.sh/api/cask/dropdmg.json",
+    "https://formulae.brew.sh/api/cask/elephas.json",
+    "https://formulae.brew.sh/api/cask/epic-games.json",
+    "https://formulae.brew.sh/api/cask/breaktimer.json",
+    "https://formulae.brew.sh/api/cask/calmly-writer.json",
+    "https://formulae.brew.sh/api/cask/camtasia.json"
 ]
 
 # PKG in DMG URLs
@@ -223,12 +260,21 @@ pkg_in_dmg_urls = [
     "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
     "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
     "https://formulae.brew.sh/api/cask/openvpn-connect.json",
+    "https://formulae.brew.sh/api/cask/chrome-remote-desktop-host.json"
 ]
 
 # PKG in PKG URLs
 pkg_in_pkg_urls = [
     "https://formulae.brew.sh/api/cask/nordvpn.json",
-    "https://formulae.brew.sh/api/cask/tailscale.json"
+    "https://formulae.brew.sh/api/cask/tailscale.json",
+    "https://formulae.brew.sh/api/cask/gyazo.json",
+    "https://formulae.brew.sh/api/cask/insta360-studio.json"
+]
+
+# PKG
+pkg_urls = [
+    "https://formulae.brew.sh/api/cask/cloudflare-warp.json",
+    "https://formulae.brew.sh/api/cask/cisco-jabber.json"
 ]
 
 # Custom scraper scripts to run
@@ -253,7 +299,7 @@ def find_bundle_id(json_string):
 
     return None
 
-def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, is_pkg_in_pkg=False):
+def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, is_pkg_in_pkg=False, is_pkg=False):
     response = requests.get(json_url)
     response.raise_for_status()
     data = response.json()
@@ -280,6 +326,8 @@ def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, 
         app_info["type"] = "pkg_in_dmg"
     elif is_pkg_in_pkg:
         app_info["type"] = "pkg_in_pkg"
+    elif is_pkg:
+        app_info["type"] = "pkg"
     
     return app_info
 
@@ -584,6 +632,43 @@ def main():
             print(f"Saved app information for {display_name} to {file_path}")
         except Exception as e:
             print(f"Error processing PKG in PKG app {url}: {str(e)}")
+
+    # Process direct pkg apps
+    for url in pkg_urls:
+        try:
+            print(f"\nProcessing direct PKG app URL: {url}")
+            app_info = get_homebrew_app_info(url, is_pkg=True)
+            display_name = app_info['name']
+            supported_apps.append(display_name)
+            file_name = f"{sanitize_filename(display_name)}.json"
+            file_path = os.path.join(apps_folder, file_name)
+
+            # For existing files, only update version, url and previous_version
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    # Store the new version, url and previous_version
+                    new_version = app_info["version"]
+                    new_url = app_info["url"]
+                    previous_version = existing_data.get("version")
+                    
+                    # Preserve all existing data except version, url and previous_version
+                    for key in existing_data:
+                        if key not in ["version", "url", "previous_version"]:
+                            app_info[key] = existing_data[key]
+                    
+                    # Update version, url and previous_version
+                    app_info["version"] = new_version
+                    app_info["url"] = new_url
+                    app_info["previous_version"] = previous_version
+
+            with open(file_path, "w") as f:
+                json.dump(app_info, f, indent=2)
+
+            apps_info.append(app_info)
+            print(f"Saved app information for {display_name} to {file_path}")
+        except Exception as e:
+            print(f"Error processing direct PKG app {url}: {str(e)}")
 
     # Process pkg_in_dmg apps
     for url in pkg_in_dmg_urls:
