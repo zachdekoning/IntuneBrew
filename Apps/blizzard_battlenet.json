@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/blizzard_battlenet_1.18.10.3141.pkg",
   "bundleId": null,
   "homepage": "https://www.battle.net/",
-  "fileName": "getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP",
+  "fileName": "Blizzard Battle.net",
   "type": "app",
   "previous_version": "1.18.10.3141"
 }
