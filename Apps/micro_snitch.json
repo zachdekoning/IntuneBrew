@@ -6,5 +6,6 @@
   "bundleId": "at.obdev.MicroSnitch",
   "homepage": "https://www.obdev.at/products/microsnitch/index.html",
   "fileName": "MicroSnitch-1.6.1.dmg",
+  "changelog": "https://www.obdev.at/products/microsnitch/releasenotes.html",
   "previous_version": "1.6.1"
 }

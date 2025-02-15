@@ -7,5 +7,6 @@
   "homepage": "https://gyazo.com/",
   "fileName": "Gyazo-9.7.2.pkg",
   "type": "pkg_in_pkg",
+  "changelog": "https://support.gyazo.com/hc/en-us/articles/204411615-Release-Notes",
   "previous_version": "9.7.2"
 }
