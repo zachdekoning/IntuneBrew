@@ -81,7 +81,12 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/dropshare.json",
     "https://formulae.brew.sh/api/cask/easyfind.json",
     "https://formulae.brew.sh/api/cask/beyond-compare.json",
-    "https://formulae.brew.sh/api/cask/bettermouse.json"
+    "https://formulae.brew.sh/api/cask/bettermouse.json",
+    "https://formulae.brew.sh/api/cask/logitech-g-hub.json",
+    "https://formulae.brew.sh/api/cask/jumpshare.json",
+    "https://formulae.brew.sh/api/cask/jumpcut.json",
+    "https://formulae.brew.sh/api/cask/keybase.json",
+    "https://formulae.brew.sh/api/cask/keyclu.json"
 ]
 
 # DMG
@@ -249,7 +254,11 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/epic-games.json",
     "https://formulae.brew.sh/api/cask/breaktimer.json",
     "https://formulae.brew.sh/api/cask/calmly-writer.json",
-    "https://formulae.brew.sh/api/cask/camtasia.json"
+    "https://formulae.brew.sh/api/cask/camtasia.json",
+    "https://formulae.brew.sh/api/cask/klokki.json",
+    "https://formulae.brew.sh/api/cask/langgraph-studio.json",
+    "https://formulae.brew.sh/api/cask/lookaway.json",
+    "https://formulae.brew.sh/api/cask/joplin.json"
 ]
 
 # PKG in DMG URLs
