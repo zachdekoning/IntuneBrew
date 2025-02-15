@@ -202,12 +202,12 @@ pkg_in_dmg_urls = [
     "https://formulae.brew.sh/api/cask/adobe-acrobat-reader.json",
     "https://formulae.brew.sh/api/cask/adobe-acrobat-pro.json",
     "https://formulae.brew.sh/api/cask/openvpn-connect.json",
-    "https://formulae.brew.sh/api/cask/tailscale.json"
 ]
 
 # PKG in PKG URLs
 pkg_in_pkg_urls = [
-    "https://formulae.brew.sh/api/cask/nordvpn.json"
+    "https://formulae.brew.sh/api/cask/nordvpn.json",
+    "https://formulae.brew.sh/api/cask/tailscale.json"
 ]
 
 # Custom scraper scripts to run
