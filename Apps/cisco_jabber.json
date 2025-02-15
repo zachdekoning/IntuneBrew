@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.webex.com/downloads/jabber.html",
   "fileName": "Install_Cisco-Jabber-Mac.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "20241220015538"
 }

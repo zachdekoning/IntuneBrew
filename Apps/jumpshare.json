@@ -1,0 +1,10 @@
+{
+  "name": "Jumpshare",
+  "description": "File sharing, screen recording, and screenshot capture app",
+  "version": "3.3.13",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/jumpshare_3.3.13.pkg",
+  "bundleId": null,
+  "homepage": "https://jumpshare.com/",
+  "fileName": "jumpshare_3.3.13.pkg",
+  "type": "app"
+}

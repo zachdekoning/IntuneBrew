@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://dropshare.app/",
   "fileName": "dropshare_5.58.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.58"
 }

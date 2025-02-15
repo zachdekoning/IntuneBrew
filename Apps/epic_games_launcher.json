@@ -5,5 +5,6 @@
   "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Mac/EpicInstaller-17.2.2.dmg",
   "bundleId": null,
   "homepage": "https://www.epicgames.com/",
-  "fileName": "EpicInstaller-17.2.2.dmg"
+  "fileName": "EpicInstaller-17.2.2.dmg",
+  "previous_version": "17.2.2"
 }

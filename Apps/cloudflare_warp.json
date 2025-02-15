@@ -6,5 +6,6 @@
   "bundleId": "com.cloudflare.1dot1dot1dot1.macos",
   "homepage": "https://cloudflarewarp.com/",
   "fileName": "2024.12.554.0",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "2024.12.554.0"
 }

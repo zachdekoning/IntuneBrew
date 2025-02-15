@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://hyper.is/",
   "fileName": "hyper_3.4.1.pkg",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.4.1"
 }

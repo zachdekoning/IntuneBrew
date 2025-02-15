@@ -1,0 +1,9 @@
+{
+  "name": "LangGraph Studio",
+  "description": "Desktop app for prototyping and debugging LangGraph applications locally",
+  "version": "0.0.36",
+  "url": "https://github.com/langchain-ai/langgraph-studio/releases/download/v0.0.36/LangGraph-Studio-0.0.36-universal.dmg",
+  "bundleId": null,
+  "homepage": "https://studio.langchain.com/",
+  "fileName": "LangGraph-Studio-0.0.36-universal.dmg"
+}
