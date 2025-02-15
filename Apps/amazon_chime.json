@@ -1,0 +1,9 @@
+{
+  "name": "Amazon Chime",
+  "description": "Communications service",
+  "version": "5.23.22292",
+  "url": "https://clients.chime.aws/mac-nme/AmazonChime-5.23.22292.dmg",
+  "bundleId": null,
+  "homepage": "https://chime.aws/",
+  "fileName": "AmazonChime-5.23.22292.dmg"
+}

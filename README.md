@@ -20,9 +20,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                              <p>
+                                                <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-183-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-204-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -70,7 +70,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-15 09:08 UTC*
+*Last checked: 2025-02-15 11:21 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -128,28 +128,49 @@ Follow the interactive prompts to:
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20400 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20400 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.5.0.348 |
+| ❌ Airfoil | 5.12.4 |
+| ❌ Airtable | 1.6.6 |
+| ❌ Airy | 3.29.2 |
 | <img src='Logos/alacritty.png' width='32' height='32'> Alacritty | 0.15.0 |
 | <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.5.1 |
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.19.1 |
+| ❌ Amadine | 1.6.5 |
+| ❌ Amazon Chime | 5.23.22292 |
+| ❌ Amazon Q | 1.6.1 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.14 |
+| ❌ Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
+| ❌ Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.0 |
+| ❌ Apidog | 2.6.48 |
+| ❌ Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.82.1 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.1 |
+| ❌ Autodesk Fusion 360 | latest |
 | <img src='Logos/aws_corretto_jdk.png' width='32' height='32'> AWS Corretto JDK | 21.0.6.7.1 |
 | <img src='Logos/azul_zulu_java_standard_edition_development_kit.png' width='32' height='32'> Azul Zulu Java Standard Edition Development Kit | 23.0.2 |
 | <img src='Logos/azure_data_studio.png' width='32' height='32'> Azure Data Studio | 1.51.1 |
+| ❌ Badgeify | 1.5.4 |
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.2.7 |
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.3 |
+| ❌ Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.4 |
 | ❌ BetterTouchTool | 5.199 |
+| ❌ BetterZip | 5.3.4 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.0 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
+| ❌ blip | 1.1.2 |
 | ❌ Blizzard Battle.net | 1.18.10.3141 |
+| ❌ BoltAI | 1.32.2 |
+| ❌ Boop | 1.4.0 |
+| ❌ Boxcryptor | 3.13.680 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.75.178.0 |
+| ❌ BreakTimer | 1.3.2 |
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.39.0 |
+| ❌ BusyCal | 2024.4.3 |
+| ❌ BusyContacts | 2024.4.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.26.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.103.0 |

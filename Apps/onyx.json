@@ -5,5 +5,6 @@
   "url": "https://www.titanium-software.fr/download/14/OnyX.dmg",
   "bundleId": null,
   "homepage": "https://www.titanium-software.fr/en/onyx.html",
-  "fileName": "OnyX.dmg"
+  "fileName": "OnyX.dmg",
+  "previous_version": "4.6.2"
 }

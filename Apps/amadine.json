@@ -1,0 +1,9 @@
+{
+  "name": "Amadine",
+  "description": "Vector graphic and illustration software",
+  "version": "1.6.5",
+  "url": "https://belightsoft.s3.amazonaws.com/Amadine.dmg",
+  "bundleId": null,
+  "homepage": "https://amadine.com/",
+  "fileName": "Amadine.dmg"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Angry IP Scanner",
+  "description": "Network scanner",
+  "version": "3.9.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/angry_ip_scanner_3.9.1.pkg",
+  "bundleId": null,
+  "homepage": "https://angryip.org/",
+  "fileName": "angry_ip_scanner_3.9.1.pkg",
+  "type": "app"
+}
