@@ -6,5 +6,6 @@
   "bundleId": "com.valvesoftware.steam.ipctool",
   "homepage": "https://store.steampowered.com/about/",
   "fileName": "steam.dmg",
+  "changelog": "https://store.steampowered.com/news/",
   "previous_version": "4.0"
 }

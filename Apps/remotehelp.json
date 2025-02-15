@@ -6,5 +6,6 @@
   "bundleId": "com.microsoft.remotehelp",
   "homepage": "https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos",
   "fileName": "RemoteHelp.pkg",
-  "changelog": "https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos-release-notes"
+  "changelog": "https://learn.microsoft.com/en-us/mem/intune/fundamentals/remote-help-macos-release-notes",
+  "previous_version": "1.0.2404171"
 }

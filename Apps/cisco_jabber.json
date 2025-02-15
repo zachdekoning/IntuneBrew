@@ -7,5 +7,6 @@
   "homepage": "https://www.webex.com/downloads/jabber.html",
   "fileName": "Install_Cisco-Jabber-Mac.pkg",
   "type": "pkg",
+  "changelog": "https://help.webex.com/en-us/article/nqx2qkb/Jabber-Release-Notes",
   "previous_version": "20241220015538"
 }

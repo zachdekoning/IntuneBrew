@@ -7,5 +7,6 @@
   "homepage": "https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai",
   "fileName": "chrome_remote_desktop_133.0.6943.7.pkg",
   "type": "pkg_in_dmg",
+  "changelog": "https://support.google.com/chrome/a/answer/7679408",
   "previous_version": "133.0.6943.7"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://apidog.com/",
   "fileName": "legacy-Apidog-macOS-arm64-2.6.48.dmg",
+  "changelog": "https://apidog.com/blog/",
   "previous_version": "2.6.49"
 }

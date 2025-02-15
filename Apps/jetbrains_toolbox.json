@@ -6,5 +6,6 @@
   "bundleId": "com.jetbrains.toolbox",
   "homepage": "https://www.jetbrains.com/toolbox-app/",
   "fileName": "jetbrains-toolbox-2.5.3.37797-arm64.dmg",
+  "changelog": "https://www.jetbrains.com/toolbox-app/whatsnew/",
   "previous_version": "2.5.3"
 }

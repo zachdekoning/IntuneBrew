@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://mac.remotedesktopmanager.com/",
   "fileName": "Devolutions.RemoteDesktopManager.Mac.2024.3.10.3.dmg",
-  "changelog": "https://devolutions.net/remote-desktop-manager/release-notes/"
+  "changelog": "https://devolutions.net/remote-desktop-manager/release-notes/",
+  "previous_version": "2024.3.10.3"
 }
