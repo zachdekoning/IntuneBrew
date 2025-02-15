@@ -81,7 +81,6 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/dropshare.json",
     "https://formulae.brew.sh/api/cask/easyfind.json",
     "https://formulae.brew.sh/api/cask/beyond-compare.json",
-    "https://formulae.brew.sh/api/cask/cap.json",
     "https://formulae.brew.sh/api/cask/bettermouse.json"
 ]
 
