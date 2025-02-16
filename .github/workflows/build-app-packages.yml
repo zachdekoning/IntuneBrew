@@ -375,16 +375,60 @@ jobs:
                 rm "${download_path}.zip"
               fi
               
-              # Find .app file recursively, excluding __MACOSX directory
+              # First try to find .app file recursively, excluding __MACOSX directory
               echo "🔍 Searching for .app file recursively..."
               app_file=$(find "${app_name}_extracted" -type d -name "*.app" ! -path "*/__MACOSX/*" -print -quit)
+              
               if [ -z "$app_file" ]; then
-                echo "❌ No .app file found for $app_name"
-                echo "📁 Extracted contents:"
-                ls -R "${app_name}_extracted"
-                cd "$WORKSPACE_DIR"
-                rm -rf "${app_name}_extracted"
-                continue
+                echo "❌ No .app file found, searching for .pkg file..."
+                pkg_file=$(find "${app_name}_extracted" -type f -name "*.pkg" ! -path "*/__MACOSX/*" -print -quit)
+                
+                if [ -n "$pkg_file" ]; then
+                  echo "✅ Found .pkg file: $pkg_file"
+                  echo "📦 Package size: $(ls -lh "$pkg_file" | awk '{print $5}')"
+                  
+                  # Copy PKG file with version in filename
+                  echo "📋 Copying PKG file to ${app_name}_${version}.pkg"
+                  cp "$pkg_file" "${app_name}_${version}.pkg"
+                  
+                  # Upload to Azure
+                  echo "☁️ Uploading to Azure Blob Storage..."
+                  az storage blob upload \
+                    --container-name pkg \
+                    --file "${app_name}_${version}.pkg" \
+                    --name "${app_name}_${version}.pkg" \
+                    --overwrite true
+                  
+                  if [ $? -eq 0 ]; then
+                    echo "✅ Upload successful"
+                    
+                    # Update JSON with Azure URL
+                    echo "📝 Updating JSON file with new Azure URL..."
+                    azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
+                    jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+                    
+                    if [ $? -eq 0 ]; then
+                      echo "✅ JSON file updated successfully"
+                      echo "🔗 New URL: $azure_url"
+                    else
+                      echo "❌ Failed to update JSON file"
+                    fi
+                  else
+                    echo "❌ Failed to upload to Azure"
+                  fi
+                  
+                  # Clean up and continue to next app
+                  cd "$WORKSPACE_DIR"
+                  rm -rf "${app_name}_extracted"
+                  continue
+                else
+                  echo "❌ No .app or .pkg file found for $app_name"
+                  echo " Extracted contents:"
+                  ls -R "${app_name}_extracted"
+                  cd "$WORKSPACE_DIR"
+                  rm -rf "${app_name}_extracted"
+                  continue
+                fi
               fi
               echo "✅ Found .app file: $app_file"
               
