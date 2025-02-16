@@ -6,6 +6,8 @@ import fileinput
 from pathlib import Path
 import subprocess
 from datetime import datetime
+import hashlib
+import tempfile
 
 # zip, tar etc
 app_urls = [
@@ -289,6 +291,42 @@ pkg_urls = [
 custom_scrapers = [
     ".github/scripts/scrapers/remotehelp.sh",
 ]
+
+def calculate_file_hash(url):
+    """Download a file and calculate its SHA256 hash."""
+    print(f"📥 Downloading file from {url} to calculate hash...")
+    
+    # Create a temporary file
+    with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+        try:
+            # Download the file in chunks
+            response = requests.get(url, stream=True)
+            response.raise_for_status()
+            
+            # Write the file in chunks
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    temp_file.write(chunk)
+            
+            temp_file.flush()
+            
+            # Calculate SHA256 hash
+            sha256_hash = hashlib.sha256()
+            with open(temp_file.name, 'rb') as f:
+                for chunk in iter(lambda: f.read(4096), b''):
+                    sha256_hash.update(chunk)
+            
+            return sha256_hash.hexdigest()
+        
+        except Exception as e:
+            print(f"❌ Error calculating hash: {str(e)}")
+            return None
+        finally:
+            # Clean up the temporary file
+            try:
+                os.unlink(temp_file.name)
+            except Exception as e:
+                print(f"Warning: Could not delete temporary file: {str(e)}")
 
 def find_bundle_id(json_string):
     regex_patterns = {
@@ -577,23 +615,49 @@ def main():
             file_name = f"{sanitize_filename(display_name)}.json"
             file_path = os.path.join(apps_folder, file_name)
 
-            # For existing files, only update version, url and previous_version
+            # Check if we need to calculate hash
+            needs_hash = True
             if os.path.exists(file_path):
                 with open(file_path, "r") as f:
                     existing_data = json.load(f)
-                    # Store the new version, url and previous_version
+                    # Only calculate hash if:
+                    # 1. No sha exists, or
+                    # 2. Version has changed
+                    if ("sha" in existing_data and
+                        existing_data.get("version") == app_info["version"]):
+                        needs_hash = False
+                        app_info["sha"] = existing_data["sha"]
+                        print(f"ℹ️ Using existing hash for {display_name}")
+
+            if needs_hash:
+                print(f"🔍 Calculating SHA256 hash for {display_name}...")
+                file_hash = calculate_file_hash(app_info["url"])
+                if file_hash:
+                    app_info["sha"] = file_hash
+                    print(f"✅ SHA256 hash calculated: {file_hash}")
+                else:
+                    print(f"⚠️ Could not calculate SHA256 hash for {display_name}")
+
+            # For existing files, preserve existing data and update necessary fields
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    # Store the new version, url, sha and previous_version
                     new_version = app_info["version"]
                     new_url = app_info["url"]
+                    new_sha = app_info.get("sha")
                     previous_version = existing_data.get("version")
                     
-                    # Preserve all existing data except version, url and previous_version
+                    # Preserve all existing data except version, url, sha and previous_version
                     for key in existing_data:
-                        if key not in ["version", "url", "previous_version"]:
+                        if key not in ["version", "url", "sha", "previous_version"]:
                             app_info[key] = existing_data[key]
                     
-                    # Update version, url and previous_version
+                    # Update version, url, sha and previous_version
                     app_info["version"] = new_version
                     app_info["url"] = new_url
+                    if new_sha:
+                        app_info["sha"] = new_sha
                     app_info["previous_version"] = previous_version
 
             with open(file_path, "w") as f:
