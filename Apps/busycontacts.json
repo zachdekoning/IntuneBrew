@@ -2,10 +2,10 @@
   "name": "BusyContacts",
   "description": "Contact manager focusing on efficiency",
   "version": "2024.4.1",
-  "url": "https://www.busymac.com/download/bct-2024.4.1.zip",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/busycontacts_2024.4.1.pkg",
   "bundleId": "com.busymac.busycontacts.pkg",
   "homepage": "https://www.busymac.com/busycontacts/index.html",
-  "fileName": "bct-2024.4.1.zip",
+  "fileName": "busycontacts_2024.4.1.pkg",
   "type": "app",
   "changelog": "https://www.busymac.com/busycontacts/releasenotes.html",
   "previous_version": "2024.4.1"

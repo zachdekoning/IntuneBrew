@@ -2,10 +2,10 @@
   "name": "BusyCal",
   "description": "Calendar software focusing on flexibility and reliability",
   "version": "2024.4.3",
-  "url": "https://downloads.busymac.com/bcl-2024.4.3-2024-12-23-09-57.zip",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/busycal_2024.4.3.pkg",
   "bundleId": "com.busymac.busycal3.pkg",
   "homepage": "https://busymac.com/busycal/index.html",
-  "fileName": "bcl-2024.4.3-2024-12-23-09-57.zip",
+  "fileName": "busycal_2024.4.3.pkg",
   "type": "app",
   "changelog": "https://www.busymac.com/busycal/releasenotes.html",
   "previous_version": "2024.4.3"
