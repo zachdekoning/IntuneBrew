@@ -5,8 +5,9 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/deepl_25.2.11691813.pkg",
   "bundleId": "com.linguee.DeepLCopyTranslator",
   "homepage": "https://www.deepl.com/",
-  "fileName": "deepl_25.1.11615133.pkg",
+  "fileName": "deepl_25.2.11691813.pkg",
   "type": "app",
   "changelog": "https://www.deepl.com/changelog.html",
-  "previous_version": "25.2.11691813"
+  "previous_version": "25.2.11691813",
+  "sha": "fa287e6006b88beb4cb542587fd876b5621464236ed5ce43f3b51506a2846411"
 }

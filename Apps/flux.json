@@ -8,5 +8,6 @@
   "fileName": "flux_42.2.pkg",
   "type": "app",
   "changelog": "https://justgetflux.com/news/pages/macversion/",
-  "previous_version": "42.2"
+  "previous_version": "42.2",
+  "sha": "0c570020842911900d290f4dfd6e707a9c6d0f25c9ad030664eb63228e4c2bc5"
 }

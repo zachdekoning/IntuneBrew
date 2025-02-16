@@ -8,5 +8,6 @@
   "fileName": "adobe_acrobat_reader_24.005.20400.pkg",
   "type": "pkg_in_dmg",
   "changelog": "https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html",
-  "previous_version": "24.005.20400"
+  "previous_version": "24.005.20400",
+  "sha": "42a08a0ee8c1961e9e46e10b1202e2d8b785fdb449495b3e5bbe0fa193adbf54"
 }

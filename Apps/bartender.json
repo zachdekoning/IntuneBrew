@@ -8,5 +8,6 @@
   "fileName": "bartender_5.2.7.pkg",
   "type": "app",
   "changelog": "https://www.macbartender.com/Bartender5/release_notes/",
-  "previous_version": "5.2.7"
+  "previous_version": "5.2.7",
+  "sha": "007448860adc078f103dbdd9199f59e99642a92b0cad967c1f40c20bcfeb6329"
 }

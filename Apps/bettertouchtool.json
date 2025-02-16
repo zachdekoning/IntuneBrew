@@ -5,8 +5,9 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/bettertouchtool_5.199.pkg",
   "bundleId": "com.hegenberg.BetterTouchTool",
   "homepage": "https://folivora.ai/",
-  "fileName": "btt5.199-2025021219.zip",
+  "fileName": "bettertouchtool_5.199.pkg",
   "type": "app",
   "changelog": "https://docs.folivora.ai/docs/1004_release_notes.html",
-  "previous_version": "5.199"
+  "previous_version": "5.199",
+  "sha": "5a15f6d620952172c1d72d030b07c271d22bf747f60b1861464a6f2dc71ac0d0"
 }

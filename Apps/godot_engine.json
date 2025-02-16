@@ -8,5 +8,6 @@
   "fileName": "godot_engine_4.3.pkg",
   "type": "app",
   "changelog": "https://godotengine.org/changelog/",
-  "previous_version": "4.3"
+  "previous_version": "4.3",
+  "sha": "5832724108de61fdbb49616237020a35acd436d817e4c2e9125e4b5d169df496"
 }

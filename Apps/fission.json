@@ -8,5 +8,6 @@
   "fileName": "fission_2.8.8.pkg",
   "type": "app",
   "changelog": "https://rogueamoeba.com/fission/releasenotes.php",
-  "previous_version": "2.8.8"
+  "previous_version": "2.8.8",
+  "sha": "52cd9f041be72ba9090d48e3f0dd67088a8fa813e564bbe23556e178e4f41abd"
 }

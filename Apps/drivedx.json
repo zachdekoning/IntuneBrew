@@ -8,5 +8,6 @@
   "fileName": "drivedx_1.12.1.pkg",
   "type": "app",
   "changelog": "https://binaryfruit.com/drivedx/updates",
-  "previous_version": "1.12.1"
+  "previous_version": "1.12.1",
+  "sha": "1b9c62bad6ed55594c590725d309db4b059e5822c9beddaa1f946feacc02d230"
 }

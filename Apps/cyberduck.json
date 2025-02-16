@@ -8,5 +8,6 @@
   "fileName": "cyberduck_9.1.2.pkg",
   "type": "app",
   "changelog": "https://cyberduck.io/changelog/",
-  "previous_version": "9.1.2"
+  "previous_version": "9.1.2",
+  "sha": "8a9c43ee1257a22b573c5ef79563aa39b98afcdcc2b3c269e5e292703dad3a85"
 }

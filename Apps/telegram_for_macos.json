@@ -8,5 +8,6 @@
   "fileName": "telegram_for_macos_11.7.pkg",
   "type": "app",
   "changelog": "https://macos.telegram.org/changelog",
-  "previous_version": "11.7"
+  "previous_version": "11.7",
+  "sha": "11eee70326b423ade1855e01fa6fd78d74608b4507061870a391c1782db1aa63"
 }

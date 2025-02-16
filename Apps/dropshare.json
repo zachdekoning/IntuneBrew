@@ -8,5 +8,6 @@
   "fileName": "dropshare_5.58.pkg",
   "type": "app",
   "changelog": "https://dropshare.app/changelog/",
-  "previous_version": "5.58"
+  "previous_version": "5.58",
+  "sha": "84355c63014f1d0c62b771fdae8706f61116c80e1b0c3c388140c6695ebe6a09"
 }

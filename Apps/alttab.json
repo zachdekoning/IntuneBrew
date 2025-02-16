@@ -8,5 +8,6 @@
   "fileName": "alttab_7.19.1.pkg",
   "type": "app",
   "changelog": "https://alt-tab-macos.netlify.app/changelog/",
-  "previous_version": "7.19.1"
+  "previous_version": "7.19.1",
+  "sha": "fe03608ff4243a892430ae6ec446eb13e245c8e751663649864f43359bf6831e"
 }

@@ -8,5 +8,6 @@
   "fileName": "fsmonitor_1.2.pkg",
   "type": "app",
   "changelog": "https://fsmonitor.com/history.html",
-  "previous_version": "1.2"
+  "previous_version": "1.2",
+  "sha": "3eebd0a2ffc6324d2024a9fb22f95de36c757e80e29cf1a60e58fd375bd5bf06"
 }

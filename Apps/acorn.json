@@ -5,9 +5,9 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/acorn_8.0.1.pkg",
   "bundleId": "com.flyingmeat.Acorn8",
   "homepage": "https://flyingmeat.com/acorn/",
-  "changelog": "https://flyingmeat.com/acorn/changelog.html",
   "fileName": "acorn_8.0.1.pkg",
   "type": "app",
-  "sha": "de08647f6475a71271a39732dd212d20b34f177e3310428a70e23f1b6a7d9f05",
+  "changelog": "https://flyingmeat.com/acorn/changelog.html",
+  "sha": "37cabd51b51846449a3daa142d772a0b6a47a4265098516984fe689f7ff33ea0",
   "previous_version": "8.0.1"
 }

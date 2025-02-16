@@ -8,5 +8,6 @@
   "fileName": "busycontacts_2024.4.1.pkg",
   "type": "app",
   "changelog": "https://www.busymac.com/busycontacts/releasenotes.html",
-  "previous_version": "2024.4.1"
+  "previous_version": "2024.4.1",
+  "sha": "c3207c0347d416cbf40b248cfde3df6c360f5879401c819eb792da3fdb4caef3"
 }

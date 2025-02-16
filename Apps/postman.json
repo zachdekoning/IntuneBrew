@@ -5,8 +5,9 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/postman_11.32.3.pkg",
   "bundleId": "com.postmanlabs.mac",
   "homepage": "https://www.postman.com/",
-  "fileName": "postman_11.32.1.pkg",
+  "fileName": "postman_11.32.3.pkg",
   "type": "app",
   "changelog": "https://www.postman.com/release-notes/postman-app/",
-  "previous_version": "11.32.3"
+  "previous_version": "11.32.3",
+  "sha": "56e8be13b5a58471b097ae5b93a335ac4bbb000d9af6a5dc17dc71487131aecb"
 }

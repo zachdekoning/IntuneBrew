@@ -5,8 +5,9 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/bettermouse_1.6.pkg",
   "bundleId": "com.naotanhaocan.BetterMouse",
   "homepage": "https://better-mouse.com/",
-  "fileName": "BetterMouse.1.6.6830.zip",
+  "fileName": "bettermouse_1.6.pkg",
   "type": "app",
   "changelog": "https://better-mouse.com/changelog/",
-  "previous_version": "1.6"
+  "previous_version": "1.6",
+  "sha": "d96af4a094e492bc7dfa0c16d47a6b252aa6f140e5a97905149ff6debc428b50"
 }

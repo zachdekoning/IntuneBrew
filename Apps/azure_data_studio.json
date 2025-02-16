@@ -5,8 +5,9 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/azure_data_studio_1.51.1.pkg",
   "bundleId": "com.azuredatastudio.oss",
   "homepage": "https://docs.microsoft.com/en-us/sql/azure-data-studio/",
-  "fileName": "azure_data_studio_1.51.0.pkg",
+  "fileName": "azure_data_studio_1.51.1.pkg",
   "type": "app",
   "changelog": "https://docs.microsoft.com/en-us/sql/azure-data-studio/release-notes",
-  "previous_version": "1.51.1"
+  "previous_version": "1.51.1",
+  "sha": "5f1edc0373253b4d14f3fc9d63f1b1403f89d3d6e6e26ac27b72d6ee53224cfc"
 }

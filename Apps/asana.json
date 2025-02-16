@@ -8,5 +8,6 @@
   "fileName": "asana_2.3.0.pkg",
   "type": "app",
   "changelog": "https://help.asana.com/s/article/release-notes?language=en_US",
-  "previous_version": "2.3.0"
+  "previous_version": "2.3.0",
+  "sha": "f6ba41db5eeaa270d4ffdf4d4bf932aaef4935a46b74b86bec4c88ae4b8a7896"
 }

@@ -5,8 +5,9 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/sketch_101.8.pkg",
   "bundleId": "com.bohemiancoding.sketch3",
   "homepage": "https://www.sketch.com/",
-  "fileName": "sketch-101.8-182106.zip",
+  "fileName": "sketch_101.8.pkg",
   "type": "app",
   "changelog": "https://www.sketch.com/updates/",
-  "previous_version": "101.8"
+  "previous_version": "101.8",
+  "sha": "f0751c46961fbd24cf4fc0bdb3dec909e1fa470e42b66f4ea7a955b8cb07121b"
 }

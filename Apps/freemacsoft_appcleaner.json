@@ -7,5 +7,6 @@
   "homepage": "https://freemacsoft.net/appcleaner/",
   "fileName": "freemacsoft_appcleaner_3.6.8.pkg",
   "type": "app",
-  "previous_version": "3.6.8"
+  "previous_version": "3.6.8",
+  "sha": "0b6be17568243b5204a7371a96e889483674c617802e588a7077b268cb91810a"
 }

@@ -8,5 +8,6 @@
   "fileName": "sublime_text_4192.pkg",
   "type": "app",
   "changelog": "https://www.sublimetext.com/docs/4.0/changes.html",
-  "previous_version": "4192"
+  "previous_version": "4192",
+  "sha": "d51243ddfe1a6e049e1178c693527d51e4d196d3ca5c2369035177494c7eb1b6"
 }

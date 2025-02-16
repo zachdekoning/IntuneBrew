@@ -8,5 +8,6 @@
   "fileName": "mitmproxy_11.1.2.pkg",
   "type": "app",
   "changelog": "https://github.com/mitmproxy/mitmproxy/releases",
-  "previous_version": "11.1.2"
+  "previous_version": "11.1.2",
+  "sha": "d9034bd93b7220a884761224444ae8cf0367a40f59a64190f2de1ba223ce61dc"
 }
