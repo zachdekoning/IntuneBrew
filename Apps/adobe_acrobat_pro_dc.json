@@ -1,0 +1,11 @@
+{
+  "name": "Adobe Acrobat Pro DC",
+  "description": "View, create, manipulate, print and manage files in Portable Document Format",
+  "version": "24.005.20400",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/adobe_acrobat_pro_dc_24.005.20400.pkg",
+  "bundleId": null,
+  "homepage": "https://www.adobe.com/acrobat/pdf-reader.html",
+  "fileName": "adobe_acrobat_pro_dc_24.005.20400.pkg",
+  "type": "pkg_in_dmg",
+  "sha": "8920e737c786418c0203ada7d68e9caed2d4a5d75bf9644fa67f2d4fc6e5524c"
+}
