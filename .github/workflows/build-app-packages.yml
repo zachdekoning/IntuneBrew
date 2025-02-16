@@ -189,6 +189,11 @@ jobs:
                     echo "📋 Copying inner PKG file to ${app_name}_${version}.pkg"
                     cp "$inner_pkg" "${app_name}_${version}.pkg"
                     
+                    # Calculate SHA256 hash
+                    echo "🔐 Calculating SHA256 hash..."
+                    file_hash=$(shasum -a 256 "${app_name}_${version}.pkg" | awk '{print $1}')
+                    echo "📝 SHA256: $file_hash"
+
                     # Upload to Azure
                     echo "☁️ Uploading to Azure Blob Storage..."
                     az storage blob upload \
@@ -200,10 +205,10 @@ jobs:
                     if [ $? -eq 0 ]; then
                       echo "✅ Upload successful"
                       
-                      # Update JSON with Azure URL
-                      echo "📝 Updating JSON file with new Azure URL..."
+                      # Update JSON with Azure URL and SHA256
+                      echo "📝 Updating JSON file with new Azure URL and SHA256..."
                       azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
-                      jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+                      jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" --arg sha "$file_hash" '.url = $url | .fileName = $filename | .sha = $sha' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
                       
                       if [ $? -eq 0 ]; then
                         echo "✅ JSON file updated successfully"
@@ -280,6 +285,11 @@ jobs:
                 echo "📋 Copying PKG file to ${app_name}_${version}.pkg"
                 cp "$pkg_file" "${app_name}_${version}.pkg"
                 
+                # Calculate SHA256 hash
+                echo "🔐 Calculating SHA256 hash..."
+                file_hash=$(shasum -a 256 "${app_name}_${version}.pkg" | awk '{print $1}')
+                echo "📝 SHA256: $file_hash"
+
                 # Upload to Azure
                 echo "☁️ Uploading to Azure Blob Storage..."
                 az storage blob upload \
@@ -291,10 +301,10 @@ jobs:
                 if [ $? -eq 0 ]; then
                   echo "✅ Upload successful"
                   
-                  # Update JSON with Azure URL
-                  echo "📝 Updating JSON file with new Azure URL..."
+                  # Update JSON with Azure URL and SHA256
+                  echo "📝 Updating JSON file with new Azure URL and SHA256..."
                   azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
-                  jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+                  jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" --arg sha "$file_hash" '.url = $url | .fileName = $filename | .sha = $sha' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
                   
                   if [ $? -eq 0 ]; then
                     echo "✅ JSON file updated successfully"
@@ -393,6 +403,11 @@ jobs:
                   echo "📋 Copying PKG file to ${app_name}_${version}.pkg"
                   cp "$pkg_file" "${app_name}_${version}.pkg"
                   
+                  # Calculate SHA256 hash
+                  echo "🔐 Calculating SHA256 hash..."
+                  file_hash=$(shasum -a 256 "${app_name}_${version}.pkg" | awk '{print $1}')
+                  echo "📝 SHA256: $file_hash"
+
                   # Upload to Azure
                   echo "☁️ Uploading to Azure Blob Storage..."
                   az storage blob upload \
@@ -404,10 +419,10 @@ jobs:
                   if [ $? -eq 0 ]; then
                     echo "✅ Upload successful"
                     
-                    # Update JSON with Azure URL
-                    echo "📝 Updating JSON file with new Azure URL..."
+                    # Update JSON with Azure URL and SHA256
+                    echo "📝 Updating JSON file with new Azure URL and SHA256..."
                     azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
-                    jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+                    jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" --arg sha "$file_hash" '.url = $url | .fileName = $filename | .sha = $sha' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
                     
                     if [ $? -eq 0 ]; then
                       echo "✅ JSON file updated successfully"
@@ -438,6 +453,11 @@ jobs:
               echo "Building PKG for $app_name version $version..."
               pkgbuild --install-location /Applications --component "$app_file" "${app_name}_${version}.pkg"
               
+              # Calculate SHA256 hash
+              echo "🔐 Calculating SHA256 hash..."
+              file_hash=$(shasum -a 256 "${app_name}_${version}.pkg" | awk '{print $1}')
+              echo "📝 SHA256: $file_hash"
+
               # Upload to Azure with version in filename
               echo "Uploading $app_name version $version to Azure Blob Storage..."
               az storage blob upload \
@@ -457,9 +477,9 @@ jobs:
                 done
               fi
 
-              # Update the JSON file with Azure URL and correct filename
+              # Update the JSON file with Azure URL, filename and SHA256
               azure_url="https://intunebrew.blob.core.windows.net/pkg/${app_name}_${version}.pkg"
-              jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" '.url = $url | .fileName = $filename' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
+              jq --arg url "$azure_url" --arg filename "${app_name}_${version}.pkg" --arg sha "$file_hash" '.url = $url | .fileName = $filename | .sha = $sha' "$WORKSPACE_DIR/Apps/${app_name}.json" > temp.json && mv temp.json "$WORKSPACE_DIR/Apps/${app_name}.json"
               
               # Cleanup
               sudo rm -rf "${app_name}_extracted"
