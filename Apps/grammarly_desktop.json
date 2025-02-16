@@ -6,6 +6,7 @@
   "bundleId": "com.grammarly.keyboard",
   "homepage": "https://www.grammarly.com/desktop",
   "fileName": "Grammarly.dmg",
+  "sha": "170c3150a68299e1b0974305b51cffbae67a1c4bd5c9dc6ba1d53d31fc3fa0d0",
   "changelog": "https://www.grammarly.com/desktop/release-notes",
   "previous_version": "1.106.1.0"
 }

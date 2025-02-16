@@ -6,6 +6,7 @@
   "bundleId": "com.foxit.pkg.pdfeditor",
   "homepage": "https://www.foxit.com/pdf-editor/",
   "fileName": "FoxitPDFEditor1316.L10N.Setup.pkg",
+  "sha": "37925599c4af80612a87fdba16eb8cecbdf0cf98c692121dd67356d68637fc72",
   "changelog": "https://www.foxit.com/pdf-editor/version-history.html",
   "previous_version": "13.1.6"
 }

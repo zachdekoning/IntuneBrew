@@ -6,6 +6,7 @@
   "bundleId": "com.microsoft.powershell",
   "homepage": "https://github.com/PowerShell/PowerShell",
   "fileName": "powershell-7.5.0-osx-arm64.pkg",
+  "sha": "54ca107eee5854c2c74730326e469c0c94d0a7b0e698fa6cca548d39c8ee0ba9",
   "changelog": "https://github.com/PowerShell/PowerShell/releases",
   "previous_version": "7.5.0"
 }

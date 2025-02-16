@@ -6,6 +6,7 @@
   "bundleId": "com.google.pkg.Keystone",
   "homepage": "https://www.google.com/drive/",
   "fileName": "GoogleDrive.dmg",
+  "sha": "ec30545bc491ee67d0dbac75b19bf005f762e2e5dfc7ce264b81e75530741249",
   "changelog": "https://support.google.com/drive/answer/2375082",
   "previous_version": "104.0.4"
 }

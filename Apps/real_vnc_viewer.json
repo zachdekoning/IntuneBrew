@@ -6,6 +6,7 @@
   "bundleId": "com.realvnc.vncviewer",
   "homepage": "https://www.realvnc.com/",
   "fileName": "VNC-Viewer-7.13.1-MacOSX-universal.dmg",
+  "sha": "59177c10479e7d773a2df82d58a4f73b056d1c354b85b11b1040218b3c10419c",
   "changelog": "https://help.realvnc.com/hc/en-us/articles/360002253138-Release-Notes",
   "previous_version": "7.13.1"
 }

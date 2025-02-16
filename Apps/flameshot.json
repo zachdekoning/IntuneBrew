@@ -6,6 +6,7 @@
   "bundleId": "com.Flameshot.flameshot",
   "homepage": "https://flameshot.org/",
   "fileName": "flameshot.dmg",
+  "sha": "70fa1cb9990093b00d184eace8e6c5f1cfefe33decb8ab051141a3847439ff14",
   "changelog": "https://github.com/flameshot-org/flameshot/releases",
   "previous_version": "12.1.0"
 }

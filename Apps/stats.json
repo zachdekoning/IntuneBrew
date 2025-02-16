@@ -6,6 +6,7 @@
   "bundleId": "eu.exelban.Stats",
   "homepage": "https://github.com/exelban/stats",
   "fileName": "Stats.dmg",
+  "sha": "5a4362659ab63df1a9eb977cd981eea62733a234a4b4301ee29e168948f9c563",
   "changelog": "https://github.com/exelban/stats/releases",
   "previous_version": "2.11.30"
 }

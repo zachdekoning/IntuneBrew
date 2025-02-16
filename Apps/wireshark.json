@@ -6,6 +6,7 @@
   "bundleId": "org.wireshark.*",
   "homepage": "https://www.wireshark.org/",
   "fileName": "Wireshark%204.4.3%20Arm%2064.dmg",
+  "sha": "0e18380fa0dfb8047d6b51c6a91d42eb1940f3814bb1fddbd96784dd669bbf1a",
   "changelog": "https://www.wireshark.org/news/",
   "previous_version": "4.4.3"
 }

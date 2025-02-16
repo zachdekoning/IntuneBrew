@@ -6,6 +6,7 @@
   "bundleId": "org.pgadmin.pgadmin4",
   "homepage": "https://www.pgadmin.org/",
   "fileName": "pgadmin4-9.0-arm64.dmg",
+  "sha": "c48d73503ccdb562663405cac7b6d01d7dece7aa57af1b6e892c40609d5d5aeb",
   "changelog": "https://www.pgadmin.org/docs/pgadmin4/9.0/release_notes_9_0.html",
   "previous_version": "9.0"
 }

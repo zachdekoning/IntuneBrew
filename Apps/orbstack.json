@@ -6,6 +6,7 @@
   "bundleId": "dev.kdrag0n.MacVirt",
   "homepage": "https://orbstack.dev/",
   "fileName": "OrbStack_v1.9.5_18849_arm64.dmg",
+  "sha": "e65f9df1810f74e6e0229cc47b999877fabeb5290011cfb90914177508b114b3",
   "changelog": "https://docs.orbstack.dev/changelog",
   "previous_version": "1.10.0_19021"
 }

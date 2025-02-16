@@ -6,6 +6,7 @@
   "bundleId": "com.docker.docker",
   "homepage": "https://www.docker.com/products/docker-desktop",
   "fileName": "Docker.dmg",
+  "sha": "29fe402d5a64d86565ae4ad69f19158b3c4d710c2ccfc6e1feb0d21239a2149e",
   "changelog": "https://docs.docker.com/desktop/release-notes/",
   "previous_version": "4.38.0"
 }

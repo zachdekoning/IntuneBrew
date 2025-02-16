@@ -6,6 +6,7 @@
   "bundleId": "ch.protonvpn.mac",
   "homepage": "https://protonvpn.com/",
   "fileName": "ProtonVPN_mac_v4.8.0.dmg",
+  "sha": "517079b0ecb9403184aed883633e97127f3c7b006cf0f282eb0e05e5d6332b80",
   "changelog": "https://protonvpn.com/blog/macos-app-changelog/",
   "previous_version": "4.8.0"
 }

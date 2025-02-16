@@ -6,6 +6,7 @@
   "bundleId": "com.utmapp.UTM",
   "homepage": "https://mac.getutm.app/",
   "fileName": "UTM.dmg",
+  "sha": "aad86726152b15a3e963cf778a0b0dfd8e818736b381aed2699d974a18845427",
   "changelog": "https://docs.getutm.app/updates/updates/",
   "previous_version": "4.6.4"
 }

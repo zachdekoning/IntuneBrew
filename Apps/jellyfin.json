@@ -6,6 +6,7 @@
   "bundleId": null,
   "homepage": "https://jellyfin.org/",
   "fileName": "jellyfin_10.10.5-arm64.dmg",
+  "sha": "6d08fcbe09bd8cce6940b1ced07798d0d6959123cc7656edfe40902df25078fe",
   "changelog": "https://github.com/jellyfin/jellyfin/releases",
   "previous_version": "10.10.5"
 }

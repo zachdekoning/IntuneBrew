@@ -6,6 +6,7 @@
   "bundleId": "com.exafunction.windsurf",
   "homepage": "https://www.codeium.com/windsurf",
   "fileName": "Windsurf-darwin-arm64-1.2.6.dmg",
+  "sha": "1b0e46dc9796a9a95814588382d9918eb4261530dc55c9962685ed6d938304a7",
   "changelog": "https://www.codeium.com/windsurf/changelog",
   "previous_version": "1.3.4"
 }

@@ -6,6 +6,7 @@
   "bundleId": "com.openai.chat",
   "homepage": "https://chatgpt.com/",
   "fileName": "ChatGPT_Desktop_public_1.2025.032_1738982647.dmg",
+  "sha": "fa63e09fedd1152b69e39046ae569f07973ce7865c693a05efe9f363ac55b5ca",
   "changelog": "https://help.openai.com/en/articles/9703738-macos-app-release-notes",
   "previous_version": "1.2025.036"
 }

@@ -6,6 +6,7 @@
   "bundleId": "com.hnc.Discord",
   "homepage": "https://discord.com/",
   "fileName": "Discord.dmg",
+  "sha": "470fc7ad490d7ad42f01632af16dee69fbec6e3db7e3f79af4f2ee246e382398",
   "changelog": "https://discord.com/tags/changelog",
   "previous_version": "0.0.336"
 }

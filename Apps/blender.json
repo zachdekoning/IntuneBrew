@@ -6,6 +6,7 @@
   "bundleId": "org.blenderfoundation.blender.savedState",
   "homepage": "https://www.blender.org/",
   "fileName": "blender-4.3.2-macos-arm64.dmg",
+  "sha": "32297d20fae74683052267b9171945712c0aeb8a499d8e677e44740d3e30a034",
   "changelog": "https://www.blender.org/download/releases/",
   "previous_version": "4.3.2"
 }

@@ -6,6 +6,7 @@
   "bundleId": "com.citrix.receiver.nomas",
   "homepage": "https://docs.citrix.com/en-us/citrix-workspace",
   "fileName": "CitrixWorkspaceAppUniversal24.11.10.22.pkg",
+  "sha": "af5e96fa5b5e6ef247a85fdccc88982f44790590439f5b849cb6092422bf9653",
   "changelog": "https://docs.citrix.com/en-us/citrix-workspace-app-for-mac/whats-new.html",
   "previous_version": "24.11.10.22"
 }

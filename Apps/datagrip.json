@@ -6,6 +6,7 @@
   "bundleId": "com.jetbrains.datagrip",
   "homepage": "https://www.jetbrains.com/datagrip/",
   "fileName": "datagrip-2024.3.4-aarch64.dmg",
+  "sha": "d968a1fcb1f34b59ce06103e05b20a582346e5cc81c3cf3f799dfc8940e7d79b",
   "changelog": "https://www.jetbrains.com/datagrip/whatsnew/",
   "previous_version": "2024.3.4"
 }

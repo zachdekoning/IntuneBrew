@@ -6,6 +6,7 @@
   "bundleId": null,
   "homepage": "https://dbgate.org/",
   "fileName": "dbgate-6.2.0-mac_universal.dmg",
+  "sha": "71216d03fae3904ea5c71b350d1eb2bcfe9647d6b8823cec754a3cfe8cb3e3f2",
   "changelog": "https://github.com/dbgate/dbgate/releases",
   "previous_version": "6.2.0"
 }

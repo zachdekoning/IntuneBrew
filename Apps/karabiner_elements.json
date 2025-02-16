@@ -6,6 +6,7 @@
   "bundleId": "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
   "homepage": "https://karabiner-elements.pqrs.org/",
   "fileName": "Karabiner-Elements-15.3.0.dmg",
+  "sha": "4b37f69810bc738240dcacb840f4ef4b8189d0f5c56cdd18ed1a6e9bd9510011",
   "changelog": "https://github.com/pqrs-org/Karabiner-Elements/releases",
   "previous_version": "15.3.0"
 }

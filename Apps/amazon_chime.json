@@ -6,6 +6,7 @@
   "bundleId": null,
   "homepage": "https://chime.aws/",
   "fileName": "AmazonChime-5.23.22292.dmg",
+  "sha": "046e4cb03338d0c1cdcab65d2e5d5f0dfbcda343c452dfe30e88c8d02cd88e23",
   "changelog": "https://docs.aws.amazon.com/chime/latest/ag/desktop-app.html#desktop-app-changelog",
   "previous_version": "5.23.22292"
 }

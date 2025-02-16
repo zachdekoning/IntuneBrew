@@ -6,6 +6,7 @@
   "bundleId": "notion.id",
   "homepage": "https://www.notion.so/",
   "fileName": "Notion-4.5.0-arm64.dmg",
+  "sha": "0dfd1598e04501104c8e304477a248c61956fc95d94d436f21f4704b0d4e4a90",
   "changelog": "https://www.notion.so/desktop-release-notes",
   "previous_version": "4.5.0"
 }

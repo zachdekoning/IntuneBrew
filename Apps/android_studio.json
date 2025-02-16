@@ -6,6 +6,7 @@
   "bundleId": "com.google.android.studio",
   "homepage": "https://developer.android.com/studio/",
   "fileName": "android-studio-2024.2.2.13-mac_arm.dmg",
+  "sha": "e58381031e32e9d2792a9b62561837b00d23fd48f662cc3cd242821ae6844d45",
   "changelog": "https://developer.android.com/studio/releases",
   "previous_version": "2024.2.2.14"
 }

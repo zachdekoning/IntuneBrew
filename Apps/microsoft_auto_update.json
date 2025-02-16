@@ -6,6 +6,7 @@
   "bundleId": "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
   "homepage": "https://docs.microsoft.com/officeupdates/release-history-microsoft-autoupdate",
   "fileName": "Microsoft_AutoUpdate_4.77.24121924_Updater.pkg",
+  "sha": "c818d32f268dfba316bfaedf27ab3e9224c529d2647454464270f58ebc9db4c7",
   "changelog": "https://learn.microsoft.com/en-us/officeupdates/release-history-microsoft-autoupdate",
   "previous_version": "4.77.24121924"
 }

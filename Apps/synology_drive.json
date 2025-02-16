@@ -6,6 +6,7 @@
   "bundleId": "com.synology.CloudStation",
   "homepage": "https://www.synology.com/",
   "fileName": "synology-drive-client-16102.dmg",
+  "sha": "412481f324b61387f2da1c39f3d5583fd8973835b8c2c76eade7b5d2ae1b3401",
   "changelog": "https://www.synology.com/en-us/releaseNote/SynologyDriveClient",
   "previous_version": "3.5.1"
 }

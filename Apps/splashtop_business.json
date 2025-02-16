@@ -6,6 +6,7 @@
   "bundleId": "com.splashtop.splashtopBusiness.*",
   "homepage": "https://www.splashtop.com/business",
   "fileName": "Splashtop_Business_Mac_INSTALLER_v3.7.2.4.dmg",
+  "sha": "629ef7dc049f2bcd687aca47d843e17ef45f9da6320ae63a5b673dfd3b24dc0f",
   "changelog": "https://support-splashtopbusiness.splashtop.com/hc/en-us/sections/11960106075419-Release-announcements-Business-app",
   "previous_version": "3.7.2.4"
 }

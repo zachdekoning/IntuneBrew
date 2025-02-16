@@ -6,6 +6,7 @@
   "bundleId": null,
   "homepage": "https://www.epicgames.com/",
   "fileName": "EpicInstaller-17.2.2.dmg",
+  "sha": "e1add7e5148bfd048f21ed0a5efd9c9eb084bc9b55ded50700a72801e158668d",
   "changelog": "https://store.epicgames.com/en-US/news/launcher-release-notes",
   "previous_version": "17.2.2"
 }

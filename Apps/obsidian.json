@@ -6,6 +6,7 @@
   "bundleId": "md.obsidian",
   "homepage": "https://obsidian.md/",
   "fileName": "Obsidian-1.8.4.dmg",
+  "sha": "920d201f82d6efcb8a5319ef135086f01d41bc9cf23bcbe53fab5a2ef986c3fb",
   "changelog": "https://github.com/obsidianmd/obsidian-releases/releases",
   "previous_version": "1.8.4"
 }

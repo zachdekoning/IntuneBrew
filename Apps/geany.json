@@ -6,6 +6,7 @@
   "bundleId": "org.geany.geany",
   "homepage": "https://www.geany.org/",
   "fileName": "geany-2.0_osx_arm64.dmg",
+  "sha": "1d383519d5ef7d3a2d17483a816250776158bfc26590aa4914f8634d81f112d7",
   "changelog": "https://www.geany.org/documentation/releasenotes/",
   "previous_version": "2.0"
 }

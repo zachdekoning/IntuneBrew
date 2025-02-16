@@ -7,6 +7,7 @@
   "homepage": "https://tailscale.com/",
   "fileName": "Tailscale-1.80.1-macos.pkg",
   "type": "pkg_in_pkg",
+  "sha": "dbdfab2d2af62e4c0f39e30a2d449b9736406f6469299a579db148f9b034c4ff",
   "changelog": "https://tailscale.com/changelog",
   "previous_version": "1.80.2"
 }

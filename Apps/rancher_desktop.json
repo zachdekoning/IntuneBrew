@@ -6,6 +6,7 @@
   "bundleId": "io.rancherdesktop.app",
   "homepage": "https://rancherdesktop.io/",
   "fileName": "Rancher.Desktop-1.17.1.aarch64.dmg",
+  "sha": "b489cfe696eca7cb5d19d5ea842dfa312c1f6751119f37c1e88fa4f9df9bf74f",
   "changelog": "https://github.com/rancher-sandbox/rancher-desktop/releases",
   "previous_version": "1.17.1"
 }

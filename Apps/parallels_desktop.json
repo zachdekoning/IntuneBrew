@@ -6,6 +6,7 @@
   "bundleId": "com.parallels.desktop.console",
   "homepage": "https://www.parallels.com/products/desktop/",
   "fileName": "ParallelsDesktop-20.2.0-55872.dmg",
+  "sha": "319baf1234a346ab5daf6d9b97836170a64134399d33f6b123ff3038ffd2bcf5",
   "changelog": "https://kb.parallels.com/en/129060",
   "previous_version": "20.2.1-55876"
 }

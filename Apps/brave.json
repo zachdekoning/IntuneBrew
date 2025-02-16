@@ -6,6 +6,7 @@
   "bundleId": "com.brave.Browser",
   "homepage": "https://brave.com/",
   "fileName": "Brave-Browser-arm64.dmg",
+  "sha": "87fbadfa852feea93caca5b3f6b8061257d9210c66ecee97408e4d3eb38dec5d",
   "changelog": "https://brave.com/latest/",
   "previous_version": "1.75.178.0"
 }

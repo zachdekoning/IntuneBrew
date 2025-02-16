@@ -6,6 +6,7 @@
   "bundleId": "org.gimp.gimp-2.10",
   "homepage": "https://www.gimp.org/",
   "fileName": "gimp-2.10.38-arm64-1.dmg",
+  "sha": "dc1aa78a40695f9f4580ce710960ff411eeef48af45b659b03b51e4cd6cdf4e8",
   "changelog": "https://www.gimp.org/release-notes/",
   "previous_version": "2.10.38"
 }

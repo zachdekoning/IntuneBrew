@@ -6,6 +6,7 @@
   "bundleId": "com.todoist.mac.Todoist",
   "homepage": "https://todoist.com/home",
   "fileName": "Todoist-darwin-9.10.0-arm64-latest.dmg",
+  "sha": "173303d3346324051e295f7189a52fbcfaec2064bddfe4db2a17131f1a2c3c04",
   "changelog": "https://todoist.com/changelog",
   "previous_version": "9.11.0"
 }

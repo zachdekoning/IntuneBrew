@@ -6,6 +6,7 @@
   "bundleId": "com.google.keystone.agent",
   "homepage": "https://www.google.com/chrome/",
   "fileName": "googlechrome.dmg",
+  "sha": "6ae7a7135933381e56a956a5c43470ea66fe87e1c9eea2c36e087c56abfa3aa0",
   "changelog": "https://chromereleases.googleblog.com/",
   "previous_version": "133.0.6943.99"
 }

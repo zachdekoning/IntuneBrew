@@ -6,6 +6,7 @@
   "bundleId": "com.duckduckgo.macos.browser",
   "homepage": "https://duckduckgo.com/",
   "fileName": "duckduckgo-1.125.0.361.dmg",
+  "sha": "47d82aca2bc046be4c5caf810b7d8c727263ca9f14547019e79e9ef1d3b31ae0",
   "changelog": "https://github.com/duckduckgo/macos-browser/releases",
   "previous_version": "1.125.1"
 }

@@ -6,6 +6,7 @@
   "bundleId": "net.kovidgoyal.kitty",
   "homepage": "https://github.com/kovidgoyal/kitty",
   "fileName": "kitty-0.39.1.dmg",
+  "sha": "60767f0516ea48e46998e2be00febd111088e96dd9ba721aed60643514197b35",
   "changelog": "https://github.com/kovidgoyal/kitty/releases",
   "previous_version": "0.39.1"
 }

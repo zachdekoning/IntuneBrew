@@ -6,6 +6,7 @@
   "bundleId": "com.termius-dmg.mac",
   "homepage": "https://www.termius.com/",
   "fileName": "Termius.dmg",
+  "sha": "bd2567a63d0aae6b2ef6bd5310511497a10259e24bea5232f3ae78adde259261",
   "changelog": "https://support.termius.com/hc/en-us/articles/4404036107673-Windows-Linux-Mac",
   "previous_version": "9.14.0"
 }

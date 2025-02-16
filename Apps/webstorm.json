@@ -6,6 +6,7 @@
   "bundleId": "com.jetbrains.WebStorm",
   "homepage": "https://www.jetbrains.com/webstorm/",
   "fileName": "WebStorm-2024.3.2.1-aarch64.dmg",
+  "sha": "cc69e6ec0ecf8ecfae47afd17240637a89da8a51a3f77698bd08c611b8d1a9e8",
   "changelog": "https://www.jetbrains.com/webstorm/whatsnew/",
   "previous_version": "2024.3.2.1"
 }

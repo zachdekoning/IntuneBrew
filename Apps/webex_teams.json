@@ -6,6 +6,7 @@
   "bundleId": "com.cisco.webex",
   "homepage": "https://www.webex.com/",
   "fileName": "Webex.dmg",
+  "sha": "ea937d81dc498dabbce7ac160023215dd39a317bb926ab727a0a93374a54524e",
   "changelog": "https://help.webex.com/en-us/article/mqkve8/Webex-App-|-Release-notes",
   "previous_version": "45.2.0.31755"
 }

@@ -6,6 +6,7 @@
   "bundleId": null,
   "homepage": "https://dangerzone.rocks/",
   "fileName": "Dangerzone-0.8.1-arm64.dmg",
+  "sha": "47369486aac1c6d11410a2d8cb4ec54167f1ecc3fa2b10812e14c3e3ecdcc888",
   "changelog": "https://github.com/freedomofpress/dangerzone/releases",
   "previous_version": "0.8.1"
 }

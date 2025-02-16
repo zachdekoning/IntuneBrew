@@ -6,6 +6,7 @@
   "bundleId": "org.tug.mactex.gui2024",
   "homepage": "https://www.tug.org/mactex/",
   "fileName": "mactex-20240312.pkg",
+  "sha": "c1793a3ceca2c4317ca22536c887e18b3c17be0f4baaa199735e9d6a692e57dc",
   "changelog": "https://www.tug.org/mactex/changelog.html",
   "previous_version": "2024.0312"
 }

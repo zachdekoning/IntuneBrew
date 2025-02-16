@@ -6,6 +6,7 @@
   "bundleId": "ai.elementlabs.lmstudio",
   "homepage": "https://lmstudio.ai/",
   "fileName": "LM-Studio-0.3.9-5-arm64.dmg",
+  "sha": "8e243ac4ea1caa024bd8a386ebf910038743f4dac3e0e8f09a07f3b0c23c75f4",
   "changelog": "https://github.com/lmstudio-ai/Release/releases",
   "previous_version": "0.3.9"
 }

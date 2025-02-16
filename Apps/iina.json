@@ -6,6 +6,7 @@
   "bundleId": "com.colliderli.iina",
   "homepage": "https://iina.io/",
   "fileName": "IINA.v1.3.5.dmg",
+  "sha": "3b8b9199f41a18c2aa8b30e5824d0c9daccc1d59176832ea650f533fcbdc6a38",
   "changelog": "https://github.com/iina/iina/releases",
   "previous_version": "1.3.5"
 }

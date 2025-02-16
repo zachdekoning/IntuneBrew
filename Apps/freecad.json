@@ -6,6 +6,7 @@
   "bundleId": "org.freecad.FreeCAD",
   "homepage": "https://www.freecad.org/",
   "fileName": "FreeCAD_1.0.0-conda-macOS-arm64-py311.dmg",
+  "sha": "ec287b388cb94876214678b8f9f586166261883e2591df274a52b19b73d48183",
   "changelog": "https://github.com/FreeCAD/FreeCAD/releases",
   "previous_version": "1.0.0"
 }

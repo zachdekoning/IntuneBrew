@@ -6,5 +6,6 @@
   "bundleId": "com.jetbrains.goland",
   "homepage": "https://www.jetbrains.com/go/",
   "fileName": "goland-2024.3.2.1-aarch64.dmg",
+  "sha": "a66df6461724bcd1b2d4ada74ae4fafced3cfb6f9e2206554d786655cb067cc3",
   "previous_version": "2024.3.3"
 }

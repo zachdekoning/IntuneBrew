@@ -6,6 +6,7 @@
   "bundleId": "com.dropbox.DropboxMacUpdate.agent",
   "homepage": "https://www.dropbox.com/",
   "fileName": "Dropbox%20217.4.4417.arm64.dmg",
+  "sha": "b22f7bf66ea10fb382157bb9e3b0d9a6703e4031402d76f6f7974b2133c54981",
   "changelog": "https://www.dropbox.com/release_notes",
   "previous_version": "217.4.4417"
 }

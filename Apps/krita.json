@@ -6,6 +6,7 @@
   "bundleId": null,
   "homepage": "https://krita.org/",
   "fileName": "krita-5.2.9-release.dmg",
+  "sha": "fff90ce72124029fc57e0f2225980ec6a6c5146b0c41b36eeb501d4a43965a6a",
   "changelog": "https://krita.org/en/krita-5-2-release-notes/",
   "previous_version": "5.2.9"
 }
