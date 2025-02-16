@@ -20,9 +20,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                      <p>
+                                                        <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-252-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-251-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -70,7 +70,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-15 19:33 UTC*
+*Last checked: 2025-02-16 08:21 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -355,7 +355,6 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.7 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.14.0 |
-| ❌ TextSniper | 1.11 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.11.0 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
