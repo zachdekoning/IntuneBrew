@@ -3,7 +3,7 @@
   "description": "UI for creating Windows installer ISO from UUPDump",
   "version": "2.1.1",
   "url": "https://github.com/TuringSoftware/CrystalFetch/releases/download/v2.1.1/CrystalFetch.dmg",
-  "bundleId": null,
+  "bundleId": "llc.turing.CrystalFetch",
   "homepage": "https://github.com/TuringSoftware/CrystalFetch",
   "fileName": "CrystalFetch.dmg",
   "sha": "1459e953b71895e96d2cd36275b77b82209ffbc8e0c42c4ce5bac04473ffa50b",

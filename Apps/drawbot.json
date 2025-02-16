@@ -3,7 +3,7 @@
   "description": "Write Python scripts to generate two-dimensional graphics",
   "version": "3.131",
   "url": "https://github.com/typemytype/drawbot/releases/download/3.131/DrawBot.dmg",
-  "bundleId": null,
+  "bundleId": "com.drawbot",
   "homepage": "https://www.drawbot.com/",
   "fileName": "DrawBot.dmg",
   "sha": "da03cd73d2c7ea221977fddd0b77856d0076f4d3833fdd0580823cc76dcaa0dc",

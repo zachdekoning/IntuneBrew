@@ -3,7 +3,7 @@
   "description": "Multi-language programming editor",
   "version": "4.4.1",
   "url": "https://intunebrew.blob.core.windows.net/pkg/coderunner_4.4.1.pkg",
-  "bundleId": null,
+  "bundleId": "com.krill.CodeRunner",
   "homepage": "https://coderunnerapp.com/",
   "fileName": "coderunner_4.4.1.pkg",
   "type": "app",

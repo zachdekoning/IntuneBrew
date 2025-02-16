@@ -3,7 +3,7 @@
   "description": "Vector graphics editor",
   "version": "1.4.028868",
   "url": "https://media.inkscape.org/dl/resources/file/Inkscape-1.4.028868_arm64.dmg",
-  "bundleId": null,
+  "bundleId": "org.inkscape.Inkscape",
   "homepage": "https://inkscape.org/",
   "fileName": "Inkscape-1.4.028868_arm64.dmg",
   "sha": "c2d89809ad8d85021e7784e72e28aee2231b0b8675ec3ede3e6fb9f1ffedb4b3",

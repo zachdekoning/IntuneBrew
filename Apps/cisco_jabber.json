@@ -3,7 +3,7 @@
   "description": "Jabber client from Cisco",
   "version": "20241220015538",
   "url": "https://binaries.webex.com/jabberclientmac/20241220015538/Install_Cisco-Jabber-Mac.pkg",
-  "bundleId": null,
+  "bundleId": "com.cisco.Jabber",
   "homepage": "https://www.webex.com/downloads/jabber.html",
   "fileName": "Install_Cisco-Jabber-Mac.pkg",
   "type": "pkg",

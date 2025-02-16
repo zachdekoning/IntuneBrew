@@ -3,7 +3,7 @@
   "description": "Managing your campaigns",
   "version": "2.8",
   "url": "https://dl.google.com/adwords_editor/Google_AdWords_Editor.dmg",
-  "bundleId": null,
+  "bundleId": "com.google.googleadseditorlauncher",
   "homepage": "https://ads.google.com/home/tools/ads-editor/",
   "fileName": "Google_AdWords_Editor.dmg",
   "sha": "b801bc1f8f9142f8bf39c246d59ab1be8f03b9c10ba29db276db8775b059955a",

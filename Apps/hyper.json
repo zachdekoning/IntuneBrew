@@ -3,7 +3,7 @@
   "description": "Terminal built on web technologies",
   "version": "3.4.1",
   "url": "https://intunebrew.blob.core.windows.net/pkg/hyper_3.4.1.pkg",
-  "bundleId": null,
+  "bundleId": "co.zeit.hyper",
   "homepage": "https://hyper.is/",
   "fileName": "hyper_3.4.1.pkg",
   "type": "app",

@@ -3,7 +3,7 @@
   "description": "Digital design and prototyping platform",
   "version": "101.8",
   "url": "https://intunebrew.blob.core.windows.net/pkg/sketch_101.8.pkg",
-  "bundleId": null,
+  "bundleId": "com.bohemiancoding.sketch3",
   "homepage": "https://www.sketch.com/",
   "fileName": "sketch-101.8-182106.zip",
   "type": "app",

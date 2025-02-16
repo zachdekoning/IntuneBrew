@@ -3,7 +3,7 @@
   "description": "Code editor",
   "version": "0.3.3",
   "url": "https://github.com/CodeEditApp/CodeEdit/releases/download/v0.3.3/CodeEdit.dmg",
-  "bundleId": null,
+  "bundleId": "app.codeedit.CodeEdit",
   "homepage": "https://www.codeedit.app/",
   "fileName": "CodeEdit.dmg",
   "sha": "fb9a76ce9c31a93ed333f72370b4a17e79e742beb4f1741c8ffd9a30618a66c4",

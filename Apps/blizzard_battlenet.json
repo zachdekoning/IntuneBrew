@@ -3,7 +3,7 @@
   "description": "Online gaming platform",
   "version": "1.18.10.3141",
   "url": "https://intunebrew.blob.core.windows.net/pkg/blizzard_battlenet_1.18.10.3141.pkg",
-  "bundleId": null,
+  "bundleId": "com.blizzard.social",
   "homepage": "https://www.battle.net/",
   "fileName": "Blizzard Battle.net",
   "type": "app",

@@ -3,7 +3,7 @@
   "description": "Database manager",
   "version": "1.9.3",
   "url": "https://assets.dataflare.app/release/darwin/aarch64/Dataflare-1.9.3.dmg",
-  "bundleId": null,
+  "bundleId": "app.dataflare.desktop",
   "homepage": "https://dataflare.app/",
   "fileName": "Dataflare-1.9.3.dmg",
   "sha": "94394966aedc4ab2cdc1db7575e5f20237cd1d31e54530656a78766e85769f13",
