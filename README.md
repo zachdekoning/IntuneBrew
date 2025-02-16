@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                              <p>
+                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-251-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,7 +70,7 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-16 09:38 UTC*
+*Last checked: 2025-02-16 09:48 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
