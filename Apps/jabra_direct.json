@@ -8,6 +8,6 @@
   "fileName": "jabra_direct_6.21.01701.pkg",
   "type": "pkg_in_dmg",
   "changelog": "https://www.jabra.com/support/release-notes/release-note-jabra-direct",
-  "previous_version": "6.21.01701",
-  "sha": "08d074e32d5ba2d51726c1a9d34c8400f94a160d65410dabd3036ec5068a92b6"
+  "sha": "08d074e32d5ba2d51726c1a9d34c8400f94a160d65410dabd3036ec5068a92b6",
+  "previous_version": "6.21.01701"
 }

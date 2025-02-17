@@ -7,6 +7,6 @@
   "homepage": "https://www.geekbench.com/ai/",
   "fileName": "geekbench_ai_1.2.0.pkg",
   "type": "app",
-  "previous_version": "1.2.0",
-  "sha": "0ea5ae5be3d9c9178cae3ff5f2546fd3a693999999d746d8085cb2f73c77c60c"
+  "sha": "0ea5ae5be3d9c9178cae3ff5f2546fd3a693999999d746d8085cb2f73c77c60c",
+  "previous_version": "1.2.0"
 }

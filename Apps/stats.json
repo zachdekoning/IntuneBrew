@@ -1,12 +1,12 @@
 {
   "name": "Stats",
   "description": "System monitor for the menu bar",
-  "version": "2.11.30",
-  "url": "https://github.com/exelban/stats/releases/download/v2.11.30/Stats.dmg",
+  "version": "2.11.31",
+  "url": "https://github.com/exelban/stats/releases/download/v2.11.31/Stats.dmg",
   "bundleId": "eu.exelban.Stats",
   "homepage": "https://github.com/exelban/stats",
   "fileName": "Stats.dmg",
-  "sha": "5a4362659ab63df1a9eb977cd981eea62733a234a4b4301ee29e168948f9c563",
+  "sha": "13e25237514a58bb78af694d8cb34d30a9d50fe495f17b9e4728bc5e3e55516a",
   "changelog": "https://github.com/exelban/stats/releases",
   "previous_version": "2.11.30"
 }

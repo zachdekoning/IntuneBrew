@@ -7,6 +7,6 @@
   "homepage": "https://www.hammerspoon.org/",
   "fileName": "hammerspoon_1.0.0.pkg",
   "type": "app",
-  "previous_version": "1.0.0",
-  "sha": "4716aec0977c5f4e4b57894a933bef191c0aec64f02f6f38de69ddd2750c6d75"
+  "sha": "4716aec0977c5f4e4b57894a933bef191c0aec64f02f6f38de69ddd2750c6d75",
+  "previous_version": "1.0.0"
 }

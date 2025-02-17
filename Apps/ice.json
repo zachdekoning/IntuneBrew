@@ -8,6 +8,6 @@
   "fileName": "ice_0.11.12.pkg",
   "type": "app",
   "changelog": "https://github.com/jordanbaird/Ice/releases",
-  "previous_version": "0.11.12",
-  "sha": "7e5a00b00aa877e9ff7991d5ba16044cfb12a900c27edbe4df83ff62cf2d6496"
+  "sha": "7e5a00b00aa877e9ff7991d5ba16044cfb12a900c27edbe4df83ff62cf2d6496",
+  "previous_version": "0.11.12"
 }

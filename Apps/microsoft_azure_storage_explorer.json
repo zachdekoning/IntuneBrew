@@ -8,6 +8,6 @@
   "fileName": "microsoft_azure_storage_explorer_1.37.0.pkg",
   "type": "app",
   "changelog": "https://learn.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-relnotes",
-  "previous_version": "1.37.0",
-  "sha": "fedb1e07e63c324684c967a3f7af93993c7cf3bdd1cdf37bef8d14a65b43d11a"
+  "sha": "fedb1e07e63c324684c967a3f7af93993c7cf3bdd1cdf37bef8d14a65b43d11a",
+  "previous_version": "1.37.0"
 }

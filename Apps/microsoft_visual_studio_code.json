@@ -8,6 +8,6 @@
   "fileName": "microsoft_visual_studio_code_1.97.2.pkg",
   "type": "app",
   "changelog": "https://code.visualstudio.com/updates/",
-  "previous_version": "1.97.2",
-  "sha": "81503214b01bee5ff2e5b6a1884a833ae1482475899976f4d411d66d4a2f7b5e"
+  "sha": "81503214b01bee5ff2e5b6a1884a833ae1482475899976f4d411d66d4a2f7b5e",
+  "previous_version": "1.97.2"
 }

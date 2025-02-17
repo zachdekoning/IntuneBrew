@@ -8,6 +8,6 @@
   "fileName": "coderunner_4.4.1.pkg",
   "type": "app",
   "changelog": "https://coderunnerapp.com/changelog",
-  "previous_version": "4.4.1",
-  "sha": "3e7e102fe44eab414bb50f5b9d66be40dffaeb020b93ecb00ee2533fdabc71f9"
+  "sha": "3e7e102fe44eab414bb50f5b9d66be40dffaeb020b93ecb00ee2533fdabc71f9",
+  "previous_version": "4.4.1"
 }

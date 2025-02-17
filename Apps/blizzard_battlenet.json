@@ -8,6 +8,6 @@
   "fileName": "blizzard_battlenet_1.18.10.3141.pkg",
   "type": "app",
   "changelog": "https://news.blizzard.com/en-us/battle-net/",
-  "previous_version": "1.18.10.3141",
-  "sha": "d228f76f6a13ede160e32eae9753c0af546c0385f3bdda321fcdad547b8726da"
+  "sha": "d228f76f6a13ede160e32eae9753c0af546c0385f3bdda321fcdad547b8726da",
+  "previous_version": "1.18.10.3141"
 }

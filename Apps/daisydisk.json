@@ -8,6 +8,6 @@
   "fileName": "daisydisk_4.31.pkg",
   "type": "app",
   "changelog": "https://daisydiskapp.com/changelog/",
-  "previous_version": "4.31",
-  "sha": "50f4387eaecb685655fae8ecca6434879037a2f8d2568f63ac02bced13c731f0"
+  "sha": "50f4387eaecb685655fae8ecca6434879037a2f8d2568f63ac02bced13c731f0",
+  "previous_version": "4.31"
 }

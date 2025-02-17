@@ -8,6 +8,6 @@
   "fileName": "transmit_5.10.8.pkg",
   "type": "app",
   "changelog": "https://help.panic.com/releasenotes/transmit5/",
-  "previous_version": "5.10.8",
-  "sha": "c941b174ca72f3cef3bc32d82cbd81c26b35454c51fec8bfd5bc77f2397c8f43"
+  "sha": "c941b174ca72f3cef3bc32d82cbd81c26b35454c51fec8bfd5bc77f2397c8f43",
+  "previous_version": "5.10.8"
 }

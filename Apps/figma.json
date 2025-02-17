@@ -8,6 +8,6 @@
   "fileName": "figma_125.0.8.pkg",
   "type": "app",
   "changelog": "https://help.figma.com/hc/en-us/articles/360038511533-Release-Notes",
-  "previous_version": "125.0.8",
-  "sha": "e5267109ed8214d4814e94a39d8de47dad92703471c4a256c5090c0ba14efeef"
+  "sha": "e5267109ed8214d4814e94a39d8de47dad92703471c4a256c5090c0ba14efeef",
+  "previous_version": "125.0.8"
 }

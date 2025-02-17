@@ -8,6 +8,6 @@
   "fileName": "openvpn_connect_client_3.6.1.pkg",
   "type": "pkg_in_dmg",
   "changelog": "https://openvpn.net/connect-docs/macos-release-notes.html",
-  "previous_version": "3.6.1",
-  "sha": "116214d7b670fa1aa927aad0faa53e82a1ef8f57d18ec702cef0a420ee9bd49a"
+  "sha": "116214d7b670fa1aa927aad0faa53e82a1ef8f57d18ec702cef0a420ee9bd49a",
+  "previous_version": "3.6.1"
 }

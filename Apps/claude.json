@@ -8,6 +8,6 @@
   "fileName": "claude_0.7.9.pkg",
   "type": "app",
   "changelog": "https://docs.anthropic.com/en/release-notes/claude-apps",
-  "previous_version": "0.7.9",
-  "sha": "5cc0fd474bf7d77eb69108bd6282236fe12e1b90d6ec824648a96ea64a0bfa43"
+  "sha": "5cc0fd474bf7d77eb69108bd6282236fe12e1b90d6ec824648a96ea64a0bfa43",
+  "previous_version": "0.7.9"
 }

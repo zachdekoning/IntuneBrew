@@ -8,6 +8,6 @@
   "fileName": "angry_ip_scanner_3.9.1.pkg",
   "type": "app",
   "changelog": "https://github.com/angryip/ipscan/releases",
-  "previous_version": "3.9.1",
-  "sha": "692944316acffb9ebfa8099c4043dafea41af470187e407fb5ced5dbd41c1098"
+  "sha": "692944316acffb9ebfa8099c4043dafea41af470187e407fb5ced5dbd41c1098",
+  "previous_version": "3.9.1"
 }

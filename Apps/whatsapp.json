@@ -8,6 +8,6 @@
   "fileName": "whatsapp_2.25.1.83.pkg",
   "type": "app",
   "changelog": "https://web.whatsapp.com/desktop/windows/release-notes",
-  "previous_version": "2.25.1.83",
-  "sha": "9d28c48b69c0915b436e0df8222b5f956d2f04ff48c4dc0efb8d58770f66c850"
+  "sha": "9d28c48b69c0915b436e0df8222b5f956d2f04ff48c4dc0efb8d58770f66c850",
+  "previous_version": "2.25.1.83"
 }

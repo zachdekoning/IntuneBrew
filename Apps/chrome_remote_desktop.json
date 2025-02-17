@@ -8,6 +8,6 @@
   "fileName": "chrome_remote_desktop_133.0.6943.7.pkg",
   "type": "pkg_in_dmg",
   "changelog": "https://support.google.com/chrome/a/answer/7679408",
-  "previous_version": "133.0.6943.7",
-  "sha": "05b45f64a0acb9979111d80ac7255ee6c6b1627208867d1b4e0eb2f01685b868"
+  "sha": "05b45f64a0acb9979111d80ac7255ee6c6b1627208867d1b4e0eb2f01685b868",
+  "previous_version": "133.0.6943.7"
 }
