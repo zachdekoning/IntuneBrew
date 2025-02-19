@@ -7,7 +7,7 @@
   "homepage": "https://vivaldi.com/",
   "fileName": "vivaldi_7.1.3570.50.pkg",
   "type": "app",
-  "changelog": "https://vivaldi.com/blog/desktop/",
   "sha": "fd35bf12d34a318f221abca78145efcbbfd90951f8cdf6b85d95b89f8e0ca9f3",
+  "changelog": "https://vivaldi.com/blog/desktop/",
   "previous_version": "7.1.3570.54"
 }

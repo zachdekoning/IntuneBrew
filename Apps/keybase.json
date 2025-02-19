@@ -7,7 +7,7 @@
   "homepage": "https://keybase.io/",
   "fileName": "keybase_6.5.0.pkg",
   "type": "app",
-  "changelog": "https://github.com/keybase/client/releases",
   "sha": "669c85a373f12b7b838d548e0436bc1644316df028ce79dc2b702449c2b17537",
+  "changelog": "https://github.com/keybase/client/releases",
   "previous_version": "6.5.0"
 }

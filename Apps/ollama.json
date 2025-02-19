@@ -7,7 +7,7 @@
   "homepage": "https://ollama.ai/",
   "fileName": "ollama_0.5.11.pkg",
   "type": "app",
-  "changelog": "https://github.com/ollama/ollama/releases",
   "sha": "3741b0cd6ad6e436341ff27b0d9084c646c1cb8af5341d168eb3921a1eb97643",
+  "changelog": "https://github.com/ollama/ollama/releases",
   "previous_version": "0.5.11"
 }

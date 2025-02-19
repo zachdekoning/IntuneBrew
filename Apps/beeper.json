@@ -7,7 +7,7 @@
   "homepage": "https://www.beeper.com/",
   "fileName": "beeper_3.110.1.pkg",
   "type": "app",
-  "changelog": "https://www.beeper.com/release-notes",
   "sha": "93ddb1d465c8b297d4a4c3e44b96fc7395a5f5d9b8934627c5c39ed4aefeee64",
+  "changelog": "https://www.beeper.com/release-notes",
   "previous_version": "3.110.1"
 }

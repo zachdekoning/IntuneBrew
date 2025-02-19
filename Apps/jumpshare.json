@@ -7,7 +7,7 @@
   "homepage": "https://jumpshare.com/",
   "fileName": "jumpshare_3.3.13.pkg",
   "type": "app",
-  "changelog": "https://jumpshare.com/release-notes",
   "sha": "a8d335aa0ca6eba5cb490828b3fbe8e13e2ecb1d2cedc1928c4a37bbb2f8ac62",
+  "changelog": "https://jumpshare.com/release-notes",
   "previous_version": "3.3.13"
 }

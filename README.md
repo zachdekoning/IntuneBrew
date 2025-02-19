@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                <p>
+                                                                                  <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,13 +70,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-19 19:37 UTC*
+*Last checked: 2025-02-19 19:44 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| AltTab | 7.19.1 | 7.20.0 |
-| Amazon Q | 1.6.1 | 1.6.2 |
-| Cloudflare WARP | 2024.12.554.0 | 2025.1.861.0 |
+| iMazing | 3.0.6 | 3.1.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -261,7 +259,7 @@ Follow the interactive prompts to:
 | <img src='Logos/hyper.png' width='32' height='32'> Hyper | 3.4.1 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
 | <img src='Logos/iina.png' width='32' height='32'> IINA | 1.3.5 |
-| <img src='Logos/imazing.png' width='32' height='32'> iMazing | 3.0.6 |
+| <img src='Logos/imazing.png' width='32' height='32'> iMazing | 3.1.0 |
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2 |
 | <img src='Logos/inkscape.png' width='32' height='32'> Inkscape | 1.4.028868 |
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.1 |
