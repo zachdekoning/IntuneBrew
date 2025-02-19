@@ -88,7 +88,11 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/jumpshare.json",
     "https://formulae.brew.sh/api/cask/jumpcut.json",
     "https://formulae.brew.sh/api/cask/keybase.json",
-    "https://formulae.brew.sh/api/cask/keyclu.json"
+    "https://formulae.brew.sh/api/cask/keyclu.json",
+    "https://formulae.brew.sh/api/formula/antigen.json",
+    "https://formulae.brew.sh/api/cask/nucleo.json",
+    "https://formulae.brew.sh/api/cask/principle.json",
+    "https://formulae.brew.sh/api/cask/spline.json"
 ]
 
 # DMG
@@ -260,7 +264,8 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/langgraph-studio.json",
     "https://formulae.brew.sh/api/cask/lookaway.json",
     "https://formulae.brew.sh/api/cask/joplin.json",
-    "https://formulae.brew.sh/api/cask/remote-desktop-manager.json"
+    "https://formulae.brew.sh/api/cask/remote-desktop-manager.json",
+    "https://formulae.brew.sh/api/cask/rotato.json"
 ]
 
 # PKG in DMG URLs
