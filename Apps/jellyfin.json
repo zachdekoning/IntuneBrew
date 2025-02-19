@@ -8,5 +8,5 @@
   "fileName": "jellyfin_10.10.5-arm64.dmg",
   "sha": "06515097487293e4bdc426f131ab897101611571551a697bc531e5189d0af830",
   "changelog": "https://github.com/jellyfin/jellyfin/releases",
-  "previous_version": "10.10.5"
+  "previous_version": "10.10.6"
 }

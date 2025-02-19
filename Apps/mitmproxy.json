@@ -9,5 +9,5 @@
   "type": "app",
   "changelog": "https://github.com/mitmproxy/mitmproxy/releases",
   "sha": "fdfd3ac1d0a2a55c3c6d29320347f831ca8fccf3da6d1ea1b19360e05863876b",
-  "previous_version": "11.1.2"
+  "previous_version": "11.1.3"
 }

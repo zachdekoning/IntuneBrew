@@ -1,12 +1,12 @@
 {
   "name": "Camtasia",
   "description": "Screen recorder and video editor",
-  "version": "25.0.0",
-  "url": "https://download.techsmith.com/camtasiamac/releases/2500/Camtasia.dmg",
+  "version": "25.0.1",
+  "url": "https://download.techsmith.com/camtasiamac/releases/2501/Camtasia.dmg",
   "bundleId": "com.techsmith.camtasia2023",
   "homepage": "https://www.techsmith.com/video-editor.html",
   "fileName": "Camtasia.dmg",
-  "sha": "92e819ec096befa3fbec20e32f417088b1894be54ffd8b5f421d25ab61239f7f",
+  "sha": "ff6d793862d4b63581917c8137ac93e57c59802857e9d6c159f51e88334bca20",
   "changelog": "https://support.techsmith.com/hc/en-us/articles/115006443267",
   "previous_version": "25.0.0"
 }
