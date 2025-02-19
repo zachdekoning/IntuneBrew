@@ -3,7 +3,7 @@
   "description": "Icon manager and library",
   "version": "4.1.5",
   "url": "https://intunebrew.blob.core.windows.net/pkg/nucleo_4.1.5.pkg",
-  "bundleId": null,
+  "bundleId": "co.ambercreative.nucleo",
   "homepage": "https://nucleoapp.com/",
   "fileName": "nucleo_4.1.5.pkg",
   "type": "app",
