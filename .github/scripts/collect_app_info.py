@@ -580,7 +580,7 @@ def main():
             file_path = os.path.join(apps_folder, file_name)
             print(f"📝 Attempting to write to: {os.path.abspath(file_path)}")
 
-            # For existing files, only update version, url and previous_version
+            # For existing files, update version, url, previous_version and calculate SHA
             if os.path.exists(file_path):
                 print(f"Found existing file for {display_name}")
                 with open(file_path, "r") as f:
@@ -590,9 +590,26 @@ def main():
                     new_url = app_info["url"]
                     previous_version = existing_data.get("version")
                     
-                    # Preserve all existing data except version, url and previous_version
+                    # Check if we need to calculate hash
+                    needs_hash = True
+                    if ("sha" in existing_data and
+                        existing_data.get("version") == new_version):
+                        needs_hash = False
+                        app_info["sha"] = existing_data["sha"]
+                        print(f"ℹ️ Using existing hash for {display_name}")
+                    
+                    if needs_hash:
+                        print(f"🔍 Calculating SHA256 hash for {display_name}...")
+                        file_hash = calculate_file_hash(app_info["url"])
+                        if file_hash:
+                            app_info["sha"] = file_hash
+                            print(f"✅ SHA256 hash calculated: {file_hash}")
+                        else:
+                            print(f"⚠️ Could not calculate SHA256 hash for {display_name}")
+                    
+                    # Preserve all existing data except version, url, sha and previous_version
                     for key in existing_data:
-                        if key not in ["version", "url", "previous_version"]:
+                        if key not in ["version", "url", "sha", "previous_version"]:
                             app_info[key] = existing_data[key]
                     
                     # Update version, url and previous_version
