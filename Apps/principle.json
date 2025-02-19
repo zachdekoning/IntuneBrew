@@ -3,7 +3,7 @@
   "description": "Design animated and interactive user interfaces",
   "version": "6.38",
   "url": "https://intunebrew.blob.core.windows.net/pkg/principle_6.38.pkg",
-  "bundleId": null,
+  "bundleId": "com.danielhooper.principle",
   "homepage": "https://principleformac.com/",
   "fileName": "Principle_6_38.zip",
   "type": "app",
