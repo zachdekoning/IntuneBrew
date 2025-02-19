@@ -123,7 +123,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/suspicious-package.json",
     "https://formulae.brew.sh/api/cask/notion.json",
     "https://formulae.brew.sh/api/cask/signal.json",
-    "https://formulae.brew.sh/api/cask/adobe-creative-cloud.json",
     "https://formulae.brew.sh/api/cask/anydesk.json",
     "https://formulae.brew.sh/api/cask/android-studio.json",
     "https://formulae.brew.sh/api/cask/brave-browser.json",
