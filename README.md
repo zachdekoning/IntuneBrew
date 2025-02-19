@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                              <p>
+                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,24 +70,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-19 18:42 UTC*
+*Last checked: 2025-02-19 19:37 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Vivaldi | 7.1.3570.50 | 7.1.3570.54 |
-| Cursor | 0.45.11 | 0.45.12 |
-| WhatsApp | 2.25.1.83 | 2.25.2.80 |
-| BetterTouchTool | 5.200 | 5.205 |
-| Google Chrome | 133.0.6943.99 | 133.0.6943.127 |
-| Canva | 1.103.0 | 1.104.0 |
-| Krisp | 2.55.5 | 2.55.6 |
-| Raycast | 1.91.2 | 1.92.0 |
-| Zed | 0.173.11 | 0.174.4 |
-| LM Studio | 0.3.9 | 0.3.10 |
-| Opera | 117.0.5408.32 | 117.0.5408.35 |
-| BoltAI | 1.32.3 | 1.32.4 |
-| Downie | 4.9.4 | 4.9.5 |
-| Remote Desktop Manager | 2024.3.10.3 | 2024.3.10.4 |
+| AltTab | 7.19.1 | 7.20.0 |
+| Amazon Q | 1.6.1 | 1.6.2 |
+| Cloudflare WARP | 2024.12.554.0 | 2025.1.861.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -147,10 +136,10 @@ Follow the interactive prompts to:
 | <img src='Logos/airy.png' width='32' height='32'> Airy | 3.29.2 |
 | <img src='Logos/alacritty.png' width='32' height='32'> Alacritty | 0.15.1 |
 | <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.5.1 |
-| <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.19.1 |
+| <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.20.0 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.5 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22292 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.6.1 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.6.2 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.14 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
@@ -201,7 +190,7 @@ Follow the interactive prompts to:
 | <img src='Logos/cleanmymac.png' width='32' height='32'> CleanMyMac | 5.0.5 |
 | <img src='Logos/clion.png' width='32' height='32'> CLion | 2024.3.3 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
-| <img src='Logos/cloudflare_warp.png' width='32' height='32'> Cloudflare WARP | 2024.12.554.0 |
+| <img src='Logos/cloudflare_warp.png' width='32' height='32'> Cloudflare WARP | 2025.1.861.0 |
 | <img src='Logos/codeedit.png' width='32' height='32'> CodeEdit | 0.3.3 |
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |

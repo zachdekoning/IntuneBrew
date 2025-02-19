@@ -7,6 +7,6 @@
   "homepage": "https://nucleoapp.com/",
   "fileName": "Nucleo_4.1.5.zip",
   "type": "app",
-  "previous_version": "4.1.5",
-  "changelog": "https://nucleoapp.com/changelog"
+  "changelog": "https://nucleoapp.com/changelog",
+  "previous_version": "4.1.5"
 }
