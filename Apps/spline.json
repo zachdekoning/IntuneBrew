@@ -1,0 +1,11 @@
+{
+  "name": "Spline",
+  "description": "Design and collaborate in 3D",
+  "version": "0.12.5",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/spline_0.12.5.pkg",
+  "bundleId": null,
+  "homepage": "https://spline.design/",
+  "fileName": "Spline-0.12.5-arm64.mac.zip",
+  "type": "app",
+  "previous_version": "0.12.5"
+}

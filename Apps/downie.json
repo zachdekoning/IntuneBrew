@@ -1,12 +1,12 @@
 {
   "name": "Downie",
   "description": "Downloads videos from different websites",
-  "version": "4.9.4",
-  "url": "https://software.charliemonroe.net/trial/downie/v4/Downie_4_4895.dmg",
+  "version": "4.9.5",
+  "url": "https://software.charliemonroe.net/trial/downie/v4/Downie_4_4899.dmg",
   "bundleId": "com.charliemonroe.Downie-4",
   "homepage": "https://software.charliemonroe.net/downie.php",
   "fileName": "Downie_4_4895.dmg",
-  "sha": "ad99e382ab82d1d132e8c42b71cf8c2976120053ed762ad64b97ebea85bb6de0",
+  "sha": "f7aab7af4bf90cf0b26395b94db5bf38419e5654eb4c3d135aba842ec062abfe",
   "changelog": "https://software.charliemonroe.net/downie/version-history/",
   "previous_version": "4.9.4"
 }
