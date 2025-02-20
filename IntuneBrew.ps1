@@ -1,32 +1,19 @@
 <#PSScriptInfo
-
 .VERSION 0.3.6
-
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
-
 .AUTHOR ugurk
-
+.COMPANYNAME
 .COPYRIGHT
-
-.TAGS
-
+.TAGS Intune macOS Homebrew
 .LICENSEURI https://github.com/ugurkocde/IntuneBrew/blob/main/LICENSE
-
 .PROJECTURI https://github.com/ugurkocde/IntuneBrew
-
 .ICONURI
-
-.EXTERNALMODULEDEPENDENCIES
-
+.EXTERNALMODULEDEPENDENCIES Microsoft.Graph.Authentication
 .REQUIREDSCRIPTS
-
 .EXTERNALSCRIPTDEPENDENCIES
-
 .RELEASENOTES
-
-
+Version 0.3.7: Fix Parse Errors
 .PRIVATEDATA
-
 #>
 
 <#
@@ -402,7 +389,8 @@ function Download-AppFile($url, $fileName, $expectedHash) {
         Write-Host "   • The SHA256 hash of the downloaded file matches the expected value" -ForegroundColor Gray
         Write-Host "   • This confirms the file is authentic and hasn't been modified" -ForegroundColor Gray
         return $outputPath
-    } else {
+    }
+    else {
         Write-Host "`n❌ Security check failed - File integrity validation error!" -ForegroundColor Red
         Remove-Item $outputPath -Force
         Write-Host "`n"
@@ -665,7 +653,8 @@ function Get-IntuneApps {
                 
                 if ($needsUpdate.Count -eq $intuneVersions.Count) {
                     Write-Host " → Update available ($latestIntuneVersion → $githubVersion)" -ForegroundColor Green
-                } else {
+                }
+                else {
                     Write-Host " → Up to date ($latestIntuneVersion)" -ForegroundColor Gray
                 }
                 
@@ -843,7 +832,8 @@ $appsToUpload = $intuneAppVersions | Where-Object {
     if ($UpdateAll) {
         # For UpdateAll, only include apps that are in Intune and have updates
         $_.IntuneVersion -ne 'Not in Intune' -and (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion)
-    } else {
+    }
+    else {
         # For normal operation, include both new and updatable apps
         $_.IntuneVersion -eq 'Not in Intune' -or (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion)
     }
