@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 0.3.6
+.VERSION 0.3.7
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 .AUTHOR ugurk
 .COMPANYNAME
@@ -48,8 +48,8 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.3.6" -ForegroundColor Yellow -NoNewline
-Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-15" -ForegroundColor Magenta
+Write-Host " | Version" -NoNewline; Write-Host " 0.3.7" -ForegroundColor Yellow -NoNewline
+Write-Host " | Last updated: " -NoNewline; Write-Host "2025-02-20" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
 Write-Host "You can sponsor the development of this project at https://github.com/sponsors/ugurkocde" -ForegroundColor Red
@@ -1094,4 +1094,5 @@ foreach ($app in $appsToUpload) {
 Write-Host "`n🎉 All operations completed successfully!" -ForegroundColor Green
 Disconnect-MgGraph > $null 2>&1
 Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
+
 
