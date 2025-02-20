@@ -1,13 +1,13 @@
 {
   "name": "Arc",
   "description": "Chromium based browser",
-  "version": "1.82.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/arc_1.82.1.pkg",
+  "version": "1.83.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/arc_1.83.0.pkg",
   "bundleId": "company.thebrowser.Browser",
   "homepage": "https://arc.net/",
-  "fileName": "arc_1.82.1.pkg",
+  "fileName": "arc_1.83.0.pkg",
   "type": "app",
-  "sha": "c001138dfa5454ab3e2483d9571ac6da36d0c795a9be2711bcf78d5847e0f111",
+  "sha": "12e96d528612cd6154ea7f8c4cfe699956aeba5d3a5ad67166e20dde488a7d5e",
   "changelog": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2025-Release-Notes",
   "previous_version": "1.82.1"
 }

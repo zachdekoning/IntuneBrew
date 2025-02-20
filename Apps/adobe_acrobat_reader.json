@@ -1,13 +1,13 @@
 {
   "name": "Adobe Acrobat Reader",
   "description": "View, print, and comment on PDF documents",
-  "version": "24.005.20400",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/adobe_acrobat_reader_24.005.20400.pkg",
+  "version": "24.005.20414",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/adobe_acrobat_reader_24.005.20414.pkg",
   "bundleId": "com.adobe.Reader",
   "homepage": "https://www.adobe.com/acrobat/pdf-reader.html",
-  "fileName": "adobe_acrobat_reader_24.005.20400.pkg",
+  "fileName": "adobe_acrobat_reader_24.005.20414.pkg",
   "type": "pkg_in_dmg",
   "changelog": "https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html",
-  "sha": "42a08a0ee8c1961e9e46e10b1202e2d8b785fdb449495b3e5bbe0fa193adbf54",
+  "sha": "70f3aa7a05a555d689c2490d479524fb7cfe7b37b73e86c65771626f1d06dd73",
   "previous_version": "24.005.20400"
 }
