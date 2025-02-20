@@ -357,8 +357,12 @@ def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, 
 
     bundle_id = find_bundle_id(json_string)
     
-    # Clean up version string by removing anything after the comma
-    version = data["version"].split(',')[0] if ',' in data["version"] else data["version"]
+    # Clean up version string by removing anything after the comma or underscore
+    version = data["version"]
+    if ',' in version:
+        version = version.split(',')[0]
+    if '_' in version:
+        version = version.split('_')[0]
 
     app_info = {
         "name": data["name"][0],
