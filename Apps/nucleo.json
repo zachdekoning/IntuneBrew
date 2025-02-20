@@ -7,5 +7,6 @@
   "homepage": "https://nucleoapp.com/",
   "fileName": "nucleo_4.1.5.pkg",
   "type": "app",
-  "sha": "e26e499402aad77e9a330194ef2f500b24f7cfe94985cf86a93c036d7204fb42"
+  "sha": "e26e499402aad77e9a330194ef2f500b24f7cfe94985cf86a93c036d7204fb42",
+  "previous_version": "4.1.5"
 }

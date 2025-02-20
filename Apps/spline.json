@@ -7,5 +7,6 @@
   "homepage": "https://spline.design/",
   "fileName": "spline_0.12.5.pkg",
   "type": "app",
-  "sha": "d0421cd103bf21143e0190fe8bb143b9f37b721fac6213271c1bb46ecf678b08"
+  "sha": "d0421cd103bf21143e0190fe8bb143b9f37b721fac6213271c1bb46ecf678b08",
+  "previous_version": "0.12.5"
 }

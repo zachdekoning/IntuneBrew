@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                  <p>
+                                                                                    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,11 +70,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-19 19:44 UTC*
+*Last checked: 2025-02-20 00:24 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| iMazing | 3.0.6 | 3.1.0 |
+| Brave | 1.75.178.0 | 1.75.180.0 |
+| Wireshark | 4.4.3 | 4.4.4 |
+| Zed | 0.174.4 | 0.174.5 |
+| Rancher Desktop | 1.17.1 | 1.18.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -169,7 +172,7 @@ Follow the interactive prompts to:
 | <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.32.4 |
 | <img src='Logos/boop.png' width='32' height='32'> Boop | 1.4.0 |
 | <img src='Logos/boxcryptor.png' width='32' height='32'> Boxcryptor | 3.13.680 |
-| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.75.178.0 |
+| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.75.180.0 |
 | <img src='Logos/breaktimer.png' width='32' height='32'> BreakTimer | 1.3.2 |
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.39.0 |
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2024.4.3 |
@@ -332,7 +335,7 @@ Follow the interactive prompts to:
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
-| <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.17.1 |
+| <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.0 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.92.0 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
@@ -373,10 +376,10 @@ Follow the interactive prompts to:
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.0 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.3.4 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
-| <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.3 |
+| <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.4 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.4 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.5 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.6b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.10.49367 |
 
