@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                      <p>
+                                                                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,19 +70,18 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-20 17:48 UTC*
+*Last checked: 2025-02-21 00:24 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Postman | 11.33.0 | 11.33.4 |
-| Arc | 1.82.1 | 1.83.0 |
-| Cursor | 0.45.12 | 0.45.14 |
-| AltTab | 7.20.0 | 7.20.1 |
-| Signal | 7.42.0 | 7.43.0 |
-| OrbStack | 1.10.0_19021 | 1.10.1_19045 |
-| Termius | 9.14.0 | 9.15.1 |
-| Raycast | 1.92.0 | 1.92.1 |
-| Adobe Acrobat Reader | 24.005.20400 | 24.005.20414 |
+| BetterTouchTool | 5.205 | 5.210 |
+| Dropshare | 5.58 | 5.59 |
+| OrbStack | 1.10.1_19045 | 1.10.1 |
+| ChatGPT | 1.2025.036 | 1.2025.043 |
+| Bruno | 1.39.0 | 1.39.1 |
+| Zed | 0.174.5 | 0.174.6 |
+| Amazon Q | 1.6.2 | 1.6.3 |
+| NoMachine | 8.16.1_2 | 8.16.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -146,7 +145,7 @@ Follow the interactive prompts to:
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.20.1 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.5 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22292 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.6.2 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.6.3 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.2.2.14 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
@@ -168,7 +167,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.4 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.205 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.210 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.5.30614 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.0 |
@@ -180,7 +179,7 @@ Follow the interactive prompts to:
 | <img src='Logos/boxcryptor.png' width='32' height='32'> Boxcryptor | 3.13.680 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.75.180.0 |
 | <img src='Logos/breaktimer.png' width='32' height='32'> BreakTimer | 1.3.2 |
-| <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.39.0 |
+| <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.39.1 |
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2024.4.3 |
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2024.4.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
@@ -189,7 +188,7 @@ Follow the interactive prompts to:
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.1 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.104.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
-| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.036 |
+| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.043 |
 | <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 133.0.6943.7 |
 | <img src='Logos/cisco_jabber.png' width='32' height='32'> Cisco Jabber | 20241220015538 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
@@ -223,7 +222,7 @@ Follow the interactive prompts to:
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 218.4.4348 |
 | <img src='Logos/dropdmg.png' width='32' height='32'> DropDMG | 3.6.8 |
-| <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 5.58 |
+| <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 5.59 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.126.0 |
 | <img src='Logos/easyfind.png' width='32' height='32'> EasyFind | 5.0.2 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2 |
@@ -317,7 +316,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 135.0.1 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
-| <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1_2 |
+| <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1 |
 | <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.34.1 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.7.2 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.5.0 |
@@ -331,7 +330,7 @@ Follow the interactive prompts to:
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.1 |
 | <img src='Logos/opera.png' width='32' height='32'> Opera | 117.0.5408.35 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6 |
-| <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.10.1_19045 |
+| <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.10.1 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.1-55876 |
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.11 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.0 |
@@ -385,7 +384,7 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.4 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.5 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.6 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.6b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.10.49367 |
 
