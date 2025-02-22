@@ -1,12 +1,12 @@
 {
   "name": "draw.io Desktop",
   "description": "Online diagram software",
-  "version": "26.0.9",
-  "url": "https://github.com/jgraph/drawio-desktop/releases/download/v26.0.9/draw.io-arm64-26.0.9.dmg",
+  "version": "26.0.15",
+  "url": "https://github.com/jgraph/drawio-desktop/releases/download/v26.0.15/draw.io-arm64-26.0.15.dmg",
   "bundleId": "com.jgraph.drawio.desktop",
   "homepage": "https://www.diagrams.net/",
   "fileName": "draw.io-arm64-26.0.9.dmg",
-  "sha": "3fe7ae4f1949b6cc21ed9dc318985e2fd2bb9f3e9ba887525bfc0ced5b17982f",
+  "sha": "05ed6d692fef6acc4d7a4501699b83910eac6cc6fb16794d5a2d2ba92331cf54",
   "changelog": "https://github.com/jgraph/drawio-desktop/releases",
   "previous_version": "26.0.9"
 }

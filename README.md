@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                        <p>
+                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,18 +70,23 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-21 00:24 UTC*
+*Last checked: 2025-02-22 00:24 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| BetterTouchTool | 5.205 | 5.210 |
-| Dropshare | 5.58 | 5.59 |
-| OrbStack | 1.10.1_19045 | 1.10.1 |
-| ChatGPT | 1.2025.036 | 1.2025.043 |
-| Bruno | 1.39.0 | 1.39.1 |
-| Zed | 0.174.5 | 0.174.6 |
-| Amazon Q | 1.6.2 | 1.6.3 |
-| NoMachine | 8.16.1_2 | 8.16.1 |
+| DeepL | 25.2.11705510 | 25.2.11731739 |
+| BetterTouchTool | 5.210 | 5.212 |
+| blip | 1.1.2 | 1.1.5 |
+| OrbStack | 1.10.1 | 1.10.2 |
+| Termius | 9.15.1 | 9.15.2 |
+| NetBeans IDE | 24 | 25 |
+| DataGrip | 2024.3.4 | 2024.3.5 |
+| Discord | 0.0.337 | 0.0.338 |
+| Elgato Wave Link | 2.0.4.3719 | 2.0.4.3737 |
+| draw.io Desktop | 26.0.9 | 26.0.15 |
+| Stats | 2.11.31 | 2.11.32 |
+| Microsoft Edge | 133.0.3065.69 | 133.0.3065.82 |
+| Apidog | 2.6.49 | 2.6.50 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -151,7 +156,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.0 |
-| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.6.49 |
+| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.6.50 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.83.0 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
@@ -167,12 +172,12 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.4 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.210 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.212 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.5.30614 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.0 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
-| <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.2 |
+| <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.5 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
 | <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.32.4 |
 | <img src='Logos/boop.png' width='32' height='32'> Boop | 1.4.0 |
@@ -206,18 +211,18 @@ Follow the interactive prompts to:
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.8.1 |
 | <img src='Logos/dataflare.png' width='32' height='32'> Dataflare | 1.9.3 |
-| <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.4 |
+| <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.5 |
 | <img src='Logos/dataspell.png' width='32' height='32'> DataSpell | 2024.3.1.1 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
 | <img src='Logos/dbgate.png' width='32' height='32'> DbGate | 6.2.0 |
-| <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.2.11705510 |
+| <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.2.11731739 |
 | <img src='Logos/devtoys.png' width='32' height='32'> DevToys | 2.0.8.0 |
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
-| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.337 |
+| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.338 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.5 |
-| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.9 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.15 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.131 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 218.4.4348 |
@@ -229,7 +234,7 @@ Follow the interactive prompts to:
 | <img src='Logos/elephas.png' width='32' height='32'> Elephas | 10.12 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
-| <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.4.3719 |
+| <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.4.3737 |
 | <img src='Logos/epic_games_launcher.png' width='32' height='32'> Epic Games Launcher | 17.2.2 |
 | <img src='Logos/etcher.png' width='32' height='32'> Etcher | 1.19.25 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
@@ -305,7 +310,7 @@ Follow the interactive prompts to:
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.77.24121924 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
-| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 133.0.3065.69 |
+| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 133.0.3065.82 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.94.25020927 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25016.1904.3401.2239 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.97.2 |
@@ -315,7 +320,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.2 |
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 135.0.1 |
-| <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 24 |
+| <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 25 |
 | <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1 |
 | <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.34.1 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.7.2 |
@@ -330,7 +335,7 @@ Follow the interactive prompts to:
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.1 |
 | <img src='Logos/opera.png' width='32' height='32'> Opera | 117.0.5408.35 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6 |
-| <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.10.1 |
+| <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.10.2 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.1-55876 |
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.11 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.0 |
@@ -357,7 +362,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.57.463 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.31 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.32 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
@@ -367,7 +372,7 @@ Follow the interactive prompts to:
 | <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.80.2 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.7 |
-| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.15.1 |
+| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.15.2 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.11.0 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
