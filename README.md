@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                          <p>
+                                                                                            <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,23 +70,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-22 00:24 UTC*
+*Last checked: 2025-02-23 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| DeepL | 25.2.11705510 | 25.2.11731739 |
-| BetterTouchTool | 5.210 | 5.212 |
-| blip | 1.1.2 | 1.1.5 |
-| OrbStack | 1.10.1 | 1.10.2 |
-| Termius | 9.15.1 | 9.15.2 |
-| NetBeans IDE | 24 | 25 |
-| DataGrip | 2024.3.4 | 2024.3.5 |
-| Discord | 0.0.337 | 0.0.338 |
-| Elgato Wave Link | 2.0.4.3719 | 2.0.4.3737 |
-| draw.io Desktop | 26.0.9 | 26.0.15 |
-| Stats | 2.11.31 | 2.11.32 |
-| Microsoft Edge | 133.0.3065.69 | 133.0.3065.82 |
-| Apidog | 2.6.49 | 2.6.50 |
+| AltTab | 7.20.1 | 7.21.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -147,7 +135,7 @@ Follow the interactive prompts to:
 | <img src='Logos/airy.png' width='32' height='32'> Airy | 3.29.2 |
 | <img src='Logos/alacritty.png' width='32' height='32'> Alacritty | 0.15.1 |
 | <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.5.1 |
-| <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.20.1 |
+| <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.21.1 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.5 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22292 |
 | <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.6.3 |
