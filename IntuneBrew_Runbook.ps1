@@ -51,8 +51,7 @@ function Write-Log {
     Write-Output $logMessage
 }
 
-Write-Log "Starting IntuneBrew Automation Script - Version 0.4.0"
-Write-Log "Automated macOS Application Deployment via Microsoft Intune"
+Write-Log "Starting IntuneBrew Automation Runbook - Version 0.1"
 
 # Authentication START
 
