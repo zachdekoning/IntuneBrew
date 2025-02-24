@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/geekbench_ai_1.2.0.pkg",
   "bundleId": "com.primatelabs.macos.geekbenchml",
   "homepage": "https://www.geekbench.com/ai/",
-  "fileName": "geekbench_ai_1.2.0.pkg",
+  "fileName": "GeekbenchAI-1.2.0-Mac.zip",
   "type": "app",
   "sha": "0ea5ae5be3d9c9178cae3ff5f2546fd3a693999999d746d8085cb2f73c77c60c",
   "previous_version": "1.2.0"

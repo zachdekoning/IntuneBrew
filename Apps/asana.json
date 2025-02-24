@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/asana_2.3.0.pkg",
   "bundleId": "com.asana.app",
   "homepage": "https://asana.com/",
-  "fileName": "asana_2.3.0.pkg",
+  "fileName": "Asana-darwin-arm64-2.3.0.zip",
   "type": "app",
   "sha": "f6ba41db5eeaa270d4ffdf4d4bf932aaef4935a46b74b86bec4c88ae4b8a7896",
   "changelog": "https://help.asana.com/s/article/release-notes?language=en_US",

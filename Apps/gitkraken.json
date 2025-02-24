@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/gitkraken_10.7.0.pkg",
   "bundleId": "com.axosoft.gitkraken",
   "homepage": "https://www.gitkraken.com/",
-  "fileName": "gitkraken_10.7.0.pkg",
+  "fileName": "GitKraken-v10.7.0.zip",
   "type": "app",
   "sha": "235252ca73a4303f6ae0d30f3a389ca88b1f489d68c115f8b6464e698301a0f3",
   "previous_version": "10.7.0"

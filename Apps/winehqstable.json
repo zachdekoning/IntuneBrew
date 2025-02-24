@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/winehqstable_10.0.pkg",
   "bundleId": "org.winehq.wine-stable.wine",
   "homepage": "https://wiki.winehq.org/MacOS",
-  "fileName": "winehqstable_10.0.pkg",
+  "fileName": "wine-stable-10.0-osx64.tar.xz",
   "type": "app",
   "sha": "64c83819dd162ac2142654f0330a609d1aa81e065be6e1b08a50a44acd12d0b2",
   "changelog": "https://www.winehq.org/news/",

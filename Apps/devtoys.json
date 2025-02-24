@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/devtoys_2.0.8.0.pkg",
   "bundleId": "com.devtoys",
   "homepage": "https://github.com/DevToys-app/DevToys",
-  "fileName": "devtoys_2.0.8.0.pkg",
+  "fileName": "devtoys_osx_arm64.zip",
   "type": "app",
   "sha": "806ec612594dbaa569b75d82345397f26f19dc845dd6c508e92ed928a9ab06b5",
   "changelog": "https://github.com/DevToys-app/DevToys/releases",

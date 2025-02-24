@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/angry_ip_scanner_3.9.1.pkg",
   "bundleId": "net.azib.ipscan",
   "homepage": "https://angryip.org/",
-  "fileName": "angry_ip_scanner_3.9.1.pkg",
+  "fileName": "ipscan-macArm64-3.9.1.zip",
   "type": "app",
   "sha": "692944316acffb9ebfa8099c4043dafea41af470187e407fb5ced5dbd41c1098",
   "changelog": "https://github.com/angryip/ipscan/releases",

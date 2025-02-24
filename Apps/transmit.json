@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/transmit_5.10.8.pkg",
   "bundleId": "com.panic.Transmit",
   "homepage": "https://panic.com/transmit/",
-  "fileName": "transmit_5.10.8.pkg",
+  "fileName": "Transmit%205.10.8.zip",
   "type": "app",
   "sha": "c941b174ca72f3cef3bc32d82cbd81c26b35454c51fec8bfd5bc77f2397c8f43",
   "changelog": "https://help.panic.com/releasenotes/transmit5/",

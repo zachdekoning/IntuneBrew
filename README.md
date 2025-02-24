@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                <p>
+                                                                                                  <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,16 +70,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-24 16:49 UTC*
+*Last checked: 2025-02-24 17:20 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Alfred | 5.5.1 | 5.6 |
-| DuckDuckGo | 1.126.0 | 1.127.0 |
-| draw.io Desktop | 26.0.15 | 26.0.16 |
-| Zen Browser | 1.7.6b | 1.8b |
-| Opera | 117.0.5408.35 | 117.0.5408.39 |
-| Adobe Acrobat Pro DC | 24.005.20414 | 24.005.20421 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune

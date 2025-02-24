@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/home_assistant_2024.12.2.pkg",
   "bundleId": "io.robbie.HomeAssistant",
   "homepage": "https://companion.home-assistant.io/",
-  "fileName": "home_assistant_2024.12.2.pkg",
+  "fileName": "home-assistant-mac.zip",
   "type": "app",
   "sha": "87d28471a87e4464558f0a803addb1999adf1825cec17a9048c60d33350f5eaa",
   "previous_version": "2024.12.2"
