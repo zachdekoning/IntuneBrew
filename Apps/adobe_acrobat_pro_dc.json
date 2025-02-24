@@ -1,13 +1,13 @@
 {
   "name": "Adobe Acrobat Pro DC",
   "description": "View, create, manipulate, print and manage files in Portable Document Format",
-  "version": "24.005.20414",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/adobe_acrobat_pro_dc_24.005.20414.pkg",
+  "version": "24.005.20421",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/adobe_acrobat_pro_dc_24.005.20421.pkg",
   "bundleId": "com.adobe.Acrobat.Pro",
   "homepage": "https://www.adobe.com/acrobat/pdf-reader.html",
-  "fileName": "adobe_acrobat_pro_dc_24.005.20414.pkg",
+  "fileName": "adobe_acrobat_pro_dc_24.005.20421.pkg",
   "type": "pkg_in_dmg",
   "changelog": "https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html",
-  "sha": "8920e737c786418c0203ada7d68e9caed2d4a5d75bf9644fa67f2d4fc6e5524c",
+  "sha": "cff768cf2c8d1df2a7b7cb3616ac55dad0afb952ed1d7b46aceeb0dfbd56b8e9",
   "previous_version": "24.005.20414"
 }

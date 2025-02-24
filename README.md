@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                              <p>
+                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,11 +70,16 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-24 00:25 UTC*
+*Last checked: 2025-02-24 16:49 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| BetterTouchTool | 5.212 | 5.216 |
+| Alfred | 5.5.1 | 5.6 |
+| DuckDuckGo | 1.126.0 | 1.127.0 |
+| draw.io Desktop | 26.0.15 | 26.0.16 |
+| Zen Browser | 1.7.6b | 1.8b |
+| Opera | 117.0.5408.35 | 117.0.5408.39 |
+| Adobe Acrobat Pro DC | 24.005.20414 | 24.005.20421 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -128,13 +133,13 @@ Follow the interactive prompts to:
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.62 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.0.1 |
-| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20414 |
+| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 24.005.20421 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20414 |
 | <img src='Logos/airfoil.png' width='32' height='32'> Airfoil | 5.12.4 |
 | <img src='Logos/airtable.png' width='32' height='32'> Airtable | 1.6.6 |
 | <img src='Logos/airy.png' width='32' height='32'> Airy | 3.29.2 |
 | <img src='Logos/alacritty.png' width='32' height='32'> Alacritty | 0.15.1 |
-| <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.5.1 |
+| <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.6 |
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.21.1 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.5 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22292 |
@@ -210,13 +215,13 @@ Follow the interactive prompts to:
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.5 |
-| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.15 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.16 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.131 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 218.4.4348 |
 | <img src='Logos/dropdmg.png' width='32' height='32'> DropDMG | 3.6.8 |
 | <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 5.59 |
-| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.126.0 |
+| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.127.0 |
 | <img src='Logos/easyfind.png' width='32' height='32'> EasyFind | 5.0.2 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2 |
 | <img src='Logos/elephas.png' width='32' height='32'> Elephas | 10.12 |
@@ -321,7 +326,7 @@ Follow the interactive prompts to:
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.005.0112.0003 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.1 |
-| <img src='Logos/opera.png' width='32' height='32'> Opera | 117.0.5408.35 |
+| <img src='Logos/opera.png' width='32' height='32'> Opera | 117.0.5408.39 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.6 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.10.2 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.2.1-55876 |
@@ -378,7 +383,7 @@ Follow the interactive prompts to:
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.6 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.7.6b |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.8b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.10.49367 |
 
 > [!NOTE]
