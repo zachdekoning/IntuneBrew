@@ -3,7 +3,6 @@
     This is for you to schedule and run IntuneBrew via a Azure Runbook. 
     
     This will upload all available updates for all macOS applications in Intune.  
-
 .DESCRIPTION
     IntuneBrew is an automation script that streamlines the process of uploading and updating macOS applications
     in Microsoft Intune. It leverages a curated repository of popular applications to ensure your organization's
