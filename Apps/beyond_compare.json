@@ -3,7 +3,7 @@
   "description": "Compare files and folders",
   "version": "5.0.5.30614",
   "url": "https://intunebrew.blob.core.windows.net/pkg/beyond_compare_5.0.5.30614.pkg",
-  "bundleId": null,
+  "bundleId": "com.ScooterSoftware.BeyondCompare",
   "homepage": "https://www.scootersoftware.com/",
   "fileName": "beyond_compare_5.0.5.30614.pkg",
   "type": "app",
