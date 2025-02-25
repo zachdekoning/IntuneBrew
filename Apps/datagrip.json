@@ -5,7 +5,7 @@
   "url": "https://download.jetbrains.com/datagrip/datagrip-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.datagrip",
   "homepage": "https://www.jetbrains.com/datagrip/",
-  "fileName": "datagrip-2024.3.4-aarch64.dmg",
+  "fileName": "datagrip-2024.3.5-aarch64.dmg",
   "sha": "1ba33de8b5595a7ab3ab683ed21200c6c884c7c9299a9dfe4414ae29b219dc09",
   "changelog": "https://www.jetbrains.com/datagrip/whatsnew/",
   "previous_version": "2024.3.5"

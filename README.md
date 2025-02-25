@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                      <p>
+                                                                                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,15 +70,17 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-25 00:25 UTC*
+*Last checked: 2025-02-25 11:04 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Webex Teams | 45.2.0.31755 | 45.2.0.31822 |
-| Discord | 0.0.338 | 0.0.339 |
-| Wireshark | 4.4.4 | 4.4.5 |
-| Privileges | 2.1.0 | 2.2.0 |
-| Elephas | 10.12 | 11.094 |
+| Windows App | 11.1.0 | 11.1.1 |
+| Todoist | 9.11.0 | 9.11.1 |
+| Zed | 0.174.6 | 0.174.7 |
+| Zen Browser | 1.8b | 1.8.1b |
+| DrawBot | 3.131 | 3.132 |
+| Calmly Writer | 2.0.56 | 2.0.57 |
+| Insta360 Studio | 5.5.0 | 5.5.2 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -181,7 +183,7 @@ Follow the interactive prompts to:
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2024.4.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.26.0 |
-| <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.56 |
+| <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.57 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.1 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.104.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
@@ -215,7 +217,7 @@ Follow the interactive prompts to:
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.5 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.16 |
-| <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.131 |
+| <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 218.4.4348 |
 | <img src='Logos/dropdmg.png' width='32' height='32'> DropDMG | 3.6.8 |
@@ -268,7 +270,7 @@ Follow the interactive prompts to:
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2 |
 | <img src='Logos/inkscape.png' width='32' height='32'> Inkscape | 1.4.028868 |
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.1 |
-| <img src='Logos/insta360_studio.png' width='32' height='32'> Insta360 Studio | 5.5.0 |
+| <img src='Logos/insta360_studio.png' width='32' height='32'> Insta360 Studio | 5.5.2 |
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.3 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
 | <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
@@ -321,7 +323,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.5 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.1 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.7 |
-| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.11 |
+| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.12 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.005.0112.0003 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.1 |
@@ -365,7 +367,7 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.7 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.15.2 |
-| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.11.0 |
+| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.11.1 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
@@ -375,14 +377,14 @@ Follow the interactive prompts to:
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.2.0.31822 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.3 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.2.80 |
-| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.0 |
+| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.1 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.3.4 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.6 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.8b |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.7 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.8.1b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.10.49367 |
 
 > [!NOTE]

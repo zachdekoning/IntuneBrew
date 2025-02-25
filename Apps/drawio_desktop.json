@@ -5,7 +5,7 @@
   "url": "https://github.com/jgraph/drawio-desktop/releases/download/v26.0.16/draw.io-arm64-26.0.16.dmg",
   "bundleId": "com.jgraph.drawio.desktop",
   "homepage": "https://www.diagrams.net/",
-  "fileName": "draw.io-arm64-26.0.9.dmg",
+  "fileName": "draw.io-arm64-26.0.16.dmg",
   "sha": "e9b4954fade3b9ee4cd650a0c17620e35ef4d8729618b8d924cbcda7e9cd22f7",
   "changelog": "https://github.com/jgraph/drawio-desktop/releases",
   "previous_version": "26.0.16"

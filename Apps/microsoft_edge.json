@@ -5,7 +5,7 @@
   "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/14e056f8-ec7a-459c-abcd-d1d4a7604189/MicrosoftEdge-133.0.3065.82.pkg",
   "bundleId": "com.microsoft.edgemac",
   "homepage": "https://www.microsoft.com/en-us/edge?form=",
-  "fileName": "MicrosoftEdge-133.0.3065.59.pkg",
+  "fileName": "MicrosoftEdge-133.0.3065.82.pkg",
   "sha": "f6fb41a3185081d66740148154176fcf178b254c92d85f4464d4f69421eb3175",
   "changelog": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel",
   "previous_version": "133.0.3065.82"

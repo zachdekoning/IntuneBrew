@@ -5,7 +5,7 @@
   "url": "https://github.com/usebruno/bruno/releases/download/v1.39.1/bruno_1.39.1_arm64_mac.dmg",
   "bundleId": "com.usebruno.app",
   "homepage": "https://www.usebruno.com/",
-  "fileName": "bruno_1.38.1_arm64_mac.dmg",
+  "fileName": "bruno_1.39.1_arm64_mac.dmg",
   "sha": "2b175ae54a34b722dbada104ad4aac4a410cda46ea10882a262f5bc9d0d997b8",
   "changelog": "https://github.com/usebruno/bruno/releases",
   "previous_version": "1.39.1"

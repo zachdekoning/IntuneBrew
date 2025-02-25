@@ -5,7 +5,7 @@
   "url": "https://github.com/ankitects/anki/releases/download/25.02/anki-25.02-mac-apple-qt6.dmg",
   "bundleId": "net.ankiweb.dtop",
   "homepage": "https://apps.ankiweb.net/",
-  "fileName": "anki-24.11-mac-apple-qt6.dmg",
+  "fileName": "anki-25.02-mac-apple-qt6.dmg",
   "sha": "e0deae9133b1276169ae6b52c540b199ab6129fe49ea85cd089caa2d9dfdcac9",
   "changelog": "https://github.com/ankitects/anki/releases",
   "previous_version": "25.02"

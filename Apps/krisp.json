@@ -5,7 +5,7 @@
   "url": "https://cdn.krisp.ai/mp/mn/2.55/mac/Krisp_2.55.6_arm64.pkg",
   "bundleId": "ai.krisp.krispMac*",
   "homepage": "https://krisp.ai/",
-  "fileName": "Krisp_2.54.6_arm64.pkg",
+  "fileName": "Krisp_2.55.6_arm64.pkg",
   "sha": "3c97a8f6187c860b4e843a3266da4ac5ba0bab611f3cd3dcde0689b08c27a410",
   "changelog": "https://help.krisp.ai/hc/en-us/articles/360012250839-Krisp-Desktop-app-changelog",
   "previous_version": "2.55.6"

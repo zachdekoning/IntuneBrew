@@ -5,7 +5,7 @@
   "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.18.0/Rancher.Desktop-1.18.0.aarch64.dmg",
   "bundleId": "io.rancherdesktop.app",
   "homepage": "https://rancherdesktop.io/",
-  "fileName": "Rancher.Desktop-1.17.1.aarch64.dmg",
+  "fileName": "Rancher.Desktop-1.18.0.aarch64.dmg",
   "sha": "dd4d615418a55165ba58987295fb0f79998cda3bc722ee93274ea082c61abd26",
   "changelog": "https://github.com/rancher-sandbox/rancher-desktop/releases",
   "previous_version": "1.18.0"

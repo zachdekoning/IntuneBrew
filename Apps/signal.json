@@ -5,7 +5,7 @@
   "url": "https://updates.signal.org/desktop/signal-desktop-mac-arm64-7.43.0.dmg",
   "bundleId": "org.whispersystems.signal-desktop",
   "homepage": "https://signal.org/",
-  "fileName": "signal-desktop-mac-arm64-7.41.0.dmg",
+  "fileName": "signal-desktop-mac-arm64-7.43.0.dmg",
   "sha": "9a12163e809e6359a429da54416d2ae4efc125f530bd4b4eb496b35f5ffcbf8b",
   "changelog": "https://github.com/signalapp/Signal-Desktop/releases",
   "previous_version": "7.43.0"

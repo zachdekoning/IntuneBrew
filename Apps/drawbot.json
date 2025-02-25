@@ -1,12 +1,12 @@
 {
   "name": "DrawBot",
   "description": "Write Python scripts to generate two-dimensional graphics",
-  "version": "3.131",
-  "url": "https://github.com/typemytype/drawbot/releases/download/3.131/DrawBot.dmg",
+  "version": "3.132",
+  "url": "https://github.com/typemytype/drawbot/releases/download/3.132/DrawBot.dmg",
   "bundleId": "com.drawbot",
   "homepage": "https://www.drawbot.com/",
   "fileName": "DrawBot.dmg",
-  "sha": "da03cd73d2c7ea221977fddd0b77856d0076f4d3833fdd0580823cc76dcaa0dc",
+  "sha": "e7e39a6b4d2345ed7e81d84914c7681bcc7ee9601a5f4d09e6f3dfce64d1903d",
   "changelog": "https://github.com/typemytype/drawbot/releases",
   "previous_version": "3.131"
 }

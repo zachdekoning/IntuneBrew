@@ -5,7 +5,7 @@
   "url": "https://github.com/northpolesec/santa/releases/download/2025.1/santa-2025.1.dmg",
   "bundleId": "com.google.santa",
   "homepage": "https://github.com/google/santa",
-  "fileName": "santa-2024.9.dmg",
+  "fileName": "santa-2025.1.dmg",
   "sha": "4e7fe15d582ddff8886d759ae39c8fb16b7b7edd64b55fdace27475d7cd70f7f",
   "changelog": "https://github.com/google/santa/releases",
   "previous_version": "2025.1"

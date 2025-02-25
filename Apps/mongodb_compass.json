@@ -5,7 +5,7 @@
   "url": "https://downloads.mongodb.com/compass/mongodb-compass-1.45.3-darwin-arm64.dmg",
   "bundleId": "com.mongodb.compass",
   "homepage": "https://www.mongodb.com/products/compass",
-  "fileName": "mongodb-compass-1.45.2-darwin-arm64.dmg",
+  "fileName": "mongodb-compass-1.45.3-darwin-arm64.dmg",
   "sha": "d78c4a73e8f8d2a4d3f5a0038cee59ade7bb618c66530b27226b6916c6e44216",
   "changelog": "https://www.mongodb.com/docs/compass/current/release-notes/",
   "previous_version": "1.45.3"
