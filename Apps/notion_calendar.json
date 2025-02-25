@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/notion_calendar_1.127.0.pkg",
   "bundleId": "com.cron.electron",
   "homepage": "https://www.notion.so/product/calendar",
-  "fileName": "Notion%20Calendar%201.127.0%20-%20Build%20250121ji52u08fs-arm64-mac.zip",
+  "fileName": "notion_calendar_1.127.0.pkg",
   "type": "app",
   "sha": "ff4074fd4414ef6b45a7cd99b0679db745313d2cc89628902386cbff75b26c2c",
   "changelog": "https://www.notion.so/help/calendar-changelog",

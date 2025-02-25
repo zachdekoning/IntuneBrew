@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/github_desktop_3.4.16-ba997388.pkg",
   "bundleId": "com.github.GitHubClient",
   "homepage": "https://desktop.github.com/",
-  "fileName": "GitHubDesktop-arm64.zip",
+  "fileName": "github_desktop_3.4.16-ba997388.pkg",
   "type": "app",
   "sha": "9b8d62683eeccdec477e30a23f2e72edb48983f13a3fd447d16f04e26e8f48c9",
   "previous_version": "3.4.16-ba997388"

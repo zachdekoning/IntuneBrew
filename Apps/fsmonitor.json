@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/fsmonitor_1.2.pkg",
   "bundleId": "com.tristan.fseventstool",
   "homepage": "https://fsmonitor.com/",
-  "fileName": "FSMonitor_1.2(137).zip",
+  "fileName": "fsmonitor_1.2.pkg",
   "type": "app",
   "sha": "3eebd0a2ffc6324d2024a9fb22f95de36c757e80e29cf1a60e58fd375bd5bf06",
   "changelog": "https://fsmonitor.com/history.html",

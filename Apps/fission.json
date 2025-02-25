@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/fission_2.8.8.pkg",
   "bundleId": "com.rogueamoeba.Fission",
   "homepage": "https://rogueamoeba.com/fission/",
-  "fileName": "Fission.zip",
+  "fileName": "fission_2.8.8.pkg",
   "type": "app",
   "sha": "52cd9f041be72ba9090d48e3f0dd67088a8fa813e564bbe23556e178e4f41abd",
   "changelog": "https://rogueamoeba.com/fission/releasenotes.php",

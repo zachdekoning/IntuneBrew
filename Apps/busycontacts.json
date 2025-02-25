@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/busycontacts_2024.4.1.pkg",
   "bundleId": "com.busymac.busycontacts.pkg",
   "homepage": "https://www.busymac.com/busycontacts/index.html",
-  "fileName": "bct-2024.4.1.zip",
+  "fileName": "busycontacts_2024.4.1.pkg",
   "type": "app",
   "sha": "c3207c0347d416cbf40b248cfde3df6c360f5879401c819eb792da3fdb4caef3",
   "changelog": "https://www.busymac.com/busycontacts/releasenotes.html",

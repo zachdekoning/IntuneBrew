@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/daisydisk_4.31.pkg",
   "bundleId": "com.daisydiskapp.DaisyDiskAdminHelper",
   "homepage": "https://daisydiskapp.com/",
-  "fileName": "DaisyDisk.zip",
+  "fileName": "daisydisk_4.31.pkg",
   "type": "app",
   "sha": "50f4387eaecb685655fae8ecca6434879037a2f8d2568f63ac02bced13c731f0",
   "changelog": "https://daisydiskapp.com/changelog/",

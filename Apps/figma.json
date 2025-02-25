@@ -5,7 +5,7 @@
   "url": "https://intunebrew.blob.core.windows.net/pkg/figma_125.0.8.pkg",
   "bundleId": "com.figma.Desktop",
   "homepage": "https://www.figma.com/",
-  "fileName": "Figma-125.0.8.zip",
+  "fileName": "figma_125.0.8.pkg",
   "type": "app",
   "sha": "e5267109ed8214d4814e94a39d8de47dad92703471c4a256c5090c0ba14efeef",
   "changelog": "https://help.figma.com/hc/en-us/articles/360038511533-Release-Notes",
