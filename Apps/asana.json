@@ -1,0 +1,11 @@
+{
+  "name": "Asana",
+  "description": "Manage team projects and tasks",
+  "version": "2.3.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/asana_2.3.0.pkg",
+  "bundleId": null,
+  "homepage": "https://asana.com/",
+  "fileName": "asana_2.3.0.pkg",
+  "type": "app",
+  "sha": "2f3c22c62f3d325127d45cce645c273790271d9f1874585a25058b9ea8324816"
+}

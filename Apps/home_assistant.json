@@ -7,5 +7,6 @@
   "homepage": "https://companion.home-assistant.io/",
   "fileName": "home_assistant_2024.12.2.pkg",
   "type": "app",
-  "sha": "2fa8dc11d1d44ed5b6ba4507b3ec1f84407d2e57eac86edf6bcd77129b1b6f6b"
+  "sha": "2fa8dc11d1d44ed5b6ba4507b3ec1f84407d2e57eac86edf6bcd77129b1b6f6b",
+  "previous_version": "2024.12.2"
 }

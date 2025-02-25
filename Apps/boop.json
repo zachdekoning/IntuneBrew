@@ -1,0 +1,11 @@
+{
+  "name": "Boop",
+  "description": "Scriptable scratchpad for developers",
+  "version": "1.4.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/boop_1.4.0.pkg",
+  "bundleId": null,
+  "homepage": "https://boop.okat.best/",
+  "fileName": "boop_1.4.0.pkg",
+  "type": "app",
+  "sha": "5efd18b0d82655e694e9316558d8c44f938206bf06a253a795d1cbb09eb76b50"
+}

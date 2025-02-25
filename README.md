@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                        <p>
+                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,17 +70,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-25 11:04 UTC*
+*Last checked: 2025-02-25 11:23 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Windows App | 11.1.0 | 11.1.1 |
-| Todoist | 9.11.0 | 9.11.1 |
-| Zed | 0.174.6 | 0.174.7 |
-| Zen Browser | 1.8b | 1.8.1b |
-| DrawBot | 3.131 | 3.132 |
-| Calmly Writer | 2.0.56 | 2.0.57 |
-| Insta360 Studio | 5.5.0 | 5.5.2 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune

@@ -1,0 +1,11 @@
+{
+  "name": "Beyond Compare",
+  "description": "Compare files and folders",
+  "version": "5.0.5.30614",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/beyond_compare_5.0.5.30614.pkg",
+  "bundleId": null,
+  "homepage": "https://www.scootersoftware.com/",
+  "fileName": "BCompareOSX-5.0.5.30614.zip",
+  "type": "app",
+  "previous_version": "5.0.5.30614"
+}

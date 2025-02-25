@@ -1,0 +1,11 @@
+{
+  "name": "Beeper",
+  "description": "Universal chat app powered by Matrix",
+  "version": "3.110.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/beeper_3.110.1.pkg",
+  "bundleId": null,
+  "homepage": "https://www.beeper.com/",
+  "fileName": "beeper_3.110.1.pkg",
+  "type": "app",
+  "sha": "c4ba2e68b51b4e769b0dbb5b8ab35d7917c9c803c70d6efb6a85c7c51bbaa37d"
+}
