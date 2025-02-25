@@ -584,7 +584,7 @@ def main():
             file_path = os.path.join(apps_folder, file_name)
             print(f"📝 Attempting to write to: {os.path.abspath(file_path)}")
 
-            # For existing files, update version, url, fileName, and recalculate SHA if version changed
+            # For existing files, update version, url, and recalculate SHA if version changed
             if os.path.exists(file_path):
                 print(f"Found existing file for {display_name}")
                 with open(file_path, "r") as f:
@@ -593,10 +593,20 @@ def main():
                     new_version = app_info["version"]
                     version_changed = existing_data.get("version") != new_version
                     
-                    # Always update version, url, fileName
+                    # Always update version and url
                     existing_data["version"] = new_version
                     existing_data["url"] = app_info["url"]
-                    existing_data["fileName"] = app_info["fileName"]
+                    
+                    # For repackaged apps (type "app", "pkg_in_dmg", or "pkg_in_pkg"),
+                    # preserve the fileName field from the existing JSON file
+                    if "type" in existing_data and existing_data["type"] in ["app", "pkg_in_dmg", "pkg_in_pkg"]:
+                        # Keep existing fileName for repackaged apps
+                        if "fileName" in existing_data:
+                            app_info["fileName"] = existing_data["fileName"]
+                    else:
+                        # For non-repackaged apps, update fileName to match the URL
+                        existing_data["fileName"] = os.path.basename(app_info["url"])
+                    
                     existing_data["previous_version"] = existing_data.get("version", "")
                     
                     # Calculate new hash if version changed
@@ -664,14 +674,15 @@ def main():
                     new_sha = app_info.get("sha")
                     previous_version = existing_data.get("version")
                     
-                    # Preserve all existing data except version, url, sha and previous_version
+                    # Preserve all existing data except version, url, sha, fileName, and previous_version
                     for key in existing_data:
-                        if key not in ["version", "url", "sha", "previous_version"]:
+                        if key not in ["version", "url", "sha", "fileName", "previous_version"]:
                             app_info[key] = existing_data[key]
                     
                     # Update version, url, sha and previous_version
                     app_info["version"] = new_version
                     app_info["url"] = new_url
+                    app_info["fileName"] = os.path.basename(new_url)  # Update fileName to match the URL
                     if new_sha:
                         app_info["sha"] = new_sha
                     app_info["previous_version"] = previous_version
