@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                    <p>
+                                                                                                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,9 +70,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-24 17:27 UTC*
+*Last checked: 2025-02-25 00:25 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Webex Teams | 45.2.0.31755 | 45.2.0.31822 |
+| Discord | 0.0.338 | 0.0.339 |
+| Wireshark | 4.4.4 | 4.4.5 |
+| Privileges | 2.1.0 | 2.2.0 |
+| Elephas | 10.12 | 11.094 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -204,7 +210,7 @@ Follow the interactive prompts to:
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.2.11731739 |
 | <img src='Logos/devtoys.png' width='32' height='32'> DevToys | 2.0.8.0 |
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
-| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.338 |
+| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.339 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.5 |
@@ -217,7 +223,7 @@ Follow the interactive prompts to:
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.127.0 |
 | <img src='Logos/easyfind.png' width='32' height='32'> EasyFind | 5.0.2 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 23.0.2 |
-| <img src='Logos/elephas.png' width='32' height='32'> Elephas | 10.12 |
+| <img src='Logos/elephas.png' width='32' height='32'> Elephas | 11.094 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
 | <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.4.3737 |
@@ -329,7 +335,7 @@ Follow the interactive prompts to:
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.33.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
-| <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.1.0 |
+| <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.0 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.92.1 |
@@ -366,13 +372,13 @@ Follow the interactive prompts to:
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.1.3570.54 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.97.2.25045 |
-| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.2.0.31755 |
+| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.2.0.31822 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.3 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.2.80 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.0 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.3.4 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
-| <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.4 |
+| <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.6 |
