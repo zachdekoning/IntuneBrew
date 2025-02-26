@@ -7,5 +7,6 @@
   "homepage": "https://arc.net/",
   "fileName": "arc_1.83.0.pkg",
   "type": "app",
-  "sha": "6ff971ae2f2c0ea449c4dfc819499e9cbb9c09ba4fd03802962b1fddb64f81de"
+  "sha": "6ff971ae2f2c0ea449c4dfc819499e9cbb9c09ba4fd03802962b1fddb64f81de",
+  "previous_version": "1.83.0"
 }

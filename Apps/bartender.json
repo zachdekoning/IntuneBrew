@@ -7,5 +7,6 @@
   "homepage": "https://www.macbartender.com/",
   "fileName": "bartender_5.2.7.pkg",
   "type": "app",
-  "sha": "2d71c571fbc2c20ffe5fd3ec4f59ac4f48a340fe857682e8a0a3a813d614aedb"
+  "sha": "2d71c571fbc2c20ffe5fd3ec4f59ac4f48a340fe857682e8a0a3a813d614aedb",
+  "previous_version": "5.2.7"
 }

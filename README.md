@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                          <p>
+                                                                                                            <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,9 +70,17 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-02-25 11:23 UTC*
+*Last checked: 2025-02-26 00:25 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Grammarly Desktop | 1.106.1.0 | 1.107.0.0 |
+| ChatGPT | 1.2025.043 | 1.2025.049 |
+| Zed | 0.174.7 | 0.174.8 |
+| Windsurf | 1.3.4 | 1.3.9 |
+| BoltAI | 1.32.4 | 1.33.0 |
+| Downie | 4.9.5 | 4.9.6 |
+| Epic Games Launcher | 17.2.2 | 18.0.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -158,14 +166,14 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.3.4 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.216 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.229 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.5.30614 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.0 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.5 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
-| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.32.4 |
+| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.33.0 |
 | <img src='Logos/boop.png' width='32' height='32'> Boop | 1.4.0 |
 | <img src='Logos/boxcryptor.png' width='32' height='32'> Boxcryptor | 3.13.680 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.75.180.0 |
@@ -179,7 +187,7 @@ Follow the interactive prompts to:
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.1 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.104.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
-| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.043 |
+| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.049 |
 | <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 133.0.6943.7 |
 | <img src='Logos/cisco_jabber.png' width='32' height='32'> Cisco Jabber | 20241220015538 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
@@ -207,7 +215,7 @@ Follow the interactive prompts to:
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.339 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.38.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
-| <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.5 |
+| <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.6 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.16 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
@@ -221,7 +229,7 @@ Follow the interactive prompts to:
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
 | <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.4.3737 |
-| <img src='Logos/epic_games_launcher.png' width='32' height='32'> Epic Games Launcher | 17.2.2 |
+| <img src='Logos/epic_games_launcher.png' width='32' height='32'> Epic Games Launcher | 18.0.0 |
 | <img src='Logos/etcher.png' width='32' height='32'> Etcher | 1.19.25 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
@@ -249,7 +257,7 @@ Follow the interactive prompts to:
 | <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.8 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 133.0.6943.127 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 104.0.4 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.106.1.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.107.0.0 |
 | <img src='Logos/hammerspoon.png' width='32' height='32'> Hammerspoon | 1.0.0 |
 | <img src='Logos/hazeover.png' width='32' height='32'> HazeOver | 1.9.4 |
 | <img src='Logos/hidden_bar.png' width='32' height='32'> Hidden Bar | 1.9 |
@@ -326,7 +334,7 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.11 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.0 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.16.2 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.33.4 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.34.2 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
@@ -370,12 +378,12 @@ Follow the interactive prompts to:
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.3 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.2.80 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.1 |
-| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.3.4 |
+| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.3.9 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.7 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.174.8 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.8.1b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.10.49367 |
 

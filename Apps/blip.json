@@ -7,5 +7,6 @@
   "homepage": "https://blip.net/",
   "fileName": "blip_1.1.5.pkg",
   "type": "app",
-  "sha": "a978c9df3abe733bb1dc959f877d3c511612ff93b51083b64e2b90a7c0d56453"
+  "sha": "a978c9df3abe733bb1dc959f877d3c511612ff93b51083b64e2b90a7c0d56453",
+  "previous_version": "1.1.5"
 }

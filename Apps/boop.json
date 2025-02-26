@@ -7,5 +7,6 @@
   "homepage": "https://boop.okat.best/",
   "fileName": "boop_1.4.0.pkg",
   "type": "app",
-  "sha": "5efd18b0d82655e694e9316558d8c44f938206bf06a253a795d1cbb09eb76b50"
+  "sha": "5efd18b0d82655e694e9316558d8c44f938206bf06a253a795d1cbb09eb76b50",
+  "previous_version": "1.4.0"
 }

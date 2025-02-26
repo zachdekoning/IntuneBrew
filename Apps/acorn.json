@@ -7,5 +7,6 @@
   "homepage": "https://flyingmeat.com/acorn/",
   "fileName": "acorn_8.0.1.pkg",
   "type": "app",
-  "sha": "abb4d6b2d58900b6a8e9a6eb2c37dc062e4267198a923c2c1bb2a4d5f3f0170f"
+  "sha": "abb4d6b2d58900b6a8e9a6eb2c37dc062e4267198a923c2c1bb2a4d5f3f0170f",
+  "previous_version": "8.0.1"
 }

@@ -7,5 +7,6 @@
   "homepage": "https://macitbetter.com/",
   "fileName": "betterzip_5.3.4.pkg",
   "type": "app",
-  "sha": "fe05ca2f4e6a681b6eb511b4a7d10ddc1b0bf4f4e11575e0cec52f6cbd1ded49"
+  "sha": "fe05ca2f4e6a681b6eb511b4a7d10ddc1b0bf4f4e11575e0cec52f6cbd1ded49",
+  "previous_version": "5.3.4"
 }

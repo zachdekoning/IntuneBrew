@@ -7,5 +7,6 @@
   "homepage": "https://alt-tab-macos.netlify.app/",
   "fileName": "alttab_7.21.1.pkg",
   "type": "app",
-  "sha": "8f0d77ecb81211feed379ad47245d8a3ba7cb13d730d89ecd56b34698e9676d5"
+  "sha": "8f0d77ecb81211feed379ad47245d8a3ba7cb13d730d89ecd56b34698e9676d5",
+  "previous_version": "7.21.1"
 }
