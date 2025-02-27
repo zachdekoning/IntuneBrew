@@ -22,12 +22,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          cache: "npm"
 
-      - name: Install dependencies
+      - name: Create package.json and install dependencies
         run: |
-          npm install @supabase/supabase-js
-          npm install node-fetch
+          # Create a minimal package.json file
+          echo '{"name":"version-tracker","type":"module","private":true}' > package.json
+
+          # Install dependencies
+          npm install @supabase/supabase-js node-fetch
 
       - name: Create version tracking script
         run: |
