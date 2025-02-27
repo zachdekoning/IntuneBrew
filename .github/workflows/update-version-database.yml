@@ -134,7 +134,7 @@ jobs:
                 console.log(`✅ Notifications sent for ${appName} ${version}`);
                 return true;
               } else {
-                console.error(`❌ Failed to send notification for ${appName}`);
+                console.error(`❌ Failed to send notifications for ${appName}`);
                 return false;
               }
             } catch (error) {
