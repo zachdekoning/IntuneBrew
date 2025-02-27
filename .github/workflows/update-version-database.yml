@@ -119,7 +119,8 @@ jobs:
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${NOTIFICATIONS_API_KEY}`
+                  'Authorization': `Bearer ${NOTIFICATIONS_API_KEY}`,
+                  'X-Clerk-Secret-Key': process.env.CLERK_SECRET_KEY // Pass the Clerk Secret Key to the API
                 },
                 body: JSON.stringify({
                   appName,
@@ -295,3 +296,5 @@ jobs:
           # Notification API configuration
           NOTIFICATIONS_API_URL: ${{ secrets.NOTIFICATIONS_API_URL }}
           NOTIFICATIONS_API_KEY: ${{ secrets.NOTIFICATIONS_API_KEY }}
+          # Clerk API configuration
+          CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
