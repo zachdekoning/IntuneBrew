@@ -131,7 +131,7 @@ jobs:
               const data = await response.json();
               
               if (response.ok) {
-                console.log(`✅ Notification sent for ${appName} ${version}`);
+                console.log(`✅ Notifications sent for ${appName} ${version}`);
                 return true;
               } else {
                 console.error(`❌ Failed to send notification for ${appName}`);
