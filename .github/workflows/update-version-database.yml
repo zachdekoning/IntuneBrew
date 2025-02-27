@@ -131,10 +131,19 @@ jobs:
               const data = await response.json();
               
               if (response.ok) {
-                console.log(`✅ Notifications sent for ${appName} ${version}`);
+                console.log(`✅ Notification sent for ${appName} ${version}`);
+                // Extract the number of users notified from the message if available
+                const userCountMatch = data.message?.match(/Notification sent to (\d+) of (\d+) users/);
+                if (userCountMatch) {
+                  console.log(`Notified ${userCountMatch[1]} of ${userCountMatch[2]} subscribed users`);
+                } else {
+                  console.log(`Summary: ${data.message || 'Notification processed successfully'}`);
+                }
                 return true;
               } else {
-                console.error(`❌ Failed to send notifications for ${appName}`);
+                console.error(`❌ Failed to send notification for ${appName}`);
+                // Only log the error message, not the full error data
+                console.error(`Error: ${data.error || 'Unknown error'}`);
                 return false;
               }
             } catch (error) {
