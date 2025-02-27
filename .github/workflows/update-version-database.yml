@@ -141,10 +141,17 @@ jobs:
                 }
                 return true;
               } else {
-                console.error(`❌ Failed to send notification for ${appName}`);
-                // Only log the error message, not the full error data
-                console.error(`Error: ${data.error || 'Unknown error'}`);
-                return false;
+                // Handle the case where no users were found in Clerk
+                if (data.message && data.message.includes("No valid users found with Clerk")) {
+                  console.warn(`⚠️ No valid users found in Clerk for ${appName}. This is expected if running in a GitHub workflow environment without Clerk access.`);
+                  console.warn(`To receive notifications, users need to subscribe in the IntuneBrew website.`);
+                  return true; // Consider this a success since it's an expected limitation
+                } else {
+                  console.error(`❌ Failed to send notification for ${appName}`);
+                  // Only log the error message, not the full error data
+                  console.error(`Error: ${data.error || 'Unknown error'}`);
+                  return false;
+                }
               }
             } catch (error) {
               console.error(`Error sending notification for ${appName}:`, error);
