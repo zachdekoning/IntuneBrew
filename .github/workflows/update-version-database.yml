@@ -188,11 +188,6 @@ jobs:
                 console.log(`✅ Batch notification sent for ${updates.length} app updates`);
                 // Extract the number of users notified from the message if available
                 const userCountMatch = data.message?.match(/Notification sent to (\d+) of (\d+) users/);
-                if (userCountMatch) {
-                  console.log(`Notified ${userCountMatch[1]} of ${userCountMatch[2]} subscribed users`);
-                } else {
-                  console.log(`Summary: ${data.message || 'Notification processed successfully'}`);
-                }
                 return true;
               } else {
                 // Handle the case where no users were found in Clerk
