@@ -160,6 +160,59 @@ jobs:
             }
           }
 
+          // Function to send notification for multiple app updates
+          async function sendBatchNotification(updates) {
+            try {
+              if (updates.length === 0) {
+                console.log('No updates to notify about');
+                return true;
+              }
+              
+              console.log(`Sending batch notification for ${updates.length} app updates...`);
+              
+              const response = await fetch(NOTIFICATIONS_API_URL, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${NOTIFICATIONS_API_KEY}`,
+                  'x-clerk-secret-key': process.env.CLERK_SECRET_KEY || ''
+                },
+                body: JSON.stringify({
+                  updates: updates
+                })
+              });
+              
+              const data = await response.json();
+              
+              if (response.ok) {
+                console.log(`✅ Batch notification sent for ${updates.length} app updates`);
+                // Extract the number of users notified from the message if available
+                const userCountMatch = data.message?.match(/Notification sent to (\d+) of (\d+) users/);
+                if (userCountMatch) {
+                  console.log(`Notified ${userCountMatch[1]} of ${userCountMatch[2]} subscribed users`);
+                } else {
+                  console.log(`Summary: ${data.message || 'Notification processed successfully'}`);
+                }
+                return true;
+              } else {
+                // Handle the case where no users were found in Clerk
+                if (data.message && data.message.includes("No valid users found with Clerk")) {
+                  console.warn(`⚠️ No valid users found in Clerk. This is expected if running in a GitHub workflow environment without Clerk access.`);
+                  console.warn(`To receive notifications, users need to subscribe in the IntuneBrew website.`);
+                  return true; // Consider this a success since it's an expected limitation
+                } else {
+                  console.error(`❌ Failed to send batch notification`);
+                  // Only log the error message, not the full error data
+                  console.error(`Error: ${data.error || 'Unknown error'}`);
+                  return false;
+                }
+              }
+            } catch (error) {
+              console.error(`Error sending batch notification:`, error);
+              return false;
+            }
+          }
+
           // Main function to update versions and send notifications
           async function updateVersionsAndNotify() {
             try {
@@ -182,6 +235,9 @@ jobs:
                 versionsByApp[version.app_name].push(version);
               }
               
+              // Collect all app updates
+              const appUpdates = [];
+              
               // Process each app
               for (const app of appData) {
                 console.log(`Processing ${app.display_name || app.app_name}...`);
@@ -192,7 +248,7 @@ jobs:
                 appVersions.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
                 
                 // Check if this is a new version
-                const isNewVersion = appVersions.length === 0 || 
+                const isNewVersion = appVersions.length === 0 ||
                   !appVersions.some(v => v.version === app.version);
                 
                 if (isNewVersion) {
@@ -221,17 +277,17 @@ jobs:
                   
                   console.log(`✅ Added version ${app.version} for ${app.app_name}`);
                   
-                  // If we have a previous version, send notification
+                  // If we have a previous version, add to updates list
                   if (appVersions.length > 0) {
                     const previousVersion = appVersions[0];
                     console.log(`Previous version: ${previousVersion.version}`);
                     
-                    // Send notification
-                    await sendNotification(
-                      app.app_name,
-                      app.version,
-                      app.changelog
-                    );
+                    // Add to updates list
+                    appUpdates.push({
+                      appName: app.app_name,
+                      version: app.version,
+                      changelog: app.changelog
+                    });
                   }
                   
                   // If we now have more than 2 versions, delete the oldest ones
@@ -275,6 +331,14 @@ jobs:
                     }
                   }
                 }
+              }
+              
+              // Send batch notification for all updates
+              if (appUpdates.length > 0) {
+                console.log(`Found ${appUpdates.length} app updates to notify about`);
+                await sendBatchNotification(appUpdates);
+              } else {
+                console.log('No new app updates to notify about');
               }
               
               console.log('Version database update completed');
