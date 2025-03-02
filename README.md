@@ -93,7 +93,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🎬 Demo (New one is recorded ASAP because a lot has changed since this demo)
 
-![IntuneBrew Demo](IntuneBrew_Demo.gif)
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=7NEs-EnvmII">
+     <img 
+      src="https://img.youtube.com/vi/7NEs-EnvmII/maxresdefault.jpg" 
+      alt="IntuneBrew" 
+      style="width:100%;">
+      </a>
+</div>
 
 ## 🚀 Getting Started
 
