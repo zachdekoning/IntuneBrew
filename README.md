@@ -20,7 +20,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                  <p>
+                                                                                                                    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -70,22 +70,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-01 00:28 UTC*
+*Last checked: 2025-03-02 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Zoom | 6.3.10.49367 | 6.3.11.50104 |
-| Spotify | 1.2.57.463 | 1.2.58.498 |
-| Miro | 0.10.84 | 0.10.87 |
-| Krisp | 2.55.6 | 2.55.8 |
-| Goland | 2024.3.3 | 2024.3.4 |
-| IntelliJ IDEA Community Edition | 2024.3.3 | 2024.3.4 |
-| Jetbrains PyCharm Community Edition | 2024.3.3 | 2024.3.4 |
-| Etcher | 1.19.25 | 2.1.0 |
-| Opera | 117.0.5408.39 | 117.0.5408.53 |
-| DataSpell | 2024.3.1.1 | 2024.3.2 |
-| DbGate | 6.2.0 | 6.2.1 |
-| Joplin | 3.2.12 | 3.2.13 |
+| Raycast | 1.93.0 | 1.93.1 |
+| Windsurf | 1.3.9 | 1.3.10 |
+| Chrome Remote Desktop | 133.0.6943.7 | 134.0.6998.6 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -193,7 +184,7 @@ Follow the interactive prompts to:
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.104.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
 | <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.049 |
-| <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 133.0.6943.7 |
+| <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 134.0.6998.6 |
 | <img src='Logos/cisco_jabber.png' width='32' height='32'> Cisco Jabber | 20241220015538 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.8.0 |
@@ -345,7 +336,7 @@ Follow the interactive prompts to:
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.0 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.93.0 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.93.1 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
 | <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2024.3.10.4 |
@@ -383,7 +374,7 @@ Follow the interactive prompts to:
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.4 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.3.81 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.2 |
-| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.3.9 |
+| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.3.10 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |

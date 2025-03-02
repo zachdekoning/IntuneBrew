@@ -8,5 +8,5 @@
   "fileName": "balenaEtcher-2.1.0-arm64.dmg",
   "sha": "7b6ef50c0f20a421e58766b77d6c4ccb4af4912c15f4cd9a029e7e5aa439677f",
   "changelog": "https://github.com/balena-io/etcher/releases",
-  "previous_version": "1.19.25"
+  "previous_version": "2.1.0"
 }
