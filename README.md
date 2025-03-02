@@ -1,6 +1,5 @@
-![IntuneBrew_Header](https://github.com/user-attachments/assets/c036ff17-ecad-4615-a7b5-6ffbd3d4ebf1)
-
 <h1 align="center">🍺 IntuneBrew</h1>
+
 
 <div align="center">
   <p>
@@ -28,6 +27,17 @@
 </div>
 
 IntuneBrew is a PowerShell-based tool that simplifies the process of uploading and managing macOS applications in Microsoft Intune. It automates the entire workflow from downloading apps to uploading them to Intune, complete with proper metadata and logos.
+
+## Watch the full walkthrough of the tool:
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=7NEs-EnvmII">
+     <img 
+      src="https://img.youtube.com/vi/7NEs-EnvmII/maxresdefault.jpg" 
+      alt="IntuneBrew" 
+      style="width:100%;">
+      </a>
+</div>
 
 ## Table of Contents
 
@@ -89,17 +99,6 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 - 🔁 Automatic retry mechanism for failed uploads
 - 🔒 Secure file encryption for uploads
 - 📈 Real-time progress monitoring
-
-## 🎬 Demo (New one is recorded ASAP because a lot has changed since this demo)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=7NEs-EnvmII">
-     <img 
-      src="https://img.youtube.com/vi/7NEs-EnvmII/maxresdefault.jpg" 
-      alt="IntuneBrew" 
-      style="width:100%;">
-      </a>
-</div>
 
 ## 🚀 Getting Started
 
