@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                    <p>
+                                                                                                                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,13 +79,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-02 00:26 UTC*
+*Last checked: 2025-03-03 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Raycast | 1.93.0 | 1.93.1 |
-| Windsurf | 1.3.9 | 1.3.10 |
-| Chrome Remote Desktop | 133.0.6943.7 | 134.0.6998.6 |
+| Stats | 2.11.32 | 2.11.33 |
+| Calmly Writer | 2.0.57 | 2.0.58 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -180,11 +179,11 @@ Follow the interactive prompts to:
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.75.181.0 |
 | <img src='Logos/breaktimer.png' width='32' height='32'> BreakTimer | 1.3.2 |
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.39.1 |
-| <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2024.4.3 |
+| <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.1.1 |
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2024.4.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 7.26.0 |
-| <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.57 |
+| <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.58 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.1 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.104.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
@@ -201,7 +200,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.1.1 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.14 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.45.17 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.8.1 |
@@ -357,7 +356,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.58.498 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.32 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.33 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
