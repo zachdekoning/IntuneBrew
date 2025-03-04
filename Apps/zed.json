@@ -1,12 +1,12 @@
 {
   "name": "Zed",
   "description": "Multiplayer code editor",
-  "version": "0.175.6",
-  "url": "https://zed.dev/api/releases/stable/0.175.6/Zed-aarch64.dmg",
+  "version": "0.176.1",
+  "url": "https://zed.dev/api/releases/stable/0.176.1/Zed-aarch64.dmg",
   "bundleId": "dev.zed.Zed",
   "homepage": "https://zed.dev/",
   "fileName": "Zed-aarch64.dmg",
-  "sha": "95fbe9a5d4b7cb8fac877d1915d321b5d201b618dfad3051cb07cd056d74a684",
+  "sha": "212207b4cb713f9d72503153e212c6ea8457c4d7bf0ec2d5be3243f41c0e9d93",
   "changelog": "https://zed.dev/releases/stable",
   "previous_version": "0.175.6"
 }
