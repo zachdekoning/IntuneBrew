@@ -13,13 +13,23 @@ on:
 
 jobs:
   package-for-direct-update:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
+
+      - name: Install PowerShell on Linux
+        run: |
+          # Install PowerShell on Ubuntu
+          sudo apt-get update
+          sudo apt-get install -y wget apt-transport-https software-properties-common
+          wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
+          sudo dpkg -i packages-microsoft-prod.deb
+          sudo apt-get update
+          sudo apt-get install -y powershell
 
       - name: Install required modules
         shell: pwsh
