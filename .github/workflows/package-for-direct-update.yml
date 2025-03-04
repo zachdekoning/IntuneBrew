@@ -1,0 +1,252 @@
+name: Package Apps for Direct Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_name:
+        description: "App name to package (e.g., postman)"
+        required: true
+        default: "postman"
+      version:
+        description: "App version to package"
+        required: true
+
+jobs:
+  package-for-direct-update:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Install required modules
+        shell: pwsh
+        run: |
+          Install-Module -Name Microsoft.Graph.Authentication -Force -AllowClobber -Scope CurrentUser
+
+      - name: Set up Azure CLI
+        uses: azure/cli@v1
+        with:
+          inlineScript: |
+            az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+
+      - name: Get app information
+        id: app-info
+        shell: pwsh
+        run: |
+          # If triggered manually, use the input parameters
+          if ("${{ github.event_name }}" -eq "workflow_dispatch") {
+            $appName = "${{ github.event.inputs.app_name }}"
+            $appVersion = "${{ github.event.inputs.version }}"
+            echo "APP_NAME=$appName" >> $env:GITHUB_ENV
+            echo "APP_VERSION=$appVersion" >> $env:GITHUB_ENV
+          } else {
+            # For scheduled runs, get the latest version of Postman
+            # This could be expanded to check multiple apps
+            $appName = "postman"
+            # Get the latest version from the app's JSON file
+            $appJson = Invoke-RestMethod -Uri "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/${appName}.json"
+            $appVersion = $appJson.version
+            echo "APP_NAME=$appName" >> $env:GITHUB_ENV
+            echo "APP_VERSION=$appVersion" >> $env:GITHUB_ENV
+          }
+
+          Write-Host "Processing $appName version $appVersion"
+
+      - name: Download app package
+        shell: pwsh
+        run: |
+          $appName = $env:APP_NAME
+          $appVersion = $env:APP_VERSION
+
+          # Get the app's JSON file to find the download URL
+          $appJson = Invoke-RestMethod -Uri "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/${appName}.json"
+          $downloadUrl = $appJson.url
+          $fileName = $appJson.fileName
+
+          if (-not $fileName) {
+            $fileName = "${appName}_${appVersion}.pkg"
+          }
+
+          Write-Host "Downloading $appName from $downloadUrl"
+          Invoke-WebRequest -Uri $downloadUrl -OutFile $fileName
+
+          # Verify the download
+          if (Test-Path $fileName) {
+            Write-Host "Successfully downloaded $fileName"
+            echo "FILE_NAME=$fileName" >> $env:GITHUB_ENV
+          } else {
+            Write-Host "Failed to download $fileName"
+            exit 1
+          }
+
+      - name: Encrypt file for Intune
+        shell: pwsh
+        run: |
+          $fileName = $env:FILE_NAME
+
+          # Define the encryption function (copied from IntuneBrew.ps1)
+          function EncryptFile($sourceFile) {
+              function GenerateKey() {
+                  $aesSp = [System.Security.Cryptography.AesCryptoServiceProvider]::new()
+                  $aesSp.GenerateKey()
+                  return $aesSp.Key
+              }
+
+              $targetFile = "$sourceFile.bin"
+              $sha256 = [System.Security.Cryptography.SHA256]::Create()
+              $aes = [System.Security.Cryptography.Aes]::Create()
+              $aes.Key = GenerateKey
+              $hmac = [System.Security.Cryptography.HMACSHA256]::new()
+              $hmac.Key = GenerateKey
+              $hashLength = $hmac.HashSize / 8
+
+              $sourceStream = [System.IO.File]::OpenRead($sourceFile)
+              $sourceSha256 = $sha256.ComputeHash($sourceStream)
+              $sourceStream.Seek(0, "Begin") | Out-Null
+              $targetStream = [System.IO.File]::Open($targetFile, "Create")
+
+              $targetStream.Write((New-Object byte[] $hashLength), 0, $hashLength)
+              $targetStream.Write($aes.IV, 0, $aes.IV.Length)
+              $transform = $aes.CreateEncryptor()
+              $cryptoStream = [System.Security.Cryptography.CryptoStream]::new($targetStream, $transform, "Write")
+              $sourceStream.CopyTo($cryptoStream)
+              $cryptoStream.FlushFinalBlock()
+
+              $targetStream.Seek($hashLength, "Begin") | Out-Null
+              $mac = $hmac.ComputeHash($targetStream)
+              $targetStream.Seek(0, "Begin") | Out-Null
+              $targetStream.Write($mac, 0, $mac.Length)
+
+              $targetStream.Close()
+              $cryptoStream.Close()
+              $sourceStream.Close()
+
+              return [PSCustomObject][ordered]@{
+                  encryptionKey        = [System.Convert]::ToBase64String($aes.Key)
+                  fileDigest           = [System.Convert]::ToBase64String($sourceSha256)
+                  fileDigestAlgorithm  = "SHA256"
+                  initializationVector = [System.Convert]::ToBase64String($aes.IV)
+                  mac                  = [System.Convert]::ToBase64String($mac)
+                  macKey               = [System.Convert]::ToBase64String($hmac.Key)
+                  profileIdentifier    = "ProfileVersion1"
+              }
+          }
+
+          Write-Host "Encrypting $fileName for Intune..."
+          $encryptionInfo = EncryptFile $fileName
+
+          # Save encryption info to a JSON file
+          $encryptionInfo | ConvertTo-Json | Set-Content -Path "${fileName}.encryption.json"
+
+          # Verify the encrypted file
+          if (Test-Path "${fileName}.bin") {
+            Write-Host "Successfully encrypted $fileName"
+            echo "ENCRYPTED_FILE=${fileName}.bin" >> $env:GITHUB_ENV
+            echo "ENCRYPTION_INFO=${fileName}.encryption.json" >> $env:GITHUB_ENV
+          } else {
+            Write-Host "Failed to encrypt $fileName"
+            exit 1
+          }
+
+      - name: Upload to Azure Storage
+        shell: pwsh
+        run: |
+          $appName = $env:APP_NAME
+          $appVersion = $env:APP_VERSION
+          $encryptedFile = $env:ENCRYPTED_FILE
+          $encryptionInfoFile = $env:ENCRYPTION_INFO
+
+          # Upload the encrypted file
+          Write-Host "Uploading encrypted file to Azure Storage..."
+          az storage blob upload --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --file $encryptedFile --name "${appName}/${appVersion}/${encryptedFile}" --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+
+          # Upload the encryption info
+          Write-Host "Uploading encryption info to Azure Storage..."
+          az storage blob upload --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --file $encryptionInfoFile --name "${appName}/${appVersion}/${encryptionInfoFile}" --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+
+          # Generate SAS token for the encrypted file (valid for 7 days)
+          $sasToken = az storage blob generate-sas --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --name "${appName}/${appVersion}/${encryptedFile}" --permissions r --expiry (Get-Date).AddDays(7).ToString("yyyy-MM-dd") --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }} --output tsv
+
+          $blobUrl = "https://${{ secrets.AZURE_STORAGE_ACCOUNT }}.blob.core.windows.net/intuneready/${appName}/${appVersion}/${encryptedFile}?$sasToken"
+          Write-Host "File accessible at: $blobUrl"
+
+          # Read the encryption info
+          $encryptionInfo = Get-Content $encryptionInfoFile | ConvertFrom-Json
+
+          # Create a metadata file for the web portal
+          $metadata = @{
+            appName = $appName
+            version = $appVersion
+            blobUrl = $blobUrl
+            encryptionInfo = $encryptionInfo
+            uploadDate = (Get-Date).ToString("o")
+          }
+
+          $metadataFile = "${appName}_${appVersion}_metadata.json"
+          $metadata | ConvertTo-Json -Depth 10 | Set-Content -Path $metadataFile
+
+          # Upload the metadata file
+          Write-Host "Uploading metadata to Azure Storage..."
+          az storage blob upload --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --file $metadataFile --name "${appName}/${appVersion}/${metadataFile}" --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+
+          # Also upload to a 'latest' location for easy access
+          az storage blob upload --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --file $metadataFile --name "${appName}/latest/${metadataFile}" --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+
+      - name: Update app registry
+        shell: pwsh
+        run: |
+          $appName = $env:APP_NAME
+          $appVersion = $env:APP_VERSION
+
+          # Download the current registry if it exists
+          $registryExists = az storage blob exists --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --name "registry.json" --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }} --query "exists" -o tsv
+
+          if ($registryExists -eq "true") {
+            Write-Host "Downloading existing app registry..."
+            az storage blob download --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --name "registry.json" --file "registry.json" --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+            $registry = Get-Content "registry.json" | ConvertFrom-Json
+          } else {
+            Write-Host "Creating new app registry..."
+            $registry = @{
+              apps = @{}
+              lastUpdated = (Get-Date).ToString("o")
+            }
+          }
+
+          # Update the registry with this app's information
+          if (-not $registry.apps.$appName) {
+            $registry.apps | Add-Member -MemberType NoteProperty -Name $appName -Value @{}
+          }
+
+          $registry.apps.$appName | Add-Member -MemberType NoteProperty -Name $appVersion -Value @{
+            uploadDate = (Get-Date).ToString("o")
+            metadataPath = "${appName}/${appVersion}/${appName}_${appVersion}_metadata.json"
+          } -Force
+
+          $registry.apps.$appName | Add-Member -MemberType NoteProperty -Name "latest" -Value $appVersion -Force
+          $registry.lastUpdated = (Get-Date).ToString("o")
+
+          # Save and upload the updated registry
+          $registry | ConvertTo-Json -Depth 10 | Set-Content -Path "registry.json"
+
+          Write-Host "Uploading updated app registry..."
+          az storage blob upload --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --container-name "intuneready" --file "registry.json" --name "registry.json" --auth-mode key --account-key ${{ secrets.AZURE_STORAGE_KEY }} --overwrite
+
+      - name: Clean up
+        shell: pwsh
+        run: |
+          $fileName = $env:FILE_NAME
+          $encryptedFile = $env:ENCRYPTED_FILE
+          $encryptionInfoFile = $env:ENCRYPTION_INFO
+
+          Write-Host "Cleaning up temporary files..."
+          Remove-Item -Path $fileName -Force -ErrorAction SilentlyContinue
+          Remove-Item -Path $encryptedFile -Force -ErrorAction SilentlyContinue
+          Remove-Item -Path $encryptionInfoFile -Force -ErrorAction SilentlyContinue
+          Remove-Item -Path "${env:APP_NAME}_${env:APP_VERSION}_metadata.json" -Force -ErrorAction SilentlyContinue
+          Remove-Item -Path "registry.json" -Force -ErrorAction SilentlyContinue
+
+          Write-Host "Done!"
