@@ -8,5 +8,5 @@
   "fileName": "pgadmin4-9.1-arm64.dmg",
   "sha": "3e46485f747ffbf7a8474a652efbf1bdc035ebde176bc2df90a1f445ff34c885",
   "changelog": "https://www.pgadmin.org/docs/pgadmin4/9.0/release_notes_9_0.html",
-  "previous_version": "9.0"
+  "previous_version": "9.1"
 }

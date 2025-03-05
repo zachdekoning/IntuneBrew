@@ -1,12 +1,12 @@
 {
   "name": "BetterTouchTool",
   "description": "Tool to customise input devices and automate computer systems",
-  "version": "5.244",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/bettertouchtool_5.244.pkg",
+  "version": "5.250",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/bettertouchtool_5.250.pkg",
   "bundleId": "com.hegenberg.BetterTouchTool",
   "homepage": "https://folivora.ai/",
-  "fileName": "bettertouchtool_5.244.pkg",
+  "fileName": "bettertouchtool_5.250.pkg",
   "type": "app",
-  "sha": "acc459a5d8b59803bf73a9dc21efd36674f65e950f0d8278bd4b923d04b39e47",
-  "previous_version": "5.244"
+  "sha": "327e68cffea8dc199489400bba12c1072a23afe85168b5a4ba14c6fa628e5e84",
+  "previous_version": "5.250"
 }
