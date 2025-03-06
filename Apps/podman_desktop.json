@@ -8,5 +8,5 @@
   "fileName": "podman-desktop-1.17.1-arm64.dmg",
   "sha": "dabff77ee157d78f23924644cfdd0a2c165b2bdf74b21a0e76797ee85991ce7d",
   "changelog": "https://github.com/containers/podman-desktop/releases",
-  "previous_version": "1.16.2"
+  "previous_version": "1.17.1"
 }

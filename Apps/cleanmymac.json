@@ -1,13 +1,13 @@
 {
   "name": "CleanMyMac",
   "description": "Tool to remove unnecessary files and folders from disk",
-  "version": "5.0.5",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/cleanmymac_5.0.5.pkg",
+  "version": "5.0.6",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/cleanmymac_5.0.6.pkg",
   "bundleId": "com.macpaw.CleanMyMac5.HealthMonitor",
   "homepage": "https://macpaw.com/cleanmymac",
-  "fileName": "cleanmymac_5.0.5.pkg",
+  "fileName": "cleanmymac_5.0.6.pkg",
   "type": "app",
-  "sha": "6594f39fcf878cb51d361777b6cb031711a63830a9e2ba2fcd6ed1a7d92d3683",
+  "sha": "3c455baf0a126d7d707222a36826fc34edc3286fc0a3eba21051d08245a11022",
   "changelog": "https://macpaw.com/support/cleanmymac/knowledgebase/cleanmymac-x-release-notes",
-  "previous_version": "5.0.5"
+  "previous_version": "5.0.6"
 }

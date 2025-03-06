@@ -1,12 +1,12 @@
 {
   "name": "ChatGPT",
   "description": "OpenAI's official ChatGPT desktop app",
-  "version": "1.2025.049",
-  "url": "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_1.2025.049_1740186346.dmg",
+  "version": "1.2025.057",
+  "url": "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_1.2025.057_1741115522.dmg",
   "bundleId": "com.openai.chat",
   "homepage": "https://chatgpt.com/",
-  "fileName": "ChatGPT_Desktop_public_1.2025.049_1740186346.dmg",
-  "sha": "58d3df806aeba2e4a7f3c3281c6b0c8686260a500aa4f8b0342140e60c63c852",
+  "fileName": "ChatGPT_Desktop_public_1.2025.057_1741115522.dmg",
+  "sha": "6953c160faf5b4c44112f2a0a28548ce08aa0a508837cb561118c87203f45149",
   "changelog": "https://help.openai.com/en/articles/9703738-macos-app-release-notes",
   "previous_version": "1.2025.049"
 }
