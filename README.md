@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                            <p>
+                                                                                                                              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,22 +79,16 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-06 00:26 UTC*
+*Last checked: 2025-03-07 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Docker Desktop | 4.38.0 | 4.39.0 |
-| Signal | 7.44.0 | 7.45.0 |
-| Brave | 1.75.181.0 | 1.76.73.0 |
-| Obsidian | 1.8.7 | 1.8.9 |
-| Termius | 9.15.2 | 9.16.0 |
-| ChatGPT | 1.2025.049 | 1.2025.057 |
-| IntelliJ IDEA Community Edition | 2024.3.4 | 2024.3.4.1 |
-| Windsurf | 1.3.11 | 1.4.3 |
-| Badgeify | 1.5.6 | 1.5.7 |
-| Downie | 4.9.6 | 4.9.7 |
-| LookAway | 1.10.4 | 1.10.5 |
-| NordVPN | 8.34.1 | 8.35.2 |
+| Microsoft Teams | 25031.1203.3429.7545 | 25031.1205.3471.1031 |
+| Bitwarden | 2025.2.0 | 2025.2.1 |
+| Tableau Desktop | 2024.3.3 | 2024.3.4 |
+| Raycast | 1.93.1 | 1.93.2 |
+| Windsurf | 1.4.3 | 1.4.4 |
+| Amazon Q | 1.6.3 | 1.7.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -143,7 +137,7 @@ Follow the interactive prompts to:
 | Application | Latest Version |
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.64 |
-| <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.0.1 |
+| <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20428 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 24.005.20414 |
 | <img src='Logos/airfoil.png' width='32' height='32'> Airfoil | 5.12.4 |
@@ -154,7 +148,7 @@ Follow the interactive prompts to:
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.21.1 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22292 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.6.3 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.0 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.13 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
@@ -162,7 +156,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.0 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.6.51 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
-| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.83.1 |
+| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.85.0 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.1 |
 | <img src='Logos/autodesk_fusion_360.png' width='32' height='32'> Autodesk Fusion 360 | latest |
@@ -179,7 +173,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.252 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.6.30713 |
-| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.0 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.5 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
@@ -316,7 +310,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 133.0.3065.92 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.94.25020927 |
-| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25031.1203.3429.7545 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25031.1205.3471.1031 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.98.0 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.87 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
@@ -329,7 +323,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.35.2 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.7.2 |
 | <img src='Logos/notion.png' width='32' height='32'> Notion | 4.5.0 |
-| <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.127.0 |
+| <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.129.0 |
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.1 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.9 |
@@ -350,7 +344,7 @@ Follow the interactive prompts to:
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.0 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.93.1 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.93.2 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
 | <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2024.3.10.4 |
@@ -372,7 +366,7 @@ Follow the interactive prompts to:
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
 | <img src='Logos/sync.png' width='32' height='32'> Sync | 2.2.48 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.2 |
-| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.3 |
+| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2024.3.4 |
 | <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.80.2 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.7 |
@@ -388,7 +382,7 @@ Follow the interactive prompts to:
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.4 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.3.81 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.2 |
-| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.4.3 |
+| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.4.4 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
