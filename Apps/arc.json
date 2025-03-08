@@ -1,12 +1,12 @@
 {
   "name": "Arc",
   "description": "Chromium based browser",
-  "version": "1.85.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/arc_1.85.0.pkg",
+  "version": "1.85.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/arc_1.85.1.pkg",
   "bundleId": "company.thebrowser.Browser",
   "homepage": "https://arc.net/",
-  "fileName": "arc_1.85.0.pkg",
+  "fileName": "arc_1.85.1.pkg",
   "type": "app",
-  "sha": "34e43f392e127f3deef617fcbc27fc3fc38e3915161ad0e8fef86c6a1671cbf5",
-  "previous_version": "1.85.0"
+  "sha": "6372489761aa62cf36c1dede67a0ffbbab91e9d613e8e002e94ab94863887d51",
+  "previous_version": "1.85.1"
 }

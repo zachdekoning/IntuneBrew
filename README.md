@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                              <p>
+                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,16 +79,20 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-07 00:26 UTC*
+*Last checked: 2025-03-08 00:20 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Microsoft Teams | 25031.1203.3429.7545 | 25031.1205.3471.1031 |
-| Bitwarden | 2025.2.0 | 2025.2.1 |
-| Tableau Desktop | 2024.3.3 | 2024.3.4 |
-| Raycast | 1.93.1 | 1.93.2 |
-| Windsurf | 1.4.3 | 1.4.4 |
-| Amazon Q | 1.6.3 | 1.7.0 |
+| Windows App | 11.1.2 | 11.1.3 |
+| Todoist | 9.11.1 | 9.12.1 |
+| MongoDB Compass | 1.45.3 | 1.45.4 |
+| Signal | 7.45.0 | 7.45.1 |
+| iMazing | 3.1.0 | 3.1.1 |
+| Zed | 0.176.2 | 0.176.3 |
+| Microsoft Edge | 133.0.3065.92 | 134.0.3124.51 |
+| Rancher Desktop | 1.18.0 | 1.18.2 |
+| BoltAI | 1.33.0 | 1.33.1 |
+| Amazon Chime | 5.23.22292 | 5.23.22297 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -147,7 +151,7 @@ Follow the interactive prompts to:
 | <img src='Logos/alfred.png' width='32' height='32'> Alfred | 5.6 |
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.21.1 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
-| <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22292 |
+| <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22297 |
 | <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.0 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.13 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
@@ -156,7 +160,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.0 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.6.51 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
-| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.85.0 |
+| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.85.1 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.1 |
 | <img src='Logos/autodesk_fusion_360.png' width='32' height='32'> Autodesk Fusion 360 | latest |
@@ -170,14 +174,14 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.4.1 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.252 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.253 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.6.30713 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.3.2 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.5 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
-| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.33.0 |
+| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.33.1 |
 | <img src='Logos/boop.png' width='32' height='32'> Boop | 1.4.0 |
 | <img src='Logos/boxcryptor.png' width='32' height='32'> Boxcryptor | 3.13.680 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.76.73.0 |
@@ -270,7 +274,7 @@ Follow the interactive prompts to:
 | <img src='Logos/hyper.png' width='32' height='32'> Hyper | 3.4.1 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
 | <img src='Logos/iina.png' width='32' height='32'> IINA | 1.3.5 |
-| <img src='Logos/imazing.png' width='32' height='32'> iMazing | 3.1.0 |
+| <img src='Logos/imazing.png' width='32' height='32'> iMazing | 3.1.1 |
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2 |
 | <img src='Logos/inkscape.png' width='32' height='32'> Inkscape | 1.4.028868 |
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.1 |
@@ -308,13 +312,13 @@ Follow the interactive prompts to:
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.77.24121924 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
-| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 133.0.3065.92 |
+| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 134.0.3124.51 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.94.25020927 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25031.1205.3471.1031 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.98.0 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.87 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
-| <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.3 |
+| <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.4 |
 | <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.3 |
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 136.0 |
@@ -338,12 +342,12 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.11 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.1 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.17.1 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.35.2 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.35.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
-| <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.0 |
+| <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.2 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.93.2 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
@@ -353,7 +357,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.1 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.2 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.45.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.45.1 |
 | <img src='Logos/sketch.png' width='32' height='32'> Sketch | 101.8 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.42.120 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2025.0.0 |
@@ -371,7 +375,7 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.7 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.16.0 |
-| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.11.1 |
+| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.12.1 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
@@ -381,13 +385,13 @@ Follow the interactive prompts to:
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.2.0.31822 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.4 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.3.81 |
-| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.2 |
+| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.3 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.4.4 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.176.2 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.176.3 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.8.2b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.11.50104 |
 
