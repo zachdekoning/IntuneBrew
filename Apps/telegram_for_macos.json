@@ -1,13 +1,13 @@
 {
   "name": "Telegram for macOS",
   "description": "Messaging app with a focus on speed and security",
-  "version": "11.7",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/telegram_for_macos_11.7.pkg",
+  "version": "11.8",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/telegram_for_macos_11.8.pkg",
   "bundleId": "ru.keepcoder.Telegram",
   "homepage": "https://macos.telegram.org/",
-  "fileName": "telegram_for_macos_11.7.pkg",
+  "fileName": "telegram_for_macos_11.8.pkg",
   "type": "app",
-  "sha": "11eee70326b423ade1855e01fa6fd78d74608b4507061870a391c1782db1aa63",
+  "sha": "dae652f406973d505d958c35db2ab6ae35930d53f60d62513e51a2bc48b0e85b",
   "changelog": "https://macos.telegram.org/changelog",
-  "previous_version": "11.7"
+  "previous_version": "11.8"
 }
