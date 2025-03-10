@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                  <p>
+                                                                                                                                    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,19 +79,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-09 00:23 UTC*
+*Last checked: 2025-03-10 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Notion | 4.5.0 | 4.6.1 |
-| kitty | 0.39.1 | 0.40.0 |
-| OBS | 31.0.1 | 31.0.2 |
-| VSCodium | 1.97.2.25045 | 1.98.0.25067 |
-| LM Studio | 0.3.11 | 0.3.12 |
-| Zen Browser | 1.8.2b | 1.9b |
-| BoltAI | 1.33.1 | 1.33.2 |
-| Apidog | 2.6.51 | 2.7.0 |
-| Badgeify | 1.5.7 | 1.5.8 |
+| Stats | 2.11.33 | 2.11.34 |
+| MacTeX | 2024.0312 | 2025.0308 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -306,7 +299,7 @@ Follow the interactive prompts to:
 | <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.10.5 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.9.1 |
-| <img src='Logos/mactex.png' width='32' height='32'> MacTeX | 2024.0312 |
+| <img src='Logos/mactex.png' width='32' height='32'> MacTeX | 2025.0308 |
 | <img src='Logos/menubar_stats.png' width='32' height='32'> MenuBar Stats | 3.9 |
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.77.24121924 |
@@ -363,7 +356,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.58.498 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.33 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.34 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
