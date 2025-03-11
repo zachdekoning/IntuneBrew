@@ -1,12 +1,12 @@
 {
   "name": "GitHub Desktop",
   "description": "Desktop client for GitHub repositories",
-  "version": "3.4.17-dd36e2aa",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/github_desktop_3.4.17-dd36e2aa.pkg",
+  "version": "3.4.18-19c76e1d",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/github_desktop_3.4.18-19c76e1d.pkg",
   "bundleId": "com.github.GitHubClient",
   "homepage": "https://desktop.github.com/",
-  "fileName": "github_desktop_3.4.17-dd36e2aa.pkg",
+  "fileName": "github_desktop_3.4.18-19c76e1d.pkg",
   "type": "app",
-  "sha": "98ba8ddac305e7faed666a7056a1d78ebcd72faebfc9b8ad7b6e9112f9803ed5",
-  "previous_version": "3.4.17-dd36e2aa"
+  "sha": "b4f116fe1fc8dcd0f36c02af10731697124d512faae8efd9d20677dbf67d4aa9",
+  "previous_version": "3.4.18-19c76e1d"
 }
