@@ -8,5 +8,5 @@
   "fileName": "signal-desktop-mac-arm64-7.46.0.dmg",
   "sha": "98d027129266db9b3b1be5d75555f39b6fb7d3ff641fa3814415675f6666a302",
   "changelog": "https://github.com/signalapp/Signal-Desktop/releases",
-  "previous_version": "7.45.1"
+  "previous_version": "7.46.0"
 }

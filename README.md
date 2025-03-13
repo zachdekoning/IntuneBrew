@@ -19,9 +19,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                          <p>
+                                                                                                                                            <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -79,20 +79,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-13 00:26 UTC*
+*Last checked: 2025-03-13 08:44 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Microsoft Teams | 25031.1205.3471.1031 | 25044.2406.3471.4570 |
-| Webex Teams | 45.3.0.31957 | 45.3.0.31978 |
-| Signal | 7.45.1 | 7.46.0 |
-| Zed | 0.176.3 | 0.177.7 |
-| LM Studio | 0.3.12 | 0.3.13 |
-| Zen Browser | 1.9b | 1.9.1b |
-| Google Ads Editor | 2.8 | 2.9 |
-| Downie | 4.9.7 | 4.9.8 |
-| Remote Desktop Manager | 2024.3.10.4 | 2025.1.12.4 |
-| Insta360 Studio | 5.5.2 | 5.5.3 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -144,6 +133,7 @@ Follow the interactive prompts to:
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20432 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 25.001.20432 |
+| <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.5.0.348 |
 | <img src='Logos/airfoil.png' width='32' height='32'> Airfoil | 5.12.4 |
 | <img src='Logos/airtable.png' width='32' height='32'> Airtable | 1.6.6 |
 | <img src='Logos/airy.png' width='32' height='32'> Airy | 3.29.2 |
