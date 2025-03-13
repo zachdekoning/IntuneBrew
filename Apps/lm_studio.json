@@ -1,12 +1,12 @@
 {
   "name": "LM Studio",
   "description": "Discover, download, and run local LLMs",
-  "version": "0.3.12",
-  "url": "https://installers.lmstudio.ai/darwin/arm64/0.3.12-1/LM-Studio-0.3.12-1-arm64.dmg",
+  "version": "0.3.13",
+  "url": "https://installers.lmstudio.ai/darwin/arm64/0.3.13-1/LM-Studio-0.3.13-1-arm64.dmg",
   "bundleId": "ai.elementlabs.lmstudio",
   "homepage": "https://lmstudio.ai/",
-  "fileName": "LM-Studio-0.3.12-1-arm64.dmg",
-  "sha": "b1acbf11785b8e77c2943d89bcb4716af1610aac3a21e6c63cfd2235de6ff699",
+  "fileName": "LM-Studio-0.3.13-1-arm64.dmg",
+  "sha": "7cfad36eefea3744b12e15fd002775fd3dc72c5c500c9edccc783b41301368bb",
   "changelog": "https://github.com/lmstudio-ai/Release/releases",
   "previous_version": "0.3.12"
 }

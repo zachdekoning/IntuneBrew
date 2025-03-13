@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                        <p>
+                                                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-254-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,26 +79,20 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-12 00:26 UTC*
+*Last checked: 2025-03-13 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 134.0.6998.45 | 134.0.6998.89 |
-| Mozilla Firefox | 136.0 | 136.0.1 |
-| Slack | 4.42.120 | 4.43.44 |
-| Grammarly Desktop | 1.108.1.0 | 1.109.2.0 |
-| Webex Teams | 45.2.0.31822 | 45.3.0.31957 |
-| Brave | 1.76.73.0 | 1.76.74.0 |
-| ChatGPT | 1.2025.057 | 1.2025.063 |
-| Microsoft Edge | 134.0.3124.51 | 134.0.3124.62 |
-| VSCodium | 1.98.0.25067 | 1.98.1.25070 |
-| Microsoft Office | 16.94.25020927 | 16.95.25030928 |
-| Windsurf | 1.4.4 | 1.4.6 |
-| Opera | 117.0.5408.53 | 117.0.5408.93 |
-| Little Snitch | 6.2.2 | 6.2.3 |
-| LangGraph Studio | 0.0.36 | 0.0.37 |
-| Adobe Acrobat Reader | 24.005.20414 | 25.001.20432 |
-| Adobe Acrobat Pro DC | 25.001.20428 | 25.001.20432 |
+| Microsoft Teams | 25031.1205.3471.1031 | 25044.2406.3471.4570 |
+| Webex Teams | 45.3.0.31957 | 45.3.0.31978 |
+| Signal | 7.45.1 | 7.46.0 |
+| Zed | 0.176.3 | 0.177.7 |
+| LM Studio | 0.3.12 | 0.3.13 |
+| Zen Browser | 1.9b | 1.9.1b |
+| Google Ads Editor | 2.8 | 2.9 |
+| Downie | 4.9.7 | 4.9.8 |
+| Remote Desktop Manager | 2024.3.10.4 | 2025.1.12.4 |
+| Insta360 Studio | 5.5.2 | 5.5.3 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -180,7 +174,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.4.1 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.265 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.268 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.6.30713 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.1 |
@@ -229,7 +223,7 @@ Follow the interactive prompts to:
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.341 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.39.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
-| <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.7 |
+| <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.8 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.16 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
@@ -268,7 +262,7 @@ Follow the interactive prompts to:
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.8.0 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.4 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.4 |
-| <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.8 |
+| <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.9 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 134.0.6998.89 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 105.0.1 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.109.2.0 |
@@ -284,7 +278,7 @@ Follow the interactive prompts to:
 | <img src='Logos/imazing_profile_editor.png' width='32' height='32'> iMazing Profile Editor | 1.9.2 |
 | <img src='Logos/inkscape.png' width='32' height='32'> Inkscape | 1.4.028868 |
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 10.3.1 |
-| <img src='Logos/insta360_studio.png' width='32' height='32'> Insta360 Studio | 5.5.2 |
+| <img src='Logos/insta360_studio.png' width='32' height='32'> Insta360 Studio | 5.5.3 |
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.4.1 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.11 |
 | <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
@@ -307,7 +301,7 @@ Follow the interactive prompts to:
 | <img src='Logos/langgraph_studio.png' width='32' height='32'> LangGraph Studio | 0.0.37 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.1 |
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
-| <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.12 |
+| <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.13 |
 | <img src='Logos/logitech_g_hub.png' width='32' height='32'> Logitech G HUB | 2025.2.687008 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.87.684086 |
 | <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.10.5 |
@@ -320,7 +314,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
 | <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 134.0.3124.62 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.95.25030928 |
-| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25031.1205.3471.1031 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25044.2406.3471.4570 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.98.1 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.87 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
@@ -337,7 +331,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.2 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.9 |
-| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.5.13 |
+| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.0 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.020.0202.0001 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.1 |
@@ -357,13 +351,13 @@ Follow the interactive prompts to:
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.93.2 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
-| <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2024.3.10.4 |
+| <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.12.4 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.1 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.2 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.45.1 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.46.0 |
 | <img src='Logos/sketch.png' width='32' height='32'> Sketch | 101.8 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.43.44 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2025.0.0 |
@@ -388,7 +382,7 @@ Follow the interactive prompts to:
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.1.3570.60 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.98.1.25070 |
-| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.3.0.31957 |
+| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.3.0.31978 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.4 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.3.81 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.3 |
@@ -397,8 +391,8 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.176.3 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.9b |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.177.7 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.9.1b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.11.50104 |
 
 > [!NOTE]
