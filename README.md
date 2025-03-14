@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                            <p>
+                                                                                                                                              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,9 +79,21 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-13 08:44 UTC*
+*Last checked: 2025-03-14 00:26 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Miro | 0.10.87 | 0.10.90 |
+| Notion | 4.6.2 | 4.6.3 |
+| Audacity | 3.7.2 | 3.7.3 |
+| Elgato Wave Link | 2.0.4.3737 | 2.0.5.3755 |
+| WebStorm | 2024.3.4 | 2024.3.5 |
+| Zed | 0.177.7 | 0.177.8 |
+| Microsoft Edge | 134.0.3124.62 | 134.0.3124.68 |
+| VSCodium | 1.98.1.25070 | 1.98.2.25072 |
+| Apidog | 2.7.0 | 2.7.1 |
+| Remote Desktop Manager | 2025.1.12.4 | 2025.1.12.5 |
+| NordVPN | 8.35.2 | 8.35.5 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -148,11 +160,11 @@ Follow the interactive prompts to:
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.0 |
-| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.0 |
+| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.1 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
-| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.85.1 |
+| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.86.0 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
-| <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.2 |
+| <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.3 |
 | <img src='Logos/autodesk_fusion_360.png' width='32' height='32'> Autodesk Fusion 360 | latest |
 | <img src='Logos/aws_corretto_jdk.png' width='32' height='32'> AWS Corretto JDK | 21.0.6.7.1 |
 | <img src='Logos/azul_zulu_java_standard_edition_development_kit.png' width='32' height='32'> Azul Zulu Java Standard Edition Development Kit | 23.0.2 |
@@ -226,12 +238,12 @@ Follow the interactive prompts to:
 | <img src='Logos/elephas.png' width='32' height='32'> Elephas | 11.094 |
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
-| <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.4.3737 |
+| <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.5.3755 |
 | <img src='Logos/epic_games_launcher.png' width='32' height='32'> Epic Games Launcher | 18.0.0 |
 | <img src='Logos/etcher.png' width='32' height='32'> Etcher | 2.1.0 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
-| <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.5 |
+| <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.6 |
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 125.1.5 |
 | <img src='Logos/fission.png' width='32' height='32'> Fission | 2.8.8 |
 | <img src='Logos/flameshot.png' width='32' height='32'> Flameshot | 12.1.0 |
@@ -302,11 +314,11 @@ Follow the interactive prompts to:
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.77.24121924 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
-| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 134.0.3124.62 |
+| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 134.0.3124.68 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.95.25030928 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25044.2406.3471.4570 |
-| <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.98.1 |
-| <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.87 |
+| <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.98.2 |
+| <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.90 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.45.4 |
 | <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.3 |
@@ -314,9 +326,9 @@ Follow the interactive prompts to:
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 136.0.1 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 25 |
 | <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1 |
-| <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.35.2 |
+| <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.35.5 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.7.2 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.6.2 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.6.3 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.129.0 |
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.2 |
@@ -332,7 +344,7 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.12 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.1 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.17.1 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.36.1 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.36.3 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
@@ -341,7 +353,7 @@ Follow the interactive prompts to:
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.93.2 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
-| <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.12.4 |
+| <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.12.5 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.1 |
@@ -371,9 +383,9 @@ Follow the interactive prompts to:
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.1.3570.60 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
-| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.98.1.25070 |
+| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.98.2.25072 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.3.0.31978 |
-| <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.4 |
+| <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.5 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.3.81 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.3 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.4.6 |
@@ -381,7 +393,7 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.177.7 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.177.8 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.9.1b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.11.50104 |
 

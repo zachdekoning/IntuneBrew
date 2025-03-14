@@ -1,12 +1,12 @@
 {
   "name": "VSCodium",
   "description": "Binary releases of VS Code without MS branding/telemetry/licensing",
-  "version": "1.98.1.25070",
-  "url": "https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium.arm64.1.98.1.25070.dmg",
+  "version": "1.98.2.25072",
+  "url": "https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium.arm64.1.98.2.25072.dmg",
   "bundleId": "com.vscodium",
   "homepage": "https://github.com/VSCodium/vscodium",
-  "fileName": "VSCodium.arm64.1.98.1.25070.dmg",
-  "sha": "6463f2beb0a834e59da6d386e797a09f6b33e0d089b93995df09257a1ef58377",
+  "fileName": "VSCodium.arm64.1.98.2.25072.dmg",
+  "sha": "dffd692196c5bbb0ead64e5692e0e58b98d35b7096a0610b7dbd67df94a858a7",
   "changelog": "https://github.com/VSCodium/vscodium/releases",
   "previous_version": "1.98.1.25070"
 }

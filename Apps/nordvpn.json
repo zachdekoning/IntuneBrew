@@ -1,8 +1,8 @@
 {
   "name": "NordVPN",
   "description": "VPN client for secure internet access and private browsing",
-  "version": "8.35.2",
-  "url": "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/8.35.2/NordVPN.pkg",
+  "version": "8.35.5",
+  "url": "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/8.35.5/NordVPN.pkg",
   "bundleId": "com.nordvpn.macos",
   "homepage": "https://nordvpn.com/",
   "fileName": "NordVPN.pkg",
