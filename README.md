@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                              <p>
+                                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,21 +79,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-14 00:26 UTC*
+*Last checked: 2025-03-15 00:25 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Miro | 0.10.87 | 0.10.90 |
-| Notion | 4.6.2 | 4.6.3 |
-| Audacity | 3.7.2 | 3.7.3 |
-| Elgato Wave Link | 2.0.4.3737 | 2.0.5.3755 |
-| WebStorm | 2024.3.4 | 2024.3.5 |
-| Zed | 0.177.7 | 0.177.8 |
-| Microsoft Edge | 134.0.3124.62 | 134.0.3124.68 |
-| VSCodium | 1.98.1.25070 | 1.98.2.25072 |
-| Apidog | 2.7.0 | 2.7.1 |
-| Remote Desktop Manager | 2025.1.12.4 | 2025.1.12.5 |
-| NordVPN | 8.35.2 | 8.35.5 |
+| AnyDesk | 9.0.0 | 9.0.1 |
+| Goland | 2024.3.4 | 2024.3.5 |
+| Zed | 0.177.8 | 0.177.9 |
+| Epic Games Launcher | 18.0.0 | 18.1.3 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -159,7 +152,7 @@ Follow the interactive prompts to:
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
-| <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.0 |
+| <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.1 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.1 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.86.0 |
@@ -201,7 +194,7 @@ Follow the interactive prompts to:
 | <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 134.0.6998.6 |
 | <img src='Logos/cisco_jabber.png' width='32' height='32'> Cisco Jabber | 20241220015538 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
-| <img src='Logos/claude.png' width='32' height='32'> Claude | 0.8.0 |
+| <img src='Logos/claude.png' width='32' height='32'> Claude | 0.8.1 |
 | <img src='Logos/cleanmymac.png' width='32' height='32'> CleanMyMac | 5.0.6 |
 | <img src='Logos/clion.png' width='32' height='32'> CLion | 2024.3.4 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
@@ -210,7 +203,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.1.1 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.46.11 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.47.4 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.8.1 |
@@ -239,7 +232,7 @@ Follow the interactive prompts to:
 | <img src='Logos/elgato_camera_hub.png' width='32' height='32'> Elgato Camera Hub | 1.11.0.4022 |
 | <img src='Logos/elgato_stream_deck.png' width='32' height='32'> Elgato Stream Deck | 6.8.1.21263 |
 | <img src='Logos/elgato_wave_link.png' width='32' height='32'> Elgato Wave Link | 2.0.5.3755 |
-| <img src='Logos/epic_games_launcher.png' width='32' height='32'> Epic Games Launcher | 18.0.0 |
+| <img src='Logos/epic_games_launcher.png' width='32' height='32'> Epic Games Launcher | 18.1.3 |
 | <img src='Logos/etcher.png' width='32' height='32'> Etcher | 2.1.0 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
@@ -263,7 +256,7 @@ Follow the interactive prompts to:
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.18-19c76e1d |
 | <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 10.8.0 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.4 |
-| <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.4 |
+| <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.5 |
 | <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.9 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 134.0.6998.89 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 105.0.1 |
@@ -344,7 +337,7 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.12 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.1 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.17.1 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.36.3 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.36.6 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
@@ -393,7 +386,7 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.177.8 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.177.9 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.9.1b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.3.11.50104 |
 

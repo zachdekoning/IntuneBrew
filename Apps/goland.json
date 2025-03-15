@@ -1,11 +1,11 @@
 {
   "name": "Goland",
   "description": "Go (golang) IDE",
-  "version": "2024.3.4",
-  "url": "https://download.jetbrains.com/go/goland-2024.3.4-aarch64.dmg",
+  "version": "2024.3.5",
+  "url": "https://download.jetbrains.com/go/goland-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.goland",
   "homepage": "https://www.jetbrains.com/go/",
-  "fileName": "goland-2024.3.4-aarch64.dmg",
-  "sha": "4c5e5f50b9209f673ed165c4c1fcb1bc88f4fd3ab2f4ad9740bc8855bb6f4e22",
+  "fileName": "goland-2024.3.5-aarch64.dmg",
+  "sha": "7f3503352d47551c68818b288938fdb01ebd35d56153f6ed560058b19397796c",
   "previous_version": "2024.3.4"
 }
