@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                <p>
+                                                                                                                                                  <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,14 +79,13 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-15 00:25 UTC*
+*Last checked: 2025-03-16 00:28 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| AnyDesk | 9.0.0 | 9.0.1 |
-| Goland | 2024.3.4 | 2024.3.5 |
-| Zed | 0.177.8 | 0.177.9 |
-| Epic Games Launcher | 18.0.0 | 18.1.3 |
+| Spotify | 1.2.58.498 | 1.2.59.514 |
+| Amazon Q | 1.7.0 | 1.7.1 |
+| Dataflare | 1.9.3 | 1.9.4 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -147,7 +146,7 @@ Follow the interactive prompts to:
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.21.1 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22297 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.0 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.1 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.13 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
@@ -169,7 +168,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.4.1 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.268 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.272 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.6.30713 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.2.1 |
@@ -203,11 +202,11 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2412.0 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.1.1 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.47.4 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.47.5 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.8.1 |
-| <img src='Logos/dataflare.png' width='32' height='32'> Dataflare | 1.9.3 |
+| <img src='Logos/dataflare.png' width='32' height='32'> Dataflare | 1.9.4 |
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2024.3.5 |
 | <img src='Logos/dataspell.png' width='32' height='32'> DataSpell | 2024.3.2 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
@@ -326,7 +325,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.2 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.9 |
-| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.0 |
+| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.1 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.020.0202.0001 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.6.1 |
@@ -358,7 +357,7 @@ Follow the interactive prompts to:
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2025.0.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
-| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.58.498 |
+| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.59.514 |
 | <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.34 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
