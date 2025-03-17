@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                  <p>
+                                                                                                                                                    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,13 +79,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-16 00:28 UTC*
+*Last checked: 2025-03-17 00:27 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Spotify | 1.2.58.498 | 1.2.59.514 |
-| Amazon Q | 1.7.0 | 1.7.1 |
-| Dataflare | 1.9.3 | 1.9.4 |
+| draw.io Desktop | 26.0.16 | 26.1.1 |
+| Stats | 2.11.34 | 2.11.35 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -218,7 +217,7 @@ Follow the interactive prompts to:
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.39.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.8 |
-| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.0.16 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.1.1 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 219.4.4463 |
@@ -358,7 +357,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.2.4 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.59.514 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.34 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.35 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
