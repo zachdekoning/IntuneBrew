@@ -1,12 +1,12 @@
 {
   "name": "DuckDuckGo",
   "description": "Web browser focusing on privacy",
-  "version": "1.129.0",
-  "url": "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-1.129.0.379.dmg",
+  "version": "1.130.0",
+  "url": "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-1.130.0.388.dmg",
   "bundleId": "com.duckduckgo.macos.browser",
   "homepage": "https://duckduckgo.com/",
-  "fileName": "duckduckgo-1.129.0.379.dmg",
-  "sha": "5ba62b448d0855d45891b314f8b33ec58a0ea3432c8b9059e6317acc83916792",
+  "fileName": "duckduckgo-1.130.0.388.dmg",
+  "sha": "a93ae9c6913d887715adc39b11f0b3afaf79b7199a01ea657bf3b1d079060347",
   "changelog": "https://github.com/duckduckgo/macos-browser/releases",
   "previous_version": "1.129.0"
 }
