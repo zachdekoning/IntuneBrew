@@ -1,12 +1,12 @@
 {
   "name": "Dropbox",
   "description": "Client for the Dropbox cloud storage service",
-  "version": "219.4.4463",
-  "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20219.4.4463.arm64.dmg",
+  "version": "220.4.4126",
+  "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20220.4.4126.arm64.dmg",
   "bundleId": "com.dropbox.DropboxMacUpdate.agent",
   "homepage": "https://www.dropbox.com/",
-  "fileName": "Dropbox%20219.4.4463.arm64.dmg",
-  "sha": "b23c9e6927fd77b496b424ad4bd1a9ff056330a0baf115f7bd7707163bf01cea",
+  "fileName": "Dropbox%20220.4.4126.arm64.dmg",
+  "sha": "6061ae0e5198474e99d941c9e0b249d8eb01d5942b95b005ec83d50540d50728",
   "changelog": "https://www.dropbox.com/release_notes",
   "previous_version": "219.4.4463"
 }

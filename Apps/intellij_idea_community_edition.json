@@ -1,12 +1,12 @@
 {
   "name": "IntelliJ IDEA Community Edition",
   "description": "IDE for Java development - community edition",
-  "version": "2024.3.4.1",
-  "url": "https://download.jetbrains.com/idea/ideaIC-2024.3.4.1-aarch64.dmg",
+  "version": "2024.3.5",
+  "url": "https://download.jetbrains.com/idea/ideaIC-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.intellij.ce",
   "homepage": "https://www.jetbrains.com/idea/",
-  "fileName": "ideaIC-2024.3.4.1-aarch64.dmg",
-  "sha": "5b8681be2c39c2bbbff143aea27161a5f69c72daf6e88d6f320867bbf7c51659",
+  "fileName": "ideaIC-2024.3.5-aarch64.dmg",
+  "sha": "b96b9fa3de829f0d5e98aa73766b3da4909186a464e3f8e7b8b3c975f1b0978b",
   "changelog": "https://www.jetbrains.com/idea/whatsnew/",
   "previous_version": "2024.3.4.1"
 }
