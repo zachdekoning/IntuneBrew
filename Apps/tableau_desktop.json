@@ -1,12 +1,12 @@
 {
   "name": "Tableau Desktop",
   "description": "Data visualization software",
-  "version": "2024.3.4",
-  "url": "https://downloads.tableau.com/esdalt/2024.3.4/TableauDesktop-2024-3-4-arm64.dmg",
+  "version": "2025.1.0",
+  "url": "https://downloads.tableau.com/esdalt/2025.1.0/TableauDesktop-2025-1-0-arm64.dmg",
   "bundleId": "com.tableausoftware.tableaudesktop",
   "homepage": "https://www.tableau.com/products/desktop",
-  "fileName": "TableauDesktop-2024-3-4-arm64.dmg",
-  "sha": "c88c9198f559f1e96286ab07cd311ecea83a247282b39a2c570fa21beb870485",
+  "fileName": "TableauDesktop-2025-1-0-arm64.dmg",
+  "sha": "d523960e82aa08ddfe8244913c5e12c2119dcaed6919516988b70ea7e88816fe",
   "changelog": "https://www.tableau.com/support/releases/desktop",
   "previous_version": "2024.3.4"
 }

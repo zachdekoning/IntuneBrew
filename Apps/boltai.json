@@ -1,12 +1,12 @@
 {
   "name": "BoltAI",
   "description": "AI chat client",
-  "version": "1.33.3",
-  "url": "https://download.boltai.com/releases/BoltAI-1.33.3.dmg",
+  "version": "1.33.4",
+  "url": "https://download.boltai.com/releases/BoltAI-1.33.4.dmg",
   "bundleId": "co.podzim.BoltGPT",
   "homepage": "https://boltai.com/",
-  "fileName": "BoltAI-1.33.3.dmg",
-  "sha": "4912fbb92e1d8ca549b3affca6d9e5c3e5a039d983e627522068187021b7387c",
+  "fileName": "BoltAI-1.33.4.dmg",
+  "sha": "cbae1f253bc723a33dbe3831ead8722f8abd2f134739672835b8cda59f46a4bd",
   "changelog": "https://boltai.com/changelog",
   "previous_version": "1.33.3"
 }

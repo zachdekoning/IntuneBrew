@@ -8,5 +8,5 @@
   "fileName": "CompanyPortal_5.2502.0-Upgrade.pkg",
   "sha": "56013495a450429f88f087c1c56d1dfcceab19a45aba485a0968dcf7419c378d",
   "changelog": "https://docs.microsoft.com/en-us/mem/intune/user-help/enroll-your-device-in-intune-macos-cp",
-  "previous_version": "5.2412.0"
+  "previous_version": "5.2502.0"
 }
