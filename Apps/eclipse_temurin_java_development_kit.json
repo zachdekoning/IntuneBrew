@@ -8,5 +8,5 @@
   "fileName": "OpenJDK24U-jdk_aarch64_mac_hotspot_24_36.pkg",
   "sha": "65bb8d7ad13e86c3db9286ecd120a1452ed925fa6b08af13cf6d633204373ca3",
   "changelog": "https://adoptium.net/de/temurin/releases/?os=mac&version=23",
-  "previous_version": "23.0.2"
+  "previous_version": "24"
 }

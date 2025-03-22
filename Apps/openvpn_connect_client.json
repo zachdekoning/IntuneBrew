@@ -9,5 +9,5 @@
   "type": "pkg_in_dmg",
   "changelog": "https://openvpn.net/connect-docs/macos-release-notes.html",
   "sha": "713d9af81b6c376ef1180e88c9e736abb3142f9b98a1752fe9d274c8ae420d7e",
-  "previous_version": "3.6.1"
+  "previous_version": "3.7.0"
 }
