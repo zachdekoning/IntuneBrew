@@ -1,12 +1,12 @@
 {
   "name": "Zen Browser",
   "description": "Gecko based web browser",
-  "version": "1.10b",
-  "url": "https://github.com/zen-browser/desktop/releases/download/1.10b/zen.macos-universal.dmg",
+  "version": "1.10.1b",
+  "url": "https://github.com/zen-browser/desktop/releases/download/1.10.1b/zen.macos-universal.dmg",
   "bundleId": "app.zen-browser.zen",
   "homepage": "https://zen-browser.app/",
   "fileName": "zen.macos-universal.dmg",
-  "sha": "85c8497bb44c0c8db885aa5bfb38b90382a429615da91d3633ac9f983f6ab699",
+  "sha": "4747fe6ed9dd6078b949930257a2b1c68f255175a19b6f0f37eb024009340c7e",
   "changelog": "https://zen-browser.app/release-notes/",
   "previous_version": "1.10b"
 }

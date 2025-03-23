@@ -1,12 +1,12 @@
 {
   "name": "Zoom",
   "description": "Video communication and virtual meeting platform",
-  "version": "6.4.0.51205",
-  "url": "https://cdn.zoom.us/prod/6.4.0.51205/arm64/zoomusInstallerFull.pkg",
+  "version": "6.4.1.51520",
+  "url": "https://cdn.zoom.us/prod/6.4.1.51520/arm64/zoomusInstallerFull.pkg",
   "bundleId": "us.zoom.pkg.videomeeting",
   "homepage": "https://www.zoom.us/",
   "fileName": "zoomusInstallerFull.pkg",
-  "sha": "03c1b0d6d09c655472c04e2db862ecae864192a274eb230a0ae9d750c2a83d4b",
+  "sha": "8a03f26ac1faede0def216081c2c99fdd9383f9cc16e162d15d436c30fd0c0ee",
   "changelog": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061222",
   "previous_version": "6.4.0.51205"
 }

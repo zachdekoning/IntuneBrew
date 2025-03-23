@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                              <p>
+                                                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,16 +79,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-22 00:25 UTC*
+*Last checked: 2025-03-23 00:28 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Krisp | 2.57.8 | 2.57.9 |
-| Podman Desktop | 1.17.1 | 1.17.2 |
-| Microsoft Edge | 134.0.3124.77 | 134.0.3124.83 |
-| calibre | 7.26.0 | 8.0.1 |
-| Insomnia | 10.3.1 | 11.0.0 |
-| Amazon Q | 1.7.1 | 1.7.2 |
+| Google Chrome | 134.0.6998.118 | 134.0.6998.166 |
+| Zoom | 6.4.0.51205 | 6.4.1.51520 |
+| Brave | 1.76.80.0 | 1.76.81.0 |
+| Zen Browser | 1.10b | 1.10.1b |
+| BoltAI | 1.33.4 | 1.33.5 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -178,10 +177,10 @@ Follow the interactive prompts to:
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.4.0 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.5 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
-| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.33.4 |
+| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.33.5 |
 | <img src='Logos/boop.png' width='32' height='32'> Boop | 1.4.0 |
 | <img src='Logos/boxcryptor.png' width='32' height='32'> Boxcryptor | 3.13.680 |
-| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.76.80.0 |
+| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.76.81.0 |
 | <img src='Logos/breaktimer.png' width='32' height='32'> BreakTimer | 1.3.2 |
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 1.40.0 |
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.1.1 |
@@ -205,7 +204,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2502.0 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.1.1 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.47.8 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.47.9 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.8.1 |
@@ -260,7 +259,7 @@ Follow the interactive prompts to:
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.4 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2024.3.5 |
 | <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.9 |
-| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 134.0.6998.118 |
+| <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 134.0.6998.166 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 105.0.1 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.110.0.0 |
 | <img src='Logos/hammerspoon.png' width='32' height='32'> Hammerspoon | 1.0.0 |
@@ -389,8 +388,8 @@ Follow the interactive prompts to:
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.178.5 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.10b |
-| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.0.51205 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.10.1b |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.1.51520 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!
