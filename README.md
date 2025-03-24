@@ -19,7 +19,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                <p>
+                                                                                                                                                                  <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,15 +79,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-23 00:28 UTC*
+*Last checked: 2025-03-24 00:27 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 134.0.6998.118 | 134.0.6998.166 |
-| Zoom | 6.4.0.51205 | 6.4.1.51520 |
-| Brave | 1.76.80.0 | 1.76.81.0 |
-| Zen Browser | 1.10b | 1.10.1b |
-| BoltAI | 1.33.4 | 1.33.5 |
+| Stats | 2.11.35 | 2.11.36 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -360,7 +356,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.4.0 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.59.514 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.35 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.36 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
