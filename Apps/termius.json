@@ -1,12 +1,12 @@
 {
   "name": "Termius",
   "description": "SSH client",
-  "version": "9.16.0",
+  "version": "9.17.1",
   "url": "https://autoupdate.termius.com/mac-arm64/Termius.dmg",
   "bundleId": "com.termius-dmg.mac",
   "homepage": "https://www.termius.com/",
   "fileName": "Termius.dmg",
-  "sha": "6eae5424bd3d86f34e072bd1a229e62922c37ff819b45666c10eb7ace7b05f67",
+  "sha": "5a610c12ae5fc578bad1b2407409f0a4ee6aed855db85017c3025453c53b307e",
   "changelog": "https://support.termius.com/hc/en-us/articles/4404036107673-Windows-Linux-Mac",
   "previous_version": "9.16.0"
 }

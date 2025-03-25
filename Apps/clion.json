@@ -1,12 +1,12 @@
 {
   "name": "CLion",
   "description": "C and C++ IDE",
-  "version": "2024.3.4",
-  "url": "https://download.jetbrains.com/cpp/CLion-2024.3.4-aarch64.dmg",
+  "version": "2024.3.5",
+  "url": "https://download.jetbrains.com/cpp/CLion-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.CLion",
   "homepage": "https://www.jetbrains.com/clion/",
-  "fileName": "CLion-2024.3.4-aarch64.dmg",
-  "sha": "e9d601aaed26d8efa82137649acb24c24fdc8d555c42afa9226ed08d3a19fe4d",
+  "fileName": "CLion-2024.3.5-aarch64.dmg",
+  "sha": "c7f4973ab9392daf3bb5708298002d23cf3f769565d2a7c3a9baa8547b06c042",
   "changelog": "https://www.jetbrains.com/clion/whatsnew/",
   "previous_version": "2024.3.4"
 }
