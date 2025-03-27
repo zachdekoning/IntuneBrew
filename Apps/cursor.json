@@ -1,13 +1,13 @@
 {
   "name": "Cursor",
   "description": "Write, edit, and chat about your code with AI",
-  "version": "0.48.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/cursor_0.48.1.pkg",
+  "version": "0.48.2",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/cursor_0.48.2.pkg",
   "bundleId": "com.todesktop.230313mzl4w4u92",
   "homepage": "https://www.cursor.com/",
-  "fileName": "cursor_0.48.1.pkg",
+  "fileName": "cursor_0.48.2.pkg",
   "type": "app",
-  "sha": "e4d56f0569365ed8adafabbaff0bf806585598dec280329ed51cdad677b7455f",
+  "sha": "5de29da25664f53b61313746c17d1d127740a6bc6a1fa9eaf424f513b25b75b1",
   "changelog": "https://www.cursor.com/changelog",
-  "previous_version": "0.48.1"
+  "previous_version": "0.48.2"
 }
