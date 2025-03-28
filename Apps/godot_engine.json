@@ -1,13 +1,13 @@
 {
   "name": "Godot Engine",
   "description": "Game development engine",
-  "version": "4.4",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/godot_engine_4.4.pkg",
+  "version": "4.4.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/godot_engine_4.4.1.pkg",
   "bundleId": "org.godotengine.godot",
   "homepage": "https://godotengine.org/",
-  "fileName": "godot_engine_4.4.pkg",
+  "fileName": "godot_engine_4.4.1.pkg",
   "type": "app",
-  "sha": "e51a56ecb7e02835086f7ac3dd45dd86386b8a6c2d2b7eaef3706ad5ec550b28",
+  "sha": "ba9dad4ae121f1b8ab8fff75e6cbfe9c7b0314122c3686eee1dafd2b7e386d99",
   "changelog": "https://godotengine.org/changelog/",
-  "previous_version": "4.4"
+  "previous_version": "4.4.1"
 }

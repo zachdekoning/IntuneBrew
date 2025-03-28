@@ -1,13 +1,13 @@
 {
   "name": "PDF Expert",
   "description": "PDF reader, editor and annotator",
-  "version": "3.10.12",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/pdf_expert_3.10.12.pkg",
+  "version": "3.10.13",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/pdf_expert_3.10.13.pkg",
   "bundleId": "com.readdle.PDFExpert-Mac",
   "homepage": "https://pdfexpert.com/",
-  "fileName": "pdf_expert_3.10.12.pkg",
+  "fileName": "pdf_expert_3.10.13.pkg",
   "type": "app",
-  "sha": "747ecc31487cadacc8a28eb51818714836f2d56142acd41f42f28c620ac0ac1f",
+  "sha": "a94ee5b38de33010dbb228be6f51a56f07e5263450779ca575a62e3a792ffd2d",
   "changelog": "https://pdfexpert.com/pem3/changelog",
-  "previous_version": "3.10.12"
+  "previous_version": "3.10.13"
 }
