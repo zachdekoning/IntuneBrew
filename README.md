@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                            <p>
+                                                                                                                                                                              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-255-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,18 +79,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-03-29 00:26 UTC*
+*Last checked: 2025-03-30 00:29 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Krisp | 2.57.9 | 2.57.13 |
-| macFUSE | 4.9.1 | 4.10.1 |
-| Zed | 0.179.3 | 0.179.4 |
-| calibre | 8.0.1 | 8.1.1 |
-| LM Studio | 0.3.13 | 0.3.14 |
-| Crystalfetch | 2.1.1 | 2.2.0 |
-| Downie | 4.9.10 | 4.9.11 |
-| LookAway | 1.11.0 | 1.11.1 |
+| kitty | 0.40.1 | 0.41.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -207,7 +200,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2502.1 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.48.2 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.48.3 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.8.1 |
@@ -293,7 +286,7 @@ Follow the interactive prompts to:
 | <img src='Logos/keka.png' width='32' height='32'> Keka | 1.4.8 |
 | <img src='Logos/keybase.png' width='32' height='32'> Keybase | 6.5.0 |
 | <img src='Logos/keyclu.png' width='32' height='32'> KeyClu | 0.29 |
-| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.40.1 |
+| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.41.0 |
 | <img src='Logos/klokki.png' width='32' height='32'> Klokki | 1.3.7 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.57.13 |
 | <img src='Logos/krita.png' width='32' height='32'> Krita | 5.2.9 |
@@ -383,7 +376,7 @@ Follow the interactive prompts to:
 | <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.98.2.25078 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.3.1.32057 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.5 |
-| <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.7.77 |
+| <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.8.76 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.4 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.5.9 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
