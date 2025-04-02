@@ -298,29 +298,6 @@ custom_scrapers = [
     ".github/scripts/scrapers/remotehelp.sh",
 ]
 
-def get_final_url_and_filename(url):
-    """Follow redirects and get the final URL and filename."""
-    try:
-        response = requests.head(url, allow_redirects=True)
-        response.raise_for_status()
-        final_url = response.url
-        
-        # Try to get filename from Content-Disposition header
-        if 'Content-Disposition' in response.headers:
-            cd = response.headers['Content-Disposition']
-            if 'filename=' in cd:
-                filename = cd.split('filename=')[1].strip('"')
-                return final_url, filename
-        
-        # Fall back to URL path
-        filename = os.path.basename(final_url.split('?')[0])
-        if not filename:
-            filename = 'download.pkg'
-        return final_url, filename
-    except Exception as e:
-        print(f"⚠️ Error following redirect: {str(e)}")
-        return url, os.path.basename(url.split('?')[0])
-
 def calculate_file_hash(url):
     """Download a file and calculate its SHA256 hash."""
     print(f"📥 Downloading file from {url} to calculate hash...")
@@ -389,17 +366,14 @@ def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, 
     if '_' in version:
         version = version.split('_')[0]
 
-    # Follow redirects to get final URL and filename
-    final_url, filename = get_final_url_and_filename(data["url"])
-    
     app_info = {
         "name": data["name"][0],
         "description": data["desc"],
         "version": version,
-        "url": final_url,
+        "url": data["url"],
         "bundleId": bundle_id,
         "homepage": data["homepage"],
-        "fileName": filename
+        "fileName": os.path.basename(data["url"])
     }
     
     if needs_packaging:
