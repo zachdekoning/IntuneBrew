@@ -48,8 +48,11 @@ def extract_uninstall_paths(app_data):
     # Extract app bundle path
     if "artifacts" in app_data:
         for artifact in app_data["artifacts"]:
+            # Handle string artifacts (usually app bundles)
             if isinstance(artifact, str) and artifact.endswith(".app"):
                 uninstall_paths.append(f"/Applications/{artifact}")
+            
+            # Handle dictionary artifacts
             elif isinstance(artifact, dict):
                 # Handle app artifacts
                 if "app" in artifact:
@@ -101,7 +104,7 @@ def extract_uninstall_paths(app_data):
             uninstall_paths.append(f"BUNDLE:{quit_ids}")
     
     # Common locations for application data
-    app_name = app_data["name"][0]
+    app_name = app_data["name"][0] if isinstance(app_data["name"], list) else app_data["name"]
     bundle_id = None
     
     # Try to extract bundle ID
@@ -191,7 +194,79 @@ def sanitize_filename(name):
     sanitized = re.sub(r'[^\w_]', '', sanitized)
     return sanitized.lower()
 
+def process_brew_json_directly(json_data, app_name=None):
+    """Process a brew.sh JSON data directly and generate an uninstall script"""
+    if not app_name and "name" in json_data:
+        app_name = json_data["name"][0] if isinstance(json_data["name"], list) else json_data["name"]
+    
+    # Extract paths to remove during uninstallation
+    uninstall_paths = []
+    
+    # Process app artifacts
+    if "artifacts" in json_data:
+        for artifact in json_data["artifacts"]:
+            # Handle app bundles
+            if isinstance(artifact, dict) and "app" in artifact:
+                app_paths = artifact["app"]
+                if isinstance(app_paths, list):
+                    for app in app_paths:
+                        uninstall_paths.append(f"/Applications/{app}")
+                else:
+                    uninstall_paths.append(f"/Applications/{app_paths}")
+    
+    # Process zap artifacts
+    zap_trash_paths = []
+    for artifact in json_data["artifacts"]:
+        if isinstance(artifact, dict) and "zap" in artifact:
+            for zap_item in artifact["zap"]:
+                if isinstance(zap_item, dict) and "trash" in zap_item:
+                    trash_items = zap_item["trash"]
+                    if isinstance(trash_items, list):
+                        zap_trash_paths.extend(trash_items)
+                    else:
+                        zap_trash_paths.append(trash_items)
+    
+    # Add zap trash paths to uninstall paths
+    uninstall_paths.extend(zap_trash_paths)
+    
+    # Generate uninstall script
+    if uninstall_paths:
+        script_content = generate_uninstall_script(app_name, uninstall_paths)
+        
+        # Save script to file
+        script_filename = f"uninstall_{sanitize_filename(app_name)}.sh"
+        script_path = os.path.join(uninstall_dir, script_filename)
+        
+        with open(script_path, "w", newline="\n") as f:
+            f.write(script_content)
+        
+        # Make script executable
+        os.chmod(script_path, 0o755)
+        
+        print(f"Created uninstall script for {app_name}: {script_path}")
+        return True
+    else:
+        print(f"Warning: No uninstall paths found for {app_name}")
+        return False
+
 def main():
+    # Check if a JSON string is provided as an argument
+    if len(sys.argv) > 1 and sys.argv[1] == "--json-string":
+        if len(sys.argv) > 2:
+            json_string = sys.argv[2]
+            try:
+                json_data = json.loads(json_string)
+                app_name = json_data["name"][0] if isinstance(json_data["name"], list) else json_data["name"]
+                print(f"Processing JSON data for {app_name}...")
+                process_brew_json_directly(json_data, app_name)
+                return
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON string: {str(e)}")
+                return
+            except Exception as e:
+                print(f"Error processing JSON string: {str(e)}")
+                return
+    
     # Get all app.json files from the Apps directory
     apps_dir = Path("Apps")
     app_files = list(apps_dir.glob("*.json"))
