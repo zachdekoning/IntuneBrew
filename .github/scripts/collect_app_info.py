@@ -265,7 +265,11 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/lookaway.json",
     "https://formulae.brew.sh/api/cask/joplin.json",
     "https://formulae.brew.sh/api/cask/remote-desktop-manager.json",
-    "https://formulae.brew.sh/api/cask/rotato.json",
+    "https://formulae.brew.sh/api/cask/rotato.json"
+]
+
+# DMG URLs with redirects
+redirect_dmg_urls = [
     "https://formulae.brew.sh/api/cask/tenable-nessus-agent.json"
 ]
 
@@ -351,7 +355,7 @@ def find_bundle_id(json_string):
 
     return None
 
-def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, is_pkg_in_pkg=False, is_pkg=False):
+def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, is_pkg_in_pkg=False, is_pkg=False, is_redirect_dmg=False):
     response = requests.get(json_url)
     response.raise_for_status()
     data = response.json()
@@ -385,6 +389,13 @@ def get_homebrew_app_info(json_url, needs_packaging=False, is_pkg_in_dmg=False, 
     elif is_pkg:
         app_info["type"] = "pkg"
     
+    if is_redirect_dmg:
+        app_info["type"] = "redirect_dmg"
+    if is_redirect_dmg:
+        app_info["type"] = "redirect_dmg"
+        # Set proper filename for known redirect cases
+        if "tenable-nessus-agent" in json_url:
+            app_info["fileName"] = "NessusAgent.dmg"
     return app_info
 
 def sanitize_filename(name):
@@ -633,6 +644,42 @@ def main():
         except Exception as e:
             print(f"Error processing special app {url}: {str(e)}")
             print(f"Full error details: ", e)
+
+    # Process redirect DMG URLs
+    for url in redirect_dmg_urls:
+        try:
+            app_info = get_homebrew_app_info(url, is_redirect_dmg=True)
+            display_name = app_info['name']
+            supported_apps.append(display_name)
+            file_name = f"{sanitize_filename(display_name)}.json"
+            file_path = os.path.join(apps_folder, file_name)
+
+            # For existing files, preserve existing data and update necessary fields
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    existing_data = json.load(f)
+                    # Store the new version, url and previous_version
+                    new_version = app_info["version"]
+                    new_url = app_info["url"]
+                    previous_version = existing_data.get("version")
+                    
+                    # Preserve all existing data except version, url and previous_version
+                    for key in existing_data:
+                        if key not in ["version", "url", "previous_version"]:
+                            app_info[key] = existing_data[key]
+                    
+                    # Update version, url and previous_version
+                    app_info["version"] = new_version
+                    app_info["url"] = new_url
+                    app_info["previous_version"] = previous_version
+
+            with open(file_path, "w") as f:
+                json.dump(app_info, f, indent=2)
+
+            apps_info.append(app_info)
+            print(f"Saved app information for {display_name} to {file_path}")
+        except Exception as e:
+            print(f"Error processing redirect DMG URL {url}: {str(e)}")
 
     # Process regular Homebrew cask URLs
     for url in homebrew_cask_urls:

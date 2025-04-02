@@ -39,7 +39,7 @@ jobs:
           for file in Apps/*.json; do
             if [ -f "$file" ]; then
               type=$(jq -r '.type // empty' "$file")
-              if [ "$type" = "app" ] || [ "$type" = "pkg_in_dmg" ]; then
+              if [ "$type" = "app" ] || [ "$type" = "pkg_in_dmg" ] || [ "$type" = "redirect_dmg" ]; then
                 app_name=$(basename "$file" .json)
                 url=$(jq -r '.url' "$file")
                 apps_to_build+=("$app_name:$url")
@@ -131,8 +131,8 @@ jobs:
             echo "🏷️ Type: $app_type"
             
             # Skip if not a supported type
-            if [ "$app_type" != "app" ] && [ "$app_type" != "pkg_in_dmg" ] && [ "$app_type" != "pkg_in_pkg" ]; then
-              echo "⏭️ Skipping URL update for $app_name as it's not of type 'app', 'pkg_in_dmg', or 'pkg_in_pkg'"
+            if [ "$app_type" != "app" ] && [ "$app_type" != "pkg_in_dmg" ] && [ "$app_type" != "pkg_in_pkg" ] && [ "$app_type" != "redirect_dmg" ]; then
+              echo "⏭️ Skipping URL update for $app_name as it's not of type 'app', 'pkg_in_dmg', 'pkg_in_pkg', or 'redirect_dmg'"
               continue
             fi
             
@@ -238,7 +238,7 @@ jobs:
                 echo "❌ Failed to download PKG"
               fi
               
-            elif [ "$app_type" = "pkg_in_dmg" ]; then
+            elif [ "$app_type" = "pkg_in_dmg" ] || [ "$app_type" = "redirect_dmg" ]; then
               echo "🔍 Processing PKG in DMG for $app_name..."
               echo "📥 Downloading DMG from: $url"
               
