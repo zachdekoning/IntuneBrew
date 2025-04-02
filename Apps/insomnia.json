@@ -2,10 +2,10 @@
   "name": "Insomnia",
   "description": "HTTP and GraphQL Client",
   "version": "11.0.1",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/56899284/204f8610-71af-42c4-8806-7acf00ae0ae4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192042Z&X-Amz-Expires=300&X-Amz-Signature=87241dbedc8185da2bdd971b70ec19ee592a933e64d136aecf5fecd655a627e2&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DInsomnia.Core-11.0.1.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/Kong/insomnia/releases/download/core%4011.0.1/Insomnia.Core-11.0.1.dmg",
   "bundleId": "com.insomnia.app",
   "homepage": "https://insomnia.rest/",
-  "fileName": "204f8610-71af-42c4-8806-7acf00ae0ae4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192042Z&X-Amz-Expires=300&X-Amz-Signature=87241dbedc8185da2bdd971b70ec19ee592a933e64d136aecf5fecd655a627e2&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DInsomnia.Core-11.0.1.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "Insomnia.Core-11.0.1.dmg",
   "sha": "dcb8d060508822b8c443e2749bb5dabb7a9c1cc451df1534efc40e560a016ade",
   "changelog": "https://github.com/Kong/insomnia/releases",
   "previous_version": "11.0.1"

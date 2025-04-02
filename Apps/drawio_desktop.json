@@ -2,10 +2,10 @@
   "name": "draw.io Desktop",
   "description": "Online diagram software",
   "version": "26.2.2",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/92443980/fca3ef2d-f2dc-4a69-9658-f275541bb89e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192008Z&X-Amz-Expires=300&X-Amz-Signature=b28f63a97ee765a8168dd5b162229aec8f1f0215284fa33dd800b29848f8f6f8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Ddraw.io-arm64-26.2.2.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/jgraph/drawio-desktop/releases/download/v26.2.2/draw.io-arm64-26.2.2.dmg",
   "bundleId": "com.jgraph.drawio.desktop",
   "homepage": "https://www.diagrams.net/",
-  "fileName": "fca3ef2d-f2dc-4a69-9658-f275541bb89e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192008Z&X-Amz-Expires=300&X-Amz-Signature=b28f63a97ee765a8168dd5b162229aec8f1f0215284fa33dd800b29848f8f6f8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Ddraw.io-arm64-26.2.2.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "draw.io-arm64-26.2.2.dmg",
   "sha": "89f4ebe508db3ffa2325401cdb9201f7a767c5721e6253f124ca5fb3f3bc31d0",
   "changelog": "https://github.com/jgraph/drawio-desktop/releases",
   "previous_version": "26.2.2"

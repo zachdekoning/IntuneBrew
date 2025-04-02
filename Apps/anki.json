@@ -2,10 +2,10 @@
   "name": "Anki",
   "description": "Memory training application",
   "version": "25.02",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/7270538/ed21e83c-2b69-4469-bdf0-155fd28fb12f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191943Z&X-Amz-Expires=300&X-Amz-Signature=6c2c47d7600f237b750952914b3c9c9d7702cc4f8eda06960481921336198632&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Danki-25.02-mac-apple-qt6.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/ankitects/anki/releases/download/25.02/anki-25.02-mac-apple-qt6.dmg",
   "bundleId": "net.ankiweb.dtop",
   "homepage": "https://apps.ankiweb.net/",
-  "fileName": "ed21e83c-2b69-4469-bdf0-155fd28fb12f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191943Z&X-Amz-Expires=300&X-Amz-Signature=6c2c47d7600f237b750952914b3c9c9d7702cc4f8eda06960481921336198632&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Danki-25.02-mac-apple-qt6.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "anki-25.02-mac-apple-qt6.dmg",
   "sha": "e0deae9133b1276169ae6b52c540b199ab6129fe49ea85cd089caa2d9dfdcac9",
   "changelog": "https://github.com/ankitects/anki/releases",
   "previous_version": "25.02"

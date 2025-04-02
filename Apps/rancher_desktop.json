@@ -2,10 +2,10 @@
   "name": "Rancher Desktop",
   "description": "Kubernetes and container management on the desktop",
   "version": "1.18.2",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/306701996/ee4a9e75-a110-4d30-9cb4-21e202c2df30?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192036Z&X-Amz-Expires=300&X-Amz-Signature=e72bc40d5f9ffd5a2bf906eae182c109075c1e3a033246c531f61af33a142e1e&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DRancher.Desktop-1.18.2.aarch64.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.18.2/Rancher.Desktop-1.18.2.aarch64.dmg",
   "bundleId": "io.rancherdesktop.app",
   "homepage": "https://rancherdesktop.io/",
-  "fileName": "ee4a9e75-a110-4d30-9cb4-21e202c2df30?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192036Z&X-Amz-Expires=300&X-Amz-Signature=e72bc40d5f9ffd5a2bf906eae182c109075c1e3a033246c531f61af33a142e1e&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DRancher.Desktop-1.18.2.aarch64.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "Rancher.Desktop-1.18.2.aarch64.dmg",
   "sha": "b2ceca9e71f2b01ab8db661456a3b68e77f561077ea6b194fe0535ef20e6eafd",
   "changelog": "https://github.com/rancher-sandbox/rancher-desktop/releases",
   "previous_version": "1.18.2"

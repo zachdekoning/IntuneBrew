@@ -2,10 +2,10 @@
   "name": "PowerShell",
   "description": "Command-line shell and scripting language",
   "version": "7.5.0",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/49609581/4305649d-2b7f-48d9-99eb-e4dbdab25161?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191845Z&X-Amz-Expires=300&X-Amz-Signature=594a3e798e1e78aacad89d7c096a8a6dad0788f3025bd302f3184220f6ca7868&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dpowershell-7.5.0-osx-arm64.pkg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/powershell-7.5.0-osx-arm64.pkg",
   "bundleId": "com.microsoft.powershell",
   "homepage": "https://github.com/PowerShell/PowerShell",
-  "fileName": "4305649d-2b7f-48d9-99eb-e4dbdab25161?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191845Z&X-Amz-Expires=300&X-Amz-Signature=594a3e798e1e78aacad89d7c096a8a6dad0788f3025bd302f3184220f6ca7868&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dpowershell-7.5.0-osx-arm64.pkg&response-content-type=application%2Foctet-stream",
+  "fileName": "powershell-7.5.0-osx-arm64.pkg",
   "sha": "54ca107eee5854c2c74730326e469c0c94d0a7b0e698fa6cca548d39c8ee0ba9",
   "changelog": "https://github.com/PowerShell/PowerShell/releases",
   "previous_version": "7.5.0"

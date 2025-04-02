@@ -2,10 +2,10 @@
   "name": "Eclipse Temurin Java Development Kit",
   "description": "JDK from the Eclipse Foundation (Adoptium)",
   "version": "24",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/816881012/5f15c24e-8507-44ed-8934-b6cd3c3a66b0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192027Z&X-Amz-Expires=300&X-Amz-Signature=266be6911ccbdf5c645488748c016ce7530f5b35b19b44929da984ea70e3b3f0&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DOpenJDK24U-jdk_aarch64_mac_hotspot_24_36.pkg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24%2B36/OpenJDK24U-jdk_aarch64_mac_hotspot_24_36.pkg",
   "bundleId": "net.temurin.23.jdk",
   "homepage": "https://adoptium.net/",
-  "fileName": "5f15c24e-8507-44ed-8934-b6cd3c3a66b0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192027Z&X-Amz-Expires=300&X-Amz-Signature=266be6911ccbdf5c645488748c016ce7530f5b35b19b44929da984ea70e3b3f0&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DOpenJDK24U-jdk_aarch64_mac_hotspot_24_36.pkg&response-content-type=application%2Foctet-stream",
+  "fileName": "OpenJDK24U-jdk_aarch64_mac_hotspot_24_36.pkg",
   "sha": "65bb8d7ad13e86c3db9286ecd120a1452ed925fa6b08af13cf6d633204373ca3",
   "changelog": "https://adoptium.net/de/temurin/releases/?os=mac&version=23",
   "previous_version": "24"

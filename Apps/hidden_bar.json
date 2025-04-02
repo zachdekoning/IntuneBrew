@@ -2,10 +2,10 @@
   "name": "Hidden Bar",
   "description": "Utility to hide menu bar items",
   "version": "1.9",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/170244456/866639c8-48ac-404a-be0d-29975d0c6505?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192052Z&X-Amz-Expires=300&X-Amz-Signature=127030aa8e97f773dbc12c51106e0ddcb7980b749a209987f2118c0f71cff538&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DHidden.Bar.1.9.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/dwarvesf/hidden/releases/download/v1.9/Hidden.Bar.1.9.dmg",
   "bundleId": "com.dwarvesv.minimalbar",
   "homepage": "https://github.com/dwarvesf/hidden/",
-  "fileName": "866639c8-48ac-404a-be0d-29975d0c6505?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192052Z&X-Amz-Expires=300&X-Amz-Signature=127030aa8e97f773dbc12c51106e0ddcb7980b749a209987f2118c0f71cff538&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DHidden.Bar.1.9.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "Hidden.Bar.1.9.dmg",
   "sha": "3f54b024f5c1c40bc18aebe39014710289b47e147e71561fae22a661cab26d02",
   "changelog": "https://github.com/dwarvesf/hidden/releases",
   "previous_version": "1.9"

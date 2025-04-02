@@ -2,10 +2,10 @@
   "name": "Keka",
   "description": "File archiver",
   "version": "1.4.8",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/73220421/63cb1692-a79b-4ef8-a375-917b647da0fc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192035Z&X-Amz-Expires=300&X-Amz-Signature=c73aad9a496786bd971c7386bba1e07c1036a6edc374da51bc2dd0b8f010e390&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DKeka-1.4.8.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/aonez/Keka/releases/download/v1.4.8/Keka-1.4.8.dmg",
   "bundleId": "com.aone.keka",
   "homepage": "https://www.keka.io/",
-  "fileName": "63cb1692-a79b-4ef8-a375-917b647da0fc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192035Z&X-Amz-Expires=300&X-Amz-Signature=c73aad9a496786bd971c7386bba1e07c1036a6edc374da51bc2dd0b8f010e390&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DKeka-1.4.8.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "Keka-1.4.8.dmg",
   "sha": "ae33510c32bdc77a2b63f0cd069a0c9ef063ee7a84d8b68abbcf1fe9511376a2",
   "changelog": "https://github.com/aonez/Keka/releases",
   "previous_version": "1.4.8"

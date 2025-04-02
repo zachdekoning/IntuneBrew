@@ -2,10 +2,10 @@
   "name": "UTM",
   "description": "Virtual machines UI using QEMU",
   "version": "4.6.4",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/181042062/ce7bbfba-bf14-4ade-8051-efc90648a862?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191938Z&X-Amz-Expires=300&X-Amz-Signature=c2b169d0f0d32b6fc486ab5c380bfd7afaa8d7b6102a42d8c6e4ae7e15ee8cdb&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DUTM.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/utmapp/UTM/releases/download/v4.6.4/UTM.dmg",
   "bundleId": "com.utmapp.UTM",
   "homepage": "https://mac.getutm.app/",
-  "fileName": "ce7bbfba-bf14-4ade-8051-efc90648a862?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191938Z&X-Amz-Expires=300&X-Amz-Signature=c2b169d0f0d32b6fc486ab5c380bfd7afaa8d7b6102a42d8c6e4ae7e15ee8cdb&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DUTM.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "UTM.dmg",
   "sha": "aad86726152b15a3e963cf778a0b0dfd8e818736b381aed2699d974a18845427",
   "changelog": "https://docs.getutm.app/updates/updates/",
   "previous_version": "4.6.4"

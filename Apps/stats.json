@@ -2,10 +2,10 @@
   "name": "Stats",
   "description": "System monitor for the menu bar",
   "version": "2.11.37",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/189285554/2e757834-96cb-49bd-a25e-94bdd6e9edaa?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192026Z&X-Amz-Expires=300&X-Amz-Signature=9cff261c8c974b6000e2e0b0273625b650a81e76f2a92bd4ae208ad4bdf4e226&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DStats.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/exelban/stats/releases/download/v2.11.37/Stats.dmg",
   "bundleId": "eu.exelban.Stats",
   "homepage": "https://github.com/exelban/stats",
-  "fileName": "2e757834-96cb-49bd-a25e-94bdd6e9edaa?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192026Z&X-Amz-Expires=300&X-Amz-Signature=9cff261c8c974b6000e2e0b0273625b650a81e76f2a92bd4ae208ad4bdf4e226&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DStats.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "Stats.dmg",
   "sha": "666260ebc820271ecc9c80c53c70c704816d7e4800fe3773fe38ce8d11b124a4",
   "changelog": "https://github.com/exelban/stats/releases",
   "previous_version": "2.11.37"

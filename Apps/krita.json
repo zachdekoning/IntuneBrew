@@ -2,7 +2,7 @@
   "name": "Krita",
   "description": "Free and open-source painting and sketching program",
   "version": "5.2.9",
-  "url": "https://ridgewireless.mm.fcix.net/kdeftp/stable/krita/5.2.9/krita-5.2.9-release.dmg",
+  "url": "https://download.kde.org/stable/krita/5.2.9/krita-5.2.9-release.dmg",
   "bundleId": "org.krita",
   "homepage": "https://krita.org/",
   "fileName": "krita-5.2.9-release.dmg",

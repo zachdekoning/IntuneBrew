@@ -2,10 +2,10 @@
   "name": "macFUSE",
   "description": "File system integration",
   "version": "4.10.1",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/1867347/afa684e3-c489-47f5-810d-330dfd15f2d1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192018Z&X-Amz-Expires=300&X-Amz-Signature=379b33f1a4893000ff9b78f0241fb4ce29188360c701403eb28d4eb808efc52e&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dmacfuse-4.10.1.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/macfuse/macfuse/releases/download/macfuse-4.10.1/macfuse-4.10.1.dmg",
   "bundleId": "io.macfuse.installer.components.core",
   "homepage": "https://macfuse.github.io/",
-  "fileName": "afa684e3-c489-47f5-810d-330dfd15f2d1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192018Z&X-Amz-Expires=300&X-Amz-Signature=379b33f1a4893000ff9b78f0241fb4ce29188360c701403eb28d4eb808efc52e&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dmacfuse-4.10.1.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "macfuse-4.10.1.dmg",
   "sha": "a523fcc910534ce7d8c616c5eef2e5026ee36440510df4bdd9477c44744ae6bf",
   "changelog": "https://github.com/macfuse/macfuse/releases",
   "previous_version": "4.10.1"

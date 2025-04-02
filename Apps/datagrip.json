@@ -2,7 +2,7 @@
   "name": "DataGrip",
   "description": "Databases and SQL IDE",
   "version": "2024.3.5",
-  "url": "https://download-cdn.jetbrains.com/datagrip/datagrip-2024.3.5-aarch64.dmg",
+  "url": "https://download.jetbrains.com/datagrip/datagrip-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.datagrip",
   "homepage": "https://www.jetbrains.com/datagrip/",
   "fileName": "datagrip-2024.3.5-aarch64.dmg",

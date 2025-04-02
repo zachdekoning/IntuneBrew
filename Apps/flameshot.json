@@ -2,10 +2,10 @@
   "name": "Flameshot",
   "description": "Screenshot software",
   "version": "12.1.0",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/90902132/0ebf3df9-4200-47e6-a7b2-78dda08fc14b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192043Z&X-Amz-Expires=300&X-Amz-Signature=6206fbfffb31b453de671bdf1c44146e7b549bf094740c31a973a4a827cc11cf&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dflameshot.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/flameshot-org/flameshot/releases/download/v12.1.0/flameshot.dmg",
   "bundleId": "com.Flameshot.flameshot",
   "homepage": "https://flameshot.org/",
-  "fileName": "0ebf3df9-4200-47e6-a7b2-78dda08fc14b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192043Z&X-Amz-Expires=300&X-Amz-Signature=6206fbfffb31b453de671bdf1c44146e7b549bf094740c31a973a4a827cc11cf&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dflameshot.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "flameshot.dmg",
   "sha": "70fa1cb9990093b00d184eace8e6c5f1cfefe33decb8ab051141a3847439ff14",
   "changelog": "https://github.com/flameshot-org/flameshot/releases",
   "previous_version": "12.1.0"

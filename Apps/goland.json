@@ -2,7 +2,7 @@
   "name": "Goland",
   "description": "Go (golang) IDE",
   "version": "2024.3.5",
-  "url": "https://download-cdn.jetbrains.com/go/goland-2024.3.5-aarch64.dmg",
+  "url": "https://download.jetbrains.com/go/goland-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.goland",
   "homepage": "https://www.jetbrains.com/go/",
   "fileName": "goland-2024.3.5-aarch64.dmg",

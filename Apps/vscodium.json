@@ -2,10 +2,10 @@
   "name": "VSCodium",
   "description": "Binary releases of VS Code without MS branding/telemetry/licensing",
   "version": "1.98.2.25078",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/144590939/e9092cc4-2a5c-48a8-8c4a-9edaa299926d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192037Z&X-Amz-Expires=300&X-Amz-Signature=1adc2efa409a9df61f46ee30601c1299917cf053695be4ba881d9a869757d656&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DVSCodium.arm64.1.98.2.25078.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium.arm64.1.98.2.25078.dmg",
   "bundleId": "com.vscodium",
   "homepage": "https://github.com/VSCodium/vscodium",
-  "fileName": "e9092cc4-2a5c-48a8-8c4a-9edaa299926d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192037Z&X-Amz-Expires=300&X-Amz-Signature=1adc2efa409a9df61f46ee30601c1299917cf053695be4ba881d9a869757d656&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DVSCodium.arm64.1.98.2.25078.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "VSCodium.arm64.1.98.2.25078.dmg",
   "sha": "726e2ea08022609ef6d7a797c0d5fe90547ab3bfad1f3eedf343798ebd80c5dd",
   "changelog": "https://github.com/VSCodium/vscodium/releases",
   "previous_version": "1.98.2.25078"

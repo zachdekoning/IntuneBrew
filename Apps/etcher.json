@@ -2,10 +2,10 @@
   "name": "Etcher",
   "description": "Tool to flash OS images to SD cards & USB drives",
   "version": "2.1.0",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/45055693/10168940-d3dc-4eda-ba0c-ef6636700073?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192035Z&X-Amz-Expires=300&X-Amz-Signature=92e81a9a58eb46b31f6a8d9ba81c715013b7bf6acc5455436239ba5b86600430&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DbalenaEtcher-2.1.0-arm64.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/balena-io/etcher/releases/download/v2.1.0/balenaEtcher-2.1.0-arm64.dmg",
   "bundleId": "io.balena.etcher.*",
   "homepage": "https://balena.io/etcher",
-  "fileName": "10168940-d3dc-4eda-ba0c-ef6636700073?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192035Z&X-Amz-Expires=300&X-Amz-Signature=92e81a9a58eb46b31f6a8d9ba81c715013b7bf6acc5455436239ba5b86600430&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DbalenaEtcher-2.1.0-arm64.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "balenaEtcher-2.1.0-arm64.dmg",
   "sha": "7b6ef50c0f20a421e58766b77d6c4ccb4af4912c15f4cd9a029e7e5aa439677f",
   "changelog": "https://github.com/balena-io/etcher/releases",
   "previous_version": "2.1.0"

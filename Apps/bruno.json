@@ -2,10 +2,10 @@
   "name": "Bruno",
   "description": "Opensource IDE for exploring and testing api's",
   "version": "2.0.1",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/542284380/6153f6c6-1edc-45bf-93cf-0d854285221f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192028Z&X-Amz-Expires=300&X-Amz-Signature=e1c5db1bec49d701f13c6e441a8d0ef71a1221225af9e99909b46b98e8cee328&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dbruno_2.0.1_arm64_mac.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/usebruno/bruno/releases/download/v2.0.1/bruno_2.0.1_arm64_mac.dmg",
   "bundleId": "com.usebruno.app",
   "homepage": "https://www.usebruno.com/",
-  "fileName": "6153f6c6-1edc-45bf-93cf-0d854285221f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192028Z&X-Amz-Expires=300&X-Amz-Signature=e1c5db1bec49d701f13c6e441a8d0ef71a1221225af9e99909b46b98e8cee328&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dbruno_2.0.1_arm64_mac.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "bruno_2.0.1_arm64_mac.dmg",
   "sha": "aec3e427fcc62e4c3f7c78e02b3c7e091e0bd8e0b7754619c44c7ac3722103ac",
   "changelog": "https://github.com/usebruno/bruno/releases",
   "previous_version": "2.0.1"

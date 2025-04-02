@@ -2,7 +2,7 @@
   "name": "Little Snitch",
   "description": "Host-based application firewall",
   "version": "6.2.3",
-  "url": "https://www.obdev.at/ftp/pub/Products/littlesnitch/LittleSnitch-6.2.3.dmg",
+  "url": "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-6.2.3.dmg",
   "bundleId": "at.obdev.littlesnitch",
   "homepage": "https://www.obdev.at/products/littlesnitch/index.html",
   "fileName": "LittleSnitch-6.2.3.dmg",

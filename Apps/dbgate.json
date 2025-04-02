@@ -2,11 +2,11 @@
   "name": "DbGate",
   "description": "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others",
   "version": "6.3.2",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/229959677/0bf1a58a-235e-41c8-8578-ae6ff59f0e14?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192107Z&X-Amz-Expires=300&X-Amz-Signature=1803066ddd0e7c80abb2e8a53dc7fa6d3dee63d5901b00fb1d3055fa8188b3a5&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Ddbgate-6.3.2-mac_universal.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/dbgate/dbgate/releases/download/v6.3.2/dbgate-6.3.2-mac_universal.dmg",
   "bundleId": "org.dbgate",
   "homepage": "https://dbgate.org/",
-  "fileName": "0bf1a58a-235e-41c8-8578-ae6ff59f0e14?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192107Z&X-Amz-Expires=300&X-Amz-Signature=1803066ddd0e7c80abb2e8a53dc7fa6d3dee63d5901b00fb1d3055fa8188b3a5&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Ddbgate-6.3.2-mac_universal.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "dbgate-6.3.2-mac_universal.dmg",
   "sha": "adee36f7612a3c6f9be0653170cfeabb894305593c4717edb259c9117153b021",
   "changelog": "https://github.com/dbgate/dbgate/releases",
-  "previous_version": "6.3.2"
+  "previous_version": "6.3.0"
 }

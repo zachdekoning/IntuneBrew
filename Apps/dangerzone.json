@@ -2,10 +2,10 @@
   "name": "Dangerzone",
   "description": "Convert potentially dangerous PDFs or Office documents into safe PDFs",
   "version": "0.8.1",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/232181980/b9277e93-491c-4aec-a906-691ae9d8e92a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192105Z&X-Amz-Expires=300&X-Amz-Signature=47f838cdf289169a473509260ba0a0357201db96f7048ef592f1e8772c5e1119&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DDangerzone-0.8.1-arm64.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/freedomofpress/dangerzone/releases/download/v0.8.1/Dangerzone-0.8.1-arm64.dmg",
   "bundleId": "media.firstlook.dangerzone",
   "homepage": "https://dangerzone.rocks/",
-  "fileName": "b9277e93-491c-4aec-a906-691ae9d8e92a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192105Z&X-Amz-Expires=300&X-Amz-Signature=47f838cdf289169a473509260ba0a0357201db96f7048ef592f1e8772c5e1119&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DDangerzone-0.8.1-arm64.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "Dangerzone-0.8.1-arm64.dmg",
   "sha": "47369486aac1c6d11410a2d8cb4ec54167f1ecc3fa2b10812e14c3e3ecdcc888",
   "changelog": "https://github.com/freedomofpress/dangerzone/releases",
   "previous_version": "0.8.1"

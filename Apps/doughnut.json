@@ -2,10 +2,10 @@
   "name": "Doughnut",
   "description": "Podcast client",
   "version": "2.0.1",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/54191905/aba7ad2d-4744-4a25-9916-22ef44d41f1d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192108Z&X-Amz-Expires=300&X-Amz-Signature=e7a8fc505b7a8a5b254c441d9d2aaae78290db749ca52ccba62407e8024b4584&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DDoughnut-2.0.1.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/dyerc/Doughnut/releases/download/v2.0.1/Doughnut-2.0.1.dmg",
   "bundleId": "com.cdyer.doughnut",
   "homepage": "https://github.com/dyerc/Doughnut/",
-  "fileName": "aba7ad2d-4744-4a25-9916-22ef44d41f1d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192108Z&X-Amz-Expires=300&X-Amz-Signature=e7a8fc505b7a8a5b254c441d9d2aaae78290db749ca52ccba62407e8024b4584&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DDoughnut-2.0.1.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "Doughnut-2.0.1.dmg",
   "sha": "56e2a41087ee9793b667feaa1bef2e96e20cee6ff7cd8bee4a9acbd1ca1e8aeb",
   "changelog": "https://github.com/dyerc/Doughnut/releases",
   "previous_version": "2.0.1"

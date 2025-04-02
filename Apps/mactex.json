@@ -2,7 +2,7 @@
   "name": "MacTeX",
   "description": "Full TeX Live distribution with GUI applications",
   "version": "2025.0308",
-  "url": "https://ctan.math.utah.edu/ctan/tex-archive/systems/mac/mactex/mactex-20250308.pkg",
+  "url": "https://mirror.ctan.org/systems/mac/mactex/mactex-20250308.pkg",
   "bundleId": "org.tug.mactex.gui2024",
   "homepage": "https://www.tug.org/mactex/",
   "fileName": "mactex-20250308.pkg",

@@ -2,7 +2,7 @@
   "name": "JetBrains Toolbox",
   "description": "JetBrains tools manager",
   "version": "2.5.4",
-  "url": "https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-2.5.4.38621-arm64.dmg",
+  "url": "https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.5.4.38621-arm64.dmg",
   "bundleId": "com.jetbrains.toolbox",
   "homepage": "https://www.jetbrains.com/toolbox-app/",
   "fileName": "jetbrains-toolbox-2.5.4.38621-arm64.dmg",

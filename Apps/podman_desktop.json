@@ -2,10 +2,10 @@
   "name": "Podman Desktop",
   "description": "Browse, manage, inspect containers and images",
   "version": "1.17.2",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/465844859/568f6348-b3c4-4522-84af-fe5485d1a8fb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192014Z&X-Amz-Expires=300&X-Amz-Signature=99dde456ee638753018791b4da66eb664e177c4070d2fbf23579471be8c2b593&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dpodman-desktop-1.17.2-arm64.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/containers/podman-desktop/releases/download/v1.17.2/podman-desktop-1.17.2-arm64.dmg",
   "bundleId": "io.podmandesktop.PodmanDesktop",
   "homepage": "https://podman-desktop.io/",
-  "fileName": "568f6348-b3c4-4522-84af-fe5485d1a8fb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192014Z&X-Amz-Expires=300&X-Amz-Signature=99dde456ee638753018791b4da66eb664e177c4070d2fbf23579471be8c2b593&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dpodman-desktop-1.17.2-arm64.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "podman-desktop-1.17.2-arm64.dmg",
   "sha": "1cf658a9da347cead875ceddd9200388075a4834bc3b8e2d9aa47ad2b05c547f",
   "changelog": "https://github.com/containers/podman-desktop/releases",
   "previous_version": "1.17.2"

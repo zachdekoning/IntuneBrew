@@ -2,10 +2,10 @@
   "name": "Crystalfetch",
   "description": "UI for creating Windows installer ISO from UUPDump",
   "version": "2.2.0",
-  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/671667771/37715dec-1d65-4d30-8c9d-26397dd50a48?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192104Z&X-Amz-Expires=300&X-Amz-Signature=fb70357a6d3bb40afab1741b22ad12d843ae6b604a6216c32b3a811109e812b5&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DCrystalFetch.dmg&response-content-type=application%2Foctet-stream",
+  "url": "https://github.com/TuringSoftware/CrystalFetch/releases/download/v2.2.0/CrystalFetch.dmg",
   "bundleId": "llc.turing.CrystalFetch",
   "homepage": "https://github.com/TuringSoftware/CrystalFetch",
-  "fileName": "37715dec-1d65-4d30-8c9d-26397dd50a48?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192104Z&X-Amz-Expires=300&X-Amz-Signature=fb70357a6d3bb40afab1741b22ad12d843ae6b604a6216c32b3a811109e812b5&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DCrystalFetch.dmg&response-content-type=application%2Foctet-stream",
+  "fileName": "CrystalFetch.dmg",
   "sha": "6e428a419bc5deded21da0c9eafae4507fd5b2fb6e2c8cf8b59f97522f01deee",
   "changelog": "https://github.com/TuringSoftware/CrystalFetch/releases",
   "previous_version": "2.2.0"
