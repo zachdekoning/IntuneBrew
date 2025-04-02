@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                      <p>
+                                                                                                                                                                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,17 +79,12 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-02 19:05 UTC*
+*Last checked: 2025-04-02 20:01 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 134.0.6998.166 | 135.0.7049.42 |
-| Brave | 1.76.82.0 | 1.77.95.0 |
-| Dropbox | 220.4.4126 | 221.4.5365 |
-| Krisp | 2.57.13 | 2.57.14 |
-| ChatGPT | 1.2025.078 | 1.2025.084 |
-| Opera | 117.0.5408.163 | 117.0.5408.197 |
-| DbGate | 6.3.0 | 6.3.2 |
+| Zed | 0.179.5 | 0.180.2 |
+| Windsurf | 1.5.9 | 1.6.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -222,7 +217,7 @@ Follow the interactive prompts to:
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.40.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.11 |
-| ❌ draw.io Desktop | 26.2.2 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.2.2 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 221.4.5365 |
@@ -372,7 +367,7 @@ Follow the interactive prompts to:
 | <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.82.0 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |
-| ❌ Tenable Nessus Agent | 10.8.3 |
+| <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.3 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.17.1 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.0 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
@@ -385,12 +380,12 @@ Follow the interactive prompts to:
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.5 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.8.76 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.4 |
-| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.5.9 |
+| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.6.1 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.179.5 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.180.2 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.10.3b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.3.52139 |
 
