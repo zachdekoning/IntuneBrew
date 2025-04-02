@@ -7,9 +7,8 @@ from pathlib import Path
 import sys
 import argparse
 
-# Create Uninstall Scripts directory if it doesn't exist
+# Default output directory
 uninstall_dir = "Uninstall Scripts"
-os.makedirs(uninstall_dir, exist_ok=True)
 def get_brew_app_info(app_name, token=None):
     """Fetch application information from brew.sh API"""
     # If token is provided, use it directly
@@ -291,7 +290,6 @@ def sanitize_filename(name):
     sanitized = name.replace(' ', '_')
     sanitized = re.sub(r'[^\w_]', '', sanitized)
     return sanitized.lower()
-
 def parse_brew_json_data(json_data):
     """Parse brew.sh JSON data directly from a string"""
     try:
@@ -300,6 +298,52 @@ def parse_brew_json_data(json_data):
     except json.JSONDecodeError as e:
         print(f"Error parsing JSON data: {str(e)}")
         return None
+
+def test_with_json_string(json_string):
+    """Test the script with a JSON string"""
+    try:
+        # Parse JSON data
+        json_data = parse_brew_json_data(json_string)
+        
+        if not json_data:
+            print("Error: Could not parse JSON data")
+            return
+        
+        # Extract app name
+        app_name = json_data["name"][0] if isinstance(json_data["name"], list) else json_data["name"]
+        
+        # Extract uninstall paths
+        uninstall_paths = extract_uninstall_paths(json_data)
+        
+        if not uninstall_paths:
+            print(f"Warning: No uninstall paths found for {app_name}")
+            return
+        
+        # Generate uninstall script
+        script_content = generate_uninstall_script(app_name, uninstall_paths)
+        
+        # Print the script content
+        print("\n" + "="*80)
+        print(f"Uninstall script for {app_name}:")
+        print("="*80)
+        print(script_content)
+        print("="*80)
+        
+        # Save script to file
+        script_filename = f"uninstall_{sanitize_filename(app_name)}.sh"
+        script_path = os.path.join(uninstall_dir, script_filename)
+        
+        with open(script_path, "w", newline="\n") as f:
+            f.write(script_content)
+        
+        # Make script executable
+        os.chmod(script_path, 0o755)
+        
+        print(f"Created uninstall script for {app_name}: {script_path}")
+        
+    except Exception as e:
+        print(f"Error processing JSON string: {str(e)}")
+
 
 def main():
     parser = argparse.ArgumentParser(description='Generate uninstall scripts for macOS applications using brew.sh data')
@@ -317,6 +361,8 @@ def main():
     # Update output directory if specified
     global uninstall_dir
     uninstall_dir = args.output
+    
+    # Create output directory if it doesn't exist
     os.makedirs(uninstall_dir, exist_ok=True)
     
     # Process based on arguments
@@ -533,50 +579,6 @@ def process_all_apps(apps_dir_path='Apps'):
     
     print(f"Uninstall scripts generated in '{uninstall_dir}' directory")
     print(f"Summary: {success_count} scripts generated successfully, {error_count} errors")
-def test_with_json_string(json_string):
-    """Test the script with a JSON string"""
-    try:
-        # Parse JSON data
-        json_data = parse_brew_json_data(json_string)
-        
-        if not json_data:
-            print("Error: Could not parse JSON data")
-            return
-        
-        # Extract app name
-        app_name = json_data["name"][0] if isinstance(json_data["name"], list) else json_data["name"]
-        
-        # Extract uninstall paths
-        uninstall_paths = extract_uninstall_paths(json_data)
-        
-        if not uninstall_paths:
-            print(f"Warning: No uninstall paths found for {app_name}")
-            return
-        
-        # Generate uninstall script
-        script_content = generate_uninstall_script(app_name, uninstall_paths)
-        
-        # Print the script content
-        print("\n" + "="*80)
-        print(f"Uninstall script for {app_name}:")
-        print("="*80)
-        print(script_content)
-        print("="*80)
-        
-        # Save script to file
-        script_filename = f"uninstall_{sanitize_filename(app_name)}.sh"
-        script_path = os.path.join(uninstall_dir, script_filename)
-        
-        with open(script_path, "w", newline="\n") as f:
-            f.write(script_content)
-        
-        # Make script executable
-        os.chmod(script_path, 0o755)
-        
-        print(f"Created uninstall script for {app_name}: {script_path}")
-        
-    except Exception as e:
-        print(f"Error processing JSON string: {str(e)}")
 
 if __name__ == "__main__":
     main()
