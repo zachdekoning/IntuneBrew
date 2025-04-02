@@ -6,20 +6,40 @@ import re
 from pathlib import Path
 import sys
 
-# Import app_urls from collect_app_info.py
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '.github', 'scripts'))
-from collect_app_info import app_urls
-
 # Create Uninstall Scripts directory if it doesn't exist
 uninstall_dir = "Uninstall Scripts"
 os.makedirs(uninstall_dir, exist_ok=True)
 
-def get_app_info(json_url):
+def get_brew_app_info(app_name):
     """Fetch application information from brew.sh API"""
-    print(f"Fetching information for {json_url}")
-    response = requests.get(json_url)
-    response.raise_for_status()
-    return response.json()
+    # Convert app name to brew.sh format (lowercase, hyphens instead of spaces)
+    brew_name = app_name.lower().replace(' ', '-')
+    json_url = f"https://formulae.brew.sh/api/cask/{brew_name}.json"
+    
+    print(f"Fetching information for {app_name} from {json_url}")
+    try:
+        response = requests.get(json_url)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching {json_url}: {str(e)}")
+        # Try alternative URL formats
+        alternative_formats = [
+            f"https://formulae.brew.sh/api/cask/{brew_name.replace('-', '')}.json",
+            f"https://formulae.brew.sh/api/cask/{brew_name.replace('-', '_')}.json"
+        ]
+        
+        for alt_url in alternative_formats:
+            try:
+                print(f"Trying alternative URL: {alt_url}")
+                response = requests.get(alt_url)
+                response.raise_for_status()
+                return response.json()
+            except requests.exceptions.RequestException:
+                continue
+        
+        print(f"Could not find brew.sh data for {app_name}")
+        return None
 
 def extract_uninstall_paths(app_data):
     """Extract paths that need to be removed during uninstallation"""
@@ -30,13 +50,28 @@ def extract_uninstall_paths(app_data):
         for artifact in app_data["artifacts"]:
             if isinstance(artifact, str) and artifact.endswith(".app"):
                 uninstall_paths.append(f"/Applications/{artifact}")
-            elif isinstance(artifact, dict) and "app" in artifact:
-                app_path = artifact["app"]
-                if isinstance(app_path, list):
-                    for app in app_path:
-                        uninstall_paths.append(f"/Applications/{app}")
-                else:
-                    uninstall_paths.append(f"/Applications/{app_path}")
+            elif isinstance(artifact, dict):
+                # Handle app artifacts
+                if "app" in artifact:
+                    app_path = artifact["app"]
+                    if isinstance(app_path, list):
+                        for app in app_path:
+                            uninstall_paths.append(f"/Applications/{app}")
+                    else:
+                        uninstall_paths.append(f"/Applications/{app_path}")
+                
+                # Handle zap artifacts
+                if "zap" in artifact:
+                    zap_data = artifact["zap"]
+                    if isinstance(zap_data, list):
+                        for zap_item in zap_data:
+                            if isinstance(zap_item, dict) and "trash" in zap_item:
+                                trash_paths = zap_item["trash"]
+                                if isinstance(trash_paths, list):
+                                    for path in trash_paths:
+                                        uninstall_paths.append(path)
+                                else:
+                                    uninstall_paths.append(trash_paths)
     
     # Extract pkgutil IDs
     if "pkgutil" in app_data:
@@ -64,37 +99,6 @@ def extract_uninstall_paths(app_data):
                 uninstall_paths.append(f"BUNDLE:{quit_id}")
         else:
             uninstall_paths.append(f"BUNDLE:{quit_ids}")
-    
-    # Extract zap stanza for additional paths
-    if "zap" in app_data:
-        zap_data = app_data["zap"]
-        
-        # Extract additional app bundles
-        if "trash" in zap_data:
-            trash_paths = zap_data["trash"]
-            if isinstance(trash_paths, list):
-                for path in trash_paths:
-                    uninstall_paths.append(path)
-            else:
-                uninstall_paths.append(trash_paths)
-        
-        # Extract launchctl services from zap
-        if "launchctl" in zap_data:
-            launchctl_services = zap_data["launchctl"]
-            if isinstance(launchctl_services, list):
-                for service in launchctl_services:
-                    uninstall_paths.append(f"LAUNCHCTL:{service}")
-            else:
-                uninstall_paths.append(f"LAUNCHCTL:{launchctl_services}")
-        
-        # Extract pkgutil IDs from zap
-        if "pkgutil" in zap_data:
-            pkgutil_ids = zap_data["pkgutil"]
-            if isinstance(pkgutil_ids, list):
-                for pkg_id in pkgutil_ids:
-                    uninstall_paths.append(f"PKGUTIL:{pkg_id}")
-            else:
-                uninstall_paths.append(f"PKGUTIL:{pkgutil_ids}")
     
     # Common locations for application data
     app_name = app_data["name"][0]
@@ -188,16 +192,29 @@ def sanitize_filename(name):
     return sanitized.lower()
 
 def main():
-    print(f"Generating uninstall scripts for {len(app_urls)} applications...")
+    # Get all app.json files from the Apps directory
+    apps_dir = Path("Apps")
+    app_files = list(apps_dir.glob("*.json"))
     
-    for url in app_urls:
+    print(f"Generating uninstall scripts for {len(app_files)} applications...")
+    
+    for app_file in app_files:
         try:
+            # Read the local app.json file
+            with open(app_file, 'r') as f:
+                local_app_data = json.load(f)
+            
+            app_name = local_app_data["name"]
+            
             # Get application data from brew.sh
-            app_data = get_app_info(url)
-            app_name = app_data["name"][0]
+            brew_app_data = get_brew_app_info(app_name)
+            
+            if not brew_app_data:
+                print(f"Warning: Could not fetch brew.sh data for {app_name}")
+                continue
             
             # Extract paths to remove during uninstallation
-            uninstall_paths = extract_uninstall_paths(app_data)
+            uninstall_paths = extract_uninstall_paths(brew_app_data)
             
             if not uninstall_paths:
                 print(f"Warning: No uninstall paths found for {app_name}")
@@ -219,7 +236,7 @@ def main():
             print(f"Created uninstall script for {app_name}: {script_path}")
             
         except Exception as e:
-            print(f"Error processing {url}: {str(e)}")
+            print(f"Error processing {app_file}: {str(e)}")
     
     print(f"Uninstall scripts generated in '{uninstall_dir}' directory")
 
