@@ -346,6 +346,8 @@ def test_with_json_string(json_string):
 
 
 def main():
+    global uninstall_dir
+    
     parser = argparse.ArgumentParser(description='Generate uninstall scripts for macOS applications using brew.sh data')
     parser.add_argument('--all', action='store_true', help='Generate uninstall scripts for all apps in the Apps directory')
     parser.add_argument('--app', type=str, help='Generate uninstall script for a specific app name')
@@ -359,7 +361,6 @@ def main():
     args = parser.parse_args()
     
     # Update output directory if specified
-    global uninstall_dir
     uninstall_dir = args.output
     
     # Create output directory if it doesn't exist
