@@ -9,6 +9,10 @@ on:
         required: false
         default: false
         type: boolean
+      specific_apps:
+        description: "Comma-separated list of specific apps to process (e.g., 1password,visual-studio-code)"
+        required: false
+        type: string
 
 jobs:
   generate-scripts:
@@ -33,7 +37,19 @@ jobs:
       - name: Generate uninstall scripts
         run: |
           echo "Generating uninstall scripts..."
-          python .github/scripts/generate_uninstall_scripts.py
+          if [ -n "${{ github.event.inputs.specific_apps }}" ]; then
+            # Convert comma-separated list to space-separated list of app files
+            IFS=',' read -ra APP_ARRAY <<< "${{ github.event.inputs.specific_apps }}"
+            APP_FILES=""
+            for app in "${APP_ARRAY[@]}"; do
+              APP_FILES="$APP_FILES Apps/${app}.json"
+            done
+            echo "Processing specific apps: $APP_FILES"
+            python .github/scripts/generate_uninstall_scripts.py --output "Uninstall Scripts" --apps-dir "Apps" --apps $APP_FILES
+          else
+            echo "Processing all apps"
+            python .github/scripts/generate_uninstall_scripts.py --output "Uninstall Scripts" --apps-dir "Apps"
+          fi
 
       - name: Count generated scripts
         id: count-scripts
@@ -52,10 +68,18 @@ jobs:
           git config --local user.name "GitHub Action"
           git add "Uninstall Scripts"/*.sh
 
-          if [ "${{ github.event.inputs.force_regenerate }}" == "true" ]; then
-            git commit -m "Force regenerated $SCRIPT_COUNT uninstall scripts" || echo "No changes to commit"
+          if [ -n "${{ github.event.inputs.specific_apps }}" ]; then
+            if [ "${{ github.event.inputs.force_regenerate }}" == "true" ]; then
+              git commit -m "Force regenerated uninstall scripts for ${{ github.event.inputs.specific_apps }}" || echo "No changes to commit"
+            else
+              git commit -m "Generated uninstall scripts for ${{ github.event.inputs.specific_apps }}" || echo "No changes to commit"
+            fi
           else
-            git commit -m "Generated $SCRIPT_COUNT uninstall scripts" || echo "No changes to commit"
+            if [ "${{ github.event.inputs.force_regenerate }}" == "true" ]; then
+              git commit -m "Force regenerated $SCRIPT_COUNT uninstall scripts" || echo "No changes to commit"
+            else
+              git commit -m "Generated $SCRIPT_COUNT uninstall scripts" || echo "No changes to commit"
+            fi
           fi
 
           git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
