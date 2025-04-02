@@ -234,6 +234,7 @@
     "tailscale": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/tailscale.json",
     "teamviewer_quicksupport": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/teamviewer_quicksupport.json",
     "telegram_for_macos": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/telegram_for_macos.json",
+    "tenable_nessus_agent": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/tenable_nessus_agent.json",
     "termius": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/termius.json",
     "todoist": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/todoist.json",
     "transmission": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/transmission.json",
