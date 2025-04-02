@@ -2,10 +2,10 @@
   "name": "Privileges",
   "description": "Admin rights switcher",
   "version": "2.2.0",
-  "url": "https://github.com/SAP/macOS-enterprise-privileges/releases/download/2.2.0/Privileges_2.2.0.pkg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/138925737/274f892d-67b8-4808-8957-0d6787c0e93f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192044Z&X-Amz-Expires=300&X-Amz-Signature=484693bf77a71625d64a869023d80755bdf15d1a87d520154d054f47a05864ae&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DPrivileges_2.2.0.pkg&response-content-type=application%2Foctet-stream",
   "bundleId": "corp.sap.privileges.pkg",
   "homepage": "https://github.com/SAP/macOS-enterprise-privileges",
-  "fileName": "Privileges_2.2.0.pkg",
+  "fileName": "274f892d-67b8-4808-8957-0d6787c0e93f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192044Z&X-Amz-Expires=300&X-Amz-Signature=484693bf77a71625d64a869023d80755bdf15d1a87d520154d054f47a05864ae&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DPrivileges_2.2.0.pkg&response-content-type=application%2Foctet-stream",
   "sha": "3d02e9249124a0c727ec867595b8221da0464ebf2369091587519e67c3ee6cc7",
   "changelog": "https://github.com/SAP/macOS-enterprise-privileges/releases",
   "previous_version": "2.2.0"

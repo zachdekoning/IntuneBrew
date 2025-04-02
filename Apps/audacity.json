@@ -2,10 +2,10 @@
   "name": "Audacity",
   "description": "Multi-track audio editor and recorder",
   "version": "3.7.3",
-  "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.3/audacity-macOS-3.7.3-arm64.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/32921736/4173dac4-9704-4a5c-bc6c-9dec8cae20ee?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192005Z&X-Amz-Expires=300&X-Amz-Signature=e99cbcf339145ed0318962ba4af1e8256632a2071cd432fd86a0823e9c6f6497&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Daudacity-macOS-3.7.3-arm64.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "org.audacityteam.audacity",
   "homepage": "https://www.audacityteam.org/",
-  "fileName": "audacity-macOS-3.7.3-arm64.dmg",
+  "fileName": "4173dac4-9704-4a5c-bc6c-9dec8cae20ee?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192005Z&X-Amz-Expires=300&X-Amz-Signature=e99cbcf339145ed0318962ba4af1e8256632a2071cd432fd86a0823e9c6f6497&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Daudacity-macOS-3.7.3-arm64.dmg&response-content-type=application%2Foctet-stream",
   "sha": "9f763cf59fff9817da8f273f1fb28d3d8680eaf0444abcc70b84d8c5476d8bcd",
   "changelog": "https://support.audacityteam.org/additional-resources/changelog",
   "previous_version": "3.7.3"

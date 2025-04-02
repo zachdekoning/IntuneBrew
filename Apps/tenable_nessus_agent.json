@@ -6,5 +6,6 @@
   "bundleId": "com.tenablesecurity.NessusAgent.Preferences",
   "homepage": "https://www.tenable.com/",
   "fileName": "download?i_agree_to_tenable_license_agreement=true",
-  "sha": "ae829115f6c178328ca16be3cc42e85c706027ce85a3285596b02b9f0ca7cb02"
+  "sha": "ae829115f6c178328ca16be3cc42e85c706027ce85a3285596b02b9f0ca7cb02",
+  "previous_version": "10.8.3"
 }

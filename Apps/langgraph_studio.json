@@ -2,10 +2,10 @@
   "name": "LangGraph Studio",
   "description": "Desktop app for prototyping and debugging LangGraph applications locally",
   "version": "0.0.37",
-  "url": "https://github.com/langchain-ai/langgraph-studio/releases/download/v0.0.37/LangGraph-Studio-0.0.37-universal.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/835458362/80de5a3b-5ae2-4355-90ab-ccb833069c6f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192113Z&X-Amz-Expires=300&X-Amz-Signature=e8b88431811c68d42b69b0caf63010a6ce28bda644d9b599f3d26b852d7b9428&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DLangGraph-Studio-0.0.37-universal.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "com.electron.langgraph-studio-desktop",
   "homepage": "https://studio.langchain.com/",
-  "fileName": "LangGraph-Studio-0.0.37-universal.dmg",
+  "fileName": "80de5a3b-5ae2-4355-90ab-ccb833069c6f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192113Z&X-Amz-Expires=300&X-Amz-Signature=e8b88431811c68d42b69b0caf63010a6ce28bda644d9b599f3d26b852d7b9428&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DLangGraph-Studio-0.0.37-universal.dmg&response-content-type=application%2Foctet-stream",
   "sha": "3686a8164d001f371bfbd019024cbef0f2a8945e8fdca7467836cd5fc8882959",
   "changelog": "https://github.com/langchain-ai/langgraph-studio/releases",
   "previous_version": "0.0.37"

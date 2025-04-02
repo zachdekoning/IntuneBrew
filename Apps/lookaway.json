@@ -2,10 +2,10 @@
   "name": "LookAway",
   "description": "Break time reminder app",
   "version": "1.11.2",
-  "url": "https://github.com/mysticalbits/lookaway-releases/releases/download/1.11.2/LookAway.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/705168855/391bf50d-08a0-4086-8762-0c458677060a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192113Z&X-Amz-Expires=300&X-Amz-Signature=55087b0ff6007a39fbdacbb94c00b669449f74fb34dd4cce04f30e330e4e53da&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DLookAway.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "com.mysticalbits.lookaway",
   "homepage": "https://lookaway.app/",
-  "fileName": "LookAway.dmg",
+  "fileName": "391bf50d-08a0-4086-8762-0c458677060a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192113Z&X-Amz-Expires=300&X-Amz-Signature=55087b0ff6007a39fbdacbb94c00b669449f74fb34dd4cce04f30e330e4e53da&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DLookAway.dmg&response-content-type=application%2Foctet-stream",
   "sha": "15c451965828311384fb67532a81aeb7c4f39eb70aca19da9aed3e6bf782002b",
   "changelog": "https://github.com/mysticalbits/lookaway-releases/releases",
   "previous_version": "1.11.2"

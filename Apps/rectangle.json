@@ -2,10 +2,10 @@
   "name": "Rectangle",
   "description": "Move and resize windows using keyboard shortcuts or snap areas",
   "version": "0.86",
-  "url": "https://github.com/rxhanson/Rectangle/releases/download/v0.86/Rectangle0.86.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/193162629/6247bc85-a7ee-4fca-a6e4-55971f8a2800?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192026Z&X-Amz-Expires=300&X-Amz-Signature=58b0f31f855f025c287bef23af1263de6968c6faed86b8a1438514d16476f337&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DRectangle0.86.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "com.knollsoft.Rectangle",
   "homepage": "https://rectangleapp.com/",
-  "fileName": "Rectangle0.86.dmg",
+  "fileName": "6247bc85-a7ee-4fca-a6e4-55971f8a2800?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192026Z&X-Amz-Expires=300&X-Amz-Signature=58b0f31f855f025c287bef23af1263de6968c6faed86b8a1438514d16476f337&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DRectangle0.86.dmg&response-content-type=application%2Foctet-stream",
   "sha": "5142f9c5a667f8d0d0e55be5547f5139e9390054397f264b1ae6cb73fa90a9c2",
   "changelog": "https://github.com/rxhanson/Rectangle/releases",
   "previous_version": "0.86"

@@ -2,10 +2,10 @@
   "name": "Zed",
   "description": "Multiplayer code editor",
   "version": "0.179.5",
-  "url": "https://zed.dev/api/releases/stable/0.179.5/Zed-aarch64.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/340547520/f42204cc-eed8-47b9-aaf1-100451133407?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192028Z&X-Amz-Expires=300&X-Amz-Signature=aa4907cb948e1ccaebc851bf54d13e41019e138870a4c1bda1f5e24eb46dfdc9&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DZed-aarch64.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "dev.zed.Zed",
   "homepage": "https://zed.dev/",
-  "fileName": "Zed-aarch64.dmg",
+  "fileName": "f42204cc-eed8-47b9-aaf1-100451133407?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192028Z&X-Amz-Expires=300&X-Amz-Signature=aa4907cb948e1ccaebc851bf54d13e41019e138870a4c1bda1f5e24eb46dfdc9&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DZed-aarch64.dmg&response-content-type=application%2Foctet-stream",
   "sha": "cc1b13bb4b68b2976f7f81ee9e244941ece971536e1cf97612372e8887612a04",
   "changelog": "https://zed.dev/releases/stable",
   "previous_version": "0.179.5"

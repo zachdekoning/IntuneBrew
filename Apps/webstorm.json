@@ -2,7 +2,7 @@
   "name": "WebStorm",
   "description": "JavaScript IDE",
   "version": "2024.3.5",
-  "url": "https://download.jetbrains.com/webstorm/WebStorm-2024.3.5-aarch64.dmg",
+  "url": "https://download-cdn.jetbrains.com/webstorm/WebStorm-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.WebStorm",
   "homepage": "https://www.jetbrains.com/webstorm/",
   "fileName": "WebStorm-2024.3.5-aarch64.dmg",

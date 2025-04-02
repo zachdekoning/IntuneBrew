@@ -2,10 +2,10 @@
   "name": "CodeEdit",
   "description": "Code editor",
   "version": "0.3.3",
-  "url": "https://github.com/CodeEditApp/CodeEdit/releases/download/v0.3.3/CodeEdit.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/468515960/0e873ef1-6d55-4c34-aaad-822afad2f8d3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192103Z&X-Amz-Expires=300&X-Amz-Signature=919bd8c1ed158175d875f31d22db7e029bd4e8b544fc6cabf868798670a79967&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DCodeEdit.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "app.codeedit.CodeEdit",
   "homepage": "https://www.codeedit.app/",
-  "fileName": "CodeEdit.dmg",
+  "fileName": "0e873ef1-6d55-4c34-aaad-822afad2f8d3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192103Z&X-Amz-Expires=300&X-Amz-Signature=919bd8c1ed158175d875f31d22db7e029bd4e8b544fc6cabf868798670a79967&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DCodeEdit.dmg&response-content-type=application%2Foctet-stream",
   "sha": "fb9a76ce9c31a93ed333f72370b4a17e79e742beb4f1741c8ffd9a30618a66c4",
   "changelog": "https://github.com/CodeEditApp/CodeEdit/releases",
   "previous_version": "0.3.3"

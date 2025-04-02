@@ -2,7 +2,7 @@
   "name": "DataSpell",
   "description": "IDE for Professional Data Scientists",
   "version": "2024.3.2",
-  "url": "https://download.jetbrains.com/python/dataspell-2024.3.2-aarch64.dmg",
+  "url": "https://download-cdn.jetbrains.com/python/dataspell-2024.3.2-aarch64.dmg",
   "bundleId": "com.jetbrains.dataspell",
   "homepage": "https://www.jetbrains.com/dataspell/",
   "fileName": "dataspell-2024.3.2-aarch64.dmg",

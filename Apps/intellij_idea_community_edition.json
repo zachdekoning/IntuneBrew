@@ -2,7 +2,7 @@
   "name": "IntelliJ IDEA Community Edition",
   "description": "IDE for Java development - community edition",
   "version": "2024.3.5",
-  "url": "https://download.jetbrains.com/idea/ideaIC-2024.3.5-aarch64.dmg",
+  "url": "https://download-cdn.jetbrains.com/idea/ideaIC-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.intellij.ce",
   "homepage": "https://www.jetbrains.com/idea/",
   "fileName": "ideaIC-2024.3.5-aarch64.dmg",

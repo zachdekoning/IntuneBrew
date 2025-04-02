@@ -2,10 +2,10 @@
   "name": "Clipy",
   "description": "Clipboard extension app",
   "version": "1.2.1",
-  "url": "https://github.com/Clipy/Clipy/releases/download/1.2.1/Clipy_1.2.1.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/37778564/4758b700-cd0f-11e8-8f19-2b50c895b989?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192040Z&X-Amz-Expires=300&X-Amz-Signature=eef0dc365ada639f010d92969bea1de069a322942566ef20b0426064526c48d9&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DClipy_1.2.1.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "com.clipy-app.Clipy",
   "homepage": "https://clipy-app.com/",
-  "fileName": "Clipy_1.2.1.dmg",
+  "fileName": "4758b700-cd0f-11e8-8f19-2b50c895b989?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192040Z&X-Amz-Expires=300&X-Amz-Signature=eef0dc365ada639f010d92969bea1de069a322942566ef20b0426064526c48d9&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DClipy_1.2.1.dmg&response-content-type=application%2Foctet-stream",
   "sha": "dfbb66ce3135fbaa2d64eaeea99a63e63485e322c9746045a1098b1696a1ecd5",
   "changelog": "https://github.com/Clipy/Clipy/releases",
   "previous_version": "1.2.1"

@@ -2,10 +2,10 @@
   "name": "Obsidian",
   "description": "Knowledge base that works on top of a local folder of plain text Markdown files",
   "version": "1.8.9",
-  "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.9/Obsidian-1.8.9.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/262342594/273aea8c-9be1-42ca-8b37-d49e66800e6e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191937Z&X-Amz-Expires=300&X-Amz-Signature=72731b1e85cdac275b32b1fe3f2a3d0d283b94bd8e774dcd9b26c09ad3f9b4e3&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DObsidian-1.8.9.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "md.obsidian",
   "homepage": "https://obsidian.md/",
-  "fileName": "Obsidian-1.8.9.dmg",
+  "fileName": "273aea8c-9be1-42ca-8b37-d49e66800e6e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191937Z&X-Amz-Expires=300&X-Amz-Signature=72731b1e85cdac275b32b1fe3f2a3d0d283b94bd8e774dcd9b26c09ad3f9b4e3&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DObsidian-1.8.9.dmg&response-content-type=application%2Foctet-stream",
   "sha": "38f2b9188d0fe76ce4ec417c1a4e62d7937f59d75b3634b8ed8372e79a3603c9",
   "changelog": "https://github.com/obsidianmd/obsidian-releases/releases",
   "previous_version": "1.8.9"

@@ -2,7 +2,7 @@
   "name": "GIMP",
   "description": "Free and open-source image editor",
   "version": "3.0.2",
-  "url": "https://download.gimp.org/gimp/v3.0/macos/gimp-3.0.2-arm64.dmg",
+  "url": "https://mirrors.ocf.berkeley.edu/gimp/pub/gimp/v3.0/macos/gimp-3.0.2-arm64.dmg",
   "bundleId": "org.gimp.gimp-2.10",
   "homepage": "https://www.gimp.org/",
   "fileName": "gimp-3.0.2-arm64.dmg",

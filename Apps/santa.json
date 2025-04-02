@@ -2,10 +2,10 @@
   "name": "Santa",
   "description": "Binary authorization system",
   "version": "2025.3",
-  "url": "https://github.com/northpolesec/santa/releases/download/2025.3/santa-2025.3.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/865403475/ebdf78aa-7b57-40a3-ae39-b4886d3fd6fd?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192011Z&X-Amz-Expires=300&X-Amz-Signature=9baaab32548504461d6894599c6e0f1cd31953042ded038de3919049ec6cbf82&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dsanta-2025.3.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "com.google.santa",
   "homepage": "https://github.com/google/santa",
-  "fileName": "santa-2025.3.dmg",
+  "fileName": "ebdf78aa-7b57-40a3-ae39-b4886d3fd6fd?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192011Z&X-Amz-Expires=300&X-Amz-Signature=9baaab32548504461d6894599c6e0f1cd31953042ded038de3919049ec6cbf82&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dsanta-2025.3.dmg&response-content-type=application%2Foctet-stream",
   "sha": "06a33253a015be318503523df054771786a2d71d99f5e679329f32968d808cc1",
   "changelog": "https://github.com/google/santa/releases",
   "previous_version": "2025.3"

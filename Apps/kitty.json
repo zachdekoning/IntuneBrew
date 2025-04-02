@@ -2,10 +2,10 @@
   "name": "kitty",
   "description": "GPU-based terminal emulator",
   "version": "0.41.0",
-  "url": "https://github.com/kovidgoyal/kitty/releases/download/v0.41.0/kitty-0.41.0.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/71056775/1ef42236-c485-4f2b-8168-1c2815fa0f78?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192029Z&X-Amz-Expires=300&X-Amz-Signature=5673f5b5665489619d96d79af520949b4c589963b85b8034e5bca85a6cc255eb&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dkitty-0.41.0.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "net.kovidgoyal.kitty",
   "homepage": "https://github.com/kovidgoyal/kitty",
-  "fileName": "kitty-0.41.0.dmg",
+  "fileName": "1ef42236-c485-4f2b-8168-1c2815fa0f78?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192029Z&X-Amz-Expires=300&X-Amz-Signature=5673f5b5665489619d96d79af520949b4c589963b85b8034e5bca85a6cc255eb&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dkitty-0.41.0.dmg&response-content-type=application%2Foctet-stream",
   "sha": "b51d8418323f4e81e2e7276e0255722014216d715db2923d0cd3eb5a96334533",
   "changelog": "https://github.com/kovidgoyal/kitty/releases",
   "previous_version": "0.41.0"

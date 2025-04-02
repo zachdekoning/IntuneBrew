@@ -2,10 +2,10 @@
   "name": "Bitwarden",
   "description": "Desktop password and login vault",
   "version": "2025.2.1",
-  "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2025.2.1/Bitwarden-2025.2.1-universal.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/53538899/dfd25533-835e-4ab2-bdd8-799eb1d27b78?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191931Z&X-Amz-Expires=300&X-Amz-Signature=f661b62a5710d47897c224a40a953b96bb990e4f3f9c13a3041256af4b287206&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DBitwarden-2025.2.1-universal.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "com.bitwarden.desktop",
   "homepage": "https://bitwarden.com/",
-  "fileName": "Bitwarden-2025.2.1-universal.dmg",
+  "fileName": "dfd25533-835e-4ab2-bdd8-799eb1d27b78?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T191931Z&X-Amz-Expires=300&X-Amz-Signature=f661b62a5710d47897c224a40a953b96bb990e4f3f9c13a3041256af4b287206&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DBitwarden-2025.2.1-universal.dmg&response-content-type=application%2Foctet-stream",
   "sha": "9fd8c5d3b33e08d575827dc6073653cb730ef2f80a06c656a79786e0f8b5c6c7",
   "changelog": "https://github.com/bitwarden/clients/releases",
   "previous_version": "2025.2.1"

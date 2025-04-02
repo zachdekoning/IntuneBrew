@@ -2,10 +2,10 @@
   "name": "DB Browser for SQLite",
   "description": "Browser for SQLite databases",
   "version": "3.13.1",
-  "url": "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/19416551/ed9e8d2a-f2e4-43c8-a3c5-2dd028ef176f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192030Z&X-Amz-Expires=300&X-Amz-Signature=61f0685b0b8ff42ff52a8d018226aa42adb5081a1962b667b3c50414a6010b58&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DDB.Browser.for.SQLite-v3.13.1.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "net.sourceforge.sqlitebrowser",
   "homepage": "https://sqlitebrowser.org/",
-  "fileName": "DB.Browser.for.SQLite-v3.13.1.dmg",
+  "fileName": "ed9e8d2a-f2e4-43c8-a3c5-2dd028ef176f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192030Z&X-Amz-Expires=300&X-Amz-Signature=61f0685b0b8ff42ff52a8d018226aa42adb5081a1962b667b3c50414a6010b58&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DDB.Browser.for.SQLite-v3.13.1.dmg&response-content-type=application%2Foctet-stream",
   "sha": "a641cfbfcc2ce609f07de44a35134dab53485ecc18e6d9afa297b514d74bd75e",
   "changelog": "https://sqlitebrowser.org/blog/",
   "previous_version": "3.13.1"

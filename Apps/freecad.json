@@ -2,10 +2,10 @@
   "name": "FreeCAD",
   "description": "3D parametric modeller",
   "version": "1.0.0",
-  "url": "https://github.com/FreeCAD/FreeCAD/releases/download/1.0.0/FreeCAD_1.0.0-conda-macOS-arm64-py311.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/5736080/e02d5471-23b4-49e4-8692-5834d1bb625e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192041Z&X-Amz-Expires=300&X-Amz-Signature=9c7098be3fdd568bdf73341ed7a93d4623e9ce9cfa94c546b882f5ed13fe8c44&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DFreeCAD_1.0.0-conda-macOS-arm64-py311.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "org.freecad.FreeCAD",
   "homepage": "https://www.freecad.org/",
-  "fileName": "FreeCAD_1.0.0-conda-macOS-arm64-py311.dmg",
+  "fileName": "e02d5471-23b4-49e4-8692-5834d1bb625e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192041Z&X-Amz-Expires=300&X-Amz-Signature=9c7098be3fdd568bdf73341ed7a93d4623e9ce9cfa94c546b882f5ed13fe8c44&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DFreeCAD_1.0.0-conda-macOS-arm64-py311.dmg&response-content-type=application%2Foctet-stream",
   "sha": "ec287b388cb94876214678b8f9f586166261883e2591df274a52b19b73d48183",
   "changelog": "https://github.com/FreeCAD/FreeCAD/releases",
   "previous_version": "1.0.0"

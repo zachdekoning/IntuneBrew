@@ -2,10 +2,10 @@
   "name": "Joplin",
   "description": "Note taking and to-do application with synchronisation capabilities",
   "version": "3.2.13",
-  "url": "https://github.com/laurent22/joplin/releases/download/v3.2.13/Joplin-3.2.13-arm64.DMG",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/79162682/d8ab8578-4a32-44f4-9e72-781f579461d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192114Z&X-Amz-Expires=300&X-Amz-Signature=eef6503125d3f892cde08cb46d4a377ccac89b6d370e6dde383f922fb71cfbd2&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DJoplin-3.2.13-arm64.DMG&response-content-type=application%2Foctet-stream",
   "bundleId": "net.cozic.joplin-desktop",
   "homepage": "https://joplinapp.org/",
-  "fileName": "Joplin-3.2.13-arm64.DMG",
+  "fileName": "d8ab8578-4a32-44f4-9e72-781f579461d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192114Z&X-Amz-Expires=300&X-Amz-Signature=eef6503125d3f892cde08cb46d4a377ccac89b6d370e6dde383f922fb71cfbd2&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DJoplin-3.2.13-arm64.DMG&response-content-type=application%2Foctet-stream",
   "sha": "70543d378246fc0af3bf5830dc77cc6277dee0aae14cd73ab73e6f60d474f964",
   "changelog": "https://github.com/laurent22/joplin/releases",
   "previous_version": "3.2.13"

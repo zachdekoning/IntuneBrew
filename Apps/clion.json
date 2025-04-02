@@ -2,7 +2,7 @@
   "name": "CLion",
   "description": "C and C++ IDE",
   "version": "2024.3.5",
-  "url": "https://download.jetbrains.com/cpp/CLion-2024.3.5-aarch64.dmg",
+  "url": "https://download-cdn.jetbrains.com/cpp/CLion-2024.3.5-aarch64.dmg",
   "bundleId": "com.jetbrains.CLion",
   "homepage": "https://www.jetbrains.com/clion/",
   "fileName": "CLion-2024.3.5-aarch64.dmg",

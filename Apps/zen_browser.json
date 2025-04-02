@@ -2,10 +2,10 @@
   "name": "Zen Browser",
   "description": "Gecko based web browser",
   "version": "1.10.3b",
-  "url": "https://github.com/zen-browser/desktop/releases/download/1.10.3b/zen.macos-universal.dmg",
+  "url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/778556932/0f69e9fc-c731-426d-ba67-561877e8b6d9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192045Z&X-Amz-Expires=300&X-Amz-Signature=7df0d1fd588df16e5d3cb8b5ec08df23ff7fa28bf9c2f08a78b98dca76bb5cac&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dzen.macos-universal.dmg&response-content-type=application%2Foctet-stream",
   "bundleId": "app.zen-browser.zen",
   "homepage": "https://zen-browser.app/",
-  "fileName": "zen.macos-universal.dmg",
+  "fileName": "0f69e9fc-c731-426d-ba67-561877e8b6d9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250402T192045Z&X-Amz-Expires=300&X-Amz-Signature=7df0d1fd588df16e5d3cb8b5ec08df23ff7fa28bf9c2f08a78b98dca76bb5cac&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dzen.macos-universal.dmg&response-content-type=application%2Foctet-stream",
   "sha": "20883ad12e6bccfffc7417d6605658ca6fcf6fa39245b04c4c07f76489eed503",
   "changelog": "https://zen-browser.app/release-notes/",
   "previous_version": "1.10.3b"
