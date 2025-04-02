@@ -42,14 +42,17 @@ def get_brew_app_info(app_name):
         return None
 
 def extract_uninstall_paths(app_data):
-    """Extract paths that need to be removed during uninstallation"""
+    """Extract paths that need to be removed during uninstallation directly from brew.sh data"""
     uninstall_paths = []
     
-    # Extract app bundle path
+    # Extract app bundle path from artifacts
     if "artifacts" in app_data:
         for artifact in app_data["artifacts"]:
+            # Handle string artifacts (usually .app files)
             if isinstance(artifact, str) and artifact.endswith(".app"):
                 uninstall_paths.append(f"/Applications/{artifact}")
+            
+            # Handle dictionary artifacts
             elif isinstance(artifact, dict):
                 # Handle app artifacts
                 if "app" in artifact:
@@ -60,11 +63,12 @@ def extract_uninstall_paths(app_data):
                     else:
                         uninstall_paths.append(f"/Applications/{app_path}")
                 
-                # Handle zap artifacts
+                # Handle zap artifacts (most important for cleanup)
                 if "zap" in artifact:
                     zap_data = artifact["zap"]
                     if isinstance(zap_data, list):
                         for zap_item in zap_data:
+                            # Handle trash paths
                             if isinstance(zap_item, dict) and "trash" in zap_item:
                                 trash_paths = zap_item["trash"]
                                 if isinstance(trash_paths, list):
@@ -72,6 +76,31 @@ def extract_uninstall_paths(app_data):
                                         uninstall_paths.append(path)
                                 else:
                                     uninstall_paths.append(trash_paths)
+                            
+                            # Handle delete paths
+                            if isinstance(zap_item, dict) and "delete" in zap_item:
+                                delete_paths = zap_item["delete"]
+                                if isinstance(delete_paths, list):
+                                    for path in delete_paths:
+                                        uninstall_paths.append(path)
+                                else:
+                                    uninstall_paths.append(delete_paths)
+                            
+                            # Handle rmdir paths
+                            if isinstance(zap_item, dict) and "rmdir" in zap_item:
+                                rmdir_paths = zap_item["rmdir"]
+                                if isinstance(rmdir_paths, list):
+                                    for path in rmdir_paths:
+                                        uninstall_paths.append(path)
+                                else:
+                                    uninstall_paths.append(rmdir_paths)
+                            
+                            # Handle signal paths
+                            if isinstance(zap_item, dict) and "signal" in zap_item:
+                                signal_data = zap_item["signal"]
+                                if isinstance(signal_data, dict):
+                                    for signal_app, _ in signal_data.items():
+                                        uninstall_paths.append(f"SIGNAL:{signal_app}")
     
     # Extract pkgutil IDs
     if "pkgutil" in app_data:
@@ -99,25 +128,6 @@ def extract_uninstall_paths(app_data):
                 uninstall_paths.append(f"BUNDLE:{quit_id}")
         else:
             uninstall_paths.append(f"BUNDLE:{quit_ids}")
-    
-    # Common locations for application data
-    app_name = app_data["name"][0]
-    bundle_id = None
-    
-    # Try to extract bundle ID
-    if "bundle_id" in app_data:
-        bundle_id = app_data["bundle_id"]
-    elif "quit" in app_data and isinstance(app_data["quit"], str):
-        bundle_id = app_data["quit"]
-    elif "quit" in app_data and isinstance(app_data["quit"], list) and len(app_data["quit"]) > 0:
-        bundle_id = app_data["quit"][0]
-    
-    if bundle_id:
-        # Add common paths for application data
-        uninstall_paths.append(f"~/Library/Application Support/{app_name}")
-        uninstall_paths.append(f"~/Library/Caches/{bundle_id}")
-        uninstall_paths.append(f"~/Library/Preferences/{bundle_id}.plist")
-        uninstall_paths.append(f"~/Library/Saved Application State/{bundle_id}.savedState")
     
     return uninstall_paths
 
@@ -162,8 +172,29 @@ launchctl unload -w /Library/LaunchDaemons/{service}.plist 2>/dev/null || true
 launchctl unload -w ~/Library/LaunchAgents/{service}.plist 2>/dev/null || true
 """
         elif path.startswith("BUNDLE:"):
-            # Bundle IDs are just for reference, no action needed
-            pass
+            # Handle bundle IDs for killing applications
+            bundle_id = path.replace("BUNDLE:", "")
+            script_content += f"""
+# Kill application with bundle ID {bundle_id} if running
+echo "Stopping application with bundle ID {bundle_id} if running..."
+killall -9 "{bundle_id}" 2>/dev/null || true
+"""
+        elif path.startswith("SIGNAL:"):
+            # Handle signal paths (usually for killing processes)
+            app_to_signal = path.replace("SIGNAL:", "")
+            script_content += f"""
+# Kill application {app_to_signal} if running
+echo "Stopping application {app_to_signal} if running..."
+killall -9 "{app_to_signal}" 2>/dev/null || true
+"""
+        elif path.startswith("SIGNAL:"):
+            # Handle signal paths (usually for killing processes)
+            app_to_signal = path.replace("SIGNAL:", "")
+            script_content += f"""
+# Kill application {app_to_signal} if running
+echo "Stopping application {app_to_signal} if running..."
+killall -9 "{app_to_signal}" 2>/dev/null || true
+"""
         else:
             # Expand ~ to $HOME
             if path.startswith("~"):
