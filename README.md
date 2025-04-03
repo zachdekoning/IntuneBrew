@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                        <p>
+                                                                                                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,12 +79,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-02 20:01 UTC*
+*Last checked: 2025-04-03 00:25 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Zed | 0.179.5 | 0.180.2 |
-| Windsurf | 1.5.9 | 1.6.1 |
+| Signal | 7.48.0 | 7.49.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -350,7 +349,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.1 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.3 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
-| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.48.0 |
+| <img src='Logos/signal.png' width='32' height='32'> Signal | 7.49.0 |
 | <img src='Logos/sketch.png' width='32' height='32'> Sketch | 101.8 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.43.49 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2025.1.0 |

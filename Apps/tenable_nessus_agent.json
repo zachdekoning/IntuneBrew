@@ -5,6 +5,7 @@
   "url": "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/25231/download?i_agree_to_tenable_license_agreement=true",
   "bundleId": "com.tenablesecurity.NessusAgent",
   "homepage": "https://www.tenable.com/",
-  "fileName": "NessusAgent.dmg",
-  "sha": "ae829115f6c178328ca16be3cc42e85c706027ce85a3285596b02b9f0ca7cb02"
+  "fileName": "download?i_agree_to_tenable_license_agreement=true",
+  "sha": "ae829115f6c178328ca16be3cc42e85c706027ce85a3285596b02b9f0ca7cb02",
+  "previous_version": "10.8.3"
 }
