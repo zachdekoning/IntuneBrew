@@ -1,12 +1,12 @@
 {
   "name": "Logitech Options+",
   "description": "Software for Logitech devices",
-  "version": "1.87.684086",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/logitech_options_1.87.684086.pkg",
+  "version": "1.88.697541",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/logitech_options_1.88.697541.pkg",
   "bundleId": "com.logitech.Logi-Options",
   "homepage": "https://www.logitech.com/en-us/software/logi-options-plus.html",
-  "fileName": "logitech_options_1.87.684086.pkg",
+  "fileName": "logitech_options_1.88.697541.pkg",
   "type": "app",
-  "sha": "d95f5a0642a6e9997a427362bb2aeeb50b73334673f277278f24f06111bec740",
-  "previous_version": "1.87.684086"
+  "sha": "0699260146c2187ee063a598101f902b1b46d949148b98e978681a54b3de4b17",
+  "previous_version": "1.88.697541"
 }
