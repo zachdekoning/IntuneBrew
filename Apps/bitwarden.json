@@ -8,5 +8,5 @@
   "fileName": "Bitwarden-2025.3.0-universal.dmg",
   "sha": "26bda9db501e56c566dec2f289e846b18c67874fda0433cb0a71ec3aa2be2ff5",
   "changelog": "https://github.com/bitwarden/clients/releases",
-  "previous_version": "2025.2.1"
+  "previous_version": "2025.3.0"
 }
