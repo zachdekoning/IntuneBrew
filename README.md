@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                              <p>
+                                                                                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,16 +79,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-05 00:26 UTC*
+*Last checked: 2025-04-06 00:28 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| MongoDB Compass | 1.45.4 | 1.46.0 |
-| DuckDuckGo | 1.132.0 | 1.132.1 |
-| calibre | 8.1.1 | 8.2.1 |
-| Windsurf | 1.6.1 | 1.6.2 |
-| Zen Browser | 1.10.3b | 1.11b |
-| Downie | 4.9.11 | 4.9.12 |
+| Rectangle | 0.86 | 0.87 |
+| VSCodium | 1.98.2.25078 | 1.99.02289 |
+| Zen Browser | 1.11b | 1.11.1b |
+| Jellyfin | 10.10.6 | 10.10.7 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -279,7 +277,7 @@ Follow the interactive prompts to:
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.5 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.12 |
 | <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
-| <img src='Logos/jellyfin.png' width='32' height='32'> Jellyfin | 10.10.6 |
+| <img src='Logos/jellyfin.png' width='32' height='32'> Jellyfin | 10.10.7 |
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2024.3.5 |
 | <img src='Logos/jetbrains_toolbox.png' width='32' height='32'> JetBrains Toolbox | 2.5.4 |
 | <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.2.13 |
@@ -347,7 +345,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.2 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.94.3 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
-| <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.86 |
+| <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.87 |
 | <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.13.3 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
@@ -379,7 +377,7 @@ Follow the interactive prompts to:
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.4 |
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.3.3635.7 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
-| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.98.2.25078 |
+| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.99.02289 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.3.1.32057 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.5 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.8.76 |
@@ -390,7 +388,7 @@ Follow the interactive prompts to:
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.180.2 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11b |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.1b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.3.52139 |
 
 > [!NOTE]

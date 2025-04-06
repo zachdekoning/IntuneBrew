@@ -1,12 +1,12 @@
 {
   "name": "Jellyfin",
   "description": "Media system",
-  "version": "10.10.6",
-  "url": "https://repo.jellyfin.org/files/server/macos/stable/v10.10.6/arm64/jellyfin_10.10.6-arm64.dmg",
+  "version": "10.10.7",
+  "url": "https://repo.jellyfin.org/files/server/macos/stable/v10.10.7/arm64/jellyfin_10.10.7-arm64.dmg",
   "bundleId": "Jellyfin.Server",
   "homepage": "https://jellyfin.org/",
-  "fileName": "jellyfin_10.10.6-arm64.dmg",
-  "sha": "06515097487293e4bdc426f131ab897101611571551a697bc531e5189d0af830",
+  "fileName": "jellyfin_10.10.7-arm64.dmg",
+  "sha": "6a6515d9b4143897087504ed7a06b327ab191662e9e3f9d13a27a624ceedd4c8",
   "changelog": "https://github.com/jellyfin/jellyfin/releases",
   "previous_version": "10.10.6"
 }
