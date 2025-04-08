@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                  <p>
+                                                                                                                                                                                                    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,11 +79,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-07 00:27 UTC*
+*Last checked: 2025-04-08 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Stats | 2.11.37 | 2.11.39 |
+| Notion | 4.7.2 | 4.8.0 |
+| Termius | 9.17.1 | 9.18.0 |
+| Raycast | 1.94.3 | 1.94.4 |
+| Zed | 0.180.2 | 0.180.3 |
+| Apidog | 2.7.2 | 2.7.4 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -150,7 +154,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.1 |
-| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.2 |
+| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.4 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.89.0 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
@@ -318,12 +322,12 @@ Follow the interactive prompts to:
 | <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1 |
 | <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.36.1 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.8.0 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.7.2 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.8.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.129.0 |
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.3 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.9 |
-| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.4 |
+| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.5 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.020.0202.0001 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.7.0 |
@@ -334,13 +338,13 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.13 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.2 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.17.2 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.39.5 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.40.0 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.2 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.94.3 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.94.4 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.87 |
 | <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.13.3 |
@@ -367,7 +371,7 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.3 |
-| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.17.1 |
+| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.18.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.0 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
@@ -384,7 +388,7 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.180.2 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.180.3 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.1b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.3.52139 |
 

@@ -1,13 +1,13 @@
 {
   "name": "Ollama",
   "description": "Get up and running with large language models locally",
-  "version": "0.6.4",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/ollama_0.6.4.pkg",
+  "version": "0.6.5",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/ollama_0.6.5.pkg",
   "bundleId": "com.electron.ollama",
   "homepage": "https://ollama.ai/",
-  "fileName": "ollama_0.6.4.pkg",
+  "fileName": "ollama_0.6.5.pkg",
   "type": "app",
-  "sha": "4b1ae036eb7a27b18b8ccd374c0a3aa2d1544ccbd4c0e90b69f27e33bc08d9e2",
+  "sha": "60c352576cae1a27f5421572795f2f5977c895302d2baee3e509810b13987d23",
   "changelog": "https://github.com/ollama/ollama/releases",
-  "previous_version": "0.6.4"
+  "previous_version": "0.6.5"
 }
