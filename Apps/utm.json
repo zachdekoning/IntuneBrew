@@ -1,12 +1,12 @@
 {
   "name": "UTM",
   "description": "Virtual machines UI using QEMU",
-  "version": "4.6.4",
-  "url": "https://github.com/utmapp/UTM/releases/download/v4.6.4/UTM.dmg",
+  "version": "4.6.5",
+  "url": "https://github.com/utmapp/UTM/releases/download/v4.6.5/UTM.dmg",
   "bundleId": "com.utmapp.UTM",
   "homepage": "https://mac.getutm.app/",
   "fileName": "UTM.dmg",
-  "sha": "aad86726152b15a3e963cf778a0b0dfd8e818736b381aed2699d974a18845427",
+  "sha": "0b35607e01e2efa04f45f176d875b4a38613878071ee5536d2a9cc3b64a3c28d",
   "changelog": "https://docs.getutm.app/updates/updates/",
   "previous_version": "4.6.4"
 }
