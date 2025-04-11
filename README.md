@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,21 +79,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-10 00:26 UTC*
+*Last checked: 2025-04-11 00:27 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 135.0.7049.42 | 135.0.7049.85 |
-| Grammarly Desktop | 1.112.1.0 | 1.113.0.0 |
-| Signal | 7.49.0 | 7.50.0 |
-| Brave | 1.77.95.0 | 1.77.97.0 |
-| Termius | 9.18.0 | 9.18.1 |
-| Raycast | 1.94.4 | 1.95.0 |
-| Zed | 0.180.4 | 0.181.5 |
-| VSCodium | 1.99.02289 | 1.99.12392 |
-| Dangerzone | 0.8.1 | 0.9.0 |
-| DbGate | 6.3.2 | 6.3.3 |
-| Camtasia | 25.0.2 | 25.0.3 |
+| Todoist | 9.13.0 | 9.13.1 |
+| Bitwarden | 2025.3.0 | 2025.3.1 |
+| VSCodium | 1.99.12392 | 1.99.22418 |
+| Amazon Q | 1.7.2 | 1.7.3 |
+| LookAway | 1.11.2 | 1.11.3 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -154,7 +148,7 @@ Follow the interactive prompts to:
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.23.0 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22297 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.2 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.3 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.14 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
@@ -162,7 +156,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.1 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.5 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
-| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.89.0 |
+| <img src='Logos/arc.png' width='32' height='32'> Arc | 1.90.1 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.3 |
 | <img src='Logos/autodesk_fusion_360.png' width='32' height='32'> Autodesk Fusion 360 | latest |
@@ -179,7 +173,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.304 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.6.30713 |
-| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.0 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.4.0 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.5 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
@@ -282,7 +276,7 @@ Follow the interactive prompts to:
 | <img src='Logos/insomnia.png' width='32' height='32'> Insomnia | 11.0.2 |
 | <img src='Logos/insta360_studio.png' width='32' height='32'> Insta360 Studio | 5.5.3 |
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2024.3.5 |
-| <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.12 |
+| <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.13 |
 | <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
 | <img src='Logos/jellyfin.png' width='32' height='32'> Jellyfin | 10.10.7 |
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2024.3.5 |
@@ -306,7 +300,7 @@ Follow the interactive prompts to:
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.14 |
 | <img src='Logos/logitech_g_hub.png' width='32' height='32'> Logitech G HUB | 2025.3.696161 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.88.697541 |
-| <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.11.2 |
+| <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.11.3 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.10.1 |
 | <img src='Logos/mactex.png' width='32' height='32'> MacTeX | 2025.0308 |
@@ -317,7 +311,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 135.0.3179.54 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.95.25030928 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25060.203.3471.5023 |
-| <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.1 |
+| <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.2 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.93 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.46.0 |
@@ -344,7 +338,7 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.14 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.2 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.17.2 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.40.1 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.40.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.2.0 |
@@ -378,13 +372,13 @@ Follow the interactive prompts to:
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.18.1 |
-| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.0 |
+| <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.1 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.5 |
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.3.3635.9 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
-| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.99.12392 |
+| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.99.22418 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.4.0.32158 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2024.3.5 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.8.76 |
