@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                          <p>
+                                                                                                                                                                                                            <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,15 +79,16 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-11 00:27 UTC*
+*Last checked: 2025-04-12 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Todoist | 9.13.0 | 9.13.1 |
-| Bitwarden | 2025.3.0 | 2025.3.1 |
-| VSCodium | 1.99.12392 | 1.99.22418 |
-| Amazon Q | 1.7.2 | 1.7.3 |
-| LookAway | 1.11.2 | 1.11.3 |
+| Grammarly Desktop | 1.113.0.0 | 1.113.1.0 |
+| Zed | 0.181.5 | 0.181.6 |
+| Microsoft Edge | 135.0.3179.54 | 135.0.3179.73 |
+| calibre | 8.2.1 | 8.2.100 |
+| Zen Browser | 1.11.1b | 1.11.2b |
+| Apidog | 2.7.5 | 2.7.6 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -154,7 +155,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.1 |
-| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.5 |
+| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.6 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.90.1 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.3.0 |
@@ -186,7 +187,7 @@ Follow the interactive prompts to:
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.1.1 |
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2025.1.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5.1 |
-| <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.2.1 |
+| <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.2.100 |
 | <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.58 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.3 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.106.0 |
@@ -261,7 +262,7 @@ Follow the interactive prompts to:
 | <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.9 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 135.0.7049.85 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 106.0.4 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.113.0.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.113.1.0 |
 | <img src='Logos/hammerspoon.png' width='32' height='32'> Hammerspoon | 1.0.0 |
 | <img src='Logos/hazeover.png' width='32' height='32'> HazeOver | 1.9.4 |
 | <img src='Logos/hidden_bar.png' width='32' height='32'> Hidden Bar | 1.9 |
@@ -308,7 +309,7 @@ Follow the interactive prompts to:
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.78.25031830 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.37.0 |
-| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 135.0.3179.54 |
+| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 135.0.3179.73 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.95.25030928 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25060.203.3471.5023 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.2 |
@@ -388,8 +389,8 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.5 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.181.5 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.1b |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.181.6 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.2b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.3.52139 |
 
 > [!NOTE]
