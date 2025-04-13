@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                            <p>
+                                                                                                                                                                                                              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,16 +79,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-12 00:26 UTC*
+*Last checked: 2025-04-13 00:52 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Grammarly Desktop | 1.113.0.0 | 1.113.1.0 |
-| Zed | 0.181.5 | 0.181.6 |
-| Microsoft Edge | 135.0.3179.54 | 135.0.3179.73 |
-| calibre | 8.2.1 | 8.2.100 |
-| Zen Browser | 1.11.1b | 1.11.2b |
-| Apidog | 2.7.5 | 2.7.6 |
+| BetterDisplay | 3.4.1 | 3.5.3 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -169,9 +164,9 @@ Follow the interactive prompts to:
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.4 |
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
-| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.4.1 |
+| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.3 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.304 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.308 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.6.30713 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
