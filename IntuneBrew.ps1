@@ -131,6 +131,9 @@ function Connect-WithClientSecret {
         [string]$ConfigPath
     )
     
+    # Attempt to disconnect any existing session first to clear cache/context
+    Disconnect-MgGraph -ErrorAction SilentlyContinue
+    
     $config = Get-Content $ConfigPath | ConvertFrom-Json
     
     if (-not $config.appId -or -not $config.tenantId -or -not $config.clientSecret) {
