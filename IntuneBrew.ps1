@@ -12,7 +12,7 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
-Version 0.3.9: Added support for -CopyAssignments parameter to copy assignments from existing app version to new version
+Version 0.3.9: Added support to copy assignments from existing app version to new version. If you copy over the assignments, the assignments for the older app version will be removed automatically.
 Version 0.3.8: Added support for -localfile parameter to upload local PKG or DMG files to Intune
 Version 0.3.7: Fix Parse Errors
 .PRIVATEDATA
@@ -654,8 +654,72 @@ function Set-IntuneAppAssignments {
     if ($failedCount -gt 0) {
         Write-Host "❌ Failed to apply $failedCount assignment(s)." -ForegroundColor Red
     }
+    # (Function definition removed from here)
+
+
     if ($appliedCount -eq 0 -and $failedCount -eq 0) {
         Write-Host "ℹ️ No assignments were processed." -ForegroundColor Gray # Should not happen if $Assignments was not empty initially
+    }
+    Write-Host "---------------------------------------------------" -ForegroundColor Yellow
+}
+
+# Function to remove assignments from a specific Intune app
+function Remove-IntuneAppAssignments {
+    param (
+        [string]$OldAppId,
+        [array]$AssignmentsToRemove
+    )
+
+    if ([string]::IsNullOrEmpty($OldAppId)) {
+        Write-Host "Error: Old App ID is required to remove assignments." -ForegroundColor Red
+        return
+    }
+
+    if ($AssignmentsToRemove -eq $null -or $AssignmentsToRemove.Count -eq 0) {
+        Write-Host "ℹ️ No assignments specified for removal." -ForegroundColor Gray
+        return
+    }
+
+    Write-Host "`n🗑️ Removing assignments from old app (ID: $OldAppId)..." -ForegroundColor Yellow
+    $removedCount = 0
+    $failedCount = 0
+
+    foreach ($assignment in $AssignmentsToRemove) {
+        # Each assignment fetched earlier has its own ID
+        $assignmentId = $assignment.id
+        if ([string]::IsNullOrEmpty($assignmentId)) {
+            Write-Host "⚠️ Warning: Assignment found without an ID. Cannot remove." -ForegroundColor Yellow
+            continue
+        }
+
+        $removeUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$OldAppId/assignments/$assignmentId"
+    
+        # Determine target description for logging
+        $targetDescription = "assignment ID: $assignmentId"
+        if ($assignment.target.groupId) { $targetDescription = "group ID: $($assignment.target.groupId)" }
+        elseif ($assignment.target.'@odata.type' -match 'allLicensedUsersAssignmentTarget') { $targetDescription = "All Users" }
+        elseif ($assignment.target.'@odata.type' -match 'allDevicesAssignmentTarget') { $targetDescription = "All Devices" }
+
+        try {
+            Write-Host "   • Removing assignment for target $targetDescription" -ForegroundColor Gray
+            Invoke-MgGraphRequest -Method DELETE -Uri $removeUri -ErrorAction Stop | Out-Null
+            $removedCount++
+        }
+        catch {
+            $failedCount++
+            Write-Host "❌ Error removing assignment for target $targetDescription : $_" -ForegroundColor Red
+        }
+    }
+
+    Write-Host "---------------------------------------------------" -ForegroundColor Yellow
+    if ($removedCount -gt 0) {
+        Write-Host "✅ Successfully removed $removedCount assignment(s) from old app." -ForegroundColor Green
+    }
+    if ($failedCount -gt 0) {
+        Write-Host "❌ Failed to remove $failedCount assignment(s) from old app." -ForegroundColor Red
+    }
+    if ($removedCount -eq 0 -and $failedCount -eq 0) {
+        Write-Host "ℹ️ No assignments were processed for removal." -ForegroundColor Gray
     }
     Write-Host "---------------------------------------------------" -ForegroundColor Yellow
 }
@@ -1223,25 +1287,22 @@ $updatableApps = @($appsToUpload | Where-Object { $_.IntuneVersion -ne 'Not in I
 $fetchedAssignments = @{} # Hashtable to store fetched assignments [AppID -> AssignmentsArray]
 $assignmentsFound = $false # Flag to track if any assignments were found
 
-# Pre-fetch and display assignments if copying is intended and updates exist
-if ($copyAssignments -and $updatableApps.Length -gt 0) {
+# --- Non-Interactive Assignment Check/Display ---
+# Pre-fetch and display assignments if running non-interactively (-Upload or -UpdateAll) AND copying is requested (-CopyAssignments) AND updates exist
+if (($Upload -or $UpdateAll) -and $copyAssignments -and $updatableApps.Length -gt 0) {
     Write-Host "`nChecking assignments for apps to be updated..." -ForegroundColor Cyan
     foreach ($updApp in $updatableApps) {
         $assignments = Get-IntuneAppAssignments -AppId $updApp.IntuneAppId
         if ($assignments -ne $null -and $assignments.Count -gt 0) {
             $fetchedAssignments[$updApp.IntuneAppId] = $assignments
-            $assignmentsFound = $true
+            # $assignmentsFound = $true # Not needed for non-interactive prompt logic
             # Display summary for this app
             $assignmentSummaries = @()
             foreach ($assignment in $assignments) {
-                # Extract raw target type and determine group ID
                 $rawTargetType = $assignment.target.'@odata.type'.Replace("#microsoft.graph.", "")
                 $groupId = $assignment.target.groupId
-                
-                # Determine display type and details
                 $displayType = ""
                 $targetDetail = ""
-
                 switch ($rawTargetType) {
                     "groupAssignmentTarget" {
                         $displayType = "Group"
@@ -1249,9 +1310,7 @@ if ($copyAssignments -and $updatableApps.Length -gt 0) {
                             try {
                                 $groupUri = "https://graph.microsoft.com/v1.0/groups/$groupId`?`$select=displayName"
                                 $groupInfo = Invoke-MgGraphRequest -Method GET -Uri $groupUri
-                                if ($groupInfo.displayName) {
-                                    $targetDetail = "('$($groupInfo.displayName)')"
-                                }
+                                if ($groupInfo.displayName) { $targetDetail = "('$($groupInfo.displayName)')" }
                                 else { $targetDetail = "(ID: $groupId)" }
                             }
                             catch {
@@ -1259,28 +1318,14 @@ if ($copyAssignments -and $updatableApps.Length -gt 0) {
                                 $targetDetail = "(ID: $groupId)"
                             }
                         }
-                        else { $targetDetail = "(Unknown Group ID)" } # Should not happen if type is groupAssignmentTarget
+                        else { $targetDetail = "(Unknown Group ID)" }
                     }
-                    "allLicensedUsersAssignmentTarget" {
-                        $displayType = "All Users"
-                        $targetDetail = "" # No extra detail needed
-                    }
-                    "allDevicesAssignmentTarget" {
-                        $displayType = "All Devices"
-                        $targetDetail = "" # No extra detail needed
-                    }
-                    default {
-                        # Fallback for unknown types
-                        $displayType = $rawTargetType # Show the raw type
-                        $targetDetail = ""
-                    }
+                    "allLicensedUsersAssignmentTarget" { $displayType = "All Users" }
+                    "allDevicesAssignmentTarget" { $displayType = "All Devices" }
+                    default { $displayType = $rawTargetType }
                 }
-
-                # Build the summary string part
                 $summaryPart = "$($assignment.intent): $displayType"
-                if (-not [string]::IsNullOrWhiteSpace($targetDetail)) {
-                    $summaryPart += " $targetDetail" # Add detail only if it exists
-                }
+                if (-not [string]::IsNullOrWhiteSpace($targetDetail)) { $summaryPart += " $targetDetail" }
                 $assignmentSummaries += $summaryPart
             }
             Write-Host "  - $($updApp.Name): Found $($assignments.Count) assignment(s): $($assignmentSummaries -join ', ')" -ForegroundColor Gray
@@ -1290,57 +1335,92 @@ if ($copyAssignments -and $updatableApps.Length -gt 0) {
         }
     }
     Write-Host "" # Add a newline after assignment check
-} # End of assignment pre-check block
+}
 
-# Skip confirmation prompts if using -Upload or -UpdateAll parameter
+# --- Interactive Mode Logic (Confirmation Prompts & Assignment Check/Display) ---
 if (-not $Upload -and -not $UpdateAll) {
-    # Create custom message based on app statuses
-    # $updatableApps, $fetchedAssignments, $assignmentsFound defined earlier
+    # Define $newApps needed for message construction
     $newApps = @($appsToUpload | Where-Object { $_.IntuneVersion -eq 'Not in Intune' })
+    
+    # Reset flag for interactive check
+    $assignmentsFound = $false
+    
+    # --- Pre-fetch and display assignments for INTERACTIVE mode ---
+    if ($updatableApps.Length -gt 0) {
+        Write-Host "`nChecking assignments for apps to be updated..." -ForegroundColor Cyan
+        foreach ($updApp in $updatableApps) {
+            # Use Get-IntuneAppAssignments and populate $fetchedAssignments and $assignmentsFound
+            $assignments = Get-IntuneAppAssignments -AppId $updApp.IntuneAppId
+            if ($assignments -ne $null -and $assignments.Count -gt 0) {
+                $fetchedAssignments[$updApp.IntuneAppId] = $assignments
+                $assignmentsFound = $true # Set flag HERE for interactive prompt check
+                # Display summary (same logic as above)
+                $assignmentSummaries = @()
+                foreach ($assignment in $assignments) {
+                    $rawTargetType = $assignment.target.'@odata.type'.Replace("#microsoft.graph.", "")
+                    $groupId = $assignment.target.groupId
+                    $displayType = ""
+                    $targetDetail = ""
+                    switch ($rawTargetType) {
+                        "groupAssignmentTarget" {
+                            $displayType = "Group"
+                            if ($groupId) {
+                                try {
+                                    $groupUri = "https://graph.microsoft.com/v1.0/groups/$groupId`?`$select=displayName"
+                                    $groupInfo = Invoke-MgGraphRequest -Method GET -Uri $groupUri
+                                    if ($groupInfo.displayName) { $targetDetail = "('$($groupInfo.displayName)')" }
+                                    else { $targetDetail = "(ID: $groupId)" }
+                                }
+                                catch {
+                                    Write-Host "⚠️ Warning: Could not fetch display name for Group ID $groupId. Error: $($_.Exception.Message)" -ForegroundColor Yellow
+                                    $targetDetail = "(ID: $groupId)"
+                                }
+                            }
+                            else { $targetDetail = "(Unknown Group ID)" }
+                        }
+                        "allLicensedUsersAssignmentTarget" { $displayType = "All Users" }
+                        "allDevicesAssignmentTarget" { $displayType = "All Devices" }
+                        default { $displayType = $rawTargetType }
+                    }
+                    $summaryPart = "$($assignment.intent): $displayType"
+                    if (-not [string]::IsNullOrWhiteSpace($targetDetail)) { $summaryPart += " $targetDetail" }
+                    $assignmentSummaries += $summaryPart
+                }
+                Write-Host "  - $($updApp.Name): Found $($assignments.Count) assignment(s): $($assignmentSummaries -join ', ')" -ForegroundColor Gray
+            }
+            else {
+                Write-Host "  - $($updApp.Name): No assignments found." -ForegroundColor Gray
+            }
+        }
+        Write-Host "" # Add a newline after assignment check
+    }
 
-    # The assignment pre-fetch/display logic was moved before this block
-    # (Lines 1303-1305 removed as they contained misplaced braces/code)
-
-    # Construct the confirmation message
+    # Construct the confirmation message (Prompt 1)
     if (($newApps.Length + $updatableApps.Length) -eq 1) {
-        # Check if it's a new app or an update
-        if ($newApps.Length -eq 1) {
-            $message = "`nDo you want to upload this new app ($($newApps[0].Name)) to Intune? (y/n)"
-        }
-        elseif ($updatableApps.Length -eq 1) {
-            $message = "`nDo you want to update this app ($($updatableApps[0].Name)) in Intune? (y/n)"
-        }
-        else {
-            # Should not happen if count is 1, but include for safety
-            $message = "`nDo you want to process this app? (y/n)"
-        }
+        if ($newApps.Length -eq 1) { $message = "`nDo you want to upload this new app ($($newApps[0].Name)) to Intune? (y/n)" }
+        elseif ($updatableApps.Length -eq 1) { $message = "`nDo you want to update this app ($($updatableApps[0].Name)) in Intune? (y/n)" }
+        else { $message = "`nDo you want to process this app? (y/n)" }
     }
     else {
         $statusParts = @()
-        if ($newApps.Length -gt 0) {
-            $statusParts += "$($newApps.Length) new app$(if($newApps.Length -gt 1){'s'}) to upload"
-        }
-        if ($updatableApps.Length -gt 0) {
-            $statusParts += "$($updatableApps.Length) app$(if($updatableApps.Length -gt 1){'s'}) to update"
-        }
+        if ($newApps.Length -gt 0) { $statusParts += "$($newApps.Length) new app$(if($newApps.Length -gt 1){'s'}) to upload" }
+        if ($updatableApps.Length -gt 0) { $statusParts += "$($updatableApps.Length) app$(if($updatableApps.Length -gt 1){'s'}) to update" }
         $message = "`nFound $($statusParts -join ' and '). Do you want to continue? (y/n)"
     }
 
-    # Prompt user to continue
+    # Prompt user to continue (Prompt 1)
     $continue = Read-Host -Prompt $message
     if ($continue -ne "y") {
         Write-Host "Operation cancelled by user." -ForegroundColor Yellow
-        Disconnect-MgGraph > $null 2>&1
-        Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
-        exit 0
+        Disconnect-MgGraph > $null 2>&1; Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green; exit 0
     }
     else {
         # User confirmed 'y'
-        # Ask about copying assignments only if there are apps being updated
-        # Ask about copying assignments only if assignments were found AND the -CopyAssignments switch was NOT used
+        # Ask about copying assignments only if assignments were found AND the -CopyAssignments switch was NOT used (Prompt 2)
         if ($assignmentsFound -and -not $CopyAssignments.IsPresent) {
             $copyConfirm = Read-Host -Prompt "`nDo you want to copy the listed existing assignments to the updated app$(if($updatableApps.Length -gt 1){'s'})? (y/n)"
             if ($copyConfirm -eq "y") {
+                # Set the flag only if user confirms interactively
                 $copyAssignments = $true
             }
         }
@@ -1409,7 +1489,7 @@ foreach ($app in $appsToUpload) {
         continue
     }
 
-    $app = @{
+    $newAppPayload = @{ # Renamed variable to avoid conflict with loop variable $app
         "@odata.type"                   = "#microsoft.graph.$appType"
         displayName                     = $appDisplayName
         description                     = $appDescription
@@ -1426,9 +1506,9 @@ foreach ($app in $appsToUpload) {
     }
 
     if ($appType -eq "macOSDmgApp" -or $appType -eq "macOSPkgApp") {
-        $app["primaryBundleId"] = $appBundleId
-        $app["primaryBundleVersion"] = $appBundleVersion
-        $app["includedApps"] = @(
+        $newAppPayload["primaryBundleId"] = $appBundleId
+        $newAppPayload["primaryBundleVersion"] = $appBundleVersion
+        $newAppPayload["includedApps"] = @(                     # Corrected variable name
             @{
                 "@odata.type" = "#microsoft.graph.macOSIncludedApp"
                 bundleId      = $appBundleId
@@ -1438,7 +1518,7 @@ foreach ($app in $appsToUpload) {
     }
 
     $createAppUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps"
-    $newApp = Invoke-MgGraphRequest -Method POST -Uri $createAppUri -Body ($app | ConvertTo-Json -Depth 10)
+    $newApp = Invoke-MgGraphRequest -Method POST -Uri $createAppUri -Body ($newAppPayload | ConvertTo-Json -Depth 10)
     Write-Host "✅ App created successfully (ID: $($newApp.id))" -ForegroundColor Green
 
     Write-Host "`n🔒 Processing content version..." -ForegroundColor Yellow
@@ -1512,6 +1592,8 @@ foreach ($app in $appsToUpload) {
     # Apply assignments if the flag is set and assignments were successfully fetched
     if ($copyAssignments -and $existingAssignments -ne $null) {
         Set-IntuneAppAssignments -NewAppId $newApp.id -Assignments $existingAssignments
+        # Now remove assignments from the old app version
+        Remove-IntuneAppAssignments -OldAppId $app.IntuneAppId -AssignmentsToRemove $existingAssignments
     }
     
     Add-IntuneAppLogo -appId $newApp.id -appName $appDisplayName -appType $appType -localLogoPath $logoPath
