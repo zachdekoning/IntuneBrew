@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                              <p>
+                                                                                                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,11 +79,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-13 00:52 UTC*
+*Last checked: 2025-04-14 00:28 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| BetterDisplay | 3.4.1 | 3.5.3 |
+| Stats | 2.11.39 | 2.11.40 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -163,7 +163,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.2.7 |
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.4 |
-| <img src='Logos/beeper.png' width='32' height='32'> Beeper | 3.110.1 |
+| <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.604 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.3 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
 | <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.308 |
@@ -221,7 +221,7 @@ Follow the interactive prompts to:
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 221.4.5365 |
 | <img src='Logos/dropdmg.png' width='32' height='32'> DropDMG | 3.6.8 |
-| <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 6.1 |
+| <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 6.2 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.132.1 |
 | <img src='Logos/easyfind.png' width='32' height='32'> EasyFind | 5.0.2 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 24 |
@@ -356,7 +356,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.4.0 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.60.564 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.39 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.40 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
