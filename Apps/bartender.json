@@ -1,12 +1,12 @@
 {
   "name": "Bartender",
   "description": "Menu bar icon organiser",
-  "version": "5.2.7",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/bartender_5.2.7.pkg",
+  "version": "5.3.4",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/bartender_5.3.4.pkg",
   "bundleId": "com.surteesstudios.Bartender",
   "homepage": "https://www.macbartender.com/",
-  "fileName": "bartender_5.2.7.pkg",
+  "fileName": "bartender_5.3.4.pkg",
   "type": "app",
-  "sha": "2d71c571fbc2c20ffe5fd3ec4f59ac4f48a340fe857682e8a0a3a813d614aedb",
-  "previous_version": "5.2.7"
+  "sha": "ed6cdb89fe0c31e160b9f0d45d27420a538a11c1678d162c76c1b4a965d7476e",
+  "previous_version": "5.3.4"
 }
