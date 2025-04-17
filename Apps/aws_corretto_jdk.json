@@ -1,12 +1,12 @@
 {
   "name": "AWS Corretto JDK",
   "description": "OpenJDK distribution from Amazon",
-  "version": "21.0.6.7.1",
-  "url": "https://corretto.aws/downloads/resources/21.0.6.7.1/amazon-corretto-21.0.6.7.1-macosx-aarch64.pkg",
+  "version": "21.0.7.6.1",
+  "url": "https://corretto.aws/downloads/resources/21.0.7.6.1/amazon-corretto-21.0.7.6.1-macosx-aarch64.pkg",
   "bundleId": "com.amazon.corretto.21",
   "homepage": "https://corretto.aws/",
-  "fileName": "amazon-corretto-21.0.6.7.1-macosx-aarch64.pkg",
-  "sha": "ba87530c97c551ca412a59bc123c99b4b2d88ee6dabbc63cf07584a4fe921977",
+  "fileName": "amazon-corretto-21.0.7.6.1-macosx-aarch64.pkg",
+  "sha": "549c33af2f04eb2a925e28b963f2556dfc86da7f6a2cdda14368ec8c43d388e2",
   "changelog": "https://github.com/corretto/corretto-21/releases",
   "previous_version": "21.0.6.7.1"
 }

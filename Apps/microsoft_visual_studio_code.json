@@ -1,13 +1,13 @@
 {
   "name": "Microsoft Visual Studio Code",
   "description": "Open-source code editor",
-  "version": "1.99.2",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/microsoft_visual_studio_code_1.99.2.pkg",
+  "version": "1.99.3",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/microsoft_visual_studio_code_1.99.3.pkg",
   "bundleId": "com.microsoft.VSCode",
   "homepage": "https://code.visualstudio.com/",
-  "fileName": "microsoft_visual_studio_code_1.99.2.pkg",
+  "fileName": "microsoft_visual_studio_code_1.99.3.pkg",
   "type": "app",
-  "sha": "806c9cdc6c0304bd48e9d4747e982d2bc7e95e0004c7271e532088f888343f8f",
+  "sha": "6521027e564bbda8b2a9149d1a01faaee32b5a86574f3b0003822730d9c38695",
   "changelog": "https://code.visualstudio.com/updates/",
-  "previous_version": "1.99.2"
+  "previous_version": "1.99.3"
 }

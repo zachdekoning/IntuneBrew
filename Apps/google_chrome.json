@@ -1,12 +1,12 @@
 {
   "name": "Google Chrome",
   "description": "Web browser",
-  "version": "135.0.7049.85",
+  "version": "135.0.7049.96",
   "url": "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg",
   "bundleId": "com.google.keystone.agent",
   "homepage": "https://www.google.com/chrome/",
   "fileName": "googlechrome.dmg",
-  "sha": "d25048f96ec217c273468b650b934939848950ffd74a3ac22475732c1160b84d",
+  "sha": "c27ebe4bd439940d1b3428ea888fab634e760f113b2acd930d665dbb75eee421",
   "changelog": "https://chromereleases.googleblog.com/",
   "previous_version": "135.0.7049.85"
 }

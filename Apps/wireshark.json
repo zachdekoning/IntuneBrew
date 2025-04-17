@@ -1,12 +1,12 @@
 {
   "name": "Wireshark",
   "description": "Network protocol analyzer",
-  "version": "4.4.5",
-  "url": "https://2.na.dl.wireshark.org/osx/all-versions/Wireshark%204.4.5%20Arm%2064.dmg",
+  "version": "4.4.6",
+  "url": "https://2.na.dl.wireshark.org/osx/all-versions/Wireshark%204.4.6%20Arm%2064.dmg",
   "bundleId": "org.wireshark.*",
   "homepage": "https://www.wireshark.org/",
-  "fileName": "Wireshark%204.4.5%20Arm%2064.dmg",
-  "sha": "2250360b04aa04412c6f0339fb6e93069a6acfd02cb7474708bf655f927f7976",
+  "fileName": "Wireshark%204.4.6%20Arm%2064.dmg",
+  "sha": "37a664d6e4708266553c7b6b734b214b90385b1fd58a6bf1a173eb73284cb4dd",
   "changelog": "https://www.wireshark.org/news/",
   "previous_version": "4.4.5"
 }
