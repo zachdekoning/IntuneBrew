@@ -1,11 +1,11 @@
 {
   "name": "Adobe Creative Cloud",
   "description": "Collection of apps and services for photography, design, video, web, and UX",
-  "version": "6.5.0.348",
-  "url": "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/6.5.0/348/macarm64/ACCCx6_5_0_348.dmg",
+  "version": "6.6.0.611",
+  "url": "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/6.6.0/611/macarm64/ACCCx6_6_0_611.dmg",
   "bundleId": "com.adobe.acc.AdobeCreativeCloud",
   "homepage": "https://www.adobe.com/creativecloud.html",
-  "fileName": "ACCCx6_5_0_348.dmg",
-  "sha": "1607e7fdf40d3ac56486f92e4b92b3f0781557af6bb05cafbfe7af082909956b",
+  "fileName": "ACCCx6_6_0_611.dmg",
+  "sha": "2a456be9835bf4178b1ba27543c8cfd677bf5bd48a3c90ae473afae25e4d33b0",
   "previous_version": "6.5.0.348"
 }

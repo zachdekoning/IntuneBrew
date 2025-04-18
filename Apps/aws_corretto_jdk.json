@@ -8,5 +8,5 @@
   "fileName": "amazon-corretto-21.0.7.6.1-macosx-aarch64.pkg",
   "sha": "549c33af2f04eb2a925e28b963f2556dfc86da7f6a2cdda14368ec8c43d388e2",
   "changelog": "https://github.com/corretto/corretto-21/releases",
-  "previous_version": "21.0.6.7.1"
+  "previous_version": "21.0.7.6.1"
 }

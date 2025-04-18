@@ -1,12 +1,12 @@
 {
   "name": "Signal",
   "description": "Instant messaging application focusing on security",
-  "version": "7.50.0",
-  "url": "https://updates.signal.org/desktop/signal-desktop-mac-arm64-7.50.0.zip",
+  "version": "7.51.0",
+  "url": "https://updates.signal.org/desktop/signal-desktop-mac-arm64-7.51.0.zip",
   "bundleId": "org.whispersystems.signal-desktop",
   "homepage": "https://signal.org/",
-  "fileName": "signal-desktop-mac-arm64-7.50.0.zip",
-  "sha": "3ba9566042e242a567f846ff96bcc9f05f1ec5c7f5f5c2b7349cae16a0e00700",
+  "fileName": "signal-desktop-mac-arm64-7.51.0.zip",
+  "sha": "e3242216e947983a399c4d596e78a31fad905066c01a342dd50cfb4f9802df5c",
   "changelog": "https://github.com/signalapp/Signal-Desktop/releases",
   "previous_version": "7.50.0"
 }
