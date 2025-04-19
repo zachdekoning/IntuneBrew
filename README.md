@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,23 +79,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-18 00:27 UTC*
+*Last checked: 2025-04-19 00:25 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Adobe Creative Cloud | 6.5.0.348 | 6.6.0.611 |
-| Parallels Desktop | 20.2.2-55879 | 20.3.0-55895 |
-| Grammarly Desktop | 1.114.4.0 | 1.114.5.0 |
-| Miro | 0.10.93 | 0.10.95 |
-| Signal | 7.50.0 | 7.51.0 |
-| Anki | 25.02 | 25.02.1 |
-| Podman Desktop | 1.17.2 | 1.18.0 |
-| Eclipse Temurin Java Development Kit | 24 | 24.0.1 |
-| Zed | 0.182.9 | 0.182.10 |
-| Microsoft Edge | 135.0.3179.73 | 135.0.3179.85 |
-| Apidog | 2.7.6 | 2.7.7 |
-| Downie | 4.9.12 | 4.9.13 |
-| Epic Games Launcher | 18.1.3 | 18.5.0 |
+| Notion | 4.8.7 | 4.9.0 |
+| Termius | 9.18.1 | 9.19.0 |
+| Zed | 0.182.10 | 0.182.11 |
+| calibre | 8.2.100 | 8.3.0 |
+| Zen Browser | 1.11.3b | 1.11.4b |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -194,7 +186,7 @@ Follow the interactive prompts to:
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.1.1 |
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2025.1.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5.1 |
-| <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.2.100 |
+| <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.3.0 |
 | <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.58 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.3 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.106.0 |
@@ -330,7 +322,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1 |
 | <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.36.1 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.8.0 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.8.7 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.9.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.130.0 |
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.3 |
@@ -379,7 +371,7 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
-| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.18.1 |
+| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.1 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
@@ -396,8 +388,8 @@ Follow the interactive prompts to:
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.6 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.182.10 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.3b |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.182.11 |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.4b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.5.53616 |
 
 > [!NOTE]
