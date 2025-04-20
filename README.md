@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                          <p>
+                                                                                                                                                                                                                            <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,15 +79,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-19 00:25 UTC*
+*Last checked: 2025-04-20 00:29 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Notion | 4.8.7 | 4.9.0 |
-| Termius | 9.18.1 | 9.19.0 |
-| Zed | 0.182.10 | 0.182.11 |
-| calibre | 8.2.100 | 8.3.0 |
-| Zen Browser | 1.11.3b | 1.11.4b |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -170,7 +164,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.623 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.3 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.321 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.324 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
