@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                            <p>
+                                                                                                                                                                                                                              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,9 +79,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-20 00:29 UTC*
+*Last checked: 2025-04-21 00:29 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| BetterDisplay | 3.5.3 | 3.5.4 |
+| Stats | 2.11.40 | 2.11.41 |
+| Zen Browser | 1.11.4b | 1.11.5b |
+| Calmly Writer | 2.0.58 | 2.0.59 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -162,9 +167,9 @@ Follow the interactive prompts to:
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.4 |
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.623 |
-| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.3 |
+| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.4 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.324 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.325 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
@@ -181,7 +186,7 @@ Follow the interactive prompts to:
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2025.1.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5.1 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.3.0 |
-| <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.58 |
+| <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.59 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.3 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.106.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
@@ -198,7 +203,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2502.1 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.48.9 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.49.2 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.9.0 |
@@ -354,7 +359,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.4.0 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.61.443 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.40 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.41 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
@@ -383,7 +388,7 @@ Follow the interactive prompts to:
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.182.11 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.4b |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.5b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.5.53616 |
 
 > [!NOTE]
