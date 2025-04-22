@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                              <p>
+                                                                                                                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,14 +79,16 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-21 00:29 UTC*
+*Last checked: 2025-04-22 00:28 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| BetterDisplay | 3.5.3 | 3.5.4 |
-| Stats | 2.11.40 | 2.11.41 |
-| Zen Browser | 1.11.4b | 1.11.5b |
-| Calmly Writer | 2.0.58 | 2.0.59 |
+| Zoom | 6.4.5.53616 | 6.4.6.53970 |
+| Microsoft Teams | 25060.203.3471.5023 | 25079.2107.3576.1611 |
+| Notion | 4.9.0 | 4.9.1 |
+| Android Studio | 2024.3.1.14 | 2024.3.1.15 |
+| Citrix Workspace | 24.11.10.22 | 25.03.0.95 |
+| Windsurf | 1.6.5 | 1.7.0 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -148,7 +150,7 @@ Follow the interactive prompts to:
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22318 |
 | <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.3 |
-| <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.14 |
+| <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.15 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.1 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
@@ -163,7 +165,7 @@ Follow the interactive prompts to:
 | <img src='Logos/azul_zulu_java_standard_edition_development_kit.png' width='32' height='32'> Azul Zulu Java Standard Edition Development Kit | 24.0.1 |
 | <img src='Logos/azure_data_studio.png' width='32' height='32'> Azure Data Studio | 1.51.1 |
 | <img src='Logos/badgeify.png' width='32' height='32'> Badgeify | 1.5.8 |
-| <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.3.4 |
+| <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.3.5 |
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.4 |
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.623 |
@@ -193,7 +195,7 @@ Follow the interactive prompts to:
 | <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.098 |
 | <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 136.0.7103.19 |
 | <img src='Logos/cisco_jabber.png' width='32' height='32'> Cisco Jabber | 20241220015538 |
-| <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 24.11.10.22 |
+| <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 25.03.0.95 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.9.2 |
 | <img src='Logos/cleanmymac.png' width='32' height='32'> CleanMyMac | 5.0.7 |
 | <img src='Logos/clion.png' width='32' height='32'> CLion | 2025.1 |
@@ -288,7 +290,7 @@ Follow the interactive prompts to:
 | <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.1.1 |
 | <img src='Logos/keka.png' width='32' height='32'> Keka | 1.4.8 |
 | <img src='Logos/keybase.png' width='32' height='32'> Keybase | 6.5.0 |
-| <img src='Logos/keyclu.png' width='32' height='32'> KeyClu | 0.29 |
+| <img src='Logos/keyclu.png' width='32' height='32'> KeyClu | 0.30 |
 | <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.41.1 |
 | <img src='Logos/klokki.png' width='32' height='32'> Klokki | 1.3.7 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.57.14 |
@@ -298,7 +300,7 @@ Follow the interactive prompts to:
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.14 |
 | <img src='Logos/logitech_g_hub.png' width='32' height='32'> Logitech G HUB | 2025.3.696161 |
-| <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.88.697541 |
+| <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.89.705126 |
 | <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.11.3 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.10.1 |
@@ -309,7 +311,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.38.0 |
 | <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 135.0.3179.85 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.96.25041326 |
-| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25060.203.3471.5023 |
+| <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25079.2107.3576.1611 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.3 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.95 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
@@ -321,7 +323,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1 |
 | <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.36.1 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.8.0 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.9.0 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.9.1 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.130.0 |
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.3 |
@@ -382,14 +384,14 @@ Follow the interactive prompts to:
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2025.1 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.10.72 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.4 |
-| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.6.5 |
+| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.7.0 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.6 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.182.11 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.5b |
-| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.5.53616 |
+| <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.6.53970 |
 
 > [!NOTE]
 > Missing an app? Feel free to [request additional app support](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=app-request) by creating an issue!

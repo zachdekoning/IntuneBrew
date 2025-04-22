@@ -1,12 +1,12 @@
 {
   "name": "Android Studio",
   "description": "Tools for building Android applications",
-  "version": "2024.3.1.14",
-  "url": "https://redirector.gvt1.com/edgedl/android/studio/install/2024.3.1.14/android-studio-2024.3.1.14-mac_arm.dmg",
+  "version": "2024.3.1.15",
+  "url": "https://redirector.gvt1.com/edgedl/android/studio/install/2024.3.1.15/android-studio-2024.3.1.15-mac_arm.dmg",
   "bundleId": "com.google.android.studio",
   "homepage": "https://developer.android.com/studio/",
-  "fileName": "android-studio-2024.3.1.14-mac_arm.dmg",
-  "sha": "89f55dd8b329fa28c61f9635bafc10cfe52055772c8a9721719c54a0e403cfee",
+  "fileName": "android-studio-2024.3.1.15-mac_arm.dmg",
+  "sha": "fbabace8a043d7d7d4721b81756f077fa0227c4e3aa37c3178ace925f44423b2",
   "changelog": "https://developer.android.com/studio/releases",
   "previous_version": "2024.3.1.14"
 }
