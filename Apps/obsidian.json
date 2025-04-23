@@ -1,12 +1,12 @@
 {
   "name": "Obsidian",
   "description": "Knowledge base that works on top of a local folder of plain text Markdown files",
-  "version": "1.8.9",
-  "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.9/Obsidian-1.8.9.dmg",
+  "version": "1.8.10",
+  "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.10/Obsidian-1.8.10.dmg",
   "bundleId": "md.obsidian",
   "homepage": "https://obsidian.md/",
-  "fileName": "Obsidian-1.8.9.dmg",
-  "sha": "38f2b9188d0fe76ce4ec417c1a4e62d7937f59d75b3634b8ed8372e79a3603c9",
+  "fileName": "Obsidian-1.8.10.dmg",
+  "sha": "dc188f6d3d4c13be56a51fe64c397cfd323ecaaebe58c53e45a657ca4506f321",
   "changelog": "https://github.com/obsidianmd/obsidian-releases/releases",
   "previous_version": "1.8.9"
 }
