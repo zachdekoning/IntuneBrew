@@ -1,12 +1,12 @@
 {
   "name": "Opera",
   "description": "Web browser",
-  "version": "118.0.5461.41",
-  "url": "https://get.geo.opera.com/pub/opera/desktop/118.0.5461.41/mac/Opera_118.0.5461.41_Setup.dmg",
+  "version": "118.0.5461.60",
+  "url": "https://get.geo.opera.com/pub/opera/desktop/118.0.5461.60/mac/Opera_118.0.5461.60_Setup.dmg",
   "bundleId": "com.operasoftware.Opera",
   "homepage": "https://www.opera.com/",
-  "fileName": "Opera_118.0.5461.41_Setup.dmg",
-  "sha": "ebd21ec6a4f064aad926c2c6d565d58bec408d51e7979f5f2c303ff5a26e243f",
+  "fileName": "Opera_118.0.5461.60_Setup.dmg",
+  "sha": "9cd82d164d55a4467a43caa0f41a51166f348793f36c05edd6d45b6b1d23fc7b",
   "changelog": "https://blogs.opera.com/desktop/",
   "previous_version": "118.0.5461.41"
 }
