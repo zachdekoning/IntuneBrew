@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                    <p>
+                                                                                                                                                                                                                                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,24 +79,17 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-24 00:27 UTC*
+*Last checked: 2025-04-25 00:27 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Google Chrome | 135.0.7049.96 | 135.0.7049.115 |
-| Grammarly Desktop | 1.114.5.0 | 1.115.0.0 |
-| MongoDB Compass | 1.46.0 | 1.46.1 |
-| Signal | 7.51.0 | 7.52.0 |
-| Brave | 1.77.100.0 | 1.77.101.0 |
-| ChatGPT | 1.2025.098 | 1.2025.105 |
-| Elgato Wave Link | 2.0.5.3755 | 2.0.6.3780 |
-| Bruno | 2.1.0 | 2.2.0 |
-| Zed | 0.182.11 | 0.183.10 |
-| Opera | 118.0.5461.41 | 118.0.5461.60 |
-| JetBrains Toolbox | 2.6 | 2.6.1 |
-| Downie | 4.9.13 | 4.9.14 |
-| Elephas | 11.094 | 11.1086 |
-| Insta360 Studio | 5.6.0 | 5.6.1 |
+| PowerShell | 7.5.0 | 7.5.1 |
+| Anki | 25.02.1 | 25.02.4 |
+| Microsoft Edge | 135.0.3179.85 | 135.0.3179.98 |
+| BoltAI | 1.34.1 | 1.35.0 |
+| Amazon Q | 1.7.3 | 1.8.0 |
+| Adobe Acrobat Reader | 25.001.20432 | 25.001.20467 |
+| Adobe Acrobat Pro DC | 25.001.20458 | 25.001.20467 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -146,8 +139,8 @@ Follow the interactive prompts to:
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.72 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1 |
-| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20458 |
-| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 25.001.20432 |
+| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20467 |
+| <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 25.001.20467 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.6.0.611 |
 | <img src='Logos/airfoil.png' width='32' height='32'> Airfoil | 5.12.4 |
 | <img src='Logos/airtable.png' width='32' height='32'> Airtable | 1.6.6 |
@@ -157,10 +150,10 @@ Follow the interactive prompts to:
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.23.0 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22318 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.7.3 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.8.0 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.15 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
-| <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.1 |
+| <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.4 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.1 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.7 |
@@ -179,14 +172,14 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.640 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.4 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.337 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.340 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.4.1 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.7 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
-| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.34.1 |
+| <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.35.0 |
 | <img src='Logos/boop.png' width='32' height='32'> Boop | 1.4.0 |
 | <img src='Logos/boxcryptor.png' width='32' height='32'> Boxcryptor | 3.13.680 |
 | <img src='Logos/brave.png' width='32' height='32'> Brave | 1.77.101.0 |
@@ -213,7 +206,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2502.1 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.49.4 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.49.5 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.9.0 |
@@ -292,7 +285,7 @@ Follow the interactive prompts to:
 | <img src='Logos/jetbrains_toolbox.png' width='32' height='32'> JetBrains Toolbox | 2.6.1 |
 | <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.2.13 |
 | <img src='Logos/jumpcut.png' width='32' height='32'> Jumpcut | 0.84 |
-| <img src='Logos/jumpshare.png' width='32' height='32'> Jumpshare | 3.3.14 |
+| <img src='Logos/jumpshare.png' width='32' height='32'> Jumpshare | 3.3.16 |
 | <img src='Logos/karabiner_elements.png' width='32' height='32'> Karabiner Elements | 15.3.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.10 |
 | <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.1.1 |
@@ -317,7 +310,7 @@ Follow the interactive prompts to:
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.79.25033028 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.38.0 |
-| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 135.0.3179.85 |
+| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 135.0.3179.98 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.96.25041326 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25079.2107.3576.1611 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.3 |
@@ -336,7 +329,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.3 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.10 |
-| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.5 |
+| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.6 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.051.0317.0003 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.7.0 |
@@ -347,8 +340,8 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.14 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.2 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.18.0 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.42.3 |
-| <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.0 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.42.4 |
+| <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.1 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.3.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
