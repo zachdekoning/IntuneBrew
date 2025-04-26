@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                      <p>
+                                                                                                                                                                                                                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,17 +79,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-25 00:27 UTC*
+*Last checked: 2025-04-26 00:26 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| PowerShell | 7.5.0 | 7.5.1 |
-| Anki | 25.02.1 | 25.02.4 |
-| Microsoft Edge | 135.0.3179.85 | 135.0.3179.98 |
-| BoltAI | 1.34.1 | 1.35.0 |
-| Amazon Q | 1.7.3 | 1.8.0 |
-| Adobe Acrobat Reader | 25.001.20432 | 25.001.20467 |
-| Adobe Acrobat Pro DC | 25.001.20458 | 25.001.20467 |
+| Termius | 9.19.0 | 9.19.1 |
+| Raycast | 1.96.0 | 1.96.1 |
+| Zed | 0.183.10 | 0.183.11 |
+| Windsurf | 1.7.0 | 1.7.1 |
+| LM Studio | 0.3.14 | 0.3.15 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -138,7 +136,7 @@ Follow the interactive prompts to:
 | Application | Latest Version |
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.72 |
-| <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1 |
+| <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1.1 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20467 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 25.001.20467 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.6.0.611 |
@@ -172,7 +170,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.640 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.4 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.340 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.344 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
@@ -285,7 +283,7 @@ Follow the interactive prompts to:
 | <img src='Logos/jetbrains_toolbox.png' width='32' height='32'> JetBrains Toolbox | 2.6.1 |
 | <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.2.13 |
 | <img src='Logos/jumpcut.png' width='32' height='32'> Jumpcut | 0.84 |
-| <img src='Logos/jumpshare.png' width='32' height='32'> Jumpshare | 3.3.16 |
+| <img src='Logos/jumpshare.png' width='32' height='32'> Jumpshare | 3.3.17 |
 | <img src='Logos/karabiner_elements.png' width='32' height='32'> Karabiner Elements | 15.3.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.10 |
 | <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.1.1 |
@@ -299,7 +297,7 @@ Follow the interactive prompts to:
 | <img src='Logos/langgraph_studio.png' width='32' height='32'> LangGraph Studio | 0.0.37 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.2 |
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
-| <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.14 |
+| <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.15 |
 | <img src='Logos/logitech_g_hub.png' width='32' height='32'> Logitech G HUB | 2025.3.696161 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.89.705126 |
 | <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.11.3 |
@@ -346,7 +344,7 @@ Follow the interactive prompts to:
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.3.0 |
 | <img src='Logos/protonvpn.png' width='32' height='32'> ProtonVPN | 4.8.0 |
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.18.2 |
-| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.96.0 |
+| <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.96.1 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.87 |
 | <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.13.3 |
@@ -373,7 +371,7 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
-| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.0 |
+| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.1 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.1 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
@@ -383,14 +381,14 @@ Follow the interactive prompts to:
 | <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.99.32704 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.4.0.32158 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2025.1 |
-| <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.11.76 |
+| <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.12.73 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.4 |
-| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.7.0 |
+| <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.7.1 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.6 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.183.10 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.183.11 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.5b |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.6.53970 |
 
