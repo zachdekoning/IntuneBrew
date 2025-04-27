@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,15 +79,14 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-26 00:26 UTC*
+*Last checked: 2025-04-27 00:29 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Termius | 9.19.0 | 9.19.1 |
-| Raycast | 1.96.0 | 1.96.1 |
-| Zed | 0.183.10 | 0.183.11 |
-| Windsurf | 1.7.0 | 1.7.1 |
-| LM Studio | 0.3.14 | 0.3.15 |
+| Spotify | 1.2.61.443 | 1.2.62.580 |
+| Tableau Desktop | 2025.1.0 | 2025.1.1 |
+| draw.io Desktop | 26.2.2 | 26.2.15 |
+| Amazon Q | 1.8.0 | 1.8.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -148,7 +147,7 @@ Follow the interactive prompts to:
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.23.0 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22318 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.8.0 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.8.1 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.15 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.4 |
@@ -204,7 +203,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2502.1 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.49.5 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.49.6 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.3 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.9.0 |
@@ -220,7 +219,7 @@ Follow the interactive prompts to:
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.40.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.14 |
-| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.2.2 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.2.15 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 222.4.5042 |
@@ -359,14 +358,14 @@ Follow the interactive prompts to:
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2025.1.0 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.4.0 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
-| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.61.443 |
+| <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.62.580 |
 | <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.41 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
 | <img src='Logos/sync.png' width='32' height='32'> Sync | 2.2.48 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.2 |
-| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2025.1.0 |
+| <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2025.1.1 |
 | <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.82.5 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |

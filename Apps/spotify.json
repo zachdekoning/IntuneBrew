@@ -1,12 +1,12 @@
 {
   "name": "Spotify",
   "description": "Music streaming service",
-  "version": "1.2.61.443",
+  "version": "1.2.62.580",
   "url": "https://download.scdn.co/SpotifyARM64.dmg",
   "bundleId": "com.spotify.client",
   "homepage": "https://www.spotify.com/",
   "fileName": "SpotifyARM64.dmg",
-  "sha": "0078fd5a898cbf7f0457c94d578329a2941720d0a273d697d1458c282093a789",
+  "sha": "6dc07d1b33b9cab58b962bba24bc6fbfbbb7afcecc1726147d688da048e90baf",
   "changelog": "https://support.spotify.com/us/article/desktop-app-changelog/",
   "previous_version": "1.2.61.443"
 }
