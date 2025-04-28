@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                          <p>
+                                                                                                                                                                                                                                            <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,14 +79,11 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-27 00:29 UTC*
+*Last checked: 2025-04-28 00:28 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Spotify | 1.2.61.443 | 1.2.62.580 |
-| Tableau Desktop | 2025.1.0 | 2025.1.1 |
-| draw.io Desktop | 26.2.2 | 26.2.15 |
-| Amazon Q | 1.8.0 | 1.8.1 |
+| Stats | 2.11.41 | 2.11.42 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -359,7 +356,7 @@ Follow the interactive prompts to:
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.4.0 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
 | <img src='Logos/spotify.png' width='32' height='32'> Spotify | 1.2.62.580 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.41 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.42 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
