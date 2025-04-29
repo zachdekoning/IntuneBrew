@@ -16,6 +16,9 @@ preserve_filename_apps = [
 
 # zip, tar etc
 app_urls = [
+    "https://formulae.brew.sh/api/cask/homerow.json",
+    "https://formulae.brew.sh/api/cask/paintbrush.json",
+    "https://formulae.brew.sh/api/cask/mattermost.json",
     "https://formulae.brew.sh/api/cask/flycut.json",
     "https://formulae.brew.sh/api/cask/sublime-merge.json",
     "https://formulae.brew.sh/api/cask/netnewswire.json",
@@ -123,6 +126,10 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/requestly.json",
+    "https://formulae.brew.sh/api/cask/adguard.json",
+    "https://formulae.brew.sh/api/cask/orcaslicer.json",
+    "https://formulae.brew.sh/api/cask/lookaway.json",
     "https://formulae.brew.sh/api/cask/kap.json",
     "https://formulae.brew.sh/api/cask/bambu-studio.json",
     "https://formulae.brew.sh/api/cask/upscayl.json",
@@ -377,6 +384,8 @@ pkg_in_pkg_urls = [
 
 # PKG
 pkg_urls = [
+    "https://formulae.brew.sh/api/cask/gdisk.json",
+    "https://formulae.brew.sh/api/cask/mist.json",
     "https://formulae.brew.sh/api/cask/parsec.json",
     "https://formulae.brew.sh/api/cask/thonny.json",
     "https://formulae.brew.sh/api/cask/quarto.json",
