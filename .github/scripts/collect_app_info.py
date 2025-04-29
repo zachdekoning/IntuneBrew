@@ -97,6 +97,7 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/omnissa-horizon-client.json",
     "https://formulae.brew.sh/api/cask/adobe-creative-cloud.json",
     "https://formulae.brew.sh/api/cask/google-chrome.json",
     "https://formulae.brew.sh/api/cask/zoom.json",
