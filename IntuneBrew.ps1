@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 0.4.1
+.VERSION 0.4.2
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 .AUTHOR ugurk
 .COMPANYNAME
@@ -12,6 +12,7 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
+Versuib 0.4.2: Optimized App Logo handling.
 Version 0.4.1: IntuneBrew now correctly handles download urls with a redirect
 Version 0.4: Added support to copy assignments from existing app version to new version. If you copy over the assignments, the assignments for the older app version will be removed automatically.
 Version 0.3.8: Added support for -localfile parameter to upload local PKG or DMG files to Intune
@@ -65,7 +66,7 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.4.1" -ForegroundColor Yellow -NoNewline
+Write-Host " | Version" -NoNewline; Write-Host " 0.4.2" -ForegroundColor Yellow -NoNewline
 Write-Host " | Last updated: " -NoNewline; Write-Host "2025-04-13" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
@@ -494,13 +495,28 @@ function Add-IntuneAppLogo {
                 Invoke-WebRequest -Uri $logoUrl -OutFile $tempLogoPath
             }
             catch {
-                Write-Host "⚠️ Could not download logo from repository. Error: $_" -ForegroundColor Yellow
+                $errorMessage = $_
+                $statusCode = if ($_.Exception.Response) { $_.Exception.Response.StatusCode.Value__ } else { "Unknown" }
+                
+                Write-Host "ℹ️  Logo not available for $appName" -ForegroundColor Cyan
+                Write-Host "   • Status: $statusCode - $($errorMessage.ToString().Split(':')[0])" -ForegroundColor Gray
+                
+                if ($statusCode -eq 404) {
+                    Write-Host "   • The app will be deployed without a logo" -ForegroundColor Gray
+                    Write-Host "   • You can add a logo later via the Intune portal" -ForegroundColor Gray
+                    Write-Host "   • To contribute a logo, submit a PNG file to the IntuneBrew repository" -ForegroundColor Gray
+                }
+                else {
+                    Write-Host "   • Connection error. Check your internet connection and try again" -ForegroundColor Gray
+                }
+                
                 return
             }
         }
 
         if (-not $tempLogoPath -or -not (Test-Path $tempLogoPath)) {
-            Write-Host "⚠️ No valid logo file available" -ForegroundColor Yellow
+            Write-Host "ℹ️ No valid logo file available" -ForegroundColor Cyan
+            Write-Host "   • The app will be deployed without a logo" -ForegroundColor Gray
             return
         }
 
@@ -530,7 +546,9 @@ function Add-IntuneAppLogo {
         }
     }
     catch {
-        Write-Host "⚠️ Warning: Could not add app logo. Error: $_" -ForegroundColor Yellow
+        Write-Host "ℹ️ Could not add app logo" -ForegroundColor Cyan
+        Write-Host "   • Error: $($_.Exception.Message)" -ForegroundColor Gray
+        Write-Host "   • The app will be deployed without a logo" -ForegroundColor Gray
     }
 }
 # Function to get assignments for a specific Intune app

@@ -16,6 +16,18 @@ preserve_filename_apps = [
 
 # zip, tar etc
 app_urls = [
+    "https://formulae.brew.sh/api/cask/flycut.json",
+    "https://formulae.brew.sh/api/cask/sublime-merge.json",
+    "https://formulae.brew.sh/api/cask/netnewswire.json",
+    "https://formulae.brew.sh/api/cask/love.json",
+    "https://formulae.brew.sh/api/cask/block-goose.json",
+    "https://formulae.brew.sh/api/cask/espanso.json",
+    "https://formulae.brew.sh/api/cask/shortcat.json",
+    "https://formulae.brew.sh/api/cask/copilot-for-xcode.json",
+    "https://formulae.brew.sh/api/cask/macs-fan-control.json",
+    "https://formulae.brew.sh/api/cask/copyq.json",
+    "https://formulae.brew.sh/api/cask/plex.json",
+    "https://formulae.brew.sh/api/cask/macwhisper.json",
     "https://formulae.brew.sh/api/cask/reactotron.json",
     "https://formulae.brew.sh/api/cask/macdown.json",
     "https://formulae.brew.sh/api/cask/middleclick.json"
@@ -111,6 +123,37 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/kap.json",
+    "https://formulae.brew.sh/api/cask/bambu-studio.json",
+    "https://formulae.brew.sh/api/cask/upscayl.json",
+    "https://formulae.brew.sh/api/cask/apifox.json",
+    "https://formulae.brew.sh/api/cask/nvidia-geforce-now.json",
+    "https://formulae.brew.sh/api/cask/rectangle.json",
+    "https://formulae.brew.sh/api/cask/dosbox.json",
+    "https://formulae.brew.sh/api/cask/qview.json",
+    "https://formulae.brew.sh/api/cask/rider.json",
+    "https://formulae.brew.sh/api/cask/stretchly.json",
+    "https://formulae.brew.sh/api/cask/proton-mail.json",
+    "https://formulae.brew.sh/api/cask/proton-drive.json",
+    "https://formulae.brew.sh/api/cask/cryptomator.json",
+    "https://formulae.brew.sh/api/cask/veracrypt.json",
+    "https://formulae.brew.sh/api/cask/dockdoor.json",
+    "https://formulae.brew.sh/api/cask/yaak.json",
+    "https://formulae.brew.sh/api/cask/messenger.json",
+    "https://formulae.brew.sh/api/cask/meetingbar.json",
+    "https://formulae.brew.sh/api/cask/zap.json",
+    "https://formulae.brew.sh/api/cask/qq.json",
+    "https://formulae.brew.sh/api/cask/mouseless.json",
+    "https://formulae.brew.sh/api/cask/arduino-ide.json",
+    "https://formulae.brew.sh/api/cask/visualvm.json",
+    "https://formulae.brew.sh/api/cask/grandperspective.json",
+    "https://formulae.brew.sh/api/cask/moonlight.json",
+    "https://formulae.brew.sh/api/cask/freetube.json",
+    "https://formulae.brew.sh/api/cask/zenmap.json",
+    "https://formulae.brew.sh/api/cask/chatwise.json",
+    "https://formulae.brew.sh/api/cask/motrix.json",
+    "https://formulae.brew.sh/api/cask/phpstorm.json",
+    "https://formulae.brew.sh/api/cask/qlvideo.json",
     "https://formulae.brew.sh/api/cask/marta.json",
     "https://formulae.brew.sh/api/cask/mockoon.json",
     "https://formulae.brew.sh/api/cask/proxyman.json",
@@ -334,7 +377,11 @@ pkg_in_pkg_urls = [
 
 # PKG
 pkg_urls = [
-    "https://formulae.brew.sh/api/cask/displaylink.json"
+    "https://formulae.brew.sh/api/cask/parsec.json",
+    "https://formulae.brew.sh/api/cask/thonny.json",
+    "https://formulae.brew.sh/api/cask/quarto.json",
+    "https://formulae.brew.sh/api/cask/squirrel.json",
+    "https://formulae.brew.sh/api/cask/displaylink.json",
     "https://formulae.brew.sh/api/cask/metasploit.json",
     "https://formulae.brew.sh/api/cask/background-music.json",
     "https://formulae.brew.sh/api/cask/nextcloud.json",
