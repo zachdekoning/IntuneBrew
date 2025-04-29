@@ -8,5 +8,5 @@
   "fileName": "Amazon%20Q.dmg",
   "sha": "d50680a4fcdff6c40c4afa37813f227c1d9cdece1f485c0cc2b82281ca6d730e",
   "changelog": "https://docs.aws.amazon.com/amazonq/latest/desktop-app-release-notes/release-notes.html",
-  "previous_version": "1.8.1"
+  "previous_version": "1.9.0"
 }

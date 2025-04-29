@@ -8,5 +8,5 @@
   "fileName": "Docker.dmg",
   "sha": "a209b418fcd2f5d6759fcb2b03693486f0ffb450328aa1f05e7d7123bf11fb64",
   "changelog": "https://docs.docker.com/desktop/release-notes/",
-  "previous_version": "4.40.0"
+  "previous_version": "4.41.0"
 }

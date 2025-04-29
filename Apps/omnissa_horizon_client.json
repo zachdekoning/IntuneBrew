@@ -6,5 +6,6 @@
   "bundleId": "com.omnissa.horizonapp",
   "homepage": "https://www.omnissa.com/",
   "fileName": "Omnissa-Horizon-Client-2503-8.15.0-14236092062.dmg",
-  "sha": "a3d5169fb8383aff63c0f19628ea889b3be965734556870b3cf9845fb0d3d5c5"
+  "sha": "a3d5169fb8383aff63c0f19628ea889b3be965734556870b3cf9845fb0d3d5c5",
+  "previous_version": "2503-8.15.0-14236092062"
 }
