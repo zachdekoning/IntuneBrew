@@ -1,0 +1,10 @@
+{
+  "name": "Squirrel",
+  "description": "Rime input method engine",
+  "version": "1.0.3",
+  "url": "https://github.com/rime/squirrel/releases/download/1.0.3/Squirrel-1.0.3.pkg",
+  "bundleId": "com.googlecode.rimeime.Squirrel.pkg",
+  "homepage": "https://rime.im/",
+  "fileName": "Squirrel-1.0.3.pkg",
+  "type": "pkg"
+}

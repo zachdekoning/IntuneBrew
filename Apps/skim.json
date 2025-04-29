@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://skim-app.sourceforge.io/",
   "fileName": "Skim-1.7.9.dmg",
-  "sha": "d087dd2de1fa44fc5fe0e6569cd96d37bb6fbd959b58341a30299acdde14522e"
+  "sha": "d087dd2de1fa44fc5fe0e6569cd96d37bb6fbd959b58341a30299acdde14522e",
+  "previous_version": "1.7.9"
 }

@@ -6,5 +6,6 @@
   "bundleId": "com.trae.app",
   "homepage": "https://www.trae.ai/",
   "fileName": "Trae-darwin-arm64.dmg",
-  "sha": "d6b6a36f423de9d1b39b73f718254ca773585db1cd872afce30509458b153036"
+  "sha": "d6b6a36f423de9d1b39b73f718254ca773585db1cd872afce30509458b153036",
+  "previous_version": "1.0.12386"
 }

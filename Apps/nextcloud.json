@@ -6,5 +6,6 @@
   "bundleId": "com.nextcloud.desktopclient",
   "homepage": "https://nextcloud.com/",
   "fileName": "Nextcloud-3.16.4.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "3.16.4"
 }

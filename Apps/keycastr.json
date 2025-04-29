@@ -7,5 +7,6 @@
   "homepage": "https://github.com/keycastr/keycastr",
   "fileName": "keycastr_0.10.3.pkg",
   "type": "app",
-  "sha": "84f9ff35da44896ab658e5fb0ef3ecb0ab49784d6696731d10f6905643ae96fa"
+  "sha": "84f9ff35da44896ab658e5fb0ef3ecb0ab49784d6696731d10f6905643ae96fa",
+  "previous_version": "0.10.3"
 }

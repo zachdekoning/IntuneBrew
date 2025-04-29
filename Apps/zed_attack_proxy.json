@@ -1,0 +1,10 @@
+{
+  "name": "Zed Attack Proxy",
+  "description": "Free and open source web app scanner",
+  "version": "2.16.1",
+  "url": "https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2.16.1_aarch64.dmg",
+  "bundleId": null,
+  "homepage": "https://www.zaproxy.org/",
+  "fileName": "ZAP_2.16.1_aarch64.dmg",
+  "sha": "aa3d1293856fdc380039a866b1e71c5ea24e6f6e3d0119607e365346b07d94d2"
+}

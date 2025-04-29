@@ -1,0 +1,11 @@
+{
+  "name": "LÖVE",
+  "description": "2D game framework for Lua",
+  "version": "11.5",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/löve_11.5.pkg",
+  "bundleId": null,
+  "homepage": "https://love2d.org/",
+  "fileName": "löve_11.5.pkg",
+  "type": "app",
+  "sha": "04cabc9ef2e1723aa49c83a382058feadaba971f56074c19b5f60e802390d78b"
+}

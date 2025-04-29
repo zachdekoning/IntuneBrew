@@ -6,5 +6,6 @@
   "bundleId": "pl.maketheweb.cleanshotx",
   "homepage": "https://getcleanshot.com/",
   "fileName": "CleanShot-X-4.7.6.dmg",
-  "sha": "677178b8060c5e3d579d5a534792c2b9649c835b1d07aa307f18a28a73307b55"
+  "sha": "677178b8060c5e3d579d5a534792c2b9649c835b1d07aa307f18a28a73307b55",
+  "previous_version": "4.7.6"
 }

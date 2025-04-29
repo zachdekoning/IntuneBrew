@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://objective-see.org/products/lulu.html",
   "fileName": "LuLu_3.1.5.dmg",
-  "sha": "785ace66fe8a4999662edc8f391ac3d8ba30fdeee6ec753559eb93ff0f14b3b2"
+  "sha": "785ace66fe8a4999662edc8f391ac3d8ba30fdeee6ec753559eb93ff0f14b3b2",
+  "previous_version": "3.1.5"
 }

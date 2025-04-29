@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/tisfeng/Easydict/",
   "fileName": "Easydict.dmg",
-  "sha": "42b8d168fbbcbd45c330978f377e26d1a23822ce134627c9edb082736125a3c3"
+  "sha": "42b8d168fbbcbd45c330978f377e26d1a23822ce134627c9edb082736125a3c3",
+  "previous_version": "2.14.1"
 }

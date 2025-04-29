@@ -6,5 +6,6 @@
   "bundleId": "86Z3GCJ4MF.com.noodlesoft.HazelHelper",
   "homepage": "https://www.noodlesoft.com/",
   "fileName": "Hazel-6.0.4.dmg",
-  "sha": "17a1379b91ef9e180c8edc907eb8141c2210cb18e0d208016629cec536a948d6"
+  "sha": "17a1379b91ef9e180c8edc907eb8141c2210cb18e0d208016629cec536a948d6",
+  "previous_version": "6.0.4"
 }

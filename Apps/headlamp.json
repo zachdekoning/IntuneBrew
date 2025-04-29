@@ -6,5 +6,6 @@
   "bundleId": "com.kinvolk.headlamp",
   "homepage": "https://headlamp.dev/",
   "fileName": "Headlamp-0.30.0-mac-arm64.dmg",
-  "sha": "28e75c8525c17c7c901d0682f857a1a68277c11f4f848e0483d511a67357ade7"
+  "sha": "28e75c8525c17c7c901d0682f857a1a68277c11f4f848e0483d511a67357ade7",
+  "previous_version": "0.30.0"
 }
