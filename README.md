@@ -18,9 +18,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                              <p>
+                                                                                                                                                                                                                                                <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-256-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-257-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -79,18 +79,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-29 00:27 UTC*
+*Last checked: 2025-04-29 08:12 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Grammarly Desktop | 1.115.0.0 | 1.115.1.0 |
-| DuckDuckGo | 1.134.0 | 1.136.0 |
-| Raycast | 1.96.1 | 1.96.3 |
-| VSCodium | 1.99.32704 | 1.99.32846 |
-| Windsurf | 1.7.1 | 1.7.2 |
-| BoltAI | 1.35.0 | 1.35.1 |
-| Downie | 4.9.14 | 4.9.15 |
-| NordVPN | 8.36.1 | 8.37.0 |
+| Docker Desktop | 4.40.0 | 4.41.0 |
+| Canva | 1.106.0 | 1.107.0 |
+| Notion | 4.9.1 | 4.10.0 |
+| Amazon Q | 1.8.1 | 1.9.0 |
+| Adobe Acrobat Pro DC | 25.001.20467 | 25.001.20476 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -140,7 +137,7 @@ Follow the interactive prompts to:
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.72 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1.1 |
-| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20467 |
+| <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20476 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 25.001.20467 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.6.0.611 |
 | <img src='Logos/airfoil.png' width='32' height='32'> Airfoil | 5.12.4 |
@@ -151,7 +148,7 @@ Follow the interactive prompts to:
 | <img src='Logos/alttab.png' width='32' height='32'> AltTab | 7.23.0 |
 | <img src='Logos/amadine.png' width='32' height='32'> Amadine | 1.6.7 |
 | <img src='Logos/amazon_chime.png' width='32' height='32'> Amazon Chime | 5.23.22318 |
-| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.8.1 |
+| <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.9.0 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.1.15 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.4 |
@@ -192,7 +189,7 @@ Follow the interactive prompts to:
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.3.0 |
 | <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.59 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.0.3 |
-| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.106.0 |
+| <img src='Logos/canva.png' width='32' height='32'> Canva | 1.107.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
 | <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.105 |
 | <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 136.0.7103.19 |
@@ -220,7 +217,7 @@ Follow the interactive prompts to:
 | <img src='Logos/devtoys.png' width='32' height='32'> DevToys | 2.0.8.0 |
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.343 |
-| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.40.0 |
+| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.0 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.15 |
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.2.15 |
@@ -325,12 +322,13 @@ Follow the interactive prompts to:
 | <img src='Logos/nomachine.png' width='32' height='32'> NoMachine | 8.16.1 |
 | <img src='Logos/nordvpn.png' width='32' height='32'> NordVPN | 8.37.0 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.8.0 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.9.1 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.10.0 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.130.0 |
 | <img src='Logos/nucleo.png' width='32' height='32'> Nucleo | 4.1.6 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.3 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.10 |
 | <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.6 |
+| <img src='Logos/omnissa_horizon_client.png' width='32' height='32'> Omnissa Horizon Client | 2503-8.15.0-14236092062 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.051.0317.0003 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.7.0 |
@@ -341,7 +339,7 @@ Follow the interactive prompts to:
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.14 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.2 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.18.0 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.42.4 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.43.1 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.1 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.3.0 |

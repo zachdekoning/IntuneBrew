@@ -192,6 +192,7 @@
     "obs": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/obs.json",
     "obsidian": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/obsidian.json",
     "ollama": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/ollama.json",
+    "omnissa_horizon_client": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/omnissa_horizon_client.json",
     "onedrive": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/onedrive.json",
     "onyx": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/onyx.json",
     "openvpn_connect_client": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/openvpn_connect_client.json",
