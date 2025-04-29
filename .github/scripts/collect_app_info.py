@@ -9,6 +9,11 @@ from datetime import datetime
 import hashlib
 import tempfile
 
+# List of apps that should preserve their fileName field (not be overwritten)
+preserve_filename_apps = [
+    "tenable_nessus_agent"  # Add more app names here as needed
+]
+
 # zip, tar etc
 app_urls = [
     "https://formulae.brew.sh/api/cask/visual-studio-code.json",
@@ -677,15 +682,22 @@ def main():
                     new_sha = app_info.get("sha")
                     previous_version = existing_data.get("version")
                     
-                    # Preserve all existing data except version, url, sha, fileName, and previous_version
+                    # Preserve all existing data except version, url, sha, and previous_version
                     for key in existing_data:
-                        if key not in ["version", "url", "sha", "fileName", "previous_version"]:
+                        if key not in ["version", "url", "sha", "previous_version"]:
                             app_info[key] = existing_data[key]
                     
                     # Update version, url, sha and previous_version
                     app_info["version"] = new_version
                     app_info["url"] = new_url
-                    app_info["fileName"] = os.path.basename(new_url)  # Update fileName to match the URL
+                    
+                    # Handle fileName field
+                    if display_name.lower().replace(" ", "_") in preserve_filename_apps:
+                        # For apps in the exclusion list, preserve the existing fileName
+                        print(f"⚠️ Preserving custom fileName for {display_name}")
+                    else:
+                        # For all other apps, update fileName to match the URL
+                        app_info["fileName"] = os.path.basename(new_url)
                     if new_sha:
                         app_info["sha"] = new_sha
                     app_info["previous_version"] = previous_version
@@ -725,6 +737,15 @@ def main():
                     # Update version, url and previous_version
                     app_info["version"] = new_version
                     app_info["url"] = new_url
+                    
+                    # Handle fileName field
+                    if display_name.lower().replace(" ", "_") in preserve_filename_apps:
+                        # For apps in the exclusion list, preserve the existing fileName
+                        print(f"⚠️ Preserving custom fileName for {display_name}")
+                    else:
+                        # For all other apps, update fileName to match the URL
+                        app_info["fileName"] = os.path.basename(new_url)
+                    # Ensure fileName is preserved
                     app_info["previous_version"] = previous_version
 
             with open(file_path, "w") as f:
@@ -762,6 +783,14 @@ def main():
                     # Update version, url and previous_version
                     app_info["version"] = new_version
                     app_info["url"] = new_url
+                    
+                    # Handle fileName field
+                    if display_name.lower().replace(" ", "_") in preserve_filename_apps:
+                        # For apps in the exclusion list, preserve the existing fileName
+                        print(f"⚠️ Preserving custom fileName for {display_name}")
+                    else:
+                        # For all other apps, update fileName to match the URL
+                        app_info["fileName"] = os.path.basename(new_url)
                     app_info["previous_version"] = previous_version
 
             with open(file_path, "w") as f:
@@ -799,6 +828,14 @@ def main():
                     # Update version, url and previous_version
                     app_info["version"] = new_version
                     app_info["url"] = new_url
+                    
+                    # Handle fileName field
+                    if display_name.lower().replace(" ", "_") in preserve_filename_apps:
+                        # For apps in the exclusion list, preserve the existing fileName
+                        print(f"⚠️ Preserving custom fileName for {display_name}")
+                    else:
+                        # For all other apps, update fileName to match the URL
+                        app_info["fileName"] = os.path.basename(new_url)
                     app_info["previous_version"] = previous_version
 
             with open(file_path, "w") as f:

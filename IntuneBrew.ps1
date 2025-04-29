@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 0.4
+.VERSION 0.4.1
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 .AUTHOR ugurk
 .COMPANYNAME
@@ -12,6 +12,7 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
+Version 0.4.1: IntuneBrew now correctly handles download urls with a redirect
 Version 0.4: Added support to copy assignments from existing app version to new version. If you copy over the assignments, the assignments for the older app version will be removed automatically.
 Version 0.3.8: Added support for -localfile parameter to upload local PKG or DMG files to Intune
 Version 0.3.7: Fix Parse Errors
@@ -64,7 +65,7 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.4" -ForegroundColor Yellow -NoNewline
+Write-Host " | Version" -NoNewline; Write-Host " 0.4.1" -ForegroundColor Yellow -NoNewline
 Write-Host " | Last updated: " -NoNewline; Write-Host "2025-04-13" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
@@ -1017,7 +1018,7 @@ function Download-AppFile($url, $fileName, $expectedHash) {
     
     # Get file size before downloading
     try {
-        $response = Invoke-WebRequest -Uri $url -Method Head
+        $response = Invoke-WebRequest -Uri $url -Method Head -MaximumRedirection 10
         $fileSize = [math]::Round(($response.Headers.'Content-Length' / 1MB), 2)
         Write-Host "Downloading the app file ($fileSize MB) to $outputPath..."
     }
@@ -1026,7 +1027,38 @@ function Download-AppFile($url, $fileName, $expectedHash) {
     }
     
     $ProgressPreference = 'SilentlyContinue'
-    Invoke-WebRequest -Uri $url -OutFile $outputPath
+    
+    # Handle redirects explicitly for URLs that might use special redirects
+    try {
+        # First try with standard Invoke-WebRequest
+        Invoke-WebRequest -Uri $url -OutFile $outputPath -MaximumRedirection 10
+    }
+    catch {
+        Write-Host "Standard download failed, trying alternative method for redirect URLs..." -ForegroundColor Yellow
+        
+        # If that fails, try to follow the redirect manually
+        try {
+            $request = [System.Net.WebRequest]::Create($url)
+            $request.AllowAutoRedirect = $false
+            $response = $request.GetResponse()
+            
+            if ($response.StatusCode -eq 'Found' -or $response.StatusCode -eq 'Redirect' -or
+                $response.StatusCode -eq 'MovedPermanently' -or $response.StatusCode -eq 'TemporaryRedirect') {
+                $redirectUrl = $response.GetResponseHeader("Location")
+                Write-Host "Following redirect to: $redirectUrl" -ForegroundColor Gray
+                Invoke-WebRequest -Uri $redirectUrl -OutFile $outputPath
+            }
+            else {
+                throw "Failed to handle redirect"
+            }
+        }
+        catch {
+            # If that also fails, try using System.Net.WebClient which handles some redirects differently
+            Write-Host "Trying final download method..." -ForegroundColor Yellow
+            $webClient = New-Object System.Net.WebClient
+            $webClient.DownloadFile($url, $outputPath)
+        }
+    }
 
     Write-Host "✅ Download complete" -ForegroundColor Green
     
