@@ -1,0 +1,10 @@
+{
+  "name": "Proxyman",
+  "description": "HTTP debugging proxy",
+  "version": "5.19.0",
+  "url": "https://download.proxyman.com/51900/Proxyman_5.19.0.dmg",
+  "bundleId": "com.proxyman.NSProxy",
+  "homepage": "https://proxyman.com/",
+  "fileName": "Proxyman_5.19.0.dmg",
+  "sha": "9f9f14236896ba1bf5855b8a6b8bb45c0742524031f49c34abceb52e4ad90e37"
+}

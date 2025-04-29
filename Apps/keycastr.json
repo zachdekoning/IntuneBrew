@@ -1,0 +1,11 @@
+{
+  "name": "KeyCastr",
+  "description": "Open-source keystroke visualiser",
+  "version": "0.10.3",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/keycastr_0.10.3.pkg",
+  "bundleId": null,
+  "homepage": "https://github.com/keycastr/keycastr",
+  "fileName": "keycastr_0.10.3.pkg",
+  "type": "app",
+  "sha": "84f9ff35da44896ab658e5fb0ef3ecb0ab49784d6696731d10f6905643ae96fa"
+}
