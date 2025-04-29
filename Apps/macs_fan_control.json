@@ -7,5 +7,6 @@
   "homepage": "https://crystalidea.com/macs-fan-control",
   "fileName": "macs_fan_control_1.5.17.pkg",
   "type": "app",
-  "sha": "0469b7ce384754785a064aa96272882d14bd36045b5370a6ff6aa8ffe3805101"
+  "sha": "0469b7ce384754785a064aa96272882d14bd36045b5370a6ff6aa8ffe3805101",
+  "previous_version": "1.5.17"
 }

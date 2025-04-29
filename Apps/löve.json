@@ -7,5 +7,6 @@
   "homepage": "https://love2d.org/",
   "fileName": "löve_11.5.pkg",
   "type": "app",
-  "sha": "04cabc9ef2e1723aa49c83a382058feadaba971f56074c19b5f60e802390d78b"
+  "sha": "04cabc9ef2e1723aa49c83a382058feadaba971f56074c19b5f60e802390d78b",
+  "previous_version": "11.5"
 }

@@ -7,5 +7,6 @@
   "homepage": "https://github.com/intitni/CopilotForXcode",
   "fileName": "copilot_for_xcode_0.35.7.pkg",
   "type": "app",
-  "sha": "b995746fb9e426c7f908e9f3a6fbf3ccf70465a030be01306e73b68d61758657"
+  "sha": "b995746fb9e426c7f908e9f3a6fbf3ccf70465a030be01306e73b68d61758657",
+  "previous_version": "0.35.7"
 }

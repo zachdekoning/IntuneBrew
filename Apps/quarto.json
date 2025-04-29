@@ -6,5 +6,6 @@
   "bundleId": "org.rstudio.quarto",
   "homepage": "https://www.quarto.org/",
   "fileName": "quarto-1.7.29-macos.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "1.7.29"
 }

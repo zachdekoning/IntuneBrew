@@ -1,0 +1,10 @@
+{
+  "name": "Mist",
+  "description": "Utility that automatically downloads firmwares and installers",
+  "version": "0.20.1",
+  "url": "https://github.com/ninxsoft/Mist/releases/download/v0.20.1/Mist.0.20.1.pkg",
+  "bundleId": "com.ninxsoft.pkg.mist",
+  "homepage": "https://github.com/ninxsoft/Mist",
+  "fileName": "Mist.0.20.1.pkg",
+  "type": "pkg"
+}

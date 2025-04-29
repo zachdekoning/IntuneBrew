@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://mouseless.click/",
   "fileName": "mouseless-installer_v0.3.1.dmg",
-  "sha": "79845fb27a9748473e60e9f9bde8fd3b0a3d0dec7eea22c38b0cc49905dba779"
+  "sha": "79845fb27a9748473e60e9f9bde8fd3b0a3d0dec7eea22c38b0cc49905dba779",
+  "previous_version": "0.3.1"
 }

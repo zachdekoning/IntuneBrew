@@ -7,5 +7,6 @@
   "homepage": "https://espanso.org/",
   "fileName": "espanso_2.2.1.pkg",
   "type": "app",
-  "sha": "074d0d7c07d4ac47e2ee33df6d76efe91044341cbed13525648273a25c72d3c9"
+  "sha": "074d0d7c07d4ac47e2ee33df6d76efe91044341cbed13525648273a25c72d3c9",
+  "previous_version": "2.2.1"
 }

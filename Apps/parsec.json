@@ -6,5 +6,6 @@
   "bundleId": "tv.parsec.www",
   "homepage": "https://parsec.app/",
   "fileName": "parsec-macos.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "150-98"
 }

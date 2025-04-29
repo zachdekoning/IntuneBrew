@@ -6,5 +6,6 @@
   "bundleId": "app.chatwise",
   "homepage": "https://chatwise.app/",
   "fileName": "ChatWise_0.8.46_aarch64.dmg",
-  "sha": "2c57fb6a0ae166f01619ad3abc3d5707fd8213dfe4f96c621a644bab6272f0ab"
+  "sha": "2c57fb6a0ae166f01619ad3abc3d5707fd8213dfe4f96c621a644bab6272f0ab",
+  "previous_version": "0.8.46"
 }

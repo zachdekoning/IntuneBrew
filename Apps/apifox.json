@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.apifox.com/",
   "fileName": "Apifox-macOS-arm64-2.7.7.dmg",
-  "sha": "7370bb195587dd60ed07ea1e354fa1e87c30c1a74bc52a18ff94d9200ef7ef9b"
+  "sha": "7370bb195587dd60ed07ea1e354fa1e87c30c1a74bc52a18ff94d9200ef7ef9b",
+  "previous_version": "2.7.7"
 }

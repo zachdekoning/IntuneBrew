@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://yaak.app/",
   "fileName": "Yaak_2025.1.2_aarch64.dmg",
-  "sha": "e977fe7c3d686527ba1c1a910d0a701863bd60164234512bce8da4141f8b2e26"
+  "sha": "e977fe7c3d686527ba1c1a910d0a701863bd60164234512bce8da4141f8b2e26",
+  "previous_version": "2025.1.2"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.messenger.com/desktop",
   "fileName": "?platform=mac",
-  "sha": "d66195c14036186f61a2207043c4c6516d1e8d1697a81961705b44d5369bf147"
+  "sha": "d66195c14036186f61a2207043c4c6516d1e8d1697a81961705b44d5369bf147",
+  "previous_version": "233.1.0.8.208"
 }

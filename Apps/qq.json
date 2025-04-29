@@ -6,5 +6,6 @@
   "bundleId": "com.tencent.qq",
   "homepage": "https://im.qq.com/macqq/index.shtml",
   "fileName": "QQ_6.9.70_250429_01.dmg",
-  "sha": "986170b7245f63d88dc2cac62ca1cac208ef17b60620a4bb3bf41603c3741a5e"
+  "sha": "986170b7245f63d88dc2cac62ca1cac208ef17b60620a4bb3bf41603c3741a5e",
+  "previous_version": "6.9.70"
 }

@@ -18,9 +18,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                      <p>
+                                                                                                                                                                                                                                                        <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-342-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-351-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -79,13 +79,9 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-29 14:19 UTC*
+*Last checked: 2025-04-29 14:40 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Mozilla Firefox | 137.0.2 | 138.0 |
-| BoltAI | 1.35.1 | 1.35.2 |
-| Camtasia | 25.0.3 | 25.1.0 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -135,6 +131,7 @@ Follow the interactive prompts to:
 |-------------|----------------|
 | <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.72 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1.1 |
+| ❌ AdGuard | 2.16.4.1870 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20476 |
 | <img src='Logos/adobe_acrobat_reader.png' width='32' height='32'> Adobe Acrobat Reader | 25.001.20467 |
 | <img src='Logos/adobe_creative_cloud.png' width='32' height='32'> Adobe Creative Cloud | 6.6.0.611 |
@@ -281,6 +278,7 @@ Follow the interactive prompts to:
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 135.0.7049.115 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 107.0.3 |
 | ❌ Goose | 1.0.20 |
+| ❌ GPT fdisk | 1.0.10 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.115.1.0 |
 | ❌ GrandPerspective | 3.5.2 |
 | <img src='Logos/hammerspoon.png' width='32' height='32'> Hammerspoon | 1.0.0 |
@@ -289,6 +287,7 @@ Follow the interactive prompts to:
 | ❌ Headlamp | 0.30.0 |
 | <img src='Logos/hidden_bar.png' width='32' height='32'> Hidden Bar | 1.9 |
 | <img src='Logos/home_assistant.png' width='32' height='32'> Home Assistant | 2025.3 |
+| ❌ Homerow | 1.4.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0 |
 | <img src='Logos/hyper.png' width='32' height='32'> Hyper | 3.4.1 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
@@ -340,6 +339,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mactex.png' width='32' height='32'> MacTeX | 2025.0308 |
 | ❌ MacWhisper | 12.6 |
 | ❌ Marta File Manager | 0.8.2 |
+| ❌ Mattermost | 5.11.2 |
 | ❌ MeetingBar | 4.10.0 |
 | ❌ Meld for macOS | 3.22.3+105 |
 | <img src='Logos/menubar_stats.png' width='32' height='32'> MenuBar Stats | 3.9 |
@@ -352,6 +352,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25079.2107.3576.1611 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.3 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.95 |
+| ❌ Mist | 0.20.1 |
 | <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
 | ❌ Mockoon | 9.2.0 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.46.1 |
@@ -384,12 +385,15 @@ Follow the interactive prompts to:
 | <img src='Logos/opera.png' width='32' height='32'> Opera | 118.0.5461.60 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.8 |
 | <img src='Logos/orbstack.png' width='32' height='32'> OrbStack | 1.10.3 |
+| ❌ Orca Slicer | 2.3.0 |
+| ❌ Paintbrush | 2.6.0 |
 | <img src='Logos/parallels_desktop.png' width='32' height='32'> Parallels Desktop | 20.3.0-55895 |
 | ❌ Parsec | 150-98 |
 | ❌ Pastebot | 2.4.6 |
 | <img src='Logos/pdf_expert.png' width='32' height='32'> PDF Expert | 3.10.14 |
 | ❌ Pearcleaner | 4.4.2 |
 | <img src='Logos/pgadmin4.png' width='32' height='32'> pgAdmin4 | 9.2 |
+| ❌ Pika | 1.0.2 |
 | ❌ Plex | 1.108.1.307 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.18.0 |
 | <img src='Logos/postman.png' width='32' height='32'> Postman | 11.43.2 |
@@ -412,6 +416,7 @@ Follow the interactive prompts to:
 | ❌ Redis Insight | 2.68.0 |
 | <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.13.3 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
+| ❌ Requestly | 25.4.13 |
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.1 |
 | ❌ RustDesk | 1.3.9 |

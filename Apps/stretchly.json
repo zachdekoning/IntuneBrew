@@ -6,5 +6,6 @@
   "bundleId": "net.hovancik.stretchly",
   "homepage": "https://hovancik.net/stretchly/",
   "fileName": "stretchly-1.17.2-arm64.dmg",
-  "sha": "9e757eb1601c11a1b0540ad462ed8deef5a9959cc98975c4d3cf9b073a709207"
+  "sha": "9e757eb1601c11a1b0540ad462ed8deef5a9959cc98975c4d3cf9b073a709207",
+  "previous_version": "1.17.2"
 }

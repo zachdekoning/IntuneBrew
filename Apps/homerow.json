@@ -1,0 +1,11 @@
+{
+  "name": "Homerow",
+  "description": "Keyboard shortcuts for every button on your screen",
+  "version": "1.4.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/homerow_1.4.0.pkg",
+  "bundleId": null,
+  "homepage": "https://www.homerow.app/",
+  "fileName": "homerow_1.4.0.pkg",
+  "type": "app",
+  "sha": "2d841d397cd92aafe27fb597a4daf3d67eb61f4005f8ef5e1745ae47ee4c0b29"
+}

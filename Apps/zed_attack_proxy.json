@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.zaproxy.org/",
   "fileName": "ZAP_2.16.1_aarch64.dmg",
-  "sha": "aa3d1293856fdc380039a866b1e71c5ea24e6f6e3d0119607e365346b07d94d2"
+  "sha": "aa3d1293856fdc380039a866b1e71c5ea24e6f6e3d0119607e365346b07d94d2",
+  "previous_version": "2.16.1"
 }

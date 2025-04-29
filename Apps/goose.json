@@ -7,5 +7,6 @@
   "homepage": "https://block.github.io/goose/",
   "fileName": "goose_1.0.20.pkg",
   "type": "app",
-  "sha": "deaf3e2a7e2511ff2198685cdaa5b92dac39a87e6eadf27b6b7a1bfab6cf4f09"
+  "sha": "deaf3e2a7e2511ff2198685cdaa5b92dac39a87e6eadf27b6b7a1bfab6cf4f09",
+  "previous_version": "1.0.20"
 }

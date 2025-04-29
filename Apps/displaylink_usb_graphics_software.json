@@ -6,5 +6,6 @@
   "bundleId": "com.displaylink.*",
   "homepage": "https://www.synaptics.com/products/displaylink-graphics",
   "fileName": "DisplayLink%20Manager%20Graphics%20Connectivity1.12.1-EXE.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "1.12.1"
 }

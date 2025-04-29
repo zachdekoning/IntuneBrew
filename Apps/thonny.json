@@ -6,5 +6,6 @@
   "bundleId": "org.thonny.Thonny.component",
   "homepage": "https://thonny.org/",
   "fileName": "thonny-4.1.7.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "4.1.7"
 }

@@ -6,5 +6,6 @@
   "bundleId": "io.freetubeapp.freetube",
   "homepage": "https://freetubeapp.io/",
   "fileName": "freetube-0.23.4-mac-arm64.dmg",
-  "sha": "665e44c78cbd89db35c3f97013c18dabbc41bca36a35233c71e0b2c2a9a8c457"
+  "sha": "665e44c78cbd89db35c3f97013c18dabbc41bca36a35233c71e0b2c2a9a8c457",
+  "previous_version": "0.23.4"
 }

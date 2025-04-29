@@ -7,5 +7,6 @@
   "homepage": "https://github.com/TermiT/Flycut",
   "fileName": "flycut_1.9.6.pkg",
   "type": "app",
-  "sha": "edd808cfc8fabfbbd212906c3bf6fe6681eded979455770814c79affd474883d"
+  "sha": "edd808cfc8fabfbbd212906c3bf6fe6681eded979455770814c79affd474883d",
+  "previous_version": "1.9.6"
 }

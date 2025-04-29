@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://nmap.org/zenmap/",
   "fileName": "nmap-7.95.dmg",
-  "sha": "fc069b88f6b64cbb56b02a644075d78df603d9417d3947ff32acc0566439de3c"
+  "sha": "fc069b88f6b64cbb56b02a644075d78df603d9417d3947ff32acc0566439de3c",
+  "previous_version": "7.95"
 }
