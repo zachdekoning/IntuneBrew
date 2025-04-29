@@ -16,6 +16,16 @@ preserve_filename_apps = [
 
 # zip, tar etc
 app_urls = [
+    "https://formulae.brew.sh/api/cask/reactotron.json",
+    "https://formulae.brew.sh/api/cask/macdown.json",
+    "https://formulae.brew.sh/api/cask/middleclick.json"
+    "https://formulae.brew.sh/api/cask/openmtp.json",
+    "https://formulae.brew.sh/api/cask/pearcleaner.json",
+    "https://formulae.brew.sh/api/cask/notunes.json",
+    "https://formulae.brew.sh/api/cask/keycastr.json",
+    "https://formulae.brew.sh/api/cask/itsycal.json",
+    "https://formulae.brew.sh/api/cask/vimr.json",
+    "https://formulae.brew.sh/api/cask/audio-hijack.json",
     "https://formulae.brew.sh/api/cask/visual-studio-code.json",
     "https://formulae.brew.sh/api/cask/microsoft-azure-storage-explorer.json",
     "https://formulae.brew.sh/api/cask/figma.json",
@@ -42,7 +52,6 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/godot.json",
     "https://formulae.brew.sh/api/cask/hp-easy-admin.json",
     "https://formulae.brew.sh/api/formula/vim.json",
-    "https://formulae.brew.sh/api/cask/notion-calendar.json",
     "https://formulae.brew.sh/api/cask/notion-calendar.json",
     "https://formulae.brew.sh/api/cask/ollama.json",
     "https://formulae.brew.sh/api/cask/pdf-expert.json",
@@ -102,6 +111,37 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/marta.json",
+    "https://formulae.brew.sh/api/cask/mockoon.json",
+    "https://formulae.brew.sh/api/cask/proxyman.json",
+    "https://formulae.brew.sh/api/cask/typora.json",
+    "https://formulae.brew.sh/api/cask/meld.json",
+    "https://formulae.brew.sh/api/cask/freelens.json",
+    "https://formulae.brew.sh/api/cask/teamviewer-host.json",
+    "https://formulae.brew.sh/api/cask/teamviewer-quicksupport.json",
+    "https://formulae.brew.sh/api/cask/skim.json",
+    "https://formulae.brew.sh/api/cask/lens.json",
+    "https://formulae.brew.sh/api/cask/coteditor.json",
+    "https://formulae.brew.sh/api/cask/trae.json",
+    "https://formulae.brew.sh/api/cask/tigervnc-viewer.json",
+    "https://formulae.brew.sh/api/cask/tunnelblick.json",
+    "https://formulae.brew.sh/api/cask/wechat.json",
+    "https://formulae.brew.sh/api/cask/redis-insight.json",
+    "https://formulae.brew.sh/api/cask/mos.json",
+    "https://formulae.brew.sh/api/cask/localsend.json"
+    "https://formulae.brew.sh/api/cask/qbittorrent.json",
+    "https://formulae.brew.sh/api/cask/monitorcontrol.json",
+    "https://formulae.brew.sh/api/cask/lulu.json",
+    "https://formulae.brew.sh/api/cask/headlamp.json",
+    "https://formulae.brew.sh/api/cask/librewolf.json",
+    "https://formulae.brew.sh/api/cask/dbeaver-community.json",
+    "https://formulae.brew.sh/api/cask/rustdesk.json",
+    "https://formulae.brew.sh/api/cask/easydict.json",
+    "https://formulae.brew.sh/api/cask/unnaturalscrollwheels.json",
+    "https://formulae.brew.sh/api/cask/downie.json",
+    "https://formulae.brew.sh/api/cask/hazel.json",
+    "https://formulae.brew.sh/api/cask/cleanshot.json",
+    "https://formulae.brew.sh/api/cask/pastebot.json",
     "https://formulae.brew.sh/api/cask/omnissa-horizon-client.json",
     "https://formulae.brew.sh/api/cask/adobe-creative-cloud.json",
     "https://formulae.brew.sh/api/cask/google-chrome.json",
@@ -186,7 +226,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/zulu.json",
     "https://formulae.brew.sh/api/cask/stats.json",
     "https://formulae.brew.sh/api/cask/rectangle.json",
-    "https://formulae.brew.sh/api/cask/microsoft-auto-update.json",
     "https://formulae.brew.sh/api/cask/temurin.json",
     "https://formulae.brew.sh/api/cask/bruno.json",
     "https://formulae.brew.sh/api/cask/zed.json",
@@ -295,8 +334,13 @@ pkg_in_pkg_urls = [
 
 # PKG
 pkg_urls = [
+    "https://formulae.brew.sh/api/cask/displaylink.json"
+    "https://formulae.brew.sh/api/cask/metasploit.json",
+    "https://formulae.brew.sh/api/cask/background-music.json",
+    "https://formulae.brew.sh/api/cask/nextcloud.json",
     "https://formulae.brew.sh/api/cask/cloudflare-warp.json",
-    "https://formulae.brew.sh/api/cask/cisco-jabber.json"
+    "https://formulae.brew.sh/api/cask/cisco-jabber.json",
+    "https://formulae.brew.sh/api/cask/microsoft-auto-update.json",
 ]
 
 # Custom scraper scripts to run
