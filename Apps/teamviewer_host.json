@@ -1,0 +1,10 @@
+{
+  "name": "TeamViewer Host",
+  "description": "Remote connectivity solution",
+  "version": "15",
+  "url": "https://download.teamviewer.com/download/version_15x/TeamViewerHost.dmg",
+  "bundleId": null,
+  "homepage": "https://www.teamviewer.com/",
+  "fileName": "TeamViewerHost.dmg",
+  "sha": "fdb19920cd01c13999f1559b71275873e1f394ca9ce3bc2fb81cace631246c76"
+}

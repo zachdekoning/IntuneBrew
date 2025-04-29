@@ -1,0 +1,10 @@
+{
+  "name": "Mockoon",
+  "description": "Create mock APIs in seconds",
+  "version": "9.2.0",
+  "url": "https://github.com/mockoon/mockoon/releases/download/v9.2.0/mockoon.setup.9.2.0.arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://mockoon.com/",
+  "fileName": "mockoon.setup.9.2.0.arm64.dmg",
+  "sha": "39d66cb88bc9f697b9bfd7127a1593e90b727f5b48c45386bcd56d4dc94f42d1"
+}

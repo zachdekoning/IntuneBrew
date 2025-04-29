@@ -1,0 +1,10 @@
+{
+  "name": "Typora",
+  "description": "Configurable document editor that supports Markdown",
+  "version": "1.10.10",
+  "url": "https://download.typora.io/mac/Typora-1.10.10.dmg",
+  "bundleId": null,
+  "homepage": "https://typora.io/",
+  "fileName": "Typora-1.10.10.dmg",
+  "sha": "e4995e36e215cb3a0e487371a3ff9a2417362afc78cc4bc67e9115726187a7ea"
+}

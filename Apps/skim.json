@@ -1,0 +1,10 @@
+{
+  "name": "Skim",
+  "description": "PDF reader and note-taking application",
+  "version": "1.7.9",
+  "url": "https://downloads.sourceforge.net/skim-app/Skim/Skim-1.7.9/Skim-1.7.9.dmg",
+  "bundleId": null,
+  "homepage": "https://skim-app.sourceforge.io/",
+  "fileName": "Skim-1.7.9.dmg",
+  "sha": "d087dd2de1fa44fc5fe0e6569cd96d37bb6fbd959b58341a30299acdde14522e"
+}
