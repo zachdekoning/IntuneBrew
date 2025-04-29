@@ -126,6 +126,7 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/pika.json",
     "https://formulae.brew.sh/api/cask/requestly.json",
     "https://formulae.brew.sh/api/cask/adguard.json",
     "https://formulae.brew.sh/api/cask/orcaslicer.json",
