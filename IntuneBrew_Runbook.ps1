@@ -36,6 +36,8 @@
     - PowerShell 7.0 or later
     - Microsoft.Graph.Authentication module
 #>
+# Disable verbose output to avoid cluttering the Azure Automation Runbook logs
+$VerbosePreference = "SilentlyContinue"
 
 # Function to write logs that will be visible in Azure Automation
 function Write-Log {
@@ -43,12 +45,20 @@ function Write-Log {
         [Parameter(Mandatory = $true)]
         [string]$Message,
         [Parameter(Mandatory = $false)]
-        [string]$Type = "Info"  # Info, Warning, Error
+        [string]$Type = "Info"  # Info, Warning, Error, Verbose
     )
     
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     $logMessage = "[$timestamp] [$Type] $Message"
-    Write-Output $logMessage
+    if ($Type -eq "Verbose") {
+        # Enable verbose output only when we really need it
+        $VerbosePreference = "Continue"
+        Write-Verbose $logMessage
+        $VerbosePreference = "SilentlyContinue"
+    }
+    else {
+        Write-Output $logMessage
+    }
 }
 
 Write-Log "Starting IntuneBrew Automation Runbook - Version 0.1"
@@ -62,6 +72,12 @@ $requiredPermissions = @(
 
 # Get the authentication method from Automation Account variable
 $AuthenticationMethod = Get-AutomationVariable -Name 'AuthenticationMethod'
+$CopyAssignments = Get-AutomationVariable -Name 'CopyAssignments' -ErrorAction SilentlyContinue
+
+if ($CopyAssignments -eq $true) {
+    Write-Log "Copy Assignments is set to true"
+    $requiredPermissions += "Group.Read.All"
+}
 
 # Check if the AuthenticationMethod variable is empty
 if ([string]::IsNullOrWhiteSpace($AuthenticationMethod)) {
@@ -307,6 +323,201 @@ function UploadFileToAzureStorage($sasUri, $filepath) {
     }
 }
 
+# Function to get assignments for a specific Intune app
+function Get-IntuneAppAssignments {
+    param (
+        [string]$AppId
+    )
+
+    if ([string]::IsNullOrEmpty($AppId)) {
+        Write-Log "Error: App ID is required to fetch assignments." -Type "Verbose"
+        return $null
+    }
+
+    Write-Log "`n🔍 Fetching assignments for existing app (ID: $AppId)..." -Type "Verbose"
+    $assignmentsUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$AppId/assignments"
+    
+    try {
+        # Use Invoke-MgGraphRequest for consistency and authentication handling
+        $response = Invoke-MgGraphRequest -Method GET -Uri $assignmentsUri
+        
+        # The response directly contains the assignments array in the 'value' property
+        if ($response.value -ne $null -and $response.value.Count -gt 0) {
+            Write-Log "✅ Found $($response.value.Count) assignment(s)." -Type "Verbose"
+            return $response.value
+        }
+        else {
+            Write-Log "ℹ️ No assignments found for the existing app." -Type "Verbose"
+            return @() # Return an empty array if no assignments
+        }
+    }
+    catch {
+        Write-Log "❌ Error fetching assignments for App ID ${AppId}: $($_.Exception.Message)" -Type "Verbose"
+        # Consider returning specific error info or re-throwing if needed
+        return $null # Indicate error
+    }
+}
+
+# Function to apply assignments to a specific Intune app
+function Set-IntuneAppAssignments {
+    param (
+        [string]$NewAppId,
+        [array]$Assignments
+    )
+
+    if ([string]::IsNullOrEmpty($NewAppId)) {
+        Write-Log "Error: New App ID is required to set assignments." -Type "Error"
+        return
+    }
+
+    # Check if $Assignments is null or empty before proceeding
+    if ($Assignments -eq $null -or $Assignments.Count -eq 0) {
+        Write-Log "ℹ️ No assignments to apply." -Type "Info"
+        return
+    }
+
+    Write-Log "Applying assignments to new app (ID: $NewAppId)..." -Type "Info"
+    $assignmentsUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$NewAppId/assignments"
+    $appliedCount = 0
+    $failedCount = 0
+
+    foreach ($assignment in $Assignments) {
+        # Construct the body for the new assignment
+        $targetObject = $null
+        $originalTargetType = $assignment.target.'@odata.type'
+
+        # Determine the target type and construct the target object accordingly
+        if ($assignment.target.groupId) {
+            $targetObject = @{
+                "@odata.type" = "#microsoft.graph.groupAssignmentTarget"
+                groupId       = $assignment.target.groupId
+            }
+        }
+        elseif ($originalTargetType -match 'allLicensedUsersAssignmentTarget') {
+            $targetObject = @{
+                "@odata.type" = "#microsoft.graph.allLicensedUsersAssignmentTarget"
+            }
+        }
+        elseif ($originalTargetType -match 'allDevicesAssignmentTarget') {
+            $targetObject = @{
+                "@odata.type" = "#microsoft.graph.allDevicesAssignmentTarget"
+            }
+        }
+        else {
+            Write-Log "⚠️ Warning: Unsupported assignment target type '$originalTargetType' found. Skipping this assignment." -Type "Warning"
+            continue # Skip to the next assignment
+        }
+
+        # Build the main assignment body
+        $assignmentBody = @{
+            "@odata.type" = "#microsoft.graph.mobileAppAssignment" # Explicitly set the assignment type
+            target        = $targetObject # Use the constructed target object
+        }
+
+        # Add intent (mandatory)
+        $assignmentBody.intent = $assignment.intent
+
+        # Conditionally add optional settings if they exist in the source assignment
+        if ($assignment.PSObject.Properties.Name -contains 'settings' -and $assignment.settings -ne $null) {
+            $assignmentBody.settings = $assignment.settings
+        }
+        # 'source' is usually determined by Intune and not needed for POST
+        # 'sourceId' is read-only and should not be included
+
+        $assignmentJson = $assignmentBody | ConvertTo-Json -Depth 5 -Compress
+
+        try {
+            $targetDescription = if ($assignment.target.groupId) { "group ID: $($assignment.target.groupId)" } elseif ($assignment.target.'@odata.type') { $assignment.target.'@odata.type' } else { "unknown target" }
+            Write-Log "   • Applying assignment for target $targetDescription" -Type "Info"
+            # Use Invoke-MgGraphRequest for consistency
+            Invoke-MgGraphRequest -Method POST -Uri $assignmentsUri -Body $assignmentJson -ErrorAction Stop | Out-Null
+            $appliedCount++
+        }
+        catch {
+            $failedCount++
+            Write-Log "❌ Error applying assignment for target $targetDescription : $_" -Type "Error"
+            # Log the failed assignment body for debugging if needed
+            # Write-Host "Failed assignment body: $assignmentJson" -ForegroundColor DarkGray
+        }
+    }
+    
+    Write-Log "---------------------------------------------------" -Type "Info"
+    if ($appliedCount -gt 0) {
+        Write-Log "✅ Successfully applied $appliedCount assignment(s)." -Type "Info"
+    }
+    if ($failedCount -gt 0) {
+        Write-Log "❌ Failed to apply $failedCount assignment(s)." -Type "Error"
+    }
+    # (Function definition removed from here)
+
+
+    if ($appliedCount -eq 0 -and $failedCount -eq 0) {
+        Write-Log "ℹ️ No assignments were processed." -Type "Info" # Should not happen if $Assignments was not empty initially
+    }
+    Write-Log "---------------------------------------------------" -Type "Info"
+}
+
+# Function to remove assignments from a specific Intune app
+function Remove-IntuneAppAssignments {
+    param (
+        [string]$OldAppId,
+        [array]$AssignmentsToRemove
+    )
+
+    if ([string]::IsNullOrEmpty($OldAppId)) {
+        Write-Log "Error: Old App ID is required to remove assignments." -Type "Error"
+        return
+    }
+
+    if ($AssignmentsToRemove -eq $null -or $AssignmentsToRemove.Count -eq 0) {
+        Write-Log "ℹ️ No assignments specified for removal." -Type "Info"
+        return
+    }
+
+    Write-Log "Removing assignments from old app (ID: $OldAppId)..." -Type "Info"
+    $removedCount = 0
+    $failedCount = 0
+
+    foreach ($assignment in $AssignmentsToRemove) {
+        # Each assignment fetched earlier has its own ID
+        $assignmentId = $assignment.id
+        if ([string]::IsNullOrEmpty($assignmentId)) {
+            Write-Log "⚠️ Warning: Assignment found without an ID. Cannot remove." -Type "Warning"
+            continue
+        }
+
+        $removeUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$OldAppId/assignments/$assignmentId"
+    
+        # Determine target description for logging
+        $targetDescription = "assignment ID: $assignmentId"
+        if ($assignment.target.groupId) { $targetDescription = "group ID: $($assignment.target.groupId)" }
+        elseif ($assignment.target.'@odata.type' -match 'allLicensedUsersAssignmentTarget') { $targetDescription = "All Users" }
+        elseif ($assignment.target.'@odata.type' -match 'allDevicesAssignmentTarget') { $targetDescription = "All Devices" }
+
+        try {
+            Write-Log "   • Removing assignment for target $targetDescription" -Type "Info"
+            Invoke-MgGraphRequest -Method DELETE -Uri $removeUri -ErrorAction Stop | Out-Null
+            $removedCount++
+        }
+        catch {
+            $failedCount++
+            Write-Log "❌ Error removing assignment for target $targetDescription : $_" -Type "Error"
+        }
+    }
+
+    Write-Log "---------------------------------------------------" -Type "Info"
+    if ($removedCount -gt 0) {
+        Write-Log "✅ Successfully removed $removedCount assignment(s) from old app." -Type "Info"
+    }
+    if ($failedCount -gt 0) {
+        Write-Log "❌ Failed to remove $failedCount assignment(s) from old app." -Type "Error"
+    }
+    if ($removedCount -eq 0 -and $failedCount -eq 0) {
+        Write-Log "ℹ️ No assignments were processed for removal." -Type "Info"
+    }
+    Write-Log "---------------------------------------------------" -Type "Info"
+}
+
 function Add-IntuneAppLogo {
     param (
         [string]$appId,
@@ -315,7 +526,7 @@ function Add-IntuneAppLogo {
         [string]$localLogoPath = $null
     )
 
-    Write-Host "`n🖼️  Adding app logo..." -ForegroundColor Yellow
+    Write-Log "Adding app logo..." -Type "Info"
     
     try {
         $tempLogoPath = $null
@@ -323,13 +534,13 @@ function Add-IntuneAppLogo {
         if ($localLogoPath -and (Test-Path $localLogoPath)) {
             # Use the provided local logo file
             $tempLogoPath = $localLogoPath
-            Write-Host "Using local logo file: $localLogoPath" -ForegroundColor Gray
+            Write-Log "Using local logo file: $localLogoPath" -Type "Info"
         }
         else {
             # Try to download from repository
             $logoFileName = $appName.ToLower().Replace(" ", "_") + ".png"
             $logoUrl = "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Logos/$logoFileName"
-            Write-Host "Downloading logo from: $logoUrl" -ForegroundColor Gray
+            Write-Log "Downloading logo from: $logoUrl" -Type "Info"
             
             # Download the logo
             $tempLogoPath = Join-Path $PWD "temp_logo.png"
@@ -337,13 +548,13 @@ function Add-IntuneAppLogo {
                 Invoke-WebRequest -Uri $logoUrl -OutFile $tempLogoPath
             }
             catch {
-                Write-Host "⚠️ Could not download logo from repository. Error: $_" -ForegroundColor Yellow
+                Write-Log "⚠️ Could not download logo from repository. Error: $_" -Type "Warning"
                 return
             }
         }
 
         if (-not $tempLogoPath -or -not (Test-Path $tempLogoPath)) {
-            Write-Host "⚠️ No valid logo file available" -ForegroundColor Yellow
+            Write-Log "⚠️ No valid logo file available" -Type "Warning"
             return
         }
 
@@ -365,7 +576,7 @@ function Add-IntuneAppLogo {
         }
 
         Invoke-MgGraphRequest -Method PATCH -Uri $logoUri -Body ($updateBody | ConvertTo-Json -Depth 10)
-        Write-Host "✅ Logo added successfully" -ForegroundColor Green
+        Write-Log "✅ Logo added successfully" -Type "Info"
 
         # Cleanup
         if (Test-Path $tempLogoPath) {
@@ -373,7 +584,7 @@ function Add-IntuneAppLogo {
         }
     }
     catch {
-        Write-Host "⚠️ Warning: Could not add app logo. Error: $_" -ForegroundColor Yellow
+        Write-Log "⚠️ Warning: Could not add app logo. Error: $_" -Type "Warning"
     }
 }
 
@@ -386,16 +597,16 @@ try {
     $supportedApps = Invoke-RestMethod -Uri $supportedAppsUrl -Method Get
     
     # Get all apps for checking updates
-    Write-Host "`nChecking existing Intune applications for available updates..." -ForegroundColor Cyan
+    Write-Log "Checking existing Intune applications for available updates..." -Type "Info"
     $githubJsonUrls = $supportedApps.PSObject.Properties.Value
     
     if ($githubJsonUrls.Count -eq 0) {
-        Write-Host "No applications found to check. Exiting..." -ForegroundColor Red
+        Write-Log "No applications found to check. Exiting..." -Type "Error"
         exit
     }
 }
 catch {
-    Write-Host "Error fetching supported apps list: $_" -ForegroundColor Red
+    Write-Log "Error fetching supported apps list: $_" -Type "Error"
     exit
 }
 
@@ -408,7 +619,7 @@ function Get-GitHubAppInfo {
     )
 
     if ([string]::IsNullOrEmpty($jsonUrl)) {
-        Write-Host "Error: Empty or null JSON URL provided." -ForegroundColor Red
+        Write-Log "Error: Empty or null JSON URL provided." -Type "Verbose"
         return $null
     }
 
@@ -426,8 +637,8 @@ function Get-GitHubAppInfo {
         }
     }
     catch {
-        Write-Host "Error fetching app info from GitHub URL: $jsonUrl" -ForegroundColor Red
-        Write-Host "Error details: $_" -ForegroundColor Red
+        Write-Log "Error fetching app info from GitHub URL: $jsonUrl" -Type "Verbose"
+        Write-Log "Error details: $_" -Type "Verbose"
         return $null
     }
 }
@@ -440,49 +651,49 @@ function Download-AppFile($url, $fileName, $expectedHash) {
     try {
         $response = Invoke-WebRequest -Uri $url -Method Head
         $fileSize = [math]::Round(($response.Headers.'Content-Length' / 1MB), 2)
-        Write-Host "Downloading the app file ($fileSize MB) to $outputPath..."
+        Write-Log "Downloading the app file ($fileSize MB) to $outputPath..." -Type "Verbose"
     }
     catch {
-        Write-Host "Downloading the app file to $outputPath..."
+        Write-Log "Downloading the app file to $outputPath..." -Type "Verbose"
     }
     
     $ProgressPreference = 'SilentlyContinue'
     Invoke-WebRequest -Uri $url -OutFile $outputPath
 
-    Write-Host "✅ Download complete" -ForegroundColor Green
+    Write-Log "✅ Download complete" -Type "Verbose"
     
     # Validate file integrity using SHA256 hash
-    Write-Host "`n🔐 Validating file integrity..." -ForegroundColor Yellow
+    Write-Log "`n🔐 Validating file integrity..." -Type "Verbose"
     
     # Validate expected hash format
     if ([string]::IsNullOrWhiteSpace($expectedHash)) {
-        Write-Host "❌ Error: No SHA256 hash provided in the app manifest" -ForegroundColor Red
+        Write-Log "❌ Error: No SHA256 hash provided in the app manifest" -Type "Verbose"
         Remove-Item $outputPath -Force
         throw "SHA256 hash validation failed - No hash provided in app manifest"
     }
     
-    Write-Host "   • Verifying the downloaded file matches the expected SHA256 hash" -ForegroundColor Gray
-    Write-Host "   • This ensures the file hasn't been corrupted or tampered with" -ForegroundColor Gray
-    Write-Host ""
-    Write-Host "   • Expected hash: $expectedHash" -ForegroundColor Gray
-    Write-Host "   • Calculating file hash..." -ForegroundColor Gray
+    Write-Log "   • Verifying the downloaded file matches the expected SHA256 hash" -Type "Verbose"
+    Write-Log "   • This ensures the file hasn't been corrupted or tampered with" -Type "Verbose"
+    Write-Log "   " -Type "Verbose"
+    Write-Log "   • Expected hash: $expectedHash" -Type "Verbose"
+    Write-Log "   • Calculating file hash..." -Type "Verbose"
     $fileHash = Get-FileHash -Path $outputPath -Algorithm SHA256
-    Write-Host "   • Actual hash: $($fileHash.Hash)" -ForegroundColor Gray
+    Write-Log "   • Actual hash: $($fileHash.Hash)" -Type "Verbose"
     
     # Case-insensitive comparison of the hashes
     $expectedHashNormalized = $expectedHash.Trim().ToLower()
     $actualHashNormalized = $fileHash.Hash.Trim().ToLower()
     
     if ($actualHashNormalized -eq $expectedHashNormalized) {
-        Write-Host "`n✅ Security check passed - File integrity verified" -ForegroundColor Green
-        Write-Host "   • The SHA256 hash of the downloaded file matches the expected value" -ForegroundColor Gray
-        Write-Host "   • This confirms the file is authentic and hasn't been modified" -ForegroundColor Gray
+        Write-Log "`n✅ Security check passed - File integrity verified" -Type "Verbose"
+        Write-Log "   • The SHA256 hash of the downloaded file matches the expected value" -Type "Verbose"
+        Write-Log "   • This confirms the file is authentic and hasn't been modified" -Type "Verbose"
         return $outputPath
     }
     else {
-        Write-Host "`n❌ Security check failed - File integrity validation error!" -ForegroundColor Red
+        Write-Log "`n❌ Security check failed - File integrity validation error!" -Type "Verbose"
         Remove-Item $outputPath -Force
-        Write-Host "`n"
+        Write-Log "`n" -Type "Verbose"
         throw "Security validation failed - SHA256 hash of the downloaded file does not match the expected value"
     }
 }
@@ -497,7 +708,7 @@ function Is-ValidUrl {
         return $true
     }
     else {
-        Write-Host "Invalid URL format: $url" -ForegroundColor Red
+        Write-Log "Invalid URL format: $url" -Type "Verbose"
         return $false
     }
 }
@@ -535,23 +746,27 @@ function Get-IntuneApps {
         try {
             $response = Invoke-MgGraphRequest -Uri $intuneQueryUri -Method Get
             if ($response.value.Count -gt 0) {
-                # Get only the latest version from Intune (first item due to orderby desc)
-                $latestIntuneVersion = $response.value[0].primaryBundleVersion
+                # Find the latest version among potentially multiple entries
+                $latestAppEntry = $response.value | Sort-Object -Property @{Expression = { [Version]($_.primaryBundleVersion -replace '-.*$') } } -Descending | Select-Object -First 1
+
+                $intuneVersion = $latestAppEntry.primaryBundleVersion
+                $intuneAppId = $latestAppEntry.id # Get the ID of the latest version
                 $githubVersion = $appInfo.version
                 
-                # Compare only with the latest version
-                $needsUpdate = Is-NewerVersion $githubVersion $latestIntuneVersion
+                # Check if GitHub version is newer
+                $needsUpdate = Is-NewerVersion $githubVersion $intuneVersion
                 
                 if ($needsUpdate) {
-                    Write-Log "Update available for $appName ($latestIntuneVersion → $githubVersion)"
+                    Write-Log "Update available for $appName ($intuneVersion → $githubVersion)"
                 }
                 else {
-                    Write-Log "$appName is up to date (Version: $latestIntuneVersion)"
+                    Write-Log "$appName is up to date (Version: $intuneVersion)"
                 }
                 
                 $intuneApps += [PSCustomObject]@{
                     Name          = $appName
-                    IntuneVersion = $latestIntuneVersion
+                    IntuneVersion = $intuneVersion
+                    IntuneAppId   = $intuneAppId # Add the ID here
                     GitHubVersion = $githubVersion
                 }
             }
@@ -606,7 +821,10 @@ function Is-NewerVersion($githubVersion, $intuneVersion) {
         return $githubVersion -ne $intuneVersion
     }
     catch {
-        Write-Host "Version comparison failed: GitHubVersion='$githubVersion', IntuneVersion='$intuneVersion'. Assuming versions are equal." -ForegroundColor Yellow
+        # silence spammy log message for not installed apps
+        if ($githubVersion -eq $intuneVersion -and -not [string]::IsNullOrEmpty($githubVersion)) {
+            Write-Log "Version comparison failed: GitHubVersion='$githubVersion', IntuneVersion='$intuneVersion'. Assuming versions are equal." -Type "Verbose"
+        }
         return $false
     }
 }
@@ -645,7 +863,6 @@ else {
         Write-Log "+--------------------------+--------------------+--------------------+"
     }
     
-    Write-Log ""
     Write-Log "Found $($updatesAvailable.Count) update$(if($updatesAvailable.Count -ne 1){'s'}) available."
     Write-Log "Starting update process in 10 seconds..."
     Start-Sleep -Seconds 10
@@ -657,19 +874,79 @@ $appsToUpload = $intuneAppVersions | Where-Object {
 }
 
 if ($appsToUpload.Count -eq 0) {
-    Write-Host "`nAll apps are up-to-date. No uploads necessary." -ForegroundColor Green
+    Write-Log "`nAll apps are up-to-date. No uploads necessary." -Type "Info"
     Disconnect-MgGraph > $null 2>&1
-    Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
+    Write-Log "Disconnected from Microsoft Graph." -Type "Info"
     exit 0
 }
 
 # Check if there are apps to process
 if (($appsToUpload.Count) -eq 0) {
-    Write-Host "`nNo new or updatable apps found. Exiting..." -ForegroundColor Yellow
+    Write-Log "`nNo new or updatable apps found. Exiting..." -Type "Info"
     Disconnect-MgGraph > $null 2>&1
-    Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
+    Write-Log "Disconnected from Microsoft Graph." -Type "Info"
     exit 0
 }
+
+# Determine if assignments should be copied based on the -CopyAssignments switch
+$copyAssignments = $CopyAssignments -eq $true
+
+# Define variables needed for assignment checking/copying regardless of mode
+$updatableApps = @($appsToUpload | Where-Object { $_.IntuneVersion -ne 'Not in Intune' -and (Is-NewerVersion $_.GitHubVersion $_.IntuneVersion) })
+$fetchedAssignments = @{} # Hashtable to store fetched assignments [AppID -> AssignmentsArray]
+$assignmentsFound = $false # Flag to track if any assignments were found
+
+# --- Non-Interactive Assignment Check/Display ---
+# Pre-fetch and display assignments if running non-interactively (-Upload or -UpdateAll) AND copying is requested (-CopyAssignments) AND updates exist
+if ($copyAssignments -and $updatableApps.Length -gt 0) {
+    Write-Log "`nChecking assignments for apps to be updated..." -Type "Info"
+    foreach ($updApp in $updatableApps) {
+        $assignments = Get-IntuneAppAssignments -AppId $updApp.IntuneAppId
+        if ($assignments -ne $null -and $assignments.Count -gt 0) {
+            $fetchedAssignments[$updApp.IntuneAppId] = $assignments
+            # $assignmentsFound = $true # Not needed for non-interactive prompt logic
+            # Display summary for this app
+            $assignmentSummaries = @()
+            foreach ($assignment in $assignments) {
+                $rawTargetType = $assignment.target.'@odata.type'.Replace("#microsoft.graph.", "")
+                $groupId = $assignment.target.groupId
+                $displayType = ""
+                $targetDetail = ""
+                switch ($rawTargetType) {
+                    "groupAssignmentTarget" {
+                        $displayType = "Group"
+                        if ($groupId) {
+                            try {
+                                $groupUri = "https://graph.microsoft.com/v1.0/groups/$groupId`?`$select=displayName"
+                                $groupInfo = Invoke-MgGraphRequest -Method GET -Uri $groupUri
+                                if ($groupInfo.displayName) { $targetDetail = "('$($groupInfo.displayName)')" }
+                                else { $targetDetail = "(ID: $groupId)" }
+                            }
+                            catch {
+                                Write-Log "⚠️ Warning: Could not fetch display name for Group ID $groupId. Error: $($_.Exception.Message)" -Type "Warning"
+                                $targetDetail = "(ID: $groupId)"
+                            }
+                        }
+                        else { $targetDetail = "(Unknown Group ID)" }
+                    }
+                    "allLicensedUsersAssignmentTarget" { $displayType = "All Users" }
+                    "allDevicesAssignmentTarget" { $displayType = "All Devices" }
+                    default { $displayType = $rawTargetType }
+                }
+                $summaryPart = "$($assignment.intent): $displayType"
+                if (-not [string]::IsNullOrWhiteSpace($targetDetail)) { $summaryPart += " $targetDetail" }
+                $assignmentSummaries += $summaryPart
+            }
+            Write-Log "  - $($updApp.Name): Found $($assignments.Count) assignment(s): $($assignmentSummaries -join ', ')" -Type "Info"
+        }
+        else {
+            Write-Log "  - $($updApp.Name): No assignments found." -Type "Info"
+        }
+    }
+    Write-Log "   " -Type "Info"
+}
+
+$existingAssignments = $null # Initialize variable to store assignments for updates
 
 # Main script for uploading only newer apps
 foreach ($app in $appsToUpload) {
@@ -693,6 +970,14 @@ foreach ($app in $appsToUpload) {
         if ($appInfo -eq $null) {
             Write-Log "Failed to fetch app info for $jsonUrl. Skipping." -Type "Error"
             continue
+        }
+
+        # Check if this is an update and fetch existing assignments
+        $existingAssignments = $null # Reset for each app
+        # Fetch assignments only if the flag is set and it's an update
+        # Retrieve pre-fetched assignments if the flag is set and it's an update
+        if ($copyAssignments -and $app.IntuneAppId -and $fetchedAssignments.ContainsKey($app.IntuneAppId)) {
+            $existingAssignments = $fetchedAssignments[$app.IntuneAppId]
         }
 
         # Clean up any existing temporary files before starting new download
@@ -763,7 +1048,7 @@ foreach ($app in $appsToUpload) {
             continue
         }
 
-        $app = @{
+        $newAppPayload = @{
             "@odata.type"                   = "#microsoft.graph.$appType"
             displayName                     = $appDisplayName
             description                     = $appDescription
@@ -780,9 +1065,9 @@ foreach ($app in $appsToUpload) {
         }
 
         if ($appType -eq "macOSDmgApp" -or $appType -eq "macOSPkgApp") {
-            $app["primaryBundleId"] = $appBundleId
-            $app["primaryBundleVersion"] = $appBundleVersion
-            $app["includedApps"] = @(
+            $newAppPayload["primaryBundleId"] = $appBundleId
+            $newAppPayload["primaryBundleVersion"] = $appBundleVersion
+            $newAppPayload["includedApps"] = @(
                 @{
                     "@odata.type" = "#microsoft.graph.macOSIncludedApp"
                     bundleId      = $appBundleId
@@ -792,7 +1077,7 @@ foreach ($app in $appsToUpload) {
         }
 
         $createAppUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps"
-        $newApp = Invoke-MgGraphRequest -Method POST -Uri $createAppUri -Body ($app | ConvertTo-Json -Depth 10)
+        $newApp = Invoke-MgGraphRequest -Method POST -Uri $createAppUri -Body ($newAppPayload | ConvertTo-Json -Depth 10)
         Write-Log "App created successfully (ID: $($newApp.id))"
 
         Write-Log "🔒 Processing content version..."
@@ -868,10 +1153,10 @@ foreach ($app in $appsToUpload) {
         } while ($fileStatus.uploadState -ne "commitFileSuccess" -and $retryCount -lt $maxRetries)
 
         if ($fileStatus.uploadState -eq "commitFileSuccess") {
-            Write-Host "✅ File committed successfully" -ForegroundColor Green
+            Write-Log "✅ File committed successfully" -Type "Info"
         }
         else {
-            Write-Host "Failed to commit file after $maxRetries attempts."
+            Write-Log "Failed to commit file after $maxRetries attempts." -Type "Error"
             exit 1
         }
 
@@ -881,6 +1166,13 @@ foreach ($app in $appsToUpload) {
             committedContentVersion = $contentVersion.id
         }
         Invoke-MgGraphRequest -Method PATCH -Uri $updateAppUri -Body ($updateData | ConvertTo-Json)
+
+            # Apply assignments if the flag is set and assignments were successfully fetched
+        if ($copyAssignments -and $existingAssignments -ne $null) {
+            Set-IntuneAppAssignments -NewAppId $newApp.id -Assignments $existingAssignments
+            # Now remove assignments from the old app version
+            Remove-IntuneAppAssignments -OldAppId $app.IntuneAppId -AssignmentsToRemove $existingAssignments
+        }
 
         Add-IntuneAppLogo -appId $newApp.id -appName $appDisplayName -appType $appType -localLogoPath $logoPath
 
@@ -892,7 +1184,7 @@ foreach ($app in $appsToUpload) {
                 Remove-Item $appFilePath -Force -ErrorAction Stop
             }
             catch {
-                Write-Host "Warning: Could not remove $appFilePath. Error: $_" -ForegroundColor Yellow
+                Write-Log "Warning: Could not remove $appFilePath. Error: $_" -Type "Warning"
             }
         }
         if (Test-Path "$appFilePath.bin") {
@@ -911,20 +1203,20 @@ foreach ($app in $appsToUpload) {
                 catch {
                     $attempt++
                     if ($attempt -lt $maxAttempts) {
-                        Write-Host "Retry $attempt of $maxAttempts to remove encrypted file..." -ForegroundColor Yellow
+                        Write-Log "Retry $attempt of $maxAttempts to remove encrypted file..." -Type "Warning"
                         Start-Sleep -Seconds 2
                     }
                     else {
-                        Write-Host "Warning: Could not remove $appFilePath.bin. Error: $_" -ForegroundColor Yellow
+                        Write-Log "Warning: Could not remove encrypted file. Error: $_" -Type "Warning"
                     }
                 }
             }
         }
-        Write-Host "✅ Cleanup complete" -ForegroundColor Green
+        Write-Log "✅ Cleanup complete" -Type "Info"
 
         Write-Log "Successfully processed $($appInfo.name)"
         Write-Log "App is now available in Intune Portal: https://intune.microsoft.com/#view/Microsoft_Intune_Apps/SettingsMenu/~/0/appId/$($newApp.id)"
-        Write-Host "" -ForegroundColor Cyan
+        Write-Log " " -Type "Info"
     }
     catch {
         Write-Log "Critical error processing $($app.Name): $_" -Type "Error"
