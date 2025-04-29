@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://redis.com/redis-enterprise/redis-insight/",
   "fileName": "Redis-Insight-mac-arm64.dmg",
-  "sha": "64b007964d33c45059b60de37124705d9d3d5fa2642d718a93551a5806f23541"
+  "sha": "64b007964d33c45059b60de37124705d9d3d5fa2642d718a93551a5806f23541",
+  "previous_version": "2.68.0"
 }

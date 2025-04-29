@@ -1,0 +1,10 @@
+{
+  "name": "Facebook Messenger",
+  "description": "Native desktop app for Messenger (formerly Facebook Messenger)",
+  "version": "233.1.0.8.208",
+  "url": "https://www.messenger.com/messenger/desktop/downloadV2/?platform=mac",
+  "bundleId": null,
+  "homepage": "https://www.messenger.com/desktop",
+  "fileName": "?platform=mac",
+  "sha": "d66195c14036186f61a2207043c4c6516d1e8d1697a81961705b44d5369bf147"
+}

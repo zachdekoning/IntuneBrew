@@ -7,5 +7,6 @@
   "homepage": "https://github.com/qvacua/vimr",
   "fileName": "vimr_0.52.0.pkg",
   "type": "app",
-  "sha": "655deed682ef4b3cf0068b7b332a89b1d1b81f1c68821f3c37953bb9bee81c5a"
+  "sha": "655deed682ef4b3cf0068b7b332a89b1d1b81f1c68821f3c37953bb9bee81c5a",
+  "previous_version": "0.52.0"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "Parsec",
+  "description": "Remote desktop",
+  "version": "150-98",
+  "url": "https://builds.parsec.app/package/parsec-macos.pkg",
+  "bundleId": "tv.parsec.www",
+  "homepage": "https://parsec.app/",
+  "fileName": "parsec-macos.pkg",
+  "type": "pkg"
+}

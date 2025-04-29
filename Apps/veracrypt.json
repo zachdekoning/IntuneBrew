@@ -1,0 +1,10 @@
+{
+  "name": "VeraCrypt",
+  "description": "Disk encryption software focusing on security based on TrueCrypt",
+  "version": "1.26.20",
+  "url": "https://launchpad.net/veracrypt/trunk/1.26.20/+download/VeraCrypt_1.26.20.dmg",
+  "bundleId": "com.idrix.pkg.veracrypt",
+  "homepage": "https://www.veracrypt.fr/",
+  "fileName": "VeraCrypt_1.26.20.dmg",
+  "sha": "0685b55f0ca1ad47020301de1b1f1008c8142864c4a1f5e48eb69a914a34f9af"
+}

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://freelens.app/",
   "fileName": "Freelens-1.2.1-macos-arm64.dmg",
-  "sha": "e50774ed7803b2109b2b982723dfb5e12fa851ca5afa4d4a9bf543dabd21c5de"
+  "sha": "e50774ed7803b2109b2b982723dfb5e12fa851ca5afa4d4a9bf543dabd21c5de",
+  "previous_version": "1.2.1"
 }

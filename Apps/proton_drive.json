@@ -1,0 +1,10 @@
+{
+  "name": "Proton Drive",
+  "description": "Client for Proton Drive",
+  "version": "2.2.0",
+  "url": "https://proton.me/download/drive/macos/ProtonDrive-2.2.0.dmg",
+  "bundleId": null,
+  "homepage": "https://proton.me/drive",
+  "fileName": "ProtonDrive-2.2.0.dmg",
+  "sha": "7bb8f61abc7a014d2078945c4b03f07115bcb1bb1c1fd2299923d68e788510c3"
+}

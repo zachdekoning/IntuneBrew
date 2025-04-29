@@ -1,0 +1,10 @@
+{
+  "name": "Metasploit Framework",
+  "description": "Penetration testing framework",
+  "version": "6.4.54",
+  "url": "https://osx.metasploit.com/metasploit-framework-6.4.54-20250315103004-1rapid7-1.x86_64.pkg",
+  "bundleId": null,
+  "homepage": "https://www.metasploit.com/",
+  "fileName": "metasploit-framework-6.4.54-20250315103004-1rapid7-1.x86_64.pkg",
+  "type": "pkg"
+}

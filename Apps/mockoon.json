@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://mockoon.com/",
   "fileName": "mockoon.setup.9.2.0.arm64.dmg",
-  "sha": "39d66cb88bc9f697b9bfd7127a1593e90b727f5b48c45386bcd56d4dc94f42d1"
+  "sha": "39d66cb88bc9f697b9bfd7127a1593e90b727f5b48c45386bcd56d4dc94f42d1",
+  "previous_version": "9.2.0"
 }

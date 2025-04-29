@@ -1,0 +1,10 @@
+{
+  "name": "Cryptomator",
+  "description": "Multi-platform client-side cloud file encryption tool",
+  "version": "1.15.2",
+  "url": "https://github.com/cryptomator/cryptomator/releases/download/1.15.2/Cryptomator-1.15.2-arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://cryptomator.org/",
+  "fileName": "Cryptomator-1.15.2-arm64.dmg",
+  "sha": "21c4586179482e09a681d75b681b324698272ac5b961d641e7c105d2afd40db8"
+}

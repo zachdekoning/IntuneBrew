@@ -7,5 +7,6 @@
   "homepage": "https://rogueamoeba.com/audiohijack/",
   "fileName": "audio_hijack_4.5.0.pkg",
   "type": "app",
-  "sha": "c8a7741799b0d5fc305bfbff2429d8dba3484535296658e250ec9a8e89873029"
+  "sha": "c8a7741799b0d5fc305bfbff2429d8dba3484535296658e250ec9a8e89873029",
+  "previous_version": "4.5.0"
 }
