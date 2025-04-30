@@ -1,12 +1,12 @@
 {
   "name": "Blender",
   "description": "3D creation suite",
-  "version": "4.4.1",
-  "url": "https://download.blender.org/release/Blender4.4/blender-4.4.1-macos-arm64.dmg",
+  "version": "4.4.3",
+  "url": "https://download.blender.org/release/Blender4.4/blender-4.4.3-macos-arm64.dmg",
   "bundleId": "org.blenderfoundation.blender.savedState",
   "homepage": "https://www.blender.org/",
-  "fileName": "blender-4.4.1-macos-arm64.dmg",
-  "sha": "58d133838d59bb3fab7694ddfdcfb35e50c25838a9ddf28d152db05fdd592f20",
+  "fileName": "blender-4.4.3-macos-arm64.dmg",
+  "sha": "9b592fdc758b9069c210494f10108b06ef82fd65a4aa8c0cc07d6eba0585578b",
   "changelog": "https://www.blender.org/download/releases/",
   "previous_version": "4.4.1"
 }

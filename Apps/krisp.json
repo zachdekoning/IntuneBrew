@@ -1,12 +1,12 @@
 {
   "name": "Krisp",
   "description": "Noise cancelling application",
-  "version": "2.57.14",
-  "url": "https://cdn.krisp.ai/mp/mn/2.57/mac/Krisp_2.57.14_arm64.pkg",
+  "version": "3.1.6",
+  "url": "https://cdn.krisp.ai/mp/mn/3.1/mac/Krisp_3.1.6_arm64.pkg",
   "bundleId": "ai.krisp.krispMac*",
   "homepage": "https://krisp.ai/",
-  "fileName": "Krisp_2.57.14_arm64.pkg",
-  "sha": "007014df3888fa45c859f6b0f01feed3b53501adfde9fec66a583345c1447e44",
+  "fileName": "Krisp_3.1.6_arm64.pkg",
+  "sha": "3c8a1688c4693e6a7e30f7cbd9faf4991d2275211f960bffda4892a9047b025d",
   "changelog": "https://help.krisp.ai/hc/en-us/articles/360012250839-Krisp-Desktop-app-changelog",
   "previous_version": "2.57.14"
 }

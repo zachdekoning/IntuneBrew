@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/SoftFever/OrcaSlicer",
   "fileName": "OrcaSlicer_Mac_arm64_V2.3.0.dmg",
-  "sha": "6d040fc8f72f0553746b73bd7f676e4c3ecd7dded5bfce74817670fce6f2edb6"
+  "sha": "6d040fc8f72f0553746b73bd7f676e4c3ecd7dded5bfce74817670fce6f2edb6",
+  "previous_version": "2.3.0"
 }

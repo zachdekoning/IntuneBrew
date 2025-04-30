@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://requestly.com/",
   "fileName": "Requestly-25.4.13-arm64.dmg",
-  "sha": "1044781a29e60a09002763f44d84b8d81c439b26481c7fcb31524468a5964018"
+  "sha": "1044781a29e60a09002763f44d84b8d81c439b26481c7fcb31524468a5964018",
+  "previous_version": "25.4.13"
 }

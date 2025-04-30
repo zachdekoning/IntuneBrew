@@ -6,5 +6,6 @@
   "bundleId": "com.adguard.mac.adguard-pkg",
   "homepage": "https://adguard.com/",
   "fileName": "AdGuard-2.16.4.1870.dmg",
-  "sha": "63c18e868820fc6bf9e34cefa6602e74b02c959de94c8c793bb6d3eb46939deb"
+  "sha": "63c18e868820fc6bf9e34cefa6602e74b02c959de94c8c793bb6d3eb46939deb",
+  "previous_version": "2.16.4.1870"
 }

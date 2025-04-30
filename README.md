@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-351-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,9 +79,23 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-04-29 14:40 UTC*
+*Last checked: 2025-04-30 00:28 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Trae | 1.0.12386 | 1.0.12491 |
+| Windows App | 11.1.4 | 11.1.5 |
+| Grammarly Desktop | 1.115.1.0 | 1.116.1.0 |
+| Blender | 4.4.1 | 4.4.3 |
+| Webex Teams | 45.4.0.32158 | 45.4.1.32313 |
+| Dropbox | 222.4.5042 | 223.4.4909 |
+| Krisp | 2.57.14 | 3.1.6 |
+| Termius | 9.19.1 | 9.19.2 |
+| ChatGPT | 1.2025.105 | 1.2025.112 |
+| Discord | 0.0.343 | 0.0.344 |
+| Santa | 2025.3 | 2025.4 |
+| Zed | 0.183.11 | 0.183.12 |
+| Jabra Direct | 6.21.01701 | 6.22.11401 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -129,7 +143,7 @@ Follow the interactive prompts to:
 
 | Application | Latest Version |
 |-------------|----------------|
-| <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.72 |
+| <img src='Logos/1password.png' width='32' height='32'> 1Password | 8.10.74 |
 | <img src='Logos/acorn.png' width='32' height='32'> Acorn | 8.1.1 |
 | ❌ AdGuard | 2.16.4.1870 |
 | <img src='Logos/adobe_acrobat_pro_dc.png' width='32' height='32'> Adobe Acrobat Pro DC | 25.001.20476 |
@@ -174,7 +188,7 @@ Follow the interactive prompts to:
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
-| <img src='Logos/blender.png' width='32' height='32'> Blender | 4.4.1 |
+| <img src='Logos/blender.png' width='32' height='32'> Blender | 4.4.3 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.7 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
 | <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.35.2 |
@@ -191,7 +205,7 @@ Follow the interactive prompts to:
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.1.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.107.0 |
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
-| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.105 |
+| <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.112 |
 | ❌ ChatWise | 0.8.46 |
 | <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 136.0.7103.19 |
 | <img src='Logos/cisco_jabber.png' width='32' height='32'> Cisco Jabber | 20241220015538 |
@@ -223,7 +237,7 @@ Follow the interactive prompts to:
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.4.11926442 |
 | <img src='Logos/devtoys.png' width='32' height='32'> DevToys | 2.0.8.0 |
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
-| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.343 |
+| <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.344 |
 | ❌ DisplayLink USB Graphics Software | 1.12.1 |
 | ❌ DockDoor | 1.6.2 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.0 |
@@ -233,7 +247,7 @@ Follow the interactive prompts to:
 | <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 26.2.15 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
-| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 222.4.5042 |
+| <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 223.4.4909 |
 | <img src='Logos/dropdmg.png' width='32' height='32'> DropDMG | 3.6.8 |
 | <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 6.2 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.136.0 |
@@ -250,7 +264,7 @@ Follow the interactive prompts to:
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
 | ❌ Facebook Messenger | 233.1.0.8.208 |
-| <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.9 |
+| <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.10 |
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 125.3.6 |
 | <img src='Logos/fission.png' width='32' height='32'> Fission | 2.8.8 |
 | <img src='Logos/flameshot.png' width='32' height='32'> Flameshot | 12.1.0 |
@@ -277,9 +291,9 @@ Follow the interactive prompts to:
 | <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.9 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 135.0.7049.115 |
 | <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 107.0.3 |
-| ❌ Goose | 1.0.20 |
+| ❌ Goose | 1.0.21 |
 | ❌ GPT fdisk | 1.0.10 |
-| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.115.1.0 |
+| <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.116.1.0 |
 | ❌ GrandPerspective | 3.5.2 |
 | <img src='Logos/hammerspoon.png' width='32' height='32'> Hammerspoon | 1.0.0 |
 | ❌ Hazel | 6.0.4 |
@@ -300,7 +314,7 @@ Follow the interactive prompts to:
 | <img src='Logos/intellij_idea_community_edition.png' width='32' height='32'> IntelliJ IDEA Community Edition | 2025.1 |
 | <img src='Logos/iterm2.png' width='32' height='32'> iTerm2 | 3.5.13 |
 | ❌ Itsycal | 0.15.6 |
-| <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.21.01701 |
+| <img src='Logos/jabra_direct.png' width='32' height='32'> Jabra Direct | 6.22.11401 |
 | <img src='Logos/jellyfin.png' width='32' height='32'> Jellyfin | 10.10.7 |
 | ❌ JetBrains PhpStorm | 2025.1.0.1 |
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2025.1 |
@@ -319,7 +333,7 @@ Follow the interactive prompts to:
 | <img src='Logos/keyclu.png' width='32' height='32'> KeyClu | 0.30.1 |
 | <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.41.1 |
 | <img src='Logos/klokki.png' width='32' height='32'> Klokki | 1.3.7 |
-| <img src='Logos/krisp.png' width='32' height='32'> Krisp | 2.57.14 |
+| <img src='Logos/krisp.png' width='32' height='32'> Krisp | 3.1.6 |
 | <img src='Logos/krita.png' width='32' height='32'> Krita | 5.2.9 |
 | <img src='Logos/langgraph_studio.png' width='32' height='32'> LangGraph Studio | 0.0.37 |
 | ❌ Lens | 2025.4.92142 |
@@ -329,7 +343,7 @@ Follow the interactive prompts to:
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.15 |
 | <img src='Logos/logitech_g_hub.png' width='32' height='32'> Logitech G HUB | 2025.3.696161 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.89.705126 |
-| <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.11.3 |
+| <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.12.0 |
 | ❌ LuLu | 3.1.5 |
 | ❌ LÖVE | 11.5 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
@@ -353,7 +367,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.3 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.95 |
 | ❌ Mist | 0.20.1 |
-| <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 11.1.3 |
+| <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 12.0.0 |
 | ❌ Mockoon | 9.2.0 |
 | <img src='Logos/mongodb_compass.png' width='32' height='32'> MongoDB Compass | 1.46.1 |
 | ❌ MonitorControl | 4.3.3 |
@@ -420,7 +434,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2024.12.1 |
 | ❌ RustDesk | 1.3.9 |
-| <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.3 |
+| <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.4 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.52.0 |
 | <img src='Logos/sketch.png' width='32' height='32'> Sketch | 101.8 |
@@ -446,11 +460,11 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
-| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.1 |
+| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.2 |
 | ❌ Thonny | 4.1.7 |
 | ❌ TigerVNC | 1.15.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.1 |
-| ❌ Trae | 1.0.12386 |
+| ❌ Trae | 1.0.12491 |
 | <img src='Logos/transmission.png' width='32' height='32'> Transmission | 4.0.6 |
 | <img src='Logos/transmit.png' width='32' height='32'> Transmit | 5.10.8 |
 | ❌ Tunnelblick | 6.0.1 |
@@ -464,18 +478,18 @@ Follow the interactive prompts to:
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.3.3635.11 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
 | <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.99.32846 |
-| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.4.0.32158 |
+| <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.4.1.32313 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2025.1 |
 | ❌ WeChat for Mac | 4.0.3.93 |
 | <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.12.73 |
-| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.4 |
+| <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.5 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.7.2 |
 | <img src='Logos/winehqstable.png' width='32' height='32'> WineHQ-stable | 10.0 |
 | <img src='Logos/wireshark.png' width='32' height='32'> Wireshark | 4.4.6 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | ❌ Yaak | 2025.1.2 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.183.11 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.183.12 |
 | ❌ Zed Attack Proxy | 2.16.1 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.5b |
 | ❌ Zenmap | 7.95 |

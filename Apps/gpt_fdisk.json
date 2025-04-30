@@ -6,5 +6,6 @@
   "bundleId": "com.rodsbooks.pkg.gdisk",
   "homepage": "https://sourceforge.net/projects/gptfdisk/",
   "fileName": "gdisk-1.0.10.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "1.0.10"
 }

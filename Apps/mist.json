@@ -6,5 +6,6 @@
   "bundleId": "com.ninxsoft.pkg.mist",
   "homepage": "https://github.com/ninxsoft/Mist",
   "fileName": "Mist.0.20.1.pkg",
-  "type": "pkg"
+  "type": "pkg",
+  "previous_version": "0.20.1"
 }
