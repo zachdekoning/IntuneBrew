@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install requests supabase
 
       - name: Parse input apps
         id: parse-apps
@@ -40,6 +40,8 @@ jobs:
       - name: Check CVEs for apps
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           cat > check_cves.py << 'EOF'
           import os
@@ -49,6 +51,7 @@ jobs:
           import time
           from datetime import datetime, timedelta
           from urllib.parse import quote
+          from supabase import create_client, Client
 
           # Get NVD API key from environment - required
           nvd_api_key = os.environ.get('NVD_API_KEY')
@@ -59,6 +62,17 @@ jobs:
               print("Please add your NVD API key as a repository secret named NVD_API_KEY.")
               print("Get an API key at: https://nvd.nist.gov/developers/request-an-api-key")
               sys.exit(1)
+              
+          # Initialize Supabase client
+          supabase_url = os.environ.get('SUPABASE_URL')
+          supabase_key = os.environ.get('SUPABASE_KEY')
+
+          if not supabase_url or not supabase_key:
+              print("ERROR: Supabase credentials are required but not found in environment variables.")
+              print("Please add your Supabase URL and service role key as repository secrets.")
+              sys.exit(1)
+              
+          supabase: Client = create_client(supabase_url, supabase_key)
               
           # With API key, rate limits are 50 requests per 30 seconds
 
@@ -189,6 +203,43 @@ jobs:
                   # Take only the 5 most recent CVEs
                   recent_vulns = sorted_vulns[:5]
                   
+                  # First, delete existing CVEs for this app to avoid duplicates
+                  try:
+                      print(f"Removing existing CVE records for {app_name}...")
+                      supabase.table('app_cves').delete().eq('app_name', app_name).execute()
+                  except Exception as e:
+                      print(f"Error deleting existing CVEs for {app_name}: {str(e)}")
+                  
+                  # Store the CVEs in the database
+                  if recent_vulns:
+                      print(f"Storing {len(recent_vulns)} CVEs for {app_name} in the database...")
+                      cve_records = []
+                      for vuln in recent_vulns:
+                          # Convert base_score to float if it's not N/A
+                          base_score_value = None
+                          if vuln['base_score'] != 'N/A':
+                              try:
+                                  base_score_value = float(vuln['base_score'])
+                              except:
+                                  pass
+                              
+                          cve_record = {
+                              'app_name': app_name,
+                              'cve_id': vuln['cve_id'],
+                              'published_date': vuln['published_date'] if vuln['published_date'] != 'N/A' else None,
+                              'last_modified_date': vuln['last_modified_date'] if vuln['last_modified_date'] != 'N/A' else None,
+                              'base_score': base_score_value,
+                              'severity': vuln['severity'] if vuln['severity'] != 'N/A' else None,
+                              'description': vuln['description'] if vuln['description'] != 'N/A' else None
+                          }
+                          cve_records.append(cve_record)
+                      
+                      try:
+                          result = supabase.table('app_cves').insert(cve_records).execute()
+                          print(f"✅ Successfully stored CVEs for {app_name} in the database")
+                      except Exception as e:
+                          print(f"Error storing CVEs for {app_name}: {str(e)}")
+                  
                   # Display the results
                   for vuln in recent_vulns:
                       print(f"{vuln['cve_id']:<20} {vuln['published_date']:<12} {vuln['last_modified_date']:<12} {vuln['base_score']:<10} {vuln['severity']:<10}")
@@ -214,7 +265,7 @@ jobs:
               # With API key, we can make up to 50 requests per 30 seconds
               time.sleep(0.5)  # 0.5 second delay with API key
 
-          print("\nCVE check completed.")
+          print("\nCVE check completed and data stored in Supabase database.")
           EOF
 
           python check_cves.py
