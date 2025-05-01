@@ -195,33 +195,33 @@ jobs:
                   
                   print(f"Processed {len(processed_products)} valid CPE entries.")
                   
-                  # Sort by lastModified date (descending) to get the most recent ones
+                  # Sort by published date (descending) to get the most recent ones
                   def extract_date_for_sorting(product):
-                      # Get the lastModified date from the cpe object
+                      # Get the created date (which is the published date) from the cpe object
                       cpe_obj = product.get('cpe', {})
-                      last_modified = cpe_obj.get('lastModified', '')
+                      published_date = cpe_obj.get('created', '')
                       # Parse the date string into a datetime object for sorting
                       try:
-                          if last_modified:
-                              return datetime.strptime(last_modified.split('.')[0], "%Y-%m-%dT%H:%M:%S")
+                          if published_date:
+                              return datetime.strptime(published_date.split('.')[0], "%Y-%m-%dT%H:%M:%S")
                           return datetime.min
                       except Exception as e:
-                          print(f"Error parsing date {last_modified}: {str(e)}")
+                          print(f"Error parsing date {published_date}: {str(e)}")
                           return datetime.min
                   
-                  # Sort by lastModified date in descending order (newest first)
+                  # Sort by published date in descending order (newest first)
                   sorted_cpes = sorted(processed_products, key=extract_date_for_sorting, reverse=True)
                   
                   # Take the 5 most recent CPEs
                   recent_cpes = sorted_cpes[:5]
                   
                   # Print the selected CPEs for debugging
-                  print("Selected CPEs by lastModified date:")
+                  print("Selected CPEs by published date:")
                   for product in recent_cpes:
                       cpe_obj = product.get('cpe', {})
                       cpe_name = cpe_obj.get('cpeName', 'N/A')
-                      last_modified = cpe_obj.get('lastModified', 'N/A')
-                      print(f"  Name: {cpe_name}, Last Modified: {last_modified}")
+                      published_date = cpe_obj.get('created', 'N/A')
+                      print(f"  Name: {cpe_name}, Published: {published_date}")
                   
                   # Extract just the CPE names
                   cpe_names = [product.get('cpe', {}).get('cpeName') for product in recent_cpes
@@ -304,9 +304,11 @@ jobs:
                       # Get published and last modified dates
                       published_date = "N/A"
                       last_modified_date = "N/A"
+                      published_datetime = None
                       last_modified_datetime = None
                       if 'published' in cve:
                           published_date = cve['published'].split('T')[0]
+                          published_datetime = datetime.strptime(cve['published'].split('.')[0], "%Y-%m-%dT%H:%M:%S")
                       if 'lastModified' in cve:
                           last_modified_date = cve['lastModified'].split('T')[0]
                           last_modified_datetime = datetime.strptime(cve['lastModified'].split('.')[0], "%Y-%m-%dT%H:%M:%S")
@@ -337,6 +339,7 @@ jobs:
                       processed_vulns.append({
                           'cve_id': cve_id,
                           'published_date': published_date,
+                          'published_datetime': published_datetime,
                           'last_modified_date': last_modified_date,
                           'last_modified_datetime': last_modified_datetime,
                           'base_score': base_score,
@@ -386,18 +389,18 @@ jobs:
                   cve_id = vuln['cve_id']
                   # If we haven't seen this CVE before, or this one is more recent, keep it
                   if (cve_id not in unique_cves or
-                      (vuln['last_modified_datetime'] is not None and
-                       unique_cves[cve_id]['last_modified_datetime'] is not None and
-                       vuln['last_modified_datetime'] > unique_cves[cve_id]['last_modified_datetime'])):
+                      (vuln['published_datetime'] is not None and
+                       unique_cves[cve_id]['published_datetime'] is not None and
+                       vuln['published_datetime'] > unique_cves[cve_id]['published_datetime'])):
                       unique_cves[cve_id] = vuln
               
               # Convert back to a list
               deduplicated_vulns = list(unique_cves.values())
               
-              # Sort by last modified date (newest first)
+              # Sort by published date (newest first)
               sorted_vulns = sorted(
-                  [v for v in deduplicated_vulns if v['last_modified_datetime'] is not None],
-                  key=lambda x: x['last_modified_datetime'],
+                  [v for v in deduplicated_vulns if v['published_datetime'] is not None],
+                  key=lambda x: x['published_datetime'],
                   reverse=True
               )
               
@@ -405,7 +408,7 @@ jobs:
               recent_vulns = sorted_vulns[:5]
               
               print(f"\nFound {len(all_vulns)} total CVEs for {app_name} in the last 90 days.")
-              print(f"Displaying the 5 most recent CVEs sorted by last modified date:")
+              print(f"Displaying the 5 most recent CVEs sorted by published date:")
               print(f"\n{'ID':<20} {'Published':<12} {'Last Modified':<12} {'Base Score':<10} {'Severity':<10}")
               print(f"{'-' * 72}")
               
