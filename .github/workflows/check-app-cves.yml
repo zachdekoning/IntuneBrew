@@ -1,0 +1,128 @@
+name: Check App CVEs
+
+on:
+  workflow_dispatch:
+    inputs:
+      apps:
+        description: "Comma-separated list of apps to check (default: Google Chrome,Mozilla Firefox)"
+        required: false
+        default: "Google Chrome,Mozilla Firefox"
+        type: string
+  schedule:
+    - cron: "0 0 * * 1" # Run at midnight on Mondays
+
+jobs:
+  check-cves:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 nvdlib
+
+      - name: Parse input apps
+        id: parse-apps
+        run: |
+          # Get apps from input or use default
+          APPS="${{ github.event.inputs.apps || 'Google Chrome,Mozilla Firefox' }}"
+          echo "Checking CVEs for: $APPS"
+          echo "APPS=$APPS" >> $GITHUB_ENV
+
+      - name: Check CVEs for apps
+        run: |
+          cat > check_cves.py << 'EOF'
+          import os
+          import sys
+          import requests
+          import nvdlib
+          import json
+          from datetime import datetime, timedelta
+          from bs4 import BeautifulSoup
+
+          # Get list of apps to check
+          apps_to_check = os.environ.get('APPS', 'Google Chrome,Mozilla Firefox').split(',')
+
+          # Function to check CVEs for a specific app
+          def check_cves_for_app(app_name):
+              print(f"\n{'=' * 50}")
+              print(f"Checking CVEs for {app_name}")
+              print(f"{'=' * 50}")
+              
+              # Normalize app name for search
+              search_term = app_name.lower().strip()
+              
+              # Get CVEs from the last 90 days
+              end_date = datetime.now()
+              start_date = end_date - timedelta(days=90)
+              
+              # Format dates for NVD API
+              start_date_str = start_date.strftime("%Y-%m-%dT00:00:00.000")
+              end_date_str = end_date.strftime("%Y-%m-%dT23:59:59.999")
+              
+              try:
+                  # Search for CVEs using nvdlib
+                  results = nvdlib.searchCVE(
+                      keywordSearch=search_term,
+                      pubStartDate=start_date_str,
+                      pubEndDate=end_date_str,
+                      limit=25
+                  )
+                  
+                  if not results:
+                      print(f"No CVEs found for {app_name} in the last 90 days.")
+                      return
+                  
+                  print(f"Found {len(results)} potential CVEs for {app_name} in the last 90 days:")
+                  print(f"\n{'ID':<20} {'Published':<12} {'Base Score':<10} {'Severity':<10}")
+                  print(f"{'-' * 60}")
+                  
+                  for cve in results:
+                      # Get CVE details
+                      cve_id = cve.id
+                      published_date = cve.published.split('T')[0] if cve.published else "N/A"
+                      
+                      # Get CVSS score and severity if available
+                      base_score = "N/A"
+                      severity = "N/A"
+                      
+                      if hasattr(cve, 'metrics') and cve.metrics:
+                          if hasattr(cve.metrics, 'cvssMetricV31') and cve.metrics.cvssMetricV31:
+                              base_score = cve.metrics.cvssMetricV31[0].cvssData.baseScore
+                              severity = cve.metrics.cvssMetricV31[0].cvssData.baseSeverity
+                          elif hasattr(cve.metrics, 'cvssMetricV30') and cve.metrics.cvssMetricV30:
+                              base_score = cve.metrics.cvssMetricV30[0].cvssData.baseScore
+                              severity = cve.metrics.cvssMetricV30[0].cvssData.baseSeverity
+                          elif hasattr(cve.metrics, 'cvssMetricV2') and cve.metrics.cvssMetricV2:
+                              base_score = cve.metrics.cvssMetricV2[0].cvssData.baseScore
+                              severity = cve.metrics.cvssMetricV2[0].baseSeverity
+                      
+                      print(f"{cve_id:<20} {published_date:<12} {base_score:<10} {severity:<10}")
+                  
+                  print(f"\nFor more details, visit: https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&query={search_term}&search_type=all")
+                  
+              except Exception as e:
+                  print(f"Error checking CVEs for {app_name}: {str(e)}")
+
+          # Check CVEs for each app
+          for app in apps_to_check:
+              check_cves_for_app(app.strip())
+
+          print("\nCVE check completed.")
+          EOF
+
+          python check_cves.py
+
+      - name: Summary
+        run: |
+          echo "CVE check completed for the following apps:"
+          echo "$APPS"
+          echo "Run this workflow manually to check different applications."
