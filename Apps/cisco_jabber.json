@@ -1,8 +1,8 @@
 {
   "name": "Cisco Jabber",
   "description": "Jabber client from Cisco",
-  "version": "20241220015538",
-  "url": "https://binaries.webex.com/jabberclientmac/20241220015538/Install_Cisco-Jabber-Mac.pkg",
+  "version": "20250430033337",
+  "url": "https://binaries.webex.com/jabberclientmac/20250430033337/Install_Cisco-Jabber-Mac.pkg",
   "bundleId": "com.cisco.Jabber",
   "homepage": "https://www.webex.com/downloads/jabber.html",
   "fileName": "Install_Cisco-Jabber-Mac.pkg",

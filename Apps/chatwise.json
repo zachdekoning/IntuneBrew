@@ -1,11 +1,11 @@
 {
   "name": "ChatWise",
   "description": "AI chatbot for many LLMs",
-  "version": "0.8.46",
-  "url": "https://github.com/egoist/chatwise-releases/releases/download/v0.8.46/ChatWise_0.8.46_aarch64.dmg",
+  "version": "0.8.47",
+  "url": "https://github.com/egoist/chatwise-releases/releases/download/v0.8.47/ChatWise_0.8.47_aarch64.dmg",
   "bundleId": "app.chatwise",
   "homepage": "https://chatwise.app/",
-  "fileName": "ChatWise_0.8.46_aarch64.dmg",
-  "sha": "2c57fb6a0ae166f01619ad3abc3d5707fd8213dfe4f96c621a644bab6272f0ab",
+  "fileName": "ChatWise_0.8.47_aarch64.dmg",
+  "sha": "652bbea9666ea6675bbf25e1457f8bf41122d47f632b2d71062ef0a2ba2fcd11",
   "previous_version": "0.8.46"
 }
