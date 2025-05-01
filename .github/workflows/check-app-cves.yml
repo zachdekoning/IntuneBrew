@@ -124,18 +124,18 @@ jobs:
               
               try:
                   # Query the NVD API for CPE names
-                  url = f"https://services.nvd.nist.gov/rest/json/cpes/2.0"
-                  params = {
-                      "keywordSearch": search_term,
-                      "keywordExactMatch": True
-                  }
+                  # Construct the URL directly to ensure exact format
+                  search_term_encoded = quote(search_term)
+                  url = f"https://services.nvd.nist.gov/rest/json/cpes/2.0?keywordSearch={search_term_encoded}&keywordExactMatch"
+                  params = {}  # No params as they're included in the URL
                   
                   # Set up headers with API key
                   headers = {'apiKey': nvd_api_key}
                   
                   # Make the request with API key in headers
                   print(f"Querying CPE API for: {search_term}")
-                  response = requests.get(url, params=params, headers=headers)
+                  print(f"URL: {url}")
+                  response = requests.get(url, headers=headers)
                   
                   # Check if request was successful
                   if response.status_code != 200:
