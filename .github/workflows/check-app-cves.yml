@@ -3,7 +3,7 @@ name: Check App CVEs
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 22 * * *" # Run at 10 PM UTC (12 AM CET) every day
+    - cron: "0 22 * * 0" # Run at 10 PM UTC (12 AM CET) every Sunday
 
 jobs:
   check-cves:
