@@ -116,8 +116,8 @@ jobs:
                       return
                   
                   print(f"Found {total_results} potential CVEs for {app_name} in the last 90 days:")
-                  print(f"\n{'ID':<20} {'Published':<12} {'Base Score':<10} {'Severity':<10}")
-                  print(f"{'-' * 60}")
+                  print(f"\n{'ID':<20} {'Published':<12} {'Last Modified':<12} {'Base Score':<10} {'Severity':<10}")
+                  print(f"{'-' * 72}")
                   
                   for vuln in vulnerabilities:
                       cve = vuln.get('cve', {})
@@ -125,10 +125,13 @@ jobs:
                       # Get CVE details
                       cve_id = cve.get('id', 'N/A')
                       
-                      # Get published date
+                      # Get published and last modified dates
                       published_date = "N/A"
+                      last_modified_date = "N/A"
                       if 'published' in cve:
                           published_date = cve['published'].split('T')[0]
+                      if 'lastModified' in cve:
+                          last_modified_date = cve['lastModified'].split('T')[0]
                       
                       # Get CVSS score and severity if available
                       base_score = "N/A"
@@ -152,7 +155,7 @@ jobs:
                           base_score = cvss_data.get('baseScore', 'N/A')
                           severity = metrics['cvssMetricV2'][0].get('baseSeverity', 'N/A')
                       
-                      print(f"{cve_id:<20} {published_date:<12} {base_score:<10} {severity:<10}")
+                      print(f"{cve_id:<20} {published_date:<12} {last_modified_date:<12} {base_score:<10} {severity:<10}")
                   
                   encoded_search = quote(search_term)
                   print(f"\nFor more details, visit: https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&query={encoded_search}&search_type=all")
