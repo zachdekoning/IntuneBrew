@@ -157,22 +157,10 @@ jobs:
                   print(f"Found {total_results} CPE names for {app_name}.")
                   
                   # Sort CPEs by cpeNameId (descending) to get the most recent ones
-                  # Extract numeric part from cpeNameId for better sorting
-                  def extract_id_for_sorting(cpe):
-                      cpe_name_id = cpe.get('cpeNameId', '')
-                      # Print the cpeNameId for debugging
-                      print(f"CPE ID: {cpe_name_id}")
-                      return cpe_name_id
-                  
-                  sorted_cpes = sorted(cpes, key=extract_id_for_sorting, reverse=True)
+                  sorted_cpes = sorted(cpes, key=lambda x: x.get('cpeNameId', ''), reverse=True)
                   
                   # Take the 5 most recent CPEs
                   recent_cpes = sorted_cpes[:5]
-                  
-                  # Print the selected CPEs for debugging
-                  print("Selected CPEs:")
-                  for cpe in recent_cpes:
-                      print(f"  ID: {cpe.get('cpeNameId', '')}, Name: {cpe.get('cpe', {}).get('cpeName', '')}")
                   
                   # Extract just the CPE names
                   cpe_names = [cpe.get('cpe', {}).get('cpeName') for cpe in recent_cpes if cpe.get('cpe', {}).get('cpeName')]
@@ -206,16 +194,14 @@ jobs:
               try:
                   # Query the NVD API for CVEs using the CPE name
                   # Construct the URL directly to ensure exact format
-                  cpe_name_encoded = quote(cpe_name)
+                  # cpe_name_encoded = quote(cpe_name)
                   start_date_encoded = quote(start_date_str)
-                  end_date_encoded = quote(end_date_str)
-                  url = f"https://services.nvd.nist.gov/rest/json/cves/2.0?cpeName={cpe_name_encoded}&pubStartDate={start_date_encoded}&pubEndDate={end_date_encoded}"
+                  url = f"https://services.nvd.nist.gov/rest/json/cves/2.0?cpeName={cpe_name}"
                   
                   # Set up headers with API key
                   headers = {'apiKey': nvd_api_key}
                   
                   # Make the request with API key in headers
-                  print(f"Querying CVE API with URL: {url}")
                   response = requests.get(url, headers=headers)
                   
                   # Check if request was successful
