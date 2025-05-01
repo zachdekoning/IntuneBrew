@@ -115,10 +115,13 @@ jobs:
                       print(f"No CVEs found for {app_name} in the last 90 days.")
                       return
                   
-                  print(f"Found {total_results} potential CVEs for {app_name} in the last 90 days:")
+                  print(f"Found {total_results} potential CVEs for {app_name} in the last 90 days.")
+                  print(f"Displaying the 5 most recent CVEs sorted by last modified date:")
                   print(f"\n{'ID':<20} {'Published':<12} {'Last Modified':<12} {'Base Score':<10} {'Severity':<10}")
                   print(f"{'-' * 72}")
                   
+                  # Process and sort vulnerabilities by last modified date
+                  processed_vulns = []
                   for vuln in vulnerabilities:
                       cve = vuln.get('cve', {})
                       
@@ -136,10 +139,12 @@ jobs:
                       # Get published and last modified dates
                       published_date = "N/A"
                       last_modified_date = "N/A"
+                      last_modified_datetime = None
                       if 'published' in cve:
                           published_date = cve['published'].split('T')[0]
                       if 'lastModified' in cve:
                           last_modified_date = cve['lastModified'].split('T')[0]
+                          last_modified_datetime = datetime.strptime(cve['lastModified'].split('.')[0], "%Y-%m-%dT%H:%M:%S")
                       
                       # Get CVSS score and severity if available
                       base_score = "N/A"
@@ -163,9 +168,36 @@ jobs:
                           base_score = cvss_data.get('baseScore', 'N/A')
                           severity = metrics['cvssMetricV2'][0].get('baseSeverity', 'N/A')
                       
-                      print(f"{cve_id:<20} {published_date:<12} {last_modified_date:<12} {base_score:<10} {severity:<10}")
-                      print(f"Description: {description}")
+                      # Add to processed list with all details
+                      processed_vulns.append({
+                          'cve_id': cve_id,
+                          'published_date': published_date,
+                          'last_modified_date': last_modified_date,
+                          'last_modified_datetime': last_modified_datetime,
+                          'base_score': base_score,
+                          'severity': severity,
+                          'description': description
+                      })
+                  
+                  # Sort by last modified date (newest first)
+                  sorted_vulns = sorted(
+                      [v for v in processed_vulns if v['last_modified_datetime'] is not None],
+                      key=lambda x: x['last_modified_datetime'],
+                      reverse=True
+                  )
+                  
+                  # Take only the 5 most recent CVEs
+                  recent_vulns = sorted_vulns[:5]
+                  
+                  # Display the results
+                  for vuln in recent_vulns:
+                      print(f"{vuln['cve_id']:<20} {vuln['published_date']:<12} {vuln['last_modified_date']:<12} {vuln['base_score']:<10} {vuln['severity']:<10}")
+                      print(f"Description: {vuln['description']}")
                       print(f"{'-' * 72}")
+                  
+                  # Show how many were found vs. how many are displayed
+                  if total_results > 5:
+                      print(f"Note: Showing 5 most recent CVEs out of {total_results} found for {app_name}.")
                   
                   encoded_search = quote(search_term)
                   print(f"\nFor more details, visit: https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&query={encoded_search}&search_type=all")
