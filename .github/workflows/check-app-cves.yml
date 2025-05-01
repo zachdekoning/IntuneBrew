@@ -2,14 +2,8 @@ name: Check App CVEs
 
 on:
   workflow_dispatch:
-    inputs:
-      apps:
-        description: "Comma-separated list of apps to check (default: Google Chrome,Mozilla Firefox)"
-        required: false
-        default: "Google Chrome,Mozilla Firefox"
-        type: string
   schedule:
-    - cron: "0 0 * * 1" # Run at midnight on Mondays
+    - cron: "0 22 * * *" # Run at 10 PM UTC (12 AM CET) every day
 
 jobs:
   check-cves:
@@ -29,13 +23,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests supabase
 
-      - name: Parse input apps
-        id: parse-apps
+      - name: Read supported apps
+        id: read-apps
         run: |
-          # Get apps from input or use default
-          APPS="${{ github.event.inputs.apps || 'Google Chrome,Mozilla Firefox' }}"
-          echo "Checking CVEs for: $APPS"
-          echo "APPS=$APPS" >> $GITHUB_ENV
+          # Read the supported_apps.json file
+          echo "Reading supported apps from supported_apps.json"
 
       - name: Check CVEs for apps
         env:
@@ -76,8 +68,50 @@ jobs:
               
           # With API key, rate limits are 50 requests per 30 seconds
 
-          # Get list of apps to check
-          apps_to_check = os.environ.get('APPS', 'Google Chrome,Mozilla Firefox').split(',')
+          import json
+
+          # Function to get proper app name from app JSON file
+          def get_app_display_name(app_key, app_url):
+              try:
+                  response = requests.get(app_url)
+                  if response.status_code == 200:
+                      app_data = response.json()
+                      # Get the display name from the JSON file
+                      display_name = app_data.get('name') or app_data.get('display_name')
+                      if display_name:
+                          return display_name
+                  # If we can't get the display name, format the key as a fallback
+                  return ' '.join(word.capitalize() for word in app_key.split('_'))
+              except Exception as e:
+                  print(f"Error fetching app info for {app_key}: {str(e)}")
+                  # Format the key as a fallback
+                  return ' '.join(word.capitalize() for word in app_key.split('_'))
+
+          # Read the supported apps from the JSON file
+          try:
+              with open('supported_apps.json', 'r') as f:
+                  supported_apps = json.load(f)
+              
+              print(f"Found {len(supported_apps)} apps in supported_apps.json")
+              
+              # Process all apps
+              app_display_names = []
+              
+              for app_key, app_url in supported_apps.items():
+                  display_name = get_app_display_name(app_key, app_url)
+                  app_display_names.append(display_name)
+                  
+                  # Add a small delay to avoid rate limiting when fetching app info
+                  time.sleep(0.1)
+              
+              print(f"Processing {len(app_display_names)} apps for CVE checks")
+              
+          except Exception as e:
+              print(f"Error reading supported_apps.json: {str(e)}")
+              sys.exit(1)
+
+          # List of apps to check
+          apps_to_check = app_display_names
 
           # Function to check CVEs for a specific app
           def check_cves_for_app(app_name):
@@ -259,7 +293,9 @@ jobs:
                   traceback.print_exc()
 
           # Check CVEs for each app
-          for app in apps_to_check:
+          print(f"\nChecking CVEs for {len(apps_to_check)} apps:")
+          for i, app in enumerate(apps_to_check):
+              print(f"\nProcessing app {i+1}/{len(apps_to_check)}: {app}")
               check_cves_for_app(app.strip())
               # Add a small delay between requests to avoid rate limiting
               # With API key, we can make up to 50 requests per 30 seconds
