@@ -53,6 +53,14 @@ elif [ -f "$HOME/Library/Caches/pro.betterdisplay.BetterDisplay" ]; then
     rm -f "$HOME/Library/Caches/pro.betterdisplay.BetterDisplay" 2>/dev/null || true
 fi
 
+# Remove $HOME/Library/Caches/SentryCrash/BetterDisplay
+echo "Removing $HOME/Library/Caches/SentryCrash/BetterDisplay..."
+if [ -d "$HOME/Library/Caches/SentryCrash/BetterDisplay" ]; then
+    rm -rf "$HOME/Library/Caches/SentryCrash/BetterDisplay" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/SentryCrash/BetterDisplay" ]; then
+    rm -f "$HOME/Library/Caches/SentryCrash/BetterDisplay" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/HTTPStorages/pro.betterdisplay.BetterDisplay
 echo "Removing $HOME/Library/HTTPStorages/pro.betterdisplay.BetterDisplay..."
 if [ -d "$HOME/Library/HTTPStorages/pro.betterdisplay.BetterDisplay" ]; then

@@ -47,5 +47,37 @@ launchctl unload -w /Library/LaunchAgents/com.northpolesec.santad.plist 2>/dev/n
 launchctl unload -w /Library/LaunchDaemons/com.northpolesec.santad.plist 2>/dev/null || true
 launchctl unload -w ~/Library/LaunchAgents/com.northpolesec.santad.plist 2>/dev/null || true
 
+# Remove /private/etc/asl/com.northpolesec.santa.asl.conf
+echo "Removing /private/etc/asl/com.northpolesec.santa.asl.conf..."
+if [ -d "/private/etc/asl/com.northpolesec.santa.asl.conf" ]; then
+    rm -rf "/private/etc/asl/com.northpolesec.santa.asl.conf" 2>/dev/null || true
+elif [ -f "/private/etc/asl/com.northpolesec.santa.asl.conf" ]; then
+    rm -f "/private/etc/asl/com.northpolesec.santa.asl.conf" 2>/dev/null || true
+fi
+
+# Remove /private/etc/newsyslog.d/com.northpolesec.santa.newsyslog.conf
+echo "Removing /private/etc/newsyslog.d/com.northpolesec.santa.newsyslog.conf..."
+if [ -d "/private/etc/newsyslog.d/com.northpolesec.santa.newsyslog.conf" ]; then
+    rm -rf "/private/etc/newsyslog.d/com.northpolesec.santa.newsyslog.conf" 2>/dev/null || true
+elif [ -f "/private/etc/newsyslog.d/com.northpolesec.santa.newsyslog.conf" ]; then
+    rm -f "/private/etc/newsyslog.d/com.northpolesec.santa.newsyslog.conf" 2>/dev/null || true
+fi
+
+# Remove /var/db/santa
+echo "Removing /var/db/santa..."
+if [ -d "/var/db/santa" ]; then
+    rm -rf "/var/db/santa" 2>/dev/null || true
+elif [ -f "/var/db/santa" ]; then
+    rm -f "/var/db/santa" 2>/dev/null || true
+fi
+
+# Remove /var/log/santa*
+echo "Removing /var/log/santa*..."
+if [ -d "/var/log/santa*" ]; then
+    rm -rf "/var/log/santa*" 2>/dev/null || true
+elif [ -f "/var/log/santa*" ]; then
+    rm -f "/var/log/santa*" 2>/dev/null || true
+fi
+
 echo "Uninstallation complete!"
 exit 0

@@ -17,23 +17,19 @@ fi
 echo "Stopping Microsoft Edge if running..."
 pkill -f "Microsoft Edge" 2>/dev/null || true
 
-# Unload service com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system
-echo "Unloading service com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system..."
-launchctl unload -w /Library/LaunchAgents/com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system.plist 2>/dev/null || true
-launchctl unload -w /Library/LaunchDaemons/com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system.plist 2>/dev/null || true
-launchctl unload -w ~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system.plist 2>/dev/null || true
+# Unload service com.microsoft.EdgeUpdater.wake
+echo "Unloading service com.microsoft.EdgeUpdater.wake..."
+launchctl unload -w /Library/LaunchAgents/com.microsoft.EdgeUpdater.wake.plist 2>/dev/null || true
+launchctl unload -w /Library/LaunchDaemons/com.microsoft.EdgeUpdater.wake.plist 2>/dev/null || true
+launchctl unload -w ~/Library/LaunchAgents/com.microsoft.EdgeUpdater.wake.plist 2>/dev/null || true
 
-# Unload service com.microsoft.EdgeUpdater.update.system
-echo "Unloading service com.microsoft.EdgeUpdater.update.system..."
-launchctl unload -w /Library/LaunchAgents/com.microsoft.EdgeUpdater.update.system.plist 2>/dev/null || true
-launchctl unload -w /Library/LaunchDaemons/com.microsoft.EdgeUpdater.update.system.plist 2>/dev/null || true
-launchctl unload -w ~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update.system.plist 2>/dev/null || true
-
-# Unload service com.microsoft.EdgeUpdater.wake.system
-echo "Unloading service com.microsoft.EdgeUpdater.wake.system..."
-launchctl unload -w /Library/LaunchAgents/com.microsoft.EdgeUpdater.wake.system.plist 2>/dev/null || true
-launchctl unload -w /Library/LaunchDaemons/com.microsoft.EdgeUpdater.wake.system.plist 2>/dev/null || true
-launchctl unload -w ~/Library/LaunchAgents/com.microsoft.EdgeUpdater.wake.system.plist 2>/dev/null || true
+# Remove /Applications/Microsoft Edge.app
+echo "Removing /Applications/Microsoft Edge.app..."
+if [ -d "/Applications/Microsoft Edge.app" ]; then
+    rm -rf "/Applications/Microsoft Edge.app" 2>/dev/null || true
+elif [ -f "/Applications/Microsoft Edge.app" ]; then
+    rm -f "/Applications/Microsoft Edge.app" 2>/dev/null || true
+fi
 
 # Remove $HOME/Library/Application Scripts/com.microsoft.edgemac.wdgExtension
 echo "Removing $HOME/Library/Application Scripts/com.microsoft.edgemac.wdgExtension..."
@@ -51,12 +47,28 @@ elif [ -f "$HOME/Library/Application Support/Microsoft Edge" ]; then
     rm -f "$HOME/Library/Application Support/Microsoft Edge" 2>/dev/null || true
 fi
 
+# Remove $HOME/Library/Application Support/Microsoft/EdgeUpdater
+echo "Removing $HOME/Library/Application Support/Microsoft/EdgeUpdater..."
+if [ -d "$HOME/Library/Application Support/Microsoft/EdgeUpdater" ]; then
+    rm -rf "$HOME/Library/Application Support/Microsoft/EdgeUpdater" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/Microsoft/EdgeUpdater" ]; then
+    rm -f "$HOME/Library/Application Support/Microsoft/EdgeUpdater" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/Caches/com.microsoft.edgemac
 echo "Removing $HOME/Library/Caches/com.microsoft.edgemac..."
 if [ -d "$HOME/Library/Caches/com.microsoft.edgemac" ]; then
     rm -rf "$HOME/Library/Caches/com.microsoft.edgemac" 2>/dev/null || true
 elif [ -f "$HOME/Library/Caches/com.microsoft.edgemac" ]; then
     rm -f "$HOME/Library/Caches/com.microsoft.edgemac" 2>/dev/null || true
+fi
+
+# Remove $HOME/Library/Caches/com.microsoft.EdgeUpdater
+echo "Removing $HOME/Library/Caches/com.microsoft.EdgeUpdater..."
+if [ -d "$HOME/Library/Caches/com.microsoft.EdgeUpdater" ]; then
+    rm -rf "$HOME/Library/Caches/com.microsoft.EdgeUpdater" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/com.microsoft.EdgeUpdater" ]; then
+    rm -f "$HOME/Library/Caches/com.microsoft.EdgeUpdater" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/Caches/Microsoft Edge
@@ -81,6 +93,14 @@ if [ -d "$HOME/Library/HTTPStorages/com.microsoft.edgemac" ]; then
     rm -rf "$HOME/Library/HTTPStorages/com.microsoft.edgemac" 2>/dev/null || true
 elif [ -f "$HOME/Library/HTTPStorages/com.microsoft.edgemac" ]; then
     rm -f "$HOME/Library/HTTPStorages/com.microsoft.edgemac" 2>/dev/null || true
+fi
+
+# Remove $HOME/Library/HTTPStorages/com.microsoft.EdgeUpdater
+echo "Removing $HOME/Library/HTTPStorages/com.microsoft.EdgeUpdater..."
+if [ -d "$HOME/Library/HTTPStorages/com.microsoft.EdgeUpdater" ]; then
+    rm -rf "$HOME/Library/HTTPStorages/com.microsoft.EdgeUpdater" 2>/dev/null || true
+elif [ -f "$HOME/Library/HTTPStorages/com.microsoft.EdgeUpdater" ]; then
+    rm -f "$HOME/Library/HTTPStorages/com.microsoft.EdgeUpdater" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/LaunchAgents/com.microsoft.EdgeUpdater.*.plist
@@ -123,20 +143,12 @@ elif [ -f "$HOME/Library/WebKit/com.microsoft.edgemac" ]; then
     rm -f "$HOME/Library/WebKit/com.microsoft.edgemac" 2>/dev/null || true
 fi
 
-# Remove /Library/Application Support/Microsoft/EdgeUpdater
-echo "Removing /Library/Application Support/Microsoft/EdgeUpdater..."
-if [ -d "/Library/Application Support/Microsoft/EdgeUpdater" ]; then
-    rm -rf "/Library/Application Support/Microsoft/EdgeUpdater" 2>/dev/null || true
-elif [ -f "/Library/Application Support/Microsoft/EdgeUpdater" ]; then
-    rm -f "/Library/Application Support/Microsoft/EdgeUpdater" 2>/dev/null || true
-fi
-
-# Remove /Library/Application Support/Microsoft
-echo "Removing /Library/Application Support/Microsoft..."
-if [ -d "/Library/Application Support/Microsoft" ]; then
-    rm -rf "/Library/Application Support/Microsoft" 2>/dev/null || true
-elif [ -f "/Library/Application Support/Microsoft" ]; then
-    rm -f "/Library/Application Support/Microsoft" 2>/dev/null || true
+# Remove $HOME/Library/Application Support/Microsoft
+echo "Removing $HOME/Library/Application Support/Microsoft..."
+if [ -d "$HOME/Library/Application Support/Microsoft" ]; then
+    rm -rf "$HOME/Library/Application Support/Microsoft" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/Microsoft" ]; then
+    rm -f "$HOME/Library/Application Support/Microsoft" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/Microsoft

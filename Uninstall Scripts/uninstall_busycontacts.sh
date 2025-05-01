@@ -37,20 +37,20 @@ elif [ -f "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.busycontacts
     rm -f "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.busycontacts" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/
-echo "Removing $HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/..."
-if [ -d "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/" ]; then
-    rm -rf "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/" 2>/dev/null || true
-elif [ -f "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/" ]; then
-    rm -f "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/" 2>/dev/null || true
+# Remove $HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts
+echo "Removing $HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts..."
+if [ -d "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts" ]; then
+    rm -rf "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts" ]; then
+    rm -f "$HOME/Library/Application Scripts/N4RA379GBW.com.busymac.contacts" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Application Support/Mail/BusyContacts/
-echo "Removing $HOME/Library/Application Support/Mail/BusyContacts/..."
-if [ -d "$HOME/Library/Application Support/Mail/BusyContacts/" ]; then
-    rm -rf "$HOME/Library/Application Support/Mail/BusyContacts/" 2>/dev/null || true
-elif [ -f "$HOME/Library/Application Support/Mail/BusyContacts/" ]; then
-    rm -f "$HOME/Library/Application Support/Mail/BusyContacts/" 2>/dev/null || true
+# Remove $HOME/Library/Application Support/Mail/BusyContacts
+echo "Removing $HOME/Library/Application Support/Mail/BusyContacts..."
+if [ -d "$HOME/Library/Application Support/Mail/BusyContacts" ]; then
+    rm -rf "$HOME/Library/Application Support/Mail/BusyContacts" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/Mail/BusyContacts" ]; then
+    rm -f "$HOME/Library/Application Support/Mail/BusyContacts" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/Containers/com.busymac.busycontacts

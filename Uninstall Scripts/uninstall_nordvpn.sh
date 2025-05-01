@@ -69,12 +69,12 @@ elif [ -f "$HOME/Library/Cookies/com.nordvpn.macos.binarycookies" ]; then
     rm -f "$HOME/Library/Cookies/com.nordvpn.macos.binarycookies" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Logs/NordVPN/
-echo "Removing $HOME/Library/Logs/NordVPN/..."
-if [ -d "$HOME/Library/Logs/NordVPN/" ]; then
-    rm -rf "$HOME/Library/Logs/NordVPN/" 2>/dev/null || true
-elif [ -f "$HOME/Library/Logs/NordVPN/" ]; then
-    rm -f "$HOME/Library/Logs/NordVPN/" 2>/dev/null || true
+# Remove $HOME/Library/Logs/NordVPN
+echo "Removing $HOME/Library/Logs/NordVPN..."
+if [ -d "$HOME/Library/Logs/NordVPN" ]; then
+    rm -rf "$HOME/Library/Logs/NordVPN" 2>/dev/null || true
+elif [ -f "$HOME/Library/Logs/NordVPN" ]; then
+    rm -f "$HOME/Library/Logs/NordVPN" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/Preferences/com.nordvpn.macos.plist

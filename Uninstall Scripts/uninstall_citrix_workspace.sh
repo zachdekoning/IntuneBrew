@@ -41,11 +41,23 @@ launchctl unload -w /Library/LaunchAgents/com.citrix.ctxworkspaceupdater.plist 2
 launchctl unload -w /Library/LaunchDaemons/com.citrix.ctxworkspaceupdater.plist 2>/dev/null || true
 launchctl unload -w ~/Library/LaunchAgents/com.citrix.ctxworkspaceupdater.plist 2>/dev/null || true
 
+# Unload service com.citrix.devicetrust.launchagent
+echo "Unloading service com.citrix.devicetrust.launchagent..."
+launchctl unload -w /Library/LaunchAgents/com.citrix.devicetrust.launchagent.plist 2>/dev/null || true
+launchctl unload -w /Library/LaunchDaemons/com.citrix.devicetrust.launchagent.plist 2>/dev/null || true
+launchctl unload -w ~/Library/LaunchAgents/com.citrix.devicetrust.launchagent.plist 2>/dev/null || true
+
 # Unload service com.citrix.ReceiverHelper
 echo "Unloading service com.citrix.ReceiverHelper..."
 launchctl unload -w /Library/LaunchAgents/com.citrix.ReceiverHelper.plist 2>/dev/null || true
 launchctl unload -w /Library/LaunchDaemons/com.citrix.ReceiverHelper.plist 2>/dev/null || true
 launchctl unload -w ~/Library/LaunchAgents/com.citrix.ReceiverHelper.plist 2>/dev/null || true
+
+# Unload service com.citrix.ReceiverUninstallHelper
+echo "Unloading service com.citrix.ReceiverUninstallHelper..."
+launchctl unload -w /Library/LaunchAgents/com.citrix.ReceiverUninstallHelper.plist 2>/dev/null || true
+launchctl unload -w /Library/LaunchDaemons/com.citrix.ReceiverUninstallHelper.plist 2>/dev/null || true
+launchctl unload -w ~/Library/LaunchAgents/com.citrix.ReceiverUninstallHelper.plist 2>/dev/null || true
 
 # Unload service com.citrix.safariadapter
 echo "Unloading service com.citrix.safariadapter..."
@@ -58,6 +70,12 @@ echo "Unloading service com.citrix.ServiceRecords..."
 launchctl unload -w /Library/LaunchAgents/com.citrix.ServiceRecords.plist 2>/dev/null || true
 launchctl unload -w /Library/LaunchDaemons/com.citrix.ServiceRecords.plist 2>/dev/null || true
 launchctl unload -w ~/Library/LaunchAgents/com.citrix.ServiceRecords.plist 2>/dev/null || true
+
+# Unload service com.citrix.UninstallMonitor
+echo "Unloading service com.citrix.UninstallMonitor..."
+launchctl unload -w /Library/LaunchAgents/com.citrix.UninstallMonitor.plist 2>/dev/null || true
+launchctl unload -w /Library/LaunchDaemons/com.citrix.UninstallMonitor.plist 2>/dev/null || true
+launchctl unload -w ~/Library/LaunchAgents/com.citrix.UninstallMonitor.plist 2>/dev/null || true
 
 # Kill application with bundle ID Citrix.ServiceRecords if running
 echo "Stopping application with bundle ID Citrix.ServiceRecords if running..."

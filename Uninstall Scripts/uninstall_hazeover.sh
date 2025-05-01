@@ -43,6 +43,14 @@ elif [ -f "$HOME/Library/Caches/com.pointum.hazeover" ]; then
     rm -f "$HOME/Library/Caches/com.pointum.hazeover" 2>/dev/null || true
 fi
 
+# Remove $HOME/Library/HTTPStorages/com.pointum.hazeover
+echo "Removing $HOME/Library/HTTPStorages/com.pointum.hazeover..."
+if [ -d "$HOME/Library/HTTPStorages/com.pointum.hazeover" ]; then
+    rm -rf "$HOME/Library/HTTPStorages/com.pointum.hazeover" 2>/dev/null || true
+elif [ -f "$HOME/Library/HTTPStorages/com.pointum.hazeover" ]; then
+    rm -f "$HOME/Library/HTTPStorages/com.pointum.hazeover" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/Preferences/com.pointum.hazeover.plist
 echo "Removing $HOME/Library/Preferences/com.pointum.hazeover.plist..."
 if [ -d "$HOME/Library/Preferences/com.pointum.hazeover.plist" ]; then

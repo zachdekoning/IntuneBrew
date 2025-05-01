@@ -29,6 +29,12 @@ launchctl unload -w /Library/LaunchAgents/corp.sap.privileges.daemon.plist 2>/de
 launchctl unload -w /Library/LaunchDaemons/corp.sap.privileges.daemon.plist 2>/dev/null || true
 launchctl unload -w ~/Library/LaunchAgents/corp.sap.privileges.daemon.plist 2>/dev/null || true
 
+# Unload service corp.sap.privileges.watcher
+echo "Unloading service corp.sap.privileges.watcher..."
+launchctl unload -w /Library/LaunchAgents/corp.sap.privileges.watcher.plist 2>/dev/null || true
+launchctl unload -w /Library/LaunchDaemons/corp.sap.privileges.watcher.plist 2>/dev/null || true
+launchctl unload -w ~/Library/LaunchAgents/corp.sap.privileges.watcher.plist 2>/dev/null || true
+
 # Remove binary /Applications/Privileges.app/Privileges.app/Contents/MacOS/PrivilegesCLI
 echo "Removing binary /Applications/Privileges.app/Privileges.app/Contents/MacOS/PrivilegesCLI..."
 if [ -f "/Applications/Privileges.app/Privileges.app/Contents/MacOS/PrivilegesCLI" ]; then

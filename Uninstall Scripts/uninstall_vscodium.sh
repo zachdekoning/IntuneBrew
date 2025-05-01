@@ -71,6 +71,14 @@ elif [ -f "$HOME/Library/Caches/com.vscodium.ShipIt" ]; then
     rm -f "$HOME/Library/Caches/com.vscodium.ShipIt" 2>/dev/null || true
 fi
 
+# Remove $HOME/Library/Caches/VSCodium
+echo "Removing $HOME/Library/Caches/VSCodium..."
+if [ -d "$HOME/Library/Caches/VSCodium" ]; then
+    rm -rf "$HOME/Library/Caches/VSCodium" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/VSCodium" ]; then
+    rm -f "$HOME/Library/Caches/VSCodium" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/HTTPStorages/com.vscodium
 echo "Removing $HOME/Library/HTTPStorages/com.vscodium..."
 if [ -d "$HOME/Library/HTTPStorages/com.vscodium" ]; then

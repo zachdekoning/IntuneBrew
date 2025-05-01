@@ -41,12 +41,12 @@ elif [ -f "$HOME/Library/Application Support/MongoDB Compass" ]; then
     rm -f "$HOME/Library/Application Support/MongoDB Compass" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Caches/MongoDB Compass/
-echo "Removing $HOME/Library/Caches/MongoDB Compass/..."
-if [ -d "$HOME/Library/Caches/MongoDB Compass/" ]; then
-    rm -rf "$HOME/Library/Caches/MongoDB Compass/" 2>/dev/null || true
-elif [ -f "$HOME/Library/Caches/MongoDB Compass/" ]; then
-    rm -f "$HOME/Library/Caches/MongoDB Compass/" 2>/dev/null || true
+# Remove $HOME/Library/Caches/MongoDB Compass
+echo "Removing $HOME/Library/Caches/MongoDB Compass..."
+if [ -d "$HOME/Library/Caches/MongoDB Compass" ]; then
+    rm -rf "$HOME/Library/Caches/MongoDB Compass" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/MongoDB Compass" ]; then
+    rm -f "$HOME/Library/Caches/MongoDB Compass" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/Preferences/com.mongodb.compass.plist

@@ -9,8 +9,8 @@ echo "Uninstalling 1Password..."
 
 # Check if running as root
 if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
-    exit 1
+  echo "Please run as root"
+  exit 1
 fi
 
 # Kill application process if running

@@ -31,28 +31,28 @@ if [ -f "/Applications/CLion.app/CLion.app/Contents/MacOS/clion" ]; then
     rm -f "/Applications/CLion.app/CLion.app/Contents/MacOS/clion" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Application Support/JetBrains/CLion2024.3
-echo "Removing $HOME/Library/Application Support/JetBrains/CLion2024.3..."
-if [ -d "$HOME/Library/Application Support/JetBrains/CLion2024.3" ]; then
-    rm -rf "$HOME/Library/Application Support/JetBrains/CLion2024.3" 2>/dev/null || true
-elif [ -f "$HOME/Library/Application Support/JetBrains/CLion2024.3" ]; then
-    rm -f "$HOME/Library/Application Support/JetBrains/CLion2024.3" 2>/dev/null || true
+# Remove $HOME/Library/Application Support/JetBrains/CLion2025.1
+echo "Removing $HOME/Library/Application Support/JetBrains/CLion2025.1..."
+if [ -d "$HOME/Library/Application Support/JetBrains/CLion2025.1" ]; then
+    rm -rf "$HOME/Library/Application Support/JetBrains/CLion2025.1" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/JetBrains/CLion2025.1" ]; then
+    rm -f "$HOME/Library/Application Support/JetBrains/CLion2025.1" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Caches/JetBrains/CLion2024.3
-echo "Removing $HOME/Library/Caches/JetBrains/CLion2024.3..."
-if [ -d "$HOME/Library/Caches/JetBrains/CLion2024.3" ]; then
-    rm -rf "$HOME/Library/Caches/JetBrains/CLion2024.3" 2>/dev/null || true
-elif [ -f "$HOME/Library/Caches/JetBrains/CLion2024.3" ]; then
-    rm -f "$HOME/Library/Caches/JetBrains/CLion2024.3" 2>/dev/null || true
+# Remove $HOME/Library/Caches/JetBrains/CLion2025.1
+echo "Removing $HOME/Library/Caches/JetBrains/CLion2025.1..."
+if [ -d "$HOME/Library/Caches/JetBrains/CLion2025.1" ]; then
+    rm -rf "$HOME/Library/Caches/JetBrains/CLion2025.1" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/JetBrains/CLion2025.1" ]; then
+    rm -f "$HOME/Library/Caches/JetBrains/CLion2025.1" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Logs/JetBrains/CLion2024.3
-echo "Removing $HOME/Library/Logs/JetBrains/CLion2024.3..."
-if [ -d "$HOME/Library/Logs/JetBrains/CLion2024.3" ]; then
-    rm -rf "$HOME/Library/Logs/JetBrains/CLion2024.3" 2>/dev/null || true
-elif [ -f "$HOME/Library/Logs/JetBrains/CLion2024.3" ]; then
-    rm -f "$HOME/Library/Logs/JetBrains/CLion2024.3" 2>/dev/null || true
+# Remove $HOME/Library/Logs/JetBrains/CLion2025.1
+echo "Removing $HOME/Library/Logs/JetBrains/CLion2025.1..."
+if [ -d "$HOME/Library/Logs/JetBrains/CLion2025.1" ]; then
+    rm -rf "$HOME/Library/Logs/JetBrains/CLion2025.1" 2>/dev/null || true
+elif [ -f "$HOME/Library/Logs/JetBrains/CLion2025.1" ]; then
+    rm -f "$HOME/Library/Logs/JetBrains/CLion2025.1" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/Preferences/com.jetbrains.CLion.plist

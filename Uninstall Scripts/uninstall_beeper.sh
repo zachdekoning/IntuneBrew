@@ -17,52 +17,52 @@ fi
 echo "Stopping Beeper if running..."
 pkill -f "Beeper" 2>/dev/null || true
 
-# Remove /Applications/Beeper.app
-echo "Removing /Applications/Beeper.app..."
-if [ -d "/Applications/Beeper.app" ]; then
-    rm -rf "/Applications/Beeper.app" 2>/dev/null || true
-elif [ -f "/Applications/Beeper.app" ]; then
-    rm -f "/Applications/Beeper.app" 2>/dev/null || true
+# Remove /Applications/Beeper Desktop.app
+echo "Removing /Applications/Beeper Desktop.app..."
+if [ -d "/Applications/Beeper Desktop.app" ]; then
+    rm -rf "/Applications/Beeper Desktop.app" 2>/dev/null || true
+elif [ -f "/Applications/Beeper Desktop.app" ]; then
+    rm -f "/Applications/Beeper Desktop.app" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Application Support/Beeper
-echo "Removing $HOME/Library/Application Support/Beeper..."
-if [ -d "$HOME/Library/Application Support/Beeper" ]; then
-    rm -rf "$HOME/Library/Application Support/Beeper" 2>/dev/null || true
-elif [ -f "$HOME/Library/Application Support/Beeper" ]; then
-    rm -f "$HOME/Library/Application Support/Beeper" 2>/dev/null || true
+# Remove $HOME/Library/Application Support/BeeperTexts
+echo "Removing $HOME/Library/Application Support/BeeperTexts..."
+if [ -d "$HOME/Library/Application Support/BeeperTexts" ]; then
+    rm -rf "$HOME/Library/Application Support/BeeperTexts" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/BeeperTexts" ]; then
+    rm -f "$HOME/Library/Application Support/BeeperTexts" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Caches/im.beeper
-echo "Removing $HOME/Library/Caches/im.beeper..."
-if [ -d "$HOME/Library/Caches/im.beeper" ]; then
-    rm -rf "$HOME/Library/Caches/im.beeper" 2>/dev/null || true
-elif [ -f "$HOME/Library/Caches/im.beeper" ]; then
-    rm -f "$HOME/Library/Caches/im.beeper" 2>/dev/null || true
+# Remove $HOME/Library/Caches/com.automattic.beeper.desktop
+echo "Removing $HOME/Library/Caches/com.automattic.beeper.desktop..."
+if [ -d "$HOME/Library/Caches/com.automattic.beeper.desktop" ]; then
+    rm -rf "$HOME/Library/Caches/com.automattic.beeper.desktop" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/com.automattic.beeper.desktop" ]; then
+    rm -f "$HOME/Library/Caches/com.automattic.beeper.desktop" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Caches/im.beeper.ShipIt
-echo "Removing $HOME/Library/Caches/im.beeper.ShipIt..."
-if [ -d "$HOME/Library/Caches/im.beeper.ShipIt" ]; then
-    rm -rf "$HOME/Library/Caches/im.beeper.ShipIt" 2>/dev/null || true
-elif [ -f "$HOME/Library/Caches/im.beeper.ShipIt" ]; then
-    rm -f "$HOME/Library/Caches/im.beeper.ShipIt" 2>/dev/null || true
+# Remove $HOME/Library/Caches/com.automattic.beeper.desktop.ShipIt
+echo "Removing $HOME/Library/Caches/com.automattic.beeper.desktop.ShipIt..."
+if [ -d "$HOME/Library/Caches/com.automattic.beeper.desktop.ShipIt" ]; then
+    rm -rf "$HOME/Library/Caches/com.automattic.beeper.desktop.ShipIt" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/com.automattic.beeper.desktop.ShipIt" ]; then
+    rm -f "$HOME/Library/Caches/com.automattic.beeper.desktop.ShipIt" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Preferences/im.beeper.plist
-echo "Removing $HOME/Library/Preferences/im.beeper.plist..."
-if [ -d "$HOME/Library/Preferences/im.beeper.plist" ]; then
-    rm -rf "$HOME/Library/Preferences/im.beeper.plist" 2>/dev/null || true
-elif [ -f "$HOME/Library/Preferences/im.beeper.plist" ]; then
-    rm -f "$HOME/Library/Preferences/im.beeper.plist" 2>/dev/null || true
+# Remove $HOME/Library/Preferences/com.automattic.beeper.desktop.plist
+echo "Removing $HOME/Library/Preferences/com.automattic.beeper.desktop.plist..."
+if [ -d "$HOME/Library/Preferences/com.automattic.beeper.desktop.plist" ]; then
+    rm -rf "$HOME/Library/Preferences/com.automattic.beeper.desktop.plist" 2>/dev/null || true
+elif [ -f "$HOME/Library/Preferences/com.automattic.beeper.desktop.plist" ]; then
+    rm -f "$HOME/Library/Preferences/com.automattic.beeper.desktop.plist" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Saved Application State/im.beeper.savedState
-echo "Removing $HOME/Library/Saved Application State/im.beeper.savedState..."
-if [ -d "$HOME/Library/Saved Application State/im.beeper.savedState" ]; then
-    rm -rf "$HOME/Library/Saved Application State/im.beeper.savedState" 2>/dev/null || true
-elif [ -f "$HOME/Library/Saved Application State/im.beeper.savedState" ]; then
-    rm -f "$HOME/Library/Saved Application State/im.beeper.savedState" 2>/dev/null || true
+# Remove $HOME/Library/Saved Application State/com.automattic.beeper.desktop.savedState
+echo "Removing $HOME/Library/Saved Application State/com.automattic.beeper.desktop.savedState..."
+if [ -d "$HOME/Library/Saved Application State/com.automattic.beeper.desktop.savedState" ]; then
+    rm -rf "$HOME/Library/Saved Application State/com.automattic.beeper.desktop.savedState" 2>/dev/null || true
+elif [ -f "$HOME/Library/Saved Application State/com.automattic.beeper.desktop.savedState" ]; then
+    rm -f "$HOME/Library/Saved Application State/com.automattic.beeper.desktop.savedState" 2>/dev/null || true
 fi
 
 echo "Uninstallation complete!"

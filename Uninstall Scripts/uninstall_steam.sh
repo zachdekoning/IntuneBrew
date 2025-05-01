@@ -49,12 +49,12 @@ elif [ -f "/Applications/Steam.app" ]; then
     rm -f "/Applications/Steam.app" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Application Support/Steam/
-echo "Removing $HOME/Library/Application Support/Steam/..."
-if [ -d "$HOME/Library/Application Support/Steam/" ]; then
-    rm -rf "$HOME/Library/Application Support/Steam/" 2>/dev/null || true
-elif [ -f "$HOME/Library/Application Support/Steam/" ]; then
-    rm -f "$HOME/Library/Application Support/Steam/" 2>/dev/null || true
+# Remove $HOME/Library/Application Support/Steam
+echo "Removing $HOME/Library/Application Support/Steam..."
+if [ -d "$HOME/Library/Application Support/Steam" ]; then
+    rm -rf "$HOME/Library/Application Support/Steam" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/Steam" ]; then
+    rm -f "$HOME/Library/Application Support/Steam" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/LaunchAgents/com.valvesoftware.steamclean.plist
@@ -73,12 +73,12 @@ elif [ -f "$HOME/Library/Preferences/com.valvesoftware.steam.helper.plist" ]; th
     rm -f "$HOME/Library/Preferences/com.valvesoftware.steam.helper.plist" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Saved Application State/com.valvesoftware.steam.savedState/
-echo "Removing $HOME/Library/Saved Application State/com.valvesoftware.steam.savedState/..."
-if [ -d "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState/" ]; then
-    rm -rf "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState/" 2>/dev/null || true
-elif [ -f "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState/" ]; then
-    rm -f "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState/" 2>/dev/null || true
+# Remove $HOME/Library/Saved Application State/com.valvesoftware.steam.savedState
+echo "Removing $HOME/Library/Saved Application State/com.valvesoftware.steam.savedState..."
+if [ -d "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState" ]; then
+    rm -rf "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState" 2>/dev/null || true
+elif [ -f "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState" ]; then
+    rm -f "$HOME/Library/Saved Application State/com.valvesoftware.steam.savedState" 2>/dev/null || true
 fi
 
 echo "Uninstallation complete!"

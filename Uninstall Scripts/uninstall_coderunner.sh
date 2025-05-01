@@ -25,12 +25,12 @@ elif [ -f "/Applications/CodeRunner.app" ]; then
     rm -f "/Applications/CodeRunner.app" 2>/dev/null || true
 fi
 
-# Remove $HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/
-echo "Removing $HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/..."
-if [ -d "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/" ]; then
-    rm -rf "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/" 2>/dev/null || true
-elif [ -f "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/" ]; then
-    rm -f "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/" 2>/dev/null || true
+# Remove $HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs
+echo "Removing $HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs..."
+if [ -d "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs" ]; then
+    rm -rf "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs" ]; then
+    rm -f "$HOME/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/Application Support/CodeRunner
