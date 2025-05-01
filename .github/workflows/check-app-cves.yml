@@ -146,6 +146,10 @@ jobs:
                   # Parse the JSON response
                   data = response.json()
                   
+                  # Print the structure of the response for debugging
+                  print(f"Response structure: {list(data.keys())}")
+                  print(f"Total results: {data.get('totalResults', 0)}")
+                  
                   # Extract CPEs from the products array
                   products = data.get('products', [])
                   
@@ -153,7 +157,43 @@ jobs:
                       print(f"No CPE names found for {app_name}.")
                       return []
                   
-                  print(f"Found {len(products)} CPE names for {app_name}.")
+                  print(f"Found {len(products)} CPE entries in the products array.")
+                  
+                  # Debug: Print the type of products
+                  print(f"Products type: {type(products)}")
+                  
+                  # If products is a list, print the type of the first few items
+                  if isinstance(products, list) and products:
+                      print(f"First product type: {type(products[0])}")
+                      if len(products) > 1:
+                          print(f"Second product type: {type(products[1])}")
+                  
+                  # Debug: Print the first product to see its structure
+                  if products:
+                      print(f"First product structure: {list(products[0].keys()) if isinstance(products[0], dict) else 'Not a dict'}")
+                  
+                  # Process the products based on their structure
+                  processed_products = []
+                  
+                  # Check if products is a list of dictionaries with 'cpe' key
+                  if all(isinstance(p, dict) and 'cpe' in p for p in products if isinstance(p, dict)):
+                      processed_products = products
+                  else:
+                      # The API response might have a different structure
+                      # Try to extract CPE objects from the response
+                      print("Trying alternative product structure extraction...")
+                      
+                      # Check if the response has numeric indices in the products array
+                      # This handles the case where products looks like [0: {cpe: {...}}, 1: {cpe: {...}}]
+                      for i in range(len(products)):
+                          if i < len(products) and isinstance(products[i], dict) and 'cpe' in products[i]:
+                              processed_products.append(products[i])
+                  
+                  if not processed_products:
+                      print(f"No valid CPE entries found for {app_name}.")
+                      return []
+                  
+                  print(f"Processed {len(processed_products)} valid CPE entries.")
                   
                   # Sort by lastModified date (descending) to get the most recent ones
                   def extract_date_for_sorting(product):
@@ -170,7 +210,7 @@ jobs:
                           return datetime.min
                   
                   # Sort by lastModified date in descending order (newest first)
-                  sorted_cpes = sorted(products, key=extract_date_for_sorting, reverse=True)
+                  sorted_cpes = sorted(processed_products, key=extract_date_for_sorting, reverse=True)
                   
                   # Take the 5 most recent CPEs
                   recent_cpes = sorted_cpes[:5]
