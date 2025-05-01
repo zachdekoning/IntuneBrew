@@ -333,60 +333,55 @@ jobs:
               print(f"Displaying the 5 most recent CVEs sorted by last modified date:")
               print(f"\n{'ID':<20} {'Published':<12} {'Last Modified':<12} {'Base Score':<10} {'Severity':<10}")
               print(f"{'-' * 72}")
-                  
-                  # First, delete existing CVEs for this app to avoid duplicates
-                  try:
-                      print(f"Removing existing CVE records for {app_name}...")
-                      supabase.table('app_cves').delete().eq('app_name', app_name).execute()
-                  except Exception as e:
-                      print(f"Error deleting existing CVEs for {app_name}: {str(e)}")
-                  
-                  # Store the CVEs in the database
-                  if recent_vulns:
-                      print(f"Storing {len(recent_vulns)} CVEs for {app_name} in the database...")
-                      cve_records = []
-                      for vuln in recent_vulns:
-                          # Convert base_score to float if it's not N/A
-                          base_score_value = None
-                          if vuln['base_score'] != 'N/A':
-                              try:
-                                  base_score_value = float(vuln['base_score'])
-                              except:
-                                  pass
-                              
-                          cve_record = {
-                              'app_name': app_name,
-                              'cve_id': vuln['cve_id'],
-                              'published_date': vuln['published_date'] if vuln['published_date'] != 'N/A' else None,
-                              'last_modified_date': vuln['last_modified_date'] if vuln['last_modified_date'] != 'N/A' else None,
-                              'base_score': base_score_value,
-                              'severity': vuln['severity'] if vuln['severity'] != 'N/A' else None,
-                              'description': vuln['description'] if vuln['description'] != 'N/A' else None,
-                              'cpe_name': vuln['cpe_name']
-                          }
-                          cve_records.append(cve_record)
-                      
-                      try:
-                          result = supabase.table('app_cves').insert(cve_records).execute()
-                          print(f"✅ Successfully stored CVEs for {app_name} in the database")
-                      except Exception as e:
-                          print(f"Error storing CVEs for {app_name}: {str(e)}")
-                  
-                  # Display the results
-                  for vuln in recent_vulns:
-                      print(f"{vuln['cve_id']:<20} {vuln['published_date']:<12} {vuln['last_modified_date']:<12} {vuln['base_score']:<10} {vuln['severity']:<10}")
-                      print(f"CPE: {vuln['cpe_name']}")
-                      print(f"Description: {vuln['description']}")
-                      print(f"{'-' * 72}")
-                  
-                  # Show how many were found vs. how many are displayed
-                  if len(all_vulns) > 5:
-                      print(f"Note: Showing 5 most recent CVEs out of {len(all_vulns)} found for {app_name}.")
-                  
+              
+              # First, delete existing CVEs for this app to avoid duplicates
+              try:
+                  print(f"Removing existing CVE records for {app_name}...")
+                  supabase.table('app_cves').delete().eq('app_name', app_name).execute()
               except Exception as e:
-                  print(f"Error checking CVEs for {app_name}: {str(e)}")
-                  import traceback
-                  traceback.print_exc()
+                  print(f"Error deleting existing CVEs for {app_name}: {str(e)}")
+              
+              # Store the CVEs in the database
+              if recent_vulns:
+                  print(f"Storing {len(recent_vulns)} CVEs for {app_name} in the database...")
+                  cve_records = []
+                  for vuln in recent_vulns:
+                      # Convert base_score to float if it's not N/A
+                      base_score_value = None
+                      if vuln['base_score'] != 'N/A':
+                          try:
+                              base_score_value = float(vuln['base_score'])
+                          except:
+                              pass
+                          
+                      cve_record = {
+                          'app_name': app_name,
+                          'cve_id': vuln['cve_id'],
+                          'published_date': vuln['published_date'] if vuln['published_date'] != 'N/A' else None,
+                          'last_modified_date': vuln['last_modified_date'] if vuln['last_modified_date'] != 'N/A' else None,
+                          'base_score': base_score_value,
+                          'severity': vuln['severity'] if vuln['severity'] != 'N/A' else None,
+                          'description': vuln['description'] if vuln['description'] != 'N/A' else None,
+                          'cpe_name': vuln['cpe_name']
+                      }
+                      cve_records.append(cve_record)
+                  
+                  try:
+                      result = supabase.table('app_cves').insert(cve_records).execute()
+                      print(f"✅ Successfully stored CVEs for {app_name} in the database")
+                  except Exception as e:
+                      print(f"Error storing CVEs for {app_name}: {str(e)}")
+              
+              # Display the results
+              for vuln in recent_vulns:
+                  print(f"{vuln['cve_id']:<20} {vuln['published_date']:<12} {vuln['last_modified_date']:<12} {vuln['base_score']:<10} {vuln['severity']:<10}")
+                  print(f"CPE: {vuln['cpe_name']}")
+                  print(f"Description: {vuln['description']}")
+                  print(f"{'-' * 72}")
+              
+              # Show how many were found vs. how many are displayed
+              if len(all_vulns) > 5:
+                  print(f"Note: Showing 5 most recent CVEs out of {len(all_vulns)} found for {app_name}.")
 
           # Check CVEs for each app
           print(f"\nChecking CVEs for {len(apps_to_check)} apps:")
