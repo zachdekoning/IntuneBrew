@@ -65,8 +65,8 @@ jobs:
               start_date = end_date - timedelta(days=90)
               
               # Format dates for NVD API
-              start_date_str = start_date.strftime("%Y-%m-%dT00:00:00.000")
-              end_date_str = end_date.strftime("%Y-%m-%dT23:59:59.999")
+              start_date_str = start_date.strftime("%Y-%m-%d %H:%M")
+              end_date_str = end_date.strftime("%Y-%m-%d %H:%M")
               
               try:
                   # Search for CVEs using nvdlib
