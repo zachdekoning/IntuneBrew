@@ -113,14 +113,75 @@ jobs:
           # List of apps to check
           apps_to_check = app_display_names
 
-          # Function to check CVEs for a specific app
-          def check_cves_for_app(app_name):
+          # Function to get CPE names for an app
+          def get_cpe_names(app_name):
               print(f"\n{'=' * 50}")
-              print(f"Checking CVEs for {app_name}")
+              print(f"Finding CPE names for {app_name}")
               print(f"{'=' * 50}")
               
-              # Normalize app name for search
-              search_term = app_name.lower().strip()
+              # Normalize app name for search and ensure exact match
+              search_term = app_name.strip()
+              
+              try:
+                  # Query the NVD API for CPE names
+                  url = f"https://services.nvd.nist.gov/rest/json/cpes/2.0"
+                  params = {
+                      "keywordSearch": search_term,
+                      "keywordExactMatch": True
+                  }
+                  
+                  # Set up headers with API key
+                  headers = {'apiKey': nvd_api_key}
+                  
+                  # Make the request with API key in headers
+                  print(f"Querying CPE API for: {search_term}")
+                  response = requests.get(url, params=params, headers=headers)
+                  
+                  # Check if request was successful
+                  if response.status_code != 200:
+                      print(f"Error: CPE API request failed with status code {response.status_code}")
+                      print(f"Response: {response.text}")
+                      return []
+                  
+                  # Parse the JSON response
+                  data = response.json()
+                  
+                  # Get the total count and CPEs
+                  total_results = data.get('totalResults', 0)
+                  cpes = data.get('products', [])
+                  
+                  if total_results == 0 or not cpes:
+                      print(f"No CPE names found for {app_name}.")
+                      return []
+                  
+                  print(f"Found {total_results} CPE names for {app_name}.")
+                  
+                  # Sort CPEs by cpeNameId (descending) to get the most recent ones
+                  sorted_cpes = sorted(cpes, key=lambda x: x.get('cpeNameId', ''), reverse=True)
+                  
+                  # Take the 5 most recent CPEs
+                  recent_cpes = sorted_cpes[:5]
+                  
+                  # Extract just the CPE names
+                  cpe_names = [cpe.get('cpe', {}).get('cpeName') for cpe in recent_cpes if cpe.get('cpe', {}).get('cpeName')]
+                  
+                  print(f"Using the {len(cpe_names)} most recent CPE names:")
+                  for cpe_name in cpe_names:
+                      print(f"  - {cpe_name}")
+                  
+                  return cpe_names
+                  
+              except Exception as e:
+                  print(f"Error finding CPE names for {app_name}: {str(e)}")
+                  import traceback
+                  traceback.print_exc()
+                  return []
+
+          # Function to check CVEs for a specific CPE name
+          def check_cves_for_cpe(cpe_name, app_name):
+              print(f"\n{'-' * 50}")
+              print(f"Checking CVEs for CPE: {cpe_name}")
+              print(f"{'-' * 50}")
               
               # Get CVEs from the last 90 days
               end_date = datetime.now()
@@ -131,13 +192,12 @@ jobs:
               end_date_str = end_date.strftime("%Y-%m-%dT23:59:59.999")
               
               try:
-                  # Directly query the NVD API
+                  # Query the NVD API for CVEs using the CPE name
                   url = f"https://services.nvd.nist.gov/rest/json/cves/2.0"
                   params = {
-                      "keywordSearch": search_term,
+                      "cpeName": cpe_name,
                       "pubStartDate": start_date_str,
-                      "pubEndDate": end_date_str,
-                      "resultsPerPage": 25
+                      "pubEndDate": end_date_str
                   }
                   
                   # Set up headers with API key
@@ -148,9 +208,9 @@ jobs:
                   
                   # Check if request was successful
                   if response.status_code != 200:
-                      print(f"Error: API request failed with status code {response.status_code}")
+                      print(f"Error: CVE API request failed with status code {response.status_code}")
                       print(f"Response: {response.text}")
-                      return
+                      return []
                   
                   # Parse the JSON response
                   data = response.json()
@@ -160,15 +220,12 @@ jobs:
                   vulnerabilities = data.get('vulnerabilities', [])
                   
                   if total_results == 0 or not vulnerabilities:
-                      print(f"No CVEs found for {app_name} in the last 90 days.")
-                      return
+                      print(f"No CVEs found for this CPE in the last 90 days.")
+                      return []
                   
-                  print(f"Found {total_results} potential CVEs for {app_name} in the last 90 days.")
-                  print(f"Displaying the 5 most recent CVEs sorted by last modified date:")
-                  print(f"\n{'ID':<20} {'Published':<12} {'Last Modified':<12} {'Base Score':<10} {'Severity':<10}")
-                  print(f"{'-' * 72}")
+                  print(f"Found {total_results} CVEs for this CPE in the last 90 days.")
                   
-                  # Process and sort vulnerabilities by last modified date
+                  # Process the vulnerabilities
                   processed_vulns = []
                   for vuln in vulnerabilities:
                       cve = vuln.get('cve', {})
@@ -224,18 +281,58 @@ jobs:
                           'last_modified_datetime': last_modified_datetime,
                           'base_score': base_score,
                           'severity': severity,
-                          'description': description
+                          'description': description,
+                          'cpe_name': cpe_name
                       })
                   
-                  # Sort by last modified date (newest first)
-                  sorted_vulns = sorted(
-                      [v for v in processed_vulns if v['last_modified_datetime'] is not None],
-                      key=lambda x: x['last_modified_datetime'],
-                      reverse=True
-                  )
+                  return processed_vulns
                   
-                  # Take only the 5 most recent CVEs
-                  recent_vulns = sorted_vulns[:5]
+              except Exception as e:
+                  print(f"Error checking CVEs for CPE {cpe_name}: {str(e)}")
+                  import traceback
+                  traceback.print_exc()
+                  return []
+
+          # Function to check CVEs for a specific app
+          def check_cves_for_app(app_name):
+              print(f"\n{'=' * 50}")
+              print(f"Checking CVEs for {app_name}")
+              print(f"{'=' * 50}")
+              
+              # Step 1: Get CPE names for the app
+              cpe_names = get_cpe_names(app_name)
+              
+              if not cpe_names:
+                  print(f"No CPE names found for {app_name}, cannot check for CVEs.")
+                  return
+              
+              # Step 2: Get CVEs for each CPE name
+              all_vulns = []
+              for cpe_name in cpe_names:
+                  vulns = check_cves_for_cpe(cpe_name, app_name)
+                  all_vulns.extend(vulns)
+                  
+                  # Add a small delay between requests to avoid rate limiting
+                  time.sleep(0.5)
+              
+              if not all_vulns:
+                  print(f"No CVEs found for {app_name} in the last 90 days.")
+                  return
+              
+              # Sort by last modified date (newest first)
+              sorted_vulns = sorted(
+                  [v for v in all_vulns if v['last_modified_datetime'] is not None],
+                  key=lambda x: x['last_modified_datetime'],
+                  reverse=True
+              )
+              
+              # Take only the 5 most recent CVEs
+              recent_vulns = sorted_vulns[:5]
+              
+              print(f"\nFound {len(all_vulns)} total CVEs for {app_name} in the last 90 days.")
+              print(f"Displaying the 5 most recent CVEs sorted by last modified date:")
+              print(f"\n{'ID':<20} {'Published':<12} {'Last Modified':<12} {'Base Score':<10} {'Severity':<10}")
+              print(f"{'-' * 72}")
                   
                   # First, delete existing CVEs for this app to avoid duplicates
                   try:
@@ -264,7 +361,8 @@ jobs:
                               'last_modified_date': vuln['last_modified_date'] if vuln['last_modified_date'] != 'N/A' else None,
                               'base_score': base_score_value,
                               'severity': vuln['severity'] if vuln['severity'] != 'N/A' else None,
-                              'description': vuln['description'] if vuln['description'] != 'N/A' else None
+                              'description': vuln['description'] if vuln['description'] != 'N/A' else None,
+                              'cpe_name': vuln['cpe_name']
                           }
                           cve_records.append(cve_record)
                       
@@ -277,15 +375,13 @@ jobs:
                   # Display the results
                   for vuln in recent_vulns:
                       print(f"{vuln['cve_id']:<20} {vuln['published_date']:<12} {vuln['last_modified_date']:<12} {vuln['base_score']:<10} {vuln['severity']:<10}")
+                      print(f"CPE: {vuln['cpe_name']}")
                       print(f"Description: {vuln['description']}")
                       print(f"{'-' * 72}")
                   
                   # Show how many were found vs. how many are displayed
-                  if total_results > 5:
-                      print(f"Note: Showing 5 most recent CVEs out of {total_results} found for {app_name}.")
-                  
-                  encoded_search = quote(search_term)
-                  print(f"\nFor more details, visit: https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&query={encoded_search}&search_type=all")
+                  if len(all_vulns) > 5:
+                      print(f"Note: Showing 5 most recent CVEs out of {len(all_vulns)} found for {app_name}.")
                   
               except Exception as e:
                   print(f"Error checking CVEs for {app_name}: {str(e)}")
@@ -295,11 +391,11 @@ jobs:
           # Check CVEs for each app
           print(f"\nChecking CVEs for {len(apps_to_check)} apps:")
           for i, app in enumerate(apps_to_check):
-              print(f"\nProcessing app {i+1}/{len(apps_to_check)}: {app}")
+              print(f"\n[{i+1}/{len(apps_to_check)}] Processing app: {app}")
               check_cves_for_app(app.strip())
-              # Add a small delay between requests to avoid rate limiting
-              # With API key, we can make up to 50 requests per 30 seconds
-              time.sleep(0.5)  # 0.5 second delay with API key
+              # Add a larger delay between apps to avoid rate limiting
+              # Since we're making multiple requests per app now
+              time.sleep(2)  # 2 second delay between apps
 
           print("\nCVE check completed and data stored in Supabase database.")
           EOF
