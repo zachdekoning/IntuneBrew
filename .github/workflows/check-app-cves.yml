@@ -146,24 +146,41 @@ jobs:
                   # Parse the JSON response
                   data = response.json()
                   
-                  # Get the total count and CPEs
-                  total_results = data.get('totalResults', 0)
-                  cpes = data.get('products', [])
+                  # Extract CPEs with numeric keys (like 2761, 2762, etc.)
+                  numeric_cpes = []
+                  for key, value in data.items():
+                      # Check if the key is a number and the value contains CPE data
+                      if key.isdigit():
+                          try:
+                              # The format is like: 2761: { cpe: { deprecated: false, cpeName: "...", ... } }
+                              cpe_entry = {
+                                  'numeric_id': int(key),
+                                  'cpe': value.get('cpe', {})
+                              }
+                              numeric_cpes.append(cpe_entry)
+                          except (AttributeError, TypeError):
+                              # Skip entries that don't match the expected format
+                              pass
                   
-                  if total_results == 0 or not cpes:
+                  if not numeric_cpes:
                       print(f"No CPE names found for {app_name}.")
                       return []
                   
-                  print(f"Found {total_results} CPE names for {app_name}.")
+                  print(f"Found {len(numeric_cpes)} CPE names for {app_name}.")
                   
-                  # Sort CPEs by cpeNameId (descending) to get the most recent ones
-                  sorted_cpes = sorted(cpes, key=lambda x: x.get('cpeNameId', ''), reverse=True)
+                  # Sort by the numeric ID (descending) to get the most recent ones
+                  sorted_cpes = sorted(numeric_cpes, key=lambda x: x['numeric_id'], reverse=True)
                   
                   # Take the 5 most recent CPEs
                   recent_cpes = sorted_cpes[:5]
                   
+                  # Print the selected CPEs for debugging
+                  print("Selected CPEs by numeric ID:")
+                  for cpe in recent_cpes:
+                      print(f"  ID: {cpe['numeric_id']}, Name: {cpe['cpe'].get('cpeName', 'N/A')}")
+                  
                   # Extract just the CPE names
-                  cpe_names = [cpe.get('cpe', {}).get('cpeName') for cpe in recent_cpes if cpe.get('cpe', {}).get('cpeName')]
+                  cpe_names = [cpe['cpe'].get('cpeName') for cpe in recent_cpes if cpe['cpe'].get('cpeName')]
                   
                   print(f"Using the {len(cpe_names)} most recent CPE names:")
                   for cpe_name in cpe_names:
@@ -317,9 +334,24 @@ jobs:
                   print(f"No CVEs found for {app_name} in the last 90 days.")
                   return
               
+              # Deduplicate CVEs by cve_id to avoid database constraint violations
+              # Create a dictionary to store the most recent version of each CVE
+              unique_cves = {}
+              for vuln in all_vulns:
+                  cve_id = vuln['cve_id']
+                  # If we haven't seen this CVE before, or this one is more recent, keep it
+                  if (cve_id not in unique_cves or
+                      (vuln['last_modified_datetime'] is not None and
+                       unique_cves[cve_id]['last_modified_datetime'] is not None and
+                       vuln['last_modified_datetime'] > unique_cves[cve_id]['last_modified_datetime'])):
+                      unique_cves[cve_id] = vuln
+              
+              # Convert back to a list
+              deduplicated_vulns = list(unique_cves.values())
+              
               # Sort by last modified date (newest first)
               sorted_vulns = sorted(
-                  [v for v in all_vulns if v['last_modified_datetime'] is not None],
+                  [v for v in deduplicated_vulns if v['last_modified_datetime'] is not None],
                   key=lambda x: x['last_modified_datetime'],
                   reverse=True
               )
