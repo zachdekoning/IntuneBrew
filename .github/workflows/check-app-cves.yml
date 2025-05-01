@@ -125,6 +125,14 @@ jobs:
                       # Get CVE details
                       cve_id = cve.get('id', 'N/A')
                       
+                      # Get description (English)
+                      description = "N/A"
+                      if 'descriptions' in cve:
+                          for desc in cve['descriptions']:
+                              if desc.get('lang') == 'en':
+                                  description = desc.get('value', 'N/A')
+                                  break
+                      
                       # Get published and last modified dates
                       published_date = "N/A"
                       last_modified_date = "N/A"
@@ -156,6 +164,8 @@ jobs:
                           severity = metrics['cvssMetricV2'][0].get('baseSeverity', 'N/A')
                       
                       print(f"{cve_id:<20} {published_date:<12} {last_modified_date:<12} {base_score:<10} {severity:<10}")
+                      print(f"Description: {description}")
+                      print(f"{'-' * 72}")
                   
                   encoded_search = quote(search_term)
                   print(f"\nFor more details, visit: https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&query={encoded_search}&search_type=all")
