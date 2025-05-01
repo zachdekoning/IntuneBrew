@@ -38,6 +38,8 @@ jobs:
           echo "APPS=$APPS" >> $GITHUB_ENV
 
       - name: Check CVEs for apps
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: |
           cat > check_cves.py << 'EOF'
           import os
@@ -48,8 +50,17 @@ jobs:
           from datetime import datetime, timedelta
           from urllib.parse import quote
 
-          # Note: The NVD API has rate limiting (5 requests per 30 seconds for unauthenticated users)
-          # This script includes a delay between requests to avoid hitting rate limits
+          # Get NVD API key from environment - required
+          nvd_api_key = os.environ.get('NVD_API_KEY')
+
+          # Check if API key is available
+          if not nvd_api_key:
+              print("ERROR: NVD_API_KEY is required but not found in environment variables.")
+              print("Please add your NVD API key as a repository secret named NVD_API_KEY.")
+              print("Get an API key at: https://nvd.nist.gov/developers/request-an-api-key")
+              sys.exit(1)
+              
+          # With API key, rate limits are 50 requests per 30 seconds
 
           # Get list of apps to check
           apps_to_check = os.environ.get('APPS', 'Google Chrome,Mozilla Firefox').split(',')
@@ -81,8 +92,11 @@ jobs:
                       "resultsPerPage": 25
                   }
                   
-                  # Make the request
-                  response = requests.get(url, params=params)
+                  # Set up headers with API key
+                  headers = {'apiKey': nvd_api_key}
+                  
+                  # Make the request with API key in headers
+                  response = requests.get(url, params=params, headers=headers)
                   
                   # Check if request was successful
                   if response.status_code != 200:
@@ -152,15 +166,10 @@ jobs:
           for app in apps_to_check:
               check_cves_for_app(app.strip())
               # Add a small delay between requests to avoid rate limiting
-              time.sleep(1)
+              # With API key, we can make up to 50 requests per 30 seconds
+              time.sleep(0.5)  # 0.5 second delay with API key
 
           print("\nCVE check completed.")
           EOF
 
           python check_cves.py
-
-      - name: Summary
-        run: |
-          echo "CVE check completed for the following apps:"
-          echo "$APPS"
-          echo "Run this workflow manually to check different applications."
