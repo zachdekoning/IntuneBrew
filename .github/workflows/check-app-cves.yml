@@ -146,41 +146,46 @@ jobs:
                   # Parse the JSON response
                   data = response.json()
                   
-                  # Extract CPEs with numeric keys (like 2761, 2762, etc.)
-                  numeric_cpes = []
-                  for key, value in data.items():
-                      # Check if the key is a number and the value contains CPE data
-                      if key.isdigit():
-                          try:
-                              # The format is like: 2761: { cpe: { deprecated: false, cpeName: "...", ... } }
-                              cpe_entry = {
-                                  'numeric_id': int(key),
-                                  'cpe': value.get('cpe', {})
-                              }
-                              numeric_cpes.append(cpe_entry)
-                          except (AttributeError, TypeError):
-                              # Skip entries that don't match the expected format
-                              pass
+                  # Extract CPEs from the products array
+                  products = data.get('products', [])
                   
-                  if not numeric_cpes:
+                  if not products:
                       print(f"No CPE names found for {app_name}.")
                       return []
                   
-                  print(f"Found {len(numeric_cpes)} CPE names for {app_name}.")
+                  print(f"Found {len(products)} CPE names for {app_name}.")
                   
-                  # Sort by the numeric ID (descending) to get the most recent ones
-                  sorted_cpes = sorted(numeric_cpes, key=lambda x: x['numeric_id'], reverse=True)
+                  # Sort by lastModified date (descending) to get the most recent ones
+                  def extract_date_for_sorting(product):
+                      # Get the lastModified date from the cpe object
+                      cpe_obj = product.get('cpe', {})
+                      last_modified = cpe_obj.get('lastModified', '')
+                      # Parse the date string into a datetime object for sorting
+                      try:
+                          if last_modified:
+                              return datetime.strptime(last_modified.split('.')[0], "%Y-%m-%dT%H:%M:%S")
+                          return datetime.min
+                      except Exception as e:
+                          print(f"Error parsing date {last_modified}: {str(e)}")
+                          return datetime.min
+                  
+                  # Sort by lastModified date in descending order (newest first)
+                  sorted_cpes = sorted(products, key=extract_date_for_sorting, reverse=True)
                   
                   # Take the 5 most recent CPEs
                   recent_cpes = sorted_cpes[:5]
                   
                   # Print the selected CPEs for debugging
-                  print("Selected CPEs by numeric ID:")
-                  for cpe in recent_cpes:
-                      print(f"  ID: {cpe['numeric_id']}, Name: {cpe['cpe'].get('cpeName', 'N/A')}")
+                  print("Selected CPEs by lastModified date:")
+                  for product in recent_cpes:
+                      cpe_obj = product.get('cpe', {})
+                      cpe_name = cpe_obj.get('cpeName', 'N/A')
+                      last_modified = cpe_obj.get('lastModified', 'N/A')
+                      print(f"  Name: {cpe_name}, Last Modified: {last_modified}")
                   
                   # Extract just the CPE names
-                  cpe_names = [cpe['cpe'].get('cpeName') for cpe in recent_cpes if cpe['cpe'].get('cpeName')]
+                  cpe_names = [product.get('cpe', {}).get('cpeName') for product in recent_cpes
+                              if product.get('cpe', {}).get('cpeName')]
                   
                   print(f"Using the {len(cpe_names)} most recent CPE names:")
                   for cpe_name in cpe_names:
