@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                            <p>
+                                                                                                                                                                                                                                                              <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-351-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,24 +79,18 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-01 00:31 UTC*
+*Last checked: 2025-05-02 00:28 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| ChatWise | 0.8.46 | 0.8.47 |
-| Tunnelblick | 6.0.1 | 8.0 |
-| Google Chrome | 135.0.7049.115 | 136.0.7103.49 |
-| Miro | 0.10.95 | 0.10.96 |
-| Signal | 7.52.0 | 7.53.0 |
-| macFUSE | 4.10.1 | 4.10.2 |
-| Raycast | 1.96.3 | 1.97.0 |
-| Zed | 0.183.12 | 0.184.8 |
-| pgAdmin4 | 9.2 | 9.3 |
-| Windsurf | 1.7.2 | 1.7.3 |
-| DbGate | 6.3.3 | 6.4.0 |
-| Nota Gyazo GIF | 9.8.0 | 9.9.0 |
-| Cisco Jabber | 20241220015538 | 20250430033337 |
-| OpenVPN Connect client | 3.7.0 | 3.7.1 |
+| FreeTube | 0.23.4 | 0.23.5 |
+| Mozilla Firefox | 138.0 | 138.0.1 |
+| Docker Desktop | 4.41.0 | 4.41.1 |
+| Bitwarden | 2025.3.1 | 2025.4.2 |
+| Brave | 1.77.101.0 | 1.78.94.0 |
+| Microsoft Edge | 135.0.3179.98 | 136.0.3240.50 |
+| Joplin | 3.2.13 | 3.3.9 |
+| Remote Desktop Manager | 2025.1.13.3 | 2025.1.16.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -188,14 +182,14 @@ Follow the interactive prompts to:
 | <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.344 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
-| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.3.1 |
+| <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.4.2 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.4.3 |
 | <img src='Logos/blip.png' width='32' height='32'> blip | 1.1.7 |
 | <img src='Logos/blizzard_battlenet.png' width='32' height='32'> Blizzard Battle.net | 1.18.10.3141 |
 | <img src='Logos/boltai.png' width='32' height='32'> BoltAI | 1.35.2 |
 | <img src='Logos/boop.png' width='32' height='32'> Boop | 1.4.0 |
 | <img src='Logos/boxcryptor.png' width='32' height='32'> Boxcryptor | 3.13.680 |
-| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.77.101.0 |
+| <img src='Logos/brave.png' width='32' height='32'> Brave | 1.78.94.0 |
 | <img src='Logos/breaktimer.png' width='32' height='32'> BreakTimer | 1.3.2 |
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 2.2.0 |
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.2.1 |
@@ -241,7 +235,7 @@ Follow the interactive prompts to:
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.344 |
 | ❌ DisplayLink USB Graphics Software | 1.12.1 |
 | ❌ DockDoor | 1.6.2 |
-| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.0 |
+| <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.1 |
 | ❌ DOSBox | 0.74-3 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.15 |
@@ -274,7 +268,7 @@ Follow the interactive prompts to:
 | <img src='Logos/freecad.png' width='32' height='32'> FreeCAD | 1.0.0 |
 | ❌ Freelens | 1.2.1 |
 | <img src='Logos/freemacsoft_appcleaner.png' width='32' height='32'> FreeMacSoft AppCleaner | 3.6.8 |
-| ❌ FreeTube | 0.23.4 |
+| ❌ FreeTube | 0.23.5 |
 | <img src='Logos/fsmonitor.png' width='32' height='32'> FSMonitor | 1.2 |
 | <img src='Logos/geany.png' width='32' height='32'> Geany | 2.0 |
 | <img src='Logos/geekbench.png' width='32' height='32'> Geekbench | 6.4.0 |
@@ -321,7 +315,7 @@ Follow the interactive prompts to:
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2025.1 |
 | ❌ JetBrains Rider | 2025.1.1 |
 | <img src='Logos/jetbrains_toolbox.png' width='32' height='32'> JetBrains Toolbox | 2.6.1 |
-| <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.2.13 |
+| <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.3.9 |
 | <img src='Logos/jumpcut.png' width='32' height='32'> Jumpcut | 0.84 |
 | <img src='Logos/jumpshare.png' width='32' height='32'> Jumpshare | 3.3.17 |
 | ❌ Kap | 3.6.0 |
@@ -338,7 +332,7 @@ Follow the interactive prompts to:
 | <img src='Logos/krita.png' width='32' height='32'> Krita | 5.2.9 |
 | <img src='Logos/langgraph_studio.png' width='32' height='32'> LangGraph Studio | 0.0.37 |
 | ❌ Lens | 2025.4.92142 |
-| <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.2 |
+| <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.3 |
 | ❌ LibreWolf | 137.0.2 |
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.15 |
@@ -362,7 +356,7 @@ Follow the interactive prompts to:
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.79.25033028 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.38.0 |
-| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 135.0.3179.98 |
+| <img src='Logos/microsoft_edge.png' width='32' height='32'> Microsoft Edge | 136.0.3240.50 |
 | <img src='Logos/microsoft_office.png' width='32' height='32'> Microsoft Office | 16.96.25041326 |
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25079.2107.3576.1611 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.99.3 |
@@ -375,10 +369,10 @@ Follow the interactive prompts to:
 | ❌ Moonlight | 6.1.0 |
 | ❌ Mos | 3.5.0 |
 | ❌ Motrix | 1.8.19 |
-| <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.3 |
+| <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.4 |
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | ❌ mouseless | 0.3.1 |
-| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 138.0 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 138.0.1 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 25 |
 | ❌ NetNewsWire | 6.1.9 |
 | ❌ Nextcloud | 3.16.4 |
@@ -392,7 +386,7 @@ Follow the interactive prompts to:
 | ❌ NVIDIA GeForce NOW | 2.0.73.139 |
 | <img src='Logos/obs.png' width='32' height='32'> OBS | 31.0.3 |
 | <img src='Logos/obsidian.png' width='32' height='32'> Obsidian | 1.8.10 |
-| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.6 |
+| <img src='Logos/ollama.png' width='32' height='32'> Ollama | 0.6.7 |
 | <img src='Logos/omnissa_horizon_client.png' width='32' height='32'> Omnissa Horizon Client | 2503-8.15.0-14236092062 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.051.0317.0003 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
@@ -411,7 +405,7 @@ Follow the interactive prompts to:
 | ❌ Pika | 1.0.2 |
 | ❌ Plex | 1.108.1.307 |
 | <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.18.0 |
-| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.43.2 |
+| <img src='Logos/postman.png' width='32' height='32'> Postman | 11.43.4 |
 | <img src='Logos/powershell.png' width='32' height='32'> PowerShell | 7.5.1 |
 | <img src='Logos/principle.png' width='32' height='32'> Principle | 6.38 |
 | <img src='Logos/privileges.png' width='32' height='32'> Privileges | 2.3.0 |
@@ -429,7 +423,7 @@ Follow the interactive prompts to:
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.87 |
 | ❌ Redis Insight | 2.68.0 |
-| <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.13.3 |
+| <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.16.1 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | ❌ Requestly | 25.4.13 |
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
@@ -459,7 +453,7 @@ Follow the interactive prompts to:
 | <img src='Logos/tailscale.png' width='32' height='32'> Tailscale | 1.82.5 |
 | ❌ TeamViewer Host | 15 |
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
-| <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.8.2 |
+| <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.9 |
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.2 |
 | ❌ Thonny | 4.1.7 |
