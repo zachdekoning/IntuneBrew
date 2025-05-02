@@ -3,7 +3,7 @@
   "description": "Xcode extension for GitHub Copilot",
   "version": "0.35.7",
   "url": "https://intunebrew.blob.core.windows.net/pkg/copilot_for_xcode_0.35.7.pkg",
-  "bundleId": null,
+  "bundleId": "com.github.CopilotForXcode",
   "homepage": "https://github.com/intitni/CopilotForXcode",
   "fileName": "copilot_for_xcode_0.35.7.pkg",
   "type": "app",

@@ -3,7 +3,7 @@
   "description": "Controls and monitors all fans on Apple computers",
   "version": "1.5.17",
   "url": "https://intunebrew.blob.core.windows.net/pkg/macs_fan_control_1.5.17.pkg",
-  "bundleId": null,
+  "bundleId": "com.crystalidea.macsfancontrol",
   "homepage": "https://crystalidea.com/macs-fan-control",
   "fileName": "macs_fan_control_1.5.17.pkg",
   "type": "app",

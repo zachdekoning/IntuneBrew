@@ -3,7 +3,7 @@
   "description": "Universal database tool and SQL client",
   "version": "25.0.3",
   "url": "https://dbeaver.io/files/25.0.3/dbeaver-ce-25.0.3-macos-aarch64.dmg",
-  "bundleId": null,
+  "bundleId": "org.jkiss.dbeaver.core.product",
   "homepage": "https://dbeaver.io/",
   "fileName": "dbeaver-ce-25.0.3-macos-aarch64.dmg",
   "sha": "412b2d631a324abafc4ed5a4d619b99bbee7fadea55507124b9f91125b45c585",
