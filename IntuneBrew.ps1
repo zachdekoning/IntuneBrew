@@ -12,7 +12,8 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
-Versuib 0.4.2: Optimized App Logo handling.
+Version 0.5.0: Added support for CVE scores.
+Version 0.4.2: Optimized App Logo handling.
 Version 0.4.1: IntuneBrew now correctly handles download urls with a redirect
 Version 0.4: Added support to copy assignments from existing app version to new version. If you copy over the assignments, the assignments for the older app version will be removed automatically.
 Version 0.3.8: Added support for -localfile parameter to upload local PKG or DMG files to Intune
@@ -66,8 +67,8 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.4.2" -ForegroundColor Yellow -NoNewline
-Write-Host " | Last updated: " -NoNewline; Write-Host "2025-04-13" -ForegroundColor Magenta
+Write-Host " | Version" -NoNewline; Write-Host " 0.5.0" -ForegroundColor Yellow -NoNewline
+Write-Host " | Last updated: " -NoNewline; Write-Host "2025-05-03" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
 Write-Host "You can sponsor the development of this project at https://github.com/sponsors/ugurkocde" -ForegroundColor Red
@@ -571,16 +572,16 @@ function Get-IntuneAppAssignments {
         
         # The response directly contains the assignments array in the 'value' property
         if ($response.value -ne $null -and $response.value.Count -gt 0) {
-            Write-Host "✅ Found $($response.value.Count) assignment(s)." -ForegroundColor Green
+            Write-Host "✅  Found $($response.value.Count) assignment(s)." -ForegroundColor Green
             return $response.value
         }
         else {
-            Write-Host "ℹ️ No assignments found for the existing app." -ForegroundColor Gray
+            Write-Host "ℹ️  No assignments found for the existing app." -ForegroundColor Gray
             return @() # Return an empty array if no assignments
         }
     }
     catch {
-        Write-Host "❌ Error fetching assignments for App ID ${AppId}: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "❌  Error fetching assignments for App ID ${AppId}: $($_.Exception.Message)" -ForegroundColor Red
         # Consider returning specific error info or re-throwing if needed
         return $null # Indicate error
     }
@@ -999,6 +1000,34 @@ catch {
 
 # Core Functions
 
+# Gets CVE information for an app from the CVE JSON file
+function Get-AppCveInfo {
+    param(
+        [string]$appKey
+    )
+    
+    if ([string]::IsNullOrEmpty($appKey)) {
+        return $null
+    }
+    
+    # Convert app key to lowercase and remove any spaces
+    $appKey = $appKey.ToLower().Replace(" ", "_")
+    $cvePath = Join-Path $PWD "CVE\$appKey.json"
+    
+    if (-not (Test-Path $cvePath)) {
+        return $null
+    }
+    
+    try {
+        $cveInfo = Get-Content $cvePath -Raw | ConvertFrom-Json
+        return $cveInfo
+    }
+    catch {
+        Write-Host "Error reading CVE info for $appKey : $_" -ForegroundColor Red
+        return $null
+    }
+}
+
 # Fetches app information from GitHub JSON file
 function Get-GitHubAppInfo {
     param(
@@ -1177,9 +1206,50 @@ function Get-IntuneApps {
                 $needsUpdate = Is-NewerVersion $githubVersion $intuneVersion
                 
                 if ($needsUpdate) {
-                    Write-Host " → Update available ($intuneVersion → $githubVersion)" -ForegroundColor Green
+                    Write-Host " → " -NoNewline
+                    Write-Host "Update available" -ForegroundColor Green -NoNewline
+                    Write-Host " ($intuneVersion → $githubVersion)" -ForegroundColor Green
+                    
+                    # Get app key from the JSON URL (extract the filename without extension)
+                    $appKey = [System.IO.Path]::GetFileNameWithoutExtension($jsonUrl.Split('/')[-1])
+                    
+                    # Check for CVE information
+                    $cveInfo = Get-AppCveInfo -appKey $appKey
+                    if ($cveInfo -and $cveInfo.vulnerabilities -and $cveInfo.vulnerabilities.Count -gt 0) {
+                        Write-Host "   ⚠️" -NoNewline
+                        Write-Host " Latest Security vulnerabilities:" -ForegroundColor Yellow
+                        
+                        # Sort vulnerabilities by base score (highest first)
+                        $sortedVulns = $cveInfo.vulnerabilities | Sort-Object -Property base_score -Descending
+                        
+                        # Display each vulnerability with appropriate color
+                        foreach ($vuln in $sortedVulns | Select-Object -First 2) {
+                            $severityColor = switch ($vuln.severity) {
+                                "CRITICAL" { "Red" }
+                                "HIGH" { "DarkRed" }
+                                "MEDIUM" { "Yellow" }
+                                "LOW" { "Gray" }
+                                default { "White" }
+                            }
+                            Write-Host "     • " -NoNewline
+                            Write-Host "$($vuln.cve_id)" -NoNewline -ForegroundColor $severityColor
+                            Write-Host " (Score: $($vuln.base_score)) - " -NoNewline
+                            Write-Host "$($vuln.severity)" -ForegroundColor $severityColor
+                        }
+                        
+                        # If there are more than 2 vulnerabilities, show a count of the remaining ones
+                        if ($cveInfo.vulnerabilities.Count -gt 2) {
+                            $remainingCount = $cveInfo.vulnerabilities.Count - 2
+                            Write-Host "     • $remainingCount more vulnerabilities found. Check CVE/$appKey.json for details." -ForegroundColor Gray
+                        }
+                    }
+                    else {
+                        # No CVEs found
+                        Write-Host "   ℹ️ No CVEs found" -ForegroundColor Gray
+                    }
                 }
                 else {
+                    S
                     Write-Host " → Up to date ($intuneVersion)" -ForegroundColor Gray
                 }
                 
@@ -1296,7 +1366,19 @@ if (-not $UpdateAll) {
 
         foreach ($row in $TableData) {
             $color = $row.StatusColor
-            Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f $row.'App Name', $row.'Latest Version', $row.'Intune Version', $row.Status) -ForegroundColor $color
+            
+            # Display the row with app info with colored app name
+            Write-Host "| " -NoNewline
+            Write-Host ("{0,-26}" -f $row.'App Name') -ForegroundColor Cyan -NoNewline
+            Write-Host " | " -NoNewline
+            Write-Host ("{0,-20}" -f $row.'Latest Version') -NoNewline
+            Write-Host " | " -NoNewline
+            Write-Host ("{0,-20}" -f $row.'Intune Version') -NoNewline
+            Write-Host " | " -NoNewline
+            
+            # Display status with appropriate color and ensure right border alignment
+            Write-Host ("{0,-15} |" -f $row.Status) -ForegroundColor $color
+            
             Write-Host $lineSeparator
         }
     }
