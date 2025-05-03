@@ -1,0 +1,15 @@
+{
+  "app_name": "Mist",
+  "last_updated": "2025-05-03",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2022-25163",
+      "published_date": "2022-06-02",
+      "last_modified_date": "2024-11-21",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Improper Input Validation vulnerability in Mitsubishi Electric MELSEC-Q Series QJ71E71-100 first 5 digits of serial number \"24061\" or prior, Mitsubishi Electric MELSEC-L series LJ71E71-100 first 5 digits of serial number \"24061\" or prior and Mitsubishi Electric MELSEC iQ-R Series RD81MES96N firmware version \"08\" or prior allows a remote unauthenticated attacker to cause a denial of service (DoS) condition or execute malicious code on the target products by sending specially crafted packets.",
+      "cpe_name": "cpe:2.3:h:mistubishi:melsec_qj71e71-100:-:*:*:*:*:*:*:*"
+    }
+  ]
+}

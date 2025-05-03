@@ -1,0 +1,51 @@
+{
+  "app_name": "Opera",
+  "last_updated": "2025-05-03",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2025-22475",
+      "published_date": "2025-02-04",
+      "last_modified_date": "2025-02-07",
+      "base_score": 3.7,
+      "severity": "LOW",
+      "description": "Dell PowerProtect DD, versions prior to DDOS 8.3.0.0, 7.10.1.50, and 7.13.1.10 contains a use of a Cryptographic Primitive with a Risky Implementation vulnerability. A remote attacker could potentially exploit this vulnerability, leading to Information tampering.",
+      "cpe_name": "cpe:2.3:o:dell:data_domain_operating_system:7.10.1.0:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2024-53295",
+      "published_date": "2025-02-01",
+      "last_modified_date": "2025-02-07",
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "description": "Dell PowerProtect DD versions prior to 8.3.0.0, 7.10.1.50, and 7.13.1.20 contain an improper access control vulnerability. A local malicious user with low privileges could potentially exploit this vulnerability leading to escalation of privilege.",
+      "cpe_name": "cpe:2.3:o:dell:data_domain_operating_system:7.10.1.0:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2024-51534",
+      "published_date": "2025-02-01",
+      "last_modified_date": "2025-02-07",
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "description": "Dell PowerProtect DD versions prior to DDOS 8.3.0.0, 7.10.1.50, and 7.13.1.20 contain a path traversal vulnerability. A local low privileged could potentially exploit this vulnerability to gain unauthorized overwrite of OS files stored on the server filesystem. Exploitation could lead to denial of service.",
+      "cpe_name": "cpe:2.3:o:dell:data_domain_operating_system:7.10.1.0:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2024-53296",
+      "published_date": "2025-02-01",
+      "last_modified_date": "2025-02-07",
+      "base_score": 2.7,
+      "severity": "LOW",
+      "description": "Dell PowerProtect DD versions prior to 7.10.1.50 and 7.13.1.20 contain a Stack-based Buffer Overflow vulnerability in the RestAPI. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Denial of service.",
+      "cpe_name": "cpe:2.3:o:dell:data_domain_operating_system:7.10.1.0:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2024-45759",
+      "published_date": "2024-11-08",
+      "last_modified_date": "2024-11-26",
+      "base_score": 6.8,
+      "severity": "MEDIUM",
+      "description": "Dell PowerProtect Data Domain, versions prior to 8.1.0.0, 7.13.1.10, 7.10.1.40, and 7.7.5.50, contains an escalation of privilege vulnerability. A local low privileged attacker could potentially exploit this vulnerability, leading to unauthorized execution of certain commands to overwrite system config of the application. Exploitation may lead to denial of service of system.",
+      "cpe_name": "cpe:2.3:o:dell:data_domain_operating_system:7.10.1.0:*:*:*:*:*:*:*"
+    }
+  ]
+}

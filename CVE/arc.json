@@ -1,0 +1,15 @@
+{
+  "app_name": "Arc",
+  "last_updated": "2025-05-03",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2024-0406",
+      "published_date": "2024-04-06",
+      "last_modified_date": "2025-04-25",
+      "base_score": 6.1,
+      "severity": "MEDIUM",
+      "description": "A flaw was discovered in the mholt/archiver package. This flaw allows an attacker to create a specially crafted tar file, which, when unpacked, may allow access to restricted files or directories. This issue can allow the creation or overwriting of files with the user's or application's privileges using the library.",
+      "cpe_name": "cpe:2.3:a:mholt:archiver:3.0.0:*:*:*:*:go:*:*"
+    }
+  ]
+}

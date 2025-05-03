@@ -1,0 +1,15 @@
+{
+  "app_name": "Cursor",
+  "last_updated": "2025-05-03",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2023-5911",
+      "published_date": "2024-01-08",
+      "last_modified_date": "2024-11-21",
+      "base_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "The WP Custom Cursors | WordPress Cursor Plugin WordPress plugin through 3.2 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)",
+      "cpe_name": "cpe:2.3:a:hamidrezasepehr:wp_custom_cursors_\\|_wordpress_cursor_plugin:3.2:*:*:*:*:wordpress:*:*"
+    }
+  ]
+}
