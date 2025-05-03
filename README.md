@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                              <p>
+                                                                                                                                                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-351-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,18 +79,19 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-02 00:28 UTC*
+*Last checked: 2025-05-03 00:27 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| FreeTube | 0.23.4 | 0.23.5 |
-| Mozilla Firefox | 138.0 | 138.0.1 |
-| Docker Desktop | 4.41.0 | 4.41.1 |
-| Bitwarden | 2025.3.1 | 2025.4.2 |
-| Brave | 1.77.101.0 | 1.78.94.0 |
-| Microsoft Edge | 135.0.3179.98 | 136.0.3240.50 |
-| Joplin | 3.2.13 | 3.3.9 |
-| Remote Desktop Manager | 2025.1.13.3 | 2025.1.16.1 |
+| Apifox | 2.7.7 | 2.7.8 |
+| DockDoor | 1.6.2 | 1.7 |
+| LibreWolf | 137.0.2 | 138.0 |
+| AnyDesk | 9.0.1 | 9.0.2 |
+| Termius | 9.19.2 | 9.19.3 |
+| DataGrip | 2025.1 | 2025.1.1 |
+| Zed | 0.184.8 | 0.184.9 |
+| Apidog | 2.7.7 | 2.7.8 |
+| Joplin | 3.3.9 | 3.3.10 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -157,9 +158,9 @@ Follow the interactive prompts to:
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.4 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
-| <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.1 |
-| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.7 |
-| ❌ Apifox | 2.7.7 |
+| <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.2 |
+| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.8 |
+| ❌ Apifox | 2.7.8 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.91.2 |
 | ❌ Arduino IDE | 2.3.6 |
@@ -179,7 +180,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.661 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.4 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.344 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.351 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.4.2 |
@@ -224,7 +225,7 @@ Follow the interactive prompts to:
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.9.0 |
 | <img src='Logos/dataflare.png' width='32' height='32'> Dataflare | 1.9.5 |
-| <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2025.1 |
+| <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2025.1.1 |
 | <img src='Logos/dataspell.png' width='32' height='32'> DataSpell | 2025.1 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
 | ❌ DBeaver Community Edition | 25.0.3 |
@@ -234,7 +235,7 @@ Follow the interactive prompts to:
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.344 |
 | ❌ DisplayLink USB Graphics Software | 1.12.1 |
-| ❌ DockDoor | 1.6.2 |
+| ❌ DockDoor | 1.7 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.1 |
 | ❌ DOSBox | 0.74-3 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
@@ -260,7 +261,7 @@ Follow the interactive prompts to:
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
 | ❌ Facebook Messenger | 233.1.0.8.208 |
 | <img src='Logos/fantastical.png' width='32' height='32'> Fantastical | 4.0.10 |
-| <img src='Logos/figma.png' width='32' height='32'> Figma | 125.3.6 |
+| <img src='Logos/figma.png' width='32' height='32'> Figma | 125.4.7 |
 | <img src='Logos/fission.png' width='32' height='32'> Fission | 2.8.8 |
 | <img src='Logos/flameshot.png' width='32' height='32'> Flameshot | 12.1.0 |
 | ❌ Flycut | 1.9.6 |
@@ -315,7 +316,7 @@ Follow the interactive prompts to:
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2025.1 |
 | ❌ JetBrains Rider | 2025.1.1 |
 | <img src='Logos/jetbrains_toolbox.png' width='32' height='32'> JetBrains Toolbox | 2.6.1 |
-| <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.3.9 |
+| <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.3.10 |
 | <img src='Logos/jumpcut.png' width='32' height='32'> Jumpcut | 0.84 |
 | <img src='Logos/jumpshare.png' width='32' height='32'> Jumpshare | 3.3.17 |
 | ❌ Kap | 3.6.0 |
@@ -333,7 +334,7 @@ Follow the interactive prompts to:
 | <img src='Logos/langgraph_studio.png' width='32' height='32'> LangGraph Studio | 0.0.37 |
 | ❌ Lens | 2025.4.92142 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.3 |
-| ❌ LibreWolf | 137.0.2 |
+| ❌ LibreWolf | 138.0 |
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.15 |
 | <img src='Logos/logitech_g_hub.png' width='32' height='32'> Logitech G HUB | 2025.3.696161 |
@@ -346,7 +347,7 @@ Follow the interactive prompts to:
 | <img src='Logos/macfuse.png' width='32' height='32'> macFUSE | 4.10.2 |
 | ❌ Macs Fan Control | 1.5.17 |
 | <img src='Logos/mactex.png' width='32' height='32'> MacTeX | 2025.0308 |
-| ❌ MacWhisper | 12.6 |
+| ❌ MacWhisper | 12.7 |
 | ❌ Marta File Manager | 0.8.2 |
 | ❌ Mattermost | 5.11.2 |
 | ❌ MeetingBar | 4.10.0 |
@@ -455,7 +456,7 @@ Follow the interactive prompts to:
 | <img src='Logos/teamviewer_quicksupport.png' width='32' height='32'> TeamViewer QuickSupport | 15 |
 | <img src='Logos/telegram_for_macos.png' width='32' height='32'> Telegram for macOS | 11.9 |
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
-| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.2 |
+| <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.3 |
 | ❌ Thonny | 4.1.7 |
 | ❌ TigerVNC | 1.15.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.1 |
@@ -484,7 +485,7 @@ Follow the interactive prompts to:
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.01.01061-202501070704 |
 | ❌ Yaak | 2025.1.2 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
-| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.184.8 |
+| <img src='Logos/zed.png' width='32' height='32'> Zed | 0.184.9 |
 | ❌ Zed Attack Proxy | 2.16.1 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.11.5b |
 | ❌ Zenmap | 7.95 |
