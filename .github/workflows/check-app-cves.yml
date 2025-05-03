@@ -34,6 +34,7 @@ jobs:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cat > check_cves.py << 'EOF'
           import os
@@ -509,3 +510,16 @@ jobs:
           EOF
 
           python check_cves.py
+
+      - name: Commit and push CVE files
+        run: |
+          # Check if there are any changes to commit
+          if [[ -n $(git status --porcelain) ]]; then
+            git config --global user.name 'GitHub Action'
+            git config --global user.email 'action@github.com'
+            git add CVE/
+            git commit -m "Update CVE data [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
