@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 0.5.1
+.VERSION 0.5.2
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 .AUTHOR ugurk
 .COMPANYNAME
@@ -7,11 +7,12 @@
 .TAGS Intune macOS Homebrew
 .LICENSEURI https://github.com/ugurkocde/IntuneBrew/blob/main/LICENSE
 .PROJECTURI https://github.com/ugurkocde/IntuneBrew
-.ICONURI
+.ICONURI https://raw.githubusercontent.com/ugurkocde/IntuneBrew/refs/heads/main/IntuneBrew_Logo.png
 .EXTERNALMODULEDEPENDENCIES Microsoft.Graph.Authentication
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
+Version 0.5.2: Added Logo to the PowerShell Gallery page.
 Version 0.5.1: Updated the table output visualization. This makes it easier to read and understand the data being presented.
 Version 0.5.0: Added support for CVE scores.
 Version 0.4.2: Optimized App Logo handling.
@@ -68,7 +69,7 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.5.1" -ForegroundColor Yellow -NoNewline
+Write-Host " | Version" -NoNewline; Write-Host " 0.5.2" -ForegroundColor Yellow -NoNewline
 Write-Host " | Last updated: " -NoNewline; Write-Host "2025-05-03" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
