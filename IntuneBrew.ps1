@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 0.5.2
+.VERSION 0.6.0
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 .AUTHOR ugurk
 .COMPANYNAME
@@ -12,6 +12,7 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
+Version 0.6.0: Added support for pre-install and post-install scripts for PKG apps.
 Version 0.5.2: Added Logo to the PowerShell Gallery page.
 Version 0.5.1: Updated the table output visualization. This makes it easier to read and understand the data being presented.
 Version 0.5.0: Added support for CVE scores.
@@ -41,8 +42,16 @@ Version 0.3.7: Fix Parse Errors
  Example: IntuneBrew -LocalFile
 
 .PARAMETER CopyAssignments
-When used with -UpdateAll or when updating apps interactively, this switch indicates that assignments from the existing app version should be copied to the new version. If omitted, assignments will not be copied automatically (interactive mode will still prompt).
-Example: IntuneBrew -UpdateAll -CopyAssignments
+ When used with -UpdateAll or when updating apps interactively, this switch indicates that assignments from the existing app version should be copied to the new version. If omitted, assignments will not be copied automatically (interactive mode will still prompt).
+ Example: IntuneBrew -UpdateAll -CopyAssignments
+
+.PARAMETER PreInstallScriptPath
+ Specifies the path to a script file that will be executed before the app installation. Only works with PKG apps and the -Upload parameter.
+ Example: IntuneBrew -Upload google_chrome -PreInstallScriptPath ./pre-install.sh
+
+.PARAMETER PostInstallScriptPath
+ Specifies the path to a script file that will be executed after the app installation. Only works with PKG apps and the -Upload parameter.
+ Example: IntuneBrew -Upload google_chrome -PostInstallScriptPath ./post-install.sh
 
 #>
 param(
@@ -56,7 +65,13 @@ param(
     [switch]$LocalFile,
     
     [Parameter(Mandatory = $false)]
-    [switch]$CopyAssignments
+    [switch]$CopyAssignments,
+    
+    [Parameter(Mandatory = $false)]
+    [string]$PreInstallScriptPath,
+    
+    [Parameter(Mandatory = $false)]
+    [string]$PostInstallScriptPath
 )
 
 Write-Host "
@@ -69,7 +84,7 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.5.2" -ForegroundColor Yellow -NoNewline
+Write-Host " | Version" -NoNewline; Write-Host " 0.6.0" -ForegroundColor Yellow -NoNewline
 Write-Host " | Last updated: " -NoNewline; Write-Host "2025-05-03" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
@@ -342,9 +357,6 @@ function UploadFileToAzureStorage($sasUri, $filepath) {
             $blockList.Declaration.Encoding = "utf-8"
             $blockBuffer = [byte[]]::new($blockSize)
 
-            Write-Host "`n⬆️  Uploading to Azure Storage..." -ForegroundColor Cyan
-            Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan
-            
             # Show file size with proper formatting
             $fileSizeMB = [Math]::Round($fileSize / 1MB, 2)
             Write-Host "📦 File size: " -NoNewline
@@ -933,6 +945,28 @@ if ($LocalFile) {
     Disconnect-MgGraph > $null 2>&1
     Write-Host "Disconnected from Microsoft Graph." -ForegroundColor Green
     exit 0
+}
+
+# Function to encode script files to base64 for Intune
+function Convert-ScriptToBase64 {
+    param (
+        [string]$ScriptPath
+    )
+    
+    if (-not (Test-Path $ScriptPath)) {
+        Write-Host "❌ Script file not found at path: $ScriptPath" -ForegroundColor Red
+        return $null
+    }
+    
+    try {
+        $scriptContent = Get-Content -Path $ScriptPath -Raw
+        $encodedContent = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($scriptContent))
+        return $encodedContent
+    }
+    catch {
+        Write-Host "❌ Error encoding script file: $_" -ForegroundColor Red
+        return $null
+    }
 }
 
 # Fetch supported apps from GitHub repository
@@ -1587,6 +1621,39 @@ if (-not $Upload -and -not $UpdateAll) {
     }
 }
 
+# Add interactive script selection for when no parameters are provided
+if (-not $UpdateAll -and -not $LocalFile -and -not $Upload) {
+    $preInstallScriptPath = $null
+    $postInstallScriptPath = $null
+    
+    Write-Host "`nWould you like to add a pre-install script? (y/n)" -ForegroundColor Yellow
+    $addPreInstallScript = Read-Host
+    if ($addPreInstallScript -eq "y") {
+        Write-Host "Please select a script file for pre-installation..." -ForegroundColor Yellow
+        $preInstallScriptPath = Show-FilePickerDialog -Title "Select Pre-Install Script File" -Filter "Script files (*.sh;*.ps1;*.py)|*.sh;*.ps1;*.py|All files (*.*)|*.*"
+        if ($preInstallScriptPath) {
+            Write-Host "✅ Pre-install script selected: $preInstallScriptPath" -ForegroundColor Green
+            $PreInstallScriptPath = $preInstallScriptPath  # Set the global parameter
+        }
+    }
+    
+    Write-Host "`nWould you like to add a post-install script? (y/n)" -ForegroundColor Yellow
+    $addPostInstallScript = Read-Host
+    if ($addPostInstallScript -eq "y") {
+        Write-Host "Please select a script file for post-installation..." -ForegroundColor Yellow
+        $postInstallScriptPath = Show-FilePickerDialog -Title "Select Post-Install Script File" -Filter "Script files (*.sh;*.ps1;*.py)|*.sh;*.ps1;*.py|All files (*.*)|*.*"
+        if ($postInstallScriptPath) {
+            Write-Host "✅ Post-install script selected: $postInstallScriptPath" -ForegroundColor Green
+            $PostInstallScriptPath = $postInstallScriptPath  # Set the global parameter
+        }
+    }
+    
+    # Remind user that scripts only work with PKG apps
+    if ($PreInstallScriptPath -or $PostInstallScriptPath) {
+        Write-Host "`nℹ️ Note: Pre-install and post-install scripts are only supported for PKG apps, not DMG apps." -ForegroundColor Cyan
+    }
+}
+
 # Main script for uploading only newer apps
 $existingAssignments = $null # Initialize variable to store assignments for updates
 
@@ -1675,6 +1742,37 @@ foreach ($app in $appsToUpload) {
                 bundleVersion = $appBundleVersion
             }
         )
+        
+        # Only add scripts for PKG apps
+        if ($appType -eq "macOSPkgApp") {
+            # Add pre-install script if provided
+            if ($PreInstallScriptPath) {
+                $preInstallScriptContent = Convert-ScriptToBase64 -ScriptPath $PreInstallScriptPath
+                if ($preInstallScriptContent) {
+                    Write-Host "✅ Pre-install script encoded successfully" -ForegroundColor Green
+                    $newAppPayload["preInstallScript"] = @{
+                        "@odata.type"   = "microsoft.graph.macOSAppScript"
+                        "scriptContent" = $preInstallScriptContent
+                    }
+                }
+            }
+
+            # Add post-install script if provided
+            if ($PostInstallScriptPath) {
+                $postInstallScriptContent = Convert-ScriptToBase64 -ScriptPath $PostInstallScriptPath
+                if ($postInstallScriptContent) {
+                    Write-Host "✅ Post-install script encoded successfully" -ForegroundColor Green
+                    $newAppPayload["postInstallScript"] = @{
+                        "@odata.type"   = "microsoft.graph.macOSAppScript"
+                        "scriptContent" = $postInstallScriptContent
+                    }
+                }
+            }
+        }
+        # Check if scripts are provided for DMG apps
+        elseif (($PreInstallScriptPath -or $PostInstallScriptPath) -and $appType -eq "macOSDmgApp") {
+            Write-Host "⚠️ Warning: Pre-install and post-install scripts are only supported for PKG apps. Scripts will be ignored for $appDisplayName." -ForegroundColor Yellow
+        }
     }
 
     $createAppUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps"
