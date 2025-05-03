@@ -41,6 +41,7 @@ jobs:
           import requests
           import json
           import time
+          import pathlib
           from datetime import datetime, timedelta
           from urllib.parse import quote
           from supabase import create_client, Client
@@ -87,6 +88,10 @@ jobs:
                   # Format the key as a fallback
                   return ' '.join(word.capitalize() for word in app_key.split('_'))
 
+          # Create CVE directory if it doesn't exist
+          cve_dir = pathlib.Path('CVE')
+          cve_dir.mkdir(exist_ok=True)
+
           # Read the supported apps from the JSON file
           try:
               with open('supported_apps.json', 'r') as f:
@@ -96,10 +101,12 @@ jobs:
               
               # Process all apps
               app_display_names = []
+              app_keys = []
               
               for app_key, app_url in supported_apps.items():
                   display_name = get_app_display_name(app_key, app_url)
                   app_display_names.append(display_name)
+                  app_keys.append(app_key)
                   
                   # Add a small delay to avoid rate limiting when fetching app info
                   time.sleep(0.1)
@@ -357,7 +364,7 @@ jobs:
                   return []
 
           # Function to check CVEs for a specific app
-          def check_cves_for_app(app_name):
+          def check_cves_for_app(app_name, app_key):
               print(f"\n{'=' * 50}")
               print(f"Checking CVEs for {app_name}")
               print(f"{'=' * 50}")
@@ -449,6 +456,34 @@ jobs:
                       print(f"✅ Successfully stored CVEs for {app_name} in the database")
                   except Exception as e:
                       print(f"Error storing CVEs for {app_name}: {str(e)}")
+                  
+                  # Create JSON file in CVE folder with the same name as in Apps/
+                  try:
+                      # Create a JSON structure for the CVE data
+                      cve_json = {
+                          "app_name": app_name,
+                          "last_updated": datetime.now().strftime("%Y-%m-%d"),
+                          "vulnerabilities": []
+                      }
+                      
+                      for vuln in recent_vulns:
+                          cve_json["vulnerabilities"].append({
+                              "cve_id": vuln['cve_id'],
+                              "published_date": vuln['published_date'],
+                              "last_modified_date": vuln['last_modified_date'],
+                              "base_score": vuln['base_score'],
+                              "severity": vuln['severity'],
+                              "description": vuln['description'],
+                              "cpe_name": vuln['cpe_name']
+                          })
+                      
+                      # Write to file with the same name as in Apps/
+                      cve_file_path = cve_dir / f"{app_key}.json"
+                      with open(cve_file_path, 'w') as f:
+                          json.dump(cve_json, f, indent=2)
+                      print(f"✅ Successfully created CVE file at {cve_file_path}")
+                  except Exception as e:
+                      print(f"Error creating CVE file for {app_name}: {str(e)}")
               
               # Display the results
               for vuln in recent_vulns:
@@ -463,14 +498,14 @@ jobs:
 
           # Check CVEs for each app
           print(f"\nChecking CVEs for {len(apps_to_check)} apps:")
-          for i, app in enumerate(apps_to_check):
-              print(f"\n[{i+1}/{len(apps_to_check)}] Processing app: {app}")
-              check_cves_for_app(app.strip())
+          for i, (app, app_key) in enumerate(zip(app_display_names, app_keys)):
+              print(f"\n[{i+1}/{len(apps_to_check)}] Processing app: {app} (key: {app_key})")
+              check_cves_for_app(app.strip(), app_key)
               # Add a larger delay between apps to avoid rate limiting
               # Since we're making multiple requests per app now
               time.sleep(2)  # 2 second delay between apps
 
-          print("\nCVE check completed and data stored in Supabase database.")
+          print("\nCVE check completed and data stored in Supabase database and CVE folder.")
           EOF
 
           python check_cves.py
