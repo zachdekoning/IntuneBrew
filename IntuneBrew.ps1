@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 0.5.0
+.VERSION 0.5.1
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 .AUTHOR ugurk
 .COMPANYNAME
@@ -12,10 +12,11 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
+Version 0.5.1: Updated the table output visualization. This makes it easier to read and understand the data being presented.
 Version 0.5.0: Added support for CVE scores.
 Version 0.4.2: Optimized App Logo handling.
 Version 0.4.1: IntuneBrew now correctly handles download urls with a redirect
-Version 0.4: Added support to copy assignments from existing app version to new version. If you copy over the assignments, the assignments for the older app version will be removed automatically.
+Version 0.4.0: Added support to copy assignments from existing app version to new version. If you copy over the assignments, the assignments for the older app version will be removed automatically.
 Version 0.3.8: Added support for -localfile parameter to upload local PKG or DMG files to Intune
 Version 0.3.7: Fix Parse Errors
 .PRIVATEDATA
@@ -67,7 +68,7 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.5.0" -ForegroundColor Yellow -NoNewline
+Write-Host " | Version" -NoNewline; Write-Host " 0.5.1" -ForegroundColor Yellow -NoNewline
 Write-Host " | Last updated: " -NoNewline; Write-Host "2025-05-03" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
@@ -1168,8 +1169,9 @@ function Get-IntuneApps {
     $totalApps = $githubJsonUrls.Count
     $currentApp = 0
 
-    Write-Host "`nChecking app versions in Intune..." -ForegroundColor Cyan
-    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan
+    Write-Host "`n═══════════════════════════════════════════════════" -ForegroundColor Cyan
+    Write-Host "      Checking App Versions in Intune..." -ForegroundColor Cyan
+    Write-Host "═══════════════════════════════════════════════════" -ForegroundColor Cyan
 
     foreach ($jsonUrl in $githubJsonUrls) {
         $currentApp++
@@ -1187,8 +1189,8 @@ function Get-IntuneApps {
         }
 
         $appName = $appInfo.name
-        Write-Host "[$currentApp/$totalApps] 🔍 Checking: $appName" -ForegroundColor Yellow -NoNewline
-
+        # We'll modify the output format but keep the check logic the same
+        
         # Fetch Intune app info
         $intuneQueryUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=(isof('microsoft.graph.macOSDmgApp') or isof('microsoft.graph.macOSPkgApp')) and displayName eq '$appName'"
 
@@ -1206,9 +1208,9 @@ function Get-IntuneApps {
                 $needsUpdate = Is-NewerVersion $githubVersion $intuneVersion
                 
                 if ($needsUpdate) {
-                    Write-Host " → " -NoNewline
-                    Write-Host "Update available" -ForegroundColor Green -NoNewline
-                    Write-Host " ($intuneVersion → $githubVersion)" -ForegroundColor Green
+                    # Improved version check output for updates
+                    Write-Host "[$currentApp/$totalApps] ✅ $appName" -NoNewline -ForegroundColor Green
+                    Write-Host ": Update available (Intune: $intuneVersion → Latest: $githubVersion)" -ForegroundColor Green
                     
                     # Get app key from the JSON URL (extract the filename without extension)
                     $appKey = [System.IO.Path]::GetFileNameWithoutExtension($jsonUrl.Split('/')[-1])
@@ -1216,8 +1218,7 @@ function Get-IntuneApps {
                     # Check for CVE information
                     $cveInfo = Get-AppCveInfo -appKey $appKey
                     if ($cveInfo -and $cveInfo.vulnerabilities -and $cveInfo.vulnerabilities.Count -gt 0) {
-                        Write-Host "   ⚠️" -NoNewline
-                        Write-Host " Latest Security vulnerabilities:" -ForegroundColor Yellow
+                        Write-Host "   🛡️  Security Vulnerabilities:" -ForegroundColor Yellow
                         
                         # Sort vulnerabilities by base score (highest first)
                         $sortedVulns = $cveInfo.vulnerabilities | Sort-Object -Property base_score -Descending
@@ -1249,8 +1250,9 @@ function Get-IntuneApps {
                     }
                 }
                 else {
-                    S
-                    Write-Host " → Up to date ($intuneVersion)" -ForegroundColor Gray
+                    # Improved output for up-to-date apps
+                    Write-Host "[$currentApp/$totalApps] ✔️ $appName" -NoNewline -ForegroundColor Gray
+                    Write-Host ": Up to date (Version: $intuneVersion)" -ForegroundColor Gray
                 }
                 
                 $intuneApps += [PSCustomObject]@{
@@ -1261,7 +1263,9 @@ function Get-IntuneApps {
                 }
             }
             else {
-                Write-Host " → Not in Intune" -ForegroundColor Gray
+                # Improved output for apps not in Intune
+                Write-Host "[$currentApp/$totalApps] ➕ $appName" -NoNewline -ForegroundColor Yellow
+                Write-Host ": Not in Intune (Latest: $($appInfo.version))" -ForegroundColor Yellow
                 $intuneApps += [PSCustomObject]@{
                     Name          = $appName
                     IntuneVersion = 'Not in Intune'
@@ -1275,7 +1279,8 @@ function Get-IntuneApps {
         }
     }
 
-    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan
+    Write-Host "═══════════════════════════════════════════════════" -ForegroundColor Cyan
+    Write-Host ""  # Add extra blank line for better separation
     return $intuneApps
 }
 
@@ -1358,28 +1363,37 @@ if (-not $UpdateAll) {
             $TableData
         )
 
-        $lineSeparator = "+----------------------------+----------------------+----------------------+-----------------+"
+        # Unicode box-drawing characters for cleaner table appearance
+        $lineSeparatorTop = "┌────────────────────────────┬──────────────────────┬──────────────────────┬─────────────────┐"
+        $lineSeparatorMid = "├────────────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤"
+        $lineSeparatorBot = "└────────────────────────────┴──────────────────────┴──────────────────────┴─────────────────┘"
         
-        Write-Host $lineSeparator
-        Write-Host ("| {0,-26} | {1,-20} | {2,-20} | {3,-15} |" -f "App Name", "Latest Version", "Intune Version", "Status") -ForegroundColor Cyan
-        Write-Host $lineSeparator
+        Write-Host $lineSeparatorTop
+        Write-Host ("│ {0,-26} │ {1,-20} │ {2,-20} │ {3,-15} │" -f "App Name", "Latest Version", "Intune Version", "Status") -ForegroundColor Cyan
+        Write-Host $lineSeparatorMid
 
         foreach ($row in $TableData) {
             $color = $row.StatusColor
             
             # Display the row with app info with colored app name
-            Write-Host "| " -NoNewline
+            Write-Host "│ " -NoNewline
             Write-Host ("{0,-26}" -f $row.'App Name') -ForegroundColor Cyan -NoNewline
-            Write-Host " | " -NoNewline
+            Write-Host " │ " -NoNewline
             Write-Host ("{0,-20}" -f $row.'Latest Version') -NoNewline
-            Write-Host " | " -NoNewline
+            Write-Host " │ " -NoNewline
             Write-Host ("{0,-20}" -f $row.'Intune Version') -NoNewline
-            Write-Host " | " -NoNewline
+            Write-Host " │ " -NoNewline
             
             # Display status with appropriate color and ensure right border alignment
-            Write-Host ("{0,-15} |" -f $row.Status) -ForegroundColor $color
+            Write-Host ("{0,-15} │" -f $row.Status) -ForegroundColor $color
             
-            Write-Host $lineSeparator
+            # Only add mid separator if not the last row
+            if ($row -ne $TableData[-1]) {
+                Write-Host $lineSeparatorMid
+            }
+            else {
+                Write-Host $lineSeparatorBot
+            }
         }
     }
 
@@ -1425,7 +1439,9 @@ $assignmentsFound = $false # Flag to track if any assignments were found
 # --- Non-Interactive Assignment Check/Display ---
 # Pre-fetch and display assignments if running non-interactively (-Upload or -UpdateAll) AND copying is requested (-CopyAssignments) AND updates exist
 if (($Upload -or $UpdateAll) -and $copyAssignments -and $updatableApps.Length -gt 0) {
-    Write-Host "`nChecking assignments for apps to be updated..." -ForegroundColor Cyan
+    Write-Host "`n═══════════════════════════════════════════════════" -ForegroundColor Cyan
+    Write-Host "      Checking Assignments for Apps:" -ForegroundColor Cyan
+    Write-Host "═══════════════════════════════════════════════════" -ForegroundColor Cyan
     foreach ($updApp in $updatableApps) {
         $assignments = Get-IntuneAppAssignments -AppId $updApp.IntuneAppId
         if ($assignments -ne $null -and $assignments.Count -gt 0) {
@@ -1463,7 +1479,10 @@ if (($Upload -or $UpdateAll) -and $copyAssignments -and $updatableApps.Length -g
                 if (-not [string]::IsNullOrWhiteSpace($targetDetail)) { $summaryPart += " $targetDetail" }
                 $assignmentSummaries += $summaryPart
             }
-            Write-Host "  - $($updApp.Name): Found $($assignments.Count) assignment(s): $($assignmentSummaries -join ', ')" -ForegroundColor Gray
+            Write-Host "  - $($updApp.Name): Found $($assignments.Count) assignment(s):" -ForegroundColor Gray
+            foreach ($summary in $assignmentSummaries) {
+                Write-Host "    • $summary" -ForegroundColor Gray
+            }
         }
         else {
             Write-Host "  - $($updApp.Name): No assignments found." -ForegroundColor Gray
@@ -1482,7 +1501,9 @@ if (-not $Upload -and -not $UpdateAll) {
     
     # --- Pre-fetch and display assignments for INTERACTIVE mode ---
     if ($updatableApps.Length -gt 0) {
-        Write-Host "`nChecking assignments for apps to be updated..." -ForegroundColor Cyan
+        Write-Host "`n═══════════════════════════════════════════════════" -ForegroundColor Cyan
+        Write-Host "      Checking Assignments for Updated Apps:" -ForegroundColor Cyan
+        Write-Host "═══════════════════════════════════════════════════" -ForegroundColor Cyan
         foreach ($updApp in $updatableApps) {
             # Use Get-IntuneAppAssignments and populate $fetchedAssignments and $assignmentsFound
             $assignments = Get-IntuneAppAssignments -AppId $updApp.IntuneAppId
@@ -1521,7 +1542,10 @@ if (-not $Upload -and -not $UpdateAll) {
                     if (-not [string]::IsNullOrWhiteSpace($targetDetail)) { $summaryPart += " $targetDetail" }
                     $assignmentSummaries += $summaryPart
                 }
-                Write-Host "  - $($updApp.Name): Found $($assignments.Count) assignment(s): $($assignmentSummaries -join ', ')" -ForegroundColor Gray
+                Write-Host "  - $($updApp.Name): Found $($assignments.Count) assignment(s):" -ForegroundColor Gray
+                foreach ($summary in $assignmentSummaries) {
+                    Write-Host "    • $summary" -ForegroundColor Gray
+                }
             }
             else {
                 Write-Host "  - $($updApp.Name): No assignments found." -ForegroundColor Gray
