@@ -1,11 +1,11 @@
 {
   "name": "LibreWolf",
   "description": "Web browser",
-  "version": "138.0",
-  "url": "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/138.0-2/librewolf-138.0-2-macos-arm64-package.dmg",
+  "version": "138.0.1",
+  "url": "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/138.0.1-1/librewolf-138.0.1-1-macos-arm64-package.dmg",
   "bundleId": "org.mozilla.librewolf",
   "homepage": "https://librewolf.net/",
-  "fileName": "librewolf-138.0-2-macos-arm64-package.dmg",
-  "sha": "363047d7d73850c8c3fdde77b5b7daa687eea20df197ac72d8b812904d931402",
-  "previous_version": "137.0.2"
+  "fileName": "librewolf-138.0.1-1-macos-arm64-package.dmg",
+  "sha": "dd59b7ee40c65b9e01958c62cbd0a0c0d443bd66d031f4e3b740366be38cb4b9",
+  "previous_version": "138.0"
 }
