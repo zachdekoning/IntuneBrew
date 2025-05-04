@@ -436,12 +436,25 @@ jobs:
               // Extract key information from the summary
               let titleText = summary;
               
-              // Remove phrases like "the user is requesting" or "this issue is about"
+              // Aggressively remove phrases referring to users or requests to make titles direct and concise
               titleText = titleText
+                // Remove any reference to "the user" or similar
                 .replace(/^the user (is|has been|was) (requesting|asking for|reporting|describing|mentioning)/i, '')
                 .replace(/^this (issue|bug|feature|request|report) (is about|describes|mentions|refers to|relates to)/i, '')
                 .replace(/^(user|reporter|author) (wants|needs|requests|asks for|reports)/i, '')
                 .replace(/^(please|kindly|urgently) (add|fix|implement|resolve|address)/i, '$2')
+                // More aggressive patterns to remove user references
+                .replace(/the user requests (a |an |to )?/i, '')
+                .replace(/user wants (a |an |to )?/i, '')
+                .replace(/request(s|ed|ing)? (for |to )?/i, '')
+                .replace(/would like (a |an |to )?/i, '')
+                .replace(/asking (for |to )?/i, '')
+                .replace(/suggestion (for |to )?/i, '')
+                .replace(/proposal (for |to )?/i, '')
+                .replace(/need(s|ed|ing)? (a |an |to )?/i, '')
+                // Remove any remaining "feature to" or similar phrases
+                .replace(/^(feature|enhancement) (for |to )/i, '')
+                .replace(/^(bug|issue) (with |in |when )/i, '')
                 .trim();
               
               // Extract the first sentence or limit to a reasonable length
@@ -458,12 +471,22 @@ jobs:
                                  issueType.toLowerCase().includes('feature') ? '[Feature]' :
                                  '[Feedback]';
               
+              // Further simplify the title - focus on the core action/request
+              cleanTitle = cleanTitle
+                // Remove any remaining articles at the beginning
+                .replace(/^(a |an |the )/i, '')
+                // Capitalize first word if it's a verb
+                .replace(/^(add|implement|create|fix|update|change|improve|enable|disable|remove)/i,
+                  match => match.charAt(0).toUpperCase() + match.slice(1))
+                .trim();
+              
               // Create improved title with type prefix and clean title
               improvedTitle = `${typePrefix} ${cleanTitle}`;
               
-              // Ensure the title isn't too long (GitHub has a limit)
-              if (improvedTitle.length > 250) {
-                improvedTitle = improvedTitle.substring(0, 247) + '...';
+              // Make titles more concise - shorter than GitHub's limit
+              const maxTitleLength = 100; // Much shorter than GitHub's 250 char limit
+              if (improvedTitle.length > maxTitleLength) {
+                improvedTitle = improvedTitle.substring(0, maxTitleLength - 3) + '...';
               }
               
               // Update the issue title
