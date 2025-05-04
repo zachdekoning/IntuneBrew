@@ -1,0 +1,175 @@
+name: PowerShell Linting
+run-name: Analyze IntuneBrew.ps1 for Issues
+
+# Configuration options
+env:
+  # Set to 'true' to include information-level issues in the report
+  SHOW_INFORMATION: "true"
+  # Set to a comma-separated list of rule names to exclude specific rules
+  EXCLUDED_RULES: "PSAvoidUsingWriteHost,PSAvoidUsingConvertToSecureStringWithPlainText"
+
+on:
+  push:
+    paths:
+      - "IntuneBrew.ps1"
+  pull_request:
+    paths:
+      - "IntuneBrew.ps1"
+
+jobs:
+  analyze:
+    name: PSScriptAnalyzer
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module -Name PSScriptAnalyzer -Force
+
+      - name: Run PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          # Parse excluded rules from environment variable
+          $excludedRules = "${{ env.EXCLUDED_RULES }}".Split(',', [StringSplitOptions]::RemoveEmptyEntries)
+
+          Write-Output "Running PSScriptAnalyzer with the following configuration:"
+          Write-Output "- Excluded rules: $(if ($excludedRules) { $excludedRules -join ', ' } else { 'None' })"
+          Write-Output "- Show information: ${{ env.SHOW_INFORMATION }}"
+          Write-Output ""
+
+          # Run PSScriptAnalyzer with detailed output and excluded rules
+          $analyzerParams = @{
+            Path = "./IntuneBrew.ps1"
+            ReportSummary = $true
+          }
+
+          if ($excludedRules) {
+            $analyzerParams.ExcludeRule = $excludedRules
+          }
+
+          $results = Invoke-ScriptAnalyzer @analyzerParams
+
+          # Count issues by severity
+          $errorCount = ($results | Where-Object { $_.Severity -eq 'Error' }).Count
+          $warningCount = ($results | Where-Object { $_.Severity -eq 'Warning' }).Count
+          $infoCount = ($results | Where-Object { $_.Severity -eq 'Information' }).Count
+
+          Write-Output "PSScriptAnalyzer Results Summary:"
+          Write-Output "--------------------------------"
+          Write-Output "Total Issues: $($results.Count)"
+          Write-Output "Errors: $errorCount"
+          Write-Output "Warnings: $warningCount"
+          Write-Output "Information: $infoCount"
+          Write-Output "--------------------------------"
+
+          # Display detailed results grouped by severity
+          if ($results.Count -gt 0) {
+            Write-Output "`n🔍 Detailed Analysis Results:"
+            
+            # Display errors first
+            $errors = $results | Where-Object { $_.Severity -eq 'Error' }
+            if ($errors.Count -gt 0) {
+              Write-Output "`n❌ ERRORS:"
+              foreach ($errorItem in $errors) {
+                Write-Output "  - Line $($errorItem.Line): [$($errorItem.RuleName)] $($errorItem.Message)"
+              }
+            }
+            
+            # Display warnings
+            $warnings = $results | Where-Object { $_.Severity -eq 'Warning' }
+            if ($warnings.Count -gt 0) {
+              Write-Output "`n⚠️ WARNINGS:"
+              foreach ($warning in $warnings) {
+                Write-Output "  - Line $($warning.Line): [$($warning.RuleName)] $($warning.Message)"
+              }
+            }
+            
+            # Display information
+            $infos = $results | Where-Object { $_.Severity -eq 'Information' }
+            if ($infos.Count -gt 0) {
+              Write-Output "`nℹ️ INFORMATION:"
+              foreach ($info in $infos) {
+                Write-Output "  - Line $($info.Line): [$($info.RuleName)] $($info.Message)"
+              }
+            }
+          }
+
+          # Output results as GitHub annotations
+          foreach ($result in $results) {
+            $severity = $result.Severity.ToString().ToLower()
+            $message = $result.Message
+            $line = $result.Line
+            $scriptName = $result.ScriptName
+            $ruleName = $result.RuleName
+            
+            Write-Output "::$severity file=$scriptName,line=$line::[$ruleName] $message"
+          }
+
+          # Output summary to the console
+          if ($errorCount -gt 0) {
+            Write-Output "⚠️ PSScriptAnalyzer found $errorCount errors. See annotations for details."
+          }
+
+          if ($warningCount -gt 0) {
+            Write-Output "⚠️ PSScriptAnalyzer found $warningCount warnings. See annotations for details."
+          }
+
+          if ($errorCount -eq 0 -and $warningCount -eq 0) {
+            Write-Output "✅ PSScriptAnalyzer found no issues!"
+          }
+
+          # Add a workflow summary with a detailed table
+          Write-Output "## PSScriptAnalyzer Results" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "### Summary" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "- **Errors:** $errorCount" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "- **Warnings:** $warningCount" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "- **Information:** $infoCount" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "" >> $env:GITHUB_STEP_SUMMARY
+
+          # Add detailed results table if any issues were found
+          if ($results.Count -gt 0) {
+            Write-Output "### Detailed Results" >> $env:GITHUB_STEP_SUMMARY
+            Write-Output "" >> $env:GITHUB_STEP_SUMMARY
+            
+            # Create table header
+            Write-Output "| Severity | Line | Rule | Message |" >> $env:GITHUB_STEP_SUMMARY
+            Write-Output "| --- | --- | --- | --- |" >> $env:GITHUB_STEP_SUMMARY
+            
+            # Sort results by severity (Error first, then Warning, then Information)
+            $sortedResults = $results | Sort-Object {
+              switch ($_.Severity) {
+                'Error' { 0 }
+                'Warning' { 1 }
+                'Information' { 2 }
+                default { 3 }
+              }
+            }
+            
+            # Add each result as a table row
+            foreach ($result in $sortedResults) {
+              $severity = $result.Severity
+              $line = $result.Line
+              $ruleName = $result.RuleName
+              # Escape pipe characters in the message to prevent breaking the table
+              $message = $result.Message -replace '\|', '\|'
+              
+              # Add emoji based on severity
+              $severityEmoji = switch ($severity) {
+                'Error' { '❌' }
+                'Warning' { '⚠️' }
+                'Information' { 'ℹ️' }
+                default { '' }
+              }
+              
+              Write-Output "| $severityEmoji $severity | $line | $ruleName | $message |" >> $env:GITHUB_STEP_SUMMARY
+            }
+          } else {
+            Write-Output "No issues found! 🎉" >> $env:GITHUB_STEP_SUMMARY
+          }
