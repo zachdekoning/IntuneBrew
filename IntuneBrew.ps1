@@ -448,9 +448,6 @@ function UploadFileToAzureStorage($sasUri, $filepath) {
                 $emptyBlocks = $progressWidth - $filledBlocks
                 $progressBar = "[" + ("▓" * $filledBlocks) + ("░" * $emptyBlocks) + "]"
 
-                # Build progress line
-                $progressText = "$progressBar $percentComplete% ($uploadedMB MB / $totalMB MB)"
-                
                 # Clear line and write progress
                 [Console]::SetCursorPosition(0, [Console]::CursorTop)
                 [Console]::Write((" " * [Console]::WindowWidth))
@@ -1707,7 +1704,7 @@ foreach ($app in $appsToUpload) {
     Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan
 
     Write-Host "⬇️  Downloading application..." -ForegroundColor Yellow
-    $appFilePath = Get-AppFile $appInfo.url $appInfo.fileName $appInfo.sha
+    $appFilePath = Get-AppFile -url $appInfo.url -fileName $appInfo.fileName -expectedHash $appInfo.sha
 
     Write-Host "`n📋 Application Details:" -ForegroundColor Cyan
     Write-Host "   • Display Name: $($appInfo.name)"
