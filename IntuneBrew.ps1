@@ -96,8 +96,8 @@ Write-Host ""
 
 # Required Graph API permissions for app functionality
 $requiredPermissions = @(
-    "DeviceManagementApps.ReadWrite.All",
-    "Group.Read.All" # Added permission to read group names
+    "DeviceManagementApps.ReadWrite.All", # Read and write access to apps in Intune
+    "Group.Read.All" # Read group names for assignment
 )
 
 # Function to validate JSON configuration file
