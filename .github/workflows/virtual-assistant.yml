@@ -1,4 +1,4 @@
-name: Virtual Assistant
+name: Virtual Assistant for Issues
 
 on:
   issues:
