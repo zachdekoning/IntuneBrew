@@ -1,4 +1,5 @@
 name: Virtual Assistant for Issues
+run-name: Virtual Assistant for Issues
 
 on:
   issues:
