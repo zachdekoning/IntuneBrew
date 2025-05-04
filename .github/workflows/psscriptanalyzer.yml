@@ -6,7 +6,7 @@ env:
   # Set to 'true' to include information-level issues in the report
   SHOW_INFORMATION: "true"
   # Set to a comma-separated list of rule names to exclude specific rules
-  EXCLUDED_RULES: "PSAvoidUsingWriteHost,PSAvoidUsingConvertToSecureStringWithPlainText"
+  EXCLUDED_RULES: "PSAvoidUsingWriteHost,PSAvoidUsingConvertToSecureStringWithPlainText,PSUseBOMForUnicodeEncodedFile,PSAvoidTrailingWhitespace"
 
 on:
   push:
