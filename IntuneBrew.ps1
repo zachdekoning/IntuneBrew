@@ -54,6 +54,10 @@ Version 0.3.7: Fix Parse Errors
  Specifies the path to a script file that will be executed after the app installation. Only works with PKG apps and the -Upload parameter.
  Example: IntuneBrew -Upload google_chrome -PostInstallScriptPath ./post-install.sh
 
+.PARAMETER UseExistingIntuneApp
+ Specifies the path to a script file that will be executed after the app installation. Only works with PKG apps and the -Upload parameter.
+ Example: IntuneBrew -UpdateAll -UseExisting
+
  .PARAMETER ConfigFile
  Specifies the path to a the configuration file containing authentication information (see clientSecret_Template.json and certificateThumbprint_Template.json for configuration layout)
  Example: IntuneBrew -UpdateAll -ConfigFile clientSecret.json
@@ -77,6 +81,10 @@ param(
     
     [Parameter(Mandatory = $false)]
     [string]$PostInstallScriptPath,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$UseExistingIntuneApp,
+
     [Parameter(Mandatory = $false)]
     [string]$ConfigFile
 )
@@ -1486,8 +1494,11 @@ if (($appsToUpload.Count) -eq 0) {
     exit 0
 }
 
-# Determine if assignments should be copied based on the -CopyAssignments switch
-$copyAssignments = $CopyAssignments.IsPresent
+# Determine whether we should create new Intune app records, or update the existing record
+$updateExistingIntuneApp = $UseExistingIntuneApp.isPresent
+
+# Determine if assignments should be copied based on the -CopyAssignments switch, and -UseExistingIntuneApp not being supplied
+$copyAssignments = $CopyAssignments.IsPresent -and -not $updateExistingIntuneApp
 
 # Define variables needed for assignment checking/copying regardless of mode
 $updatableApps = @($appsToUpload | Where-Object { $_.IntuneVersion -ne 'Not in Intune' -and (Test-NewerVersion $_.GitHubVersion $_.IntuneVersion) })
@@ -1634,7 +1645,7 @@ if (-not $Upload -and -not $UpdateAll) {
     else {
         # User confirmed 'y'
         # Ask about copying assignments only if assignments were found AND the -CopyAssignments switch was NOT used (Prompt 2)
-        if ($assignmentsFound -and -not $CopyAssignments.IsPresent) {
+        if ($assignmentsFound -and -not $CopyAssignments.IsPresent -and -not $UseExistingIntuneApp.isPresent) {
             $copyConfirm = Read-Host -Prompt "`nDo you want to copy the listed existing assignments to the updated app$(if($updatableApps.Length -gt 1){'s'})? (y/n)"
             if ($copyConfirm -eq "y") {
                 # Set the flag only if user confirms interactively
@@ -1739,71 +1750,53 @@ foreach ($app in $appsToUpload) {
         continue
     }
 
-    $newAppPayload = @{ # Renamed variable to avoid conflict with loop variable $app
-        "@odata.type"                   = "#microsoft.graph.$appType"
-        displayName                     = $appDisplayName
-        description                     = $appDescription
-        publisher                       = $appPublisher
-        fileName                        = (Split-Path $appFilePath -Leaf)
-        informationUrl                  = $appHomepage
-        packageIdentifier               = $appBundleId
-        bundleId                        = $appBundleId
-        versionNumber                   = $appBundleVersion
-        minimumSupportedOperatingSystem = @{
-            "@odata.type" = "#microsoft.graph.macOSMinimumOperatingSystem"
-            v11_0         = $true
-        }
-    }
+    # Define the Intune app - will either be set to new or existing Intune app ID
+    $intuneAppId = $null
 
-    if ($appType -eq "macOSDmgApp" -or $appType -eq "macOSPkgApp") {
-        $newAppPayload["primaryBundleId"] = $appBundleId
-        $newAppPayload["primaryBundleVersion"] = $appBundleVersion
-        $newAppPayload["includedApps"] = @(                     # Corrected variable name
-            @{
-                "@odata.type" = "#microsoft.graph.macOSIncludedApp"
-                bundleId      = $appBundleId
-                bundleVersion = $appBundleVersion
+    # If app already exists in Intune and -UseExistingIntuneApp was supplied, use existing app id
+    if ($updateExistingIntuneApp -and $app.IntuneAppId) {
+        $intuneAppId = $app.IntuneAppId;
+        Write-Host "✅ Updating Existing Intune App (ID: $($intuneAppId))" -ForegroundColor Green
+    } else {
+        # Set minimum required details initially
+        $newAppPayload = @{ # Renamed variable to avoid conflict with loop variable $app
+            "@odata.type"                   = "#microsoft.graph.$appType"
+            displayName                     = $appDisplayName
+            description                     = $appDescription
+            publisher                       = $appPublisher
+            fileName                        = (Split-Path $appFilePath -Leaf)
+            informationUrl                  = $appHomepage
+            packageIdentifier               = $appBundleId
+            bundleId                        = $appBundleId
+            versionNumber                   = $appBundleVersion
+            minimumSupportedOperatingSystem = @{
+                "@odata.type" = "#microsoft.graph.macOSMinimumOperatingSystem"
+                v11_0         = $true
             }
-        )
-        
-        # Only add scripts for PKG apps
-        if ($appType -eq "macOSPkgApp") {
-            # Add pre-install script if provided
-            if ($PreInstallScriptPath) {
-                $preInstallScriptContent = Convert-ScriptToBase64 -ScriptPath $PreInstallScriptPath
-                if ($preInstallScriptContent) {
-                    Write-Host "✅ Pre-install script encoded successfully" -ForegroundColor Green
-                    $newAppPayload["preInstallScript"] = @{
-                        "@odata.type"   = "microsoft.graph.macOSAppScript"
-                        "scriptContent" = $preInstallScriptContent
-                    }
+        }
+
+        if ($appType -eq "macOSDmgApp" -or $appType -eq "macOSPkgApp") {
+            $newAppPayload["primaryBundleId"] = $appBundleId
+            $newAppPayload["primaryBundleVersion"] = $appBundleVersion
+            $newAppPayload["includedApps"] = @(                     # Corrected variable name
+                @{
+                    "@odata.type" = "#microsoft.graph.macOSIncludedApp"
+                    bundleId      = $appBundleId
+                    bundleVersion = $appBundleVersion
                 }
-            }
+            )    
+        }
+    
+        $createAppUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps"
+        $newApp = Invoke-MgGraphRequest -Method POST -Uri $createAppUri -Body ($newAppPayload | ConvertTo-Json -Depth 10)
+        Write-Host "✅ App created successfully (ID: $($newApp.id))" -ForegroundColor Green
 
-            # Add post-install script if provided
-            if ($PostInstallScriptPath) {
-                $postInstallScriptContent = Convert-ScriptToBase64 -ScriptPath $PostInstallScriptPath
-                if ($postInstallScriptContent) {
-                    Write-Host "✅ Post-install script encoded successfully" -ForegroundColor Green
-                    $newAppPayload["postInstallScript"] = @{
-                        "@odata.type"   = "microsoft.graph.macOSAppScript"
-                        "scriptContent" = $postInstallScriptContent
-                    }
-                }
-            }
-        }
-        # Check if scripts are provided for DMG apps
-        elseif (($PreInstallScriptPath -or $PostInstallScriptPath) -and $appType -eq "macOSDmgApp") {
-            Write-Host "⚠️ Warning: Pre-install and post-install scripts are only supported for PKG apps. Scripts will be ignored for $appDisplayName." -ForegroundColor Yellow
-        }
+        # Set intune app ID to newly created app
+        $intuneAppId = $newApp.id
     }
-
-    $createAppUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps"
-    $newApp = Invoke-MgGraphRequest -Method POST -Uri $createAppUri -Body ($newAppPayload | ConvertTo-Json -Depth 10)
-    Write-Host "✅ App created successfully (ID: $($newApp.id))" -ForegroundColor Green
 
     Write-Host "`n🔒 Processing content version..." -ForegroundColor Yellow
-    $contentVersionUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($newApp.id)/microsoft.graph.$appType/contentVersions"
+    $contentVersionUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($intuneAppId)/microsoft.graph.$appType/contentVersions"
     $contentVersion = Invoke-MgGraphRequest -Method POST -Uri $contentVersionUri -Body "{}"
     Write-Host "✅ Content version created (ID: $($contentVersion.id))" -ForegroundColor Green
 
@@ -1824,12 +1817,12 @@ foreach ($app in $appsToUpload) {
         isDependency  = $false
     }
 
-    $contentFileUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($newApp.id)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files"  
+    $contentFileUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($intuneAppId)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files"  
     $contentFile = Invoke-MgGraphRequest -Method POST -Uri $contentFileUri -Body ($fileContent | ConvertTo-Json)
 
     do {
         Start-Sleep -Seconds 5
-        $fileStatusUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($newApp.id)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files/$($contentFile.id)"
+        $fileStatusUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($intuneAppId)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files/$($contentFile.id)"
         $fileStatus = Invoke-MgGraphRequest -Method GET -Uri $fileStatusUri
     } while ($fileStatus.uploadState -ne "azureStorageUriRequestSuccess")
 
@@ -1840,14 +1833,14 @@ foreach ($app in $appsToUpload) {
     $commitData = @{
         fileEncryptionInfo = $fileEncryptionInfo
     }
-    $commitUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($newApp.id)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files/$($contentFile.id)/commit"
+    $commitUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($intuneAppId)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files/$($contentFile.id)/commit"
     Invoke-MgGraphRequest -Method POST -Uri $commitUri -Body ($commitData | ConvertTo-Json)
 
     $retryCount = 0
     $maxRetries = 10
     do {
         Start-Sleep -Seconds 10
-        $fileStatusUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($newApp.id)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files/$($contentFile.id)"
+        $fileStatusUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($intuneAppId)/microsoft.graph.$appType/contentVersions/$($contentVersion.id)/files/$($contentFile.id)"
         $fileStatus = Invoke-MgGraphRequest -Method GET -Uri $fileStatusUri
         if ($fileStatus.uploadState -eq "commitFileFailed") {
             # Execute the request without storing the unused response
@@ -1864,21 +1857,79 @@ foreach ($app in $appsToUpload) {
         exit 1
     }
 
-    $updateAppUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($newApp.id)"
+    # Update the app (new or existing) with new content version and supplied additional data
+    $updateAppUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/$($intuneAppId)"
     $updateData = @{
         "@odata.type"           = "#microsoft.graph.$appType"
         committedContentVersion = $contentVersion.id
+
+        displayName                     = $appDisplayName
+        description                     = $appDescription
+        publisher                       = $appPublisher
+        fileName                        = (Split-Path $appFilePath -Leaf)
+        informationUrl                  = $appHomepage
+        packageIdentifier               = $appBundleId
+        bundleId                        = $appBundleId
+        versionNumber                   = $appBundleVersion
+        minimumSupportedOperatingSystem = @{
+            "@odata.type" = "#microsoft.graph.macOSMinimumOperatingSystem"
+            v11_0         = $true
+        }
     }
+
+    if ($appType -eq "macOSDmgApp" -or $appType -eq "macOSPkgApp") {
+        $updateData["primaryBundleId"] = $appBundleId
+        $updateData["primaryBundleVersion"] = $appBundleVersion
+        $updateData["includedApps"] = @(                     # Corrected variable name
+            @{
+                "@odata.type" = "#microsoft.graph.macOSIncludedApp"
+                bundleId      = $appBundleId
+                bundleVersion = $appBundleVersion
+            }
+        )
+        
+        # Only add scripts for PKG apps
+        if ($appType -eq "macOSPkgApp") {
+            # Add pre-install script if provided
+            if ($PreInstallScriptPath) {
+                $preInstallScriptContent = Convert-ScriptToBase64 -ScriptPath $PreInstallScriptPath
+                if ($preInstallScriptContent) {
+                    Write-Host "✅ Pre-install script encoded successfully" -ForegroundColor Green
+                    $updateData["preInstallScript"] = @{
+                        "@odata.type"   = "microsoft.graph.macOSAppScript"
+                        "scriptContent" = $preInstallScriptContent
+                    }
+                }
+            }
+
+            # Add post-install script if provided
+            if ($PostInstallScriptPath) {
+                $postInstallScriptContent = Convert-ScriptToBase64 -ScriptPath $PostInstallScriptPath
+                if ($postInstallScriptContent) {
+                    Write-Host "✅ Post-install script encoded successfully" -ForegroundColor Green
+                    $updateData["postInstallScript"] = @{
+                        "@odata.type"   = "microsoft.graph.macOSAppScript"
+                        "scriptContent" = $postInstallScriptContent
+                    }
+                }
+            }
+        }
+    }
+    # Check if scripts are provided for DMG apps
+    elseif (($PreInstallScriptPath -or $PostInstallScriptPath) -and $appType -eq "macOSDmgApp") {
+        Write-Host "⚠️ Warning: Pre-install and post-install scripts are only supported for PKG apps. Scripts will be ignored for $appDisplayName." -ForegroundColor Yellow
+    }
+
     Invoke-MgGraphRequest -Method PATCH -Uri $updateAppUri -Body ($updateData | ConvertTo-Json)
 
     # Apply assignments if the flag is set and assignments were successfully fetched
     if ($copyAssignments -and $null -ne $existingAssignments) {
-        Set-IntuneAppAssignment -NewAppId $newApp.id -Assignments $existingAssignments
+        Set-IntuneAppAssignment -NewAppId $intuneAppId -Assignments $existingAssignments
         # Now remove assignments from the old app version
         Remove-IntuneAppAssignment -OldAppId $app.IntuneAppId -AssignmentsToRemove $existingAssignments
     }
     
-    Add-IntuneAppLogo -appId $newApp.id -appName $appDisplayName -appType $appType -localLogoPath $logoPath
+    Add-IntuneAppLogo -appId $intuneAppId -appName $appDisplayName -appType $appType -localLogoPath $logoPath
 
     Write-Host "`n🧹 Cleaning up temporary files..." -ForegroundColor Yellow
     if (Test-Path $appFilePath) {
@@ -1922,7 +1973,7 @@ foreach ($app in $appsToUpload) {
     $existingAssignments = $null
 
     Write-Host "`n✨ Successfully processed $($appInfo.name)" -ForegroundColor Cyan
-    Write-Host "🔗 Intune Portal URL: https://intune.microsoft.com/#view/Microsoft_Intune_Apps/SettingsMenu/~/0/appId/$($newApp.id)" -ForegroundColor Cyan
+    Write-Host "🔗 Intune Portal URL: https://intune.microsoft.com/#view/Microsoft_Intune_Apps/SettingsMenu/~/0/appId/$($intuneAppId)" -ForegroundColor Cyan
     Write-Host "" -ForegroundColor Cyan
 }
 
