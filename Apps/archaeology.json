@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.mothersruin.com/software/Archaeology/",
   "fileName": "Archaeology.dmg",
-  "sha": "0caa5270ec9acf83ff8b0a88d80d43240f9b5680ade373787f51fa415a1ce5e2"
+  "sha": "0caa5270ec9acf83ff8b0a88d80d43240f9b5680ade373787f51fa415a1ce5e2",
+  "previous_version": "1.2"
 }

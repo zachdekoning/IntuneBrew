@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://ente.io/",
   "fileName": "ente-1.7.12-universal.dmg",
-  "sha": "1674c7c155549a9198b85e2791671a66a89f038abe601524bb82c0687548ec0c"
+  "sha": "1674c7c155549a9198b85e2791671a66a89f038abe601524bb82c0687548ec0c",
+  "previous_version": "1.7.12"
 }

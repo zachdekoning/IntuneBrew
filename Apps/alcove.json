@@ -7,5 +7,6 @@
   "homepage": "https://tryalcove.com/",
   "fileName": "alcove_1.2.5.pkg",
   "type": "app",
-  "sha": "266328af825fdda3cd1a883652c2a52f2133fe842d82e23adb85ad4dc005c648"
+  "sha": "266328af825fdda3cd1a883652c2a52f2133fe842d82e23adb85ad4dc005c648",
+  "previous_version": "1.2.5"
 }

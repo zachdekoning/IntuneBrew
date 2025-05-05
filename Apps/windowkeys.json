@@ -7,5 +7,6 @@
   "homepage": "https://www.apptorium.com/windowkeys",
   "fileName": "windowkeys_2.0.pkg",
   "type": "app",
-  "sha": "db497d89e3146ef5156015da9dc772d12156cb29414d1d318b976c10090a4a6a"
+  "sha": "db497d89e3146ef5156015da9dc772d12156cb29414d1d318b976c10090a4a6a",
+  "previous_version": "2.0"
 }

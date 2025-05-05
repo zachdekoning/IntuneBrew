@@ -1,0 +1,10 @@
+{
+  "name": "Advanced Renamer",
+  "description": "Batch file renaming utility",
+  "version": "4.11",
+  "url": "https://www.advancedrenamer.com/down/macos/arm/AdvancedRenamer_4_11.dmg",
+  "bundleId": null,
+  "homepage": "https://www.advancedrenamer.com/",
+  "fileName": "AdvancedRenamer_4_11.dmg",
+  "sha": "ba3fc2491f538ffc710bd617592c2aa7fc3e3219ae2606cc7168c6e5cdf25fd7"
+}

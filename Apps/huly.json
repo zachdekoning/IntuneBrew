@@ -7,5 +7,6 @@
   "homepage": "https://huly.io/",
   "fileName": "huly_0.6.499.pkg",
   "type": "app",
-  "sha": "e0c37bdf8b658a972560c0eba18f0c2087337d71aa441f84472e9edad63ace99"
+  "sha": "e0c37bdf8b658a972560c0eba18f0c2087337d71aa441f84472e9edad63ace99",
+  "previous_version": "0.6.499"
 }

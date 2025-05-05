@@ -1,0 +1,10 @@
+{
+  "name": "Studio 3T",
+  "description": "IDE, client, and GUI for MongoDB",
+  "version": "2025.7.0",
+  "url": "https://download.studio3t.com/studio-3t/mac-aarch64/2025.7.0/Studio-3T.dmg",
+  "bundleId": null,
+  "homepage": "https://studio3t.com/",
+  "fileName": "Studio-3T.dmg",
+  "sha": "6cea9f2b5dd981d459164ae5c3ecbb0a12c4d900dbfb4ecbd8284fb0a615d5b5"
+}

@@ -6,5 +6,6 @@
   "bundleId": "com.twingate.macos",
   "homepage": "https://twingate.com/",
   "fileName": "Twingate.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "2025.114.13304"
 }

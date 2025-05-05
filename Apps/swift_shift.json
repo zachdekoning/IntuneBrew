@@ -7,5 +7,6 @@
   "homepage": "https://www.swiftshift.app/",
   "fileName": "swift_shift_0.26.0.pkg",
   "type": "app",
-  "sha": "ae55e9cfce91f2d09060539895c3f92029463c828a267f9fa79a56605fafcb1f"
+  "sha": "ae55e9cfce91f2d09060539895c3f92029463c828a267f9fa79a56605fafcb1f",
+  "previous_version": "0.26.0"
 }

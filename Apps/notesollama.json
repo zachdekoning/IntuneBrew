@@ -7,5 +7,6 @@
   "homepage": "https://smallest.app/notesollama/",
   "fileName": "notesollama_0.2.6.pkg",
   "type": "app",
-  "sha": "3476741b072cae2b8f103b55e67177fe3b6c80e06338dd6508ad5943b0a560d3"
+  "sha": "3476741b072cae2b8f103b55e67177fe3b6c80e06338dd6508ad5943b0a560d3",
+  "previous_version": "0.2.6"
 }

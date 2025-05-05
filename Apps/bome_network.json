@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.bome.com/products/bomenet",
   "fileName": "BomeNet1.6.0_macOS.dmg",
-  "sha": "24f99bdf3356bf1218c65b315ca63085d8d41cd21f73a67c374cd73acf02d959"
+  "sha": "24f99bdf3356bf1218c65b315ca63085d8d41cd21f73a67c374cd73acf02d959",
+  "previous_version": "1.6.0"
 }

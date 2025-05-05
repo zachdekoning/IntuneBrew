@@ -6,5 +6,6 @@
   "bundleId": "com.2X.Client.Mac",
   "homepage": "https://www.parallels.com/products/ras/features/rdp-client/",
   "fileName": "RasClient-Mac-Notarized-19.4.3-25221.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "19.4.3"
 }

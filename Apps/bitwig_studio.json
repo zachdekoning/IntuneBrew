@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.bitwig.com/",
   "fileName": "installer_mac",
-  "sha": "e04d40fbbc0040a73211a6ee3d5fdbb6d4fe9fa24ca553edc0fd6d46c2e95a96"
+  "sha": "e04d40fbbc0040a73211a6ee3d5fdbb6d4fe9fa24ca553edc0fd6d46c2e95a96",
+  "previous_version": "5.3.8"
 }

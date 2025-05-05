@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://ente.io/auth/",
   "fileName": "ente-auth-v4.3.5.dmg",
-  "sha": "e1be474a546653b3b348fdd3a590e68c89e09e0c45828e2a6cfc0d6dbcebf159"
+  "sha": "e1be474a546653b3b348fdd3a590e68c89e09e0c45828e2a6cfc0d6dbcebf159",
+  "previous_version": "4.3.5"
 }

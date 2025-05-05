@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://updf.com/",
   "fileName": "updf-mac-full.dmg",
-  "sha": "ad8e2e44d984add447621349e4e41be3181e1890eae6f77526a6b7024df712e2"
+  "sha": "ad8e2e44d984add447621349e4e41be3181e1890eae6f77526a6b7024df712e2",
+  "previous_version": "1.8.11"
 }

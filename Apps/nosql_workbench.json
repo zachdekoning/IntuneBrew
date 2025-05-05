@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html",
   "fileName": "NoSQL%20Workbench-mac-arm64-3.13.5.dmg",
-  "sha": "a5cf29148df032fcbb1c03735de6ad73aaa6577c2d6519133eee455a04b67ef8"
+  "sha": "a5cf29148df032fcbb1c03735de6ad73aaa6577c2d6519133eee455a04b67ef8",
+  "previous_version": "3.13.5"
 }

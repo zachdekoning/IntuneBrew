@@ -6,5 +6,6 @@
   "bundleId": "com.knollsoft.Middle",
   "homepage": "https://middleclick.app/",
   "fileName": "Middle1.9.dmg",
-  "sha": "b74bbc4512ab07193c5fb8d537d6036e50807fca895668f293e681008447c534"
+  "sha": "b74bbc4512ab07193c5fb8d537d6036e50807fca895668f293e681008447c534",
+  "previous_version": "1.9"
 }

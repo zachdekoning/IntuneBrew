@@ -7,5 +7,6 @@
   "homepage": "https://www.pronotes.app/",
   "fileName": "pronotes_0.7.7.pkg",
   "type": "app",
-  "sha": "fa3e0f512c52d71e22d2ae9b2b00c835adcbce684db2c948ed243520bc622ad2"
+  "sha": "fa3e0f512c52d71e22d2ae9b2b00c835adcbce684db2c948ed243520bc622ad2",
+  "previous_version": "0.7.7"
 }

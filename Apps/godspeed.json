@@ -1,0 +1,11 @@
+{
+  "name": "Godspeed",
+  "description": "Keyboard-focused todo manager",
+  "version": "1.8.92",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/godspeed_1.8.92.pkg",
+  "bundleId": null,
+  "homepage": "https://godspeedapp.com/",
+  "fileName": "godspeed_1.8.92.pkg",
+  "type": "app",
+  "sha": "e79fa3d305049a159e936c9f4f0f67dad703ba9bc759e963efbc7f80f24e336c"
+}

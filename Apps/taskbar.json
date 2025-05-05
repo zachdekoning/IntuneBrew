@@ -7,5 +7,6 @@
   "homepage": "https://lawand.io/taskbar/",
   "fileName": "taskbar_1.4.3.pkg",
   "type": "app",
-  "sha": "7b0894cc8cacad51e6d51b5e1203b753913c481be93142cd828fd7e8e2b5fd58"
+  "sha": "7b0894cc8cacad51e6d51b5e1203b753913c481be93142cd828fd7e8e2b5fd58",
+  "previous_version": "1.4.3"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://binary.ninja/",
   "fileName": "binaryninja_free_macosx.dmg",
-  "sha": "5b21f2a5ea89e059b841ed64b61143fb35d6f25a68fa00dafde9c9dfeae64c71"
+  "sha": "5b21f2a5ea89e059b841ed64b61143fb35d6f25a68fa00dafde9c9dfeae64c71",
+  "previous_version": "5.0.7290"
 }

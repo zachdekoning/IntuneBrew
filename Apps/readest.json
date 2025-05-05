@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://readest.com/",
   "fileName": "Readest_0.9.38_universal.dmg",
-  "sha": "fc535a77489df2b48810743731bfc249dadf4a65258168ebdf4201bc3ab170e9"
+  "sha": "fc535a77489df2b48810743731bfc249dadf4a65258168ebdf4201bc3ab170e9",
+  "previous_version": "0.9.38"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "Mindmanager",
+  "description": "Mind Mapping Tool",
+  "version": "24.1.155",
+  "url": "https://download.mindjet.com/MindManager_Mac_24.1.155.dmg",
+  "bundleId": null,
+  "homepage": "https://www.mindjet.com/mindmanager/",
+  "fileName": "MindManager_Mac_24.1.155.dmg",
+  "sha": "984641a6620551efdf85066165ac6413d274c5b1a97378e08582c8c13a97fccb"
+}

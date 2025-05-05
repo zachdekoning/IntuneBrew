@@ -6,5 +6,6 @@
   "bundleId": "com.knollsoft.Hyperkey",
   "homepage": "https://hyperkey.app/",
   "fileName": "Hyperkey0.47.dmg",
-  "sha": "40b4927ee3a166b94806ebdf643895b58d8e5e11883823536635c5fd46414fe4"
+  "sha": "40b4927ee3a166b94806ebdf643895b58d8e5e11883823536635c5fd46414fe4",
+  "previous_version": "0.47"
 }

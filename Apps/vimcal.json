@@ -1,0 +1,10 @@
+{
+  "name": "Vimcal",
+  "description": "Calendar",
+  "version": "1.0.35",
+  "url": "https://vimcal-m1.s3.amazonaws.com/Vimcal-1.0.35-arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://vimcal.com/",
+  "fileName": "Vimcal-1.0.35-arm64.dmg",
+  "sha": "bf3a7527316e81349d21aaebfb23a8cb9c83d245a2abfc3cafc5e70cf1033885"
+}
