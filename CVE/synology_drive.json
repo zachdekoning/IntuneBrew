@@ -1,6 +1,6 @@
 {
   "app_name": "Synology Drive",
-  "last_updated": "2025-05-04",
+  "last_updated": "2025-05-05",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2018-13297",
