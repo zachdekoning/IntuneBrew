@@ -1,0 +1,11 @@
+{
+  "name": "Mobirise",
+  "description": "No-code website creator",
+  "version": "6.0.1",
+  "url": "https://download.mobirise.com/MobiriseSetup-m.dmg",
+  "bundleId": null,
+  "homepage": "https://mobirise.com/",
+  "fileName": "MobiriseSetup-m.dmg",
+  "sha": "02bed4f236e23dd3c63da83539a819926c636b72d4df85efe23111d0d7043e92",
+  "previous_version": "6.0.1"
+}

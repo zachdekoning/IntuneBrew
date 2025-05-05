@@ -1,0 +1,11 @@
+{
+  "name": "Xnapper",
+  "description": "Screenshot tool",
+  "version": "1.17.1",
+  "url": "https://xnapper.com/dmg/Xnapper-1.17.1.dmg",
+  "bundleId": null,
+  "homepage": "https://xnapper.com/",
+  "fileName": "Xnapper-1.17.1.dmg",
+  "sha": "1cfbabf28fb49d117febcc81c77ced5989768f9150d451417cd4f526b048c7e7",
+  "previous_version": "1.17.1"
+}

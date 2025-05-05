@@ -1,0 +1,11 @@
+{
+  "name": "Dockside",
+  "description": "Dock utility",
+  "version": "1.9.54",
+  "url": "https://github.com/PrajwalSD/Dockside/releases/download/v1.9.54/Dockside.dmg",
+  "bundleId": null,
+  "homepage": "https://hachipoo.com/dockside-app",
+  "fileName": "Dockside.dmg",
+  "sha": "898c21f2f0118df2f7052756d2ef1297d4e256e3212d21ecaf7a3088e2cc0950",
+  "previous_version": "1.9.54"
+}

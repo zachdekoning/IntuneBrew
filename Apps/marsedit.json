@@ -1,0 +1,12 @@
+{
+  "name": "MarsEdit",
+  "description": "Tool to write, preview and publish blogs",
+  "version": "5.3.4",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/marsedit_5.3.4.pkg",
+  "bundleId": null,
+  "homepage": "https://redsweater.com/marsedit/",
+  "fileName": "marsedit_5.3.4.pkg",
+  "type": "app",
+  "sha": "55ff7510104dd9bbd882ad652918dc0029bfdb64d30ed08b3fe623dcccd22e59",
+  "previous_version": "5.3.4"
+}

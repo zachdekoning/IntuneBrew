@@ -55,8 +55,8 @@ Version 0.3.7: Fix Parse Errors
  Example: IntuneBrew -Upload google_chrome -PostInstallScriptPath ./post-install.sh
 
 .PARAMETER UseExistingIntuneApp
- Specifies the path to a script file that will be executed after the app installation. Only works with PKG apps and the -Upload parameter.
- Example: IntuneBrew -UpdateAll -UseExisting
+ Specifies whether the script should update existing Intune app entries (if they exist) instead of creating new ones
+ Example: IntuneBrew -UpdateAll UseExistingIntuneApp
 
  .PARAMETER ConfigFile
  Specifies the path to a the configuration file containing authentication information (see clientSecret_Template.json and certificateThumbprint_Template.json for configuration layout)
@@ -533,7 +533,7 @@ function Add-IntuneAppLogo {
         else {
             # Try to download from repository
             $logoFileName = $appName.ToLower().Replace(" ", "_") + ".png"
-            $logoUrl = "$gitHubRespositoryRawUrl/IntuneBrew/main/Logos/$logoFileName"
+            $logoUrl = "$gitHubRespositoryRawUrl/main/Logos/$logoFileName"
             Write-Host "Downloading logo from: $logoUrl" -ForegroundColor Gray
             
             # Download the logo

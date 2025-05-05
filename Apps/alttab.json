@@ -1,6 +1,7 @@
 {
   "name": "AltTab",
   "description": "Enable Windows-like alt-tab",
+<<<<<<< HEAD
   "version": "7.23.0",
   "url": "https://github.com/lwouis/alt-tab-macos/releases/download/v7.23.0/AltTab-7.23.0.zip",
   "bundleId": "com.lwouis.alt-tab-macos",
@@ -8,3 +9,14 @@
   "fileName": "AltTab-7.23.0.zip",
   "type": "app"
 }
+=======
+  "version": "7.24.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/alttab_7.24.0.pkg",
+  "bundleId": "com.lwouis.alt-tab-macos",
+  "homepage": "https://alt-tab-macos.netlify.app/",
+  "fileName": "alttab_7.24.0.pkg",
+  "type": "app",
+  "sha": "d8005a6155dde556253e67fcc3b3b3f81b2dd88801ca60ec2f279805383ba081",
+  "previous_version": "7.24.0"
+}
+>>>>>>> origin/main

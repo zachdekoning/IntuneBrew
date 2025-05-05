@@ -1,0 +1,51 @@
+{
+  "app_name": "Mozilla Thunderbird",
+  "last_updated": "2025-05-05",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2025-3028",
+      "published_date": "2025-04-01",
+      "last_modified_date": "2025-04-07",
+      "base_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "JavaScript code running while transforming a document with the XSLTProcessor could lead to a use-after-free. This vulnerability affects Firefox < 137, Firefox ESR < 115.22, Firefox ESR < 128.9, Thunderbird < 137, and Thunderbird < 128.9.",
+      "cpe_name": "cpe:2.3:a:mozilla:thunderbird:135.0:*:*:*:-:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2025-3029",
+      "published_date": "2025-04-01",
+      "last_modified_date": "2025-04-07",
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "description": "A crafted URL containing specific Unicode characters could have hidden the true origin of the page, resulting in a potential spoofing attack. This vulnerability affects Firefox < 137, Firefox ESR < 128.9, Thunderbird < 137, and Thunderbird < 128.9.",
+      "cpe_name": "cpe:2.3:a:mozilla:thunderbird:135.0:*:*:*:-:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2025-3030",
+      "published_date": "2025-04-01",
+      "last_modified_date": "2025-04-07",
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "description": "Memory safety bugs present in Firefox 136, Thunderbird 136, Firefox ESR 128.8, and Thunderbird 128.8. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox < 137, Firefox ESR < 128.9, Thunderbird < 137, and Thunderbird < 128.9.",
+      "cpe_name": "cpe:2.3:a:mozilla:thunderbird:135.0:*:*:*:-:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2025-3031",
+      "published_date": "2025-04-01",
+      "last_modified_date": "2025-04-07",
+      "base_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "An attacker could read 32 bits of values spilled onto the stack in a JIT compiled function. This vulnerability affects Firefox < 137 and Thunderbird < 137.",
+      "cpe_name": "cpe:2.3:a:mozilla:thunderbird:135.0:*:*:*:-:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2025-3032",
+      "published_date": "2025-04-01",
+      "last_modified_date": "2025-04-07",
+      "base_score": 7.4,
+      "severity": "HIGH",
+      "description": "Leaking of file descriptors from the fork server to web content processes could allow for privilege escalation attacks. This vulnerability affects Firefox < 137 and Thunderbird < 137.",
+      "cpe_name": "cpe:2.3:a:mozilla:thunderbird:135.0:*:*:*:-:*:*:*"
+    }
+  ]
+}

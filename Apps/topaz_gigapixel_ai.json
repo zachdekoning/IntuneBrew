@@ -1,0 +1,11 @@
+{
+  "name": "Topaz Gigapixel AI",
+  "description": "AI image upscaler",
+  "version": "8.3.4",
+  "url": "https://downloads.topazlabs.com/deploy/TopazGigapixelAI/8.3.4/TopazGigapixelAI-8.3.4.pkg",
+  "bundleId": "com.topazlabs.TopazGigapixelAI",
+  "homepage": "https://www.topazlabs.com/gigapixel-ai",
+  "fileName": "TopazGigapixelAI-8.3.4.pkg",
+  "type": "pkg_in_pkg",
+  "previous_version": "8.3.4"
+}
