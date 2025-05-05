@@ -16,6 +16,16 @@ preserve_filename_apps = [
 
 # zip, tar etc
 app_urls = [
+    "https://formulae.brew.sh/api/cask/viz.json",
+    "https://formulae.brew.sh/api/cask/huggingchat.json",
+    "https://formulae.brew.sh/api/cask/gather.json",
+    "https://formulae.brew.sh/api/cask/flowvision.json",
+    "https://formulae.brew.sh/api/cask/copyclip.json",
+    "https://formulae.brew.sh/api/cask/batfi.json",
+    "https://formulae.brew.sh/api/cask/bleunlock.json",
+    "https://formulae.brew.sh/api/cask/loop.json",
+    "https://formulae.brew.sh/api/cask/elgato-capture-device-utility.json",
+    "https://formulae.brew.sh/api/cask/godspeed.json",
     "https://formulae.brew.sh/api/cask/hey.json",
     "https://formulae.brew.sh/api/cask/tex-live-utility.json",
     "https://formulae.brew.sh/api/cask/deskpad.json",
@@ -164,6 +174,20 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/advanced-renamer.json",
+    "https://formulae.brew.sh/api/cask/phoenix-slides.json",
+    "https://formulae.brew.sh/api/cask/maestral.json",
+    "https://formulae.brew.sh/api/cask/mindjet-mindmanager.json",
+    "https://formulae.brew.sh/api/cask/retcon.json",
+    "https://formulae.brew.sh/api/cask/sketchup.json",
+    "https://formulae.brew.sh/api/cask/gephi.json",
+    "https://formulae.brew.sh/api/cask/magicquit.json",
+    "https://formulae.brew.sh/api/cask/rhino.json",
+    "https://formulae.brew.sh/api/cask/xca.json",
+    "https://formulae.brew.sh/api/cask/fathom.json",
+    "https://formulae.brew.sh/api/cask/vimcal.json",
+    "https://formulae.brew.sh/api/cask/studio-3t.json",
+    "https://formulae.brew.sh/api/cask/proton-pass.json",
     "https://formulae.brew.sh/api/cask/bome-network.json",
     "https://formulae.brew.sh/api/cask/antinote.json",
     "https://formulae.brew.sh/api/cask/reqable.json",
@@ -486,6 +510,7 @@ pkg_in_dmg_urls = [
 
 # PKG in PKG URLs
 pkg_in_pkg_urls = [
+    "https://formulae.brew.sh/api/cask/blurscreen.json",
     "https://formulae.brew.sh/api/cask/topaz-gigapixel-ai.json",
     "https://formulae.brew.sh/api/cask/parallels-client.json",
     "https://formulae.brew.sh/api/cask/okta-advanced-server-access.json",
