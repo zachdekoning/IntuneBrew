@@ -1,0 +1,51 @@
+{
+  "app_name": "Multi",
+  "last_updated": "2025-05-05",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2023-26691",
+      "published_date": "2024-09-25",
+      "last_modified_date": "2025-04-24",
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "description": "Directory Traversal vulnerability in CS-Cart MultiVendor 4.16.1 allows remote attackers to run arbitrary code via crafted zip file when installing a new add-on.",
+      "cpe_name": "cpe:2.3:a:cs-cart:cs-cart_multivendor:4.16.1:*:*:-:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2023-26686",
+      "published_date": "2024-09-25",
+      "last_modified_date": "2025-04-24",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "File Upload vulnerability in CS-Cart MultiVendor 4.16.1 allows remote attackers to run arbitrary code via the image upload feature when customizing a shop.",
+      "cpe_name": "cpe:2.3:a:cs-cart:cs-cart_multivendor:4.16.1:*:*:-:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2023-26687",
+      "published_date": "2024-09-25",
+      "last_modified_date": "2025-04-24",
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "description": "Directory Traversal vulnerability in CS-Cart MultiVendor 4.16.1 allows remote attackers to obtain sensitive information via the product_data parameter in the PDF Add-on.",
+      "cpe_name": "cpe:2.3:a:cs-cart:cs-cart_multivendor:4.16.1:*:*:-:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2023-26688",
+      "published_date": "2024-09-25",
+      "last_modified_date": "2025-04-24",
+      "base_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "Cross Site Scripting (XSS) vulnerability in CS-Cart MultiVendor 4.16.1 allows remote attackers to run arbitrary code via the product_data parameter of add/edit product in the administration interface.",
+      "cpe_name": "cpe:2.3:a:cs-cart:cs-cart_multivendor:4.16.1:*:*:-:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2023-26689",
+      "published_date": "2024-09-25",
+      "last_modified_date": "2025-04-24",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue discovered in CS-Cart MultiVendor 4.16.1 allows attackers to alter arbitrary user account profiles via crafted post request.",
+      "cpe_name": "cpe:2.3:a:cs-cart:cs-cart_multivendor:4.16.1:*:*:-:*:*:*:*"
+    }
+  ]
+}

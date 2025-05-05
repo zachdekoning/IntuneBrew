@@ -1,0 +1,11 @@
+{
+  "name": "Postico",
+  "description": "GUI client for PostgreSQL databases",
+  "version": "2.1.2",
+  "url": "https://downloads.eggerapps.at/postico/postico-9702.dmg",
+  "bundleId": null,
+  "homepage": "https://eggerapps.at/postico2/",
+  "fileName": "postico-9702.dmg",
+  "sha": "97bad62e1e7bf254f85e52e78ede5dc194f6e3f4ce52175a6bdec052bd52972f",
+  "previous_version": "2.1.2"
+}

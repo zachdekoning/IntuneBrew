@@ -1,0 +1,11 @@
+{
+  "name": "ProcessSpy",
+  "description": "Process monitor",
+  "version": "1.6.6",
+  "url": "https://process-spy.app/archive/ProcessSpy_1.6.6.dmg",
+  "bundleId": null,
+  "homepage": "https://process-spy.app/",
+  "fileName": "ProcessSpy_1.6.6.dmg",
+  "sha": "9a337197bcea7a0fa772cab6690213f210def8b8e903f50c38bed5c084769e76",
+  "previous_version": "1.6.6"
+}

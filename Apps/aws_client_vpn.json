@@ -1,0 +1,11 @@
+{
+  "name": "AWS Client VPN",
+  "description": "Managed client-based VPN service to securely access AWS resources",
+  "version": "5.2.0",
+  "url": "https://d20adtppz83p9s.cloudfront.net/OSX/5.2.0/AWS_VPN_Client.pkg",
+  "bundleId": "com.amazon.awsvpnclient",
+  "homepage": "https://aws.amazon.com/vpn/",
+  "fileName": "AWS_VPN_Client.pkg",
+  "type": "pkg_in_pkg",
+  "previous_version": "5.2.0"
+}

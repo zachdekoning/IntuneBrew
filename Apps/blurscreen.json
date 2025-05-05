@@ -1,0 +1,11 @@
+{
+  "name": "BlurScreen",
+  "description": "Blur any part of your screen",
+  "version": "1.0",
+  "url": "https://www.blurscreen.app/assets/BlurScreen-v2.pkg",
+  "bundleId": "com.sanskar.blurscreen",
+  "homepage": "https://www.blurscreen.app/",
+  "fileName": "BlurScreen-v2.pkg",
+  "type": "pkg_in_pkg",
+  "previous_version": "1.0"
+}
