@@ -1,0 +1,11 @@
+{
+  "name": "SQLPro for Postgres",
+  "description": "Lightweight PostgreSQL database client",
+  "version": "2025.06",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/sqlpro_for_postgres_2025.06.pkg",
+  "bundleId": null,
+  "homepage": "https://www.macpostgresclient.com/SQLProPostgres",
+  "fileName": "sqlpro_for_postgres_2025.06.pkg",
+  "type": "app",
+  "sha": "37785d0118a6266c54cb997301d0a0b9dce84ab5635eb47081a644f324c76c6c"
+}

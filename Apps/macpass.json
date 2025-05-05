@@ -1,0 +1,11 @@
+{
+  "name": "MacPass",
+  "description": "Open-source, KeePass-client and password manager",
+  "version": "0.8.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/macpass_0.8.1.pkg",
+  "bundleId": "com.hicknhacksoftware.MacPass",
+  "homepage": "https://macpass.github.io/",
+  "fileName": "macpass_0.8.1.pkg",
+  "type": "app",
+  "sha": "f66293864d7191c68747c71ddff2eb911005705a370945c93fb04a11af18f608"
+}

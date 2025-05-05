@@ -1,0 +1,11 @@
+{
+  "name": "Rode Connect",
+  "description": "Podcasting software",
+  "version": "1.3.43",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/rode_connect_1.3.43.pkg",
+  "bundleId": "com.rodeconnect.installer",
+  "homepage": "https://rode.com/en-us/software/rodeconnect",
+  "fileName": "rode_connect_1.3.43.pkg",
+  "type": "app",
+  "sha": "d088aadaba91c3301d312b161f0ee9ff0bb062c41ae7173d2353bdc781f6a2a4"
+}
