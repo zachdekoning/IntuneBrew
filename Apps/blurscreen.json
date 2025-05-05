@@ -6,5 +6,6 @@
   "bundleId": "com.sanskar.blurscreen",
   "homepage": "https://www.blurscreen.app/",
   "fileName": "BlurScreen-v2.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "1.0"
 }

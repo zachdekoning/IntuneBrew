@@ -7,5 +7,6 @@
   "homepage": "https://fiplab.com/apps/copyclip-for-mac",
   "fileName": "copyclip_2.9.99.2.pkg",
   "type": "app",
-  "sha": "cf66602df1bc2af1b6b26e6d21f39c5ea3d461ac4e87f0b008267d4c217f2682"
+  "sha": "cf66602df1bc2af1b6b26e6d21f39c5ea3d461ac4e87f0b008267d4c217f2682",
+  "previous_version": "2.9.99.2"
 }

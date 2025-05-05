@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://gephi.org/",
   "fileName": "gephi-0.10.1-macos-aarch64.dmg",
-  "sha": "cbb852d2f33cddf793290a64aee564cd46ad80ef6c51766ad05dfeb801ac7227"
+  "sha": "cbb852d2f33cddf793290a64aee564cd46ad80ef6c51766ad05dfeb801ac7227",
+  "previous_version": "0.10.1"
 }

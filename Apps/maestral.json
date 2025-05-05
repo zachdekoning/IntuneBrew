@@ -6,5 +6,6 @@
   "bundleId": "com.samschott.maestral",
   "homepage": "https://maestral.app/",
   "fileName": "Maestral-1.9.4.dmg",
-  "sha": "639ab2401d97fad7865ba17ce8cfa02fb418d3bb29cd411cf991cce91c51b1ea"
+  "sha": "639ab2401d97fad7865ba17ce8cfa02fb418d3bb29cd411cf991cce91c51b1ea",
+  "previous_version": "1.9.4"
 }
