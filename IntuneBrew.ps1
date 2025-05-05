@@ -533,7 +533,7 @@ function Add-IntuneAppLogo {
         else {
             # Try to download from repository
             $logoFileName = $appName.ToLower().Replace(" ", "_") + ".png"
-            $logoUrl = "$gitHubRespositoryRawUrl/IntuneBrew/main/Logos/$logoFileName"
+            $logoUrl = "$gitHubRespositoryRawUrl/main/Logos/$logoFileName"
             Write-Host "Downloading logo from: $logoUrl" -ForegroundColor Gray
             
             # Download the logo
