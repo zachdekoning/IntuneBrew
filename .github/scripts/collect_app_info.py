@@ -11,11 +11,30 @@ import tempfile
 
 # List of apps that should preserve their fileName field (not be overwritten)
 preserve_filename_apps = [
-    "tenable_nessus_agent"  # Add more app names here as needed
+    "tenable_nessus_agent"
 ]
 
 # zip, tar etc
 app_urls = [
+    "https://formulae.brew.sh/api/cask/hey.json",
+    "https://formulae.brew.sh/api/cask/tex-live-utility.json",
+    "https://formulae.brew.sh/api/cask/deskpad.json",
+    "https://formulae.brew.sh/api/cask/windowkeys.json",
+    "https://formulae.brew.sh/api/cask/huly.json",
+    "https://formulae.brew.sh/api/cask/asset-catalog-tinkerer.json",
+    "https://formulae.brew.sh/api/cask/forecast.json",
+    "https://formulae.brew.sh/api/cask/last-window-quits.json",
+    "https://formulae.brew.sh/api/cask/taskbar.json",
+    "https://formulae.brew.sh/api/cask/superwhisper.json",
+    "https://formulae.brew.sh/api/cask/notesollama.json",
+    "https://formulae.brew.sh/api/cask/oversight.json",
+    "https://formulae.brew.sh/api/cask/pronotes.json",
+    "https://formulae.brew.sh/api/cask/hammerspoon.json",
+    "https://formulae.brew.sh/api/cask/swift-shift.json",
+    "https://formulae.brew.sh/api/cask/splice.json",
+    "https://formulae.brew.sh/api/cask/screenfocus.json",
+    "https://formulae.brew.sh/api/cask/teacode.json",
+    "https://formulae.brew.sh/api/cask/alcove.json",
     "https://formulae.brew.sh/api/cask/abstract.json",
     "https://formulae.brew.sh/api/cask/macpass.json",
     "https://formulae.brew.sh/api/cask/marsedit.json",
@@ -145,6 +164,46 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/bome-network.json",
+    "https://formulae.brew.sh/api/cask/antinote.json",
+    "https://formulae.brew.sh/api/cask/reqable.json",
+    "https://formulae.brew.sh/api/cask/steermouse.json",
+    "https://formulae.brew.sh/api/cask/pixelsnap.json",
+    "https://formulae.brew.sh/api/cask/processspy.json",
+    "https://formulae.brew.sh/api/cask/highlight.json",
+    "https://formulae.brew.sh/api/cask/updf.json",
+    "https://formulae.brew.sh/api/cask/binary-ninja-free.json",
+    "https://formulae.brew.sh/api/cask/rive.json",
+    "https://formulae.brew.sh/api/cask/paletro.json",
+    "https://formulae.brew.sh/api/cask/dangerzone.json",
+    "https://formulae.brew.sh/api/cask/bitwig-studio.json",
+    "https://formulae.brew.sh/api/cask/aircall.json",
+    "https://formulae.brew.sh/api/cask/nosql-workbench.json",
+    "https://formulae.brew.sh/api/cask/rocket-typist.json",
+    "https://formulae.brew.sh/api/cask/clop.json",
+    "https://formulae.brew.sh/api/cask/hyperkey.json",
+    "https://formulae.brew.sh/api/cask/wondershare-filmora.json",
+    "https://formulae.brew.sh/api/cask/xnapper.json",
+    "https://formulae.brew.sh/api/cask/syncovery.json",
+    "https://formulae.brew.sh/api/cask/markedit.json",
+    "https://formulae.brew.sh/api/cask/dockside.json",
+    "https://formulae.brew.sh/api/cask/wave.json",
+    "https://formulae.brew.sh/api/cask/ente-auth.json",
+    "https://formulae.brew.sh/api/cask/ente.json",
+    "https://formulae.brew.sh/api/cask/istherenet.json",
+    "https://formulae.brew.sh/api/cask/name-mangler.json",
+    "https://formulae.brew.sh/api/cask/witch.json",
+    "https://formulae.brew.sh/api/cask/readest.json",
+    "https://formulae.brew.sh/api/cask/middle.json",
+    "https://formulae.brew.sh/api/cask/transnomino.json",
+    "https://formulae.brew.sh/api/cask/noun-project.json",
+    "https://formulae.brew.sh/api/cask/piphero.json",
+    "https://formulae.brew.sh/api/cask/tofu.json",
+    "https://formulae.brew.sh/api/cask/wondershare-edrawmax.json",
+    "https://formulae.brew.sh/api/cask/tabtab.json",
+    "https://formulae.brew.sh/api/cask/sabnzbd.json",
+    "https://formulae.brew.sh/api/cask/archaeology.json",
+    "https://formulae.brew.sh/api/cask/jamie.json",
     "https://formulae.brew.sh/api/cask/a-better-finder-rename.json",
     "https://formulae.brew.sh/api/cask/acronis-true-image.json",
     "https://formulae.brew.sh/api/cask/airbuddy.json",
@@ -427,6 +486,11 @@ pkg_in_dmg_urls = [
 
 # PKG in PKG URLs
 pkg_in_pkg_urls = [
+    "https://formulae.brew.sh/api/cask/topaz-gigapixel-ai.json",
+    "https://formulae.brew.sh/api/cask/parallels-client.json",
+    "https://formulae.brew.sh/api/cask/okta-advanced-server-access.json",
+    "https://formulae.brew.sh/api/cask/wire.json",
+    "https://formulae.brew.sh/api/cask/twingate.json",
     "https://formulae.brew.sh/api/cask/aws-vpn-client.json",
     "https://formulae.brew.sh/api/cask/malwarebytes.json",
     "https://formulae.brew.sh/api/cask/nordlayer.json",
