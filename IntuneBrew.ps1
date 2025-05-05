@@ -54,6 +54,10 @@ Version 0.3.7: Fix Parse Errors
  Specifies the path to a script file that will be executed after the app installation. Only works with PKG apps and the -Upload parameter.
  Example: IntuneBrew -Upload google_chrome -PostInstallScriptPath ./post-install.sh
 
+ .PARAMETER ConfigFile
+ Specifies the path to a the configuration file containing authentication information (see clientSecret_Template.json and certificateThumbprint_Template.json for configuration layout)
+ Example: IntuneBrew -UpdateAll -ConfigFile clientSecret.json
+
 #>
 param(
     [Parameter(Mandatory = $false)]
@@ -72,7 +76,9 @@ param(
     [string]$PreInstallScriptPath,
     
     [Parameter(Mandatory = $false)]
-    [string]$PostInstallScriptPath
+    [string]$PostInstallScriptPath,
+    [Parameter(Mandatory = $false)]
+    [string]$ConfigFile
 )
 
 Write-Host "
@@ -241,14 +247,14 @@ $authenticated = $false
 switch ($authChoice) {
     "1" {
         Write-Host "`nPlease select the certificate configuration JSON file..." -ForegroundColor Yellow
-        $configPath = Show-FilePickerDialog -Title "Select Certificate Configuration JSON File"
+        $configPath = $ConfigFile ? $ConfigFile : (Show-FilePickerDialog -Title "Select Certificate Configuration JSON File")
         if ($configPath -and (Test-AuthConfig $configPath)) {
             $authenticated = Connect-WithCertificate $configPath
         }
     }
     "2" {
         Write-Host "`nPlease select the client secret configuration JSON file..." -ForegroundColor Yellow
-        $configPath = Show-FilePickerDialog -Title "Select Client Secret Configuration JSON File"
+        $configPath = $ConfigFile ? $ConfigFile : (Show-FilePickerDialog -Title "Select Client Secret Configuration JSON File")
         if ($configPath -and (Test-AuthConfig $configPath)) {
             $authenticated = Connect-WithClientSecret $configPath
         }
