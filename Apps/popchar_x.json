@@ -1,0 +1,10 @@
+{
+  "name": "PopChar X",
+  "description": "Utility to display all characters of a font",
+  "version": "10.4",
+  "url": "https://www.ergonis.com/downloads/products/popcharx/PopCharX104-Install.dmg",
+  "bundleId": null,
+  "homepage": "https://www.ergonis.com/products/popcharx/",
+  "fileName": "PopCharX104-Install.dmg",
+  "sha": "084c995b640636fcda912107157b6f455857e52ecd94539ede5670896e9606ff"
+}
