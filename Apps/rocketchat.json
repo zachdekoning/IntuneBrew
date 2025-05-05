@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://rocket.chat/",
   "fileName": "rocketchat-4.3.3-mac.dmg",
-  "sha": "f7fc54a770d687b157c2fd22c1e312419e5cbc5c15367607eb38c8236a5a90fe"
+  "sha": "f7fc54a770d687b157c2fd22c1e312419e5cbc5c15367607eb38c8236a5a90fe",
+  "previous_version": "4.3.3"
 }

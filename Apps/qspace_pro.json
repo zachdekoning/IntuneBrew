@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://qspace.awehunt.com/",
   "fileName": "QSpace%20Pro_V5.3.2.dmg",
-  "sha": "48cd6239ee093c9dfe49e5acc5f15635229a572a30f5b3d7ea26ef1109d91459"
+  "sha": "48cd6239ee093c9dfe49e5acc5f15635229a572a30f5b3d7ea26ef1109d91459",
+  "previous_version": "5.3.2"
 }

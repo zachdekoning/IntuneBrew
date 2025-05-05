@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://portx.online/",
   "fileName": "PortX-2.2.12-arm64.dmg",
-  "sha": "fef969f88caecfdcb5101bd12c4fca0983a99578cecdfcb79be54e87599e7341"
+  "sha": "fef969f88caecfdcb5101bd12c4fca0983a99578cecdfcb79be54e87599e7341",
+  "previous_version": "2.2.12"
 }

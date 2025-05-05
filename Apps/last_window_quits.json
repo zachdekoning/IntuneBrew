@@ -1,0 +1,11 @@
+{
+  "name": "Last Window Quits",
+  "description": "Automatically quit apps when their last window is closed",
+  "version": "1.1.4",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/last_window_quits_1.1.4.pkg",
+  "bundleId": null,
+  "homepage": "https://lawand.io/last-window-quits/",
+  "fileName": "last_window_quits_1.1.4.pkg",
+  "type": "app",
+  "sha": "34d785856d8e8028c6bbca3c2c9b88c21ecb46f06287f1528cb753ab1ec20a21"
+}

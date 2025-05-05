@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.mixxx.org/",
   "fileName": "mixxx-2.5.1-macosarm.dmg",
-  "sha": "cd463cb4dda40f6cd04674157deb8927a34b74a0d2bcb12957f0e9232144ae44"
+  "sha": "cd463cb4dda40f6cd04674157deb8927a34b74a0d2bcb12957f0e9232144ae44",
+  "previous_version": "2.5.1"
 }

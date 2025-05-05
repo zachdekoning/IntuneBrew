@@ -6,5 +6,6 @@
   "bundleId": "com.lighting.huesync",
   "homepage": "https://www.philips-hue.com/en-us/explore-hue/propositions/entertainment/sync-with-pc",
   "fileName": "HueSyncInstaller_1.12.1.65.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "1.12.1.65"
 }

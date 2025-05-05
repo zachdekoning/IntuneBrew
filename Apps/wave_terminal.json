@@ -1,0 +1,10 @@
+{
+  "name": "Wave Terminal",
+  "description": "Terminal emulator",
+  "version": "0.11.2",
+  "url": "https://dl.waveterm.dev/releases-w2/Wave-darwin-arm64-0.11.2.dmg",
+  "bundleId": null,
+  "homepage": "https://www.waveterm.dev/",
+  "fileName": "Wave-darwin-arm64-0.11.2.dmg",
+  "sha": "3a927f8de1a1000feeedd9febcda2db24facdfb79e5743e82bca5a86300cb8d6"
+}

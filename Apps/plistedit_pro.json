@@ -7,5 +7,6 @@
   "homepage": "https://www.fatcatsoftware.com/plisteditpro/",
   "fileName": "plistedit_pro_1.9.7.pkg",
   "type": "app",
-  "sha": "5f86b26e95b5473a04a1df58ae7980bcf06de360a904afc7242e4ac9fed19827"
+  "sha": "5f86b26e95b5473a04a1df58ae7980bcf06de360a904afc7242e4ac9fed19827",
+  "previous_version": "1.9.7"
 }

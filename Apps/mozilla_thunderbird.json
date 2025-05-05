@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.thunderbird.net/en-US/",
   "fileName": "Thunderbird%20138.0.dmg",
-  "sha": "494f6f07a0613615fcf13208b2a790b2556dc369057ad2fdf981a26f07ca4e2c"
+  "sha": "494f6f07a0613615fcf13208b2a790b2556dc369057ad2fdf981a26f07ca4e2c",
+  "previous_version": "138.0"
 }

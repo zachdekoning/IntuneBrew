@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://staticz.com/soundsiphon/",
   "fileName": "",
-  "sha": "3ef0d1685550ab8c892a7c8383720d2448c653c53650f3b2e43d8484b4fcadc9"
+  "sha": "3ef0d1685550ab8c892a7c8383720d2448c653c53650f3b2e43d8484b4fcadc9",
+  "previous_version": "3.8.2"
 }

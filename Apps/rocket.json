@@ -6,5 +6,6 @@
   "bundleId": "net.matthewpalmer.Rocket",
   "homepage": "https://matthewpalmer.net/rocket/",
   "fileName": "Rocket-85.dmg",
-  "sha": "02aff7ebf6615624adb7b20106ed1d2fd887a48d9b0e918e133b166ebf64863e"
+  "sha": "02aff7ebf6615624adb7b20106ed1d2fd887a48d9b0e918e133b166ebf64863e",
+  "previous_version": "1.9.3"
 }

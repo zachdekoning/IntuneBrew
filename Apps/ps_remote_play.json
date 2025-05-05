@@ -6,5 +6,6 @@
   "bundleId": "com.playstation.RemotePlay.pkg",
   "homepage": "https://remoteplay.dl.playstation.net/remoteplay/lang/en/",
   "fileName": "RemotePlayInstaller.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "8.0.0"
 }

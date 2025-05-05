@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/macstadium/orka-desktop",
   "fileName": "OrkaDesktop-3.0.0.dmg",
-  "sha": "c0b5c99a73f7b627d5091eea3fa6458115c48a0d3bb64b0d47d4543d4a2e4588"
+  "sha": "c0b5c99a73f7b627d5091eea3fa6458115c48a0d3bb64b0d47d4543d4a2e4588",
+  "previous_version": "3.0.0"
 }

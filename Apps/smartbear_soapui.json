@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.soapui.org/",
   "fileName": "SoapUI-arm64-5.8.0.dmg",
-  "sha": "2119fe26d55a4b7e1380b2caadbe301e489e8475a45429d47fb1409712edc6fd"
+  "sha": "2119fe26d55a4b7e1380b2caadbe301e489e8475a45429d47fb1409712edc6fd",
+  "previous_version": "5.8.0"
 }

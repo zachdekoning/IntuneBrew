@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://raindrop.io/",
   "fileName": "Raindrop-arm64.dmg",
-  "sha": "7d95f686cb79d239645b88d6a90d5040c93ca537919a1f3bd2a7f85aabbdba0c"
+  "sha": "7d95f686cb79d239645b88d6a90d5040c93ca537919a1f3bd2a7f85aabbdba0c",
+  "previous_version": "5.6.76"
 }

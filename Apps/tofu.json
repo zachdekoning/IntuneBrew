@@ -1,0 +1,9 @@
+{
+  "name": "Tofu",
+  "description": "E-reader software",
+  "version": "3.0.1",
+  "url": "https://amarsagoo.info/tofu/Tofu.dmg",
+  "bundleId": null,
+  "homepage": "https://amarsagoo.info/tofu/",
+  "fileName": "Tofu.dmg"
+}

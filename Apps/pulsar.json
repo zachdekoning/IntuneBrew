@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://pulsar-edit.dev/",
   "fileName": "Silicon.Mac.Pulsar-1.128.0-arm64.dmg",
-  "sha": "0abd00f47e8ec0f3d41fe94ee7beb946c0d0e17138a890c77e20789f98534962"
+  "sha": "0abd00f47e8ec0f3d41fe94ee7beb946c0d0e17138a890c77e20789f98534962",
+  "previous_version": "1.128.0"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://getrecut.com/",
   "fileName": "Recut-2.1.7.dmg",
-  "sha": "786c03f4a6396e04e4ee4f3e258ba420f78776114cacffa753ea67f518a7c7e7"
+  "sha": "786c03f4a6396e04e4ee4f3e258ba420f78776114cacffa753ea67f518a7c7e7",
+  "previous_version": "2.1.7"
 }

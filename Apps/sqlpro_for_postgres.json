@@ -7,5 +7,6 @@
   "homepage": "https://www.macpostgresclient.com/SQLProPostgres",
   "fileName": "sqlpro_for_postgres_2025.06.pkg",
   "type": "app",
-  "sha": "37785d0118a6266c54cb997301d0a0b9dce84ab5635eb47081a644f324c76c6c"
+  "sha": "37785d0118a6266c54cb997301d0a0b9dce84ab5635eb47081a644f324c76c6c",
+  "previous_version": "2025.06"
 }

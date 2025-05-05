@@ -7,5 +7,6 @@
   "homepage": "https://sveinbjorn.org/platypus",
   "fileName": "platypus_5.4.1.pkg",
   "type": "app",
-  "sha": "e862c83c3af5be0a81c88cb0f2611c750fb699db11e359f92736e36d7d025854"
+  "sha": "e862c83c3af5be0a81c88cb0f2611c750fb699db11e359f92736e36d7d025854",
+  "previous_version": "5.4.1"
 }

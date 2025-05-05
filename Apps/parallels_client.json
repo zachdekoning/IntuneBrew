@@ -1,0 +1,10 @@
+{
+  "name": "Parallels Client",
+  "description": "RDP client",
+  "version": "19.4.3",
+  "url": "https://download.parallels.com/ras/v19/19.4.3.25221/RasClient-Mac-Notarized-19.4.3-25221.pkg",
+  "bundleId": "com.2X.Client.Mac",
+  "homepage": "https://www.parallels.com/products/ras/features/rdp-client/",
+  "fileName": "RasClient-Mac-Notarized-19.4.3-25221.pkg",
+  "type": "pkg_in_pkg"
+}

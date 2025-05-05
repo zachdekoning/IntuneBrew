@@ -1,0 +1,11 @@
+{
+  "name": "Forecast",
+  "description": "Podcast MP3 encoder with chapters",
+  "version": "0.9.6",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/forecast_0.9.6.pkg",
+  "bundleId": null,
+  "homepage": "https://overcast.fm/forecast",
+  "fileName": "forecast_0.9.6.pkg",
+  "type": "app",
+  "sha": "d7eeb4a4b48501423019bdd6ba4d65f4ba8f6be5d4edfaecd46b846e7ac8e7f6"
+}

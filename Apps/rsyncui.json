@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/rsyncOSX/RsyncUI",
   "fileName": "RsyncUI.2.4.1.dmg",
-  "sha": "d1f16762140cf01bddca7d9c456aa13bcf82ae9ba6445afa0d48aa5dc59e3bc4"
+  "sha": "d1f16762140cf01bddca7d9c456aa13bcf82ae9ba6445afa0d48aa5dc59e3bc4",
+  "previous_version": "2.4.1"
 }

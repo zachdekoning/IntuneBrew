@@ -1,0 +1,10 @@
+{
+  "name": "Clop",
+  "description": "Image, video and clipboard optimiser",
+  "version": "2.9.2",
+  "url": "https://files.lowtechguys.com/releases/Clop-2.9.2.dmg",
+  "bundleId": null,
+  "homepage": "https://lowtechguys.com/clop/",
+  "fileName": "Clop-2.9.2.dmg",
+  "sha": "27470bcef6c8e92dc3773e3cf9250733c250cdc7e23232eee32b23e6db03c390"
+}

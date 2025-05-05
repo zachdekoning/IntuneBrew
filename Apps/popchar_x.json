@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.ergonis.com/products/popcharx/",
   "fileName": "PopCharX104-Install.dmg",
-  "sha": "084c995b640636fcda912107157b6f455857e52ecd94539ede5670896e9606ff"
+  "sha": "084c995b640636fcda912107157b6f455857e52ecd94539ede5670896e9606ff",
+  "previous_version": "10.4"
 }

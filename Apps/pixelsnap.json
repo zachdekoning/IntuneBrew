@@ -1,0 +1,10 @@
+{
+  "name": "PixelSnap",
+  "description": "Screen measuring tool",
+  "version": "2.6.1",
+  "url": "https://updates.getpixelsnap.com/v2/PixelSnap-2-2.6.1.dmg",
+  "bundleId": "pl.maketheweb.pixelsnap2",
+  "homepage": "https://getpixelsnap.com/",
+  "fileName": "PixelSnap-2-2.6.1.dmg",
+  "sha": "248e903546d09f9d0388f8ddf720f0becbe14ea64a3f00bf61c5490069ee023c"
+}

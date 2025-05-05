@@ -1,0 +1,10 @@
+{
+  "name": "Ente",
+  "description": "Desktop client for Ente Photos",
+  "version": "1.7.12",
+  "url": "https://github.com/ente-io/photos-desktop/releases/download/v1.7.12/ente-1.7.12-universal.dmg",
+  "bundleId": null,
+  "homepage": "https://ente.io/",
+  "fileName": "ente-1.7.12-universal.dmg",
+  "sha": "1674c7c155549a9198b85e2791671a66a89f038abe601524bb82c0687548ec0c"
+}

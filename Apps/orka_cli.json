@@ -6,5 +6,6 @@
   "bundleId": "com.macstadium.orka.pkg",
   "homepage": "https://orkadocs.macstadium.com/docs",
   "fileName": "orka.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "2.4.0"
 }

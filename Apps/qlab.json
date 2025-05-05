@@ -7,5 +7,6 @@
   "homepage": "https://qlab.app/",
   "fileName": "qlab_5.4.10.pkg",
   "type": "app",
-  "sha": "9823ce682f7fff6fa819bd75a03eb4eac5001b1dcb28955c1c34b8ba6168b006"
+  "sha": "9823ce682f7fff6fa819bd75a03eb4eac5001b1dcb28955c1c34b8ba6168b006",
+  "previous_version": "5.4.10"
 }

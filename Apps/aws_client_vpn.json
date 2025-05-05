@@ -6,5 +6,6 @@
   "bundleId": "com.amazon.awsvpnclient",
   "homepage": "https://aws.amazon.com/vpn/",
   "fileName": "AWS_VPN_Client.pkg",
-  "type": "pkg_in_pkg"
+  "type": "pkg_in_pkg",
+  "previous_version": "5.2.0"
 }

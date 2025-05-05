@@ -1,0 +1,10 @@
+{
+  "name": "Transnomino",
+  "description": "Batch rename utility",
+  "version": "9.2.2",
+  "url": "https://www.transnomino.com/download/Transnomino-9.2.2.dmg",
+  "bundleId": null,
+  "homepage": "https://www.transnomino.com/",
+  "fileName": "Transnomino-9.2.2.dmg",
+  "sha": "cab18991e8a4c1c97d94eae2863ea538e4da3029cb5978786cc5c6f8a7782366"
+}
