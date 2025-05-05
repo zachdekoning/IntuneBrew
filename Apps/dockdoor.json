@@ -1,11 +1,11 @@
 {
   "name": "DockDoor",
   "description": "Window peeking utility app",
-  "version": "1.7",
-  "url": "https://github.com/ejbills/DockDoor/releases/download/v1.7/DockDoor.dmg",
+  "version": "1.7.1",
+  "url": "https://github.com/ejbills/DockDoor/releases/download/v1.7.1/DockDoor.dmg",
   "bundleId": "com.ethanbills.DockDoor",
   "homepage": "https://dockdoor.net/",
   "fileName": "DockDoor.dmg",
-  "sha": "9b8ce1a570460722af2bd26823879543292130e38619305ce3ebe3e47cf1b118",
+  "sha": "2cf9114b53e67d320a879c6e04cd539c709490f277875d20f0dd8faeb856e72f",
   "previous_version": "1.7"
 }

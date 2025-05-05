@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                  <p>
+                                                                                                                                                                                                                                                                    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-351-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -79,15 +79,15 @@ IntuneBrew is a PowerShell-based tool that simplifies the process of uploading a
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-04 00:31 UTC*
+*Last checked: 2025-05-05 00:30 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Requestly | 25.4.13 | 25.5.1 |
-| LibreWolf | 138.0 | 138.0.1 |
-| Zen Browser | 1.11.5b | 1.12b |
-| Badgeify | 1.5.8 | 1.6.1 |
-| DbGate | 6.4.0 | 6.4.1 |
+| DockDoor | 1.7 | 1.7.1 |
+| DBeaver Community Edition | 25.0.3 | 25.0.4 |
+| BetterDisplay | 3.5.4 | 3.5.5 |
+| Zen Browser | 1.12b | 1.12.1b |
+| Joplin | 3.3.10 | 3.3.12 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -174,9 +174,9 @@ Follow the interactive prompts to:
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.4 |
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.661 |
-| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.4 |
+| <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.5 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.351 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.354 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.4.2 |
@@ -190,7 +190,7 @@ Follow the interactive prompts to:
 | <img src='Logos/breaktimer.png' width='32' height='32'> BreakTimer | 1.3.2 |
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 2.2.0 |
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.2.1 |
-| <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2025.1.1 |
+| <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2025.2.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5.1 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.3.0 |
 | <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.59 |
@@ -224,14 +224,14 @@ Follow the interactive prompts to:
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2025.1.1 |
 | <img src='Logos/dataspell.png' width='32' height='32'> DataSpell | 2025.1 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
-| <img src='Logos/dbeaver_community_edition.png' width='32' height='32'> DBeaver Community Edition | 25.0.3 |
+| <img src='Logos/dbeaver_community_edition.png' width='32' height='32'> DBeaver Community Edition | 25.0.4 |
 | <img src='Logos/dbgate.png' width='32' height='32'> DbGate | 6.4.1 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.4.11926442 |
 | <img src='Logos/devtoys.png' width='32' height='32'> DevToys | 2.0.8.0 |
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.344 |
 | <img src='Logos/displaylink_usb_graphics_software.png' width='32' height='32'> DisplayLink USB Graphics Software | 1.12.1 |
-| <img src='Logos/dockdoor.png' width='32' height='32'> DockDoor | 1.7 |
+| <img src='Logos/dockdoor.png' width='32' height='32'> DockDoor | 1.7.1 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.1 |
 | <img src='Logos/dosbox.png' width='32' height='32'> DOSBox | 0.74-3 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
@@ -241,7 +241,7 @@ Follow the interactive prompts to:
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 223.4.4909 |
 | <img src='Logos/dropdmg.png' width='32' height='32'> DropDMG | 3.6.8 |
-| <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 6.2 |
+| <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 6.3 |
 | <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.136.0 |
 | <img src='Logos/easydict.png' width='32' height='32'> Easydict | 2.14.1 |
 | <img src='Logos/easyfind.png' width='32' height='32'> EasyFind | 5.0.2 |
@@ -312,7 +312,7 @@ Follow the interactive prompts to:
 | <img src='Logos/jetbrains_pycharm_community_edition.png' width='32' height='32'> Jetbrains PyCharm Community Edition | 2025.1 |
 | <img src='Logos/jetbrains_rider.png' width='32' height='32'> JetBrains Rider | 2025.1.1 |
 | <img src='Logos/jetbrains_toolbox.png' width='32' height='32'> JetBrains Toolbox | 2.6.1 |
-| <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.3.10 |
+| <img src='Logos/joplin.png' width='32' height='32'> Joplin | 3.3.12 |
 | <img src='Logos/jumpcut.png' width='32' height='32'> Jumpcut | 0.84 |
 | <img src='Logos/jumpshare.png' width='32' height='32'> Jumpshare | 3.3.17 |
 | <img src='Logos/kap.png' width='32' height='32'> Kap | 3.6.0 |
@@ -483,7 +483,7 @@ Follow the interactive prompts to:
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.184.9 |
 | <img src='Logos/zed_attack_proxy.png' width='32' height='32'> Zed Attack Proxy | 2.16.1 |
-| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.12b |
+| <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.12.1b |
 | <img src='Logos/zenmap.png' width='32' height='32'> Zenmap | 7.95 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.6.53970 |
 
