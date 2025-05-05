@@ -106,6 +106,8 @@ Write-Host "This is a preview version. If you have any feedback, please open an 
 Write-Host "You can sponsor the development of this project at https://github.com/sponsors/ugurkocde" -ForegroundColor Red
 Write-Host ""
 
+# Define GitHub repository to check for supported apps
+$gitHubRespositoryRawUrl = "https://raw.githubusercontent.com/ugurkocde/IntuneBrew"
 
 # Authentication START
 
@@ -531,7 +533,7 @@ function Add-IntuneAppLogo {
         else {
             # Try to download from repository
             $logoFileName = $appName.ToLower().Replace(" ", "_") + ".png"
-            $logoUrl = "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Logos/$logoFileName"
+            $logoUrl = "$gitHubRespositoryRawUrl/IntuneBrew/main/Logos/$logoFileName"
             Write-Host "Downloading logo from: $logoUrl" -ForegroundColor Gray
             
             # Download the logo
@@ -1001,7 +1003,7 @@ function Convert-ScriptToBase64 {
 }
 
 # Fetch supported apps from GitHub repository
-$supportedAppsUrl = "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/refs/heads/main/supported_apps.json"
+$supportedAppsUrl = "$gitHubRespositoryRawUrl/refs/heads/main/supported_apps.json"
 $githubJsonUrls = @()
 
 try {
@@ -1220,7 +1222,7 @@ function Test-ValidUrl {
         [string]$url
     )
 
-    if ($url -match "^https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/.*\.json$") {
+    if ($url -match "^$gitHubRespositoryRawUrl/main/Apps/.*\.json$") {
         return $true
     }
     else {
