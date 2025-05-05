@@ -1,0 +1,11 @@
+{
+  "name": "Ente Auth",
+  "description": "Desktop client for Ente Auth",
+  "version": "4.3.5",
+  "url": "https://github.com/ente-io/ente/releases/download/auth-v4.3.5/ente-auth-v4.3.5.dmg",
+  "bundleId": null,
+  "homepage": "https://ente.io/auth/",
+  "fileName": "ente-auth-v4.3.5.dmg",
+  "sha": "e1be474a546653b3b348fdd3a590e68c89e09e0c45828e2a6cfc0d6dbcebf159",
+  "previous_version": "4.3.5"
+}

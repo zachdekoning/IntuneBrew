@@ -1,0 +1,12 @@
+{
+  "name": "SQLPro for SQLite",
+  "description": "Advanced sqlite editor",
+  "version": "2025.07",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/sqlpro_for_sqlite_2025.07.pkg",
+  "bundleId": null,
+  "homepage": "https://www.sqlitepro.com/",
+  "fileName": "sqlpro_for_sqlite_2025.07.pkg",
+  "type": "app",
+  "sha": "cdc03d2074750e17ec0bcc99c523d9c81f91763079c7ae7d1c197963fc2c8544",
+  "previous_version": "2025.07"
+}

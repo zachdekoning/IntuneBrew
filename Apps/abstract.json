@@ -1,0 +1,12 @@
+{
+  "name": "Abstract",
+  "description": "Collaborative design tool with support for Sketch files",
+  "version": "98.6.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/abstract_98.6.0.pkg",
+  "bundleId": null,
+  "homepage": "https://www.abstract.com/",
+  "fileName": "abstract_98.6.0.pkg",
+  "type": "app",
+  "sha": "9d611b1c8d5bf11fdf7b341a2b1a3e352c6bea2335674d8a3fef2b48c1579958",
+  "previous_version": "98.6.0"
+}

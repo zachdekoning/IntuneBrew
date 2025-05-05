@@ -1,0 +1,11 @@
+{
+  "name": "Aircall",
+  "description": "Cloud-based call center and phone system software",
+  "version": "3.1.66",
+  "url": "https://download-electron.aircall.io/Aircall-3.1.66.dmg",
+  "bundleId": null,
+  "homepage": "https://aircall.io/",
+  "fileName": "Aircall-3.1.66.dmg",
+  "sha": "d61c50d9f3466fe3751abe4945bc45d68cc9f6b71865b8ffa2a9bfd616fdb35b",
+  "previous_version": "3.1.66"
+}

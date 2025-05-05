@@ -1,0 +1,11 @@
+{
+  "name": "Twingate",
+  "description": "Zero trust network access platform",
+  "version": "2025.114.13304",
+  "url": "https://binaries.twingate.com/client/macos/2025.114.13304/Twingate.pkg",
+  "bundleId": "com.twingate.macos",
+  "homepage": "https://twingate.com/",
+  "fileName": "Twingate.pkg",
+  "type": "pkg_in_pkg",
+  "previous_version": "2025.114.13304"
+}

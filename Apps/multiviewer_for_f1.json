@@ -1,0 +1,11 @@
+{
+  "name": "MultiViewer for F1",
+  "description": "Unofficial desktop client for F1TV",
+  "version": "1.43.2",
+  "url": "https://releases.multiviewer.app/download/243288028/MultiViewer.for.F1-1.43.2-arm64.dmg",
+  "bundleId": null,
+  "homepage": "https://multiviewer.app/",
+  "fileName": "MultiViewer.for.F1-1.43.2-arm64.dmg",
+  "sha": "bf1b7209015b6cc071c9754a36bfc604455874edfb065187e3d7ac39c165844d",
+  "previous_version": "1.43.2"
+}

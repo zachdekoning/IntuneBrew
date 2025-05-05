@@ -1,0 +1,11 @@
+{
+  "name": "Antinote",
+  "description": "Temporary notes with calculations and extensible features",
+  "version": "1.1.5",
+  "url": "https://antinote.io/updates/Antinote_1.1.5.dmg",
+  "bundleId": null,
+  "homepage": "https://antinote.io/",
+  "fileName": "Antinote_1.1.5.dmg",
+  "sha": "0b26a98389da595299d24f3485d3ba54be88b8a3e6dd66a152b1df6bd2e30a41",
+  "previous_version": "1.1.5"
+}
