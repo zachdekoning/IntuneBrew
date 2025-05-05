@@ -18,9 +18,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                          <p>
+                                                                                                                                                                                                                                                                            <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-495-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-501-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -84,7 +84,7 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-05 15:17 UTC*
+*Last checked: 2025-05-05 16:24 UTC*
 
 > All applications are up to date! 🎉
 ## ✨ Features
@@ -183,7 +183,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bambu_studio.png' width='32' height='32'> Bambu Studio | 02.00.03.54 |
 | <img src='Logos/bartender.png' width='32' height='32'> Bartender | 5.3.5 |
 | <img src='Logos/basecamp.png' width='32' height='32'> Basecamp | 3 |
-| ❌ BatFi | 2.4.0 |
+| ❌ BatFi | 2.4.1 |
 | <img src='Logos/bbedit.png' width='32' height='32'> BBEdit | 15.1.4 |
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.661 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.5 |
@@ -377,6 +377,7 @@ Follow the interactive prompts to:
 | <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.12.1 |
 | ❌ Loop | 1.2.0 |
 | <img src='Logos/lulu.png' width='32' height='32'> LuLu | 3.1.5 |
+| ❌ Lunatask | 2.0.22 |
 | <img src='Logos/löve.png' width='32' height='32'> LÖVE | 11.5 |
 | <img src='Logos/maccy.png' width='32' height='32'> Maccy | 2.3.0 |
 | <img src='Logos/macdown.png' width='32' height='32'> MacDown | 0.7.2 |
@@ -420,7 +421,10 @@ Follow the interactive prompts to:
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mouseless.png' width='32' height='32'> mouseless | 0.3.1 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 138.0.1 |
+| ❌ Mozilla Firefox Developer Edition | 139.0b3 |
+| ❌ Mozilla Firefox ESR | 128.10.0 |
 | ❌ Mozilla Thunderbird | 138.0 |
+| ❌ Multi | 0.538.2 |
 | ❌ MultiViewer for F1 | 1.43.2 |
 | ❌ MURAL | 3.0.4 |
 | ❌ Name Mangler | 3.9.3 |
@@ -565,6 +569,7 @@ Follow the interactive prompts to:
 | ❌ Studio 3T | 2025.7.0 |
 | <img src='Logos/sublime_merge.png' width='32' height='32'> Sublime Merge | 2102 |
 | <img src='Logos/sublime_text.png' width='32' height='32'> Sublime Text | 4192 |
+| ❌ Superlist | 1.30.0 |
 | ❌ superwhisper | 1.45.14 |
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
 | ❌ Swift Shift | 0.26.0 |
@@ -583,6 +588,7 @@ Follow the interactive prompts to:
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.4 |
 | ❌ TeX Live Utility | 1.54 |
 | <img src='Logos/thonny.png' width='32' height='32'> Thonny | 4.1.7 |
+| ❌ Threema | 1.2.47 |
 | <img src='Logos/tigervnc.png' width='32' height='32'> TigerVNC | 1.15.0 |
 | <img src='Logos/todoist.png' width='32' height='32'> Todoist | 9.13.1 |
 | ❌ Tofu | 3.0.1 |

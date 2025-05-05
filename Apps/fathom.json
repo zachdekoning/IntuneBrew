@@ -6,5 +6,6 @@
   "bundleId": "Fathom Helper",
   "homepage": "https://fathom.video/",
   "fileName": "Fathom-darwin-arm64-1.39.0.dmg",
-  "sha": "2f6eb696c5c978417905c6aadac4a34aa84e3d388e41de576c280f9622508337"
+  "sha": "2f6eb696c5c978417905c6aadac4a34aa84e3d388e41de576c280f9622508337",
+  "previous_version": "1.39.0"
 }

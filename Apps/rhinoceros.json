@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.rhino3d.com/",
   "fileName": "rhino_8.18.25100.11002.dmg",
-  "sha": "765916c0d7df10e8c6b6f7e897dbce7a8e9dd1cedb63ed6c72fdbfa4c2174872"
+  "sha": "765916c0d7df10e8c6b6f7e897dbce7a8e9dd1cedb63ed6c72fdbfa4c2174872",
+  "previous_version": "8.18.25100.11002"
 }

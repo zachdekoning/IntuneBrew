@@ -7,5 +7,6 @@
   "homepage": "https://itsalin.com/appInfo/?id=viz",
   "fileName": "viz_2.2.1.pkg",
   "type": "app",
-  "sha": "2bf76b4d0cf69fddf0bb63de734fe4545f6eb1afa82c16295c0848b46c887976"
+  "sha": "2bf76b4d0cf69fddf0bb63de734fe4545f6eb1afa82c16295c0848b46c887976",
+  "previous_version": "2.2.1"
 }
