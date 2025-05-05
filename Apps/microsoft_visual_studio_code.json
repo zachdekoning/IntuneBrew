@@ -7,7 +7,7 @@
   "homepage": "https://code.visualstudio.com/",
   "changelog": "https://code.visualstudio.com/updates/",
   "fileName": "stable",
-  "type": "app"
+  "type": "app",
   "previous_version": "1.99.3",
   "sha": "6521027e564bbda8b2a9149d1a01faaee32b5a86574f3b0003822730d9c38695"
 }
