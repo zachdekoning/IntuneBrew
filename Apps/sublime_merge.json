@@ -2,11 +2,9 @@
   "name": "Sublime Merge",
   "description": "Git client",
   "version": "2102",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/sublime_merge_2102.pkg",
+  "url": "https://download.sublimetext.com/sublime_merge_build_2102_mac.zip",
   "bundleId": "com.sublimemerge",
   "homepage": "https://www.sublimemerge.com/",
-  "fileName": "sublime_merge_2102.pkg",
-  "type": "app",
-  "sha": "6817f13f58de409f51a3ed243a0662cba217b7b542d68c76f96094e1b108a699",
-  "previous_version": "2102"
+  "fileName": "sublime_merge_build_2102_mac.zip",
+  "type": "app"
 }

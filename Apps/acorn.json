@@ -2,11 +2,9 @@
   "name": "Acorn",
   "description": "Image editor focused on simplicity",
   "version": "8.1.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/acorn_8.1.1.pkg",
-  "bundleId": "com.flyingmeat.Acorn8",
+  "url": "https://flyingmeat.com/download/Acorn-8.1.1.zip",
+  "bundleId": null,
   "homepage": "https://flyingmeat.com/acorn/",
-  "fileName": "acorn_8.1.1.pkg",
-  "type": "app",
-  "sha": "9c51947b9af2d0bfe7ce8469aeefe1d53d62a4247d5e5dfae61e05d09a8c8d46",
-  "previous_version": "8.1.1"
+  "fileName": "Acorn-8.1.1.zip",
+  "type": "app"
 }

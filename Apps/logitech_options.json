@@ -2,11 +2,9 @@
   "name": "Logitech Options+",
   "description": "Software for Logitech devices",
   "version": "1.89.705126",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/logitech_options_1.89.705126.pkg",
-  "bundleId": "com.logitech.Logi-Options",
+  "url": "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
+  "bundleId": "com.logitech.LogiRightSightForWebcams.pkg",
   "homepage": "https://www.logitech.com/en-us/software/logi-options-plus.html",
-  "fileName": "logitech_options_1.89.705126.pkg",
-  "type": "app",
-  "sha": "d194985c55994e10d5521927f3609411a8885e249cd686c22f24a79bf88f867c",
-  "previous_version": "1.89.705126"
+  "fileName": "logioptionsplus_installer.zip",
+  "type": "app"
 }

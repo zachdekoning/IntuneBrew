@@ -2,12 +2,9 @@
   "name": "Ice",
   "description": "Menu bar manager",
   "version": "0.11.12",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/ice_0.11.12.pkg",
+  "url": "https://github.com/jordanbaird/ice-releases/releases/download/0.11.12/Ice.zip",
   "bundleId": "com.jordanbaird.Ice",
   "homepage": "https://icemenubar.app/",
-  "fileName": "ice_0.11.12.pkg",
-  "type": "app",
-  "sha": "7e5a00b00aa877e9ff7991d5ba16044cfb12a900c27edbe4df83ff62cf2d6496",
-  "changelog": "https://github.com/jordanbaird/Ice/releases",
-  "previous_version": "0.11.12"
+  "fileName": "Ice.zip",
+  "type": "app"
 }

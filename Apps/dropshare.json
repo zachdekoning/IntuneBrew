@@ -2,12 +2,9 @@
   "name": "Dropshare",
   "description": "File sharing solution",
   "version": "6.3",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/dropshare_6.3.pkg",
-  "bundleId": "net.mkswap.Dropshare5",
+  "url": "https://d2wvuuix8c9e48.cloudfront.net/Dropshare6-6077.app.zip",
+  "bundleId": null,
   "homepage": "https://dropshare.app/",
-  "fileName": "dropshare_6.3.pkg",
-  "type": "app",
-  "sha": "0b3f0fc848139889917a54c9e9581590256aaeff1e5a96206d6202190f808e2f",
-  "changelog": "https://dropshare.app/changelog/",
-  "previous_version": "6.3"
+  "fileName": "Dropshare6-6077.app.zip",
+  "type": "app"
 }

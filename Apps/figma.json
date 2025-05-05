@@ -2,12 +2,9 @@
   "name": "Figma",
   "description": "Collaborative team software",
   "version": "125.4.7",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/figma_125.4.7.pkg",
-  "bundleId": "com.figma.Desktop",
+  "url": "https://desktop.figma.com/mac-arm/Figma-125.4.7.zip",
+  "bundleId": null,
   "homepage": "https://www.figma.com/",
-  "fileName": "figma_125.4.7.pkg",
-  "type": "app",
-  "sha": "2356518a2db129a496343bffc2c32bfa5cea30e9f15117e67c97523fc7e351e0",
-  "changelog": "https://help.figma.com/hc/en-us/articles/360038511533-Release-Notes",
-  "previous_version": "125.4.7"
+  "fileName": "Figma-125.4.7.zip",
+  "type": "app"
 }

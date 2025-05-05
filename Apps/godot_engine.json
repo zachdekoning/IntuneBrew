@@ -2,12 +2,9 @@
   "name": "Godot Engine",
   "description": "Game development engine",
   "version": "4.4.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/godot_engine_4.4.1.pkg",
+  "url": "https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_macos.universal.zip",
   "bundleId": "org.godotengine.godot",
   "homepage": "https://godotengine.org/",
-  "fileName": "godot_engine_4.4.1.pkg",
-  "type": "app",
-  "sha": "ba9dad4ae121f1b8ab8fff75e6cbfe9c7b0314122c3686eee1dafd2b7e386d99",
-  "changelog": "https://godotengine.org/changelog/",
-  "previous_version": "4.4.1"
+  "fileName": "Godot_v4.4.1-stable_macos.universal.zip",
+  "type": "app"
 }

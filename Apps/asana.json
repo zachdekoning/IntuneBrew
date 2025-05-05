@@ -2,11 +2,9 @@
   "name": "Asana",
   "description": "Manage team projects and tasks",
   "version": "2.4.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/asana_2.4.0.pkg",
-  "bundleId": "com.electron.asana",
+  "url": "https://desktop-downloads.asana.com/darwin_arm64/prod/v2.4.0/Asana-darwin-arm64-2.4.0.zip",
+  "bundleId": null,
   "homepage": "https://asana.com/",
-  "fileName": "asana_2.4.0.pkg",
-  "type": "app",
-  "sha": "5a604ffc577dd58c4ae5ebb7d07699a24ae4af2ead2d57a16016a807e3c4a9d8",
-  "previous_version": "2.4.0"
+  "fileName": "Asana-darwin-arm64-2.4.0.zip",
+  "type": "app"
 }

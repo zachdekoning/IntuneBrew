@@ -2,12 +2,9 @@
   "name": "EasyFind",
   "description": "Find files, folders, or contents in any file",
   "version": "5.0.2",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/easyfind_5.0.2.pkg",
-  "bundleId": "org.grunenberg.EasyFind",
+  "url": "https://download.devontechnologies.com/download/freeware/easyfind/5.0.2/EasyFind.app.zip",
+  "bundleId": null,
   "homepage": "https://www.devontechnologies.com/apps/freeware",
-  "fileName": "easyfind_5.0.2.pkg",
-  "type": "app",
-  "sha": "f400b609d2b5397c3d218d1c73b3d89906ab1976c6e422c72db4ccbbac5f85bf",
-  "changelog": "https://www.devontechnologies.com/support/download",
-  "previous_version": "5.0.2"
+  "fileName": "EasyFind.app.zip",
+  "type": "app"
 }

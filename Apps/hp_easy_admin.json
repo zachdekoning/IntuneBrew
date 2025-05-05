@@ -2,12 +2,9 @@
   "name": "HP Easy Admin",
   "description": "Tool to directly download HP printing and/or scanning drivers",
   "version": "2.15.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/hp_easy_admin_2.15.0.pkg",
-  "bundleId": "com.hp.hp-easy-admin",
+  "url": "https://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Applications/HP_Easy_Admin.app.zip",
+  "bundleId": null,
   "homepage": "https://support.hp.com/",
-  "fileName": "hp_easy_admin_2.15.0.pkg",
-  "type": "app",
-  "sha": "45cb879220eb3cb18cb3a91a24a44c606519ba4787310ccca7ed813e9dfef3c9",
-  "changelog": "https://support.hp.com/us-en/document/ish_5023611-5023632-16",
-  "previous_version": "2.15.0"
+  "fileName": "HP_Easy_Admin.app.zip",
+  "type": "app"
 }

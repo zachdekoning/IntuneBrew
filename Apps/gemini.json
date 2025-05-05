@@ -2,11 +2,9 @@
   "name": "Gemini",
   "description": "Disk space cleaner that finds and deletes duplicated and similar files",
   "version": "2.9.11",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/gemini_2.9.11.pkg",
-  "bundleId": "com.macpaw.site.Gemini2",
+  "url": "https://dl.devmate.com/com.macpaw.site.Gemini2/399/1696867671/Gemini2-399.zip",
+  "bundleId": null,
   "homepage": "https://macpaw.com/gemini",
-  "fileName": "gemini_2.9.11.pkg",
-  "type": "app",
-  "sha": "bf50cdacb49b6e1f2867aa7e6ead5493c5b7365e2107ceb19f385425a368b1de",
-  "previous_version": "2.9.11"
+  "fileName": "Gemini2-399.zip",
+  "type": "app"
 }

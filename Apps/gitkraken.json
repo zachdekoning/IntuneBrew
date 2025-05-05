@@ -2,11 +2,9 @@
   "name": "GitKraken",
   "description": "Git client focusing on productivity",
   "version": "11.0.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/gitkraken_11.0.0.pkg",
+  "url": "https://release.axocdn.com/darwin-arm64/GitKraken-v11.0.0.zip",
   "bundleId": "com.axosoft.gitkraken",
   "homepage": "https://www.gitkraken.com/",
-  "fileName": "gitkraken_11.0.0.pkg",
-  "type": "app",
-  "sha": "03350b546144d41fbf771aaf0433c92351453976b04864a30a20d9bca7c0c89f",
-  "previous_version": "11.0.0"
+  "fileName": "GitKraken-v11.0.0.zip",
+  "type": "app"
 }

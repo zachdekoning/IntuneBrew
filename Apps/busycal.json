@@ -2,11 +2,9 @@
   "name": "BusyCal",
   "description": "Calendar software focusing on flexibility and reliability",
   "version": "2025.2.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/busycal_2025.2.1.pkg",
+  "url": "https://downloads.busymac.com/bcl-2025.2.1-2025-05-02-08-35.zip",
   "bundleId": "com.busymac.busycal3.pkg",
   "homepage": "https://busymac.com/busycal/index.html",
-  "fileName": "busycal_2025.2.1.pkg",
-  "type": "app",
-  "sha": "b74878669d9b497dd62e7899a97ed050557605bf661abc7c7a6bd5b2cebad210",
-  "previous_version": "2025.2.1"
+  "fileName": "bcl-2025.2.1-2025-05-02-08-35.zip",
+  "type": "app"
 }

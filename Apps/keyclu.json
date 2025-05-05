@@ -2,11 +2,9 @@
   "name": "KeyClu",
   "description": "Find shortcuts for any installed application",
   "version": "0.30.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/keyclu_0.30.1.pkg",
+  "url": "https://github.com/Anze/KeyCluCask/releases/download/v0.30.1/KeyClu.zip",
   "bundleId": "com.0804Team.KeyClu",
   "homepage": "https://sergii.tatarenkov.name/keyclu/support/",
-  "fileName": "keyclu_0.30.1.pkg",
-  "type": "app",
-  "sha": "7394c07dd3b239f9efbd30775b186146ab5420285cbadcf916fac91ef19dffec",
-  "previous_version": "0.30.1"
+  "fileName": "KeyClu.zip",
+  "type": "app"
 }
