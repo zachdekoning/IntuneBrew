@@ -1764,41 +1764,59 @@ foreach ($app in $appsToUpload) {
         Write-Host "`n🔄 App type is .app file... Packaging required!" -ForegroundColor Yellow
 
         # If file is distributed as a .app, it is almost certainly in a zip, tar or tar.gz, since 'MacOS .app files are technically directories
-        if (Test-Path $appFilePath) {
-            try {
-                Write-Host "`n🔄 Attempting to extract app archive" -ForegroundColor Yellow
-                Expand-Archive -LiteralPath $appFilePath -DestinationPath 'extract' -Force
+        if ($appInfo.fileName -match '\.tar.gz$' -or $appInfo.fileName -match '\.tar$') {
+            # Handle .tar and .tar.gz files
+            Invoke-Expression "mkdir extract"
+            $untarCommand = "tar -xvf '" + $appFilePath + "' -C 'extract'"
+            Invoke-Expression "$untarCommand"
+            
+            Remove-Item $appFilePath -Force -ErrorAction Stop
 
-                Write-Host "`n✅  Archive extracted....deleting archive file" -ForegroundColor Green
+        } else {
+            # Otherwise, we're going to assume it's a zip file and try to unzip it
+            if (Test-Path $appFilePath) {
+                try {
+                    Write-Host "`n🔄 Attempting to extract app archive" -ForegroundColor Yellow
+                    Expand-Archive -LiteralPath $appFilePath -DestinationPath 'extract' -Force
 
-                # Delete unneeded archive file
-                Remove-Item $appFilePath -Force -ErrorAction Stop
+                    Write-Host "`n✅  Archive extracted....deleting archive file" -ForegroundColor Green
 
-                Write-Host "`n🔄 Finding extracted .app file..." -ForegroundColor Yellow
-                $appFilePath = Get-ChildItem -Recurse -Include *.app -ErrorAction SilentlyContinue -Path 'extract' -depth 0;
-                Write-Host "✅ Found .app file at: $appFilePath" -ForegroundColor Green
+                    # Delete unneeded archive file
+                    Remove-Item $appFilePath -Force -ErrorAction Stop
 
-                # If bundleId isn't already set, pull it from the .app
-                if ($appInfo.bundleId -eq $null) {
-                    Write-Host "`n🔄 BundleID not already defined...fetching from app" -ForegroundColor Yellow
-
-                    # Wait 5 seconds...MacOS needs a moment after this is downloaded before the command will work
-                    Start-Sleep -Seconds 5
-
-                    $bundleIdCommand = "/usr/bin/mdls -name kMDItemCFBundleIdentifier -r " + "'$appFilePath'"
-                    Invoke-Expression "$bundleIdCommand" | Tee-Object -Variable bundleIdFromApp
-                    
-                    $appInfo.bundleId = $bundleIdFromApp
-                    Write-Host "`n✅ BundleID found from app: $bundleIdFromApp" -ForegroundColor Green
                 }
+                catch {
+                    Write-Host "App archive extraction failed! Error: $_" -ForegroundColor Red
+                    # Clean up and delete downloaded ZIP
+                    Remove-Item $appFilePath -Force -ErrorAction Stop
+                    continue
+                }
+            }
+        }
 
-            }
-            catch {
-                Write-Host "App archive extraction failed! Error: $_" -ForegroundColor Red
-                # Clean up and delete downloaded ZIP
-                Remove-Item $appFilePath -Force -ErrorAction Stop
-                continue
-            }
+        # Find extracted .app file
+        Write-Host "`n🔄 Finding extracted .app file..." -ForegroundColor Yellow
+        $appFilePath = Get-ChildItem -Recurse -Include *.app -ErrorAction SilentlyContinue -Path 'extract' -depth 0;
+
+        if (!(Test-Path $appFilePath)) {
+            Write-Host "`n❌ Unable to find extracted .app file! Skipping." -ForegroundColor Red
+            continue
+        }
+
+        Write-Host "✅ Found .app file at: $appFilePath" -ForegroundColor Green
+
+        # If bundleId isn't already set, pull it from the .app
+        if ($appInfo.bundleId -eq $null) {
+            Write-Host "`n🔄 BundleID not already defined...fetching from app" -ForegroundColor Yellow
+
+            # Wait 5 seconds...MacOS needs a moment after this is downloaded before the command will work
+            Start-Sleep -Seconds 5
+
+            $bundleIdCommand = "/usr/bin/mdls -name kMDItemCFBundleIdentifier -r " + "'$appFilePath'"
+            Invoke-Expression "$bundleIdCommand" | Tee-Object -Variable bundleIdFromApp
+            
+            $appInfo.bundleId = $bundleIdFromApp
+            Write-Host "`n✅ BundleID found from app: $bundleIdFromApp" -ForegroundColor Green
         }
 
         Write-Host "`n🔄 Creating PKG file..." -ForegroundColor Yellow
