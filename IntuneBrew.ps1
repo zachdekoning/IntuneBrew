@@ -1769,7 +1769,7 @@ foreach ($app in $appsToUpload) {
             Invoke-Expression "mkdir extract"
             $untarCommand = "tar -xvf '" + $appFilePath + "' -C 'extract'"
             Invoke-Expression "$untarCommand"
-            
+
             Remove-Item $appFilePath -Force -ErrorAction Stop
 
         } else {
@@ -1796,7 +1796,7 @@ foreach ($app in $appsToUpload) {
 
         # Find extracted .app file
         Write-Host "`n🔄 Finding extracted .app file..." -ForegroundColor Yellow
-        $appFilePath = Get-ChildItem -Recurse -Include *.app -ErrorAction SilentlyContinue -Path 'extract' -depth 0;
+        $appFilePath = Get-ChildItem -Recurse -Include *.app -ErrorAction SilentlyContinue -Path 'extract' -depth 0  | Select-Object -First 1;
 
         if (!(Test-Path $appFilePath)) {
             Write-Host "`n❌ Unable to find extracted .app file! Skipping." -ForegroundColor Red
@@ -1838,6 +1838,36 @@ foreach ($app in $appsToUpload) {
         $appRepackaged = $true
     }
 
+    if ($appInfo.type -eq 'pkg_in_dmg') {
+        Write-Host "`n🔄 App type is pkg_in_dmg... Need to extract .pkg from DMG file!" -ForegroundColor Yellow
+
+        $dmgAttachCommand = "/usr/bin/hdiutil attach '$appFilePath' -mountpoint '/Volumes/IntuneBrewDMG'"
+        Invoke-Expression "$dmgAttachCommand"
+
+        # Find extracted .app file
+        Write-Host "`n🔄 Finding extracted .app file..." -ForegroundColor Yellow
+        $appFilePath = Get-ChildItem -Recurse -Include *.pkg -ErrorAction SilentlyContinue -Path '/Volumes/IntuneBrewDMG' -depth 0 | Select-Object -First 1;
+
+        if (Test-Path $appFilePath) {
+            Write-Host "✅ Found .pkg file at: $appFilePath" -ForegroundColor Green
+
+            # Copy pkg file out of DMG file
+            $pkgName = $appInfo.name -replace ' ',''
+            $fileCopy = Copy-Item $appFilePath -Destination "$PWD/$pkgName.pkg"
+            $appFilePath = "$PWD/$pkgName.pkg"
+        }
+
+        # Detach DMG file
+        $dmgDetachCommand = "/usr/bin/hdiutil detach '/Volumes/IntuneBrewDMG' -force"
+        Invoke-Expression "$dmgDetachCommand"
+
+        if (!(Test-Path $appFilePath)) {
+            Write-Host "`n❌ Unable to find extracted .pkg file! Skipping." -ForegroundColor Red
+            continue
+        }
+
+        $appRepackaged = $true
+    }
 
     Write-Host "`n📋 Application Details:" -ForegroundColor Cyan
     Write-Host "   • Display Name: $($appInfo.name)"
