@@ -6,5 +6,6 @@
   "bundleId": "org.mozilla.firefox",
   "homepage": "https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr",
   "fileName": "Firefox%20128.10.0esr.dmg",
-  "sha": "fc80a6919a9078815d5453038df13174aceeb7f050e07d12c5b166ca7fce9e2c"
+  "sha": "fc80a6919a9078815d5453038df13174aceeb7f050e07d12c5b166ca7fce9e2c",
+  "previous_version": "128.10.0"
 }
