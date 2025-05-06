@@ -64,7 +64,11 @@ Version 0.3.7: Fix Parse Errors
 
 .PARAMETER LocalMode
  Sets the script to pull the supported app list and app information from the local relative path instead of a remote GitHub repository
- Example: IntuneBrew -LocalMode -UpdateAll -ConfigFile clientSecret.json
+ Example: IntuneBrew -LocalMode -Upd ateAll -ConfigFile clientSecret.json
+
+ .PARAMETER AuthMethod
+ Specify the authentication method to use
+ Example: IntuneBrew -AuthMethod ClientSecret -ConfigFile clientSecret.json
 
 #>
 param(
@@ -93,7 +97,10 @@ param(
     [string]$ConfigFile,
 
     [Parameter(Mandatory = $false)]
-    [switch]$LocalMode
+    [switch]$LocalMode,
+
+    [Parameter(Mandatory = $false)]
+    [string]$AuthMethod
 )
 
 Write-Host "
@@ -252,12 +259,22 @@ function Show-FilePickerDialog {
     return $null
 }
 
-# Display authentication options
-Write-Host "`nChoose authentication method:" -ForegroundColor Cyan
-Write-Host "1. App Registration with Certificate"
-Write-Host "2. App Registration with Secret"
-Write-Host "3. Interactive Session with Admin Account"
-$authChoice = Read-Host "`nEnter your choice (1-3)"
+# Set authentication method
+if ($AuthMethod -eq 'Certificate') {
+    $authChoice = 1
+} elseif ($AuthMethod -eq 'ClientSecret') {
+    $authChoice = 2
+} elseif ($AuthMethod -eq 'Interactive') {
+    $authChoice = 3
+} else {
+    # Display authentication options
+    Write-Host "`nChoose authentication method:" -ForegroundColor Cyan
+    Write-Host "1. App Registration with Certificate"
+    Write-Host "2. App Registration with Secret"
+    Write-Host "3. Interactive Session with Admin Account"
+
+    $authChoice = Read-Host "`nEnter your choice (1-3)"
+}
 
 $authenticated = $false
 
