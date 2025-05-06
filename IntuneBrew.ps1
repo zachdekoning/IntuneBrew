@@ -62,6 +62,10 @@ Version 0.3.7: Fix Parse Errors
  Specifies the path to a the configuration file containing authentication information (see clientSecret_Template.json and certificateThumbprint_Template.json for configuration layout)
  Example: IntuneBrew -UpdateAll -ConfigFile clientSecret.json
 
+.PARAMETER LocalMode
+ Sets the script to pull the supported app list and app information from the local relative path instead of a remote GitHub repository
+ Example: IntuneBrew -LocalMode -UpdateAll -ConfigFile clientSecret.json
+
 #>
 param(
     [Parameter(Mandatory = $false)]
@@ -86,7 +90,10 @@ param(
     [switch]$UseExistingIntuneApp,
 
     [Parameter(Mandatory = $false)]
-    [string]$ConfigFile
+    [string]$ConfigFile,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$LocalMode
 )
 
 Write-Host "
@@ -533,13 +540,22 @@ function Add-IntuneAppLogo {
         else {
             # Try to download from repository
             $logoFileName = $appName.ToLower().Replace(" ", "_") + ".png"
-            $logoUrl = "$gitHubRespositoryRawUrl/main/Logos/$logoFileName"
+
+            if ($LocalMode.isPresent) {
+                $logoUrl = "Logos/$logoFileName"
+            } else {
+                $logoUrl = "$gitHubRespositoryRawUrl/main/Logos/$logoFileName"
+            }
             Write-Host "Downloading logo from: $logoUrl" -ForegroundColor Gray
             
             # Download the logo
             $tempLogoPath = Join-Path $PWD "temp_logo.png"
             try {
-                Invoke-WebRequest -Uri $logoUrl -OutFile $tempLogoPath
+                if ($LocalMode.isPresent) {
+                    $tempLogoPath = Join-Path $PWD "Logos/$logoFileName"
+                } else {
+                    Invoke-WebRequest -Uri $logoUrl -OutFile $tempLogoPath
+                }
             }
             catch {
                 $errorMessage = $_
@@ -589,7 +605,9 @@ function Add-IntuneAppLogo {
 
         # Cleanup
         if (Test-Path $tempLogoPath) {
-            Remove-Item $tempLogoPath -Force
+            if (!($LocalMode.isPresent)) {
+                Remove-Item $tempLogoPath -Force
+            }
         }
     }
     catch {
@@ -1004,11 +1022,17 @@ function Convert-ScriptToBase64 {
 
 # Fetch supported apps from GitHub repository
 $supportedAppsUrl = "https://raw.githubusercontent.com/zachdekoning/IntuneBrew/refs/heads/app-dmg-test/supported_apps.json"
+$supportedAppsFile = 'supported_apps.json'
 $githubJsonUrls = @()
 
 try {
     # Fetch the supported apps JSON
-    $supportedApps = Invoke-RestMethod -Uri $supportedAppsUrl -Method Get
+    if ($LocalMode.isPresent) {
+        $supportedApps = Get-Content -Raw -Path $supportedAppsFile | Foreach-Object {$_ -replace 'https://raw.githubusercontent.com/.*/IntuneBrew/main/',''}  |  ConvertFrom-Json
+
+    } else {
+        $supportedApps = Invoke-RestMethod -Uri $supportedAppsUrl -Method Get
+    }
 
     # Process apps based on command line parameters or allow manual selection
     if ($Upload) {
@@ -1109,7 +1133,13 @@ function Get-GitHubAppInfo {
     }
 
     try {
-        $response = Invoke-RestMethod -Uri $jsonUrl -Method Get
+        
+        if ($LocalMode.isPresent) {
+            $response = Get-Content -Raw -Path $jsonUrl | ConvertFrom-Json
+        } else {
+            $response = Invoke-RestMethod -Uri $jsonUrl -Method Get
+        }
+
         return @{
             name        = $response.name
             description = $response.description
