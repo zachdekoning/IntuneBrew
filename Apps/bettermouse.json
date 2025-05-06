@@ -6,5 +6,6 @@
   "bundleId": "com.naotanhaocan.BetterMouse",
   "homepage": "https://better-mouse.com/",
   "fileName": "BetterMouse.1.6.7465.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.6"
 }

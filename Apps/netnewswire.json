@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://netnewswire.com/",
   "fileName": "NetNewsWire6.1.9.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "6.1.9"
 }

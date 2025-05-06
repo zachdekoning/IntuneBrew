@@ -6,5 +6,6 @@
   "bundleId": "com.daisydiskapp.DaisyDiskAdminHelper",
   "homepage": "https://daisydiskapp.com/",
   "fileName": "DaisyDisk.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "4.31"
 }

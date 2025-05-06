@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.whatsapp.com/",
   "fileName": "?version=2.25.12.73&extension=zip&configuration=Release&branch=relbranch",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.25.12.73"
 }

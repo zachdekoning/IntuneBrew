@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/tombonez/noTunes",
   "fileName": "noTunes-3.5.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.5"
 }

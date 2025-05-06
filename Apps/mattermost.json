@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://mattermost.com/",
   "fileName": "mattermost-desktop-5.11.2-mac-m1.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.11.2"
 }

@@ -2,7 +2,7 @@
   "name": "SQLPro for MySQL",
   "description": "MySQL & MariaDB database client",
   "version": "2025.10",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/sqlpro_for_mysql_2025.10.pkg",
+  "url": "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.2025.10.app.zip",
   "bundleId": null,
   "homepage": "https://www.mysqlui.com/",
   "fileName": "sqlpro_for_mysql_2025.10.pkg",

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://spline.design/",
   "fileName": "Spline-0.12.5-arm64.mac.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.12.5"
 }

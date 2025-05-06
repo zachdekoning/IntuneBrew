@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.homerow.app/",
   "fileName": "Homerow.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.4.0"
 }

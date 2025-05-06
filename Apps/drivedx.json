@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://binaryfruit.com/drivedx",
   "fileName": "DriveDx.1.12.1.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.12.1"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.notion.com/product/calendar",
   "fileName": "Notion%20Calendar-darwin-arm64-1.130.0.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.130.0"
 }

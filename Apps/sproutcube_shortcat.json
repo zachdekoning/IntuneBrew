@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://shortcat.app/",
   "fileName": "Shortcat.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.12.0"
 }

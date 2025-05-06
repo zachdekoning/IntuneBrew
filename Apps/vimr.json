@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/qvacua/vimr",
   "fileName": "VimR-v0.53.0.tar.bz2",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.53.0"
 }

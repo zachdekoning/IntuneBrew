@@ -6,5 +6,6 @@
   "bundleId": "com.tristan.fseventstool",
   "homepage": "https://fsmonitor.com/",
   "fileName": "FSMonitor_1.2(137).zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.2"
 }

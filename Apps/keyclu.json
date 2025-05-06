@@ -6,5 +6,6 @@
   "bundleId": "com.0804Team.KeyClu",
   "homepage": "https://sergii.tatarenkov.name/keyclu/support/",
   "fileName": "KeyClu.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.30.1"
 }

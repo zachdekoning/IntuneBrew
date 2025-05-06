@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/infinitered/reactotron",
   "fileName": "Reactotron-3.7.7-arm64-mac.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.7.7"
 }

@@ -6,5 +6,6 @@
   "bundleId": "com.alienator88.Pearcleaner",
   "homepage": "https://itsalin.com/appInfo/?id=pearcleaner",
   "fileName": "Pearcleaner.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "4.4.2"
 }

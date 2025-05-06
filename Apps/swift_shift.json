@@ -2,7 +2,7 @@
   "name": "Swift Shift",
   "description": "Window manager",
   "version": "0.26.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/swift_shift_0.26.0.pkg",
+  "url": "https://github.com/pablopunk/SwiftShift/releases/download/0.26.0/SwiftShift.zip",
   "bundleId": "com.pablopunk.Swift-Shift",
   "homepage": "https://www.swiftshift.app/",
   "fileName": "swift_shift_0.26.0.pkg",

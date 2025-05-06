@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://espanso.org/",
   "fileName": "Espanso-Mac-M1.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.2.1"
 }

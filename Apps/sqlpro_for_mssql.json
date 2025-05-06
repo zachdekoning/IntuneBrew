@@ -2,7 +2,7 @@
   "name": "SQLPro for MSSQL",
   "description": "Microsoft SQL Server database client",
   "version": "2025.10",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/sqlpro_for_mssql_2025.10.pkg",
+  "url": "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.2025.10.app.zip",
   "bundleId": null,
   "homepage": "https://www.macsqlclient.com/",
   "fileName": "sqlpro_for_mssql_2025.10.pkg",

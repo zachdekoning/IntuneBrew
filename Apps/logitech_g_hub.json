@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.logitechg.com/en-us/innovation/g-hub.html",
   "fileName": "lghub_installer.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2025.3.696161"
 }

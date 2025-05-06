@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.beeper.com/",
   "fileName": "Beeper-4.0.661-arm64-mac.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "4.0.661"
 }

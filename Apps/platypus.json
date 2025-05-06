@@ -2,7 +2,7 @@
   "name": "Platypus",
   "description": "Tool to create native applications from command-line scripts",
   "version": "5.4.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/platypus_5.4.1.pkg",
+  "url": "https://sveinbjorn.org/files/software/platypus/platypus5.4.1.zip",
   "bundleId": null,
   "homepage": "https://sveinbjorn.org/platypus",
   "fileName": "platypus_5.4.1.pkg",

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://companion.home-assistant.io/",
   "fileName": "home-assistant-mac.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2025.3"
 }

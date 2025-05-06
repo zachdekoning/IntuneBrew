@@ -6,5 +6,6 @@
   "bundleId": "com.rogueamoeba.Airfoil",
   "homepage": "https://rogueamoeba.com/airfoil/mac/",
   "fileName": "Airfoil.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.12.4"
 }

@@ -6,5 +6,6 @@
   "bundleId": "org.herf.Flux",
   "homepage": "https://justgetflux.com/",
   "fileName": "Flux42.2.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "42.2"
 }

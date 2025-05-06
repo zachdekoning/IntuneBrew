@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://crystalidea.com/macs-fan-control",
   "fileName": "macsfancontrol.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.5.17"
 }

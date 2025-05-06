@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.deepl.com/",
   "fileName": "DeepL.tar.gz",
-  "type": "app"
+  "type": "app",
+  "previous_version": "25.4.11926442"
 }

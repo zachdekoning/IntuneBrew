@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/TermiT/Flycut",
   "fileName": "Flycut.1.9.6.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.9.6"
 }

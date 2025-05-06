@@ -6,5 +6,6 @@
   "bundleId": "ru.keepcoder.Telegram",
   "homepage": "https://macos.telegram.org/",
   "fileName": "Telegram-11.9.272031.app.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "11.9"
 }

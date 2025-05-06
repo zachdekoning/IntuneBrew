@@ -6,5 +6,6 @@
   "bundleId": "com.busymac.busycal3.pkg",
   "homepage": "https://busymac.com/busycal/index.html",
   "fileName": "bcl-2025.2.1-2025-05-02-08-35.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2025.2.1"
 }

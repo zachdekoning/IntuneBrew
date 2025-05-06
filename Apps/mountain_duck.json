@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://mountainduck.io/",
   "fileName": "Mountain%20Duck-4.17.4.22698.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "4.17.4"
 }

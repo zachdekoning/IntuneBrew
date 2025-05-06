@@ -6,5 +6,6 @@
   "bundleId": "com.macpaw.CleanMyMac5.HealthMonitor",
   "homepage": "https://macpaw.com/cleanmymac",
   "fileName": "CleanMyMac5-50008.0.2504281700.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.0.8"
 }

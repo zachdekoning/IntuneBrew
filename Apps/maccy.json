@@ -6,5 +6,6 @@
   "bundleId": "org.p0deje.Maccy",
   "homepage": "https://maccy.app/",
   "fileName": "Maccy.app.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.3.0"
 }

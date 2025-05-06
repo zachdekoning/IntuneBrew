@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/keycastr/keycastr",
   "fileName": "KeyCastr.app.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.10.3"
 }

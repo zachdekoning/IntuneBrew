@@ -6,5 +6,6 @@
   "bundleId": "com.surteesstudios.Bartender",
   "homepage": "https://www.macbartender.com/",
   "fileName": "Bartender%205.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.3.5"
 }

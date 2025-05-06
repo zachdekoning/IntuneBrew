@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://angryip.org/",
   "fileName": "ipscan-macArm64-3.9.1.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.9.1"
 }

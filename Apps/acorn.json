@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://flyingmeat.com/acorn/",
   "fileName": "Acorn-8.1.1.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "8.1.1"
 }

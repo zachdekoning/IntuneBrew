@@ -2,7 +2,7 @@
   "name": "Gather Town",
   "description": "Virtual video-calling space",
   "version": "1.31.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/gather_town_1.31.0.pkg",
+  "url": "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v1.31.0/Gather-1.31.0-arm64-mac.zip",
   "bundleId": null,
   "homepage": "https://gather.town/",
   "fileName": "gather_town_1.31.0.pkg",

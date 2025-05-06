@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.scootersoftware.com/",
   "fileName": "BCompareOSX-5.0.7.30840.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.0.7.30840"
 }

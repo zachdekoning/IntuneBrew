@@ -6,5 +6,6 @@
   "bundleId": "com.sublimemerge",
   "homepage": "https://www.sublimemerge.com/",
   "fileName": "sublime_merge_build_2102_mac.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2102"
 }

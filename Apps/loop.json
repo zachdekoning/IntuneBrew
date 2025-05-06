@@ -2,7 +2,7 @@
   "name": "Loop",
   "description": "Window manager",
   "version": "1.2.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/loop_1.2.0.pkg",
+  "url": "https://github.com/MrKai77/Loop/releases/download/1.2.0/Loop.zip",
   "bundleId": "com.MrKai77.Loop",
   "homepage": "https://github.com/MrKai77/Loop",
   "fileName": "loop_1.2.0.pkg",

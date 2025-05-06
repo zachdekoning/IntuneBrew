@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://hluk.github.io/CopyQ/",
   "fileName": "CopyQ-macos-12-m1.dmg.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "10.0.0"
 }

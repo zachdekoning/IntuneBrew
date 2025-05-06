@@ -2,7 +2,7 @@
   "name": "NoMachine",
   "description": "Remote desktop software",
   "version": "8.16.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/nomachine_8.16.1.pkg",
+  "url": "https://download.nomachine.com/download/8.16/MacOSX/nomachine_8.16.1_2.dmg",
   "bundleId": "com.nomachine.nxdock",
   "homepage": "https://www.nomachine.com/",
   "fileName": "nomachine_8.16.1_2.dmg",

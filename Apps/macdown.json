@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://macdown.uranusjr.com/",
   "fileName": "MacDown.app.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.7.2"
 }

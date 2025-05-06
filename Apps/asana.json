@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://asana.com/",
   "fileName": "Asana-darwin-arm64-2.4.0.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.4.0"
 }

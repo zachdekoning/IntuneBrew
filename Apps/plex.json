@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.plex.tv/",
   "fileName": "Plex-1.108.1.307-dd5b87aa-universal.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.108.1.307"
 }

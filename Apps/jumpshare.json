@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://jumpshare.com/",
   "fileName": "Jumpshare-3.3.17.tar.bz2",
-  "type": "app"
+  "type": "app",
+  "previous_version": "3.3.17"
 }

@@ -6,5 +6,6 @@
   "bundleId": "com.logitech.LogiRightSightForWebcams.pkg",
   "homepage": "https://www.logitech.com/en-us/software/logi-options-plus.html",
   "fileName": "logioptionsplus_installer.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.89.705126"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.battle.net/",
   "fileName": "getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.18.10.3141"
 }

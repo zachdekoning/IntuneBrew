@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://blip.net/",
   "fileName": "Blip-20250422151829.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.1.7"
 }

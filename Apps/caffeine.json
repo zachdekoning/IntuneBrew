@@ -6,5 +6,6 @@
   "bundleId": "net.domzilla.caffeine",
   "homepage": "https://www.caffeine-app.net/",
   "fileName": "Caffeine_1.5.1.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.5.1"
 }

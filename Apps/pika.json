@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://superhighfives.com/pika",
   "fileName": "Pika-1.0.2.dmg",
-  "sha": "3535caa0a2ad73034ea4b3a67d734bc3183df989852b00d00cce557c2085f892"
+  "sha": "3535caa0a2ad73034ea4b3a67d734bc3183df989852b00d00cce557c2085f892",
+  "previous_version": "1.0.2"
 }

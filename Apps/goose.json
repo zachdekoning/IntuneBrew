@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://block.github.io/goose/",
   "fileName": "Goose.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.0.21"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.geekbench.com/",
   "fileName": "Geekbench-6.4.0-Mac.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "6.4.0"
 }

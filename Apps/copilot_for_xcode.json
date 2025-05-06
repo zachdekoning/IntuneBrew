@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://github.com/intitni/CopilotForXcode",
   "fileName": "Copilot.for.Xcode.app.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.35.7"
 }

@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://claude.ai/download",
   "fileName": "release-0.9.3-artifact-264905af69687040b91a366ebe1f7648c15551ac.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.9.3"
 }

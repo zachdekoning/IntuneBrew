@@ -2,7 +2,7 @@
   "name": "Splice",
   "description": "Cloud-based music creation and collaboration platform",
   "version": "5.3.1",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/splice_5.3.1.pkg",
+  "url": "https://desktop.splice.com/darwin/stable/arm64/Splice.app.zip",
   "bundleId": "com.splice.Splice",
   "homepage": "https://splice.com/",
   "fileName": "splice_5.3.1.pkg",

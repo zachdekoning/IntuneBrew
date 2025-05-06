@@ -6,5 +6,6 @@
   "bundleId": "com.mowglii.ItsycalApp",
   "homepage": "https://www.mowglii.com/itsycal/",
   "fileName": "Itsycal-0.15.6.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.15.6"
 }

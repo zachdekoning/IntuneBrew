@@ -2,7 +2,7 @@
   "name": "WindowKeys",
   "description": "Window-tiling keyboard shortcuts",
   "version": "2.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/windowkeys_2.0.pkg",
+  "url": "https://cdn.apptorium.com/products/windowkeys/releases/WindowKeys-2.0.zip",
   "bundleId": null,
   "homepage": "https://www.apptorium.com/windowkeys",
   "fileName": "windowkeys_2.0.pkg",

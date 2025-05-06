@@ -6,5 +6,6 @@
   "bundleId": "com.microsoft.VSCode",
   "homepage": "https://code.visualstudio.com/",
   "fileName": "stable",
-  "type": "app"
+  "type": "app",
+  "previous_version": "1.99.3"
 }

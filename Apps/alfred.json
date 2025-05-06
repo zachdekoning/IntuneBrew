@@ -6,5 +6,6 @@
   "bundleId": "com.runningwithcrayons.Alfred",
   "homepage": "https://www.alfredapp.com/",
   "fileName": "Alfred_5.6_2290.tar.gz",
-  "type": "app"
+  "type": "app",
+  "previous_version": "5.6"
 }

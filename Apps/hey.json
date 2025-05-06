@@ -2,7 +2,7 @@
   "name": "HEY",
   "description": "Access the HEY email service",
   "version": "1.2.17",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/hey_1.2.17.pkg",
+  "url": "https://hey-desktop.s3.amazonaws.com/HEY-1.2.17-arm64-mac.zip",
   "bundleId": null,
   "homepage": "https://hey.com/",
   "fileName": "hey_1.2.17.pkg",

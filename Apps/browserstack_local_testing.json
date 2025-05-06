@@ -1,0 +1,11 @@
+{
+  "name": "BrowserStack Local Testing",
+  "description": "Test localhost and staging websites",
+  "version": "3.6.7",
+  "url": "https://www.browserstack.com/local-testing/downloads/native-app/BrowserStackLocal.tar.gz",
+  "bundleId": "com.browserstack.local",
+  "homepage": "https://www.browserstack.com/",
+  "fileName": "BrowserStackLocal.tar.gz",
+  "type": "app",
+  "previous_version": "3.6.7"
+}

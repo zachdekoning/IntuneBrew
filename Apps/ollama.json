@@ -1,10 +1,12 @@
 {
   "name": "Ollama",
   "description": "Get up and running with large language models locally",
-  "version": "0.6.7",
-  "url": "https://github.com/ollama/ollama/releases/download/v0.6.7/Ollama-darwin.zip",
+  "version": "0.6.8",
+  "url": "https://github.com/ollama/ollama/releases/download/v0.6.8/Ollama-darwin.zip",
   "bundleId": null,
   "homepage": "https://ollama.ai/",
   "fileName": "Ollama-darwin.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "0.6.8",
+  "sha": "ba86af4807838b61ca76223ba08eae843b86b152a15105597549c85af99f5947"
 }

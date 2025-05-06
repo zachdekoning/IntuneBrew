@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://goodsnooze.gumroad.com/l/macwhisper",
   "fileName": "MacWhisper-1246.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "12.7"
 }

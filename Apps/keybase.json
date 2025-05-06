@@ -6,5 +6,6 @@
   "bundleId": "keybase.Helper",
   "homepage": "https://keybase.io/",
   "fileName": "Keybase-6.5.1-20250422141116%2B19f9cfeddb.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "6.5.1"
 }

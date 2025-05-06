@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://www.sketch.com/",
   "fileName": "sketch-101.8-182106.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "101.8"
 }

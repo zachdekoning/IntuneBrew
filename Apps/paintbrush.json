@@ -6,5 +6,6 @@
   "bundleId": null,
   "homepage": "https://paintbrush.sourceforge.io/",
   "fileName": "Paintbrush-2.6.0.zip",
-  "type": "app"
+  "type": "app",
+  "previous_version": "2.6.0"
 }
