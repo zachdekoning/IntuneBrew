@@ -3,7 +3,7 @@
   "description": "AirPods companion app",
   "version": "2.7.3",
   "url": "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v2.7.3-641.dmg",
-  "bundleId": null,
+  "bundleId": "codes.rambo.AirBuddy",
   "homepage": "https://airbuddy.app/",
   "fileName": "AirBuddy_v2.7.3-641.dmg",
   "sha": "730bd216f69111b17e26f5796397456a3e9f65bcddcdc8c1833750f560dc0856",

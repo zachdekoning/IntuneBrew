@@ -3,7 +3,7 @@
   "description": "Lock/unlock Apple computers using the proximity of a bluetooth low energy device",
   "version": "1.12.2",
   "url": "https://intunebrew.blob.core.windows.net/pkg/bleunlock_1.12.2.pkg",
-  "bundleId": null,
+  "bundleId": "jp.sone.BLEUnlock",
   "homepage": "https://github.com/ts1/BLEUnlock",
   "fileName": "bleunlock_1.12.2.pkg",
   "type": "app",

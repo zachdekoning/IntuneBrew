@@ -3,7 +3,7 @@
   "description": "Digital audio workstation",
   "version": "5.3.8",
   "url": "https://www.bitwig.com/dl/Bitwig%20Studio/5.3.8/installer_mac",
-  "bundleId": null,
+  "bundleId": "com.bitwig.studio",
   "homepage": "https://www.bitwig.com/",
   "fileName": "installer_mac",
   "sha": "e04d40fbbc0040a73211a6ee3d5fdbb6d4fe9fa24ca553edc0fd6d46c2e95a96",
