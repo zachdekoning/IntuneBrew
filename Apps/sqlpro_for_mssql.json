@@ -3,7 +3,7 @@
   "description": "Microsoft SQL Server database client",
   "version": "2025.10",
   "url": "https://intunebrew.blob.core.windows.net/pkg/sqlpro_for_mssql_2025.10.pkg",
-  "bundleId": null,
+  "bundleId": "com.hankinsoft.osx.tinysqlstudio",
   "homepage": "https://www.macsqlclient.com/",
   "fileName": "sqlpro_for_mssql_2025.10.pkg",
   "type": "app",

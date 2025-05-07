@@ -3,7 +3,7 @@
   "description": "MySQL & MariaDB database client",
   "version": "2025.10",
   "url": "https://intunebrew.blob.core.windows.net/pkg/sqlpro_for_mysql_2025.10.pkg",
-  "bundleId": null,
+  "bundleId": "com.hankinsoft.osx.mysql",
   "homepage": "https://www.mysqlui.com/",
   "fileName": "sqlpro_for_mysql_2025.10.pkg",
   "type": "app",

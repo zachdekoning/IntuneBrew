@@ -3,7 +3,7 @@
   "description": "Database management tool",
   "version": "2025.10",
   "url": "https://intunebrew.blob.core.windows.net/pkg/sqlpro_studio_2025.10.pkg",
-  "bundleId": null,
+  "bundleId": "com.hankinsoft.osx.sqlprostudio",
   "homepage": "https://www.sqlprostudio.com/",
   "fileName": "sqlpro_studio_2025.10.pkg",
   "type": "app",

@@ -3,7 +3,7 @@
   "description": "Graphical user interface for TeX Live Manager",
   "version": "1.54",
   "url": "https://intunebrew.blob.core.windows.net/pkg/tex_live_utility_1.54.pkg",
-  "bundleId": null,
+  "bundleId": "com.googlecode.mactlmgr.tlu",
   "homepage": "https://github.com/amaxwell/tlutility",
   "fileName": "tex_live_utility_1.54.pkg",
   "type": "app",

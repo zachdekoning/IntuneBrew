@@ -3,7 +3,7 @@
   "description": "Customise mouse buttons, wheels and cursor speed",
   "version": "5.7.4",
   "url": "https://plentycom.jp/ctrl/files_sm/SteerMouse5.7.4.dmg",
-  "bundleId": null,
+  "bundleId": "jp.plentycom.app.SteerMouse",
   "homepage": "https://plentycom.jp/en/steermouse/",
   "fileName": "SteerMouse5.7.4.dmg",
   "previous_version": "5.7.4"
