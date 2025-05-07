@@ -3,7 +3,7 @@
   "description": "Apple Notes extension",
   "version": "0.7.7",
   "url": "https://intunebrew.blob.core.windows.net/pkg/pronotes_0.7.7.pkg",
-  "bundleId": null,
+  "bundleId": "com.dexterleng.ProNotes",
   "homepage": "https://www.pronotes.app/",
   "fileName": "pronotes_0.7.7.pkg",
   "type": "app",

@@ -3,7 +3,7 @@
   "description": "Client-side GUI application for modern database development and operations",
   "version": "3.13.5",
   "url": "https://nosql-workbench.s3.amazonaws.com/NoSQL%20Workbench-mac-arm64-3.13.5.dmg",
-  "bundleId": null,
+  "bundleId": "com.dynamodb.workbench",
   "homepage": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html",
   "fileName": "NoSQL%20Workbench-mac-arm64-3.13.5.dmg",
   "sha": "a5cf29148df032fcbb1c03735de6ad73aaa6577c2d6519133eee455a04b67ef8",

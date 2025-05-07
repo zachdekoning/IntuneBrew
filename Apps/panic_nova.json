@@ -3,7 +3,7 @@
   "description": "Native code editor",
   "version": "12.4",
   "url": "https://intunebrew.blob.core.windows.net/pkg/panic_nova_12.4.pkg",
-  "bundleId": null,
+  "bundleId": "com.panic.Nova",
   "homepage": "https://nova.app/",
   "fileName": "panic_nova_12.4.pkg",
   "type": "app",

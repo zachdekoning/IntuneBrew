@@ -3,7 +3,7 @@
   "description": "Virtual video-calling space",
   "version": "1.31.0",
   "url": "https://intunebrew.blob.core.windows.net/pkg/gather_town_1.31.0.pkg",
-  "bundleId": null,
+  "bundleId": "com.gather.Gather",
   "homepage": "https://gather.town/",
   "fileName": "gather_town_1.31.0.pkg",
   "type": "app",

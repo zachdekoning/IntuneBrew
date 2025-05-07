@@ -3,7 +3,7 @@
   "description": "Network monitor",
   "version": "2.3.0",
   "url": "https://intunebrew.blob.core.windows.net/pkg/netiquette_2.3.0.pkg",
-  "bundleId": null,
+  "bundleId": "com.objective-see.Netiquette",
   "homepage": "https://objective-see.org/products/netiquette.html",
   "fileName": "netiquette_2.3.0.pkg",
   "type": "app",

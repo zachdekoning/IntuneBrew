@@ -3,7 +3,7 @@
   "description": "Command palette in any application",
   "version": "1.11.0",
   "url": "https://appmakes.io/paletro/download/Paletro-1.11.0.dmg",
-  "bundleId": null,
+  "bundleId": "io.appmakes.Paletro",
   "homepage": "https://appmakes.io/paletro",
   "fileName": "Paletro-1.11.0.dmg",
   "sha": "6b2d354e9d46d42c51011592940d1375e8e3d6da6953b6872d22958a8ff37430",

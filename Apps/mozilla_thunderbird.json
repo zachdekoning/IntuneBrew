@@ -3,7 +3,7 @@
   "description": "Customizable email client",
   "version": "138.0",
   "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/138.0/mac/en-US/Thunderbird%20138.0.dmg",
-  "bundleId": null,
+  "bundleId": "org.mozilla.thunderbird",
   "homepage": "https://www.thunderbird.net/en-US/",
   "fileName": "Thunderbird%20138.0.dmg",
   "sha": "494f6f07a0613615fcf13208b2a790b2556dc369057ad2fdf981a26f07ca4e2c",
