@@ -7,5 +7,6 @@
   "homepage": "https://www.superlist.com/",
   "fileName": "superlist_1.30.0.pkg",
   "type": "app",
-  "sha": "c59963691db0505ccd71aa04743e97b25f28be879da18a1dd0b3d3d012e5bad7"
+  "sha": "c59963691db0505ccd71aa04743e97b25f28be879da18a1dd0b3d3d012e5bad7",
+  "previous_version": "1.30.0"
 }

@@ -1,11 +1,11 @@
 {
   "name": "QSpace Pro",
   "description": "Better Finder alternative",
-  "version": "5.3.2",
-  "url": "https://cdn.awehunt.com/qs/rel/QSpace%20Pro_V5.3.2.dmg",
+  "version": "5.3.4",
+  "url": "https://cdn.awehunt.com/qs/rel/QSpace%20Pro_V5.3.4.dmg",
   "bundleId": null,
   "homepage": "https://qspace.awehunt.com/",
-  "fileName": "QSpace%20Pro_V5.3.2.dmg",
-  "sha": "48cd6239ee093c9dfe49e5acc5f15635229a572a30f5b3d7ea26ef1109d91459",
-  "previous_version": "5.3.2"
+  "fileName": "QSpace%20Pro_V5.3.4.dmg",
+  "sha": "b3665148e3e9c5960ef467eaed1bab0e5645eadbc07f76a66b4ffa4755cf78bf",
+  "previous_version": "5.3.4"
 }
