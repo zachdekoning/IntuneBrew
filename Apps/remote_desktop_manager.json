@@ -1,12 +1,12 @@
 {
   "name": "Remote Desktop Manager",
   "description": "Centralises all remote connections on a single platform",
-  "version": "2025.1.16.1",
-  "url": "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.2025.1.16.1.dmg",
+  "version": "2025.1.16.2",
+  "url": "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.2025.1.16.2.dmg",
   "bundleId": "com.devolutions.remotedesktopmanager",
   "homepage": "https://mac.remotedesktopmanager.com/",
-  "fileName": "Devolutions.RemoteDesktopManager.Mac.2025.1.16.1.dmg",
-  "sha": "fb25312f1fcde790d5f340921a734e817f41c0a5a923ab4fcfb2436cb075e1ea",
+  "fileName": "Devolutions.RemoteDesktopManager.Mac.2025.1.16.2.dmg",
+  "sha": "a4700be6b822b9944e96a995bce38997c816f26a8da69cd3b1eaa84cc8b08fb6",
   "changelog": "https://devolutions.net/remote-desktop-manager/release-notes/",
   "previous_version": "2025.1.16.1"
 }

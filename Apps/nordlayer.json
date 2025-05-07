@@ -1,11 +1,11 @@
 {
   "name": "NordLayer",
   "description": "Security software for business",
-  "version": "3.5.5",
-  "url": "https://downloads.nordlayer.com/mac/latest/NordLayer_v3.5.5.pkg",
+  "version": "3.6.0",
+  "url": "https://downloads.nordlayer.com/mac/latest/NordLayer_v3.6.0.pkg",
   "bundleId": "com.nordvpn.macos.teams",
   "homepage": "https://nordlayer.com/",
-  "fileName": "NordLayer_v3.5.5.pkg",
+  "fileName": "NordLayer_v3.6.0.pkg",
   "type": "pkg_in_pkg",
   "previous_version": "3.5.5"
 }

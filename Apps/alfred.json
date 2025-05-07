@@ -1,13 +1,13 @@
 {
   "name": "Alfred",
   "description": "Application launcher and productivity software",
-  "version": "5.6",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/alfred_5.6.pkg",
+  "version": "5.6.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/alfred_5.6.1.pkg",
   "bundleId": "com.runningwithcrayons.Alfred",
   "homepage": "https://www.alfredapp.com/",
-  "fileName": "Alfred_5.6_2290.tar.gz",
+  "fileName": "alfred_5.6.1.pkg",
   "type": "app",
-  "sha": "dab7e2e1451ef9d49716cf63e18bdef1ebee7100998f93df77da365bbf0b56f6",
+  "sha": "eb0ece287bb85060bc4e6d83bb58cb0302042a7b1808eae5ef49240bd668eae6",
   "changelog": "https://www.alfredapp.com/changelog/",
-  "previous_version": "5.6"
+  "previous_version": "5.6.1"
 }
