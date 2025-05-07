@@ -1902,7 +1902,7 @@ foreach ($app in $appsToUpload) {
     Write-Host "`n🔄 Creating app in Intune..." -ForegroundColor Yellow
 
     # Determine app type based on file extension
-    $appType = if ($appInfo.fileName -match '\.dmg$') {
+    $appType = if (($appInfo.fileName -match '\.dmg$') -and -not $appRepackaged) {
         "macOSDmgApp"
     }
     elseif ($appInfo.fileName -match '\.pkg$' -or $appRepackaged) {
