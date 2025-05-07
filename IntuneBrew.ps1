@@ -1858,7 +1858,9 @@ foreach ($app in $appsToUpload) {
     if ($appInfo.type -eq 'pkg_in_dmg') {
         Write-Host "`n🔄 App type is pkg_in_dmg... Need to extract .pkg from DMG file!" -ForegroundColor Yellow
 
-        $dmgAttachCommand = "/usr/bin/hdiutil attach '$appFilePath' -mountpoint '/Volumes/IntuneBrewDMG'"
+        $dmgPath = $appFilePath
+
+        $dmgAttachCommand = "/usr/bin/hdiutil attach '$dmgPath' -mountpoint '/Volumes/IntuneBrewDMG'"
         Invoke-Expression "$dmgAttachCommand"
 
         # Find extracted .app file
@@ -1871,12 +1873,14 @@ foreach ($app in $appsToUpload) {
             # Copy pkg file out of DMG file
             $pkgName = $appInfo.name -replace ' ',''
             $fileCopy = Copy-Item $appFilePath -Destination "$PWD/$pkgName.pkg"
+
             $appFilePath = "$PWD/$pkgName.pkg"
         }
 
-        # Detach DMG file
+        # Detach & delete DMG file
         $dmgDetachCommand = "/usr/bin/hdiutil detach '/Volumes/IntuneBrewDMG' -force"
         Invoke-Expression "$dmgDetachCommand"
+        Remove-Item $dmgPath -Force -Recurse -ErrorAction Stop
 
         if (!(Test-Path $appFilePath)) {
             Write-Host "`n❌ Unable to find extracted .pkg file! Skipping." -ForegroundColor Red
