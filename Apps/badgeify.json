@@ -1,12 +1,12 @@
 {
   "name": "Badgeify",
   "description": "Add apps to the menu bar",
-  "version": "1.6.2",
-  "url": "https://api.badgeify.app/release/download/darwin/aarch64/1.6.2",
+  "version": "1.6.3",
+  "url": "https://api.badgeify.app/release/download/darwin/aarch64/1.6.3",
   "bundleId": "studio.techflow.badgeify",
   "homepage": "https://badgeify.app/",
-  "fileName": "1.6.2",
-  "sha": "058f1373f1cd81c8d7c8d45197e3e157b508c89c033296aa9995c279d1def0de",
+  "fileName": "1.6.3",
+  "sha": "ba61b7efb2e51bc807c3c14314576cadc79c58dffbb79ab464a86cfa4a6a07d6",
   "changelog": "https://badgeify.app/changelog",
-  "previous_version": "1.6.1"
+  "previous_version": "1.6.2"
 }
