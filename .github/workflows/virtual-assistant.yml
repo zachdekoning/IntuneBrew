@@ -458,8 +458,12 @@ jobs:
                 .replace(/^(bug|issue) (with |in |when )/i, '')
                 .trim();
               
-              // Extract the first sentence or limit to a reasonable length
-              let cleanTitle = titleText.split(/[.!?][\s\n]/)[0].trim();
+              // Extract only the key part of the first sentence
+              let firstSentence = titleText.split(/[.!?][\s\n]/)[0].trim();
+              
+              // Limit the first sentence to a maximum of 10 words for extreme brevity
+              let words = firstSentence.split(/\s+/);
+              let cleanTitle = words.slice(0, Math.min(10, words.length)).join(' ');
               
               // Capitalize first letter if it's not already
               cleanTitle = cleanTitle.charAt(0).toUpperCase() + cleanTitle.slice(1);
@@ -479,15 +483,33 @@ jobs:
                 // Capitalize first word if it's a verb
                 .replace(/^(add|implement|create|fix|update|change|improve|enable|disable|remove)/i,
                   match => match.charAt(0).toUpperCase() + match.slice(1))
+                // Remove any adjectives that don't add critical meaning
+                .replace(/\b(various|multiple|different|several|certain|specific|particular)\b\s+/gi, '')
+                // Remove filler words
+                .replace(/\b(in order to|with regards to|regarding|concerning|about|related to)\b\s+/gi, '')
                 .trim();
+              
+              // Ensure the clean title is short enough (max 80 chars) before adding prefix
+              const maxCleanTitleLength = 80;
+              if (cleanTitle.length > maxCleanTitleLength) {
+                cleanTitle = cleanTitle.substring(0, maxCleanTitleLength);
+                // Make sure we don't cut off in the middle of a word
+                if (cleanTitle.match(/\S$/)) {
+                  cleanTitle = cleanTitle.replace(/\s\S*$/, '');
+                }
+              }
               
               // Create improved title with type prefix and clean title
               improvedTitle = `${typePrefix} ${cleanTitle}`;
               
-              // Make titles more concise - shorter than GitHub's limit
-              const maxTitleLength = 100; // Much shorter than GitHub's 250 char limit
+              // Final check to ensure we're under the GitHub limit
+              const maxTitleLength = 95; // Safely under GitHub's limit
               if (improvedTitle.length > maxTitleLength) {
-                improvedTitle = improvedTitle.substring(0, maxTitleLength - 3) + '...';
+                improvedTitle = improvedTitle.substring(0, maxTitleLength);
+                // Make sure we don't cut off in the middle of a word
+                if (improvedTitle.match(/\S$/)) {
+                  improvedTitle = improvedTitle.replace(/\s\S*$/, '');
+                }
               }
               
               // Update the issue title
