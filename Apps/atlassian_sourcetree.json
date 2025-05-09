@@ -1,0 +1,11 @@
+{
+  "name": "Atlassian SourceTree",
+  "description": "Graphical client for Git version control",
+  "version": "4.2.11",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/atlassian_sourcetree_4.2.11.pkg",
+  "bundleId": "com.torusknot.SourceTreeNotMAS",
+  "homepage": "https://www.sourcetreeapp.com/",
+  "fileName": "atlassian_sourcetree_4.2.11.pkg",
+  "type": "app",
+  "sha": "538795158690bf20471e833e6bef9c67502cefdd69bbbedd57ab44357a9f7a8b"
+}
