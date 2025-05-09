@@ -1,11 +1,11 @@
 {
   "name": "Zenmap",
   "description": "Multi-platform graphical interface for official Nmap Security Scanner",
-  "version": "7.95",
-  "url": "https://nmap.org/dist/nmap-7.95.dmg",
+  "version": "7.96",
+  "url": "https://nmap.org/dist/nmap-7.96.dmg",
   "bundleId": null,
   "homepage": "https://nmap.org/zenmap/",
-  "fileName": "nmap-7.95.dmg",
-  "sha": "fc069b88f6b64cbb56b02a644075d78df603d9417d3947ff32acc0566439de3c",
+  "fileName": "nmap-7.96.dmg",
+  "sha": "0d5e3eed7c64f8996e4a0840ec8a995cc41baea2406aa50be00611d251669494",
   "previous_version": "7.95"
 }

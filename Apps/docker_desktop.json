@@ -1,12 +1,12 @@
 {
   "name": "Docker Desktop",
   "description": "App to build and share containerised applications and microservices",
-  "version": "4.41.1",
-  "url": "https://desktop.docker.com/mac/main/arm64/191279/Docker.dmg",
+  "version": "4.41.2",
+  "url": "https://desktop.docker.com/mac/main/arm64/191736/Docker.dmg",
   "bundleId": "com.docker.docker",
   "homepage": "https://www.docker.com/products/docker-desktop",
   "fileName": "Docker.dmg",
-  "sha": "104e7c7cfa9e5f77aed50340f3795eaeac0dd0bd04f0eb4e297d1a194084aa3c",
+  "sha": "19c69b358a8ee1b94e308648a2853e398f4bff29f0f74f00ef2d1b462ced1d1c",
   "changelog": "https://docs.docker.com/desktop/release-notes/",
   "previous_version": "4.41.1"
 }
