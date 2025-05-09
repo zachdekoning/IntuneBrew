@@ -16,6 +16,7 @@ preserve_filename_apps = [
 
 # zip, tar etc
 app_urls = [
+    "https://formulae.brew.sh/api/cask/signal.json",
     "https://formulae.brew.sh/api/cask/medis.json",
     "https://formulae.brew.sh/api/cask/sourcetree.json",
     "https://formulae.brew.sh/api/cask/sequel-ace.json",
@@ -366,7 +367,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/mongodb-compass.json",
     "https://formulae.brew.sh/api/cask/suspicious-package.json",
     "https://formulae.brew.sh/api/cask/notion.json",
-    "https://formulae.brew.sh/api/cask/signal.json",
     "https://formulae.brew.sh/api/cask/anydesk.json",
     "https://formulae.brew.sh/api/cask/android-studio.json",
     "https://formulae.brew.sh/api/cask/brave-browser.json",
