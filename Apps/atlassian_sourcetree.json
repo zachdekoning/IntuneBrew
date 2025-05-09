@@ -7,5 +7,6 @@
   "homepage": "https://www.sourcetreeapp.com/",
   "fileName": "atlassian_sourcetree_4.2.11.pkg",
   "type": "app",
-  "sha": "538795158690bf20471e833e6bef9c67502cefdd69bbbedd57ab44357a9f7a8b"
+  "sha": "538795158690bf20471e833e6bef9c67502cefdd69bbbedd57ab44357a9f7a8b",
+  "previous_version": "4.2.11"
 }

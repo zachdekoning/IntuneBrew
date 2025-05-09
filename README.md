@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                      <p>
+                                                                                                                                                                                                                                                                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-507-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -84,14 +84,11 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-09 07:57 UTC*
+*Last checked: 2025-05-09 10:45 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Apifox | 2.7.8 | 2.7.9 |
-| Keeper Password Manager | 17.1.1 | 17.2 |
-| calibre | 8.3.0 | 8.4.0 |
-| VSCodium | 1.99.32846 | 1.100.03093 |
+| Etcher | 2.1.0 | 2.1.2 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -176,7 +173,7 @@ Follow the interactive prompts to:
 | <img src='Logos/arduino_ide.png' width='32' height='32'> Arduino IDE | 2.3.6 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.4.0 |
 | <img src='Logos/asset_catalog_tinkerer.png' width='32' height='32'> Asset Catalog Tinkerer | 2.9 |
-| ❌ Atlassian SourceTree | 4.2.11 |
+| <img src='Logos/atlassian_sourcetree.png' width='32' height='32'> Atlassian SourceTree | 4.2.11 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.3 |
 | <img src='Logos/audio_hijack.png' width='32' height='32'> Audio Hijack | 4.5.0 |
 | <img src='Logos/autodesk_fusion_360.png' width='32' height='32'> Autodesk Fusion 360 | latest |
@@ -194,7 +191,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.661 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.5 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.366 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.372 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/binary_ninja.png' width='32' height='32'> Binary Ninja | 5.0.7290 |
@@ -283,7 +280,7 @@ Follow the interactive prompts to:
 | <img src='Logos/ente_auth.png' width='32' height='32'> Ente Auth | 4.3.5 |
 | <img src='Logos/epic_games_launcher.png' width='32' height='32'> Epic Games Launcher | 18.5.0 |
 | <img src='Logos/espanso.png' width='32' height='32'> Espanso | 2.2.1 |
-| <img src='Logos/etcher.png' width='32' height='32'> Etcher | 2.1.0 |
+| <img src='Logos/etcher.png' width='32' height='32'> Etcher | 2.1.2 |
 | <img src='Logos/evernote.png' width='32' height='32'> Evernote | 10.105.4 |
 | <img src='Logos/flux.png' width='32' height='32'> f.lux | 42.2 |
 | <img src='Logos/facebook_messenger.png' width='32' height='32'> Facebook Messenger | 233.1.0.8.208 |
@@ -296,7 +293,7 @@ Follow the interactive prompts to:
 | <img src='Logos/flycut.png' width='32' height='32'> Flycut | 1.9.6 |
 | <img src='Logos/forecast.png' width='32' height='32'> Forecast | 0.9.6 |
 | <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.7 |
-| ❌ Free Ruler | 2.0.8 |
+| <img src='Logos/free_ruler.png' width='32' height='32'> Free Ruler | 2.0.8 |
 | <img src='Logos/freecad.png' width='32' height='32'> FreeCAD | 1.0.0 |
 | <img src='Logos/freelens.png' width='32' height='32'> Freelens | 1.2.1 |
 | <img src='Logos/freemacsoft_appcleaner.png' width='32' height='32'> FreeMacSoft AppCleaner | 3.6.8 |
@@ -400,7 +397,7 @@ Follow the interactive prompts to:
 | <img src='Logos/marsedit.png' width='32' height='32'> MarsEdit | 5.3.4 |
 | <img src='Logos/marta_file_manager.png' width='32' height='32'> Marta File Manager | 0.8.2 |
 | <img src='Logos/mattermost.png' width='32' height='32'> Mattermost | 5.11.2 |
-| ❌ Medis | 2.15.1 |
+| <img src='Logos/medis.png' width='32' height='32'> Medis | 2.15.1 |
 | <img src='Logos/meetingbar.png' width='32' height='32'> MeetingBar | 4.10.0 |
 | <img src='Logos/meld_for_macos.png' width='32' height='32'> Meld for macOS | 3.22.3+105 |
 | <img src='Logos/menubar_stats.png' width='32' height='32'> MenuBar Stats | 3.9 |
@@ -435,7 +432,7 @@ Follow the interactive prompts to:
 | <img src='Logos/multi.png' width='32' height='32'> Multi | 0.538.2 |
 | <img src='Logos/multiviewer_for_f1.png' width='32' height='32'> MultiViewer for F1 | 1.43.2 |
 | <img src='Logos/mural.png' width='32' height='32'> MURAL | 3.0.4 |
-| ❌ MySQL Workbench | 8.0.42 |
+| <img src='Logos/mysql_workbench.png' width='32' height='32'> MySQL Workbench | 8.0.42 |
 | <img src='Logos/name_mangler.png' width='32' height='32'> Name Mangler | 3.9.3 |
 | <img src='Logos/neofinder.png' width='32' height='32'> NeoFinder | 8.9 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 25 |
@@ -550,7 +547,7 @@ Follow the interactive prompts to:
 | <img src='Logos/sabnzbd.png' width='32' height='32'> SABnzbd | 4.5.1 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.4 |
 | <img src='Logos/screenfocus.png' width='32' height='32'> ScreenFocus | 1.1.1 |
-| ❌ Sequel Ace | 5.0.7 |
+| <img src='Logos/sequel_ace.png' width='32' height='32'> Sequel Ace | 5.0.7 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.53.0 |
 | <img src='Logos/silentknight.png' width='32' height='32'> SilentKnight | 2.11 |
@@ -597,7 +594,7 @@ Follow the interactive prompts to:
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.4 |
 | <img src='Logos/tex_live_utility.png' width='32' height='32'> TeX Live Utility | 1.54 |
-| ❌ TextMate | 2.0.23 |
+| <img src='Logos/textmate.png' width='32' height='32'> TextMate | 2.0.23 |
 | <img src='Logos/thonny.png' width='32' height='32'> Thonny | 4.1.7 |
 | <img src='Logos/threema.png' width='32' height='32'> Threema | 1.2.47 |
 | <img src='Logos/tigervnc.png' width='32' height='32'> TigerVNC | 1.15.0 |
