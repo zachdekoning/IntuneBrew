@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                              <p>
+                                                                                                                                                                                                                                                                                                <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-507-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -84,9 +84,11 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-09 13:08 UTC*
+*Last checked: 2025-05-09 13:44 UTC*
 
-> All applications are up to date! 🎉
+| Application | Previous Version | New Version |
+|-------------|-----------------|-------------|
+| Lens | 2025.4.92142 | 2025.5.81206 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -369,7 +371,7 @@ Follow the interactive prompts to:
 | <img src='Logos/krita.png' width='32' height='32'> Krita | 5.2.9 |
 | <img src='Logos/langgraph_studio.png' width='32' height='32'> LangGraph Studio | 0.0.37 |
 | <img src='Logos/last_window_quits.png' width='32' height='32'> Last Window Quits | 1.1.4 |
-| <img src='Logos/lens.png' width='32' height='32'> Lens | 2025.4.92142 |
+| <img src='Logos/lens.png' width='32' height='32'> Lens | 2025.5.81206 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.3 |
 | <img src='Logos/librewolf.png' width='32' height='32'> LibreWolf | 138.0.1 |
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
