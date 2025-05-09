@@ -1,0 +1,11 @@
+{
+  "name": "Signal",
+  "description": "Instant messaging application focusing on security",
+  "version": "7.53.0",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/signal_7.53.0.pkg",
+  "bundleId": null,
+  "homepage": "https://signal.org/",
+  "fileName": "signal_7.53.0.pkg",
+  "type": "app",
+  "sha": "1aa29b2f8776314e4ef63eed28bc44b94d40c91e12ba006f66844d49a712a029"
+}
