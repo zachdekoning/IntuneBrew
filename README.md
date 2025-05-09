@@ -68,20 +68,6 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 - [🙏 Acknowledgments](#-acknowledgments)
 - [📞 Support](#-support)
 
-## 🚨 Public Preview Notice
-
-> [!IMPORTANT]
-> 🚧 **Public Preview Notice**
->
-> IntuneBrew is currently in Public Preview. While it's fully functional, you might encounter some rough edges. Your feedback and contributions are crucial in making this tool better!
->
-> - 📝 [Submit Feedback](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=feedback)
-> - 🐛 [Report Bugs](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=bug)
-> - 💡 [Request Features](https://github.com/ugurkocde/IntuneBrew/issues/new?labels=enhancement)
->
-> Thank you for being an early adopter! 🙏
-
-
 ## 🔄 Latest Updates
 
 *Last checked: 2025-05-09 13:44 UTC*
