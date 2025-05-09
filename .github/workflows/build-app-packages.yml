@@ -353,17 +353,38 @@ jobs:
                 rm "${download_path}.tar.xz"
                 echo "📁 Extracted contents:"
                 ls -R "${app_name}_extracted"
-              elif [[ "$url" == *".tar.bz2" ]]; then
-                echo "📦 Processing tar.bz2 archive for $app_name..."
-                curl -L -o "${download_path}.tar.bz2" "$url"
+              elif [[ "$url" == *".tar.bz2" ]] || [[ "$url" == *".tbz" ]]; then
+                echo "📦 Processing tar.bz2/tbz archive for $app_name..."
+                if [[ "$url" == *".tar.bz2" ]]; then
+                  curl -L -o "${download_path}.tar.bz2" "$url"
+                  archive_path="${download_path}.tar.bz2"
+                else
+                  curl -L -o "${download_path}.tbz" "$url"
+                  archive_path="${download_path}.tbz"
+                fi
                 cd "$HOME/Desktop"
-                # Extract tar.bz2
+                # Extract tar.bz2/tbz
                 echo "📂 Creating extraction directory..."
                 mkdir -p "${app_name}_extracted"
-                echo "🔓 Extracting tar.bz2 archive..."
-                tar -xjf "${download_path}.tar.bz2" -C "${app_name}_extracted"
+                echo "🔓 Extracting bzip2 compressed archive..."
+                tar -xjf "$archive_path" -C "${app_name}_extracted"
                 echo "🗑️ Cleaning up downloaded archive..."
-                rm "${download_path}.tar.bz2"
+                rm "$archive_path"
+                
+                # Check if we need to handle nested tar archives
+                tar_file=$(find "${app_name}_extracted" -name "*.tar" -print -quit)
+                if [ -n "$tar_file" ]; then
+                  echo "🔍 Found nested tar archive: $tar_file"
+                  echo "📂 Creating nested extraction directory..."
+                  mkdir -p "${app_name}_nested_extracted"
+                  echo "🔓 Extracting nested tar archive..."
+                  tar -xf "$tar_file" -C "${app_name}_nested_extracted"
+                  # Move contents from nested extraction to main extraction directory
+                  echo "📦 Moving nested contents to main extraction directory..."
+                  cp -R "${app_name}_nested_extracted/"* "${app_name}_extracted/"
+                  rm -rf "${app_name}_nested_extracted"
+                fi
+                
                 echo "📁 Extracted contents:"
                 ls -R "${app_name}_extracted"
               elif [[ "$url" == *".tar.gz" ]]; then
