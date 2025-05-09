@@ -54,6 +54,7 @@ jobs:
           **JSON Output Structure:**
           {
             "issueType": "bug|feature request|feedback",
+            "title": "Very concise title for GitHub issue (MUST be under 80 characters)",
             "summary": "Concise summary (2-3 sentences)",
             "detailedAnalysis": "In-depth analysis with technical insights (3-5 sentences)",
             "suggestedLabels": {
@@ -105,7 +106,7 @@ jobs:
                 messages: [
                   {
                     role: "system",
-                    content: "You are a Virtual Assistant for the IntuneBrew-Website project. You provide comprehensive, technically precise analysis with actionable insights. Your responses are thorough, well-structured, and tailored to the specific context of this repository. You understand web applications, Microsoft Intune, app deployment, and tenant management concepts.\n\nIf the user has provided additional information in response to a previous request, carefully incorporate this new information into your analysis. Pay special attention to any sections marked with '--- Additional information provided by user ---' as these contain important details that were previously missing. When you see this additional information, you should set 'needsMoreInfo' to false in your response."
+                    content: "You are a Virtual Assistant for the IntuneBrew-Website project. You provide comprehensive, technically precise analysis with actionable insights. Your responses are thorough, well-structured, and tailored to the specific context of this repository. You understand web applications, Microsoft Intune, app deployment, and tenant management concepts.\n\nIf the user has provided additional information in response to a previous request, carefully incorporate this new information into your analysis. Pay special attention to any sections marked with '--- Additional information provided by user ---' as these contain important details that were previously missing. When you see this additional information, you should set 'needsMoreInfo' to false in your response.\n\nIMPORTANT: The 'title' field in your response will be used directly as a GitHub issue title and must be UNDER 80 CHARACTERS. Create a very concise, complete title that clearly identifies the issue without being cut off mid-thought. Do not use ellipsis. The title should be self-contained and make sense on its own."
                   },
                   { role: "user", content: prompt }
                 ],
@@ -189,6 +190,7 @@ jobs:
           MISSING_INFO=$(echo "$JSON_CONTENT" | jq -r '.missingInformation // ""' 2>/dev/null || echo "")
           PRIORITY=$(echo "$JSON_CONTENT" | jq -r '.priority // ""' 2>/dev/null || echo "")
           AUTO_RESPONSE=$(echo "$JSON_CONTENT" | jq -r '.autoResponse // ""' 2>/dev/null || echo "")
+          ISSUE_TITLE=$(echo "$JSON_CONTENT" | jq -r '.title // ""' 2>/dev/null || echo "")
           SUMMARY=$(echo "$JSON_CONTENT" | jq -r '.summary // "No summary provided."' 2>/dev/null || echo "No summary provided.")
           DETAILED_ANALYSIS=$(echo "$JSON_CONTENT" | jq -r '.detailedAnalysis // ""' 2>/dev/null || echo "")
           POTENTIAL_SOLUTION=$(echo "$JSON_CONTENT" | jq -r '.potentialSolution // ""' 2>/dev/null || echo "")
@@ -201,6 +203,7 @@ jobs:
           echo "NEEDS_MORE_INFO=$NEEDS_MORE_INFO" >> $GITHUB_ENV
           echo "MISSING_INFO=$MISSING_INFO" >> $GITHUB_ENV
           echo "PRIORITY=$PRIORITY" >> $GITHUB_ENV
+          echo "ISSUE_TITLE=$ISSUE_TITLE" >> $GITHUB_ENV
           echo "SUMMARY=$SUMMARY" >> $GITHUB_ENV
           echo "DETAILED_ANALYSIS=$DETAILED_ANALYSIS" >> $GITHUB_ENV
           echo "POTENTIAL_SOLUTION=$POTENTIAL_SOLUTION" >> $GITHUB_ENV
@@ -432,77 +435,24 @@ jobs:
             const originalTitle = "${{ github.event.issue.title }}";
             let improvedTitle = originalTitle;
 
-            // Use the AI-generated summary and analysis to create a better title
-            if (summary && summary !== 'No summary provided.' && summary.length > 0) {
-              // Extract key information from the summary
-              let titleText = summary;
+            // Use the AI-generated title directly if available
+            if (process.env.ISSUE_TITLE && process.env.ISSUE_TITLE.length > 0) {
+              // Get the AI-generated title
+              let aiTitle = process.env.ISSUE_TITLE;
               
-              // Aggressively remove phrases referring to users or requests to make titles direct and concise
-              titleText = titleText
-                // Remove any reference to "the user" or similar
-                .replace(/^the user (is|has been|was) (requesting|asking for|reporting|describing|mentioning)/i, '')
-                .replace(/^this (issue|bug|feature|request|report) (is about|describes|mentions|refers to|relates to)/i, '')
-                .replace(/^(user|reporter|author) (wants|needs|requests|asks for|reports)/i, '')
-                .replace(/^(please|kindly|urgently) (add|fix|implement|resolve|address)/i, '$2')
-                // More aggressive patterns to remove user references
-                .replace(/the user requests (a |an |to )?/i, '')
-                .replace(/user wants (a |an |to )?/i, '')
-                .replace(/request(s|ed|ing)? (for |to )?/i, '')
-                .replace(/would like (a |an |to )?/i, '')
-                .replace(/asking (for |to )?/i, '')
-                .replace(/suggestion (for |to )?/i, '')
-                .replace(/proposal (for |to )?/i, '')
-                .replace(/need(s|ed|ing)? (a |an |to )?/i, '')
-                // Remove any remaining "feature to" or similar phrases
-                .replace(/^(feature|enhancement) (for |to )/i, '')
-                .replace(/^(bug|issue) (with |in |when )/i, '')
-                .trim();
-              
-              // Extract only the key part of the first sentence
-              let firstSentence = titleText.split(/[.!?][\s\n]/)[0].trim();
-              
-              // Limit the first sentence to a maximum of 10 words for extreme brevity
-              let words = firstSentence.split(/\s+/);
-              let cleanTitle = words.slice(0, Math.min(10, words.length)).join(' ');
-              
-              // Capitalize first letter if it's not already
-              cleanTitle = cleanTitle.charAt(0).toUpperCase() + cleanTitle.slice(1);
-              
-              // Remove trailing punctuation
-              cleanTitle = cleanTitle.replace(/[.!?,;:]+$/, '');
-              
-              // Prefix with issue type for better categorization
+              // Prefix with issue type for better categorization if not already included
               const typePrefix = issueType.toLowerCase().includes('bug') ? '[Bug]' :
                                  issueType.toLowerCase().includes('feature') ? '[Feature]' :
                                  '[Feedback]';
               
-              // Further simplify the title - focus on the core action/request
-              cleanTitle = cleanTitle
-                // Remove any remaining articles at the beginning
-                .replace(/^(a |an |the )/i, '')
-                // Capitalize first word if it's a verb
-                .replace(/^(add|implement|create|fix|update|change|improve|enable|disable|remove)/i,
-                  match => match.charAt(0).toUpperCase() + match.slice(1))
-                // Remove any adjectives that don't add critical meaning
-                .replace(/\b(various|multiple|different|several|certain|specific|particular)\b\s+/gi, '')
-                // Remove filler words
-                .replace(/\b(in order to|with regards to|regarding|concerning|about|related to)\b\s+/gi, '')
-                .trim();
-              
-              // Ensure the clean title is short enough (max 80 chars) before adding prefix
-              const maxCleanTitleLength = 80;
-              if (cleanTitle.length > maxCleanTitleLength) {
-                cleanTitle = cleanTitle.substring(0, maxCleanTitleLength);
-                // Make sure we don't cut off in the middle of a word
-                if (cleanTitle.match(/\S$/)) {
-                  cleanTitle = cleanTitle.replace(/\s\S*$/, '');
-                }
+              // Check if the title already starts with a type prefix
+              if (!aiTitle.startsWith('[Bug]') && !aiTitle.startsWith('[Feature]') && !aiTitle.startsWith('[Feedback]')) {
+                improvedTitle = `${typePrefix} ${aiTitle}`;
+              } else {
+                improvedTitle = aiTitle;
               }
               
-              // Create improved title with type prefix and clean title
-              improvedTitle = `${typePrefix} ${cleanTitle}`;
-              
-              // Final check to ensure we're under the GitHub limit
+              // Final safety check to ensure we're under GitHub's limit
               const maxTitleLength = 95; // Safely under GitHub's limit
               if (improvedTitle.length > maxTitleLength) {
                 improvedTitle = improvedTitle.substring(0, maxTitleLength);
