@@ -3,7 +3,7 @@
   "description": "MySQL/MariaDB database management",
   "version": "5.0.7",
   "url": "https://intunebrew.blob.core.windows.net/pkg/sequel_ace_5.0.7.pkg",
-  "bundleId": null,
+  "bundleId": "com.sequel-ace.sequel-ace",
   "homepage": "https://github.com/Sequel-Ace/Sequel-Ace",
   "fileName": "sequel_ace_5.0.7.pkg",
   "type": "app",
