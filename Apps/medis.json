@@ -1,0 +1,11 @@
+{
+  "name": "Medis",
+  "description": "Modern GUI for Redis",
+  "version": "2.15.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/medis_2.15.1.pkg",
+  "bundleId": null,
+  "homepage": "https://getmedis.com/",
+  "fileName": "medis_2.15.1.pkg",
+  "type": "app",
+  "sha": "51297a230596f2a57c9f97f55ad02d09e5c1f1470f7dda428cf192cc79bfe712"
+}

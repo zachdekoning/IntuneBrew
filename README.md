@@ -18,9 +18,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                    <p>
+                                                                                                                                                                                                                                                                                      <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-501-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-507-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -84,25 +84,14 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-09 00:31 UTC*
+*Last checked: 2025-05-09 07:57 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Highlight | 1.1.51 | 1.1.85 |
-| JetBrains Rider | 2025.1.1 | 2025.1.2 |
-| GrandPerspective | 3.5.2 | 3.5.3 |
-| Zenmap | 7.95 | 7.96 |
-| ChatWise | 0.8.48 | 0.8.49 |
-| Docker Desktop | 4.41.1 | 4.41.2 |
-| Snagit | 2025.1.0 | 2025.2.0 |
-| DataGrip | 2025.1.1 | 2025.1.2 |
-| Jetbrains PyCharm Community Edition | 2025.1 | 2025.1.1 |
-| WebStorm | 2025.1 | 2025.1.1 |
-| iMazing Profile Editor | 1.9.2 | 2.0.0 |
-| Zed | 0.185.11 | 0.185.13 |
-| Microsoft Edge | 136.0.3240.50 | 136.0.3240.64 |
-| Zen Browser | 1.12.1b | 1.12.3b |
-| DisplayLink USB Graphics Software | 1.12.1 | 1.12.2 |
+| Apifox | 2.7.8 | 2.7.9 |
+| Keeper Password Manager | 17.1.1 | 17.2 |
+| calibre | 8.3.0 | 8.4.0 |
+| VSCodium | 1.99.32846 | 1.100.03093 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -180,13 +169,14 @@ Follow the interactive prompts to:
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.2 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.8 |
-| <img src='Logos/apifox.png' width='32' height='32'> Apifox | 2.7.8 |
+| <img src='Logos/apifox.png' width='32' height='32'> Apifox | 2.7.9 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.94.0 |
 | <img src='Logos/archaeology.png' width='32' height='32'> Archaeology | 1.2 |
 | <img src='Logos/arduino_ide.png' width='32' height='32'> Arduino IDE | 2.3.6 |
 | <img src='Logos/asana.png' width='32' height='32'> Asana | 2.4.0 |
 | <img src='Logos/asset_catalog_tinkerer.png' width='32' height='32'> Asset Catalog Tinkerer | 2.9 |
+| ❌ Atlassian SourceTree | 4.2.11 |
 | <img src='Logos/audacity.png' width='32' height='32'> Audacity | 3.7.3 |
 | <img src='Logos/audio_hijack.png' width='32' height='32'> Audio Hijack | 4.5.0 |
 | <img src='Logos/autodesk_fusion_360.png' width='32' height='32'> Autodesk Fusion 360 | latest |
@@ -225,7 +215,7 @@ Follow the interactive prompts to:
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.2.1 |
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2025.2.1 |
 | <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5.1 |
-| <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.3.0 |
+| <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.4.0 |
 | <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.59 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.1.0 |
 | <img src='Logos/canva.png' width='32' height='32'> Canva | 1.107.0 |
@@ -306,6 +296,7 @@ Follow the interactive prompts to:
 | <img src='Logos/flycut.png' width='32' height='32'> Flycut | 1.9.6 |
 | <img src='Logos/forecast.png' width='32' height='32'> Forecast | 0.9.6 |
 | <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.7 |
+| ❌ Free Ruler | 2.0.8 |
 | <img src='Logos/freecad.png' width='32' height='32'> FreeCAD | 1.0.0 |
 | <img src='Logos/freelens.png' width='32' height='32'> Freelens | 1.2.1 |
 | <img src='Logos/freemacsoft_appcleaner.png' width='32' height='32'> FreeMacSoft AppCleaner | 3.6.8 |
@@ -372,7 +363,7 @@ Follow the interactive prompts to:
 | <img src='Logos/kap.png' width='32' height='32'> Kap | 3.6.0 |
 | <img src='Logos/karabiner_elements.png' width='32' height='32'> Karabiner Elements | 15.3.0 |
 | <img src='Logos/keepassxc.png' width='32' height='32'> KeePassXC | 2.7.10 |
-| <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.1.1 |
+| <img src='Logos/keeper_password_manager.png' width='32' height='32'> Keeper Password Manager | 17.2 |
 | <img src='Logos/keka.png' width='32' height='32'> Keka | 1.4.8 |
 | <img src='Logos/keybase.png' width='32' height='32'> Keybase | 6.5.1 |
 | <img src='Logos/keycastr.png' width='32' height='32'> KeyCastr | 0.10.3 |
@@ -409,6 +400,7 @@ Follow the interactive prompts to:
 | <img src='Logos/marsedit.png' width='32' height='32'> MarsEdit | 5.3.4 |
 | <img src='Logos/marta_file_manager.png' width='32' height='32'> Marta File Manager | 0.8.2 |
 | <img src='Logos/mattermost.png' width='32' height='32'> Mattermost | 5.11.2 |
+| ❌ Medis | 2.15.1 |
 | <img src='Logos/meetingbar.png' width='32' height='32'> MeetingBar | 4.10.0 |
 | <img src='Logos/meld_for_macos.png' width='32' height='32'> Meld for macOS | 3.22.3+105 |
 | <img src='Logos/menubar_stats.png' width='32' height='32'> MenuBar Stats | 3.9 |
@@ -443,6 +435,7 @@ Follow the interactive prompts to:
 | <img src='Logos/multi.png' width='32' height='32'> Multi | 0.538.2 |
 | <img src='Logos/multiviewer_for_f1.png' width='32' height='32'> MultiViewer for F1 | 1.43.2 |
 | <img src='Logos/mural.png' width='32' height='32'> MURAL | 3.0.4 |
+| ❌ MySQL Workbench | 8.0.42 |
 | <img src='Logos/name_mangler.png' width='32' height='32'> Name Mangler | 3.9.3 |
 | <img src='Logos/neofinder.png' width='32' height='32'> NeoFinder | 8.9 |
 | <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 25 |
@@ -557,6 +550,7 @@ Follow the interactive prompts to:
 | <img src='Logos/sabnzbd.png' width='32' height='32'> SABnzbd | 4.5.1 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.4 |
 | <img src='Logos/screenfocus.png' width='32' height='32'> ScreenFocus | 1.1.1 |
+| ❌ Sequel Ace | 5.0.7 |
 | <img src='Logos/shottr.png' width='32' height='32'> Shottr | 1.8.1 |
 | <img src='Logos/signal.png' width='32' height='32'> Signal | 7.53.0 |
 | <img src='Logos/silentknight.png' width='32' height='32'> SilentKnight | 2.11 |
@@ -603,6 +597,7 @@ Follow the interactive prompts to:
 | <img src='Logos/tenable_nessus_agent.png' width='32' height='32'> Tenable Nessus Agent | 10.8.4 |
 | <img src='Logos/termius.png' width='32' height='32'> Termius | 9.19.4 |
 | <img src='Logos/tex_live_utility.png' width='32' height='32'> TeX Live Utility | 1.54 |
+| ❌ TextMate | 2.0.23 |
 | <img src='Logos/thonny.png' width='32' height='32'> Thonny | 4.1.7 |
 | <img src='Logos/threema.png' width='32' height='32'> Threema | 1.2.47 |
 | <img src='Logos/tigervnc.png' width='32' height='32'> TigerVNC | 1.15.0 |
@@ -627,7 +622,7 @@ Follow the interactive prompts to:
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.3.3635.12 |
 | <img src='Logos/viz.png' width='32' height='32'> Viz | 2.2.1 |
 | <img src='Logos/vlc_media_player.png' width='32' height='32'> VLC media player | 3.0.21 |
-| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.99.32846 |
+| <img src='Logos/vscodium.png' width='32' height='32'> VSCodium | 1.100.03093 |
 | <img src='Logos/wave_terminal.png' width='32' height='32'> Wave Terminal | 0.11.3 |
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.4.1.32313 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2025.1.1 |
