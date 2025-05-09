@@ -7,5 +7,6 @@
   "homepage": "https://signal.org/",
   "fileName": "signal_7.53.0.pkg",
   "type": "app",
-  "sha": "1aa29b2f8776314e4ef63eed28bc44b94d40c91e12ba006f66844d49a712a029"
+  "sha": "1aa29b2f8776314e4ef63eed28bc44b94d40c91e12ba006f66844d49a712a029",
+  "previous_version": "7.53.0"
 }
