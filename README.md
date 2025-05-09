@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                                          <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-507-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -84,11 +84,9 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-09 10:45 UTC*
+*Last checked: 2025-05-09 10:51 UTC*
 
-| Application | Previous Version | New Version |
-|-------------|-----------------|-------------|
-| Etcher | 2.1.0 | 2.1.2 |
+> All applications are up to date! 🎉
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
