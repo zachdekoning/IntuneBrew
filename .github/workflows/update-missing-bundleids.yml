@@ -203,23 +203,98 @@ jobs:
             
             # Find the app in Applications folder
             echo "🔍 Finding app in Applications folder..."
+            
+            # Try different search strategies to find the app
+            # Strategy 1: Direct match with app name
             APP_PATH=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$APP_NAME" || echo "")
+            
+            # Strategy 2: If not found, try with parts of the name (for apps with spaces)
+            if [ -z "$APP_PATH" ]; then
+              echo "Direct match not found, trying with parts of the name..."
+              # Split app name by spaces and search for each part
+              for WORD in $APP_NAME; do
+                if [ ${#WORD} -gt 3 ]; then  # Only use words longer than 3 characters
+                  POTENTIAL_APP=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$WORD" | head -1)
+                  if [ -n "$POTENTIAL_APP" ]; then
+                    APP_PATH="$POTENTIAL_APP"
+                    echo "Found app using partial match: $WORD"
+                    break
+                  fi
+                fi
+              done
+            fi
+            
+            # Strategy 3: List all apps and try to find the closest match
+            if [ -z "$APP_PATH" ]; then
+              echo "Partial match not found, trying to find the closest match..."
+              # List all apps and save to a file
+              find /Applications -maxdepth 1 -name "*.app" > /tmp/all_apps.txt
+              echo "Available apps in Applications folder:"
+              cat /tmp/all_apps.txt
+              
+              # Try to find a match based on the JSON filename
+              APP_FILENAME=$(basename "$APP_JSON_PATH" .json)
+              APP_PATH=$(grep -i "$APP_FILENAME" /tmp/all_apps.txt | head -1)
+              
+              if [ -n "$APP_PATH" ]; then
+                echo "Found app using filename match: $APP_FILENAME"
+              fi
+            fi
             
             if [ -z "$APP_PATH" ]; then
               echo "❌ Could not find app in Applications folder"
+              echo "Available apps:"
               ls -la /Applications
               continue
             fi
             
             echo "📂 App path: $APP_PATH"
             
-            # Get app bundle ID
-            echo "🔍 Extracting bundleId..."
-            ACTUAL_BUNDLE_ID=$(mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
+            # Print app details for debugging
+            echo "📋 App details:"
+            ls -la "$APP_PATH"
+            echo "App bundle contents:"
+            ls -la "$APP_PATH/Contents" || echo "Could not access Contents directory"
             
-            # If not found with mdls, try using PlistBuddy
+            # Get app bundle ID using multiple methods
+            echo "🔍 Extracting bundleId..."
+            
+            # Method 1: Using mdls
+            echo "Trying mdls method..."
+            ACTUAL_BUNDLE_ID=$(mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
+            echo "mdls result: $ACTUAL_BUNDLE_ID"
+            
+            # Method 2: Using PlistBuddy
             if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
-              ACTUAL_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
+              echo "Trying PlistBuddy method..."
+              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+                ACTUAL_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
+                echo "PlistBuddy result: $ACTUAL_BUNDLE_ID"
+              else
+                echo "Info.plist not found at expected location"
+              fi
+            fi
+            
+            # Method 3: Using defaults command
+            if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
+              echo "Trying defaults command method..."
+              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+                ACTUAL_BUNDLE_ID=$(defaults read "$APP_PATH/Contents/Info" CFBundleIdentifier 2>/dev/null || echo "Not found")
+                echo "defaults command result: $ACTUAL_BUNDLE_ID"
+              fi
+            fi
+            
+            # Method 4: Using grep on the Info.plist file
+            if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
+              echo "Trying grep method..."
+              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+                # Extract the line with CFBundleIdentifier and the value after it
+                BUNDLE_ID_LINE=$(grep -A1 "CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" | grep -v "CFBundleIdentifier" | grep -o ">.*<" | sed 's/>//;s/<//g')
+                if [ -n "$BUNDLE_ID_LINE" ]; then
+                  ACTUAL_BUNDLE_ID="$BUNDLE_ID_LINE"
+                  echo "grep method result: $ACTUAL_BUNDLE_ID"
+                fi
+              fi
             fi
             
             echo "🆔 Extracted Bundle ID: $ACTUAL_BUNDLE_ID"

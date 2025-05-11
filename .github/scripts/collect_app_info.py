@@ -83,7 +83,6 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/shortcat.json",
     "https://formulae.brew.sh/api/cask/copilot-for-xcode.json",
     "https://formulae.brew.sh/api/cask/macs-fan-control.json",
-    "https://formulae.brew.sh/api/cask/copyq.json",
     "https://formulae.brew.sh/api/cask/plex.json",
     "https://formulae.brew.sh/api/cask/macwhisper.json",
     "https://formulae.brew.sh/api/cask/reactotron.json",
