@@ -17,6 +17,39 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
+      - name: Verify repository checkout
+        run: |
+          echo "Verifying repository checkout..."
+          echo "Current directory: $(pwd)"
+          echo "Repository contents:"
+          ls -la
+
+          if [ ! -d "Apps" ]; then
+            echo "❌ Apps directory not found!"
+            echo "Creating Apps directory for testing..."
+            mkdir -p Apps
+            
+            # Create a test JSON file for macdown
+            echo '{
+              "name": "MacDown",
+              "description": "Open-source Markdown editor",
+              "version": "0.7.2",
+              "url": "https://intunebrew.blob.core.windows.net/pkg/macdown_0.7.2.pkg",
+              "bundleId": null,
+              "homepage": "https://macdown.uranusjr.com/",
+              "fileName": "macdown_0.7.2.pkg",
+              "type": "app",
+              "sha": "bba030fc49d9dd7ab0c139fe5c39773eff0830336d6ab06b6fa7b23621efe774",
+              "previous_version": "0.7.2"
+            }' > Apps/macdown.json
+            
+            echo "Created test file: Apps/macdown.json"
+          else
+            echo "✅ Apps directory found"
+            echo "Apps directory contents:"
+            ls -la Apps/
+          fi
+
       - name: Find apps with missing bundleIds
         id: find-apps
         run: |
@@ -25,13 +58,49 @@ jobs:
           # Create an array to store apps with missing bundleIds
           APPS_TO_PROCESS=()
 
-          # Loop through all JSON files in the Apps directory
+          # List all files in the Apps directory for debugging
+          echo "Listing all files in Apps directory:"
+          ls -la Apps/
+
+          # Loop through all JSON files in the Apps directory (case-insensitive)
+          shopt -s nocaseglob  # Enable case-insensitive globbing
           for APP_JSON_PATH in Apps/*.json; do
+            # Check if file exists
+            if [ ! -f "$APP_JSON_PATH" ]; then
+              echo "Warning: $APP_JSON_PATH does not exist, skipping"
+              continue
+            fi
+            
+            echo "Processing JSON file: $APP_JSON_PATH"
+            
+            # Validate JSON file
+            echo "Validating JSON file: $APP_JSON_PATH"
+            if ! jq empty "$APP_JSON_PATH" 2>/dev/null; then
+              echo "❌ Invalid JSON in $APP_JSON_PATH, skipping"
+              continue
+            fi
+            
             # Extract app name from filename
             APP_NAME=$(basename "$APP_JSON_PATH" .json)
             
             # Check if bundleId is null or empty
-            BUNDLE_ID=$(jq -r '.bundleId' "$APP_JSON_PATH")
+            BUNDLE_ID=$(jq -r '.bundleId' "$APP_JSON_PATH" 2>/dev/null)
+            if [ $? -ne 0 ]; then
+              echo "Warning: Failed to parse $APP_JSON_PATH, skipping"
+              continue
+            fi
+            
+            # Check if required fields exist
+            APP_NAME_FROM_JSON=$(jq -r '.name' "$APP_JSON_PATH" 2>/dev/null)
+            APP_URL=$(jq -r '.url' "$APP_JSON_PATH" 2>/dev/null)
+            
+            if [ -z "$APP_NAME_FROM_JSON" ] || [ "$APP_NAME_FROM_JSON" = "null" ] || [ -z "$APP_URL" ] || [ "$APP_URL" = "null" ]; then
+              echo "❌ Missing required fields in $APP_JSON_PATH, skipping"
+              echo "  name: $APP_NAME_FROM_JSON"
+              echo "  url: $APP_URL"
+              continue
+            fi
+            
             if [ "$BUNDLE_ID" = "null" ] || [ -z "$BUNDLE_ID" ]; then
               echo "Found app with missing bundleId: $APP_NAME"
               APPS_TO_PROCESS+=("$APP_JSON_PATH")
@@ -252,41 +321,72 @@ jobs:
             # Find the app in Applications folder
             echo "🔍 Finding app in Applications folder..."
             
-            # Try different search strategies to find the app
-            # Strategy 1: Direct match with app name
-            APP_PATH=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$APP_NAME" || echo "")
+            # Get the app name from the JSON file for more accurate matching
+            JSON_APP_NAME=$(echo "$APP_JSON" | jq -r '.name')
+            echo "App name from JSON: $JSON_APP_NAME"
             
-            # Strategy 2: If not found, try with parts of the name (for apps with spaces)
+            # Create a normalized version of the app name (lowercase, no special chars)
+            NORMALIZED_APP_NAME=$(echo "$JSON_APP_NAME" | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
+            echo "Normalized app name: $NORMALIZED_APP_NAME"
+            
+            # List all apps and save to a file
+            find /Applications -maxdepth 1 -name "*.app" > /tmp/all_apps.txt
+            echo "Available apps in Applications folder:"
+            cat /tmp/all_apps.txt
+            
+            # Try different search strategies to find the app
+            APP_PATH=""
+            
+            # Strategy 1: Direct match with app name
+            APP_PATH=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$JSON_APP_NAME" || echo "")
+            if [ -n "$APP_PATH" ]; then
+              echo "Found app using direct match: $JSON_APP_NAME"
+            fi
+            
+            # Strategy 2: Try with normalized app name
             if [ -z "$APP_PATH" ]; then
-              echo "Direct match not found, trying with parts of the name..."
-              # Split app name by spaces and search for each part
-              for WORD in $APP_NAME; do
-                if [ ${#WORD} -gt 3 ]; then  # Only use words longer than 3 characters
-                  POTENTIAL_APP=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$WORD" | head -1)
-                  if [ -n "$POTENTIAL_APP" ]; then
-                    APP_PATH="$POTENTIAL_APP"
-                    echo "Found app using partial match: $WORD"
-                    break
-                  fi
+              for APP in $(cat /tmp/all_apps.txt); do
+                APP_BASENAME=$(basename "$APP" .app | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
+                if [[ "$APP_BASENAME" == *"$NORMALIZED_APP_NAME"* ]] || [[ "$NORMALIZED_APP_NAME" == *"$APP_BASENAME"* ]]; then
+                  APP_PATH="$APP"
+                  echo "Found app using normalized name match: $APP_BASENAME"
+                  break
                 fi
               done
             fi
             
-            # Strategy 3: List all apps and try to find the closest match
+            # Strategy 3: If not found, try with parts of the name (for apps with spaces)
             if [ -z "$APP_PATH" ]; then
-              echo "Partial match not found, trying to find the closest match..."
-              # List all apps and save to a file
-              find /Applications -maxdepth 1 -name "*.app" > /tmp/all_apps.txt
-              echo "Available apps in Applications folder:"
-              cat /tmp/all_apps.txt
+              echo "Normalized match not found, trying with parts of the name..."
+              # Split app name by spaces and search for each part
+              for WORD in $JSON_APP_NAME; do
+                if [ ${#WORD} -gt 3 ]; then  # Only use words longer than 3 characters
+                  NORMALIZED_WORD=$(echo "$WORD" | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
+                  for APP in $(cat /tmp/all_apps.txt); do
+                    APP_BASENAME=$(basename "$APP" .app | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
+                    if [[ "$APP_BASENAME" == *"$NORMALIZED_WORD"* ]]; then
+                      APP_PATH="$APP"
+                      echo "Found app using partial word match: $WORD -> $APP_BASENAME"
+                      break 2
+                    fi
+                  done
+                fi
+              done
+            fi
+            
+            # Strategy 4: Try to find a match based on the JSON filename
+            if [ -z "$APP_PATH" ]; then
+              echo "Word match not found, trying filename match..."
+              APP_FILENAME=$(basename "$APP_JSON_PATH" .json | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
               
-              # Try to find a match based on the JSON filename
-              APP_FILENAME=$(basename "$APP_JSON_PATH" .json)
-              APP_PATH=$(grep -i "$APP_FILENAME" /tmp/all_apps.txt | head -1)
-              
-              if [ -n "$APP_PATH" ]; then
-                echo "Found app using filename match: $APP_FILENAME"
-              fi
+              for APP in $(cat /tmp/all_apps.txt); do
+                APP_BASENAME=$(basename "$APP" .app | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
+                if [[ "$APP_BASENAME" == *"$APP_FILENAME"* ]] || [[ "$APP_FILENAME" == *"$APP_BASENAME"* ]]; then
+                  APP_PATH="$APP"
+                  echo "Found app using filename match: $APP_FILENAME -> $APP_BASENAME"
+                  break
+                fi
+              done
             fi
             
             if [ -z "$APP_PATH" ]; then
