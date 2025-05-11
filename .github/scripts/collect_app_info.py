@@ -301,7 +301,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/grandperspective.json",
     "https://formulae.brew.sh/api/cask/moonlight.json",
     "https://formulae.brew.sh/api/cask/freetube.json",
-    "https://formulae.brew.sh/api/cask/zenmap.json",
     "https://formulae.brew.sh/api/cask/chatwise.json",
     "https://formulae.brew.sh/api/cask/motrix.json",
     "https://formulae.brew.sh/api/cask/phpstorm.json",
