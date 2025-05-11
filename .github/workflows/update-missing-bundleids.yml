@@ -58,6 +58,10 @@ jobs:
           # Create an array to store apps with missing bundleIds
           APPS_TO_PROCESS=()
 
+          # Create arrays to track missing and processed files
+          MISSING_FILES=()
+          PROCESSED_FILES=()
+
           # List all files in the Apps directory for debugging
           echo "Listing all files in Apps directory:"
           ls -la Apps/
@@ -67,7 +71,8 @@ jobs:
           for APP_JSON_PATH in Apps/*.json; do
             # Check if file exists
             if [ ! -f "$APP_JSON_PATH" ]; then
-              echo "Warning: $APP_JSON_PATH does not exist, skipping"
+              echo "Warning: $APP_JSON_PATH does not exist, adding to missing files list"
+              MISSING_FILES+=("$APP_JSON_PATH")
               continue
             fi
             
@@ -484,7 +489,19 @@ jobs:
             rm -rf "$TEMP_DIR"
             
             echo "==============================================="
+            
+            # Add to processed files list
+            PROCESSED_FILES+=("$APP_JSON_PATH")
           done < /tmp/apps_to_process.txt
+
+          # Save the lists to environment variables for the summary step
+          echo "MISSING_FILES_COUNT=${#MISSING_FILES[@]}" >> $GITHUB_ENV
+          echo "PROCESSED_FILES_COUNT=${#PROCESSED_FILES[@]}" >> $GITHUB_ENV
+
+          # Save missing files to a file for the summary step
+          if [ ${#MISSING_FILES[@]} -gt 0 ]; then
+            printf "%s\n" "${MISSING_FILES[@]}" > /tmp/missing_files.txt
+          fi
 
       - name: Commit and push changes
         if: env.CHANGES_MADE == 'true'
@@ -522,6 +539,19 @@ jobs:
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
           echo "| Apps Processed | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
+          echo "| Missing Files | $MISSING_FILES_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Successfully Processed | $PROCESSED_FILES_COUNT |" >> $GITHUB_STEP_SUMMARY
+
+          # Add missing files section if any
+          if [ -f "/tmp/missing_files.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Missing JSON Files" >> $GITHUB_STEP_SUMMARY
+            echo "The following JSON files were not found and need to be fixed manually:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            cat /tmp/missing_files.txt >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+          fi
 
           if [ "$CHANGES_MADE" = "true" ]; then
             echo "The following apps had their bundleIds updated:" >> $GITHUB_STEP_SUMMARY
