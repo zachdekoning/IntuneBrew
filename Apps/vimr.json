@@ -3,7 +3,7 @@
   "description": "GUI for the Neovim text editor",
   "version": "0.53.0",
   "url": "https://intunebrew.blob.core.windows.net/pkg/vimr_0.53.0.pkg",
-  "bundleId": "com.qvacua.VimR",
+  "bundleId": null,
   "homepage": "https://github.com/qvacua/vimr",
   "fileName": "vimr_0.53.0.pkg",
   "type": "app",
