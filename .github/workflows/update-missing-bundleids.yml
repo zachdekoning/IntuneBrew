@@ -527,9 +527,6 @@ jobs:
                 continue
               fi
               
-              # Create a backup of the original file
-              cp "$ABSOLUTE_JSON_PATH" "${ABSOLUTE_JSON_PATH}.bak"
-              
               # Update the bundleId in the JSON file using jq
               jq --arg new_bundle_id "$ACTUAL_BUNDLE_ID" '.bundleId = $new_bundle_id' "$ABSOLUTE_JSON_PATH" > "${ABSOLUTE_JSON_PATH}.tmp"
               mv "${ABSOLUTE_JSON_PATH}.tmp" "$ABSOLUTE_JSON_PATH"
