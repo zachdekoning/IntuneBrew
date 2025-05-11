@@ -552,7 +552,6 @@ pkg_urls = [
     "https://formulae.brew.sh/api/cask/quarto.json",
     "https://formulae.brew.sh/api/cask/squirrel.json",
     "https://formulae.brew.sh/api/cask/displaylink.json",
-    "https://formulae.brew.sh/api/cask/metasploit.json",
     "https://formulae.brew.sh/api/cask/background-music.json",
     "https://formulae.brew.sh/api/cask/nextcloud.json",
     "https://formulae.brew.sh/api/cask/cloudflare-warp.json",
