@@ -577,7 +577,8 @@ jobs:
             echo "No changes to commit"
           else
             echo "Changes detected, committing..."
-            git add "Apps/"
+            # Add all files in Apps directory except .bak files
+            find "Apps/" -type f -not -name "*.bak" -exec git add {} \;
             git commit -m "Update missing bundleIds for apps"
             
             # Push using the PAT for authentication
