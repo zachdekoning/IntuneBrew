@@ -1,6 +1,6 @@
 {
   "app_name": "DeepL",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-11",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2023-27446",

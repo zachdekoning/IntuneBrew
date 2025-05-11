@@ -1,51 +1,15 @@
 {
   "app_name": "Gemini",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-11",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2022-46801",
-      "published_date": "2023-11-07",
-      "last_modified_date": "2024-11-21",
-      "base_score": 9.8,
-      "severity": "CRITICAL",
-      "description": "Improper Neutralization of Formula Elements in a CSV File vulnerability in Paul Ryley Site Reviews.This issue affects Site Reviews: from n/a through 6.2.0.\n\n",
-      "cpe_name": "cpe:2.3:a:geminilabs:site_reviews:-:*:*:*:*:wordpress:*:*"
-    },
-    {
-      "cve_id": "CVE-2023-27612",
-      "published_date": "2023-06-22",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.5,
-      "severity": "MEDIUM",
-      "description": "Auth. (contributor+) Stored Cross-Site Scripting (XSS) vulnerability in Paul Ryley Site Reviews plugin <=\u00a06.5.1 versions.",
-      "cpe_name": "cpe:2.3:a:geminilabs:site_reviews:-:*:*:*:*:wordpress:*:*"
-    },
-    {
-      "cve_id": "CVE-2023-27629",
-      "published_date": "2023-06-22",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.5,
-      "severity": "MEDIUM",
-      "description": "Auth. (contributor+) Stored Cross-Site Scripting (XSS) vulnerability in Paul Ryley Site Reviews plugin <=\u00a06.5.1 versions.",
-      "cpe_name": "cpe:2.3:a:geminilabs:site_reviews:-:*:*:*:*:wordpress:*:*"
-    },
-    {
-      "cve_id": "CVE-2023-1525",
-      "published_date": "2023-05-02",
-      "last_modified_date": "2025-01-30",
-      "base_score": 4.8,
-      "severity": "MEDIUM",
-      "description": "The Site Reviews WordPress plugin before 6.7.1 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup).",
-      "cpe_name": "cpe:2.3:a:geminilabs:site_reviews:-:*:*:*:*:wordpress:*:*"
-    },
-    {
-      "cve_id": "CVE-2021-24973",
-      "published_date": "2022-01-03",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "The Site Reviews WordPress plugin before 5.17.3 does not sanitise and escape the site-reviews parameter of the glsr_action AJAX action (available to unauthenticated and any authenticated users), allowing them to perform Cross-Site Scripting attacks against logged in admins viewing the Tool dashboard of the plugin",
-      "cpe_name": "cpe:2.3:a:geminilabs:site_reviews:-:*:*:*:*:wordpress:*:*"
+      "cve_id": "CVE-2025-1232",
+      "published_date": "2025-03-19",
+      "last_modified_date": "2025-05-09",
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "description": "The Site Reviews WordPress plugin before 7.2.5 does not properly sanitise and escape some of its Review fields, which could allow unauthenticated users to perform Stored XSS attacks",
+      "cpe_name": "cpe:2.3:a:geminilabs:site_reviews:7.2.4:*:*:*:*:wordpress:*:*"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "app_name": "Joplin",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-11",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2025-24028",
@@ -30,22 +30,22 @@
       "cpe_name": "cpe:2.3:a:joplin_project:joplin:3.0.15:*:*:*:*:-:*:*"
     },
     {
-      "cve_id": "CVE-2024-40643",
-      "published_date": "2024-09-09",
-      "last_modified_date": "2024-09-17",
-      "base_score": 9.6,
-      "severity": "CRITICAL",
-      "description": "Joplin is a free, open source note taking and to-do application. Joplin fails to take into account that \"<\" followed by a non letter character will not be considered html. As such it is possible to do an XSS by putting an \"illegal\" tag within a tag.",
+      "cve_id": "CVE-2024-53268",
+      "published_date": "2024-11-25",
+      "last_modified_date": "2025-05-07",
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "description": "Joplin is an open source, privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS. In affected versions attackers are able to abuse the fact that openExternal is used without any filtering of URI schemes to obtain remote code execution in Windows environments. This issue has been addressed in version 3.0.3 and all users are advised to upgrade. There are no known workarounds for this vulnerability.",
       "cpe_name": "cpe:2.3:a:joplin_project:joplin:-:*:*:*:*:-:*:*"
     },
     {
-      "cve_id": "CVE-2023-38506",
-      "published_date": "2024-06-21",
-      "last_modified_date": "2025-04-11",
-      "base_score": 8.2,
+      "cve_id": "CVE-2024-49362",
+      "published_date": "2024-11-14",
+      "last_modified_date": "2025-05-07",
+      "base_score": 7.7,
       "severity": "HIGH",
-      "description": "Joplin is a free, open source note taking and to-do application. A Cross-site Scripting (XSS) vulnerability allows pasting untrusted data into the rich text editor to execute arbitrary code. HTML pasted into the rich text editor is not sanitized (or not sanitized properly). As such, the `onload` attribute of pasted images can execute arbitrary code. Because the TinyMCE editor frame does not use the `sandbox` attribute, such scripts can access NodeJS's `require` through the `top` variable. From this, an attacker can run arbitrary commands. This issue has been addressed in version 2.12.10 and users are advised to upgrade. There are no known workarounds for this vulnerability.",
-      "cpe_name": "cpe:2.3:a:joplin_project:joplin:-:*:*:*:*:-:*:*"
+      "description": "Joplin is a free, open source note taking and to-do application. Joplin-desktop has a vulnerability that leads to remote code execution (RCE) when a user clicks on an <a> link within untrusted notes. The issue arises due to insufficient sanitization of <a> tag attributes introduced by the Mermaid. This vulnerability allows the execution of untrusted HTML content within the Electron window, which has full access to Node.js APIs, enabling arbitrary shell command execution.",
+      "cpe_name": "cpe:2.3:a:joplin_project:joplin:3.0.15:*:*:*:*:-:*:*"
     }
   ]
 }

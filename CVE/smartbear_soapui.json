@@ -1,6 +1,6 @@
 {
-  "app_name": "SmartBear SoapUI",
-  "last_updated": "2025-05-05",
+  "app_name": "Smartbear Soapui",
+  "last_updated": "2025-05-11",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2019-12180",
