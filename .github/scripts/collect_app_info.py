@@ -270,8 +270,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/rocket-chat.json",
     "https://formulae.brew.sh/api/cask/rocket.json",
     "https://formulae.brew.sh/api/cask/rsyncui.json",
-    "https://formulae.brew.sh/api/cask/soapui.json",
-    "https://formulae.brew.sh/api/cask/sound-siphon.json",
     "https://formulae.brew.sh/api/cask/pika.json",
     "https://formulae.brew.sh/api/cask/requestly.json",
     "https://formulae.brew.sh/api/cask/adguard.json",
