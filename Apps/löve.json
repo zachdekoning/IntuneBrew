@@ -3,7 +3,7 @@
   "description": "2D game framework for Lua",
   "version": "11.5",
   "url": "https://intunebrew.blob.core.windows.net/pkg/löve_11.5.pkg",
-  "bundleId": null,
+  "bundleId": "org.love2d.love",
   "homepage": "https://love2d.org/",
   "fileName": "löve_11.5.pkg",
   "type": "app",

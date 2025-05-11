@@ -3,7 +3,7 @@
   "description": "Platform for API documentation, debugging, and testing",
   "version": "2.7.9",
   "url": "https://file-assets.apifox.com/download/2.7.9/Apifox-macOS-arm64-2.7.9.dmg",
-  "bundleId": null,
+  "bundleId": "cn.apifox.app",
   "homepage": "https://www.apifox.com/",
   "fileName": "Apifox-macOS-arm64-2.7.9.dmg",
   "sha": "b62a5bff2c369f0b71cb5705418c84f0a8af395eb415a1f957e0d241e45f4709",
