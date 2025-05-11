@@ -45,9 +45,8 @@ jobs:
             echo "No apps with missing bundleIds found."
             echo "APPS_TO_PROCESS=" >> $GITHUB_ENV
           else
-            # Convert array to comma-separated string
-            IFS=,
-            echo "APPS_TO_PROCESS=${APPS_TO_PROCESS[*]}" >> $GITHUB_ENV
+            # Convert array to newline-separated string and save to a file
+            printf "%s\n" "${APPS_TO_PROCESS[@]}" > /tmp/apps_to_process.txt
             echo "Found ${#APPS_TO_PROCESS[@]} apps with missing bundleIds."
           fi
 
@@ -59,11 +58,9 @@ jobs:
           # Initialize a flag to track if any changes were made
           echo "CHANGES_MADE=false" >> $GITHUB_ENV
 
-          # Convert comma-separated string back to array
-          IFS=',' read -ra APP_PATHS <<< "$APPS_TO_PROCESS"
-
-          # Process each app
-          for APP_JSON_PATH in "${APP_PATHS[@]}"; do
+          # Process each app from the file
+          while IFS= read -r APP_JSON_PATH || [ -n "$APP_JSON_PATH" ]; do
+          done < /tmp/apps_to_process.txt
             echo "==============================================="
             echo "Processing $APP_JSON_PATH"
             
@@ -79,15 +76,17 @@ jobs:
             echo "URL: $APP_URL"
             
             # Determine file type based on URL
+            FILE_TYPE="pkg"  # Default to pkg
+            DOWNLOAD_PATH="app_package.pkg"
+            
             if [[ "$APP_URL" == *".dmg" ]]; then
               FILE_TYPE="dmg"
               DOWNLOAD_PATH="app_package.dmg"
-            elif [[ "$APP_URL" == *".zip" ]]; then
+            fi
+            
+            if [[ "$APP_URL" == *".zip" ]]; then
               FILE_TYPE="zip"
               DOWNLOAD_PATH="app_package.zip"
-            else
-              FILE_TYPE="pkg"
-              DOWNLOAD_PATH="app_package.pkg"
             fi
             
             echo "📥 Downloading $APP_NAME from $APP_URL (File type: $FILE_TYPE)..."
@@ -120,7 +119,9 @@ jobs:
               fi
               
               echo "✅ Installation successful"
-            else
+            fi
+            
+            if [ "$FILE_TYPE" = "dmg" ]; then
               # Mount DMG file
               echo "💿 Mounting DMG file..."
               MOUNT_POINT="/Volumes/AppDMG"
@@ -158,7 +159,9 @@ jobs:
               # Unmount the DMG
               echo "💿 Unmounting DMG..."
               hdiutil detach "$MOUNT_POINT" -force
-            elif [ "$FILE_TYPE" = "zip" ]; then
+            fi
+            
+            if [ "$FILE_TYPE" = "zip" ]; then
               # Extract ZIP file
               echo "📦 Extracting ZIP file..."
               EXTRACT_DIR="app_extracted"
