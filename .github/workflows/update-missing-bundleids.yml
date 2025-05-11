@@ -60,7 +60,6 @@ jobs:
 
           # Process each app from the file
           while IFS= read -r APP_JSON_PATH || [ -n "$APP_JSON_PATH" ]; do
-          done < /tmp/apps_to_process.txt
             echo "==============================================="
             echo "Processing $APP_JSON_PATH"
             
@@ -243,7 +242,7 @@ jobs:
             fi
             
             echo "==============================================="
-          done
+          done < /tmp/apps_to_process.txt
 
       - name: Commit and push changes
         if: env.CHANGES_MADE == 'true'
