@@ -351,14 +351,29 @@ jobs:
             if [ "$ACTUAL_BUNDLE_ID" != "Not found" ] && [ "$ACTUAL_BUNDLE_ID" != "(null)" ]; then
               echo "🔄 Updating bundleId in JSON file..."
               
+              # Get absolute path to the JSON file
+              ABSOLUTE_JSON_PATH="$GITHUB_WORKSPACE/$APP_JSON_PATH"
+              echo "JSON file path: $ABSOLUTE_JSON_PATH"
+              
+              # Verify the JSON file exists
+              if [ ! -f "$ABSOLUTE_JSON_PATH" ]; then
+                echo "❌ JSON file not found at $ABSOLUTE_JSON_PATH"
+                echo "Current directory: $(pwd)"
+                echo "Listing workspace directory:"
+                ls -la "$GITHUB_WORKSPACE"
+                echo "Listing Apps directory:"
+                ls -la "$GITHUB_WORKSPACE/Apps" || echo "Apps directory not found"
+                continue
+              fi
+              
               # Create a backup of the original file
-              cp "$APP_JSON_PATH" "${APP_JSON_PATH}.bak"
+              cp "$ABSOLUTE_JSON_PATH" "${ABSOLUTE_JSON_PATH}.bak"
               
               # Update the bundleId in the JSON file using jq
-              jq --arg new_bundle_id "$ACTUAL_BUNDLE_ID" '.bundleId = $new_bundle_id' "$APP_JSON_PATH" > "${APP_JSON_PATH}.tmp"
-              mv "${APP_JSON_PATH}.tmp" "$APP_JSON_PATH"
+              jq --arg new_bundle_id "$ACTUAL_BUNDLE_ID" '.bundleId = $new_bundle_id' "$ABSOLUTE_JSON_PATH" > "${ABSOLUTE_JSON_PATH}.tmp"
+              mv "${ABSOLUTE_JSON_PATH}.tmp" "$ABSOLUTE_JSON_PATH"
               
-              echo "✅ Updated bundleId in $APP_JSON_PATH to '$ACTUAL_BUNDLE_ID'"
+              echo "✅ Updated bundleId in $ABSOLUTE_JSON_PATH to '$ACTUAL_BUNDLE_ID'"
               echo "CHANGES_MADE=true" >> $GITHUB_ENV
             else
               echo "⚠️ Could not extract a valid bundleId"
