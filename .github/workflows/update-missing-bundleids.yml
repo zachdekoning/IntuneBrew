@@ -74,22 +74,70 @@ jobs:
             echo "Version: $APP_VERSION"
             echo "URL: $APP_URL"
             
-            # Determine file type based on URL
-            FILE_TYPE="pkg"  # Default to pkg
-            DOWNLOAD_PATH="app_package.pkg"
+            # Create a temporary directory for this app
+            TEMP_DIR="temp_${APP_NAME// /_}"
+            mkdir -p "$TEMP_DIR"
+            cd "$TEMP_DIR"
             
-            if [[ "$APP_URL" == *".dmg" ]]; then
-              FILE_TYPE="dmg"
-              DOWNLOAD_PATH="app_package.dmg"
-            fi
-            
-            if [[ "$APP_URL" == *".zip" ]]; then
-              FILE_TYPE="zip"
-              DOWNLOAD_PATH="app_package.zip"
-            fi
-            
-            echo "📥 Downloading $APP_NAME from $APP_URL (File type: $FILE_TYPE)..."
+            # Download with generic name first
+            DOWNLOAD_PATH="downloaded_file"
+            echo "📥 Downloading $APP_NAME from $APP_URL..."
             curl -L -o "$DOWNLOAD_PATH" "$APP_URL"
+            
+            if [ $? -ne 0 ]; then
+              echo "❌ Failed to download file"
+              cd ..
+              rm -rf "$TEMP_DIR"
+              continue
+            fi
+            
+            # Determine file type based on content
+            echo "🔍 Detecting file type..."
+            FILE_TYPE="unknown"
+            
+            # Check file signature/magic bytes
+            FILE_INFO=$(file "$DOWNLOAD_PATH")
+            echo "File info: $FILE_INFO"
+            
+            if [[ "$FILE_INFO" == *"Zip archive"* ]]; then
+              FILE_TYPE="zip"
+              mv "$DOWNLOAD_PATH" "app_package.zip"
+              DOWNLOAD_PATH="app_package.zip"
+              echo "Detected ZIP file"
+            elif [[ "$FILE_INFO" == *"xar archive"* ]] || [[ "$FILE_INFO" == *"installer"* ]] || [[ "$FILE_INFO" == *"package"* ]]; then
+              FILE_TYPE="pkg"
+              mv "$DOWNLOAD_PATH" "app_package.pkg"
+              DOWNLOAD_PATH="app_package.pkg"
+              echo "Detected PKG file"
+            elif [[ "$FILE_INFO" == *"disk image"* ]] || [[ "$FILE_INFO" == *"DMG"* ]]; then
+              FILE_TYPE="dmg"
+              mv "$DOWNLOAD_PATH" "app_package.dmg"
+              DOWNLOAD_PATH="app_package.dmg"
+              echo "Detected DMG file"
+            else
+              # Fallback to URL-based detection if content detection fails
+              if [[ "$APP_URL" == *".dmg" ]]; then
+                FILE_TYPE="dmg"
+                mv "$DOWNLOAD_PATH" "app_package.dmg"
+                DOWNLOAD_PATH="app_package.dmg"
+              elif [[ "$APP_URL" == *".zip" ]]; then
+                FILE_TYPE="zip"
+                mv "$DOWNLOAD_PATH" "app_package.zip"
+                DOWNLOAD_PATH="app_package.zip"
+              elif [[ "$APP_URL" == *".pkg" ]]; then
+                FILE_TYPE="pkg"
+                mv "$DOWNLOAD_PATH" "app_package.pkg"
+                DOWNLOAD_PATH="app_package.pkg"
+              else
+                # Default to pkg if we can't determine
+                FILE_TYPE="pkg"
+                mv "$DOWNLOAD_PATH" "app_package.pkg"
+                DOWNLOAD_PATH="app_package.pkg"
+              fi
+              echo "Using URL-based detection: $FILE_TYPE"
+            fi
+            
+            echo "File type determined: $FILE_TYPE"
             
             # Verify SHA256 checksum if provided
             if [ -n "$APP_SHA" ] && [ "$APP_SHA" != "null" ]; then
@@ -315,6 +363,10 @@ jobs:
             else
               echo "⚠️ Could not extract a valid bundleId"
             fi
+            
+            # Clean up the temporary directory
+            cd "$GITHUB_WORKSPACE"
+            rm -rf "$TEMP_DIR"
             
             echo "==============================================="
           done < /tmp/apps_to_process.txt
