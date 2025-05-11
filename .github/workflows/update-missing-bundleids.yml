@@ -1,0 +1,292 @@
+name: Update Missing BundleIDs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0" # Run weekly at midnight on Sunday
+
+jobs:
+  update-bundleids:
+    runs-on: macos-latest
+    permissions:
+      contents: write # This gives the job permission to write to the repository
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Find apps with missing bundleIds
+        id: find-apps
+        run: |
+          echo "Finding apps with missing bundleIds..."
+
+          # Create an array to store apps with missing bundleIds
+          APPS_TO_PROCESS=()
+
+          # Loop through all JSON files in the Apps directory
+          for APP_JSON_PATH in Apps/*.json; do
+            # Extract app name from filename
+            APP_NAME=$(basename "$APP_JSON_PATH" .json)
+            
+            # Check if bundleId is null or empty
+            BUNDLE_ID=$(jq -r '.bundleId' "$APP_JSON_PATH")
+            if [ "$BUNDLE_ID" = "null" ] || [ -z "$BUNDLE_ID" ]; then
+              echo "Found app with missing bundleId: $APP_NAME"
+              APPS_TO_PROCESS+=("$APP_JSON_PATH")
+            fi
+          done
+
+          # Save the list of apps to process
+          echo "APPS_COUNT=${#APPS_TO_PROCESS[@]}" >> $GITHUB_ENV
+
+          if [ ${#APPS_TO_PROCESS[@]} -eq 0 ]; then
+            echo "No apps with missing bundleIds found."
+            echo "APPS_TO_PROCESS=" >> $GITHUB_ENV
+          else
+            # Convert array to comma-separated string
+            IFS=,
+            echo "APPS_TO_PROCESS=${APPS_TO_PROCESS[*]}" >> $GITHUB_ENV
+            echo "Found ${#APPS_TO_PROCESS[@]} apps with missing bundleIds."
+          fi
+
+      - name: Process apps with missing bundleIds
+        if: env.APPS_COUNT != '0'
+        run: |
+          echo "Processing ${APPS_COUNT} apps with missing bundleIds..."
+
+          # Initialize a flag to track if any changes were made
+          echo "CHANGES_MADE=false" >> $GITHUB_ENV
+
+          # Convert comma-separated string back to array
+          IFS=',' read -ra APP_PATHS <<< "$APPS_TO_PROCESS"
+
+          # Process each app
+          for APP_JSON_PATH in "${APP_PATHS[@]}"; do
+            echo "==============================================="
+            echo "Processing $APP_JSON_PATH"
+            
+            # Read app details from JSON
+            APP_JSON=$(cat "$APP_JSON_PATH")
+            APP_NAME=$(echo "$APP_JSON" | jq -r '.name')
+            APP_URL=$(echo "$APP_JSON" | jq -r '.url')
+            APP_VERSION=$(echo "$APP_JSON" | jq -r '.version')
+            APP_SHA=$(echo "$APP_JSON" | jq -r '.sha')
+            
+            echo "App Name: $APP_NAME"
+            echo "Version: $APP_VERSION"
+            echo "URL: $APP_URL"
+            
+            # Determine file type based on URL
+            if [[ "$APP_URL" == *".dmg" ]]; then
+              FILE_TYPE="dmg"
+              DOWNLOAD_PATH="app_package.dmg"
+            elif [[ "$APP_URL" == *".zip" ]]; then
+              FILE_TYPE="zip"
+              DOWNLOAD_PATH="app_package.zip"
+            else
+              FILE_TYPE="pkg"
+              DOWNLOAD_PATH="app_package.pkg"
+            fi
+            
+            echo "📥 Downloading $APP_NAME from $APP_URL (File type: $FILE_TYPE)..."
+            curl -L -o "$DOWNLOAD_PATH" "$APP_URL"
+            
+            # Verify SHA256 checksum if provided
+            if [ -n "$APP_SHA" ] && [ "$APP_SHA" != "null" ]; then
+              echo "🔐 Verifying SHA256 checksum..."
+              DOWNLOADED_SHA=$(shasum -a 256 "$DOWNLOAD_PATH" | awk '{print $1}')
+              echo "Expected: $APP_SHA"
+              echo "Actual: $DOWNLOADED_SHA"
+              
+              if [ "$DOWNLOADED_SHA" = "$APP_SHA" ]; then
+                echo "✅ SHA256 checksum verified successfully"
+              else
+                echo "❌ SHA256 checksum verification failed"
+                continue
+              fi
+            fi
+            
+            # Install the app based on file type
+            if [ "$FILE_TYPE" = "pkg" ]; then
+              # Install PKG file
+              echo "📦 Installing $APP_NAME from PKG..."
+              sudo installer -pkg app_package.pkg -target /
+              
+              if [ $? -ne 0 ]; then
+                echo "❌ Installation failed"
+                continue
+              fi
+              
+              echo "✅ Installation successful"
+            else
+              # Mount DMG file
+              echo "💿 Mounting DMG file..."
+              MOUNT_POINT="/Volumes/AppDMG"
+              hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse
+              
+              if [ $? -ne 0 ]; then
+                echo "❌ Failed to mount DMG file"
+                continue
+              fi
+              
+              # Find the .app file in the mounted DMG
+              echo "🔍 Finding .app in DMG..."
+              DMG_APP=$(find "$MOUNT_POINT" -maxdepth 1 -name "*.app" | head -1)
+              
+              if [ -z "$DMG_APP" ]; then
+                echo "❌ Could not find .app file in DMG"
+                hdiutil detach "$MOUNT_POINT" -force
+                continue
+              fi
+              
+              echo "📂 Found app: $DMG_APP"
+              
+              # Copy the app to Applications folder
+              echo "📋 Copying app to Applications folder..."
+              cp -R "$DMG_APP" /Applications/
+              
+              if [ $? -ne 0 ]; then
+                echo "❌ Failed to copy app to Applications folder"
+                hdiutil detach "$MOUNT_POINT" -force
+                continue
+              fi
+              
+              echo "✅ App copied successfully"
+              
+              # Unmount the DMG
+              echo "💿 Unmounting DMG..."
+              hdiutil detach "$MOUNT_POINT" -force
+            elif [ "$FILE_TYPE" = "zip" ]; then
+              # Extract ZIP file
+              echo "📦 Extracting ZIP file..."
+              EXTRACT_DIR="app_extracted"
+              mkdir -p "$EXTRACT_DIR"
+              unzip -q app_package.zip -d "$EXTRACT_DIR"
+              
+              if [ $? -ne 0 ]; then
+                echo "❌ Failed to extract ZIP file"
+                continue
+              fi
+              
+              # Find the .app file in the extracted contents
+              echo "🔍 Finding .app in extracted contents..."
+              ZIP_APP=$(find "$EXTRACT_DIR" -name "*.app" -type d | head -1)
+              
+              if [ -z "$ZIP_APP" ]; then
+                echo "❌ Could not find .app file in ZIP contents"
+                rm -rf "$EXTRACT_DIR"
+                continue
+              fi
+              
+              echo "📂 Found app: $ZIP_APP"
+              
+              # Copy the app to Applications folder
+              echo "📋 Copying app to Applications folder..."
+              cp -R "$ZIP_APP" /Applications/
+              
+              if [ $? -ne 0 ]; then
+                echo "❌ Failed to copy app to Applications folder"
+                rm -rf "$EXTRACT_DIR"
+                continue
+              fi
+              
+              echo "✅ App copied successfully"
+              
+              # Clean up extracted files
+              echo "🧹 Cleaning up extracted files..."
+              rm -rf "$EXTRACT_DIR"
+            fi
+            
+            # Find the app in Applications folder
+            echo "🔍 Finding app in Applications folder..."
+            APP_PATH=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$APP_NAME" || echo "")
+            
+            if [ -z "$APP_PATH" ]; then
+              echo "❌ Could not find app in Applications folder"
+              ls -la /Applications
+              continue
+            fi
+            
+            echo "📂 App path: $APP_PATH"
+            
+            # Get app bundle ID
+            echo "🔍 Extracting bundleId..."
+            ACTUAL_BUNDLE_ID=$(mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
+            
+            # If not found with mdls, try using PlistBuddy
+            if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
+              ACTUAL_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
+            fi
+            
+            echo "🆔 Extracted Bundle ID: $ACTUAL_BUNDLE_ID"
+            
+            # Update the JSON file if a valid bundleId was found
+            if [ "$ACTUAL_BUNDLE_ID" != "Not found" ] && [ "$ACTUAL_BUNDLE_ID" != "(null)" ]; then
+              echo "🔄 Updating bundleId in JSON file..."
+              
+              # Create a backup of the original file
+              cp "$APP_JSON_PATH" "${APP_JSON_PATH}.bak"
+              
+              # Update the bundleId in the JSON file using jq
+              jq --arg new_bundle_id "$ACTUAL_BUNDLE_ID" '.bundleId = $new_bundle_id' "$APP_JSON_PATH" > "${APP_JSON_PATH}.tmp"
+              mv "${APP_JSON_PATH}.tmp" "$APP_JSON_PATH"
+              
+              echo "✅ Updated bundleId in $APP_JSON_PATH to '$ACTUAL_BUNDLE_ID'"
+              echo "CHANGES_MADE=true" >> $GITHUB_ENV
+            else
+              echo "⚠️ Could not extract a valid bundleId"
+            fi
+            
+            echo "==============================================="
+          done
+
+      - name: Commit and push changes
+        if: env.CHANGES_MADE == 'true'
+        run: |
+          echo "📝 Committing bundleId changes to repository..."
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Check if there are changes to commit
+          if git diff --quiet -- "Apps/"; then
+            echo "No changes to commit"
+          else
+            echo "Changes detected, committing..."
+            git add "Apps/"
+            git commit -m "Update missing bundleIds for apps"
+            
+            # Push using the PAT for authentication
+            echo "Pushing changes to repository..."
+            git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+            
+            if [ $? -eq 0 ]; then
+              echo "✅ Successfully pushed changes to repository"
+            else
+              echo "❌ Failed to push changes to repository"
+              echo "Trying alternative push method..."
+              git push
+            fi
+          fi
+
+      - name: Output summary
+        run: |
+          # Create a summary for GitHub Actions
+          echo "## BundleID Update Results" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Apps Processed | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
+
+          if [ "$CHANGES_MADE" = "true" ]; then
+            echo "The following apps had their bundleIds updated:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # List all modified JSON files
+            git diff --name-only -- "Apps/" | while read -r file; do
+              app_name=$(basename "$file" .json)
+              bundle_id=$(jq -r '.bundleId' "$file")
+              echo "- $app_name: $bundle_id" >> $GITHUB_STEP_SUMMARY
+            done
+          fi
