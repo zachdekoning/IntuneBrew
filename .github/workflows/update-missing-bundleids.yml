@@ -58,9 +58,10 @@ jobs:
           # Create an array to store apps with missing bundleIds
           APPS_TO_PROCESS=()
 
-          # Create arrays to track missing and processed files
+          # Create arrays to track missing, processed, and skipped files
           MISSING_FILES=()
           PROCESSED_FILES=()
+          SKIPPED_APPS=()
 
           # List all files in the Apps directory for debugging
           echo "Listing all files in Apps directory:"
@@ -398,110 +399,59 @@ jobs:
               echo "⚠️ Could not find app in Applications folder"
               echo "Available apps:"
               ls -la /Applications
+              echo "Skipping this app as it doesn't have a .app file in Applications folder"
               
-              # Check if this might be a CLI tool instead of a GUI app
-              echo "Checking if this is a CLI tool..."
-              
-              # Try to find the executable in common locations
-              CLI_LOCATIONS=(
-                "/usr/local/bin"
-                "/usr/bin"
-                "/opt/homebrew/bin"
-                "/opt/local/bin"
-              )
-              
-              CLI_FOUND=false
-              CLI_PATH=""
-              APP_BASENAME=$(basename "$APP_JSON_PATH" .json | tr '[:upper:]' '[:lower:]')
-              
-              for LOCATION in "${CLI_LOCATIONS[@]}"; do
-                if [ -f "$LOCATION/$APP_BASENAME" ] || [ -f "$LOCATION/${APP_BASENAME/-/_}" ]; then
-                  CLI_FOUND=true
-                  if [ -f "$LOCATION/$APP_BASENAME" ]; then
-                    CLI_PATH="$LOCATION/$APP_BASENAME"
-                  else
-                    CLI_PATH="$LOCATION/${APP_BASENAME/-/_}"
-                  fi
-                  echo "✅ Found CLI tool at $CLI_PATH"
-                  break
-                fi
-              done
-              
-              # For Metasploit Framework specifically
-              if [[ "$APP_NAME" == *"metasploit"* ]] || [[ "$APP_NAME" == *"Metasploit"* ]]; then
-                if [ -d "/opt/metasploit-framework" ]; then
-                  CLI_FOUND=true
-                  CLI_PATH="/opt/metasploit-framework/bin/msfconsole"
-                  echo "✅ Found Metasploit Framework at /opt/metasploit-framework"
-                fi
-              fi
-              
-              if [ "$CLI_FOUND" = true ]; then
-                echo "This appears to be a CLI tool, not a GUI app"
-                # For CLI tools, we'll use a generic bundleId based on the app name
-                ACTUAL_BUNDLE_ID="com.cli.$(echo $APP_BASENAME | tr -d ' ' | tr '[:upper:]' '[:lower:]')"
-                echo "Using generic bundleId for CLI tool: $ACTUAL_BUNDLE_ID"
-                # Skip to the bundleId update section
-                echo "Skipping app path checks for CLI tool"
-              else
-                echo "❌ Could not find app as GUI or CLI tool, skipping"
-                continue
-              fi
+              # Add to skipped apps list for summary
+              SKIPPED_APPS+=("$APP_JSON_PATH - No .app file found")
+              continue
             fi
             
             # Skip app details and bundleId extraction for CLI tools
-            if [ "$CLI_FOUND" = true ]; then
-              echo "Skipping app details and bundleId extraction for CLI tool"
-              # ACTUAL_BUNDLE_ID is already set for CLI tools
-            else
-              echo "📂 App path: $APP_PATH"
-              
-              # Print app details for debugging
-              echo "📋 App details:"
-              ls -la "$APP_PATH"
-              echo "App bundle contents:"
-              ls -la "$APP_PATH/Contents" || echo "Could not access Contents directory"
-              
-              # Get app bundle ID using multiple methods
-              echo "🔍 Extracting bundleId..."
-              
-              # Method 1: Using mdls
-              echo "Trying mdls method..."
-              ACTUAL_BUNDLE_ID=$(mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
-              echo "mdls result: $ACTUAL_BUNDLE_ID"
+            echo "📂 App path: $APP_PATH"
+            
+            # Print app details for debugging
+            echo "📋 App details:"
+            ls -la "$APP_PATH"
+            echo "App bundle contents:"
+            ls -la "$APP_PATH/Contents" || echo "Could not access Contents directory"
+            
+            # Get app bundle ID using multiple methods
+            echo "🔍 Extracting bundleId..."
+            
+            # Method 1: Using mdls
+            echo "Trying mdls method..."
+            ACTUAL_BUNDLE_ID=$(mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
+            echo "mdls result: $ACTUAL_BUNDLE_ID"
+            
+            # Method 2: Using PlistBuddy
+            if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
+              echo "Trying PlistBuddy method..."
+              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+                ACTUAL_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
+                echo "PlistBuddy result: $ACTUAL_BUNDLE_ID"
+              else
+                echo "Info.plist not found at expected location"
+              fi
             fi
             
-            if [ "$CLI_FOUND" != true ]; then
-              # Method 2: Using PlistBuddy
-              if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
-                echo "Trying PlistBuddy method..."
-                if [ -f "$APP_PATH/Contents/Info.plist" ]; then
-                  ACTUAL_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
-                  echo "PlistBuddy result: $ACTUAL_BUNDLE_ID"
-                else
-                  echo "Info.plist not found at expected location"
-                fi
+            # Method 3: Using defaults command
+            if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
+              echo "Trying defaults command method..."
+              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+                ACTUAL_BUNDLE_ID=$(defaults read "$APP_PATH/Contents/Info" CFBundleIdentifier 2>/dev/null || echo "Not found")
+                echo "defaults command result: $ACTUAL_BUNDLE_ID"
               fi
-              
-              # Method 3: Using defaults command
-              if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
-                echo "Trying defaults command method..."
-                if [ -f "$APP_PATH/Contents/Info.plist" ]; then
-                  ACTUAL_BUNDLE_ID=$(defaults read "$APP_PATH/Contents/Info" CFBundleIdentifier 2>/dev/null || echo "Not found")
-                  echo "defaults command result: $ACTUAL_BUNDLE_ID"
-                fi
-              fi
-              
-              # Method 4: Using grep on the Info.plist file
-              if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
-                echo "Trying grep method..."
-                if [ -f "$APP_PATH/Contents/Info.plist" ]; then
-                  # Extract the line with CFBundleIdentifier and the value after it
-                  BUNDLE_ID_LINE=$(grep -A1 "CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" | grep -v "CFBundleIdentifier" | grep -o ">.*<" | sed 's/>//;s/<//g')
-                  if [ -n "$BUNDLE_ID_LINE" ]; then
-                    ACTUAL_BUNDLE_ID="$BUNDLE_ID_LINE"
-                    echo "grep method result: $ACTUAL_BUNDLE_ID"
-                  fi
+            fi
+            
+            # Method 4: Using grep on the Info.plist file
+            if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
+              echo "Trying grep method..."
+              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+                # Extract the line with CFBundleIdentifier and the value after it
+                BUNDLE_ID_LINE=$(grep -A1 "CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" | grep -v "CFBundleIdentifier" | grep -o ">.*<" | sed 's/>//;s/<//g')
+                if [ -n "$BUNDLE_ID_LINE" ]; then
+                  ACTUAL_BUNDLE_ID="$BUNDLE_ID_LINE"
+                  echo "grep method result: $ACTUAL_BUNDLE_ID"
                 fi
               fi
             fi
@@ -553,10 +503,16 @@ jobs:
           # Save the lists to environment variables for the summary step
           echo "MISSING_FILES_COUNT=${#MISSING_FILES[@]}" >> $GITHUB_ENV
           echo "PROCESSED_FILES_COUNT=${#PROCESSED_FILES[@]}" >> $GITHUB_ENV
+          echo "SKIPPED_APPS_COUNT=${#SKIPPED_APPS[@]}" >> $GITHUB_ENV
 
           # Save missing files to a file for the summary step
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
             printf "%s\n" "${MISSING_FILES[@]}" > /tmp/missing_files.txt
+          fi
+
+          # Save skipped apps to a file for the summary step
+          if [ ${#SKIPPED_APPS[@]} -gt 0 ]; then
+            printf "%s\n" "${SKIPPED_APPS[@]}" > /tmp/skipped_apps.txt
           fi
 
       - name: Commit and push changes
@@ -596,6 +552,7 @@ jobs:
           echo "| Apps Processed | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
           echo "| Missing Files | $MISSING_FILES_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Skipped Apps | $SKIPPED_APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Successfully Processed | $PROCESSED_FILES_COUNT |" >> $GITHUB_STEP_SUMMARY
 
           # Add missing files section if any
@@ -606,6 +563,17 @@ jobs:
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
             cat /tmp/missing_files.txt >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Add skipped apps section if any
+          if [ -f "/tmp/skipped_apps.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Skipped Apps" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps were skipped because they don't have a .app file in the Applications folder:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            cat /tmp/skipped_apps.txt >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
           fi
 
