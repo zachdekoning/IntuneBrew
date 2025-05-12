@@ -224,34 +224,62 @@ jobs:
           elif [[ "$FILE_EXT" == "dmg" ]]; then
             echo "Installing from DMG file..." | tee -a install_output.txt
             # Mount the DMG
-            MOUNT_POINT=$(hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly | tail -n 1 | awk '{print $NF}')
+            MOUNT_POINT=$(hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly | grep Volumes | awk '{print $3}')
             echo "Mounted at: $MOUNT_POINT" | tee -a install_output.txt
             
             # List DMG contents for debugging
             echo "DMG contents:" | tee -a install_output.txt
             ls -la "$MOUNT_POINT" | tee -a install_output.txt
             
-            # Simple approach: First check for .app files
-            APP_IN_DMG=$(find "$MOUNT_POINT" -name "*.app" -maxdepth 3 | head -n 1)
+            # Try multiple approaches to find the app
+            
+            # 1. First check for .app files directly in the mount point
+            APP_IN_DMG=$(find "$MOUNT_POINT" -maxdepth 1 -name "*.app" | head -n 1)
+            
+            # 2. If not found, search deeper with increased depth
+            if [ -z "$APP_IN_DMG" ]; then
+              APP_IN_DMG=$(find "$MOUNT_POINT" -maxdepth 5 -name "*.app" | head -n 1)
+            fi
+            
+            # 3. If still not found, try to find by app name
+            if [ -z "$APP_IN_DMG" ]; then
+              APP_IN_DMG=$(find "$MOUNT_POINT" -maxdepth 5 -name "*$APP_DISPLAY_NAME*.app" -o -name "*$APP_NAME*.app" | head -n 1)
+            fi
+            
             if [ -n "$APP_IN_DMG" ]; then
               echo "Found app: $(basename "$APP_IN_DMG")" | tee -a install_output.txt
               sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
               INSTALL_STATUS=$?
             else
               # Check for pkg files in the DMG
-              PKG_IN_DMG=$(find "$MOUNT_POINT" -name "*.pkg" -maxdepth 3 | head -n 1)
+              PKG_IN_DMG=$(find "$MOUNT_POINT" -maxdepth 5 -name "*.pkg" | head -n 1)
               if [ -n "$PKG_IN_DMG" ]; then
                 echo "Found pkg inside DMG: $(basename "$PKG_IN_DMG")" | tee -a install_output.txt
                 sudo installer -pkg "$PKG_IN_DMG" -target / >> install_output.txt 2>&1
                 INSTALL_STATUS=$?
               else
-                echo "No installable content found in DMG" | tee -a install_output.txt
-                INSTALL_STATUS=1
-              fi
-            fi
-            
+                # Try to find any installer or app that might be there
+                INSTALLER_IN_DMG=$(find "$MOUNT_POINT" -maxdepth 5 -name "*install*" -o -name "*setup*" | grep -v -i "readme\|manual\|guide" | head -n 1)
+                if [ -n "$INSTALLER_IN_DMG" ]; then
+                  echo "Found potential installer: $(basename "$INSTALLER_IN_DMG")" | tee -a install_output.txt
+                  if [[ "$INSTALLER_IN_DMG" == *.app ]]; then
+                    # It's an installer app, copy it and run it
+                    TMP_INSTALLER="/tmp/$(basename "$INSTALLER_IN_DMG")"
+                    sudo cp -R "$INSTALLER_IN_DMG" "$TMP_INSTALLER" >> install_output.txt 2>&1
+                    open "$TMP_INSTALLER" >> install_output.txt 2>&1
+                    # Give it some time to run
+                    sleep 30
+                    INSTALL_STATUS=0
+                  else
+                    echo "Found installer but don't know how to run it" | tee -a install_output.txt
+                    INSTALL_STATUS=1
+                  fi
+                else
+                  echo "No installable content found in DMG" | tee -a install_output.txt
+                  INSTALL_STATUS=1
+                fi
             # Unmount the DMG
-            hdiutil detach "$MOUNT_POINT" -quiet
+            hdiutil detach "$MOUNT_POINT" -quiet || hdiutil detach "$MOUNT_POINT" -force -quiet
 
           elif [[ "$FILE_EXT" == "zip" ]]; then
             echo "Installing from ZIP file..." | tee -a install_output.txt
