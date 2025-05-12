@@ -18,9 +18,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                      <p>
+                                                                                                                                                                                                                                                                                                        <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-502-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-506-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -151,7 +151,7 @@ Follow the interactive prompts to:
 | <img src='Logos/antinote.png' width='32' height='32'> Antinote | 1.1.5 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.2 |
-| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.8 |
+| <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.9 |
 | <img src='Logos/apifox.png' width='32' height='32'> Apifox | 2.7.9 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.94.0 |
@@ -239,7 +239,7 @@ Follow the interactive prompts to:
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.345 |
 | <img src='Logos/displaylink_usb_graphics_software.png' width='32' height='32'> DisplayLink USB Graphics Software | 1.12.2 |
-| <img src='Logos/dockdoor.png' width='32' height='32'> DockDoor | 1.9 |
+| <img src='Logos/dockdoor.png' width='32' height='32'> DockDoor | 1.9.1 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.2 |
 | <img src='Logos/dockside.png' width='32' height='32'> Dockside | 1.9.54 |
 | <img src='Logos/dosbox.png' width='32' height='32'> DOSBox | 0.74-3 |
@@ -302,7 +302,7 @@ Follow the interactive prompts to:
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2025.1 |
 | <img src='Logos/google_ads_editor.png' width='32' height='32'> Google Ads Editor | 2.9 |
 | <img src='Logos/google_chrome.png' width='32' height='32'> Google Chrome | 136.0.7103.93 |
-| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 107.0.3 |
+| <img src='Logos/google_drive.png' width='32' height='32'> Google Drive | 108.0.1 |
 | <img src='Logos/goose.png' width='32' height='32'> Goose | 1.0.23 |
 | <img src='Logos/gpt_fdisk.png' width='32' height='32'> GPT fdisk | 1.0.10 |
 | <img src='Logos/grammarly_desktop.png' width='32' height='32'> Grammarly Desktop | 1.117.0.0 |
@@ -361,6 +361,7 @@ Follow the interactive prompts to:
 | <img src='Logos/librewolf.png' width='32' height='32'> LibreWolf | 138.0.1 |
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.15 |
+| ❌ LocalSend | 1.17.0 |
 | <img src='Logos/logitech_g_hub.png' width='32' height='32'> Logitech G HUB | 2025.3.696161 |
 | <img src='Logos/logitech_options.png' width='32' height='32'> Logitech Options+ | 1.89.705126 |
 | <img src='Logos/lookaway.png' width='32' height='32'> LookAway | 1.12.1 |
@@ -394,6 +395,7 @@ Follow the interactive prompts to:
 | <img src='Logos/microsoft_teams.png' width='32' height='32'> Microsoft Teams | 25093.2105.3614.8220 |
 | <img src='Logos/microsoft_visual_studio_code.png' width='32' height='32'> Microsoft Visual Studio Code | 1.100.0 |
 | <img src='Logos/middle.png' width='32' height='32'> Middle | 1.9 |
+| ❌ MiddleClick | 3.0.1 |
 | <img src='Logos/mindmanager.png' width='32' height='32'> Mindmanager | 24.1.155 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.10.96 |
 | <img src='Logos/mist.png' width='32' height='32'> Mist | 0.20.1 |
@@ -449,6 +451,7 @@ Follow the interactive prompts to:
 | <img src='Logos/omnissa_horizon_client.png' width='32' height='32'> Omnissa Horizon Client | 2503-8.15.0-14236092062 |
 | <img src='Logos/onedrive.png' width='32' height='32'> OneDrive | 25.051.0317.0003 |
 | <img src='Logos/onyx.png' width='32' height='32'> OnyX | 4.6.2 |
+| ❌ OpenMTP | 3.2.25 |
 | <img src='Logos/openvpn_connect_client.png' width='32' height='32'> OpenVPN Connect client | 3.7.1 |
 | <img src='Logos/opera.png' width='32' height='32'> Opera | 118.0.5461.83 |
 | <img src='Logos/oracle_virtualbox.png' width='32' height='32'> Oracle VirtualBox | 7.1.8 |
@@ -495,6 +498,7 @@ Follow the interactive prompts to:
 | <img src='Logos/proxyman.png' width='32' height='32'> Proxyman | 5.19.0 |
 | <img src='Logos/ps_remote_play.png' width='32' height='32'> PS Remote Play | 8.0.0 |
 | <img src='Logos/pulsar.png' width='32' height='32'> Pulsar | 1.128.0 |
+| ❌ qBittorrent | 5.0.5 |
 | <img src='Logos/qlab.png' width='32' height='32'> QLab | 5.4.10 |
 | <img src='Logos/qq.png' width='32' height='32'> QQ | 6.9.70 |
 | <img src='Logos/qspace_pro.png' width='32' height='32'> QSpace Pro | 5.3.4 |
@@ -527,7 +531,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2025.05.0 |
 | <img src='Logos/rsyncui.png' width='32' height='32'> RsyncUI | 2.4.1 |
-| <img src='Logos/rustdesk.png' width='32' height='32'> RustDesk | 1.3.9 |
+| <img src='Logos/rustdesk.png' width='32' height='32'> RustDesk | 1.4.0 |
 | <img src='Logos/sabnzbd.png' width='32' height='32'> SABnzbd | 4.5.1 |
 | <img src='Logos/santa.png' width='32' height='32'> Santa | 2025.4 |
 | <img src='Logos/screenfocus.png' width='32' height='32'> ScreenFocus | 1.1.1 |

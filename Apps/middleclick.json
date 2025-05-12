@@ -1,0 +1,11 @@
+{
+  "name": "MiddleClick",
+  "description": "Utility to extend trackpad functionality",
+  "version": "3.0.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/middleclick_3.0.1.pkg",
+  "bundleId": "art.ginzburg.MiddleClick",
+  "homepage": "https://github.com/artginzburg/MiddleClick",
+  "fileName": "middleclick_3.0.1.pkg",
+  "type": "app",
+  "sha": "32184d9570dd009986aafde14626ef29055b3d5b065f3556cd0c41c665a12996"
+}
