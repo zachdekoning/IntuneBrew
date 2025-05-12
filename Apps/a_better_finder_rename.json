@@ -7,5 +7,14 @@
   "homepage": "https://www.publicspace.net/ABetterFinderRename/",
   "fileName": "ABFRX12.dmg",
   "sha": "e4cb0b943563723a156114c738e89b4720c6548430c5acb5fcd8541bf29c0c51",
-  "previous_version": "12.12"
+  "previous_version": "12.12",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T08:37:40Z",
+    "qa_result": "Failed to mount DMG",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "failed",
+    "verify_status": "pending",
+    "bundle_id_status": "pending"
+  }
 }
