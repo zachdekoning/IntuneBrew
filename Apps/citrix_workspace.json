@@ -10,7 +10,7 @@
   "changelog": "https://docs.citrix.com/en-us/citrix-workspace-app-for-mac/whats-new.html",
   "previous_version": "25.03.0.95",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T11:47:37Z",
+    "qa_timestamp": "2025-05-12T12:24:02Z",
     "qa_result": "SHA verification failed",
     "download_status": "success",
     "sha_status": "failed",

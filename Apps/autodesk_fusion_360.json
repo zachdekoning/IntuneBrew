@@ -10,7 +10,7 @@
   "changelog": "https://help.autodesk.com/view/fusion360/ENU/",
   "previous_version": "latest",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T11:42:15Z",
+    "qa_timestamp": "2025-05-12T12:18:22Z",
     "qa_result": "SHA verification failed",
     "download_status": "success",
     "sha_status": "failed",

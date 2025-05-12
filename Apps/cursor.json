@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "d4c249dd968c04e775a69e1f0db0e309b4e070656e9868bd45a0367e889ce81f",
   "changelog": "https://www.cursor.com/changelog",
-  "previous_version": "0.49.6"
+  "previous_version": "0.49.6",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T12:24:04Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "0.49.6"
+  }
 }

@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "50f4387eaecb685655fae8ecca6434879037a2f8d2568f63ac02bced13c731f0",
   "changelog": "https://daisydiskapp.com/changelog/",
-  "previous_version": "4.31"
+  "previous_version": "4.31",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T12:24:44Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "4.31"
+  }
 }

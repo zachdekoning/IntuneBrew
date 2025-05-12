@@ -7,5 +7,14 @@
   "homepage": "https://www.synaptics.com/products/displaylink-graphics",
   "fileName": "DisplayLink%20Manager%20Graphics%20Connectivity1.12.2-EXE.pkg",
   "type": "pkg",
-  "previous_version": "1.12.2"
+  "previous_version": "1.12.2",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T12:26:36Z",
+    "qa_result": "App not found after installation",
+    "download_status": "success",
+    "sha_status": "not_provided",
+    "install_status": "success",
+    "verify_status": "app_not_found",
+    "bundle_id_status": "pending"
+  }
 }

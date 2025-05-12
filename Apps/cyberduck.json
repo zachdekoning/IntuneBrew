@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "bb0e502ec8f27a1df73beea2eb067b9d28d324db89c134ece6ac93bcafc985e1",
   "changelog": "https://cyberduck.io/changelog/",
-  "previous_version": "9.1.4"
+  "previous_version": "9.1.4",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T12:24:25Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "9.1.4"
+  }
 }

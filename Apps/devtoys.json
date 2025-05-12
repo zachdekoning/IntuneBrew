@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "806ec612594dbaa569b75d82345397f26f19dc845dd6c508e92ed928a9ab06b5",
   "changelog": "https://github.com/DevToys-app/DevToys/releases",
-  "previous_version": "2.0.8.0"
+  "previous_version": "2.0.8.0",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T12:26:20Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.0.8"
+  }
 }
