@@ -519,8 +519,13 @@ SUCCESSFUL_INSTALLS=()
 FAILED_INSTALLS=()
 SKIPPED_INSTALLS=()
 
-# Read all apps to test
-readarray -t ALL_APPS </tmp/apps_to_test.txt
+# Read all apps to test into an array (compatible with all shells)
+ALL_APPS=()
+if [ -f "/tmp/apps_to_test.txt" ]; then
+    while IFS= read -r line || [ -n "$line" ]; do
+        ALL_APPS+=("$line")
+    done </tmp/apps_to_test.txt
+fi
 
 # Display total number of apps
 TOTAL_APPS=${#ALL_APPS[@]}
