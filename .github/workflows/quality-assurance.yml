@@ -106,7 +106,30 @@ jobs:
         run: |
           echo "📥 Downloading $APP_DISPLAY_NAME from $APP_URL..."
           mkdir -p temp_downloads
-          curl -L -o "temp_downloads/${APP_NAME}.pkg" "$APP_URL"
+
+          # Extract file extension from URL
+          FILE_EXT=$(echo "$APP_URL" | awk -F. '{print tolower($NF)}')
+
+          # Handle URLs that might have query parameters
+          if [[ "$FILE_EXT" == *"?"* ]]; then
+            FILE_EXT=$(echo "$FILE_EXT" | cut -d'?' -f1)
+          fi
+
+          # Set the download filename based on extension
+          if [[ "$FILE_EXT" == "pkg" || "$FILE_EXT" == "dmg" || "$FILE_EXT" == "zip" ]]; then
+            DOWNLOAD_FILENAME="${APP_NAME}.${FILE_EXT}"
+          else
+            # Default to .pkg if extension is unknown or not standard
+            DOWNLOAD_FILENAME="${APP_NAME}.pkg"
+          fi
+
+          echo "File extension detected: $FILE_EXT"
+          echo "Download filename: $DOWNLOAD_FILENAME"
+          echo "FILE_EXT=$FILE_EXT" >> $GITHUB_ENV
+          echo "DOWNLOAD_FILENAME=$DOWNLOAD_FILENAME" >> $GITHUB_ENV
+
+          # Download the file
+          curl -L -o "temp_downloads/$DOWNLOAD_FILENAME" "$APP_URL"
 
           if [ $? -ne 0 ]; then
             echo "::error::Failed to download package from $APP_URL"
@@ -121,7 +144,7 @@ jobs:
           # Verify SHA256 checksum if provided
           if [ -n "$APP_SHA" ] && [ "$APP_SHA" != "null" ]; then
             echo "🔐 Verifying SHA256 checksum..."
-            DOWNLOADED_SHA=$(shasum -a 256 "temp_downloads/${APP_NAME}.pkg" | awk '{print $1}')
+            DOWNLOADED_SHA=$(shasum -a 256 "temp_downloads/$DOWNLOAD_FILENAME" | awk '{print $1}')
             echo "Expected: $APP_SHA"
             echo "Actual: $DOWNLOADED_SHA"
             
@@ -145,12 +168,82 @@ jobs:
         run: |
           echo "📦 Installing $APP_DISPLAY_NAME..."
 
-          # Capture installation output
-          INSTALL_OUTPUT=$(sudo installer -pkg "temp_downloads/${APP_NAME}.pkg" -target / 2>&1)
-          INSTALL_STATUS=$?
+          # Create a file to capture installation output
+          touch install_output.txt
+          INSTALL_STATUS=0
 
-          echo "$INSTALL_OUTPUT" > install_output.txt
+          # Install based on file type
+          if [[ "$FILE_EXT" == "pkg" ]]; then
+            echo "Installing PKG file..." | tee -a install_output.txt
+            sudo installer -pkg "temp_downloads/$DOWNLOAD_FILENAME" -target / >> install_output.txt 2>&1
+            INSTALL_STATUS=$?
 
+          elif [[ "$FILE_EXT" == "dmg" ]]; then
+            echo "Installing from DMG file..." | tee -a install_output.txt
+            # Mount the DMG
+            MOUNT_POINT=$(hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly | tail -n 1 | awk '{print $NF}')
+            echo "Mounted at: $MOUNT_POINT" | tee -a install_output.txt
+            
+            # Find .app files in the DMG
+            APP_IN_DMG=$(find "$MOUNT_POINT" -name "*.app" -maxdepth 2 | head -n 1)
+            
+            if [ -n "$APP_IN_DMG" ]; then
+              APP_NAME_IN_DMG=$(basename "$APP_IN_DMG")
+              echo "Found app: $APP_NAME_IN_DMG" | tee -a install_output.txt
+              
+              # Copy the app to Applications
+              sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
+              INSTALL_STATUS=$?
+              
+              # Check if there's a pkg file inside the DMG (for pkg_in_dmg type)
+              if [ $INSTALL_STATUS -ne 0 ]; then
+                PKG_IN_DMG=$(find "$MOUNT_POINT" -name "*.pkg" -maxdepth 2 | head -n 1)
+                if [ -n "$PKG_IN_DMG" ]; then
+                  echo "Found pkg inside DMG: $PKG_IN_DMG" | tee -a install_output.txt
+                  sudo installer -pkg "$PKG_IN_DMG" -target / >> install_output.txt 2>&1
+                  INSTALL_STATUS=$?
+                fi
+              fi
+            else
+              echo "No .app file found in DMG" | tee -a install_output.txt
+              INSTALL_STATUS=1
+            fi
+            
+            # Unmount the DMG
+            hdiutil detach "$MOUNT_POINT" -quiet
+
+          elif [[ "$FILE_EXT" == "zip" ]]; then
+            echo "Installing from ZIP file..." | tee -a install_output.txt
+            # Create a temporary directory for extraction
+            mkdir -p temp_extract
+            
+            # Extract the ZIP file
+            unzip -q "temp_downloads/$DOWNLOAD_FILENAME" -d temp_extract >> install_output.txt 2>&1
+            
+            # Find .app files in the extracted content
+            APP_IN_ZIP=$(find "temp_extract" -name "*.app" -maxdepth 2 | head -n 1)
+            
+            if [ -n "$APP_IN_ZIP" ]; then
+              APP_NAME_IN_ZIP=$(basename "$APP_IN_ZIP")
+              echo "Found app: $APP_NAME_IN_ZIP" | tee -a install_output.txt
+              
+              # Copy the app to Applications
+              sudo cp -R "$APP_IN_ZIP" "/Applications/" >> install_output.txt 2>&1
+              INSTALL_STATUS=$?
+            else
+              echo "No .app file found in ZIP" | tee -a install_output.txt
+              INSTALL_STATUS=1
+            fi
+            
+            # Clean up
+            rm -rf temp_extract
+
+          else
+            echo "Unsupported file type: $FILE_EXT" | tee -a install_output.txt
+            INSTALL_STATUS=1
+          fi
+
+          # Check installation status
           if [ $INSTALL_STATUS -ne 0 ]; then
             echo "❌ Installation failed"
             echo "Installation output:"
