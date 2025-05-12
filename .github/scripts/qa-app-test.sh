@@ -21,6 +21,51 @@ for arg in "$@"; do
     esac
 done
 
+# Function for thorough cleanup to reclaim disk space
+perform_cleanup() {
+    echo "🧹 Performing thorough cleanup to reclaim disk space..."
+
+    # Clean up temporary directories
+    echo "Cleaning up temporary directories..."
+    rm -rf /tmp/temp_* || true
+
+    # Unmount any DMGs that might be left mounted
+    echo "Unmounting any DMGs..."
+    for vol in $(hdiutil info | grep "/Volumes/" | awk '{print $1}'); do
+        echo "Unmounting volume: $vol"
+        hdiutil detach $vol -force 2>/dev/null || true
+    done
+
+    # Remove downloaded packages from current directory
+    echo "Removing downloaded packages..."
+    find . -type f \( -name "*.dmg" -o -name "*.pkg" -o -name "*.zip" \) -delete || true
+
+    # Clean up /tmp directory
+    echo "Cleaning up /tmp directory..."
+    rm -rf /tmp/*.dmg /tmp/*.pkg /tmp/*.zip || true
+
+    # Clean up any extracted files
+    echo "Cleaning up extracted files..."
+    rm -rf /tmp/app_extracted* || true
+
+    # Clean up any log files
+    echo "Cleaning up log files..."
+    rm -rf /tmp/*.log || true
+
+    # Run git garbage collection to compress git objects
+    echo "Running git garbage collection..."
+    git gc --aggressive --prune=now || true
+
+    # Clean up any cached files in the home directory
+    echo "Cleaning up cache files..."
+    rm -rf ~/Library/Caches/* 2>/dev/null || true
+
+    # Display disk space after cleanup
+    AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
+    AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
+    echo "Available disk space after cleanup: $AVAILABLE_SPACE_MB MB"
+}
+
 # Function to check available disk space
 check_disk_space() {
     # Get available disk space in KB
@@ -32,12 +77,7 @@ check_disk_space() {
     # If less than 2GB available, clean up and warn
     if [ $AVAILABLE_SPACE_MB -lt 2048 ]; then
         echo "⚠️ Low disk space detected ($AVAILABLE_SPACE_MB MB). Cleaning up..."
-        # Clean up temporary files
-        rm -rf /tmp/temp_*
-        # Clean up any mounted DMGs
-        hdiutil detach /Volumes/AppDMG -force 2>/dev/null || true
-        # Remove downloaded packages
-        rm -rf *.dmg *.pkg *.zip
+        perform_cleanup
 
         # Check space again
         AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
@@ -571,15 +611,11 @@ for ((i = 0; i < TOTAL_APPS; i += BATCH_SIZE)); do
         echo "Changes committed for batch $CURRENT_BATCH"
     fi
 
-    # Force cleanup between batches
-    echo "Cleaning up between batches..."
-    rm -rf /tmp/temp_*
-    hdiutil detach /Volumes/AppDMG -force 2>/dev/null || true
-    rm -rf *.dmg *.pkg *.zip
+    # Force thorough cleanup between batches
+    echo "Performing thorough cleanup between batches..."
+    perform_cleanup
 
     # Display disk space after batch
-    AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
-    AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
     echo "Available disk space after batch $CURRENT_BATCH: $AVAILABLE_SPACE_MB MB"
 
     # If critically low on space, stop processing
