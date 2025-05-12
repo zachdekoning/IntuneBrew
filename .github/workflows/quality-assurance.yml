@@ -224,12 +224,44 @@ jobs:
           elif [[ "$FILE_EXT" == "dmg" ]]; then
             echo "Installing from DMG file..." | tee -a install_output.txt
             # Mount the DMG
-            MOUNT_POINT=$(hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly | grep Volumes | awk '{print $3}')
-            echo "Mounted at: $MOUNT_POINT" | tee -a install_output.txt
+            # Attempt to mount the DMG, adding -noverify and -noautoopen for CI environments
+            # Capture stderr along with stdout using 2>&1
+            echo "Attempting to mount DMG: temp_downloads/$DOWNLOAD_FILENAME with flags -nobrowse -readonly -noverify -noautoopen" | tee -a install_output.txt
+            ATTACH_CMD_OUTPUT=$(hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly -noverify -noautoopen 2>&1)
+            ATTACH_CMD_STATUS=$?
+
+            echo "hdiutil attach command raw output (status: $ATTACH_CMD_STATUS):" | tee -a install_output.txt
+            echo "$ATTACH_CMD_OUTPUT" | tee -a install_output.txt
+
+            MOUNT_POINT="" # Initialize MOUNT_POINT
+
+            if [ $ATTACH_CMD_STATUS -eq 0 ]; then
+              # Parse mount point more robustly from successful output
+              # This regex extracts the full path starting with /Volumes/ up to the end of the line
+              MOUNT_POINT=$(echo "$ATTACH_CMD_OUTPUT" | grep -oE '/Volumes/.*' | tail -n 1)
+              if [ -z "$MOUNT_POINT" ]; then
+                echo "DMG attach command succeeded (status 0), but could not parse mount point from output. MOUNT_POINT remains empty." | tee -a install_output.txt
+              else
+                # Further check if the parsed MOUNT_POINT actually exists as a directory
+                if [ -d "$MOUNT_POINT" ]; then
+                  echo "DMG successfully mounted at: $MOUNT_POINT" | tee -a install_output.txt
+                else
+                  echo "DMG attach command succeeded and mount point '$MOUNT_POINT' was parsed, but it is not a valid directory." | tee -a install_output.txt
+                  MOUNT_POINT="" # Invalidate mount point if it's not a directory
+                fi
+              fi
+            else
+              echo "DMG attach command failed with status $ATTACH_CMD_STATUS. MOUNT_POINT will be empty." | tee -a install_output.txt
+              # MOUNT_POINT remains empty as initialized
+            fi
             
-            # List DMG contents for debugging
-            echo "DMG contents:" | tee -a install_output.txt
-            ls -la "$MOUNT_POINT" | tee -a install_output.txt
+            # List DMG contents for debugging, only if MOUNT_POINT is valid
+            echo "Listing DMG contents (if mount was successful and path is valid):" | tee -a install_output.txt
+            if [ -n "$MOUNT_POINT" ]; then # MOUNT_POINT should be non-empty and a directory (checked above)
+                ls -la "$MOUNT_POINT" | tee -a install_output.txt
+            else
+                echo "Mount point is not set or invalid. Cannot list DMG contents." | tee -a install_output.txt
+            fi
             
             # Try multiple approaches to find the app
             
