@@ -197,8 +197,9 @@ test_app() {
     # Initialize QA info object as a JSON string
     QA_INFO='{"qa_timestamp":"'$TIMESTAMP'","qa_result":"pending","download_status":"pending","sha_status":"pending","install_status":"pending","verify_status":"pending","bundle_id_status":"pending"}'
 
-    # Create a temporary directory for this app
+    # Create a temporary directory for this app (replace spaces with underscores)
     TEMP_DIR="/tmp/temp_${APP_NAME// /_}"
+    echo "Creating temporary directory: $TEMP_DIR"
     mkdir -p "$TEMP_DIR"
     cd "$TEMP_DIR"
 
@@ -353,6 +354,7 @@ test_app() {
             # Find the .app file in the mounted DMG
             echo "🔍 Finding .app in DMG..."
             DMG_APP=$(find "$MOUNT_POINT" -maxdepth 1 -name "*.app" | head -1)
+            echo "Found DMG app: $DMG_APP"
 
             if [ -z "$DMG_APP" ]; then
                 echo "❌ Could not find .app file in DMG"
@@ -364,7 +366,8 @@ test_app() {
 
                 # Copy the app to Applications folder
                 echo "📋 Copying app to Applications folder..."
-                cp -R "$DMG_APP" /Applications/
+                # Use quotes to handle paths with spaces
+                cp -R "$DMG_APP" "/Applications/"
 
                 if [ $? -ne 0 ]; then
                     echo "❌ Failed to copy app to Applications folder"
@@ -398,6 +401,7 @@ test_app() {
             # Find the .app file in the extracted contents
             echo "🔍 Finding .app in extracted contents..."
             ZIP_APP=$(find "$EXTRACT_DIR" -name "*.app" -type d | head -1)
+            echo "Found ZIP app: $ZIP_APP"
 
             if [ -z "$ZIP_APP" ]; then
                 echo "❌ Could not find .app file in ZIP contents"
@@ -409,7 +413,8 @@ test_app() {
 
                 # Copy the app to Applications folder
                 echo "📋 Copying app to Applications folder..."
-                cp -R "$ZIP_APP" /Applications/
+                # Use quotes to handle paths with spaces
+                cp -R "$ZIP_APP" "/Applications/"
 
                 if [ $? -ne 0 ]; then
                     echo "❌ Failed to copy app to Applications folder"
@@ -437,7 +442,8 @@ test_app() {
 
         # Try different search strategies to find the app
         # Strategy 1: Direct match with app name
-        APP_PATH=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$APP_NAME" || echo "")
+        # Use grep with quotes and escape special characters in app name
+        APP_PATH=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$(echo "$APP_NAME" | sed 's/[\/&]/\\&/g')" || echo "")
 
         if [ -n "$APP_PATH" ]; then
             echo "Found app using direct match: $APP_NAME"
@@ -454,8 +460,8 @@ test_app() {
             NORMALIZED_APP_NAME=$(echo "$APP_NAME" | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
             echo "Normalized app name: $NORMALIZED_APP_NAME"
 
-            # List all apps
-            find /Applications -maxdepth 1 -name "*.app" >/tmp/all_apps.txt
+            # List all apps (use quotes to handle paths with spaces)
+            find "/Applications" -maxdepth 1 -name "*.app" >"/tmp/all_apps.txt"
 
             for APP in $(cat /tmp/all_apps.txt); do
                 APP_BASENAME=$(basename "$APP" .app | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | tr 'öäüÖÄÜ' 'oauOAU')
