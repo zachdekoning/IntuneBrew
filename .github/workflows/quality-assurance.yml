@@ -8,19 +8,33 @@ on:
       - completed
   # Allow manual triggering
   workflow_dispatch:
-    inputs:
-      specific_app:
-        description: "Specific app to test (default: 1password)"
-        required: false
-        default: "1password"
-        type: string
 
 jobs:
+  get-app-list:
+    runs-on: ubuntu-latest
+    outputs:
+      app_list: ${{ steps.get-apps.outputs.app_list }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get list of apps
+        id: get-apps
+        run: |
+          APP_LIST=$(ls Apps/*.json | sed 's/Apps\///' | sed 's/\.json//' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "app_list=$APP_LIST" >> $GITHUB_OUTPUT
+          echo "Found $(echo $APP_LIST | jq '. | length') apps to test"
+
   test-installation:
+    needs: get-app-list
     runs-on: macos-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: write # This gives the job permission to write to the repository
+    strategy:
+      fail-fast: false
+      matrix:
+        app_name: ${{ fromJson(needs.get-app-list.outputs.app_list) }}
 
     steps:
       - name: Checkout repository
@@ -31,11 +45,7 @@ jobs:
       - name: Set app to test
         id: set-app
         run: |
-          if [ "${{ github.event.inputs.specific_app }}" != "" ]; then
-            echo "APP_NAME=${{ github.event.inputs.specific_app }}" >> $GITHUB_ENV
-          else
-            echo "APP_NAME=1password" >> $GITHUB_ENV
-          fi
+          echo "APP_NAME=${{ matrix.app_name }}" >> $GITHUB_ENV
 
       - name: Read app information
         id: app-info
