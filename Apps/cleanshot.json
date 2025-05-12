@@ -7,5 +7,15 @@
   "homepage": "https://getcleanshot.com/",
   "fileName": "CleanShot-X-4.7.6.dmg",
   "sha": "677178b8060c5e3d579d5a534792c2b9649c835b1d07aa307f18a28a73307b55",
-  "previous_version": "4.7.6"
+  "previous_version": "4.7.6",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:48:17Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "4.7.6"
+  }
 }

@@ -8,5 +8,15 @@
   "fileName": "CLion-2025.1.1-aarch64.dmg",
   "sha": "475280e277cc94d18de228bf5f81ebd6ff14084c2e1d2b0db5b4612007dc46fe",
   "changelog": "https://www.jetbrains.com/clion/whatsnew/",
-  "previous_version": "2025.1.1"
+  "previous_version": "2025.1.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:48:18Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2025.1.1"
+  }
 }

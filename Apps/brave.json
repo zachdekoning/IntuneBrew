@@ -8,5 +8,15 @@
   "fileName": "Brave-Browser-arm64.dmg",
   "sha": "2fcfdd67f5986f1b937babbd4a55d779b940534e6064e484064bc16cf53a3918",
   "changelog": "https://brave.com/latest/",
-  "previous_version": "1.78.97.0"
+  "previous_version": "1.78.97.0",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:45:04Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "136.1.78.97"
+  }
 }

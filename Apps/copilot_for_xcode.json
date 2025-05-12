@@ -8,5 +8,15 @@
   "fileName": "copilot_for_xcode_0.35.8.pkg",
   "type": "app",
   "sha": "6999e7568ee8bd09ec21e06c0f9c78aa96dd8df8a4f8d61a20f00c93ce1eaf9f",
-  "previous_version": "0.35.8"
+  "previous_version": "0.35.8",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:49:37Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "0.35.8"
+  }
 }

@@ -7,5 +7,15 @@
   "homepage": "https://cryptomator.org/",
   "fileName": "Cryptomator-1.16.1-arm64.dmg",
   "sha": "702d9661c8f57c02ed54a253c01ee718269e3ed06e8b4bfef17aa89d193f631c",
-  "previous_version": "1.16.1"
+  "previous_version": "1.16.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:49:53Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.16.1"
+  }
 }

@@ -8,5 +8,14 @@
   "fileName": "CitrixWorkspaceAppUniversal25.03.0.95.pkg",
   "sha": "ed8f256bfba0973274b866d4697dec2aa14d2dff426d606f6b4ba91b507d6bbf",
   "changelog": "https://docs.citrix.com/en-us/citrix-workspace-app-for-mac/whats-new.html",
-  "previous_version": "25.03.0.95"
+  "previous_version": "25.03.0.95",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:47:37Z",
+    "qa_result": "SHA verification failed",
+    "download_status": "success",
+    "sha_status": "failed",
+    "install_status": "pending",
+    "verify_status": "pending",
+    "bundle_id_status": "pending"
+  }
 }

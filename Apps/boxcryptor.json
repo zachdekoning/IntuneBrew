@@ -10,7 +10,7 @@
   "changelog": "https://www.boxcryptor.com/en/help/boxcryptor-release-notes/",
   "previous_version": "3.13.680",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T11:27:38Z",
+    "qa_timestamp": "2025-05-12T11:45:00Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

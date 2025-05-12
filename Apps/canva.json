@@ -8,5 +8,15 @@
   "fileName": "Canva-1.107.0-universal.dmg",
   "sha": "ed40c417b81db08a12b2de882fb95c48551807d4f4505bab7592163355957934",
   "changelog": "https://www.canva.com/help/canva-desktop-app/",
-  "previous_version": "1.107.0"
+  "previous_version": "1.107.0",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:46:37Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.107.0"
+  }
 }

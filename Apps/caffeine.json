@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "0dc3ec7c122ab61545d16642309ebb6edcad6428ccd30643905cbc25b9fe3a34",
   "changelog": "https://www.caffeine-app.net/",
-  "previous_version": "1.5.1"
+  "previous_version": "1.5.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:45:45Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.5.1"
+  }
 }

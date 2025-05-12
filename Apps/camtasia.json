@@ -8,5 +8,15 @@
   "fileName": "Camtasia.dmg",
   "sha": "198ce7a08ed9eee3f8f6b3fb0c55628bc8aa4822fd1081aef3d66a3af70d0fb7",
   "changelog": "https://support.techsmith.com/hc/en-us/articles/115006443267",
-  "previous_version": "25.1.0"
+  "previous_version": "25.1.0",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:46:23Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "2025.1.0"
+  }
 }
