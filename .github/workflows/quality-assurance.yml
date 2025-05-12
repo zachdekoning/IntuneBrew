@@ -233,7 +233,9 @@ jobs:
             
             # Temporarily disable exit on error to capture hdiutil's output even if it fails
             set +e
-            hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly -noverify -noautoopen > "$HDIUTIL_STDOUT_LOG" 2> "$HDIUTIL_STDERR_LOG"
+            # Define the plist content to auto-accept SLAs
+            SLA_PLIST_CONTENT="<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\"><plist version=\"1.0\"><dict><key>Software License Agreement</key><dict><key>Accept</key><true/></dict></dict></plist>"
+            hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly -noverify -noautoopen -plist "$SLA_PLIST_CONTENT" > "$HDIUTIL_STDOUT_LOG" 2> "$HDIUTIL_STDERR_LOG"
             ATTACH_CMD_STATUS=$?
             # Re-enable exit on error
             set -e
