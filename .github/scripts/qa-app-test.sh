@@ -151,15 +151,36 @@ test_app() {
 
     if [ "$FILE_TYPE" = "dmg" ]; then
         # Mount DMG file
-        echo "� Mounting DMG file..."
+        echo "💿 Mounting DMG file..."
         MOUNT_POINT="/Volumes/AppDMG"
-        hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse
+
+        # Use additional flags to handle non-interactive mounting
+        # -noverify: Skip verification prompts
+        # -noautoopen: Don't automatically open the mounted volume
+        # -quiet: Suppress unnecessary output
+        # -nobrowse: Don't show in Finder
+        hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -noverify -noautoopen -quiet -nobrowse
 
         if [ $? -ne 0 ]; then
             echo "❌ Failed to mount DMG file"
-            QA_INFO=$(echo "$QA_INFO" | jq '.install_status = "failed" | .qa_result = "Failed to mount DMG"')
-            FAILED_INSTALLS+=("$APP_NAME - Failed to mount DMG")
+
+            # Try an alternative approach with yes command to auto-accept license agreements
+            echo "Trying alternative mounting approach..."
+            yes | hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse
+
+            if [ $? -ne 0 ]; then
+                echo "❌ Both mounting approaches failed"
+                QA_INFO=$(echo "$QA_INFO" | jq '.install_status = "failed" | .qa_result = "Failed to mount DMG"')
+                FAILED_INSTALLS+=("$APP_NAME - Failed to mount DMG")
+            else
+                echo "✅ Alternative mounting approach succeeded"
+                DMG_MOUNTED=true
+            fi
         else
+            DMG_MOUNTED=true
+        fi
+
+        if [ "$DMG_MOUNTED" = true ]; then
             # Find the .app file in the mounted DMG
             echo "🔍 Finding .app in DMG..."
             DMG_APP=$(find "$MOUNT_POINT" -maxdepth 1 -name "*.app" | head -1)
