@@ -21,9 +21,35 @@ jobs:
       - name: Get list of apps
         id: get-apps
         run: |
+          # Create a temporary file to store apps that need testing
+          touch apps_to_test.txt
+
+          # Process each app to check if it needs testing
+          for APP_FILE in Apps/*.json; do
+            APP_NAME=$(basename "$APP_FILE" .json)
+            
+            # Extract current version and previously tested version
+            CURRENT_VERSION=$(jq -r '.version' "$APP_FILE")
+            PREVIOUS_QA_VERSION=$(jq -r '.qa_info.installed_version // "none"' "$APP_FILE")
+            HAS_QA_INFO=$(jq 'has("qa_info")' "$APP_FILE")
+            
+            # Skip if app has been tested before and version hasn't changed
+            if [[ "$HAS_QA_INFO" == "true" && "$CURRENT_VERSION" == "$PREVIOUS_QA_VERSION" ]]; then
+              echo "Skipping $APP_NAME - already tested version $CURRENT_VERSION"
+            else
+              # App needs testing - either never tested or version changed
+              echo "$APP_NAME" >> apps_to_test.txt
+              if [[ "$HAS_QA_INFO" == "true" ]]; then
+                echo "Adding $APP_NAME - version changed from $PREVIOUS_QA_VERSION to $CURRENT_VERSION"
+              else
+                echo "Adding $APP_NAME - never tested before"
+              fi
+            fi
+          done
+
           # Get a subset of apps for testing (first 50 apps)
           # Change this number or remove the head command to test all apps
-          APP_LIST=$(ls Apps/*.json | sed 's/Apps\///' | sed 's/\.json//' | head -50 | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          APP_LIST=$(cat apps_to_test.txt | head -50 | jq -R -s -c 'split("\n") | map(select(length > 0))')
           echo "app_list=$APP_LIST" >> $GITHUB_OUTPUT
           echo "Found $(echo $APP_LIST | jq '. | length') apps to test"
 
