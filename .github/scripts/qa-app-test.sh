@@ -6,6 +6,7 @@
 # Parse command line arguments
 FORCE_ALL=false
 BATCH_SIZE=10
+MAX_APPS=0
 for arg in "$@"; do
     case $arg in
     --force)
@@ -18,6 +19,11 @@ for arg in "$@"; do
         echo "Batch size set to $BATCH_SIZE"
         shift
         ;;
+    --max-apps=*)
+        MAX_APPS="${arg#*=}"
+        echo "Maximum apps limit set to $MAX_APPS"
+        shift
+        ;;
     esac
 done
 
@@ -25,9 +31,13 @@ done
 perform_cleanup() {
     echo "🧹 Performing thorough cleanup to reclaim disk space..."
 
+    # Show disk usage before cleanup
+    echo "Disk usage before cleanup:"
+    df -h
+
     # Clean up temporary directories
     echo "Cleaning up temporary directories..."
-    rm -rf /tmp/temp_* || true
+    sudo rm -rf /tmp/temp_* || true
 
     # Unmount any DMGs that might be left mounted
     echo "Unmounting any DMGs..."
@@ -36,31 +46,66 @@ perform_cleanup() {
         hdiutil detach $vol -force 2>/dev/null || true
     done
 
-    # Remove downloaded packages from current directory
+    # Remove downloaded packages from current directory and subdirectories
     echo "Removing downloaded packages..."
     find . -type f \( -name "*.dmg" -o -name "*.pkg" -o -name "*.zip" \) -delete || true
 
-    # Clean up /tmp directory
+    # Clean up /tmp directory more aggressively
     echo "Cleaning up /tmp directory..."
-    rm -rf /tmp/*.dmg /tmp/*.pkg /tmp/*.zip || true
+    sudo rm -rf /tmp/*.dmg /tmp/*.pkg /tmp/*.zip /tmp/*.log /tmp/temp* 2>/dev/null || true
 
     # Clean up any extracted files
     echo "Cleaning up extracted files..."
     rm -rf /tmp/app_extracted* || true
 
-    # Clean up any log files
-    echo "Cleaning up log files..."
-    rm -rf /tmp/*.log || true
+    # Clean up system logs
+    echo "Cleaning up system logs..."
+    sudo rm -rf /var/log/*.log.* 2>/dev/null || true
+    sudo truncate -s 0 /var/log/*.log 2>/dev/null || true
 
     # Run git garbage collection to compress git objects
     echo "Running git garbage collection..."
     git gc --aggressive --prune=now || true
+    git repack -Ad || true # More aggressive repacking
 
     # Clean up any cached files in the home directory
     echo "Cleaning up cache files..."
     rm -rf ~/Library/Caches/* 2>/dev/null || true
+    rm -rf ~/Library/Logs/* 2>/dev/null || true
 
-    # Display disk space after cleanup
+    # Clean up brew cache if homebrew is installed
+    if command -v brew &>/dev/null; then
+        echo "Cleaning up Homebrew cache..."
+        brew cleanup -s || true
+    fi
+
+    # Clean up Docker if installed
+    if command -v docker &>/dev/null; then
+        echo "Cleaning up Docker..."
+        docker system prune -af --volumes 2>/dev/null || true
+    fi
+
+    # Remove recently installed apps if we're critically low on space
+    AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
+    AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
+    if [ $AVAILABLE_SPACE_MB -lt 1024 ]; then
+        echo "⚠️ Critically low disk space, removing recently installed test apps..."
+        # Get list of recently installed apps (in the last hour)
+        RECENT_APPS=$(find /Applications -name "*.app" -cmin -60 -maxdepth 1 2>/dev/null)
+        for app in $RECENT_APPS; do
+            # Skip system apps
+            if [[ "$app" != "/Applications/Safari.app" && "$app" != "/Applications/Mail.app" && "$app" != "/Applications/Calendar.app" ]]; then
+                echo "Removing recently installed app: $app"
+                sudo rm -rf "$app" 2>/dev/null || true
+            fi
+        done
+    fi
+
+    # Show disk usage after cleanup
+    echo "Disk usage after cleanup:"
+    df -h
+
+    # Display available disk space after cleanup
     AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
     AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
     echo "Available disk space after cleanup: $AVAILABLE_SPACE_MB MB"
@@ -565,6 +610,14 @@ if [ -f "/tmp/apps_to_test.txt" ]; then
     while IFS= read -r line || [ -n "$line" ]; do
         ALL_APPS+=("$line")
     done </tmp/apps_to_test.txt
+fi
+
+# Apply max apps limit if specified
+if [ "$MAX_APPS" -gt 0 ] && [ ${#ALL_APPS[@]} -gt "$MAX_APPS" ]; then
+    echo "Limiting to maximum of $MAX_APPS apps (from ${#ALL_APPS[@]} total)"
+    # Create a new array with only the first MAX_APPS elements
+    TEMP_APPS=("${ALL_APPS[@]:0:$MAX_APPS}")
+    ALL_APPS=("${TEMP_APPS[@]}")
 fi
 
 # Display total number of apps

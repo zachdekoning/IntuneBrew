@@ -17,6 +17,10 @@ on:
         description: "Number of apps to process in each batch (for disk space management)"
         required: false
         default: "10"
+      max_apps:
+        description: "Maximum number of apps to process (0 for all apps)"
+        required: false
+        default: "0"
 
 jobs:
   qa-installation:
@@ -77,8 +81,19 @@ jobs:
             done
           fi
 
+          # Apply max_apps limit if specified
+          MAX_APPS="${{ github.event.inputs.max_apps }}"
+          if [ -n "$MAX_APPS" ] && [ "$MAX_APPS" -gt 0 ]; then
+            echo "Limiting to maximum of $MAX_APPS apps"
+            if [ ${#APPS_TO_TEST[@]} -gt $MAX_APPS ]; then
+              echo "Truncating list from ${#APPS_TO_TEST[@]} to $MAX_APPS apps"
+              APPS_TO_TEST=("${APPS_TO_TEST[@]:0:$MAX_APPS}")
+            fi
+          fi
+
           # Save the list of apps to test
           echo "APPS_COUNT=${#APPS_TO_TEST[@]}" >> $GITHUB_ENV
+          echo "MAX_APPS=$MAX_APPS" >> $GITHUB_ENV
 
           # Set force_all flag
           echo "FORCE_ALL=${{ github.event.inputs.force_all }}" >> $GITHUB_ENV
@@ -121,6 +136,11 @@ jobs:
 
           echo "Using batch size of $BATCH_SIZE"
           ARGS="$ARGS --batch-size=$BATCH_SIZE"
+
+          if [ -n "$MAX_APPS" ] && [ "$MAX_APPS" -gt 0 ]; then
+            echo "Using maximum apps limit of $MAX_APPS"
+            ARGS="$ARGS --max-apps=$MAX_APPS"
+          fi
 
           ./.github/scripts/qa-app-test.sh $ARGS
 
@@ -174,6 +194,9 @@ jobs:
           echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
           echo "| Apps Tested | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          if [ -n "$MAX_APPS" ] && [ "$MAX_APPS" -gt 0 ]; then
+            echo "| Max Apps Limit | $MAX_APPS |" >> $GITHUB_STEP_SUMMARY
+          fi
           echo "| Batch Size | $BATCH_SIZE |" >> $GITHUB_STEP_SUMMARY
           echo "| Batches Processed | $BATCH_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Successful Installations | $SUCCESSFUL_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
