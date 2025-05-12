@@ -1,9 +1,9 @@
 name: Update Missing BundleIDs
 
 on:
-  # Run after the update-version-database workflow completes
+  # Run after the generate-uninstall-scripts workflow completes
   workflow_run:
-    workflows: ["Update Version Database and Send Notifications"]
+    workflows: ["Generate Uninstall Scripts"]
     types:
       - completed
   # Allow manual triggering
