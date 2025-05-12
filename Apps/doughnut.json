@@ -8,5 +8,15 @@
   "fileName": "Doughnut-2.0.1.dmg",
   "sha": "56e2a41087ee9793b667feaa1bef2e96e20cee6ff7cd8bee4a9acbd1ca1e8aeb",
   "changelog": "https://github.com/dyerc/Doughnut/releases",
-  "previous_version": "2.0.1"
+  "previous_version": "2.0.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:23:01Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.0.1"
+  }
 }

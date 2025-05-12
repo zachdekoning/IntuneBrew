@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "1b9c62bad6ed55594c590725d309db4b059e5822c9beddaa1f946feacc02d230",
   "changelog": "https://binaryfruit.com/drivedx/updates",
-  "previous_version": "1.12.1"
+  "previous_version": "1.12.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:23:19Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.12.1"
+  }
 }

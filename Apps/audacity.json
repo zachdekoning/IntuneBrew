@@ -10,7 +10,7 @@
   "changelog": "https://support.audacityteam.org/additional-resources/changelog",
   "previous_version": "3.7.3",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:18:20Z",
+    "qa_timestamp": "2025-05-12T14:16:21Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

@@ -9,7 +9,7 @@
   "sha": "e04d40fbbc0040a73211a6ee3d5fdbb6d4fe9fa24ca553edc0fd6d46c2e95a96",
   "previous_version": "5.3.8",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:21:19Z",
+    "qa_timestamp": "2025-05-12T14:19:38Z",
     "qa_result": "Installation failed",
     "download_status": "success",
     "sha_status": "verified",

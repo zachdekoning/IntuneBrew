@@ -10,7 +10,7 @@
   "changelog": "https://brave.com/latest/",
   "previous_version": "1.78.97.0",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:21:39Z",
+    "qa_timestamp": "2025-05-12T14:20:04Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

@@ -7,5 +7,15 @@
   "homepage": "https://ente.io/",
   "fileName": "ente-1.7.12-universal.dmg",
   "sha": "1674c7c155549a9198b85e2791671a66a89f038abe601524bb82c0687548ec0c",
-  "previous_version": "1.7.12"
+  "previous_version": "1.7.12",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:25:35Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.7.12"
+  }
 }

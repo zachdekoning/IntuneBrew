@@ -9,7 +9,7 @@
   "type": "pkg",
   "previous_version": "1.12.2",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:26:36Z",
+    "qa_timestamp": "2025-05-12T14:22:48Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "not_provided",

@@ -10,7 +10,7 @@
   "changelog": "https://github.com/corretto/corretto-21/releases",
   "previous_version": "21.0.7.6.1",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:18:35Z",
+    "qa_timestamp": "2025-05-12T14:16:35Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "verified",

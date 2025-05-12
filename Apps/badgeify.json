@@ -10,7 +10,7 @@
   "changelog": "https://badgeify.app/changelog",
   "previous_version": "1.6.5",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:18:46Z",
+    "qa_timestamp": "2025-05-12T14:16:49Z",
     "qa_result": "Installation failed",
     "download_status": "success",
     "sha_status": "verified",

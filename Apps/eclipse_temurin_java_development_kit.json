@@ -8,5 +8,14 @@
   "fileName": "OpenJDK24U-jdk_aarch64_mac_hotspot_24.0.1_9.pkg",
   "sha": "c8d398df57c0af991a79dbef67eadb392aac1c27074ac743fc5b76b639b988ba",
   "changelog": "https://adoptium.net/de/temurin/releases/?os=mac&version=23",
-  "previous_version": "24.0.1"
+  "previous_version": "24.0.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:24:12Z",
+    "qa_result": "App not found after installation",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_not_found",
+    "bundle_id_status": "pending"
+  }
 }

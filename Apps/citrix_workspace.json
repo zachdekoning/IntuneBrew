@@ -10,12 +10,13 @@
   "changelog": "https://docs.citrix.com/en-us/citrix-workspace-app-for-mac/whats-new.html",
   "previous_version": "25.03.0.95",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:24:02Z",
-    "qa_result": "SHA verification failed",
+    "qa_timestamp": "2025-05-12T14:21:57Z",
+    "qa_result": "Installation successful and verified",
     "download_status": "success",
-    "sha_status": "failed",
-    "install_status": "pending",
-    "verify_status": "pending",
-    "bundle_id_status": "pending"
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "25.03.0"
   }
 }
