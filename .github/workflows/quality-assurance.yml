@@ -209,7 +209,6 @@ jobs:
         id: install
         if: env.DOWNLOAD_STATUS == 'success'
         run: |
-          set -x # Enable command tracing for detailed debugging
           echo "📦 Installing $APP_DISPLAY_NAME..."
 
           # Create a file to capture installation output
@@ -232,9 +231,12 @@ jobs:
 
             echo "Attempting to mount DMG: temp_downloads/$DOWNLOAD_FILENAME with flags -nobrowse -readonly -noverify -noautoopen" | tee -a install_output.txt
             
-            # Execute hdiutil attach and capture its exit status, redirecting stdout and stderr to log files
+            # Temporarily disable exit on error to capture hdiutil's output even if it fails
+            set +e
             hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly -noverify -noautoopen > "$HDIUTIL_STDOUT_LOG" 2> "$HDIUTIL_STDERR_LOG"
             ATTACH_CMD_STATUS=$?
+            # Re-enable exit on error
+            set -e
 
             echo "--- hdiutil attach STDOUT ---" | tee -a install_output.txt
             cat "$HDIUTIL_STDOUT_LOG" | tee -a install_output.txt
