@@ -245,31 +245,8 @@ jobs:
           echo "✅ Updated JSON file with QA results"
           echo "QA Result: $QA_RESULT"
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-          # Check if there are changes to commit
-          if git diff --quiet -- "Apps/${APP_NAME}.json"; then
-            echo "No changes to commit"
-          else
-            echo "Changes detected, committing..."
-            git add "Apps/${APP_NAME}.json"
-            git commit -m "Add QA results for ${APP_DISPLAY_NAME}"
-            
-            # Push using the PAT for authentication
-            echo "Pushing changes to repository..."
-            git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-            
-            if [ $? -eq 0 ]; then
-              echo "✅ Successfully pushed changes to repository"
-            else
-              echo "❌ Failed to push changes to repository"
-              echo "Trying alternative push method..."
-              git push
-            fi
-          fi
+      # We don't commit changes in individual test jobs to avoid conflicts
+      # Instead, we'll collect all results and commit them in a separate job
 
       - name: Output summary
         if: always()
@@ -295,4 +272,41 @@ jobs:
             echo "```" >> $GITHUB_STEP_SUMMARY
             cat install_output.txt >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # New job to commit all changes at once after all tests are complete
+  commit-changes:
+    needs: test-installation
+    runs-on: ubuntu-latest
+    if: always()
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Commit and push all changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Check if there are any changes to commit
+          if git status --porcelain | grep -q "Apps/"; then
+            echo "Changes detected, committing..."
+            git add Apps/*.json
+            git commit -m "Add QA results for multiple apps"
+            
+            # Push using the PAT for authentication
+            echo "Pushing changes to repository..."
+            git push
+            
+            if [ $? -eq 0 ]; then
+              echo "✅ Successfully pushed changes to repository"
+            else
+              echo "❌ Failed to push changes to repository"
+            fi
+          else
+            echo "No changes to commit"
           fi
