@@ -7,5 +7,15 @@
   "homepage": "https://fathom.video/",
   "fileName": "Fathom-darwin-arm64-1.39.0.dmg",
   "sha": "2f6eb696c5c978417905c6aadac4a34aa84e3d388e41de576c280f9622508337",
-  "previous_version": "1.39.0"
+  "previous_version": "1.39.0",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:58:34Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "1.39.0"
+  }
 }

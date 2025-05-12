@@ -8,5 +8,15 @@
   "fileName": "Evernote-10.105.4-mac-ddl-stage-20240910164757-a2e60a8d876a07eded5d212fa56ba45214114ad0.dmg",
   "sha": "98d1f6d52718a0b05222b7cdce14a3755ece619edf0a1b8557af75afbfe2cd73",
   "changelog": "https://evernote.com/release-notes",
-  "previous_version": "10.105.4"
+  "previous_version": "10.105.4",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:57:22Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "10.105.4"
+  }
 }

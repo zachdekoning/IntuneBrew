@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "76a00b19069463eb332d237dd9d245ff56253273151ad2788d203a706758063f",
   "changelog": "https://help.figma.com/hc/en-us/articles/360038511533-Release-Notes",
-  "previous_version": "125.4.8"
+  "previous_version": "125.4.8",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:58:36Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "125.4.8"
+  }
 }
