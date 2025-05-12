@@ -796,35 +796,37 @@ def update_readme_with_latest_changes(apps_info):
     else:
         updates_section += "> All applications are up to date! 🎉\n"
 
-    # Find where to insert the updates section (after the Public Preview notice)
-    preview_notice_end = "Thank you for being an early adopter! 🙏"
+    # Find where to insert the updates section (before the Features section)
     features_section = "## ✨ Features"
     
-    if preview_notice_end in content and features_section in content:
-        parts = content.split(preview_notice_end, 1)
+    if features_section in content:
+        parts = content.split(features_section, 1)
         if len(parts) == 2:
-            second_parts = parts[1].split(features_section, 1)
-            if len(second_parts) == 2:
-                # Remove existing updates section if it exists
-                if "## 🔄 Latest Updates" in second_parts[0]:
-                    second_parts[0] = "\n\n"
-                
-                # Construct new content with updates section in the new location
-                new_content = (
-                    parts[0] + 
-                    preview_notice_end + 
-                    "\n\n" +
-                    updates_section +
-                    features_section +
-                    second_parts[1]
-                )
-                
-                # Write the updated content back to README.md
-                with open(readme_path, 'w') as f:
-                    f.write(new_content)
-                return
+            # Remove existing updates section if it exists
+            if "## 🔄 Latest Updates" in parts[0]:
+                # Find the start of the updates section
+                updates_start = parts[0].find("## 🔄 Latest Updates")
+                # Find the last newline before the updates section
+                last_newline = parts[0].rfind("\n\n", 0, updates_start)
+                if last_newline != -1:
+                    # Keep everything before the updates section
+                    parts[0] = parts[0][:last_newline] + "\n\n"
+            
+            # Construct new content with updates section in the new location
+            new_content = (
+                parts[0] +
+                updates_section +
+                features_section +
+                parts[1]
+            )
+            
+            # Write the updated content back to README.md
+            with open(readme_path, 'w') as f:
+                f.write(new_content)
+            print(f"Updated README.md with latest changes and timestamp: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC")
+            return
     
-    print("Could not find the correct location to insert the updates section")
+    print("Could not find the Features section in README.md")
 
 def main():
     apps_folder = "Apps"
