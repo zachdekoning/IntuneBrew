@@ -3,6 +3,18 @@
 # This script performs quality assurance testing for macOS applications
 # It installs the app, verifies the installation, and updates the JSON file with QA information
 
+# Parse command line arguments
+FORCE_ALL=false
+for arg in "$@"; do
+    case $arg in
+    --force)
+        FORCE_ALL=true
+        echo "Force flag detected - Will test all apps regardless of previous QA status"
+        shift
+        ;;
+    esac
+done
+
 # Function to test an app
 test_app() {
     APP_JSON_PATH="$1"
@@ -21,6 +33,37 @@ test_app() {
     echo "App Name: $APP_NAME"
     echo "Version: $APP_VERSION"
     echo "URL: $APP_URL"
+
+    # Check if app has already been QA tested and if the version is the same
+    # Skip this check if FORCE_ALL is true
+    if [ "$FORCE_ALL" = false ]; then
+        QA_INFO_EXISTS=$(echo "$APP_JSON" | jq 'has("qa_info")')
+
+        if [ "$QA_INFO_EXISTS" = "true" ]; then
+            QA_RESULT=$(echo "$APP_JSON" | jq -r '.qa_info.qa_result')
+            INSTALLED_VERSION=$(echo "$APP_JSON" | jq -r '.qa_info.installed_version // ""')
+
+            echo "Previous QA result: $QA_RESULT"
+            echo "Previously installed version: $INSTALLED_VERSION"
+
+            # Skip if already successfully tested and version hasn't changed
+            if [ "$QA_RESULT" = "Installation successful and verified" ] && [ "$INSTALLED_VERSION" = "$APP_VERSION" ]; then
+                echo "⏭️ Skipping QA test for $APP_NAME - Already verified for version $APP_VERSION"
+                SKIPPED_INSTALLS+=("$APP_NAME - Already verified for version $APP_VERSION")
+                return 0
+            else
+                if [ "$INSTALLED_VERSION" != "$APP_VERSION" ]; then
+                    echo "🔄 Version changed from $INSTALLED_VERSION to $APP_VERSION - Running QA test"
+                else
+                    echo "🔄 Previous QA result was not successful - Running QA test again"
+                fi
+            fi
+        else
+            echo "🆕 No previous QA information found - Running QA test"
+        fi
+    else
+        echo "🔄 Force flag enabled - Running QA test regardless of previous status"
+    fi
 
     # Get current timestamp in ISO 8601 format
     TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -433,6 +476,7 @@ test_app() {
 # Initialize arrays for summary
 SUCCESSFUL_INSTALLS=()
 FAILED_INSTALLS=()
+SKIPPED_INSTALLS=()
 
 # Process each app from the file
 while IFS= read -r APP_JSON_PATH || [ -n "$APP_JSON_PATH" ]; do
@@ -442,6 +486,7 @@ done </tmp/apps_to_test.txt
 # Save the lists to environment variables for the summary step
 echo "SUCCESSFUL_INSTALLS_COUNT=${#SUCCESSFUL_INSTALLS[@]}" >>$GITHUB_ENV
 echo "FAILED_INSTALLS_COUNT=${#FAILED_INSTALLS[@]}" >>$GITHUB_ENV
+echo "SKIPPED_INSTALLS_COUNT=${#SKIPPED_INSTALLS[@]}" >>$GITHUB_ENV
 
 # Save successful installs to a file for the summary step
 if [ ${#SUCCESSFUL_INSTALLS[@]} -gt 0 ]; then
@@ -451,4 +496,9 @@ fi
 # Save failed installs to a file for the summary step
 if [ ${#FAILED_INSTALLS[@]} -gt 0 ]; then
     printf "%s\n" "${FAILED_INSTALLS[@]}" >/tmp/failed_installs.txt
+fi
+
+# Save skipped installs to a file for the summary step
+if [ ${#SKIPPED_INSTALLS[@]} -gt 0 ]; then
+    printf "%s\n" "${SKIPPED_INSTALLS[@]}" >/tmp/skipped_installs.txt
 fi
