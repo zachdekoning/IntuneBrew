@@ -1,0 +1,286 @@
+name: Quality Assurance Testing
+
+on:
+  # Run after the update-missing-bundleids workflow completes
+  workflow_run:
+    workflows: ["Update Missing BundleIDs"]
+    types:
+      - completed
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      specific_app:
+        description: "Specific app to test (default: 1password)"
+        required: false
+        default: "1password"
+        type: string
+
+jobs:
+  test-installation:
+    runs-on: macos-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    permissions:
+      contents: write # This gives the job permission to write to the repository
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Set app to test
+        id: set-app
+        run: |
+          if [ "${{ github.event.inputs.specific_app }}" != "" ]; then
+            echo "APP_NAME=${{ github.event.inputs.specific_app }}" >> $GITHUB_ENV
+          else
+            echo "APP_NAME=1password" >> $GITHUB_ENV
+          fi
+
+      - name: Read app information
+        id: app-info
+        run: |
+          if [ ! -f "Apps/${APP_NAME}.json" ]; then
+            echo "::error::App JSON file not found: Apps/${APP_NAME}.json"
+            exit 1
+          fi
+
+          # Read app details from JSON
+          APP_JSON=$(cat "Apps/${APP_NAME}.json")
+          APP_DISPLAY_NAME=$(echo "$APP_JSON" | jq -r '.name')
+          APP_URL=$(echo "$APP_JSON" | jq -r '.url')
+          APP_VERSION=$(echo "$APP_JSON" | jq -r '.version')
+          APP_SHA=$(echo "$APP_JSON" | jq -r '.sha')
+          APP_BUNDLE_ID=$(echo "$APP_JSON" | jq -r '.bundleId')
+
+          echo "APP_DISPLAY_NAME=$APP_DISPLAY_NAME" >> $GITHUB_ENV
+          echo "APP_URL=$APP_URL" >> $GITHUB_ENV
+          echo "APP_VERSION=$APP_VERSION" >> $GITHUB_ENV
+          echo "APP_SHA=$APP_SHA" >> $GITHUB_ENV
+          echo "APP_BUNDLE_ID=$APP_BUNDLE_ID" >> $GITHUB_ENV
+
+          echo "Testing installation for $APP_DISPLAY_NAME version $APP_VERSION"
+          echo "URL: $APP_URL"
+          echo "Bundle ID: $APP_BUNDLE_ID"
+
+      - name: Download app package
+        id: download
+        run: |
+          echo "📥 Downloading $APP_DISPLAY_NAME from $APP_URL..."
+          mkdir -p temp_downloads
+          curl -L -o "temp_downloads/${APP_NAME}.pkg" "$APP_URL"
+
+          if [ $? -ne 0 ]; then
+            echo "::error::Failed to download package from $APP_URL"
+            echo "DOWNLOAD_STATUS=failed" >> $GITHUB_ENV
+            echo "QA_RESULT=Failed to download package" >> $GITHUB_ENV
+            exit 1
+          else
+            echo "✅ Download successful"
+            echo "DOWNLOAD_STATUS=success" >> $GITHUB_ENV
+          fi
+
+          # Verify SHA256 checksum if provided
+          if [ -n "$APP_SHA" ] && [ "$APP_SHA" != "null" ]; then
+            echo "🔐 Verifying SHA256 checksum..."
+            DOWNLOADED_SHA=$(shasum -a 256 "temp_downloads/${APP_NAME}.pkg" | awk '{print $1}')
+            echo "Expected: $APP_SHA"
+            echo "Actual: $DOWNLOADED_SHA"
+            
+            if [ "$DOWNLOADED_SHA" = "$APP_SHA" ]; then
+              echo "✅ SHA256 checksum verified successfully"
+              echo "SHA_STATUS=verified" >> $GITHUB_ENV
+            else
+              echo "❌ SHA256 checksum verification failed"
+              echo "SHA_STATUS=failed" >> $GITHUB_ENV
+              echo "QA_RESULT=SHA256 checksum verification failed" >> $GITHUB_ENV
+              exit 1
+            fi
+          else
+            echo "⚠️ No SHA256 checksum provided for verification"
+            echo "SHA_STATUS=not_provided" >> $GITHUB_ENV
+          fi
+
+      - name: Install app
+        id: install
+        if: env.DOWNLOAD_STATUS == 'success'
+        run: |
+          echo "📦 Installing $APP_DISPLAY_NAME..."
+
+          # Capture installation output
+          INSTALL_OUTPUT=$(sudo installer -pkg "temp_downloads/${APP_NAME}.pkg" -target / 2>&1)
+          INSTALL_STATUS=$?
+
+          echo "$INSTALL_OUTPUT" > install_output.txt
+
+          if [ $INSTALL_STATUS -ne 0 ]; then
+            echo "❌ Installation failed"
+            echo "Installation output:"
+            cat install_output.txt
+            echo "INSTALL_STATUS=failed" >> $GITHUB_ENV
+            echo "QA_RESULT=Installation failed: $(head -n 1 install_output.txt)" >> $GITHUB_ENV
+            exit 1
+          else
+            echo "✅ Installation successful"
+            echo "INSTALL_STATUS=success" >> $GITHUB_ENV
+          fi
+
+      - name: Verify installation
+        id: verify
+        if: env.INSTALL_STATUS == 'success'
+        run: |
+          echo "🔍 Verifying installation..."
+
+          # Check if app exists in Applications folder
+          APP_PATH=$(find /Applications -maxdepth 1 -name "*.app" | grep -i "$APP_DISPLAY_NAME" || echo "")
+
+          if [ -z "$APP_PATH" ]; then
+            echo "❌ App not found in Applications folder"
+            echo "Available apps:"
+            ls -la /Applications
+            echo "VERIFY_STATUS=app_not_found" >> $GITHUB_ENV
+            echo "QA_RESULT=App not found in Applications folder after installation" >> $GITHUB_ENV
+          else
+            echo "✅ App found at: $APP_PATH"
+            echo "VERIFY_STATUS=app_found" >> $GITHUB_ENV
+            
+            # Verify bundle ID if provided
+            if [ -n "$APP_BUNDLE_ID" ] && [ "$APP_BUNDLE_ID" != "null" ]; then
+              echo "🔍 Verifying bundle ID..."
+              
+              # Method 1: Using mdls
+              ACTUAL_BUNDLE_ID=$(mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
+              
+              # Method 2: Using PlistBuddy if mdls failed
+              if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
+                if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+                  ACTUAL_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
+                fi
+              fi
+              
+              echo "Expected bundle ID: $APP_BUNDLE_ID"
+              echo "Actual bundle ID: $ACTUAL_BUNDLE_ID"
+              
+              if [ "$ACTUAL_BUNDLE_ID" = "$APP_BUNDLE_ID" ]; then
+                echo "✅ Bundle ID verified successfully"
+                echo "BUNDLE_ID_STATUS=verified" >> $GITHUB_ENV
+                echo "QA_RESULT=Installation successful and verified" >> $GITHUB_ENV
+              else
+                echo "❌ Bundle ID verification failed"
+                echo "BUNDLE_ID_STATUS=mismatch" >> $GITHUB_ENV
+                echo "QA_RESULT=Bundle ID mismatch: expected $APP_BUNDLE_ID, got $ACTUAL_BUNDLE_ID" >> $GITHUB_ENV
+              fi
+            else
+              echo "⚠️ No bundle ID provided for verification"
+              echo "BUNDLE_ID_STATUS=not_provided" >> $GITHUB_ENV
+              echo "QA_RESULT=Installation successful but bundle ID not verified" >> $GITHUB_ENV
+            fi
+            
+            # Try to get app version
+            APP_VERSION_INSTALLED="Unknown"
+            if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+              APP_VERSION_INSTALLED=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Unknown")
+              echo "Installed version: $APP_VERSION_INSTALLED"
+              echo "APP_VERSION_INSTALLED=$APP_VERSION_INSTALLED" >> $GITHUB_ENV
+            fi
+          fi
+
+      - name: Update JSON with QA results
+        if: always()
+        run: |
+          echo "📝 Updating JSON file with QA results..."
+
+          # Set default QA result if not already set
+          if [ -z "$QA_RESULT" ]; then
+            if [ "$VERIFY_STATUS" = "app_found" ] && [ "$BUNDLE_ID_STATUS" = "verified" ]; then
+              QA_RESULT="Installation successful and verified"
+            elif [ "$VERIFY_STATUS" = "app_found" ]; then
+              QA_RESULT="Installation successful but bundle ID verification ${BUNDLE_ID_STATUS}"
+            elif [ "$INSTALL_STATUS" = "success" ]; then
+              QA_RESULT="Installation reported success but app not found"
+            elif [ "$DOWNLOAD_STATUS" = "success" ]; then
+              QA_RESULT="Download successful but installation failed"
+            else
+              QA_RESULT="Download failed"
+            fi
+          fi
+
+          # Create a timestamp
+          QA_TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+          # Update the JSON file with the QA information
+          jq --arg timestamp "$QA_TIMESTAMP" \
+             --arg result "$QA_RESULT" \
+             --arg download "${DOWNLOAD_STATUS:-unknown}" \
+             --arg sha "${SHA_STATUS:-unknown}" \
+             --arg install "${INSTALL_STATUS:-unknown}" \
+             --arg verify "${VERIFY_STATUS:-unknown}" \
+             --arg bundle "${BUNDLE_ID_STATUS:-unknown}" \
+             --arg version "${APP_VERSION_INSTALLED:-unknown}" \
+             '.qa_info = {
+                "qa_timestamp": $timestamp,
+                "qa_result": $result,
+                "download_status": $download,
+                "sha_status": $sha,
+                "install_status": $install,
+                "verify_status": $verify,
+                "bundle_id_status": $bundle,
+                "installed_version": $version
+              }' "Apps/${APP_NAME}.json" > "Apps/${APP_NAME}.json.tmp"
+
+          mv "Apps/${APP_NAME}.json.tmp" "Apps/${APP_NAME}.json"
+
+          echo "✅ Updated JSON file with QA results"
+          echo "QA Result: $QA_RESULT"
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Check if there are changes to commit
+          if git diff --quiet -- "Apps/${APP_NAME}.json"; then
+            echo "No changes to commit"
+          else
+            echo "Changes detected, committing..."
+            git add "Apps/${APP_NAME}.json"
+            git commit -m "Add QA results for ${APP_DISPLAY_NAME}"
+            
+            # Push using the PAT for authentication
+            echo "Pushing changes to repository..."
+            git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+            
+            if [ $? -eq 0 ]; then
+              echo "✅ Successfully pushed changes to repository"
+            else
+              echo "❌ Failed to push changes to repository"
+              echo "Trying alternative push method..."
+              git push
+            fi
+          fi
+
+      - name: Output summary
+        if: always()
+        run: |
+          # Create a summary for GitHub Actions
+          echo "## Quality Assurance Results for $APP_DISPLAY_NAME" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| App Name | $APP_DISPLAY_NAME |" >> $GITHUB_STEP_SUMMARY
+          echo "| Version | $APP_VERSION |" >> $GITHUB_STEP_SUMMARY
+          echo "| Download Status | ${DOWNLOAD_STATUS:-Unknown} |" >> $GITHUB_STEP_SUMMARY
+          echo "| SHA Verification | ${SHA_STATUS:-N/A} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Installation Status | ${INSTALL_STATUS:-Unknown} |" >> $GITHUB_STEP_SUMMARY
+          echo "| App Verification | ${VERIFY_STATUS:-Unknown} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Bundle ID Verification | ${BUNDLE_ID_STATUS:-Unknown} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Installed Version | ${APP_VERSION_INSTALLED:-Unknown} |" >> $GITHUB_STEP_SUMMARY
+          echo "| QA Result | $QA_RESULT |" >> $GITHUB_STEP_SUMMARY
+
+          # Add installation output if available
+          if [ -f "install_output.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Installation Output" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            cat install_output.txt >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+          fi
