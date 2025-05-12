@@ -27,113 +27,17 @@ for arg in "$@"; do
     esac
 done
 
-# Function for thorough cleanup to reclaim disk space
-perform_cleanup() {
-    echo "🧹 Performing thorough cleanup to reclaim disk space..."
-
-    # Show disk usage before cleanup
-    echo "Disk usage before cleanup:"
-    df -h
-
-    # Clean up temporary directories
-    echo "Cleaning up temporary directories..."
-    sudo rm -rf /tmp/temp_* || true
-
-    # Unmount any DMGs that might be left mounted
-    echo "Unmounting any DMGs..."
-    for vol in $(hdiutil info | grep "/Volumes/" | awk '{print $1}'); do
-        echo "Unmounting volume: $vol"
-        hdiutil detach $vol -force 2>/dev/null || true
-    done
-
-    # Remove downloaded packages from current directory and subdirectories
-    echo "Removing downloaded packages..."
-    find . -type f \( -name "*.dmg" -o -name "*.pkg" -o -name "*.zip" \) -delete || true
-
-    # Clean up /tmp directory more aggressively
-    echo "Cleaning up /tmp directory..."
-    sudo rm -rf /tmp/*.dmg /tmp/*.pkg /tmp/*.zip /tmp/*.log /tmp/temp* 2>/dev/null || true
-
-    # Clean up any extracted files
-    echo "Cleaning up extracted files..."
-    rm -rf /tmp/app_extracted* || true
-
-    # Clean up system logs
-    echo "Cleaning up system logs..."
-    sudo rm -rf /var/log/*.log.* 2>/dev/null || true
-    sudo truncate -s 0 /var/log/*.log 2>/dev/null || true
-
-    # Run git garbage collection to compress git objects
-    echo "Running git garbage collection..."
-    git gc --aggressive --prune=now || true
-    git repack -Ad || true # More aggressive repacking
-
-    # Clean up any cached files in the home directory
-    echo "Cleaning up cache files..."
-    rm -rf ~/Library/Caches/* 2>/dev/null || true
-    rm -rf ~/Library/Logs/* 2>/dev/null || true
-
-    # Clean up brew cache if homebrew is installed
-    if command -v brew &>/dev/null; then
-        echo "Cleaning up Homebrew cache..."
-        brew cleanup -s || true
-    fi
-
-    # Clean up Docker if installed
-    if command -v docker &>/dev/null; then
-        echo "Cleaning up Docker..."
-        docker system prune -af --volumes 2>/dev/null || true
-    fi
-
-    # Remove recently installed apps if we're critically low on space
-    AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
-    AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
-    if [ $AVAILABLE_SPACE_MB -lt 1024 ]; then
-        echo "⚠️ Critically low disk space, removing recently installed test apps..."
-        # Get list of recently installed apps (in the last hour)
-        RECENT_APPS=$(find /Applications -name "*.app" -cmin -60 -maxdepth 1 2>/dev/null)
-        for app in $RECENT_APPS; do
-            # Skip system apps
-            if [[ "$app" != "/Applications/Safari.app" && "$app" != "/Applications/Mail.app" && "$app" != "/Applications/Calendar.app" ]]; then
-                echo "Removing recently installed app: $app"
-                sudo rm -rf "$app" 2>/dev/null || true
-            fi
-        done
-    fi
-
-    # Show disk usage after cleanup
-    echo "Disk usage after cleanup:"
-    df -h
-
-    # Display available disk space after cleanup
-    AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
-    AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
-    echo "Available disk space after cleanup: $AVAILABLE_SPACE_MB MB"
-}
-
 # Function to check available disk space
 check_disk_space() {
     # Get available disk space in KB
     AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
     # Convert to MB for easier reading
     AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
-    echo "Available disk space: $AVAILABLE_SPACE_MB MB"
 
-    # If less than 2GB available, clean up and warn
-    if [ $AVAILABLE_SPACE_MB -lt 2048 ]; then
-        echo "⚠️ Low disk space detected ($AVAILABLE_SPACE_MB MB). Cleaning up..."
-        perform_cleanup
-
-        # Check space again
-        AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
-        AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
-        echo "Available disk space after cleanup: $AVAILABLE_SPACE_MB MB"
-
-        # If still less than 1GB, we're in trouble
-        if [ $AVAILABLE_SPACE_MB -lt 1024 ]; then
-            echo "❌ CRITICAL: Disk space critically low ($AVAILABLE_SPACE_MB MB). Cannot continue safely."
-            return 1
-        fi
+    # If less than 1GB, we're in trouble
+    if [ $AVAILABLE_SPACE_MB -lt 1024 ]; then
+        echo "❌ CRITICAL: Disk space critically low. Cannot continue safely."
+        return 1
     fi
     return 0
 }
@@ -145,7 +49,7 @@ test_app() {
     echo "==============================================="
     echo "Processing $APP_JSON_PATH"
 
-    # Check disk space before starting
+    # Check disk space before starting (simplified)
     check_disk_space || return 1
 
     # Read app details from JSON
@@ -651,7 +555,7 @@ for ((i = 0; i < TOTAL_APPS; i += BATCH_SIZE)); do
         APP_JSON_PATH="${ALL_APPS[$j]}"
         test_app "$APP_JSON_PATH"
 
-        # Check disk space after each app
+        # Simple disk space check after each app
         check_disk_space || {
             echo "❌ Critical disk space issue. Stopping batch processing."
             break
@@ -670,18 +574,11 @@ for ((i = 0; i < TOTAL_APPS; i += BATCH_SIZE)); do
         echo "Changes committed for batch $CURRENT_BATCH"
     fi
 
-    # Force thorough cleanup between batches
-    echo "Performing thorough cleanup between batches..."
-    perform_cleanup
-
-    # Display disk space after batch
-    echo "Available disk space after batch $CURRENT_BATCH: $AVAILABLE_SPACE_MB MB"
-
-    # If critically low on space, stop processing
-    if [ $AVAILABLE_SPACE_MB -lt 1024 ]; then
-        echo "❌ CRITICAL: Disk space critically low ($AVAILABLE_SPACE_MB MB). Stopping further processing."
+    # Simple check if critically low on space
+    check_disk_space || {
+        echo "❌ CRITICAL: Disk space critically low. Stopping further processing."
         break
-    fi
+    }
 done
 
 # Save the lists to environment variables for the summary step

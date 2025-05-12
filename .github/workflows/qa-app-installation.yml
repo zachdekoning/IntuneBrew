@@ -34,14 +34,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - name: Check disk space before starting
-        run: |
-          echo "Initial disk space check:"
-          df -h
-          AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
-          AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
-          echo "Available disk space: $AVAILABLE_SPACE_MB MB"
-          echo "INITIAL_DISK_SPACE=$AVAILABLE_SPACE_MB" >> $GITHUB_ENV
+      # Removed disk space check
 
       - name: Determine apps to test
         id: determine-apps
@@ -144,19 +137,7 @@ jobs:
 
           ./.github/scripts/qa-app-test.sh $ARGS
 
-      - name: Check disk space after testing
-        run: |
-          echo "Final disk space check:"
-          df -h
-          AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
-          AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
-          echo "Available disk space: $AVAILABLE_SPACE_MB MB"
-          echo "FINAL_DISK_SPACE=$AVAILABLE_SPACE_MB" >> $GITHUB_ENV
-
-          # Calculate disk space used
-          DISK_SPACE_USED=$((INITIAL_DISK_SPACE - AVAILABLE_SPACE_MB))
-          echo "Disk space used: $DISK_SPACE_USED MB"
-          echo "DISK_SPACE_USED=$DISK_SPACE_USED" >> $GITHUB_ENV
+      # Removed disk space check after testing
 
       - name: Commit and push changes
         if: env.CHANGES_MADE == 'true'
@@ -202,7 +183,7 @@ jobs:
           echo "| Successful Installations | $SUCCESSFUL_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Failed Installations | $FAILED_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Skipped Installations | $SKIPPED_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
-          echo "| Disk Space Used | $DISK_SPACE_USED MB |" >> $GITHUB_STEP_SUMMARY
+          # Removed disk space used from summary
           echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
 
           # Add successful installs section if any
