@@ -1,0 +1,135 @@
+name: Quality Assurance App Installation
+
+on:
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      apps:
+        description: "Specific apps to test (comma-separated, leave empty for all)"
+        required: false
+        default: ""
+
+jobs:
+  qa-installation:
+    runs-on: macos-latest
+    permissions:
+      contents: write # This gives the job permission to write to the repository
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Determine apps to test
+        id: determine-apps
+        run: |
+          echo "Setting up apps to test..."
+
+          # Check if specific apps were provided
+          if [ -n "${{ github.event.inputs.apps }}" ]; then
+            # Convert comma-separated list to array
+            IFS=',' read -ra SPECIFIED_APPS <<< "${{ github.event.inputs.apps }}"
+            
+            # Create an array to store valid app paths
+            APPS_TO_TEST=()
+            
+            for APP_NAME in "${SPECIFIED_APPS[@]}"; do
+              # Trim whitespace
+              APP_NAME=$(echo "$APP_NAME" | xargs)
+              APP_JSON_PATH="Apps/${APP_NAME}.json"
+              
+              if [ -f "$APP_JSON_PATH" ]; then
+                echo "Adding specified app: $APP_NAME"
+                APPS_TO_TEST+=("$APP_JSON_PATH")
+              else
+                echo "Warning: Specified app $APP_NAME not found (looked for $APP_JSON_PATH)"
+              fi
+            done
+          else
+            # Default to testing 1Password and A Better Finder Rename
+            APPS_TO_TEST=("Apps/1password.json" "Apps/a_better_finder_rename.json")
+            echo "Using default apps: 1Password and A Better Finder Rename"
+          fi
+
+          # Save the list of apps to test
+          echo "APPS_COUNT=${#APPS_TO_TEST[@]}" >> $GITHUB_ENV
+
+          if [ ${#APPS_TO_TEST[@]} -eq 0 ]; then
+            echo "No valid apps to test."
+            echo "APPS_TO_TEST=" >> $GITHUB_ENV
+          else
+            # Convert array to newline-separated string and save to a file
+            printf "%s\n" "${APPS_TO_TEST[@]}" > /tmp/apps_to_test.txt
+            echo "Found ${#APPS_TO_TEST[@]} apps to test."
+          fi
+
+      - name: Make script executable
+        if: env.APPS_COUNT != '0'
+        run: chmod +x .github/scripts/qa-app-test.sh
+
+      - name: Run QA tests
+        if: env.APPS_COUNT != '0'
+        run: ./.github/scripts/qa-app-test.sh
+
+      - name: Commit and push changes
+        if: env.CHANGES_MADE == 'true'
+        run: |
+          echo "📝 Committing QA info changes to repository..."
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Check if there are changes to commit
+          if git diff --quiet -- "Apps/"; then
+            echo "No changes to commit"
+          else
+            echo "Changes detected, committing..."
+            # Add all files in Apps directory
+            git add Apps/*.json
+            git commit -m "Update QA info for tested apps"
+            
+            # Push using the PAT for authentication
+            echo "Pushing changes to repository..."
+            git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+            
+            if [ $? -eq 0 ]; then
+              echo "✅ Successfully pushed changes to repository"
+            else
+              echo "❌ Failed to push changes to repository"
+              echo "Trying alternative push method..."
+              git push
+            fi
+          fi
+
+      - name: Output summary
+        run: |
+          # Create a summary for GitHub Actions
+          echo "## QA Installation Results" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Apps Tested | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Successful Installations | $SUCCESSFUL_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Failed Installations | $FAILED_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
+
+          # Add successful installs section if any
+          if [ -f "/tmp/successful_installs.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Successfully Installed Apps" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps were successfully installed and verified:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            cat /tmp/successful_installs.txt >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Add failed installs section if any
+          if [ -f "/tmp/failed_installs.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Failed Installations" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps failed during installation or verification:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            cat /tmp/failed_installs.txt >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+          fi
