@@ -10,7 +10,7 @@
   "changelog": "https://software.charliemonroe.net/downie/version-history/",
   "previous_version": "4.9.15",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T14:23:03Z",
+    "qa_timestamp": "2025-05-12T14:43:07Z",
     "qa_result": "SHA verification failed",
     "download_status": "success",
     "sha_status": "failed",
