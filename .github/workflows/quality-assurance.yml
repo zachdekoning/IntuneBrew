@@ -6,8 +6,27 @@ on:
     workflows: ["Update Missing BundleIDs"]
     types:
       - completed
+  # Run on a schedule (daily at 2 AM UTC)
+  schedule:
+    - cron: "0 2 * * *"
   # Allow manual triggering
   workflow_dispatch:
+    inputs:
+      specific_app:
+        description: "Specific app to test (leave empty to test all apps that need testing)"
+        required: false
+        default: ""
+        type: string
+      force_all:
+        description: "Force test all apps regardless of version"
+        required: false
+        default: false
+        type: boolean
+      max_apps:
+        description: "Maximum number of apps to test in one run (default: 50)"
+        required: false
+        default: "50"
+        type: string
 
 jobs:
   get-app-list:
@@ -24,34 +43,57 @@ jobs:
           # Create a temporary file to store apps that need testing
           touch apps_to_test.txt
 
-          # Process each app to check if it needs testing
-          for APP_FILE in Apps/*.json; do
-            APP_NAME=$(basename "$APP_FILE" .json)
+          # Check if a specific app was requested
+          if [[ -n "${{ github.event.inputs.specific_app }}" ]]; then
+            SPECIFIC_APP="${{ github.event.inputs.specific_app }}"
+            echo "Testing specific app: $SPECIFIC_APP"
             
-            # Extract current version and previously tested version
-            CURRENT_VERSION=$(jq -r '.version' "$APP_FILE")
-            PREVIOUS_QA_VERSION=$(jq -r '.qa_info.installed_version // "none"' "$APP_FILE")
-            HAS_QA_INFO=$(jq 'has("qa_info")' "$APP_FILE")
-            
-            # Skip if app has been tested before and version hasn't changed
-            if [[ "$HAS_QA_INFO" == "true" && "$CURRENT_VERSION" == "$PREVIOUS_QA_VERSION" ]]; then
-              echo "Skipping $APP_NAME - already tested version $CURRENT_VERSION"
+            # Verify the app exists
+            if [ -f "Apps/${SPECIFIC_APP}.json" ]; then
+              echo "$SPECIFIC_APP" > apps_to_test.txt
             else
-              # App needs testing - either never tested or version changed
-              echo "$APP_NAME" >> apps_to_test.txt
-              if [[ "$HAS_QA_INFO" == "true" ]]; then
-                echo "Adding $APP_NAME - version changed from $PREVIOUS_QA_VERSION to $CURRENT_VERSION"
-              else
-                echo "Adding $APP_NAME - never tested before"
-              fi
+              echo "::error::Specified app not found: $SPECIFIC_APP"
+              exit 1
             fi
-          done
+          else
+            # Process each app to check if it needs testing
+            for APP_FILE in Apps/*.json; do
+              APP_NAME=$(basename "$APP_FILE" .json)
+              
+              # Extract current version and previously tested version
+              CURRENT_VERSION=$(jq -r '.version' "$APP_FILE")
+              PREVIOUS_QA_VERSION=$(jq -r '.qa_info.installed_version // "none"' "$APP_FILE")
+              HAS_QA_INFO=$(jq 'has("qa_info")' "$APP_FILE")
+              
+              # Force testing all apps if requested
+              if [[ "${{ github.event.inputs.force_all }}" == "true" ]]; then
+                echo "$APP_NAME" >> apps_to_test.txt
+                echo "Adding $APP_NAME (force all)"
+              # Skip if app has been tested before and version hasn't changed
+              elif [[ "$HAS_QA_INFO" == "true" && "$CURRENT_VERSION" == "$PREVIOUS_QA_VERSION" ]]; then
+                echo "Skipping $APP_NAME - already tested version $CURRENT_VERSION"
+              else
+                # App needs testing - either never tested or version changed
+                echo "$APP_NAME" >> apps_to_test.txt
+                if [[ "$HAS_QA_INFO" == "true" ]]; then
+                  echo "Adding $APP_NAME - version changed from $PREVIOUS_QA_VERSION to $CURRENT_VERSION"
+                else
+                  echo "Adding $APP_NAME - never tested before"
+                fi
+              fi
+            done
+          fi
 
-          # Get a subset of apps for testing (first 50 apps)
-          # Change this number or remove the head command to test all apps
-          APP_LIST=$(cat apps_to_test.txt | head -50 | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          # Get max number of apps to test
+          MAX_APPS="${{ github.event.inputs.max_apps }}"
+          if [[ -z "$MAX_APPS" ]]; then
+            MAX_APPS=50
+          fi
+
+          # Get a subset of apps for testing
+          APP_LIST=$(cat apps_to_test.txt | head -n $MAX_APPS | jq -R -s -c 'split("\n") | map(select(length > 0))')
           echo "app_list=$APP_LIST" >> $GITHUB_OUTPUT
-          echo "Found $(echo $APP_LIST | jq '. | length') apps to test"
+          echo "Found $(echo $APP_LIST | jq '. | length') apps to test (max: $MAX_APPS)"
 
   test-installation:
     needs: get-app-list
@@ -74,6 +116,7 @@ jobs:
         id: set-app
         run: |
           echo "APP_NAME=${{ matrix.app_name }}" >> $GITHUB_ENV
+          echo "Testing app: ${{ matrix.app_name }}"
 
       - name: Read app information
         id: app-info
@@ -184,29 +227,106 @@ jobs:
             MOUNT_POINT=$(hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly | tail -n 1 | awk '{print $NF}')
             echo "Mounted at: $MOUNT_POINT" | tee -a install_output.txt
             
-            # Find .app files in the DMG
-            APP_IN_DMG=$(find "$MOUNT_POINT" -name "*.app" -maxdepth 2 | head -n 1)
+            # List DMG contents for debugging
+            echo "DMG contents:" | tee -a install_output.txt
+            ls -la "$MOUNT_POINT" | tee -a install_output.txt
+            
+            # Try to determine the type of DMG
+            # 1. First check if it's a direct app that needs to be copied
+            APP_IN_DMG=$(find "$MOUNT_POINT" -name "*.app" -maxdepth 4 | head -n 1)
             
             if [ -n "$APP_IN_DMG" ]; then
               APP_NAME_IN_DMG=$(basename "$APP_IN_DMG")
               echo "Found app: $APP_NAME_IN_DMG" | tee -a install_output.txt
               
-              # Copy the app to Applications
-              sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
-              INSTALL_STATUS=$?
-              
-              # Check if there's a pkg file inside the DMG (for pkg_in_dmg type)
-              if [ $INSTALL_STATUS -ne 0 ]; then
-                PKG_IN_DMG=$(find "$MOUNT_POINT" -name "*.pkg" -maxdepth 2 | head -n 1)
-                if [ -n "$PKG_IN_DMG" ]; then
-                  echo "Found pkg inside DMG: $PKG_IN_DMG" | tee -a install_output.txt
-                  sudo installer -pkg "$PKG_IN_DMG" -target / >> install_output.txt 2>&1
+              # Check if this is an installer app or a regular app
+              if [[ "$APP_NAME_IN_DMG" == *"Install"* ]] || [[ "$APP_NAME_IN_DMG" == *"Setup"* ]]; then
+                echo "This appears to be an installer app, running it..." | tee -a install_output.txt
+                # For installer apps, we need to run them instead of copying
+                # This is tricky in a headless environment, so we'll try to copy it and then run it
+                TMP_APP_PATH="/tmp/$APP_NAME_IN_DMG"
+                sudo cp -R "$APP_IN_DMG" "$TMP_APP_PATH" >> install_output.txt 2>&1
+                
+                # Try to run the installer app (this might not work for all installers)
+                sudo open -a "$TMP_APP_PATH" --args --mode=silent >> install_output.txt 2>&1
+                # Give it some time to run
+                sleep 30
+                # Check if any app was installed to Applications
+                if [ "$(ls -A /Applications | wc -l)" -gt "$(ls -A /Applications | grep -v "$APP_NAME_IN_DMG" | wc -l)" ]; then
+                  echo "Installation appears to have succeeded" | tee -a install_output.txt
+                  INSTALL_STATUS=0
+                else
+                  # Fallback: just copy the app itself
+                  echo "Installer app didn't seem to work, copying app directly" | tee -a install_output.txt
+                  sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
                   INSTALL_STATUS=$?
                 fi
+              else
+                # Regular app, just copy it
+                echo "Copying app to Applications folder" | tee -a install_output.txt
+                sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
+                INSTALL_STATUS=$?
               fi
             else
-              echo "No .app file found in DMG" | tee -a install_output.txt
-              INSTALL_STATUS=1
+              echo "No .app file found directly, checking for pkg files..." | tee -a install_output.txt
+              
+              # 2. Check for pkg files in the DMG
+              PKG_IN_DMG=$(find "$MOUNT_POINT" -name "*.pkg" -maxdepth 4 | head -n 1)
+              if [ -n "$PKG_IN_DMG" ]; then
+                echo "Found pkg inside DMG: $PKG_IN_DMG" | tee -a install_output.txt
+                sudo installer -pkg "$PKG_IN_DMG" -target / >> install_output.txt 2>&1
+                INSTALL_STATUS=$?
+              else
+                # 3. Check for installer or setup scripts
+                INSTALL_SCRIPT=$(find "$MOUNT_POINT" -name "install" -o -name "Install" -o -name "*.sh" -o -name "*.command" -maxdepth 3 | head -n 1)
+                if [ -n "$INSTALL_SCRIPT" ]; then
+                  echo "Found install script: $INSTALL_SCRIPT" | tee -a install_output.txt
+                  chmod +x "$INSTALL_SCRIPT"
+                  sudo "$INSTALL_SCRIPT" >> install_output.txt 2>&1
+                  INSTALL_STATUS=$?
+                else
+                  # 4. Special case for AdGuard and similar DMGs that have a non-standard structure
+                  if [[ "$APP_DISPLAY_NAME" == "AdGuard" ]] || grep -q "AdGuard" <<< "$MOUNT_POINT"; then
+                    echo "Detected AdGuard DMG, using special handling..." | tee -a install_output.txt
+                    # AdGuard DMG typically has a direct copy approach
+                    if [ -d "$MOUNT_POINT/AdGuard.app" ]; then
+                      sudo cp -R "$MOUNT_POINT/AdGuard.app" "/Applications/" >> install_output.txt 2>&1
+                      INSTALL_STATUS=$?
+                    else
+                      # Try to find any app-like structure
+                      find "$MOUNT_POINT" -type d -name "*" -maxdepth 3 | tee -a install_output.txt
+                      APP_FOLDER=$(find "$MOUNT_POINT" -type d -name "*" -maxdepth 3 | grep -v "__MACOSX" | head -n 1)
+                      if [ -n "$APP_FOLDER" ] && [ -d "$APP_FOLDER" ]; then
+                        echo "Trying to copy folder: $APP_FOLDER" | tee -a install_output.txt
+                        sudo cp -R "$APP_FOLDER" "/Applications/" >> install_output.txt 2>&1
+                        INSTALL_STATUS=$?
+                      else
+                        INSTALL_STATUS=1
+                      fi
+                    fi
+                  else
+                    # 5. Last resort: Look for any app-like folder
+                    APP_FOLDER=$(find "$MOUNT_POINT" -type d -name "*" -maxdepth 2 | grep -v "__MACOSX" | head -n 1)
+                    if [ -n "$APP_FOLDER" ] && [ -d "$APP_FOLDER" ]; then
+                      APP_FOLDER_NAME=$(basename "$APP_FOLDER")
+                      echo "Found potential app folder: $APP_FOLDER_NAME" | tee -a install_output.txt
+                      
+                      # Check if it looks like an app (has Contents folder)
+                      if [ -d "$APP_FOLDER/Contents" ]; then
+                        echo "Folder has Contents directory, treating as app" | tee -a install_output.txt
+                        sudo cp -R "$APP_FOLDER" "/Applications/" >> install_output.txt 2>&1
+                        INSTALL_STATUS=$?
+                      else
+                        echo "No installable content found in DMG" | tee -a install_output.txt
+                        INSTALL_STATUS=1
+                      fi
+                    else
+                      echo "No installable content found in DMG" | tee -a install_output.txt
+                      INSTALL_STATUS=1
+                    fi
+                  fi
+                fi
+              fi
             fi
             
             # Unmount the DMG
@@ -415,7 +535,7 @@ jobs:
           if git status --porcelain | grep -q "Apps/"; then
             echo "Changes detected, committing..."
             git add Apps/*.json
-            git commit -m "Add QA results for multiple apps"
+            git commit -m "Add QA results from automated testing ($(date +'%Y-%m-%d'))"
             
             # Push using the PAT for authentication
             echo "Pushing changes to repository..."
