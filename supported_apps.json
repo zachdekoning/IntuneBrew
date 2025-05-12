@@ -97,7 +97,6 @@
     "company_portal": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/company_portal.json",
     "copilot_for_xcode": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/copilot_for_xcode.json",
     "copyclip": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/copyclip.json",
-    "copyq": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/copyq.json",
     "coteditor": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/coteditor.json",
     "cryptomator": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/cryptomator.json",
     "crystalfetch": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/crystalfetch.json",
@@ -264,7 +263,6 @@
     "meetingbar": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/meetingbar.json",
     "meld_for_macos": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/meld_for_macos.json",
     "menubar_stats": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/menubar_stats.json",
-    "metasploit_framework": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/metasploit_framework.json",
     "micro_snitch": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/micro_snitch.json",
     "microsoft_auto_update": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/microsoft_auto_update.json",
     "microsoft_azure_storage_explorer": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/microsoft_azure_storage_explorer.json",
@@ -418,9 +416,7 @@
     "sketchup": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/sketchup.json",
     "skim": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/skim.json",
     "slack": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/slack.json",
-    "smartbear_soapui": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/smartbear_soapui.json",
     "snagit": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/snagit.json",
-    "soundsiphon": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/soundsiphon.json",
     "splashtop_business": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/splashtop_business.json",
     "splice": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/splice.json",
     "spline": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/spline.json",
@@ -504,6 +500,5 @@
     "zed": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zed.json",
     "zed_attack_proxy": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zed_attack_proxy.json",
     "zen_browser": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zen_browser.json",
-    "zenmap": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zenmap.json",
     "zoom": "https://raw.githubusercontent.com/ugurkocde/IntuneBrew/main/Apps/zoom.json"
 }

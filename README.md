@@ -18,9 +18,9 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                    <p>
+                                                                                                                                                                                                                                                                                                      <p>
     <a href="#-supported-applications">
-      <img src="https://img.shields.io/badge/Apps_Available-507-2ea44f?style=flat" alt="TotalApps"/>
+      <img src="https://img.shields.io/badge/Apps_Available-502-2ea44f?style=flat" alt="TotalApps"/>
     </a>
   </p>
 </div>
@@ -177,7 +177,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.661 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.5 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.377 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.381 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/binary_ninja.png' width='32' height='32'> Binary Ninja | 5.0.7290 |
@@ -220,7 +220,6 @@ Follow the interactive prompts to:
 | <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2502.1 |
 | <img src='Logos/copilot_for_xcode.png' width='32' height='32'> Copilot for Xcode | 0.35.8 |
 | <img src='Logos/copyclip.png' width='32' height='32'> CopyClip | 2.9.99.2 |
-| <img src='Logos/copyq.png' width='32' height='32'> CopyQ | 10.0.0 |
 | <img src='Logos/coteditor.png' width='32' height='32'> CotEditor | 5.1.6 |
 | <img src='Logos/cryptomator.png' width='32' height='32'> Cryptomator | 1.16.1 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
@@ -275,7 +274,7 @@ Follow the interactive prompts to:
 | <img src='Logos/figma.png' width='32' height='32'> Figma | 125.4.8 |
 | <img src='Logos/fission.png' width='32' height='32'> Fission | 2.8.8 |
 | <img src='Logos/flameshot.png' width='32' height='32'> Flameshot | 12.1.0 |
-| <img src='Logos/flowvision.png' width='32' height='32'> FlowVision | 1.6.2 |
+| <img src='Logos/flowvision.png' width='32' height='32'> FlowVision | 1.6.3 |
 | <img src='Logos/flycut.png' width='32' height='32'> Flycut | 1.9.6 |
 | <img src='Logos/forecast.png' width='32' height='32'> Forecast | 0.9.6 |
 | <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.7 |
@@ -351,7 +350,7 @@ Follow the interactive prompts to:
 | <img src='Logos/keybase.png' width='32' height='32'> Keybase | 6.5.1 |
 | <img src='Logos/keycastr.png' width='32' height='32'> KeyCastr | 0.10.3 |
 | <img src='Logos/keyclu.png' width='32' height='32'> KeyClu | 0.30.1 |
-| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.41.1 |
+| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.42.0 |
 | <img src='Logos/klokki.png' width='32' height='32'> Klokki | 1.3.7 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 3.1.6 |
 | <img src='Logos/krita.png' width='32' height='32'> Krita | 5.2.9 |
@@ -387,7 +386,6 @@ Follow the interactive prompts to:
 | <img src='Logos/meetingbar.png' width='32' height='32'> MeetingBar | 4.10.0 |
 | <img src='Logos/meld_for_macos.png' width='32' height='32'> Meld for macOS | 3.22.3+105 |
 | <img src='Logos/menubar_stats.png' width='32' height='32'> MenuBar Stats | 3.9 |
-| <img src='Logos/metasploit_framework.png' width='32' height='32'> Metasploit Framework | 6.4.54 |
 | <img src='Logos/micro_snitch.png' width='32' height='32'> Micro Snitch | 1.6.1 |
 | <img src='Logos/microsoft_auto_update.png' width='32' height='32'> Microsoft Auto Update | 4.79.25033028 |
 | <img src='Logos/microsoft_azure_storage_explorer.png' width='32' height='32'> Microsoft Azure Storage Explorer | 1.38.0 |
@@ -541,9 +539,7 @@ Follow the interactive prompts to:
 | <img src='Logos/sketchup.png' width='32' height='32'> SketchUp | 2025.0.633.273 |
 | <img src='Logos/skim.png' width='32' height='32'> Skim | 1.7.9 |
 | <img src='Logos/slack.png' width='32' height='32'> Slack | 4.44.59 |
-| <img src='Logos/smartbear_soapui.png' width='32' height='32'> SmartBear SoapUI | 5.8.0 |
 | <img src='Logos/snagit.png' width='32' height='32'> Snagit | 2025.2.0 |
-| <img src='Logos/soundsiphon.png' width='32' height='32'> SoundSiphon | 3.8.2 |
 | <img src='Logos/splashtop_business.png' width='32' height='32'> Splashtop Business | 3.7.4.0 |
 | <img src='Logos/splice.png' width='32' height='32'> Splice | 5.3.2 |
 | <img src='Logos/spline.png' width='32' height='32'> Spline | 0.12.5 |
@@ -627,7 +623,6 @@ Follow the interactive prompts to:
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.185.15 |
 | <img src='Logos/zed_attack_proxy.png' width='32' height='32'> Zed Attack Proxy | 2.16.1 |
 | <img src='Logos/zen_browser.png' width='32' height='32'> Zen Browser | 1.12.3b |
-| <img src='Logos/zenmap.png' width='32' height='32'> Zenmap | 7.96 |
 | <img src='Logos/zoom.png' width='32' height='32'> Zoom | 6.4.6.53970 |
 
 > [!NOTE]
