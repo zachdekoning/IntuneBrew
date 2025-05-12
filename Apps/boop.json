@@ -8,5 +8,15 @@
   "fileName": "boop_1.4.0.pkg",
   "type": "app",
   "sha": "5efd18b0d82655e694e9316558d8c44f938206bf06a253a795d1cbb09eb76b50",
-  "previous_version": "1.4.0"
+  "previous_version": "1.4.0",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:27:28Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.4.0"
+  }
 }

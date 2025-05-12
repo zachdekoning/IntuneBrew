@@ -10,7 +10,7 @@
   "changelog": "https://docs.azul.com/core/release-notes",
   "previous_version": "24.0.1",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T10:35:17Z",
+    "qa_timestamp": "2025-05-12T11:22:15Z",
     "qa_result": "No .app found in DMG",
     "download_status": "success",
     "sha_status": "verified",

@@ -8,5 +8,15 @@
   "fileName": "batfi_2.4.1.pkg",
   "type": "app",
   "sha": "17d302c74de49b8c7b048632a91ea91d2da782de5e525bfb85f2c3848fc35299",
-  "previous_version": "2.4.1"
+  "previous_version": "2.4.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:22:55Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.4.1"
+  }
 }

@@ -9,7 +9,7 @@
   "sha": "2a456be9835bf4178b1ba27543c8cfd677bf5bd48a3c90ae473afae25e4d33b0",
   "previous_version": "6.6.0.611",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T10:28:59Z",
+    "qa_timestamp": "2025-05-12T11:19:14Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "verified",

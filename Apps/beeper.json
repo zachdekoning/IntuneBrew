@@ -8,5 +8,15 @@
   "fileName": "beeper_4.0.661.pkg",
   "type": "app",
   "sha": "f57ae72c294380124fbdf4e0ac23134aeef25beaf09a7f0cbdda46f02c3ebd07",
-  "previous_version": "4.0.661"
+  "previous_version": "4.0.661",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:23:02Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "4.0.661"
+  }
 }

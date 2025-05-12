@@ -7,5 +7,15 @@
   "homepage": "https://binary.ninja/",
   "fileName": "binaryninja_free_macosx.dmg",
   "sha": "5b21f2a5ea89e059b841ed64b61143fb35d6f25a68fa00dafde9c9dfeae64c71",
-  "previous_version": "5.0.7290"
+  "previous_version": "5.0.7290",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:24:01Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "5.0.7290_free"
+  }
 }

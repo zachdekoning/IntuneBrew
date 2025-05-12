@@ -8,5 +8,15 @@
   "fileName": "BBEdit_15.1.4.dmg",
   "sha": "f68064b1d40871e864114a438073e04a4e6b47bbdb26bd32e887dba8435b3499",
   "changelog": "https://www.barebones.com/company/news.html",
-  "previous_version": "15.1.4"
+  "previous_version": "15.1.4",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:23:00Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "15.1.4"
+  }
 }

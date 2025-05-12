@@ -8,5 +8,15 @@
   "fileName": "betterzip_5.3.4.pkg",
   "type": "app",
   "sha": "fe05ca2f4e6a681b6eb511b4a7d10ddc1b0bf4f4e11575e0cec52f6cbd1ded49",
-  "previous_version": "5.3.4"
+  "previous_version": "5.3.4",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:23:43Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "5.3.4"
+  }
 }

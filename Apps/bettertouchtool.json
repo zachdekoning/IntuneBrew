@@ -8,5 +8,15 @@
   "fileName": "bettertouchtool_5.381.pkg",
   "type": "app",
   "sha": "c791806e9e9e0c0159e43c4ed883b5f8f71f0a777eb07646e2909d8c7b670e76",
-  "previous_version": "5.381"
+  "previous_version": "5.381",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:23:33Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "5.381"
+  }
 }
