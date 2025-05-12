@@ -209,6 +209,7 @@ jobs:
         id: install
         if: env.DOWNLOAD_STATUS == 'success'
         run: |
+          set -x # Enable command tracing for detailed debugging
           echo "📦 Installing $APP_DISPLAY_NAME..."
 
           # Create a file to capture installation output
@@ -223,30 +224,41 @@ jobs:
 
           elif [[ "$FILE_EXT" == "dmg" ]]; then
             echo "Installing from DMG file..." | tee -a install_output.txt
-            # Mount the DMG
-            # Attempt to mount the DMG, adding -noverify and -noautoopen for CI environments
-            # Capture stderr along with stdout using 2>&1
+            
+            # Create temporary files for hdiutil output
+            HDIUTIL_STDOUT_LOG="hdiutil_stdout.log"
+            HDIUTIL_STDERR_LOG="hdiutil_stderr.log"
+            touch $HDIUTIL_STDOUT_LOG $HDIUTIL_STDERR_LOG
+
             echo "Attempting to mount DMG: temp_downloads/$DOWNLOAD_FILENAME with flags -nobrowse -readonly -noverify -noautoopen" | tee -a install_output.txt
-            ATTACH_CMD_OUTPUT=$(hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly -noverify -noautoopen 2>&1)
+            
+            # Execute hdiutil attach and capture its exit status, redirecting stdout and stderr to log files
+            hdiutil attach "temp_downloads/$DOWNLOAD_FILENAME" -nobrowse -readonly -noverify -noautoopen > "$HDIUTIL_STDOUT_LOG" 2> "$HDIUTIL_STDERR_LOG"
             ATTACH_CMD_STATUS=$?
 
-            echo "hdiutil attach command raw output (status: $ATTACH_CMD_STATUS):" | tee -a install_output.txt
-            echo "$ATTACH_CMD_OUTPUT" | tee -a install_output.txt
+            echo "--- hdiutil attach STDOUT ---" | tee -a install_output.txt
+            cat "$HDIUTIL_STDOUT_LOG" | tee -a install_output.txt
+            echo "--- End hdiutil attach STDOUT ---" | tee -a install_output.txt
+
+            echo "--- hdiutil attach STDERR ---" | tee -a install_output.txt
+            cat "$HDIUTIL_STDERR_LOG" | tee -a install_output.txt
+            echo "--- End hdiutil attach STDERR ---" | tee -a install_output.txt
+            
+            echo "hdiutil attach command finished with status: $ATTACH_CMD_STATUS" | tee -a install_output.txt
 
             MOUNT_POINT="" # Initialize MOUNT_POINT
 
             if [ $ATTACH_CMD_STATUS -eq 0 ]; then
-              # Parse mount point more robustly from successful output
-              # This regex extracts the full path starting with /Volumes/ up to the end of the line
-              MOUNT_POINT=$(echo "$ATTACH_CMD_OUTPUT" | grep -oE '/Volumes/.*' | tail -n 1)
+              # Parse mount point more robustly from successful STDOUT
+              MOUNT_POINT=$(cat "$HDIUTIL_STDOUT_LOG" | grep -oE '/Volumes/.*' | tail -n 1)
               if [ -z "$MOUNT_POINT" ]; then
-                echo "DMG attach command succeeded (status 0), but could not parse mount point from output. MOUNT_POINT remains empty." | tee -a install_output.txt
+                echo "DMG attach command succeeded (status 0), but could not parse mount point from STDOUT. MOUNT_POINT remains empty." | tee -a install_output.txt
               else
                 # Further check if the parsed MOUNT_POINT actually exists as a directory
                 if [ -d "$MOUNT_POINT" ]; then
                   echo "DMG successfully mounted at: $MOUNT_POINT" | tee -a install_output.txt
                 else
-                  echo "DMG attach command succeeded and mount point '$MOUNT_POINT' was parsed, but it is not a valid directory." | tee -a install_output.txt
+                  echo "DMG attach command succeeded and mount point '$MOUNT_POINT' was parsed from STDOUT, but it is not a valid directory." | tee -a install_output.txt
                   MOUNT_POINT="" # Invalidate mount point if it's not a directory
                 fi
               fi
@@ -255,6 +267,9 @@ jobs:
               # MOUNT_POINT remains empty as initialized
             fi
             
+            # Clean up temporary hdiutil log files
+            rm -f "$HDIUTIL_STDOUT_LOG" "$HDIUTIL_STDERR_LOG"
+
             # List DMG contents for debugging, only if MOUNT_POINT is valid
             echo "Listing DMG contents (if mount was successful and path is valid):" | tee -a install_output.txt
             if [ -n "$MOUNT_POINT" ]; then # MOUNT_POINT should be non-empty and a directory (checked above)
