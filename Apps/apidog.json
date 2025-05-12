@@ -8,5 +8,15 @@
   "fileName": "legacy-Apidog-macOS-arm64-2.7.9.dmg",
   "sha": "e00fea870d193a05926a48b3738d624129912cdb3be04652be0c9fa5edc284a1",
   "changelog": "https://apidog.com/blog/",
-  "previous_version": "2.7.9"
+  "previous_version": "2.7.9",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:32:03Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.7.9"
+  }
 }

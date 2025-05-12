@@ -8,5 +8,15 @@
   "fileName": "audio_hijack_4.5.0.pkg",
   "type": "app",
   "sha": "c8a7741799b0d5fc305bfbff2429d8dba3484535296658e250ec9a8e89873029",
-  "previous_version": "4.5.0"
+  "previous_version": "4.5.0",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:34:29Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "4.5.0"
+  }
 }

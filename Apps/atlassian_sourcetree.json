@@ -8,5 +8,15 @@
   "fileName": "atlassian_sourcetree_4.2.11.pkg",
   "type": "app",
   "sha": "538795158690bf20471e833e6bef9c67502cefdd69bbbedd57ab44357a9f7a8b",
-  "previous_version": "4.2.11"
+  "previous_version": "4.2.11",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:34:15Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "4.2.11"
+  }
 }

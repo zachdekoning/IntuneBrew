@@ -8,5 +8,15 @@
   "fileName": "abstract_98.6.1.pkg",
   "type": "app",
   "sha": "f62510d7a05a233288bb1f7f98c3236fdb2b3e124ab8b3dbd4786e428aa69656",
-  "previous_version": "98.6.1"
+  "previous_version": "98.6.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:15:17Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "98.6.1"
+  }
 }

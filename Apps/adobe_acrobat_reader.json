@@ -9,5 +9,15 @@
   "type": "pkg_in_dmg",
   "changelog": "https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html",
   "sha": "c49224ccb314cf52434cef9c2232e6597a9e3715836f945f3ab21ddb94741c49",
-  "previous_version": "25.001.20467"
+  "previous_version": "25.001.20467",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:27:42Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "25.001.20467"
+  }
 }

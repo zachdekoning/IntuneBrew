@@ -7,5 +7,15 @@
   "homepage": "https://www.acronis.com/products/true-image/",
   "fileName": "AcronisTrueImage_41725.dmg",
   "sha": "c9ceaac10458342db211f91a18c776f9cba24f75a6828c72e425f0afecf632c2",
-  "previous_version": "29.2"
+  "previous_version": "29.2",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:15:49Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "29.2"
+  }
 }

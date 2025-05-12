@@ -8,5 +8,15 @@
   "fileName": "bartender_5.3.5.pkg",
   "type": "app",
   "sha": "fd13c80fae2aed227f0391384ee5f6d1a94e9b876ec387849aef387ea759cad0",
-  "previous_version": "5.3.5"
+  "previous_version": "5.3.5",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:36:15Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "5.3.5"
+  }
 }

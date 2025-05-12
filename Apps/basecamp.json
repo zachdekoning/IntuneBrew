@@ -8,5 +8,15 @@
   "fileName": "basecamp_3.pkg",
   "type": "app",
   "sha": "f5cd1cd89553e53adbedc19a6b81fef538dda91c68faa70653876d78185ffef9",
-  "previous_version": "3"
+  "previous_version": "3",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:36:21Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.4.2"
+  }
 }

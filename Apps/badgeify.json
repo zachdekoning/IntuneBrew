@@ -8,5 +8,14 @@
   "fileName": "1.6.5",
   "sha": "e26813c99a9c7d514fc9590f7d6719ac2312f2d35aae8e59ecaab07f4d752ff9",
   "changelog": "https://badgeify.app/changelog",
-  "previous_version": "1.6.5"
+  "previous_version": "1.6.5",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:36:06Z",
+    "qa_result": "Installation failed",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "failed",
+    "verify_status": "pending",
+    "bundle_id_status": "pending"
+  }
 }
