@@ -278,6 +278,8 @@ jobs:
                   echo "No installable content found in DMG" | tee -a install_output.txt
                   INSTALL_STATUS=1
                 fi
+              fi
+            fi
             # Unmount the DMG
             hdiutil detach "$MOUNT_POINT" -quiet || hdiutil detach "$MOUNT_POINT" -force -quiet
 
