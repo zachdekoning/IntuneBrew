@@ -87,7 +87,7 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/macwhisper.json",
     "https://formulae.brew.sh/api/cask/reactotron.json",
     "https://formulae.brew.sh/api/cask/macdown.json",
-    "https://formulae.brew.sh/api/cask/middleclick.json"
+    "https://formulae.brew.sh/api/cask/middleclick.json",
     "https://formulae.brew.sh/api/cask/openmtp.json",
     "https://formulae.brew.sh/api/cask/pearcleaner.json",
     "https://formulae.brew.sh/api/cask/notunes.json",
@@ -322,7 +322,7 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/wechat.json",
     "https://formulae.brew.sh/api/cask/redis-insight.json",
     "https://formulae.brew.sh/api/cask/mos.json",
-    "https://formulae.brew.sh/api/cask/localsend.json"
+    "https://formulae.brew.sh/api/cask/localsend.json",
     "https://formulae.brew.sh/api/cask/qbittorrent.json",
     "https://formulae.brew.sh/api/cask/monitorcontrol.json",
     "https://formulae.brew.sh/api/cask/lulu.json",
