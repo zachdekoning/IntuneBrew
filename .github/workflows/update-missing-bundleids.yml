@@ -1,13 +1,19 @@
 name: Update Missing BundleIDs
 
 on:
+  # Run after the update-version-database workflow completes
+  workflow_run:
+    workflows: ["Update Version Database and Send Notifications"]
+    types:
+      - completed
+  # Allow manual triggering
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 0" # Run weekly at midnight on Sunday
 
 jobs:
   update-bundleids:
     runs-on: macos-latest
+    # Only run if the previous workflow succeeded or if manually triggered or scheduled
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
     permissions:
       contents: write # This gives the job permission to write to the repository
 
@@ -16,39 +22,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
-
-      - name: Verify repository checkout
-        run: |
-          echo "Verifying repository checkout..."
-          echo "Current directory: $(pwd)"
-          echo "Repository contents:"
-          ls -la
-
-          if [ ! -d "Apps" ]; then
-            echo "❌ Apps directory not found!"
-            echo "Creating Apps directory for testing..."
-            mkdir -p Apps
-            
-            # Create a test JSON file for macdown
-            echo '{
-              "name": "MacDown",
-              "description": "Open-source Markdown editor",
-              "version": "0.7.2",
-              "url": "https://intunebrew.blob.core.windows.net/pkg/macdown_0.7.2.pkg",
-              "bundleId": null,
-              "homepage": "https://macdown.uranusjr.com/",
-              "fileName": "macdown_0.7.2.pkg",
-              "type": "app",
-              "sha": "bba030fc49d9dd7ab0c139fe5c39773eff0830336d6ab06b6fa7b23621efe774",
-              "previous_version": "0.7.2"
-            }' > Apps/macdown.json
-            
-            echo "Created test file: Apps/macdown.json"
-          else
-            echo "✅ Apps directory found"
-            echo "Apps directory contents:"
-            ls -la Apps/
-          fi
 
       - name: Find apps with missing bundleIds
         id: find-apps
