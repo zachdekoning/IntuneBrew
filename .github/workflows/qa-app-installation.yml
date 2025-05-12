@@ -143,9 +143,17 @@ jobs:
             echo "## Successfully Installed Apps" >> $GITHUB_STEP_SUMMARY
             echo "The following apps were successfully installed and verified:" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
-            cat /tmp/successful_installs.txt >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
+            
+            # Display each app on a separate line with a bullet point
+            echo "<ul>" >> $GITHUB_STEP_SUMMARY
+            while IFS= read -r app || [ -n "$app" ]; do
+              echo "<li>$app</li>" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/successful_installs.txt
+            echo "</ul>" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Successfully Installed Apps" >> $GITHUB_STEP_SUMMARY
+            echo "No apps were successfully installed in this run." >> $GITHUB_STEP_SUMMARY
           fi
 
           # Add failed installs section if any
@@ -154,9 +162,17 @@ jobs:
             echo "## Failed Installations" >> $GITHUB_STEP_SUMMARY
             echo "The following apps failed during installation or verification:" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
-            cat /tmp/failed_installs.txt >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
+            
+            # Display each app on a separate line with a bullet point
+            echo "<ul>" >> $GITHUB_STEP_SUMMARY
+            while IFS= read -r app || [ -n "$app" ]; do
+              echo "<li>$app</li>" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/failed_installs.txt
+            echo "</ul>" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Failed Installations" >> $GITHUB_STEP_SUMMARY
+            echo "No apps failed installation in this run." >> $GITHUB_STEP_SUMMARY
           fi
 
           # Add skipped installs section if any
@@ -165,7 +181,15 @@ jobs:
             echo "## Skipped Installations" >> $GITHUB_STEP_SUMMARY
             echo "The following apps were skipped because they were already verified:" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
-            cat /tmp/skipped_installs.txt >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
+            
+            # Display each app on a separate line with a bullet point
+            echo "<ul>" >> $GITHUB_STEP_SUMMARY
+            while IFS= read -r app || [ -n "$app" ]; do
+              echo "<li>$app</li>" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/skipped_installs.txt
+            echo "</ul>" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Skipped Installations" >> $GITHUB_STEP_SUMMARY
+            echo "No apps were skipped in this run." >> $GITHUB_STEP_SUMMARY
           fi
