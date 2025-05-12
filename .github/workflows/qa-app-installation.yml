@@ -13,6 +13,10 @@ on:
         required: false
         type: boolean
         default: false
+      batch_size:
+        description: "Number of apps to process in each batch (for disk space management)"
+        required: false
+        default: "10"
 
 jobs:
   qa-installation:
@@ -25,6 +29,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
+
+      - name: Check disk space before starting
+        run: |
+          echo "Initial disk space check:"
+          df -h
+          AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
+          AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
+          echo "Available disk space: $AVAILABLE_SPACE_MB MB"
+          echo "INITIAL_DISK_SPACE=$AVAILABLE_SPACE_MB" >> $GITHUB_ENV
 
       - name: Determine apps to test
         id: determine-apps
@@ -70,6 +83,13 @@ jobs:
           # Set force_all flag
           echo "FORCE_ALL=${{ github.event.inputs.force_all }}" >> $GITHUB_ENV
 
+          # Set batch size
+          BATCH_SIZE="${{ github.event.inputs.batch_size }}"
+          if [ -z "$BATCH_SIZE" ] || [ "$BATCH_SIZE" -lt 1 ]; then
+            BATCH_SIZE=10
+          fi
+          echo "BATCH_SIZE=$BATCH_SIZE" >> $GITHUB_ENV
+
           if [ ${#APPS_TO_TEST[@]} -eq 0 ]; then
             echo "No valid apps to test."
             echo "APPS_TO_TEST=" >> $GITHUB_ENV
@@ -77,6 +97,11 @@ jobs:
             # Convert array to newline-separated string and save to a file
             printf "%s\n" "${APPS_TO_TEST[@]}" > /tmp/apps_to_test.txt
             echo "Found ${#APPS_TO_TEST[@]} apps to test."
+            
+            # Calculate number of batches
+            BATCH_COUNT=$(( (${#APPS_TO_TEST[@]} + BATCH_SIZE - 1) / BATCH_SIZE ))
+            echo "Will process in $BATCH_COUNT batches of up to $BATCH_SIZE apps each"
+            echo "BATCH_COUNT=$BATCH_COUNT" >> $GITHUB_ENV
           fi
 
       - name: Make script executable
@@ -86,15 +111,32 @@ jobs:
       - name: Run QA tests
         if: env.APPS_COUNT != '0'
         run: |
-          # Pass force_all flag to the script
+          # Pass force_all flag and batch_size to the script
+          ARGS=""
+
           if [ "$FORCE_ALL" = "true" ]; then
             echo "Force testing all apps regardless of previous QA status"
-            FORCE_ARG="--force"
-          else
-            FORCE_ARG=""
+            ARGS="$ARGS --force"
           fi
 
-          ./.github/scripts/qa-app-test.sh $FORCE_ARG
+          echo "Using batch size of $BATCH_SIZE"
+          ARGS="$ARGS --batch-size=$BATCH_SIZE"
+
+          ./.github/scripts/qa-app-test.sh $ARGS
+
+      - name: Check disk space after testing
+        run: |
+          echo "Final disk space check:"
+          df -h
+          AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
+          AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
+          echo "Available disk space: $AVAILABLE_SPACE_MB MB"
+          echo "FINAL_DISK_SPACE=$AVAILABLE_SPACE_MB" >> $GITHUB_ENV
+
+          # Calculate disk space used
+          DISK_SPACE_USED=$((INITIAL_DISK_SPACE - AVAILABLE_SPACE_MB))
+          echo "Disk space used: $DISK_SPACE_USED MB"
+          echo "DISK_SPACE_USED=$DISK_SPACE_USED" >> $GITHUB_ENV
 
       - name: Commit and push changes
         if: env.CHANGES_MADE == 'true'
@@ -132,9 +174,12 @@ jobs:
           echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
           echo "| Apps Tested | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Batch Size | $BATCH_SIZE |" >> $GITHUB_STEP_SUMMARY
+          echo "| Batches Processed | $BATCH_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Successful Installations | $SUCCESSFUL_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Failed Installations | $FAILED_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Skipped Installations | $SKIPPED_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Disk Space Used | $DISK_SPACE_USED MB |" >> $GITHUB_STEP_SUMMARY
           echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
 
           # Add successful installs section if any

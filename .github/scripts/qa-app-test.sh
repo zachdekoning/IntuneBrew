@@ -5,6 +5,7 @@
 
 # Parse command line arguments
 FORCE_ALL=false
+BATCH_SIZE=10
 for arg in "$@"; do
     case $arg in
     --force)
@@ -12,8 +13,45 @@ for arg in "$@"; do
         echo "Force flag detected - Will test all apps regardless of previous QA status"
         shift
         ;;
+    --batch-size=*)
+        BATCH_SIZE="${arg#*=}"
+        echo "Batch size set to $BATCH_SIZE"
+        shift
+        ;;
     esac
 done
+
+# Function to check available disk space
+check_disk_space() {
+    # Get available disk space in KB
+    AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
+    # Convert to MB for easier reading
+    AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
+    echo "Available disk space: $AVAILABLE_SPACE_MB MB"
+
+    # If less than 2GB available, clean up and warn
+    if [ $AVAILABLE_SPACE_MB -lt 2048 ]; then
+        echo "⚠️ Low disk space detected ($AVAILABLE_SPACE_MB MB). Cleaning up..."
+        # Clean up temporary files
+        rm -rf /tmp/temp_*
+        # Clean up any mounted DMGs
+        hdiutil detach /Volumes/AppDMG -force 2>/dev/null || true
+        # Remove downloaded packages
+        rm -rf *.dmg *.pkg *.zip
+
+        # Check space again
+        AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
+        AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
+        echo "Available disk space after cleanup: $AVAILABLE_SPACE_MB MB"
+
+        # If still less than 1GB, we're in trouble
+        if [ $AVAILABLE_SPACE_MB -lt 1024 ]; then
+            echo "❌ CRITICAL: Disk space critically low ($AVAILABLE_SPACE_MB MB). Cannot continue safely."
+            return 1
+        fi
+    fi
+    return 0
+}
 
 # Function to test an app
 test_app() {
@@ -21,6 +59,9 @@ test_app() {
 
     echo "==============================================="
     echo "Processing $APP_JSON_PATH"
+
+    # Check disk space before starting
+    check_disk_space || return 1
 
     # Read app details from JSON
     APP_JSON=$(cat "$APP_JSON_PATH")
@@ -72,7 +113,7 @@ test_app() {
     QA_INFO='{"qa_timestamp":"'$TIMESTAMP'","qa_result":"pending","download_status":"pending","sha_status":"pending","install_status":"pending","verify_status":"pending","bundle_id_status":"pending"}'
 
     # Create a temporary directory for this app
-    TEMP_DIR="temp_${APP_NAME// /_}"
+    TEMP_DIR="/tmp/temp_${APP_NAME// /_}"
     mkdir -p "$TEMP_DIR"
     cd "$TEMP_DIR"
 
@@ -85,7 +126,7 @@ test_app() {
         echo "❌ Failed to download file"
         QA_INFO=$(echo "$QA_INFO" | jq '.download_status = "failed" | .qa_result = "Download failed"')
         FAILED_INSTALLS+=("$APP_NAME - Download failed")
-        cd ..
+        cd "$GITHUB_WORKSPACE"
         rm -rf "$TEMP_DIR"
 
         # Update the JSON file with QA info
@@ -478,10 +519,70 @@ SUCCESSFUL_INSTALLS=()
 FAILED_INSTALLS=()
 SKIPPED_INSTALLS=()
 
-# Process each app from the file
-while IFS= read -r APP_JSON_PATH || [ -n "$APP_JSON_PATH" ]; do
-    test_app "$APP_JSON_PATH"
-done </tmp/apps_to_test.txt
+# Read all apps to test
+readarray -t ALL_APPS </tmp/apps_to_test.txt
+
+# Display total number of apps
+TOTAL_APPS=${#ALL_APPS[@]}
+echo "Total apps to process: $TOTAL_APPS"
+
+# Process apps in batches to manage disk space
+BATCH_COUNT=$(((TOTAL_APPS + BATCH_SIZE - 1) / BATCH_SIZE))
+echo "Processing in $BATCH_COUNT batches of up to $BATCH_SIZE apps each"
+
+for ((i = 0; i < TOTAL_APPS; i += BATCH_SIZE)); do
+    BATCH_START=$i
+    BATCH_END=$((i + BATCH_SIZE - 1))
+    if [ $BATCH_END -ge $TOTAL_APPS ]; then
+        BATCH_END=$((TOTAL_APPS - 1))
+    fi
+
+    CURRENT_BATCH=$((i / BATCH_SIZE + 1))
+    echo "========================================================"
+    echo "Processing batch $CURRENT_BATCH of $BATCH_COUNT (apps $BATCH_START-$BATCH_END)"
+    echo "========================================================"
+
+    # Process each app in this batch
+    for j in $(seq $BATCH_START $BATCH_END); do
+        APP_JSON_PATH="${ALL_APPS[$j]}"
+        test_app "$APP_JSON_PATH"
+
+        # Check disk space after each app
+        check_disk_space || {
+            echo "❌ Critical disk space issue. Stopping batch processing."
+            break
+        }
+    done
+
+    # Commit changes after each batch to free up git storage
+    if [ "$CHANGES_MADE" = "true" ]; then
+        echo "Committing changes after batch $CURRENT_BATCH..."
+        git config --local user.email "action@github.com" || true
+        git config --local user.name "GitHub Action" || true
+        git add Apps/*.json || true
+        git commit -m "Update QA info for batch $CURRENT_BATCH" || true
+
+        # Don't push yet, just commit to free up space
+        echo "Changes committed for batch $CURRENT_BATCH"
+    fi
+
+    # Force cleanup between batches
+    echo "Cleaning up between batches..."
+    rm -rf /tmp/temp_*
+    hdiutil detach /Volumes/AppDMG -force 2>/dev/null || true
+    rm -rf *.dmg *.pkg *.zip
+
+    # Display disk space after batch
+    AVAILABLE_SPACE=$(df -k . | awk 'NR==2 {print $4}')
+    AVAILABLE_SPACE_MB=$((AVAILABLE_SPACE / 1024))
+    echo "Available disk space after batch $CURRENT_BATCH: $AVAILABLE_SPACE_MB MB"
+
+    # If critically low on space, stop processing
+    if [ $AVAILABLE_SPACE_MB -lt 1024 ]; then
+        echo "❌ CRITICAL: Disk space critically low ($AVAILABLE_SPACE_MB MB). Stopping further processing."
+        break
+    fi
+done
 
 # Save the lists to environment variables for the summary step
 echo "SUCCESSFUL_INSTALLS_COUNT=${#SUCCESSFUL_INSTALLS[@]}" >>$GITHUB_ENV
