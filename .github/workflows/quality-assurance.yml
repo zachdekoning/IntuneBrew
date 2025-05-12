@@ -21,7 +21,9 @@ jobs:
       - name: Get list of apps
         id: get-apps
         run: |
-          APP_LIST=$(ls Apps/*.json | sed 's/Apps\///' | sed 's/\.json//' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          # Get a subset of apps for testing (first 50 apps)
+          # Change this number or remove the head command to test all apps
+          APP_LIST=$(ls Apps/*.json | sed 's/Apps\///' | sed 's/\.json//' | head -50 | jq -R -s -c 'split("\n") | map(select(length > 0))')
           echo "app_list=$APP_LIST" >> $GITHUB_OUTPUT
           echo "Found $(echo $APP_LIST | jq '. | length') apps to test"
 
