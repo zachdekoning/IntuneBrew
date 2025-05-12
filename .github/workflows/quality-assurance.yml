@@ -231,101 +231,22 @@ jobs:
             echo "DMG contents:" | tee -a install_output.txt
             ls -la "$MOUNT_POINT" | tee -a install_output.txt
             
-            # Try to determine the type of DMG
-            # 1. First check if it's a direct app that needs to be copied
-            APP_IN_DMG=$(find "$MOUNT_POINT" -name "*.app" -maxdepth 4 | head -n 1)
-            
+            # Simple approach: First check for .app files
+            APP_IN_DMG=$(find "$MOUNT_POINT" -name "*.app" -maxdepth 3 | head -n 1)
             if [ -n "$APP_IN_DMG" ]; then
-              APP_NAME_IN_DMG=$(basename "$APP_IN_DMG")
-              echo "Found app: $APP_NAME_IN_DMG" | tee -a install_output.txt
-              
-              # Check if this is an installer app or a regular app
-              if [[ "$APP_NAME_IN_DMG" == *"Install"* ]] || [[ "$APP_NAME_IN_DMG" == *"Setup"* ]]; then
-                echo "This appears to be an installer app, running it..." | tee -a install_output.txt
-                # For installer apps, we need to run them instead of copying
-                # This is tricky in a headless environment, so we'll try to copy it and then run it
-                TMP_APP_PATH="/tmp/$APP_NAME_IN_DMG"
-                sudo cp -R "$APP_IN_DMG" "$TMP_APP_PATH" >> install_output.txt 2>&1
-                
-                # Try to run the installer app (this might not work for all installers)
-                sudo open -a "$TMP_APP_PATH" --args --mode=silent >> install_output.txt 2>&1
-                # Give it some time to run
-                sleep 30
-                # Check if any app was installed to Applications
-                if [ "$(ls -A /Applications | wc -l)" -gt "$(ls -A /Applications | grep -v "$APP_NAME_IN_DMG" | wc -l)" ]; then
-                  echo "Installation appears to have succeeded" | tee -a install_output.txt
-                  INSTALL_STATUS=0
-                else
-                  # Fallback: just copy the app itself
-                  echo "Installer app didn't seem to work, copying app directly" | tee -a install_output.txt
-                  sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
-                  INSTALL_STATUS=$?
-                fi
-              else
-                # Regular app, just copy it
-                echo "Copying app to Applications folder" | tee -a install_output.txt
-                sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
-                INSTALL_STATUS=$?
-              fi
+              echo "Found app: $(basename "$APP_IN_DMG")" | tee -a install_output.txt
+              sudo cp -R "$APP_IN_DMG" "/Applications/" >> install_output.txt 2>&1
+              INSTALL_STATUS=$?
             else
-              echo "No .app file found directly, checking for pkg files..." | tee -a install_output.txt
-              
-              # 2. Check for pkg files in the DMG
-              PKG_IN_DMG=$(find "$MOUNT_POINT" -name "*.pkg" -maxdepth 4 | head -n 1)
+              # Check for pkg files in the DMG
+              PKG_IN_DMG=$(find "$MOUNT_POINT" -name "*.pkg" -maxdepth 3 | head -n 1)
               if [ -n "$PKG_IN_DMG" ]; then
-                echo "Found pkg inside DMG: $PKG_IN_DMG" | tee -a install_output.txt
+                echo "Found pkg inside DMG: $(basename "$PKG_IN_DMG")" | tee -a install_output.txt
                 sudo installer -pkg "$PKG_IN_DMG" -target / >> install_output.txt 2>&1
                 INSTALL_STATUS=$?
               else
-                # 3. Check for installer or setup scripts
-                INSTALL_SCRIPT=$(find "$MOUNT_POINT" -name "install" -o -name "Install" -o -name "*.sh" -o -name "*.command" -maxdepth 3 | head -n 1)
-                if [ -n "$INSTALL_SCRIPT" ]; then
-                  echo "Found install script: $INSTALL_SCRIPT" | tee -a install_output.txt
-                  chmod +x "$INSTALL_SCRIPT"
-                  sudo "$INSTALL_SCRIPT" >> install_output.txt 2>&1
-                  INSTALL_STATUS=$?
-                else
-                  # 4. Special case for AdGuard and similar DMGs that have a non-standard structure
-                  if [[ "$APP_DISPLAY_NAME" == "AdGuard" ]] || grep -q "AdGuard" <<< "$MOUNT_POINT"; then
-                    echo "Detected AdGuard DMG, using special handling..." | tee -a install_output.txt
-                    # AdGuard DMG typically has a direct copy approach
-                    if [ -d "$MOUNT_POINT/AdGuard.app" ]; then
-                      sudo cp -R "$MOUNT_POINT/AdGuard.app" "/Applications/" >> install_output.txt 2>&1
-                      INSTALL_STATUS=$?
-                    else
-                      # Try to find any app-like structure
-                      find "$MOUNT_POINT" -type d -name "*" -maxdepth 3 | tee -a install_output.txt
-                      APP_FOLDER=$(find "$MOUNT_POINT" -type d -name "*" -maxdepth 3 | grep -v "__MACOSX" | head -n 1)
-                      if [ -n "$APP_FOLDER" ] && [ -d "$APP_FOLDER" ]; then
-                        echo "Trying to copy folder: $APP_FOLDER" | tee -a install_output.txt
-                        sudo cp -R "$APP_FOLDER" "/Applications/" >> install_output.txt 2>&1
-                        INSTALL_STATUS=$?
-                      else
-                        INSTALL_STATUS=1
-                      fi
-                    fi
-                  else
-                    # 5. Last resort: Look for any app-like folder
-                    APP_FOLDER=$(find "$MOUNT_POINT" -type d -name "*" -maxdepth 2 | grep -v "__MACOSX" | head -n 1)
-                    if [ -n "$APP_FOLDER" ] && [ -d "$APP_FOLDER" ]; then
-                      APP_FOLDER_NAME=$(basename "$APP_FOLDER")
-                      echo "Found potential app folder: $APP_FOLDER_NAME" | tee -a install_output.txt
-                      
-                      # Check if it looks like an app (has Contents folder)
-                      if [ -d "$APP_FOLDER/Contents" ]; then
-                        echo "Folder has Contents directory, treating as app" | tee -a install_output.txt
-                        sudo cp -R "$APP_FOLDER" "/Applications/" >> install_output.txt 2>&1
-                        INSTALL_STATUS=$?
-                      else
-                        echo "No installable content found in DMG" | tee -a install_output.txt
-                        INSTALL_STATUS=1
-                      fi
-                    else
-                      echo "No installable content found in DMG" | tee -a install_output.txt
-                      INSTALL_STATUS=1
-                    fi
-                  fi
-                fi
+                echo "No installable content found in DMG" | tee -a install_output.txt
+                INSTALL_STATUS=1
               fi
             fi
             
@@ -344,10 +265,7 @@ jobs:
             APP_IN_ZIP=$(find "temp_extract" -name "*.app" -maxdepth 2 | head -n 1)
             
             if [ -n "$APP_IN_ZIP" ]; then
-              APP_NAME_IN_ZIP=$(basename "$APP_IN_ZIP")
-              echo "Found app: $APP_NAME_IN_ZIP" | tee -a install_output.txt
-              
-              # Copy the app to Applications
+              echo "Found app: $(basename "$APP_IN_ZIP")" | tee -a install_output.txt
               sudo cp -R "$APP_IN_ZIP" "/Applications/" >> install_output.txt 2>&1
               INSTALL_STATUS=$?
             else
