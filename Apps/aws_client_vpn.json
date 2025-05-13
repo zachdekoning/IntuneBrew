@@ -8,7 +8,7 @@
   "fileName": "AWS_VPN_Client.pkg",
   "type": "pkg_in_pkg",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T08:05:11Z",
+    "qa_timestamp": "2025-05-13T18:18:01Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "not_provided",
