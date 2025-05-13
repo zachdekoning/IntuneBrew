@@ -8,7 +8,6 @@
   "fileName": "Dangerzone-0.9.0-arm64.dmg",
   "sha": "0550878e8816f46e7dbc30014bc40b54bec5f0314b35c736d30fa5fe64c059e4",
   "changelog": "https://github.com/freedomofpress/dangerzone/releases",
-  "previous_version": "0.9.0",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:24:49Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "mismatch",
     "installed_version": "0.9.0"
-  }
+  },
+  "previous_version": "0.9.0"
 }

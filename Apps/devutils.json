@@ -8,7 +8,6 @@
   "fileName": "DevUtils-1.17.0.dmg",
   "sha": "2e14de0f2b5f6c3a4611b808d05a3ae1408d3c1c0caa9b1dd7d887c9f33d717e",
   "changelog": "https://devutils.com/changelog",
-  "previous_version": "1.17.0",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:26:30Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "1.17.0"
-  }
+  },
+  "previous_version": "1.17.0"
 }

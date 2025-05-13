@@ -7,7 +7,6 @@
   "homepage": "https://dockdoor.net/",
   "fileName": "DockDoor.dmg",
   "sha": "07bf40f542903c9c0587a404c176350d927678d639e7198c0db8987d70abc629",
-  "previous_version": "1.9.1",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:26:40Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "1.9.1"
-  }
+  },
+  "previous_version": "1.9.1"
 }

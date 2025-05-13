@@ -7,7 +7,6 @@
   "homepage": "https://chatwise.app/",
   "fileName": "ChatWise_0.8.51_aarch64.dmg",
   "sha": "cc12c489ae81ead45ee3f9478888be35d5fee557703118e5b020a9b5370536d8",
-  "previous_version": "0.8.51",
   "qa_info": {
     "qa_timestamp": "2025-05-12T11:47:00Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "0.8.51"
-  }
+  },
+  "previous_version": "0.8.51"
 }

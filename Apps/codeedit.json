@@ -8,7 +8,6 @@
   "fileName": "CodeEdit.dmg",
   "sha": "9604bca5194f7ee01706b997eaedd783245fc741549035870a5532e181452bce",
   "changelog": "https://github.com/CodeEditApp/CodeEdit/releases",
-  "previous_version": "0.3.4",
   "qa_info": {
     "qa_timestamp": "2025-05-12T11:49:14Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "0.3.4"
-  }
+  },
+  "previous_version": "0.3.4"
 }

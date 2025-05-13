@@ -7,7 +7,6 @@
   "homepage": "https://coteditor.com/",
   "fileName": "CotEditor_5.1.6.dmg",
   "sha": "58dc96c7c44ca4d292649686d77f1d74e812ba6beff70a76041a32d400b7e42e",
-  "previous_version": "5.1.6",
   "qa_info": {
     "qa_timestamp": "2025-05-12T11:49:51Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "5.1.6"
-  }
+  },
+  "previous_version": "5.1.6"
 }

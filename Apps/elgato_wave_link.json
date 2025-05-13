@@ -8,7 +8,6 @@
   "fileName": "WaveLink_2.0.6.3780.pkg",
   "sha": "1d4e2c0d55fe445f2f218013883d66c281388473f75859ebff8db8d8bf0ab44d",
   "changelog": "https://help.elgato.com/hc/en-us/sections/4913442828941-Wave-Link-Release-Notes",
-  "previous_version": "2.0.6.3780",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:56:44Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "mismatch",
     "installed_version": "2.0.6"
-  }
+  },
+  "previous_version": "2.0.6.3780"
 }

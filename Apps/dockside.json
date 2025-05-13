@@ -7,7 +7,6 @@
   "homepage": "https://hachipoo.com/dockside-app",
   "fileName": "Dockside.dmg",
   "sha": "898c21f2f0118df2f7052756d2ef1297d4e256e3212d21ecaf7a3088e2cc0950",
-  "previous_version": "1.9.54",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:27:11Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "1.9.54"
-  }
+  },
+  "previous_version": "1.9.54"
 }

@@ -8,7 +8,6 @@
   "fileName": "Docker.dmg",
   "sha": "19c69b358a8ee1b94e308648a2853e398f4bff29f0f74f00ef2d1b462ced1d1c",
   "changelog": "https://docs.docker.com/desktop/release-notes/",
-  "previous_version": "4.41.2",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:26:41Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "4.41.2"
-  }
+  },
+  "previous_version": "4.41.2"
 }

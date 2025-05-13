@@ -8,7 +8,6 @@
   "fileName": "Anydo-5.0.68-universal.dmg",
   "sha": "3906b4b436d23105988c22a1ba7936f7ede08be9747256a2e622338c1c846c4a",
   "changelog": "https://www.any.do/blog/",
-  "previous_version": "5.0.68",
   "qa_info": {
     "qa_timestamp": "2025-05-12T10:31:59Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "5.0.68"
-  }
+  },
+  "previous_version": "5.0.68"
 }

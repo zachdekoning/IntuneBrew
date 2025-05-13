@@ -8,7 +8,6 @@
   "fileName": "CapCut_3_3_0_1159_capcutpc_0_creatortool.dmg",
   "sha": "26c253719a61eae679a2923121a83d0a39b98d920a5c57f3e00d66224986c867",
   "changelog": "https://www.capcut.com/resource/download-capcut-for-mac",
-  "previous_version": "3.3.0.1159",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:54:04Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "3.3.0"
-  }
+  },
+  "previous_version": "3.3.0.1159"
 }

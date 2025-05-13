@@ -7,7 +7,6 @@
   "homepage": "https://aws.amazon.com/vpn/",
   "fileName": "AWS_VPN_Client.pkg",
   "type": "pkg_in_pkg",
-  "previous_version": "5.2.0",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:50:14Z",
     "qa_result": "App not found after installation",
@@ -16,5 +15,6 @@
     "install_status": "success",
     "verify_status": "app_not_found",
     "bundle_id_status": "pending"
-  }
+  },
+  "previous_version": "5.2.0"
 }

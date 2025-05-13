@@ -8,7 +8,6 @@
   "fileName": "calibre-8.4.0.dmg",
   "sha": "36780dc0cad0d1b2e10d873f1a77ff7058ac002f9f311ec941e5c18c7ffe9baf",
   "changelog": "https://calibre-ebook.com/whats-new",
-  "previous_version": "8.4.0",
   "qa_info": {
     "qa_timestamp": "2025-05-12T11:45:49Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "8.4.0"
-  }
+  },
+  "previous_version": "8.4.0"
 }

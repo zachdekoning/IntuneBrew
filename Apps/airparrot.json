@@ -7,7 +7,6 @@
   "homepage": "https://www.airsquirrels.com/airparrot/",
   "fileName": "AirParrot-3.1.7.dmg",
   "sha": "acb42bb53c1dfde1fec6835fd8fd89a278b215a97f1e08545e45780cebb19409",
-  "previous_version": "3.1.7",
   "qa_info": {
     "qa_timestamp": "2025-05-12T10:29:56Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "3.1.7"
-  }
+  },
+  "previous_version": "3.1.7"
 }

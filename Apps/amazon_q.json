@@ -8,7 +8,6 @@
   "fileName": "Amazon%20Q.dmg",
   "sha": "9d6e637d2b2db304a5ec8e9b39d5d33907a0cbcdcf0ea6491c30163536088eb7",
   "changelog": "https://docs.aws.amazon.com/amazonq/latest/desktop-app-release-notes/release-notes.html",
-  "previous_version": "1.9.1",
   "qa_info": {
     "qa_timestamp": "2025-05-12T10:31:05Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "1.9.1"
-  }
+  },
+  "previous_version": "1.9.1"
 }

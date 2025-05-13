@@ -7,7 +7,6 @@
   "homepage": "https://www.dosbox.com/",
   "fileName": "DOSBox-0.74-3-3.dmg",
   "sha": "83493d149318cb7bfe5d68d98d1cd10b003db2f0519374bf06de285dc0bb2768",
-  "previous_version": "0.74-3",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:56:07Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "mismatch",
     "installed_version": ".74-3-3"
-  }
+  },
+  "previous_version": "0.74-3"
 }

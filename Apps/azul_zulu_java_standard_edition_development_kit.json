@@ -8,7 +8,6 @@
   "fileName": "zulu24.30.11-ca-jdk24.0.1-macosx_aarch64.dmg",
   "sha": "e45e12a780bef0a46b45509302bbd4c71692e0d33600469345809a556d961258",
   "changelog": "https://docs.azul.com/core/release-notes",
-  "previous_version": "24.0.1",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:50:33Z",
     "qa_result": "No .app found in DMG",
@@ -17,5 +16,6 @@
     "install_status": "failed",
     "verify_status": "pending",
     "bundle_id_status": "pending"
-  }
+  },
+  "previous_version": "24.0.1"
 }

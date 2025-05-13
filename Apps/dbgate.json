@@ -8,7 +8,6 @@
   "fileName": "dbgate-6.4.1-mac_universal.dmg",
   "sha": "7cafa61a882bf26741a60f6d18adb7ccd0efef3afd0c95aaf18abee5d75db976",
   "changelog": "https://github.com/dbgate/dbgate/releases",
-  "previous_version": "6.4.1",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:25:57Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "6.4.1"
-  }
+  },
+  "previous_version": "6.4.1"
 }

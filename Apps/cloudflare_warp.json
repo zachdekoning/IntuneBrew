@@ -8,7 +8,6 @@
   "fileName": "2025.2.664.0",
   "type": "pkg",
   "changelog": "https://developers.cloudflare.com/warp-client/release-notes/",
-  "previous_version": "2025.2.664.0",
   "qa_info": {
     "qa_timestamp": "2025-05-12T11:49:01Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "2025.2.664.0"
-  }
+  },
+  "previous_version": "2025.2.664.0"
 }

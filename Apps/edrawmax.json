@@ -7,7 +7,6 @@
   "homepage": "https://www.edrawsoft.com/",
   "fileName": "edraw-max_full5380.dmg",
   "sha": "9313284064ee89f8cb5e80e72ff630cc8047bfc227a627d5997d8a402b4b2000",
-  "previous_version": "12.6.1",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:56:19Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "mismatch",
     "installed_version": "3.8.7"
-  }
+  },
+  "previous_version": "12.6.1"
 }

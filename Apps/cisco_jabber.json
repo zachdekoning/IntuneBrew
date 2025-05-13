@@ -8,7 +8,6 @@
   "fileName": "Install_Cisco-Jabber-Mac.pkg",
   "type": "pkg",
   "changelog": "https://help.webex.com/en-us/article/nqx2qkb/Jabber-Release-Notes",
-  "previous_version": "20250430033337",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:55:11Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "15.1.0"
-  }
+  },
+  "previous_version": "20250430033337"
 }

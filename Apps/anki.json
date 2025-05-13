@@ -8,7 +8,6 @@
   "fileName": "anki-25.02.4-mac-apple-qt6.dmg",
   "sha": "e5cc1ca0ac696de1a805633fe3ada5a08f61c142a0ea2417e958ecc08f2703b5",
   "changelog": "https://github.com/ankitects/anki/releases",
-  "previous_version": "25.02.4",
   "qa_info": {
     "qa_timestamp": "2025-05-12T10:31:49Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "25.02.4"
-  }
+  },
+  "previous_version": "25.02.4"
 }

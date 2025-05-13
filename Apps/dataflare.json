@@ -8,7 +8,6 @@
   "fileName": "Dataflare-1.9.5.dmg",
   "sha": "586613fa444d70ecccac50ab10a20414fb5798678e6fdbbff32f8ff28e605854",
   "changelog": "https://dataflare.app/changelog",
-  "previous_version": "1.9.5",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:24:59Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "1.9.5"
-  }
+  },
+  "previous_version": "1.9.5"
 }

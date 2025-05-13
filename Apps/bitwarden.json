@@ -8,7 +8,6 @@
   "fileName": "Bitwarden-2025.4.2-universal.dmg",
   "sha": "329150bb7c72333f762500adc7cd4d9353b936be5978845376a4c18fa3d8bc17",
   "changelog": "https://github.com/bitwarden/clients/releases",
-  "previous_version": "2025.4.2",
   "qa_info": {
     "qa_timestamp": "2025-05-12T11:25:58Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "2025.4.2"
-  }
+  },
+  "previous_version": "2025.4.2"
 }

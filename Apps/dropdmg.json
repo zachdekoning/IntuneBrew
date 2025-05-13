@@ -8,7 +8,6 @@
   "fileName": "DropDMG-3.6.8.dmg",
   "sha": "55751ac3f98e30c51fc769221483bcf7ae1022dc46f4726fb86458482598f4d0",
   "changelog": "https://c-command.com/dropdmg/help/change-log",
-  "previous_version": "3.6.8",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:23:36Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "3.6.8"
-  }
+  },
+  "previous_version": "3.6.8"
 }

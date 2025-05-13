@@ -8,7 +8,6 @@
   "fileName": "Amadine.dmg",
   "sha": "4592ecfa364258d1375f0b83576fb388482e4890bd3695af9982dc78ae95a251",
   "changelog": "https://amadine.com/release-notes/",
-  "previous_version": "1.6.7",
   "qa_info": {
     "qa_timestamp": "2025-05-12T10:30:54Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "1.6.7"
-  }
+  },
+  "previous_version": "1.6.7"
 }

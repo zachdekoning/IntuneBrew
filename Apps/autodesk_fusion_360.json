@@ -8,7 +8,6 @@
   "fileName": "Fusion%20Client%20Downloader.dmg",
   "sha": "b0f4927aa5b48c34e7ebe944bae1b7d064fd298984af7ec5cd094f0f47c4b3b3",
   "changelog": "https://help.autodesk.com/view/fusion360/ENU/",
-  "previous_version": "latest",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:50:13Z",
     "qa_result": "SHA verification failed",
@@ -17,5 +16,6 @@
     "install_status": "pending",
     "verify_status": "pending",
     "bundle_id_status": "pending"
-  }
+  },
+  "previous_version": "latest"
 }

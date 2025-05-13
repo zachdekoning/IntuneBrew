@@ -8,7 +8,6 @@
   "fileName": "dataspell-2025.1-aarch64.dmg",
   "sha": "f6dd63c5458ea2adeb76a9042ab3316b124fd9cbdcccd4d4b08c2d90e17b49b8",
   "changelog": "https://www.jetbrains.com/dataspell/whatsnew/",
-  "previous_version": "2025.1",
   "qa_info": {
     "qa_timestamp": "2025-05-12T12:25:22Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "2025.1"
-  }
+  },
+  "previous_version": "2025.1"
 }

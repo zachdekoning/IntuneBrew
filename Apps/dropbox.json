@@ -8,7 +8,6 @@
   "fileName": "Dropbox%20223.4.4909.arm64.dmg",
   "sha": "a6c26818b575b1f4c7a3086d941cac0fff962fdd227024aa77fe601c1af1a02e",
   "changelog": "https://www.dropbox.com/release_notes",
-  "previous_version": "223.4.4909",
   "qa_info": {
     "qa_timestamp": "2025-05-12T14:23:28Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "mismatch",
     "installed_version": "223.4.4909"
-  }
+  },
+  "previous_version": "223.4.4909"
 }

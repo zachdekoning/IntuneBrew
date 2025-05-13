@@ -8,7 +8,6 @@
   "fileName": "AmazonChime-5.23.22318.dmg",
   "sha": "fb3631632977f359cd55554530bf55c65e121c6be172f101cdd9396ee9307b94",
   "changelog": "https://docs.aws.amazon.com/chime/latest/ag/desktop-app.html#desktop-app-changelog",
-  "previous_version": "5.23.22318",
   "qa_info": {
     "qa_timestamp": "2025-05-12T10:31:01Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "5.23.22318"
-  }
+  },
+  "previous_version": "5.23.22318"
 }
