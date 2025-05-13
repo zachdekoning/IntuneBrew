@@ -9,7 +9,7 @@
   "sha": "84534cd993f672420b86d249ccf1430e49bd50c3948bca69bc02e451c5ab8e19",
   "changelog": "https://software.charliemonroe.net/downie/version-history/",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T14:56:09Z",
+    "qa_timestamp": "2025-05-13T07:19:49Z",
     "qa_result": "SHA verification failed",
     "download_status": "success",
     "sha_status": "failed",

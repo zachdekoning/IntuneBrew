@@ -8,14 +8,14 @@
   "fileName": "Clop-2.9.3.dmg",
   "sha": "8bed2215620ce2d73baf930ef9f1912c65a2d33f60aafc2299fcc87c2b531abd",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T11:48:59Z",
+    "qa_timestamp": "2025-05-13T07:19:24Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "2.9.2"
+    "installed_version": "2.9.3"
   },
   "previous_version": "2.9.2"
 }

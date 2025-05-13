@@ -9,7 +9,7 @@
   "sha": "1d4e2c0d55fe445f2f218013883d66c281388473f75859ebff8db8d8bf0ab44d",
   "changelog": "https://help.elgato.com/hc/en-us/sections/4913442828941-Wave-Link-Release-Notes",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T14:56:44Z",
+    "qa_timestamp": "2025-05-13T07:20:33Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

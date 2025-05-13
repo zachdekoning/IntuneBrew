@@ -9,7 +9,7 @@
   "sha": "c8d398df57c0af991a79dbef67eadb392aac1c27074ac743fc5b76b639b988ba",
   "changelog": "https://adoptium.net/de/temurin/releases/?os=mac&version=23",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T14:56:12Z",
+    "qa_timestamp": "2025-05-13T07:19:56Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "verified",

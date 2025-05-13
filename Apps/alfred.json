@@ -11,13 +11,13 @@
   "changelog": "https://www.alfredapp.com/changelog/",
   "previous_version": "5.6.2",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T10:30:10Z",
+    "qa_timestamp": "2025-05-13T07:13:09Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "5.6.1"
+    "installed_version": "5.6.2"
   }
 }

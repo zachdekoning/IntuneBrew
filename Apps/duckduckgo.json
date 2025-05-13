@@ -9,14 +9,14 @@
   "sha": "4c13cf6f1f20d3b17ea496213159bd75ad313538eb7c3e51f80e24722d484713",
   "changelog": "https://github.com/duckduckgo/macos-browser/releases",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T14:23:57Z",
+    "qa_timestamp": "2025-05-13T07:19:51Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "1.137.0"
+    "installed_version": "1.138.0"
   },
   "previous_version": "1.137.0"
 }
