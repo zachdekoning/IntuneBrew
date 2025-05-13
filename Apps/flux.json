@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "0c570020842911900d290f4dfd6e707a9c6d0f25c9ad030664eb63228e4c2bc5",
   "changelog": "https://justgetflux.com/news/pages/macversion/",
-  "previous_version": "42.2"
+  "previous_version": "42.2",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:11:18Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "42.2"
+  }
 }

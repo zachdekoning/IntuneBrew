@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "ba9dad4ae121f1b8ab8fff75e6cbfe9c7b0314122c3686eee1dafd2b7e386d99",
   "changelog": "https://godotengine.org/changelog/",
-  "previous_version": "4.4.1"
+  "previous_version": "4.4.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:19:14Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "4.4.1"
+  }
 }

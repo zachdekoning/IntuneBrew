@@ -9,7 +9,7 @@
   "sha": "2fcfdd67f5986f1b937babbd4a55d779b940534e6064e484064bc16cf53a3918",
   "changelog": "https://brave.com/latest/",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T07:17:25Z",
+    "qa_timestamp": "2025-05-13T08:08:11Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

@@ -9,7 +9,7 @@
   "sha": "973583eb2675b88ea10db6ef69c9a22ebbeef64dae529ac9883b31d3dfdd3f39",
   "changelog": "https://help.elgato.com/hc/en-us/sections/5162671529357-Elgato-Stream-Deck-Software-Release-Notes",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T07:20:18Z",
+    "qa_timestamp": "2025-05-13T08:10:34Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

@@ -8,5 +8,15 @@
   "fileName": "flycut_1.9.6.pkg",
   "type": "app",
   "sha": "edd808cfc8fabfbbd212906c3bf6fe6681eded979455770814c79affd474883d",
-  "previous_version": "1.9.6"
+  "previous_version": "1.9.6",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:11:22Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.9.6"
+  }
 }

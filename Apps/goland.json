@@ -7,5 +7,15 @@
   "homepage": "https://www.jetbrains.com/go/",
   "fileName": "goland-2025.1.1-aarch64.dmg",
   "sha": "52e62d5a616b6ab6bf36f0d40d1925e9f477fcf84e187a2a1194d56d5ccae6ec",
-  "previous_version": "2025.1"
+  "previous_version": "2025.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:19:58Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2025.1.1"
+  }
 }

@@ -8,5 +8,15 @@
   "fileName": "github_desktop_3.4.19-d147b1a3.pkg",
   "type": "app",
   "sha": "0bb33c2575fdbb34a90f7595f43068bdf2f6f89a6482ab9770a1f7608bd74c7a",
-  "previous_version": "3.4.19-d147b1a3"
+  "previous_version": "3.4.19-d147b1a3",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:18:31Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "3.4.19"
+  }
 }

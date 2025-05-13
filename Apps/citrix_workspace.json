@@ -9,7 +9,7 @@
   "sha": "d68567909d879bcf976d1b381772f983ce5614fd57082d71d96d07e19e414d5b",
   "changelog": "https://docs.citrix.com/en-us/citrix-workspace-app-for-mac/whats-new.html",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T07:18:55Z",
+    "qa_timestamp": "2025-05-13T08:09:30Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

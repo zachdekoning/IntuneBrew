@@ -8,5 +8,15 @@
   "fileName": "godspeed_1.8.92.pkg",
   "type": "app",
   "sha": "e79fa3d305049a159e936c9f4f0f67dad703ba9bc759e963efbc7f80f24e336c",
-  "previous_version": "1.8.92"
+  "previous_version": "1.8.92",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:19:31Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.8.92"
+  }
 }
