@@ -9,7 +9,7 @@
   "type": "pkg",
   "changelog": "https://help.webex.com/en-us/article/nqx2qkb/Jabber-Release-Notes",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T18:22:23Z",
+    "qa_timestamp": "2025-05-14T06:43:44Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "not_provided",

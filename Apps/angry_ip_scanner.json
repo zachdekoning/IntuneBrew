@@ -10,13 +10,13 @@
   "sha": "7831db1b05ed4cfff9ed915646f9c181a194c9c1ce2135209a94dbc89c6081e8",
   "previous_version": "3.9.1",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T18:17:49Z",
+    "qa_timestamp": "2025-05-14T06:38:35Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
-    "bundle_id_status": "verified",
+    "bundle_id_status": "mismatch",
     "installed_version": "File Doesn't Exist, Will Create: /Applications/Angry IP Scanner.app/Contents/Info.plist"
   }
 }

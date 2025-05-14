@@ -11,13 +11,13 @@
   "changelog": "https://www.deepl.com/changelog.html",
   "previous_version": "25.5.12028494",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:26:02Z",
+    "qa_timestamp": "2025-05-14T06:45:18Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "25.4.11926442"
+    "installed_version": "25.5.12028494"
   }
 }

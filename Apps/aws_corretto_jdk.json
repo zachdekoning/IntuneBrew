@@ -9,7 +9,7 @@
   "sha": "549c33af2f04eb2a925e28b963f2556dfc86da7f6a2cdda14368ec8c43d388e2",
   "changelog": "https://github.com/corretto/corretto-21/releases",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T18:18:13Z",
+    "qa_timestamp": "2025-05-14T06:39:23Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "verified",

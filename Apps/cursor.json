@@ -11,13 +11,13 @@
   "changelog": "https://www.cursor.com/changelog",
   "previous_version": "0.50.3",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T12:24:04Z",
+    "qa_timestamp": "2025-05-14T06:44:56Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "0.49.6"
+    "installed_version": "0.50.3"
   }
 }

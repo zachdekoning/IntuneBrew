@@ -9,7 +9,7 @@
   "sha": "9f763cf59fff9817da8f273f1fb28d3d8680eaf0444abcc70b84d8c5476d8bcd",
   "changelog": "https://support.audacityteam.org/additional-resources/changelog",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T18:17:57Z",
+    "qa_timestamp": "2025-05-14T06:39:10Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",

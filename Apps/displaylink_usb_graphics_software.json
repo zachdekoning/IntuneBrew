@@ -8,7 +8,7 @@
   "fileName": "DisplayLink%20Manager%20Graphics%20Connectivity1.12.2-EXE.pkg",
   "type": "pkg",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T08:10:08Z",
+    "qa_timestamp": "2025-05-14T06:45:43Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "not_provided",

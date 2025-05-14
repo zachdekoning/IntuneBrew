@@ -10,7 +10,7 @@
   "changelog": "https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html",
   "sha": "c6ec03e5012f1dd74da59cb6c055abb5b45d365e54893bf13187b68103f13c63",
   "qa_info": {
-    "qa_timestamp": "2025-05-13T18:13:33Z",
+    "qa_timestamp": "2025-05-14T06:34:59Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "verified",
