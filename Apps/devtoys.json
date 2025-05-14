@@ -11,7 +11,7 @@
   "changelog": "https://github.com/DevToys-app/DevToys/releases",
   "previous_version": "2.0.8.0",
   "qa_info": {
-    "qa_timestamp": "2025-05-14T06:45:33Z",
+    "qa_timestamp": "2025-05-14T08:59:00Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
