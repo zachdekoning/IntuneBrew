@@ -7,7 +7,6 @@
   "homepage": "https://freetubeapp.io/",
   "fileName": "freetube-0.23.5-mac-arm64.dmg",
   "sha": "51b300674343fe05c411d241fde14dc435a4442c2cefadf567c0e28dc7a4528e",
-  "previous_version": "0.23.5",
   "qa_info": {
     "qa_timestamp": "2025-05-13T08:15:19Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "0.23.5"
-  }
+  },
+  "previous_version": "0.23.5"
 }

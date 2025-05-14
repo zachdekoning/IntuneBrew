@@ -7,7 +7,6 @@
   "homepage": "https://gephi.org/",
   "fileName": "gephi-0.10.1-macos-aarch64.dmg",
   "sha": "cbb852d2f33cddf793290a64aee564cd46ad80ef6c51766ad05dfeb801ac7227",
-  "previous_version": "0.10.1",
   "qa_info": {
     "qa_timestamp": "2025-05-13T08:17:55Z",
     "qa_result": "Installation successful and verified",
@@ -17,5 +16,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "0.10.1"
-  }
+  },
+  "previous_version": "0.10.1"
 }

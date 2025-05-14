@@ -8,7 +8,6 @@
   "fileName": "FoxitPDFEditor1317.L10N.Setup.pkg",
   "sha": "f381214ff865a20381ab77faec73bd1f2b5abb801c8426a7fcb3f76633e2d573",
   "changelog": "https://www.foxit.com/pdf-editor/version-history.html",
-  "previous_version": "13.1.7",
   "qa_info": {
     "qa_timestamp": "2025-05-13T08:11:29Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "mismatch",
     "installed_version": "13.1.7.63027"
-  }
+  },
+  "previous_version": "13.1.7"
 }

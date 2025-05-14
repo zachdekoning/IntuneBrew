@@ -8,7 +8,6 @@
   "fileName": "geany-2.0_osx_arm64.dmg",
   "sha": "1d383519d5ef7d3a2d17483a816250776158bfc26590aa4914f8634d81f112d7",
   "changelog": "https://www.geany.org/documentation/releasenotes/",
-  "previous_version": "2.0",
   "qa_info": {
     "qa_timestamp": "2025-05-13T08:15:53Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "verified",
     "installed_version": "2.0"
-  }
+  },
+  "previous_version": "2.0"
 }

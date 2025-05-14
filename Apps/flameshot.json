@@ -8,7 +8,6 @@
   "fileName": "flameshot.dmg",
   "sha": "70fa1cb9990093b00d184eace8e6c5f1cfefe33decb8ab051141a3847439ff14",
   "changelog": "https://github.com/flameshot-org/flameshot/releases",
-  "previous_version": "12.1.0",
   "qa_info": {
     "qa_timestamp": "2025-05-13T08:11:10Z",
     "qa_result": "Installation successful and verified",
@@ -18,5 +17,6 @@
     "verify_status": "app_found",
     "bundle_id_status": "mismatch",
     "installed_version": "12.1.0"
-  }
+  },
+  "previous_version": "12.1.0"
 }
