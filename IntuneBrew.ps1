@@ -1,5 +1,5 @@
 <#PSScriptInfo
-.VERSION 0.7.1
+.VERSION 0.8.0
 .GUID 53ddb976-1bc1-4009-bfa0-1e2a51477e4d
 .AUTHOR ugurk
 .COMPANYNAME
@@ -12,6 +12,7 @@
 .REQUIREDSCRIPTS
 .EXTERNALSCRIPTDEPENDENCIES
 .RELEASENOTES
+Version 0.8.0: Added -AppNamePrefix and -AppNameSuffix parameters to customize Intune app names. Changed app status display from table to line-by-line for better readability.
 Version 0.7.1: Added a processing summary that displays after app uploads/updates, showing app name, version changes, and time taken.
 Version 0.7.0: Added option to continue with download even when hash verification fails. Users can now choose to proceed at their own risk when hash mismatches occur.
 Version 0.6.2: Improved file download handling for redirected URLs, especially for Cloudflare-hosted files.
@@ -57,6 +58,14 @@ Version 0.3.7: Fix Parse Errors
  Specifies the path to a script file that will be executed after the app installation. Only works with PKG apps and the -Upload parameter.
  Example: IntuneBrew -Upload google_chrome -PostInstallScriptPath ./post-install.sh
 
+.PARAMETER AppNamePrefix
+ Specifies a prefix to be added to the application name in Intune.
+ Example: IntuneBrew -Upload slack -AppNamePrefix "Corporate "
+
+.PARAMETER AppNameSuffix
+ Specifies a suffix to be added to the application name in Intune.
+ Example: IntuneBrew -Upload slack -AppNameSuffix " for Mac"
+
 #>
 param(
     [Parameter(Mandatory = $false)]
@@ -75,7 +84,13 @@ param(
     [string]$PreInstallScriptPath,
     
     [Parameter(Mandatory = $false)]
-    [string]$PostInstallScriptPath
+    [string]$PostInstallScriptPath,
+
+    [Parameter(Mandatory = $false)]
+    [string]$AppNamePrefix,
+
+    [Parameter(Mandatory = $false)]
+    [string]$AppNameSuffix
 )
 
 Write-Host "
@@ -88,7 +103,7 @@ ___       _                    ____
 
 Write-Host "IntuneBrew - Automated macOS Application Deployment via Microsoft Intune" -ForegroundColor Green
 Write-Host "Made by Ugur Koc with" -NoNewline; Write-Host " ❤️  and ☕" -NoNewline
-Write-Host " | Version" -NoNewline; Write-Host " 0.7.1" -ForegroundColor Yellow -NoNewline
+Write-Host " | Version" -NoNewline; Write-Host " 0.8.0" -ForegroundColor Yellow -NoNewline
 Write-Host " | Last updated: " -NoNewline; Write-Host "2025-05-15" -ForegroundColor Magenta
 Write-Host ""
 Write-Host "This is a preview version. If you have any feedback, please open an issue at https://github.com/ugurkocde/IntuneBrew/issues. Thank you!" -ForegroundColor Cyan
@@ -806,13 +821,16 @@ if ($LocalFile) {
 
     # Get app details from user
     Write-Host "`nPlease provide the following application details:" -ForegroundColor Cyan
-    $appDisplayName = Read-Host "Display Name"
+    $originalAppDisplayName = Read-Host "Display Name"
     $appVersion = Read-Host "Version"
     $appBundleId = Read-Host "Bundle ID"
     $appDescription = Read-Host "Description"
+
+    # Format the app display name using prefix and suffix
+    $appDisplayName = Get-FormattedAppName -BaseName $originalAppDisplayName -Prefix $AppNamePrefix -Suffix $AppNameSuffix
     
     # Set additional details
-    $appPublisher = $appDisplayName
+    $appPublisher = $originalAppDisplayName # Use original name for publisher
     $fileName = [System.IO.Path]::GetFileName($localFilePath)
 
     # Ask for logo file
@@ -949,7 +967,7 @@ if ($LocalFile) {
     
     # Add logo if one was selected
     if ($logoPath) {
-        Add-IntuneAppLogo -appId $newApp.id -appName $appDisplayName -appType $appType -localLogoPath $logoPath
+        Add-IntuneAppLogo -appId $newApp.id -appName $originalAppDisplayName -appType $appType -localLogoPath $logoPath
     }
     
     Write-Host "`n🧹 Cleaning up temporary files..." -ForegroundColor Yellow
@@ -1324,6 +1342,23 @@ function Format-TimeSpanForSummary {
     }
 }
 
+# Helper function to format the application name with prefix and suffix
+function Get-FormattedAppName {
+    param(
+        [string]$BaseName,
+        [string]$Prefix,
+        [string]$Suffix
+    )
+
+    $formattedName = $BaseName
+    if (-not [string]::IsNullOrEmpty($Prefix)) {
+        $formattedName = $Prefix + $formattedName
+    }
+    if (-not [string]::IsNullOrEmpty($Suffix)) {
+        $formattedName = $formattedName + $Suffix
+    }
+    return $formattedName
+}
 # Retrieves and compares app versions between Intune and GitHub
 function Get-IntuneApp {
     $intuneApps = @()
@@ -1349,11 +1384,12 @@ function Get-IntuneApp {
             continue
         }
 
-        $appName = $appInfo.name
+        $originalAppName = $appInfo.name
+        $formattedAppName = Get-FormattedAppName -BaseName $originalAppName -Prefix $AppNamePrefix -Suffix $AppNameSuffix
         # We'll modify the output format but keep the check logic the same
         
         # Fetch Intune app info
-        $intuneQueryUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=(isof('microsoft.graph.macOSDmgApp') or isof('microsoft.graph.macOSPkgApp')) and displayName eq '$appName'"
+        $intuneQueryUri = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps?`$filter=(isof('microsoft.graph.macOSDmgApp') or isof('microsoft.graph.macOSPkgApp')) and displayName eq '$formattedAppName'"
 
         try {
             $response = Invoke-MgGraphRequest -Uri $intuneQueryUri -Method Get
@@ -1370,11 +1406,12 @@ function Get-IntuneApp {
                 
                 if ($needsUpdate) {
                     # Improved version check output for updates
-                    Write-Host "[$currentApp/$totalApps] ✅ $appName" -NoNewline -ForegroundColor Green
+                    Write-Host "[$currentApp/$totalApps] ✅ $formattedAppName" -NoNewline -ForegroundColor Green
                     Write-Host ": Update available (Intune: $intuneVersion → Latest: $githubVersion)" -ForegroundColor Green
                     
                     # Get app key from the JSON URL (extract the filename without extension)
-                    $appKey = [System.IO.Path]::GetFileNameWithoutExtension($jsonUrl.Split('/')[-1])
+                    # Use originalAppName for consistency if appKey is derived from the name
+                    $appKey = [System.IO.Path]::GetFileNameWithoutExtension($jsonUrl.Split('/')[-1]) # This uses the JSON filename, which is fine
                     
                     # Check for CVE information
                     $cveInfo = Get-AppCveInfo -appKey $appKey
@@ -1412,12 +1449,13 @@ function Get-IntuneApp {
                 }
                 else {
                     # Improved output for up-to-date apps
-                    Write-Host "[$currentApp/$totalApps] ✔️ $appName" -NoNewline -ForegroundColor Gray
+                    Write-Host "[$currentApp/$totalApps] ✔️ $formattedAppName" -NoNewline -ForegroundColor Gray
                     Write-Host ": Up to date (Version: $intuneVersion)" -ForegroundColor Gray
                 }
                 
                 $intuneApps += [PSCustomObject]@{
-                    Name          = $appName
+                    Name          = $originalAppName
+                    FormattedName = $formattedAppName
                     IntuneVersion = $intuneVersion
                     IntuneAppId   = $intuneAppId # Add the ID here
                     GitHubVersion = $githubVersion
@@ -1425,10 +1463,11 @@ function Get-IntuneApp {
             }
             else {
                 # Improved output for apps not in Intune
-                Write-Host "[$currentApp/$totalApps] ➕ $appName" -NoNewline -ForegroundColor Yellow
+                Write-Host "[$currentApp/$totalApps] ➕ $formattedAppName" -NoNewline -ForegroundColor Yellow
                 Write-Host ": Not in Intune (Latest: $($appInfo.version))" -ForegroundColor Yellow
                 $intuneApps += [PSCustomObject]@{
-                    Name          = $appName
+                    Name          = $originalAppName
+                    FormattedName = $formattedAppName
                     IntuneVersion = 'Not in Intune'
                     IntuneAppId   = $null # No ID if not in Intune
                     GitHubVersion = $appInfo.version
@@ -1436,7 +1475,7 @@ function Get-IntuneApp {
             }
         }
         catch {
-            Write-Host "`nError fetching Intune app info for '$appName': $_" -ForegroundColor Red
+            Write-Host "`nError fetching Intune app info for '$formattedAppName': $_" -ForegroundColor Red
         }
     }
 
@@ -1493,9 +1532,13 @@ Write-Host ""
 
 # Only show the table if not using UpdateAll
 if (-not $UpdateAll) {
-    # Prepare table data
-    $tableData = @()
+    Write-Host "`n📋 Application Status Overview:" -ForegroundColor Cyan
+    Write-Host "---------------------------------------------------" -ForegroundColor Yellow
+
     foreach ($app in $intuneAppVersions) {
+        $status = ""
+        $statusColor = "White" # Default color
+
         if ($app.IntuneVersion -eq 'Not in Intune') {
             $status = "Not in Intune"
             $statusColor = "Red"
@@ -1509,57 +1552,18 @@ if (-not $UpdateAll) {
             $statusColor = "Green"
         }
 
-        $tableData += [PSCustomObject]@{
-            "App Name"       = $app.Name
-            "Latest Version" = $app.GitHubVersion
-            "Intune Version" = $app.IntuneVersion
-            "Status"         = $status
-            "StatusColor"    = $statusColor
-        }
-    }
-
-    # Function to write colored table
-    function Write-ColoredTable {
-        param (
-            $TableData
-        )
-
-        # Unicode box-drawing characters for cleaner table appearance
-        $lineSeparatorTop = "┌────────────────────────────┬──────────────────────┬──────────────────────┬─────────────────┐"
-        $lineSeparatorMid = "├────────────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤"
-        $lineSeparatorBot = "└────────────────────────────┴──────────────────────┴──────────────────────┴─────────────────┘"
+        Write-Host "App: " -NoNewline; Write-Host $app.FormattedName -ForegroundColor Cyan
+        Write-Host "  • Latest Version: $($app.GitHubVersion)"
+        Write-Host "  • Intune Version: $($app.IntuneVersion)"
+        Write-Host "  • Status: " -NoNewline; Write-Host $status -ForegroundColor $statusColor
         
-        Write-Host $lineSeparatorTop
-        Write-Host ("│ {0,-26} │ {1,-20} │ {2,-20} │ {3,-15} │" -f "App Name", "Latest Version", "Intune Version", "Status") -ForegroundColor Cyan
-        Write-Host $lineSeparatorMid
-
-        foreach ($row in $TableData) {
-            $color = $row.StatusColor
-            
-            # Display the row with app info with colored app name
-            Write-Host "│ " -NoNewline
-            Write-Host ("{0,-26}" -f $row.'App Name') -ForegroundColor Cyan -NoNewline
-            Write-Host " │ " -NoNewline
-            Write-Host ("{0,-20}" -f $row.'Latest Version') -NoNewline
-            Write-Host " │ " -NoNewline
-            Write-Host ("{0,-20}" -f $row.'Intune Version') -NoNewline
-            Write-Host " │ " -NoNewline
-            
-            # Display status with appropriate color and ensure right border alignment
-            Write-Host ("{0,-15} │" -f $row.Status) -ForegroundColor $color
-            
-            # Only add mid separator if not the last row
-            if ($row -ne $TableData[-1]) {
-                Write-Host $lineSeparatorMid
-            }
-            else {
-                Write-Host $lineSeparatorBot
-            }
+        # Add a separator unless it's the last app
+        if ($app -ne $intuneAppVersions[-1]) {
+            Write-Host "---------------------------------------------------" -ForegroundColor DarkGray
         }
     }
-
-    # Display the colored table with lines
-    Write-ColoredTable $tableData
+    Write-Host "---------------------------------------------------" -ForegroundColor Yellow
+    Write-Host "" # Add a blank line after the list
 }
 
 # Filter apps that need to be uploaded
@@ -1703,13 +1707,13 @@ if (-not $Upload -and -not $UpdateAll) {
                     if (-not [string]::IsNullOrWhiteSpace($targetDetail)) { $summaryPart += " $targetDetail" }
                     $assignmentSummaries += $summaryPart
                 }
-                Write-Host "  - $($updApp.Name): Found $($assignments.Count) assignment(s):" -ForegroundColor Gray
+                Write-Host "  - $($updApp.FormattedName): Found $($assignments.Count) assignment(s):" -ForegroundColor Gray
                 foreach ($summary in $assignmentSummaries) {
                     Write-Host "    • $summary" -ForegroundColor Gray
                 }
             }
             else {
-                Write-Host "  - $($updApp.Name): No assignments found." -ForegroundColor Gray
+                Write-Host "  - $($updApp.FormattedName): No assignments found." -ForegroundColor Gray
             }
         }
         Write-Host "" # Add a newline after assignment check
@@ -1717,8 +1721,8 @@ if (-not $Upload -and -not $UpdateAll) {
 
     # Construct the confirmation message (Prompt 1)
     if (($newApps.Length + $updatableApps.Length) -eq 1) {
-        if ($newApps.Length -eq 1) { $message = "`nDo you want to upload this new app ($($newApps[0].Name)) to Intune? (y/n)" }
-        elseif ($updatableApps.Length -eq 1) { $message = "`nDo you want to update this app ($($updatableApps[0].Name)) in Intune? (y/n)" }
+        if ($newApps.Length -eq 1) { $message = "`nDo you want to upload this new app ($($newApps[0].FormattedName)) to Intune? (y/n)" }
+        elseif ($updatableApps.Length -eq 1) { $message = "`nDo you want to update this app ($($updatableApps[0].FormattedName)) in Intune? (y/n)" }
         else { $message = "`nDo you want to process this app? (y/n)" }
     }
     else {
@@ -1810,7 +1814,7 @@ foreach ($app in $appsToUpload) {
         $existingAssignments = $fetchedAssignments[$app.IntuneAppId]
     }
 
-    Write-Host "`n📦 Processing: $($appInfo.name)" -ForegroundColor Cyan
+    Write-Host "`n📦 Processing: $($app.FormattedName)" -ForegroundColor Cyan
     Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor Cyan
 
     $startTime = Get-Date # Record start time for this app's update
@@ -1833,8 +1837,8 @@ foreach ($app in $appsToUpload) {
             ".dmg"
         }
         
-        # Create a proper filename using the app name
-        $properFileName = $appInfo.name.Replace(" ", "") + $expectedExtension
+        # Create a proper filename using the app name (original name for file system compatibility)
+        $properFileName = $app.Name.Replace(" ", "") + $expectedExtension
         $newFilePath = Join-Path ([System.IO.Path]::GetDirectoryName($appFilePath)) $properFileName
         
         # Rename the file
@@ -1844,14 +1848,14 @@ foreach ($app in $appsToUpload) {
     }
 
     Write-Host "`n📋 Application Details:" -ForegroundColor Cyan
-    Write-Host "   • Display Name: $($appInfo.name)"
+    Write-Host "   • Display Name: $($app.FormattedName)" # Use FormattedName from $app object
     Write-Host "   • Version: $($appInfo.version)"
     Write-Host "   • Bundle ID: $($appInfo.bundleId)"
     Write-Host "   • File: $(Split-Path $appFilePath -Leaf)"
 
-    $appDisplayName = $appInfo.name
+    $appDisplayName = $app.FormattedName # This will be used for Intune displayName
     $appDescription = $appInfo.description
-    $appPublisher = $appInfo.name
+    $appPublisher = $app.Name # Use original name for publisher
     $appHomepage = $appInfo.homepage
     $appBundleId = $appInfo.bundleId
     $appBundleVersion = $appInfo.version
@@ -2010,7 +2014,7 @@ foreach ($app in $appsToUpload) {
         Remove-IntuneAppAssignment -OldAppId $app.IntuneAppId -AssignmentsToRemove $existingAssignments
     }
     
-    Add-IntuneAppLogo -appId $newApp.id -appName $appDisplayName -appType $appType -localLogoPath $logoPath
+    Add-IntuneAppLogo -appId $newApp.id -appName $app.Name -appType $appType -localLogoPath $logoPath
 
     Write-Host "`n🧹 Cleaning up temporary files..." -ForegroundColor Yellow
     if (Test-Path $appFilePath) {
@@ -2056,7 +2060,7 @@ foreach ($app in $appsToUpload) {
     # Add to summary for any processed app (new or update)
     $oldVersionDisplay = if ($app.IntuneVersion -eq 'Not in Intune') { "Newly installed" } else { $app.IntuneVersion }
     $updateSummaries += [PSCustomObject]@{
-        AppName    = $appInfo.name
+        AppName    = $app.FormattedName # Use FormattedName from the $app object
         OldVersion = $oldVersionDisplay
         NewVersion = $appInfo.version # This is $appInfo.version from GitHub, which is the version being installed/updated to
         Duration   = $duration
@@ -2065,7 +2069,7 @@ foreach ($app in $appsToUpload) {
     # Reset assignments variable for the next iteration
     $existingAssignments = $null
 
-    Write-Host "`n✨ Successfully processed $($appInfo.name)" -ForegroundColor Cyan
+    Write-Host "`n✨ Successfully processed $($app.FormattedName)" -ForegroundColor Cyan
     Write-Host "🔗 Intune Portal URL: https://intune.microsoft.com/#view/Microsoft_Intune_Apps/SettingsMenu/~/0/appId/$($newApp.id)" -ForegroundColor Cyan
     Write-Host "" -ForegroundColor Cyan
 }
