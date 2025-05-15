@@ -1,11 +1,11 @@
 {
   "name": "ProcessSpy",
   "description": "Process monitor",
-  "version": "1.6.9",
-  "url": "https://process-spy.app/archive/ProcessSpy_1.6.9.dmg",
+  "version": "1.6.10",
+  "url": "https://process-spy.app/archive/ProcessSpy_1.6.10.dmg",
   "bundleId": "com.itone.ProcessSpy",
   "homepage": "https://process-spy.app/",
-  "fileName": "ProcessSpy_1.6.9.dmg",
-  "sha": "62b18cf4a96e3241162ec03d0956694481fb25917ef8fbe989416711daf23b6c",
+  "fileName": "ProcessSpy_1.6.10.dmg",
+  "sha": "7e94763bda927ee682153141940e5fb7a00b4a74c008baf5b5318003ea09e20a",
   "previous_version": "1.6.9"
 }
