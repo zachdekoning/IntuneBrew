@@ -1324,7 +1324,7 @@ function Format-TimeSpanForSummary {
     if ($TimeSpan.TotalMinutes -ge 1) {
         $roundedMinutes = [Math]::Round($TimeSpan.TotalMinutes, 0)
         # If TotalMinutes was > 0 but rounded to 0 (e.g., 0.4 minutes), show seconds instead.
-        if ($roundedMinutes -eq 0 -and $TimeSpan.TotalMinutes > 0) {
+        if ($roundedMinutes -eq 0 -and $TimeSpan.TotalMinutes -gt 0) {
             $roundedSeconds = [Math]::Round($TimeSpan.TotalSeconds, 0)
             if ($roundedSeconds -ge 1) {
                 return "$roundedSeconds second$(if ($roundedSeconds -ne 1) {'s'} else {''})"
