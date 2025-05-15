@@ -15,3 +15,10 @@ jobs:
         run: |
           $env:PSGalleryApiKey = "${{ secrets.NUGET_KEY }}"
           Publish-Script -Path ./IntuneBrew.ps1 -Repository PSGallery -NuGetApiKey $env:PSGalleryApiKey
+
+      - name: Add Gallery Link to Summary
+        shell: bash
+        run: |
+          version=$(grep -Po '^\.VERSION \K[0-9.]+' ./IntuneBrew.ps1)
+          echo "Successfully published [IntuneBrew version $version](https://www.powershellgallery.com/packages/IntuneBrew/$version) to PowerShell Gallery." >> $GITHUB_STEP_SUMMARY
+          echo "View the package at: https://www.powershellgallery.com/packages/IntuneBrew/$version"
