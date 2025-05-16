@@ -44,8 +44,7 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 - [Watch the full walkthrough of the tool:](#watch-the-full-walkthrough-of-the-tool)
 - [Table of Contents](#table-of-contents)
-- [🚨 Public Preview Notice](#-public-preview-notice)
-- [🔄 Latest Updates](#-latest-updates)
+- [� Latest Updates](#-latest-updates)
 - [✨ Features](#-features)
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
@@ -798,6 +797,41 @@ IntuneBrew includes robust error handling mechanisms:
    - Verify your Azure AD credentials
    - Check tenant ID configuration
    - Ensure required permissions are granted
+
+4. **PowerShell 7 Command Not Found**
+
+   If you're getting "IntuneBrew is not recognized as a name of a cmdlet, function, script file, or executable program" in PowerShell 7:
+
+   **Step 1: Check your PATH environment variable**
+   ```powershell
+   "Current PATH:"
+   $env:PATH -split ';'
+   ```
+
+   **Step 2: Verify IntuneBrew installation location**
+   ```powershell
+   $intuneBrewInfo = Get-InstalledScript -Name IntuneBrew -ErrorAction SilentlyContinue
+
+   if ($intuneBrewInfo) {
+       "Installed Location for IntuneBrew:"
+       $intuneBrewInfo | Select-Object Name, Version, InstalledLocation
+   } else {
+       Write-Warning "IntuneBrew is not installed. Run: Install-Script IntuneBrew -Force"
+       return
+   }
+   ```
+
+   **Step 3: Add IntuneBrew to your PATH if needed**
+   ```powershell
+   $scriptPath = $intuneBrewInfo.InstalledLocation
+   if (-not ($env:PATH -split ';' | Where-Object { $_ -eq $scriptPath })) {
+       Write-Host "`n📌 Adding IntuneBrew script folder to PATH..." -ForegroundColor Yellow
+       [Environment]::SetEnvironmentVariable("PATH", "$env:PATH;$scriptPath", [EnvironmentVariableTarget]::User)
+       Write-Host "✅ Done. Restart PowerShell to use 'IntuneBrew' as a command." -ForegroundColor Green
+   } else {
+       Write-Host "✅ Script path is already in PATH." -ForegroundColor Green
+   }
+   ```
 
 ## 🤝 Contributing
 
