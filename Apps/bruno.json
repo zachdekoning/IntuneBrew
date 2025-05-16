@@ -9,14 +9,14 @@
   "sha": "e153c4151345e9dd490445e620174401d55f057b4b4cabf3e8c0b6b43087e7b7",
   "changelog": "https://github.com/usebruno/bruno/releases",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T11:45:19Z",
+    "qa_timestamp": "2025-05-16T13:25:20Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "2.2.0"
+    "installed_version": "2.3.0"
   },
   "previous_version": "2.3.0"
 }

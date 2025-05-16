@@ -9,14 +9,14 @@
   "sha": "0d0b4671e94545da5f634206343e96443dd3db985b3b3f490b04921294ce2805",
   "changelog": "https://apidog.com/blog/",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T10:32:03Z",
+    "qa_timestamp": "2025-05-16T13:19:40Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "2.7.9"
+    "installed_version": "2.7.11"
   },
   "previous_version": "2.7.10"
 }

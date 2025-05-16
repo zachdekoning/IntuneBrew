@@ -10,13 +10,13 @@
   "sha": "c619d2588369d58b21838f392504cfe3e9eeedb87d6d45ec0e3489a362fc2d52",
   "previous_version": "2.4.2",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T11:22:55Z",
+    "qa_timestamp": "2025-05-16T13:21:39Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "2.4.1"
+    "installed_version": "2.4.2"
   }
 }
