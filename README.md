@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                                    <p>
+                                                                                                                                                                                                                                                                                                                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-506-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -73,27 +73,20 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 
 
+
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-17 00:30 UTC*
+*Last checked: 2025-05-18 00:31 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Mozilla Firefox Developer Edition | 139.0b8 | 139.0b9 |
-| Threema | 1.2.47 | 1.2.48 |
-| Fathom | 1.39.0 | 1.40.0 |
-| Highlight | 1.2.1 | 1.2.26 |
-| Ente Auth | 4.3.5 | 4.3.6 |
-| Apifox | 2.7.11 | 2.7.12 |
-| Proton Drive | 2.3.0 | 2.4.0 |
-| ChatWise | 0.8.52 | 0.8.53 |
-| Todoist | 9.14.0 | 9.15.0 |
-| Raycast | 1.98.4 | 1.98.5 |
-| FreeCAD | 1.0.0 | 1.0.1 |
-| Apidog | 2.7.11 | 2.7.12 |
-| Badgeify | 1.6.5 | 1.6.6 |
-| Amazon Q | 1.9.1 | 1.10.1 |
-| Elephas | 11.1086 | 11.1087 |
+| Mozilla Firefox ESR | 128.10.0 | 128.10.1 |
+| DockDoor | 1.9.1 | 1.10 |
+| Mozilla Firefox | 138.0.3 | 138.0.4 |
+| Company Portal | 5.2502.1 | 5.2504.0 |
+| Notion | 4.11.0 | 4.11.1 |
+| Anki | 25.02.4 | 25.02.5 |
+| kitty | 0.42.0 | 0.42.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -166,7 +159,7 @@ Follow the interactive prompts to:
 | <img src='Logos/amazon_q.png' width='32' height='32'> Amazon Q | 1.10.1 |
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.2.14 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
-| <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.4 |
+| <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.5 |
 | <img src='Logos/antinote.png' width='32' height='32'> Antinote | 1.1.5 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.2 |
@@ -196,7 +189,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.693 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.5 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.395 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.396 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/binary_ninja.png' width='32' height='32'> Binary Ninja | 5.0.7290 |
@@ -236,7 +229,7 @@ Follow the interactive prompts to:
 | <img src='Logos/cloudflare_warp.png' width='32' height='32'> Cloudflare WARP | 2025.4.929.0 |
 | <img src='Logos/codeedit.png' width='32' height='32'> CodeEdit | 0.3.4 |
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
-| <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2502.1 |
+| <img src='Logos/company_portal.png' width='32' height='32'> Company Portal | 5.2504.0 |
 | <img src='Logos/copilot_for_xcode.png' width='32' height='32'> Copilot for Xcode | 0.35.8 |
 | <img src='Logos/copyclip.png' width='32' height='32'> CopyClip | 2.9.99.2 |
 | <img src='Logos/coteditor.png' width='32' height='32'> CotEditor | 5.1.6 |
@@ -258,7 +251,7 @@ Follow the interactive prompts to:
 | <img src='Logos/devutils.png' width='32' height='32'> DevUtils | 1.17.0 |
 | <img src='Logos/discord.png' width='32' height='32'> Discord | 0.0.345 |
 | <img src='Logos/displaylink_usb_graphics_software.png' width='32' height='32'> DisplayLink USB Graphics Software | 1.12.2 |
-| <img src='Logos/dockdoor.png' width='32' height='32'> DockDoor | 1.9.1 |
+| <img src='Logos/dockdoor.png' width='32' height='32'> DockDoor | 1.10 |
 | <img src='Logos/docker_desktop.png' width='32' height='32'> Docker Desktop | 4.41.2 |
 | <img src='Logos/dockside.png' width='32' height='32'> Dockside | 1.9.54 |
 | <img src='Logos/dosbox.png' width='32' height='32'> DOSBox | 0.74-3 |
@@ -315,7 +308,7 @@ Follow the interactive prompts to:
 | <img src='Logos/git_credential_manager.png' width='32' height='32'> Git Credential Manager | 2.6.1 |
 | <img src='Logos/gitfinder.png' width='32' height='32'> GitFinder | 1.7.11 |
 | <img src='Logos/github_desktop.png' width='32' height='32'> GitHub Desktop | 3.4.19-d147b1a3 |
-| <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 11.1.0 |
+| <img src='Logos/gitkraken.png' width='32' height='32'> GitKraken | 11.1.1 |
 | <img src='Logos/godot_engine.png' width='32' height='32'> Godot Engine | 4.4.1 |
 | <img src='Logos/godspeed.png' width='32' height='32'> Godspeed | 1.8.98 |
 | <img src='Logos/goland.png' width='32' height='32'> Goland | 2025.1.1 |
@@ -369,7 +362,7 @@ Follow the interactive prompts to:
 | <img src='Logos/keybase.png' width='32' height='32'> Keybase | 6.5.1 |
 | <img src='Logos/keycastr.png' width='32' height='32'> KeyCastr | 0.10.3 |
 | <img src='Logos/keyclu.png' width='32' height='32'> KeyClu | 0.30.1 |
-| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.42.0 |
+| <img src='Logos/kitty.png' width='32' height='32'> kitty | 0.42.1 |
 | <img src='Logos/klokki.png' width='32' height='32'> Klokki | 1.3.7 |
 | <img src='Logos/krisp.png' width='32' height='32'> Krisp | 3.1.6 |
 | <img src='Logos/krita.png' width='32' height='32'> Krita | 5.2.9 |
@@ -430,9 +423,9 @@ Follow the interactive prompts to:
 | <img src='Logos/mountain_duck.png' width='32' height='32'> Mountain Duck | 4.17.4 |
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mouseless.png' width='32' height='32'> mouseless | 0.3.1 |
-| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 138.0.3 |
+| <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 138.0.4 |
 | <img src='Logos/mozilla_firefox_developer_edition.png' width='32' height='32'> Mozilla Firefox Developer Edition | 139.0b9 |
-| <img src='Logos/mozilla_firefox_esr.png' width='32' height='32'> Mozilla Firefox ESR | 128.10.0 |
+| <img src='Logos/mozilla_firefox_esr.png' width='32' height='32'> Mozilla Firefox ESR | 128.10.1 |
 | <img src='Logos/mozilla_thunderbird.png' width='32' height='32'> Mozilla Thunderbird | 138.0.1 |
 | <img src='Logos/multi.png' width='32' height='32'> Multi | 0.538.2 |
 | <img src='Logos/multiviewer_for_f1.png' width='32' height='32'> MultiViewer for F1 | 1.43.2 |
@@ -453,7 +446,7 @@ Follow the interactive prompts to:
 | <img src='Logos/nosql_workbench.png' width='32' height='32'> NoSQL Workbench | 3.13.6 |
 | <img src='Logos/nota_gyazo_gif.png' width='32' height='32'> Nota Gyazo GIF | 9.9.0 |
 | <img src='Logos/notesollama.png' width='32' height='32'> NotesOllama | 0.2.6 |
-| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.11.0 |
+| <img src='Logos/notion.png' width='32' height='32'> Notion | 4.11.1 |
 | <img src='Logos/notion_calendar.png' width='32' height='32'> Notion Calendar | 1.130.0 |
 | <img src='Logos/notunes.png' width='32' height='32'> noTunes | 3.5 |
 | <img src='Logos/noun_project.png' width='32' height='32'> Noun Project | 2.3 |
