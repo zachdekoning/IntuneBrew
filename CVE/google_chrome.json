@@ -1,7 +1,16 @@
 {
   "app_name": "Google Chrome",
-  "last_updated": "2025-05-11",
+  "last_updated": "2025-05-18",
   "vulnerabilities": [
+    {
+      "cve_id": "CVE-2025-4664",
+      "published_date": "2025-05-14",
+      "last_modified_date": "2025-05-16",
+      "base_score": 4.3,
+      "severity": "MEDIUM",
+      "description": "Insufficient policy enforcement in Loader in Google Chrome prior to 136.0.7103.113 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)",
+      "cpe_name": "cpe:2.3:a:google:chrome:134.0.6998.88:*:*:*:*:*:*:*"
+    },
     {
       "cve_id": "CVE-2025-3620",
       "published_date": "2025-04-16",
@@ -36,15 +45,6 @@
       "base_score": 6.5,
       "severity": "MEDIUM",
       "description": "Insufficient validation of untrusted input in Extensions in Google Chrome prior to 135.0.7049.52 allowed a remote attacker to perform privilege escalation via a crafted HTML page. (Chromium security severity: Medium)",
-      "cpe_name": "cpe:2.3:a:google:chrome:134.0.6998.88:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2025-3071",
-      "published_date": "2025-04-02",
-      "last_modified_date": "2025-04-21",
-      "base_score": 5.4,
-      "severity": "MEDIUM",
-      "description": "Inappropriate implementation in Navigations in Google Chrome prior to 135.0.7049.52 allowed a remote attacker who convinced a user to engage in specific UI gestures to bypass same origin policy via a crafted HTML page. (Chromium security severity: Low)",
       "cpe_name": "cpe:2.3:a:google:chrome:134.0.6998.88:*:*:*:*:*:*:*"
     }
   ]

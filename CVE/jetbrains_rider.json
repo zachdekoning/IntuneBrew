@@ -1,6 +1,6 @@
 {
-  "app_name": "JetBrains Rider",
-  "last_updated": "2025-05-11",
+  "app_name": "Jetbrains Rider",
+  "last_updated": "2025-05-18",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2024-37051",

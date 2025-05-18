@@ -1,6 +1,6 @@
 {
   "app_name": "Opera",
-  "last_updated": "2025-05-11",
+  "last_updated": "2025-05-18",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2025-22475",
@@ -39,13 +39,13 @@
       "cpe_name": "cpe:2.3:o:dell:data_domain_operating_system:7.10.1.0:*:*:*:*:*:*:*"
     },
     {
-      "cve_id": "CVE-2024-45759",
-      "published_date": "2024-11-08",
-      "last_modified_date": "2024-11-26",
-      "base_score": 6.8,
-      "severity": "MEDIUM",
-      "description": "Dell PowerProtect Data Domain, versions prior to 8.1.0.0, 7.13.1.10, 7.10.1.40, and 7.7.5.50, contains an escalation of privilege vulnerability. A local low privileged attacker could potentially exploit this vulnerability, leading to unauthorized execution of certain commands to overwrite system config of the application. Exploitation may lead to denial of service of system.",
-      "cpe_name": "cpe:2.3:o:dell:data_domain_operating_system:7.10.1.0:*:*:*:*:*:*:*"
+      "cve_id": "CVE-2025-22222",
+      "published_date": "2025-01-30",
+      "last_modified_date": "2025-05-14",
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "description": "VMware Aria Operations contains an information disclosure vulnerability.\u00a0A malicious user with non-administrative privileges\u00a0may exploit this vulnerability to retrieve credentials for an outbound plugin if a valid service credential ID is known.",
+      "cpe_name": "cpe:2.3:a:vmware:aria_operations:8.16.0:*:*:*:*:*:*:*"
     }
   ]
 }
