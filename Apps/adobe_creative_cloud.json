@@ -8,7 +8,7 @@
   "fileName": "ACCCx6_6_0_611.dmg",
   "sha": "2a456be9835bf4178b1ba27543c8cfd677bf5bd48a3c90ae473afae25e4d33b0",
   "qa_info": {
-    "qa_timestamp": "2025-05-19T06:51:10Z",
+    "qa_timestamp": "2025-05-19T07:08:55Z",
     "qa_result": "App not found after installation",
     "download_status": "success",
     "sha_status": "verified",

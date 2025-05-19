@@ -9,7 +9,7 @@
   "sha": "6eaa3c2476ffcd72af9ed7f3e8a5d52744c79b8b45ef864d2e87ca46d8476979",
   "changelog": "https://badgeify.app/changelog",
   "qa_info": {
-    "qa_timestamp": "2025-05-19T06:53:02Z",
+    "qa_timestamp": "2025-05-19T07:10:08Z",
     "qa_result": "Installation failed",
     "download_status": "success",
     "sha_status": "verified",

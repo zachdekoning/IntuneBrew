@@ -8,7 +8,7 @@
   "fileName": "installer_mac",
   "sha": "e04d40fbbc0040a73211a6ee3d5fdbb6d4fe9fa24ca553edc0fd6d46c2e95a96",
   "qa_info": {
-    "qa_timestamp": "2025-05-19T06:55:16Z",
+    "qa_timestamp": "2025-05-19T07:12:23Z",
     "qa_result": "Installation failed",
     "download_status": "success",
     "sha_status": "verified",
