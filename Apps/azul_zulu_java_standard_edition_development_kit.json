@@ -9,7 +9,7 @@
   "sha": "e45e12a780bef0a46b45509302bbd4c71692e0d33600469345809a556d961258",
   "changelog": "https://docs.azul.com/core/release-notes",
   "qa_info": {
-    "qa_timestamp": "2025-05-19T07:10:04Z",
+    "qa_timestamp": "2025-05-19T08:02:52Z",
     "qa_result": "No .app found in DMG",
     "download_status": "success",
     "sha_status": "verified",
