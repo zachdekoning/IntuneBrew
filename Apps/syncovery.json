@@ -1,10 +1,10 @@
 {
   "name": "Syncovery",
   "description": "File synchronisation and backup software",
-  "version": "10.17.5",
-  "url": "https://www.syncovery.com/release/SyncoveryMac10.17.5-Apple.dmg",
+  "version": "11.3.5",
+  "url": "https://www.syncovery.com/release/SyncoveryMac11.3.5-Apple.dmg",
   "bundleId": "com.company.Syncovery*",
   "homepage": "https://www.syncovery.com/",
-  "fileName": "SyncoveryMac10.17.5-Apple.dmg",
+  "fileName": "SyncoveryMac11.3.5-Apple.dmg",
   "previous_version": "10.17.5"
 }

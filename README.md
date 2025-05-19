@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                                      <p>
+                                                                                                                                                                                                                                                                                                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-506-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -74,19 +74,18 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 
 
+
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-18 00:31 UTC*
+*Last checked: 2025-05-19 00:31 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Mozilla Firefox ESR | 128.10.0 | 128.10.1 |
-| DockDoor | 1.9.1 | 1.10 |
-| Mozilla Firefox | 138.0.3 | 138.0.4 |
-| Company Portal | 5.2502.1 | 5.2504.0 |
-| Notion | 4.11.0 | 4.11.1 |
-| Anki | 25.02.4 | 25.02.5 |
-| kitty | 0.42.0 | 0.42.1 |
+| Mozilla Firefox Developer Edition | 139.0b9 | 139.0b10 |
+| Syncovery | 10.17.5 | 11.3.5 |
+| LibreWolf | 138.0.3 | 138.0.4 |
+| DBeaver Community Edition | 25.0.4 | 25.0.5 |
+| Stats | 2.11.42 | 2.11.43 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -235,7 +234,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coteditor.png' width='32' height='32'> CotEditor | 5.1.6 |
 | <img src='Logos/cryptomator.png' width='32' height='32'> Cryptomator | 1.16.2 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.50.4 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.50.5 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.4 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.9.0 |
@@ -243,7 +242,7 @@ Follow the interactive prompts to:
 | <img src='Logos/datagrip.png' width='32' height='32'> DataGrip | 2025.1.2 |
 | <img src='Logos/dataspell.png' width='32' height='32'> DataSpell | 2025.1.1 |
 | <img src='Logos/db_browser_for_sqlite.png' width='32' height='32'> DB Browser for SQLite | 3.13.1 |
-| <img src='Logos/dbeaver_community_edition.png' width='32' height='32'> DBeaver Community Edition | 25.0.4 |
+| <img src='Logos/dbeaver_community_edition.png' width='32' height='32'> DBeaver Community Edition | 25.0.5 |
 | <img src='Logos/dbgate.png' width='32' height='32'> DbGate | 6.4.2 |
 | <img src='Logos/deepl.png' width='32' height='32'> DeepL | 25.5.12046922 |
 | <img src='Logos/deskpad.png' width='32' height='32'> DeskPad | 1.3.2 |
@@ -370,7 +369,7 @@ Follow the interactive prompts to:
 | <img src='Logos/last_window_quits.png' width='32' height='32'> Last Window Quits | 1.1.4 |
 | <img src='Logos/lens.png' width='32' height='32'> Lens | 2025.5.81206 |
 | <img src='Logos/libreoffice.png' width='32' height='32'> LibreOffice | 25.2.3 |
-| <img src='Logos/librewolf.png' width='32' height='32'> LibreWolf | 138.0.3 |
+| <img src='Logos/librewolf.png' width='32' height='32'> LibreWolf | 138.0.4 |
 | <img src='Logos/little_snitch.png' width='32' height='32'> Little Snitch | 6.2.3 |
 | <img src='Logos/lm_studio.png' width='32' height='32'> LM Studio | 0.3.15 |
 | <img src='Logos/LocalSend.png' width='32' height='32'> LocalSend | 1.17.0 |
@@ -424,7 +423,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mounty_for_ntfs.png' width='32' height='32'> Mounty for NTFS | 2.4 |
 | <img src='Logos/mouseless.png' width='32' height='32'> mouseless | 0.3.1 |
 | <img src='Logos/mozilla_firefox.png' width='32' height='32'> Mozilla Firefox | 138.0.4 |
-| <img src='Logos/mozilla_firefox_developer_edition.png' width='32' height='32'> Mozilla Firefox Developer Edition | 139.0b9 |
+| <img src='Logos/mozilla_firefox_developer_edition.png' width='32' height='32'> Mozilla Firefox Developer Edition | 139.0b10 |
 | <img src='Logos/mozilla_firefox_esr.png' width='32' height='32'> Mozilla Firefox ESR | 128.10.1 |
 | <img src='Logos/mozilla_thunderbird.png' width='32' height='32'> Mozilla Thunderbird | 138.0.1 |
 | <img src='Logos/multi.png' width='32' height='32'> Multi | 0.538.2 |
@@ -567,7 +566,7 @@ Follow the interactive prompts to:
 | <img src='Logos/sqlpro_for_sqlite.png' width='32' height='32'> SQLPro for SQLite | 2025.07 |
 | <img src='Logos/sqlpro_studio.png' width='32' height='32'> SQLPro Studio | 2025.10 |
 | <img src='Logos/squirrel.png' width='32' height='32'> Squirrel | 1.0.3 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.42 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.43 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/steermouse.png' width='32' height='32'> SteerMouse | 5.7.4 |
 | <img src='Logos/stretchly.png' width='32' height='32'> Stretchly | 1.17.2 |
@@ -579,7 +578,7 @@ Follow the interactive prompts to:
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
 | <img src='Logos/swift_shift.png' width='32' height='32'> Swift Shift | 0.27.1 |
 | <img src='Logos/sync.png' width='32' height='32'> Sync | 2.2.48 |
-| <img src='Logos/syncovery.png' width='32' height='32'> Syncovery | 10.17.5 |
+| <img src='Logos/syncovery.png' width='32' height='32'> Syncovery | 11.3.5 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.2 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2025.1.1 |
 | <img src='Logos/tabtab.png' width='32' height='32'> TabTab | 1.3.4 |
