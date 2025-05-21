@@ -16,7 +16,6 @@ preserve_filename_apps = [
 
 # zip, tar etc
 app_urls = [
-    "https://formulae.brew.sh/api/cask/mysqlworkbench.json",
     "https://formulae.brew.sh/api/cask/signal.json",
     "https://formulae.brew.sh/api/cask/medis.json",
     "https://formulae.brew.sh/api/cask/sourcetree.json",
@@ -181,6 +180,7 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/mysqlworkbench.json",
     "https://formulae.brew.sh/api/cask/multiapp.json",
     "https://formulae.brew.sh/api/cask/recut.json",
     "https://formulae.brew.sh/api/cask/firefox@esr.json",
