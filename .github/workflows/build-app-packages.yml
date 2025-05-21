@@ -494,7 +494,7 @@ jobs:
                       echo "🔗 New URL: $azure_url"
                     else
                       echo "❌ Failed to update JSON file"
-                    }
+                    fi
                   else
                     echo "❌ Failed to upload to Azure"
                   fi
