@@ -95,9 +95,13 @@ jobs:
             APP_NAME_FROM_JSON=$(jq -r '.name' "$APP_JSON_PATH" 2>/dev/null)
             APP_URL=$(jq -r '.url' "$APP_JSON_PATH" 2>/dev/null)
             
-            if [ -z "$APP_NAME_FROM_JSON" ] || [ "$APP_NAME_FROM_JSON" = "null" ] || [ -z "$APP_URL" ] || [ "$APP_URL" = "null" ]; then
-              echo "❌ Missing required fields in $APP_JSON_PATH, skipping"
+            if [ -z "$APP_NAME_FROM_JSON" ] || [ "$APP_NAME_FROM_JSON" = "null" ]; then
+              echo "❌ Missing app name in $APP_JSON_PATH, skipping"
               echo "  name: $APP_NAME_FROM_JSON"
+              continue
+            fi
+            if [ -z "$APP_URL" ] || [ "$APP_URL" = "null" ]; then
+              echo "❌ Missing app URL in $APP_JSON_PATH, skipping"
               echo "  url: $APP_URL"
               continue
             fi
