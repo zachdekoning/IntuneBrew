@@ -8,15 +8,6 @@ on:
       - completed
   # Allow manual triggering
   workflow_dispatch:
-    inputs:
-      batch_size:
-        description: "Number of apps to process in this batch"
-        required: false
-        default: "50" # Default batch size
-      start_index:
-        description: "Starting index for processing apps (for batching)"
-        required: false
-        default: "0" # Default starting index
 
 jobs:
   update-bundleids:
@@ -32,32 +23,19 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - name: Find apps to process in batch
+      - name: Find apps with missing bundleIds
         id: find-apps
-        shell: bash
         run: |
-          echo "Finding apps to process in batch..."
+          echo "Finding apps with missing bundleIds..."
 
-          # Get inputs
-          BATCH_SIZE=${{ github.event.inputs.batch_size || 50 }}
-          START_INDEX=${{ github.event.inputs.start_index || 0 }}
-          echo "Batch Size: $BATCH_SIZE"
-          echo "Start Index: $START_INDEX"
+          # Create an array to store apps to verify bundleIds for
+          APPS_TO_VERIFY=()
 
-          # Create arrays to store apps for the current batch
-          CURRENT_BATCH_APPS=()
-          ALL_UNPROCESSED_APPS=()
-
-          # Create arrays to track missing files (from find step)
+          # Create arrays to track missing, updated, no-change, and skipped files for summary
           MISSING_FILES=()
-
-          # Read processed apps from file
-          PROCESSED_APPS_FILE="processed_apps.txt"
-          # Check if processed_apps.txt exists
-          if [ ! -f "$PROCESSED_APPS_FILE" ]; then
-            echo "No $PROCESSED_APPS_FILE found, creating an empty one."
-            touch "$PROCESSED_APPS_FILE"
-          fi
+          UPDATED_APPS=()
+          NO_CHANGE_APPS=()
+          SKIPPED_APPS=() # Apps skipped due to issues like no .app file found
 
           # List all files in the Apps directory for debugging
           echo "Listing all files in Apps directory:"
@@ -73,12 +51,6 @@ jobs:
               continue
             fi
             
-            # Check if app has already been processed using grep
-            if grep -q "^$APP_JSON_PATH$" "$PROCESSED_APPS_FILE"; then
-              echo "Skipping $APP_JSON_PATH as it has already been processed."
-              continue
-            fi
-
             echo "Processing JSON file: $APP_JSON_PATH"
             
             # Validate JSON file
@@ -95,47 +67,26 @@ jobs:
             APP_NAME_FROM_JSON=$(jq -r '.name' "$APP_JSON_PATH" 2>/dev/null)
             APP_URL=$(jq -r '.url' "$APP_JSON_PATH" 2>/dev/null)
             
-            if [ -z "$APP_NAME_FROM_JSON" ] || [ "$APP_NAME_FROM_JSON" = "null" ]; then
-              echo "❌ Missing app name in $APP_JSON_PATH, skipping"
+            if [ -z "$APP_NAME_FROM_JSON" ] || [ "$APP_NAME_FROM_JSON" = "null" ] || [ -z "$APP_URL" ] || [ "$APP_URL" = "null" ]; then
+              echo "❌ Missing required fields in $APP_JSON_PATH, skipping"
               echo "  name: $APP_NAME_FROM_JSON"
-              continue
-            fi
-            if [ -z "$APP_URL" ] || [ "$APP_URL" = "null" ]; then
-              echo "❌ Missing app URL in $APP_JSON_PATH, skipping"
               echo "  url: $APP_URL"
               continue
             fi
-            
-            ALL_UNPROCESSED_APPS+=("$APP_JSON_PATH")
+            echo "Adding $APP_JSON_PATH to list of apps to verify."
+            APPS_TO_VERIFY+=("$APP_JSON_PATH")
           done
 
-          # Apply batching
-          TOTAL_UNPROCESSED_COUNT=${#ALL_UNPROCESSED_APPS[@]}
-          echo "Total unprocessed apps found: $TOTAL_UNPROCESSED_COUNT"
+          # Save the list of apps to verify
+          echo "APPS_COUNT=${#APPS_TO_VERIFY[@]}" >> $GITHUB_ENV
 
-          END_INDEX=$((START_INDEX + BATCH_SIZE))
-
-          for (( i=START_INDEX; i<END_INDEX && i<TOTAL_UNPROCESSED_COUNT; i++ )); do
-            CURRENT_BATCH_APPS+=("${ALL_UNPROCESSED_APPS[i]}")
-          end
-
-          # Save the list of apps for the current batch
-          echo "APPS_COUNT=${#CURRENT_BATCH_APPS[@]}" >> $GITHUB_ENV
-          echo "TOTAL_UNPROCESSED_COUNT=$TOTAL_UNPROCESSED_COUNT" >> $GITHUB_ENV
-          echo "NEXT_START_INDEX=$END_INDEX" >> $GITHUB_ENV
-
-          if [ ${#CURRENT_BATCH_APPS[@]} -eq 0 ]; then
-            echo "No apps to process in this batch."
+          if [ ${#APPS_TO_VERIFY[@]} -eq 0 ]; then
+            echo "No apps to verify bundleIds for."
             echo "APPS_TO_VERIFY=" >> $GITHUB_ENV
           else
             # Convert array to newline-separated string and save to a file
-            printf "%s\n" "${CURRENT_BATCH_APPS[@]}" > /tmp/apps_to_verify.txt
-            echo "Found ${#CURRENT_BATCH_APPS[@]} apps to process in this batch."
-          fi # Closing fi for the if [ ${#CURRENT_BATCH_APPS[@]} -eq 0 ] block
-
-          # Save missing files to a file for the summary step
-          if [ ${#MISSING_FILES[@]} -gt 0 ]; then
-            printf "%s\n" "${MISSING_FILES[@]}" > /tmp/missing_files.txt
+            printf "%s\n" "${APPS_TO_VERIFY[@]}" > /tmp/apps_to_verify.txt
+            echo "Found ${#APPS_TO_VERIFY[@]} apps to verify bundleIds for."
           fi
 
       - name: Process and Verify BundleIDs
@@ -267,7 +218,7 @@ jobs:
               # Mount DMG file
               echo "💿 Mounting DMG file..."
               MOUNT_POINT="/Volumes/AppDMG"
-              hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse -noverify -noautofsck -quiet
+              hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse
               
               if [ $? -ne 0 ]; then
                 echo "❌ Failed to mount DMG file"
@@ -575,12 +526,6 @@ jobs:
             echo "==============================================="
           done < /tmp/apps_to_verify.txt
 
-          # Append successfully processed apps to processed_apps.txt
-          if [ ${#CURRENT_BATCH_APPS[@]} -gt 0 ]; then
-            printf "%s\n" "${CURRENT_BATCH_APPS[@]}" >> processed_apps.txt
-            echo "Appended processed apps to processed_apps.txt"
-          fi
-
           # Save the lists to files for the summary step
           echo "MISSING_FILES_COUNT=${#MISSING_FILES[@]}" >> $GITHUB_ENV
           echo "UPDATED_APPS_COUNT=${#UPDATED_APPS[@]}" >> $GITHUB_ENV
@@ -619,9 +564,8 @@ jobs:
             echo "No changes to commit"
           else
             echo "Changes detected, committing..."
-            # Add all files in Apps directory except .bak files and the processed_apps.txt file
+            # Add all files in Apps directory except .bak files
             find "Apps/" -type f -not -name "*.bak" -exec git add {} \;
-            git add processed_apps.txt
             git commit -m "Update missing bundleIds for apps"
             
             # Push using the PAT for authentication
@@ -637,23 +581,13 @@ jobs:
             fi
           fi
 
-      - name: Trigger next batch
-        if: env.NEXT_START_INDEX < env.TOTAL_UNPROCESSED_COUNT
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.PAT }}
-          event-type: update-missing-bundleids
-          client-payload: '{"batch_size": "${{ github.event.inputs.batch_size || 50 }}", "start_index": "${{ env.NEXT_START_INDEX }}"}'
-
       - name: Output summary
         run: |
           # Create a summary for GitHub Actions
           echo "## BundleID Update Results" >> $GITHUB_STEP_SUMMARY
           echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
-          echo "| Apps Processed (Current Batch) | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
-          REMAINING_APPS=$(( env.TOTAL_UNPROCESSED_COUNT - env.NEXT_START_INDEX ))
-          echo "| Total Unprocessed Apps Remaining | $REMAINING_APPS |" >> $GITHUB_STEP_SUMMARY
+          echo "| Apps Processed | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
           echo "| Updated Apps | $UPDATED_APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| No Change Apps | $NO_CHANGE_APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
