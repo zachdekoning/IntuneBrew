@@ -53,14 +53,10 @@ jobs:
 
           # Read processed apps from file
           PROCESSED_APPS_FILE="processed_apps.txt"
-          declare -A PROCESSED_APPS_MAP
-          if [ -f "$PROCESSED_APPS_FILE" ]; then
-            echo "Reading processed apps from $PROCESSED_APPS_FILE"
-            while IFS= read -r app_path; do
-              PROCESSED_APPS_MAP["$app_path"]=1
-            done < "$PROCESSED_APPS_FILE"
-          else
-            echo "No $PROCESSED_APPS_FILE found, starting fresh."
+          # Check if processed_apps.txt exists
+          if [ ! -f "$PROCESSED_APPS_FILE" ]; then
+            echo "No $PROCESSED_APPS_FILE found, creating an empty one."
+            touch "$PROCESSED_APPS_FILE"
           fi
 
           # List all files in the Apps directory for debugging
@@ -77,8 +73,8 @@ jobs:
               continue
             fi
             
-            # Check if app has already been processed
-            if [[ -n "${PROCESSED_APPS_MAP["$APP_JSON_PATH"]}" ]]; then
+            # Check if app has already been processed using grep
+            if grep -q "^$APP_JSON_PATH$" "$PROCESSED_APPS_FILE"; then
               echo "Skipping $APP_JSON_PATH as it has already been processed."
               continue
             fi
