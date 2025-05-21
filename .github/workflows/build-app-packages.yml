@@ -454,11 +454,11 @@ jobs:
 
               # First try to find .app file recursively, excluding __MACOSX directory
               echo "🔍 Searching for .app file recursively..."
-              app_file=$(find "$extracted_path" -type d -name "*.app" ! -path "*/__MACOSX/*" -print -quit)
+              app_file=$(find "$extracted_path" -type d -name "*.app" ! -path "*/__MACOSX/*" -path "*/.Trashes" -prune -o -print -quit)
               
               if [ -z "$app_file" ]; then
                 echo "❌ No .app file found, searching for .pkg file..."
-                pkg_file=$(find "$extracted_path" -type f -name "*.pkg" ! -path "*/__MACOSX/*" -print -quit)
+                pkg_file=$(find "$extracted_path" -type f -name "*.pkg" ! -path "*/__MACOSX/*" -path "*/.Trashes" -prune -o -print -quit)
                 
                 if [ -n "$pkg_file" ]; then
                   echo "✅ Found .pkg file: $pkg_file"
