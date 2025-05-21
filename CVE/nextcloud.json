@@ -1,51 +1,51 @@
 {
   "app_name": "Nextcloud",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2023-25160",
-      "published_date": "2023-02-13",
+      "cve_id": "CVE-2023-49790",
+      "published_date": "2023-12-22",
       "last_modified_date": "2024-11-21",
-      "base_score": 4.1,
+      "base_score": 4.3,
       "severity": "MEDIUM",
-      "description": "Nextcloud Mail is an email app for the Nextcloud home server platform. Prior to versions 2.2.1, 1.14.5, 1.12.9, and 1.11.8, an attacker can access the mail box by ID getting the subjects and the first characters of the emails. Users should upgrade to Mail 2.2.1 for Nextcloud 25, Mail 1.14.5 for Nextcloud 22-24, Mail 1.12.9 for Nextcloud 21, or Mail 1.11.8 for Nextcloud 20 to receive a patch. No known workarounds are available.",
-      "cpe_name": "cpe:2.3:a:nextcloud:mail:0.1.0:*:*:*:*:nextcloud:*:*"
+      "description": "The Nextcloud iOS Files app allows users of iOS to interact with Nextcloud, a self-hosted productivity platform. Prior to version 4.9.2, the application can be used without providing the 4 digit PIN code. Nextcloud iOS Files app should be upgraded to 4.9.2 to receive the patch. No known workarounds are available.",
+      "cpe_name": "cpe:2.3:a:nextcloud:nextcloud:4.7.0:*:*:*:*:iphone_os:*:*"
     },
     {
-      "cve_id": "CVE-2023-23943",
-      "published_date": "2023-02-06",
+      "cve_id": "CVE-2023-28646",
+      "published_date": "2023-03-30",
       "last_modified_date": "2024-11-21",
-      "base_score": 5.0,
+      "base_score": 4.4,
       "severity": "MEDIUM",
-      "description": "Nextcloud mail is an email app for the nextcloud home server platform. In affected versions the SMTP, IMAP and Sieve host fields allowed to scan for internal services and servers reachable from within the local network of the Nextcloud Server. It is recommended that the Nextcloud Maill app is upgraded to 1.15.0 or 2.2.2. The only known workaround for this issue is to completely disable the nextcloud mail app.",
-      "cpe_name": "cpe:2.3:a:nextcloud:mail:0.1.0:*:*:*:*:nextcloud:*:*"
+      "description": "Nextcloud android is an android app for interfacing with the nextcloud home server ecosystem. In versions from 3.7.0 and before 3.24.1 an attacker that has access to the unlocked physical device can bypass the Nextcloud Android Pin/passcode protection via a thirdparty app. This allows to see meta information like sharer, sharees and activity of files. It is recommended that the Nextcloud Android app is upgraded to 3.24.1. There are no known workarounds for this vulnerability.",
+      "cpe_name": "cpe:2.3:a:nextcloud:nextcloud:3.21.0:*:*:*:*:android:*:*"
     },
     {
-      "cve_id": "CVE-2023-23944",
-      "published_date": "2023-02-06",
+      "cve_id": "CVE-2022-39210",
+      "published_date": "2022-09-17",
+      "last_modified_date": "2024-11-21",
+      "base_score": 3.2,
+      "severity": "LOW",
+      "description": "Nextcloud android is the official Android client for the Nextcloud home server platform. Internal paths to the Nextcloud Android app files are not properly protected. As a result access to internal files of the from within the Nextcloud Android app is possible. This may lead to a leak of sensitive information in some cases. It is recommended that the Nextcloud Android app is upgraded to 3.21.0. There are no known workarounds for this issue.",
+      "cpe_name": "cpe:2.3:a:nextcloud:nextcloud:3.19.0:rc1:*:*:*:android:*:*"
+    },
+    {
+      "cve_id": "CVE-2022-24885",
+      "published_date": "2022-04-27",
       "last_modified_date": "2024-11-21",
       "base_score": 2.0,
       "severity": "LOW",
-      "description": "Nextcloud mail is an email app for the nextcloud home server platform. In versions prior to 2.2.2 user's passwords were stored in cleartext in the database during the duration of OAuth2 setup procedure. Any attacker or malicious user with access to the database would have access to these user passwords until the OAuth setup has been completed. It is recommended that the Nextcloud Mail app is upgraded to 2.2.2. There are no known workarounds for this issue.",
-      "cpe_name": "cpe:2.3:a:nextcloud:mail:0.1.0:*:*:*:*:nextcloud:*:*"
+      "description": "Nextcloud Android app is the Android client for Nextcloud, a self-hosted productivity platform. Prior to version 3.19.1, users can bypass a lock on the Nextcloud app on an Android device by repeatedly reopening the app. Version 3.19.1 contains a fix for the problem. There are currently no known workarounds.",
+      "cpe_name": "cpe:2.3:a:nextcloud:nextcloud:3.19.0:rc1:*:*:*:android:*:*"
     },
     {
-      "cve_id": "CVE-2022-31119",
-      "published_date": "2022-08-04",
-      "last_modified_date": "2024-11-21",
-      "base_score": 3.1,
-      "severity": "LOW",
-      "description": "Nextcloud Mail is an email application for the nextcloud personal cloud product. Affected versions of Nextcloud mail would log user passwords to disk in the event of a misconfiguration. Should an attacker gain access to the logs complete access to affected accounts would be obtainable. It is recommended that the Nextcloud Mail is upgraded to 1.12.1. Operators should inspect their logs and remove passwords which have been logged. There are no workarounds to prevent logging in the event of a misconfiguration.",
-      "cpe_name": "cpe:2.3:a:nextcloud:mail:0.1.0:*:*:*:*:nextcloud:*:*"
-    },
-    {
-      "cve_id": "CVE-2022-31132",
-      "published_date": "2022-08-04",
-      "last_modified_date": "2024-11-21",
-      "base_score": 8.3,
-      "severity": "HIGH",
-      "description": "Nextcloud Mail is an email application for the nextcloud personal cloud product. Affected versions shipped with a CSS minifier on the path `./vendor/cerdic/css-tidy/css_optimiser.php`. Access to the minifier is unrestricted and access may lead to Server-Side Request Forgery (SSRF). It is recommendet to upgrade to Mail 1.12.7 or Mail 1.13.6. Users unable to upgrade may manually delete the file located at `./vendor/cerdic/css-tidy/css_optimiser.php`",
-      "cpe_name": "cpe:2.3:a:nextcloud:mail:0.1.0:*:*:*:*:nextcloud:*:*"
+      "cve_id": "CVE-2017-0888",
+      "published_date": "2017-04-05",
+      "last_modified_date": "2025-04-20",
+      "base_score": 4.3,
+      "severity": "MEDIUM",
+      "description": "Nextcloud Server before 9.0.55 and 10.0.2 suffers from a Content-Spoofing vulnerability in the \"files\" app. The top navigation bar displayed in the files list contained partially user-controllable input leading to a potential misrepresentation of information.",
+      "cpe_name": "cpe:2.3:a:nextcloud:nextcloud:4.9.2:*:*:*:*:iphone_os:*:*"
     }
   ]
 }

@@ -1,42 +1,15 @@
 {
   "app_name": "HEY",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2020-25006",
-      "published_date": "2020-09-03",
+      "cve_id": "CVE-2018-13730",
+      "published_date": "2018-07-09",
       "last_modified_date": "2024-11-21",
-      "base_score": 9.8,
-      "severity": "CRITICAL",
-      "description": "Heybbs v1.2 has a SQL injection vulnerability in login.php file via the username parameter which may allow a remote attacker to execute arbitrary code.",
-      "cpe_name": "cpe:2.3:a:heybbs_project:heybbs:1.2:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2020-25004",
-      "published_date": "2020-09-03",
-      "last_modified_date": "2024-11-21",
-      "base_score": 9.8,
-      "severity": "CRITICAL",
-      "description": "Heybbs v1.2 has a SQL injection vulnerability in user.php file via the ID parameter which may allow a remote attacker to execute arbitrary code.",
-      "cpe_name": "cpe:2.3:a:heybbs_project:heybbs:1.2:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2020-25005",
-      "published_date": "2020-09-03",
-      "last_modified_date": "2024-11-21",
-      "base_score": 9.8,
-      "severity": "CRITICAL",
-      "description": "Heybbs v1.2 has a SQL injection vulnerability in msg.php file via the ID parameter which may allow a remote attacker to execute arbitrary code.",
-      "cpe_name": "cpe:2.3:a:heybbs_project:heybbs:1.2:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2002-1869",
-      "published_date": "2002-12-31",
-      "last_modified_date": "2025-04-03",
-      "base_score": 3.3,
-      "severity": "LOW",
-      "description": "Heysoft EventSave 5.1 and 5.2 and Heysoft EventSave+ 5.1 and 5.2 does not check whether the log file can be written to, which allows attackers to prevent events from being recorded by opening the log file using an application such as Microsoft's Event Viewer.",
-      "cpe_name": "cpe:2.3:a:heysoft:eventsave:5.2:*:*:*:*:*:*:*"
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "description": "The mintToken function of a smart contract implementation for HEY, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.",
+      "cpe_name": "cpe:2.3:a:hey_project:hey:-:*:*:*:*:*:*:*"
     }
   ]
 }

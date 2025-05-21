@@ -1,51 +1,24 @@
 {
   "app_name": "Rocket",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2024-46934",
-      "published_date": "2024-09-25",
-      "last_modified_date": "2025-03-25",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "Rocket.Chat 6.12.0, 6.11.2, 6.10.5, 6.9.6, 6.8.6, 6.7.8, and earlier is vulnerable to DOM-based Cross-site Scripting (XSS). Attackers may be able to abuse the UpdateOTRAck method to forge a message that contains an XSS payload.",
-      "cpe_name": "cpe:2.3:a:rocket.chat:rocket.chat:6.10.1:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2024-46935",
-      "published_date": "2024-09-25",
-      "last_modified_date": "2025-03-25",
-      "base_score": 7.5,
+      "cve_id": "CVE-2021-29935",
+      "published_date": "2021-04-01",
+      "last_modified_date": "2024-11-21",
+      "base_score": 7.3,
       "severity": "HIGH",
-      "description": "Rocket.Chat 6.12.0, 6.11.2, 6.10.5, 6.9.6, 6.8.6, 6.7.8, and earlier is vulnerable to denial of service (DoS). Attackers who craft messages with specific characters may crash the workspace due to an issue in the message parser.",
-      "cpe_name": "cpe:2.3:a:rocket.chat:rocket.chat:6.10.1:*:*:*:*:*:*:*"
+      "description": "An issue was discovered in the rocket crate before 0.4.7 for Rust. uri::Formatter can have a use-after-free if a user-provided function panics.",
+      "cpe_name": "cpe:2.3:a:rocket:rocket:0.4.5:*:*:*:*:rust:*:*"
     },
     {
-      "cve_id": "CVE-2024-47048",
-      "published_date": "2024-09-25",
-      "last_modified_date": "2025-03-25",
-      "base_score": 5.4,
-      "severity": "MEDIUM",
-      "description": "Rocket.Chat 6.12.0, 6.11.2, 6.10.5, 6.9.6, 6.8.6, 6.7.8, and earlier allows stored XSS in the description and release notes of the marketplace and private apps.",
-      "cpe_name": "cpe:2.3:a:rocket.chat:rocket.chat:6.10.1:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2024-45621",
-      "published_date": "2024-09-02",
-      "last_modified_date": "2025-03-13",
-      "base_score": 5.4,
-      "severity": "MEDIUM",
-      "description": "The Electron desktop application of Rocket.Chat through 6.3.4 allows stored XSS via links in an uploaded file, related to failure to use a separate browser upon encountering third-party external actions from PDF documents.",
-      "cpe_name": "cpe:2.3:a:rocket.chat:rocket.chat:6.3.4:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2024-39713",
-      "published_date": "2024-08-05",
-      "last_modified_date": "2024-09-06",
-      "base_score": 8.6,
+      "cve_id": "CVE-2020-35882",
+      "published_date": "2020-12-31",
+      "last_modified_date": "2024-11-21",
+      "base_score": 8.1,
       "severity": "HIGH",
-      "description": "A Server-Side Request Forgery (SSRF) affects Rocket.Chat's Twilio webhook endpoint before version 6.10.1.",
-      "cpe_name": "cpe:2.3:a:rocket.chat:rocket.chat:6.3.4:*:*:*:*:*:*:*"
+      "description": "An issue was discovered in the rocket crate before 0.4.5 for Rust. LocalRequest::clone creates more than one mutable references to the same object, possibly causing a data race.",
+      "cpe_name": "cpe:2.3:a:rocket:rocket:0.4.0:rc2:*:*:*:rust:*:*"
     }
   ]
 }

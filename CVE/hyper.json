@@ -1,33 +1,15 @@
 {
   "app_name": "Hyper",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2024-6449",
-      "published_date": "2024-08-28",
-      "last_modified_date": "2024-09-12",
-      "base_score": 6.5,
-      "severity": "MEDIUM",
-      "description": "HyperView\u00a0Geoportal Toolkit in versions lower than\u00a08.5.0\u00a0does not restrict cross-domain requests when fetching remote content pointed by one of GET request parameters.\nAn unauthenticated remote attacker can prepare links, which upon opening will load scripts from a remote location controlled by the attacker and execute them in the user space.\nBy manipulating this parameter it is also possible to enumerate some of the devices in Local Area Network in which the server resides.",
-      "cpe_name": "cpe:2.3:a:hyperview:geoportal_toolkit:8.2.4:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2024-6450",
-      "published_date": "2024-08-28",
-      "last_modified_date": "2024-09-12",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "HyperView\u00a0Geoportal Toolkit in versions lower than 8.5.0 is vulnerable to Reflected Cross-Site Scripting (XSS). An unauthenticated attacker might trick somebody into using a crafted URL, which will cause a script to be run in user's browser.",
-      "cpe_name": "cpe:2.3:a:hyperview:geoportal_toolkit:8.2.4:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2024-45244",
-      "published_date": "2024-08-25",
-      "last_modified_date": "2024-10-30",
-      "base_score": 5.3,
-      "severity": "MEDIUM",
-      "description": "Hyperledger Fabric through 2.5.9 does not verify that a request has a timestamp within the expected time window.",
-      "cpe_name": "cpe:2.3:a:hyperledger:fabric:2.5.9:*:*:*:*:*:*:*"
+      "cve_id": "CVE-2024-23741",
+      "published_date": "2024-01-28",
+      "last_modified_date": "2025-03-12",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue in Hyper on macOS version 3.4.1 and before, allows remote attackers to execute arbitrary code via the RunAsNode and enableNodeClilnspectArguments settings.",
+      "cpe_name": "cpe:2.3:a:vercel:hyper:1.4.0:-:*:*:*:*:*:*"
     }
   ]
 }

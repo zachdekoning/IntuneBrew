@@ -1,6 +1,6 @@
 {
   "app_name": "QQ",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2023-34312",
@@ -19,33 +19,6 @@
       "severity": "HIGH",
       "description": "The QQ application 8.7.1 for Android and iOS does not enforce the permission requirements (e.g., android.permission.ACCESS_FINE_LOCATION) for determining the device's physical location. An attacker can use qq.createMapContext to create a MapContext object, use MapContext.moveToLocation to move the center of the map to the device's location, and use MapContext.getCenterLocation to get the latitude and longitude of the current map center.",
       "cpe_name": "cpe:2.3:a:tencent:qq:8.7.1:*:*:*:*:android:*:*"
-    },
-    {
-      "cve_id": "CVE-2018-0536",
-      "published_date": "2018-03-22",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "Cross-site scripting vulnerability in QQQ SYSTEMS ver2.24 allows an attacker to inject arbitrary web script or HTML via quiz.cgi.",
-      "cpe_name": "cpe:2.3:a:qqq_systems_project:qqq_systems:2.24:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2018-0537",
-      "published_date": "2018-03-22",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "Cross-site scripting vulnerability in QQQ SYSTEMS ver2.24 allows an attacker to inject arbitrary web script or HTML via quiz_op.cgi.",
-      "cpe_name": "cpe:2.3:a:qqq_systems_project:qqq_systems:2.24:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2018-0538",
-      "published_date": "2018-03-22",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "Cross-site scripting vulnerability in QQQ SYSTEMS ver2.24 allows an attacker to inject arbitrary web script or HTML via unspecified vectors.",
-      "cpe_name": "cpe:2.3:a:qqq_systems_project:qqq_systems:2.24:*:*:*:*:*:*:*"
     }
   ]
 }

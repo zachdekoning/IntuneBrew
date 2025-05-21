@@ -1,51 +1,15 @@
 {
   "app_name": "Santa",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2006-0072",
-      "published_date": "2006-01-04",
-      "last_modified_date": "2025-04-03",
-      "base_score": 7.5,
+      "cve_id": "CVE-2018-10405",
+      "published_date": "2018-06-13",
+      "last_modified_date": "2024-11-21",
+      "base_score": 7.8,
       "severity": "HIGH",
-      "description": "Buffer overflow in termsh on SCO OpenServer 5.0.7 allows remote attackers to execute arbitrary code via a long -o command line argument.  NOTE: this is probably a different vulnerability than CVE-2005-0351 since it involves a distinct attack vector.",
-      "cpe_name": "cpe:2.3:o:sco:openserver:5.0.7:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2005-3624",
-      "published_date": "2005-12-31",
-      "last_modified_date": "2025-04-03",
-      "base_score": 5.0,
-      "severity": "MEDIUM",
-      "description": "The CCITTFaxStream::CCITTFaxStream function in Stream.cc for xpdf, gpdf, kpdf, pdftohtml, poppler, teTeX, CUPS, libextractor, and others allows attackers to corrupt the heap via negative or large integers in a CCITTFaxDecode stream, which lead to integer overflows and integer underflows.",
-      "cpe_name": "cpe:2.3:o:sco:openserver:5.0.7:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2005-3625",
-      "published_date": "2005-12-31",
-      "last_modified_date": "2025-04-03",
-      "base_score": 10.0,
-      "severity": "HIGH",
-      "description": "Xpdf, as used in products such as gpdf, kpdf, pdftohtml, poppler, teTeX, CUPS, libextractor, and others, allows attackers to cause a denial of service (infinite loop) via streams that end prematurely, as demonstrated using the (1) CCITTFaxDecode and (2) DCTDecode streams, aka \"Infinite CPU spins.\"",
-      "cpe_name": "cpe:2.3:o:sco:openserver:5.0.7:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2005-3626",
-      "published_date": "2005-12-31",
-      "last_modified_date": "2025-04-03",
-      "base_score": 5.0,
-      "severity": "MEDIUM",
-      "description": "Xpdf, as used in products such as gpdf, kpdf, pdftohtml, poppler, teTeX, CUPS, libextractor, and others, allows attackers to cause a denial of service (crash) via a crafted FlateDecode stream that triggers a null dereference.",
-      "cpe_name": "cpe:2.3:o:sco:openserver:5.0.7:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2005-2926",
-      "published_date": "2005-10-25",
-      "last_modified_date": "2025-04-03",
-      "base_score": 4.6,
-      "severity": "MEDIUM",
-      "description": "Stack-based buffer overflow in (1) backupsh and (2) authsh in SCO Openserver 5.0.7 allows local users to execute arbitrary code via a long HOME environment variable.",
-      "cpe_name": "cpe:2.3:o:sco:openserver:5.0.7:*:*:*:*:*:*:*"
+      "description": "An issue was discovered in Google Santa and molcodesignchecker. A maliciously crafted Universal/fat binary can evade third-party code signing checks. By not completing full inspection of the Universal/fat binary, the user of the third-party tool will believe that the code is signed by Apple, but the malicious unsigned code will execute.",
+      "cpe_name": "cpe:2.3:a:google:santa:0.9.21:*:*:*:*:*:*:*"
     }
   ]
 }

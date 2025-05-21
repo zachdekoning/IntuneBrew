@@ -1,6 +1,6 @@
 {
-  "app_name": "Dosbox",
-  "last_updated": "2025-05-18",
+  "app_name": "DOSBox",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2019-7165",

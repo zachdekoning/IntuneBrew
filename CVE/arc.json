@@ -1,51 +1,51 @@
 {
   "app_name": "Arc",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2025-1651",
-      "published_date": "2025-03-13",
-      "last_modified_date": "2025-05-08",
-      "base_score": 7.8,
+      "cve_id": "CVE-2023-24243",
+      "published_date": "2023-06-16",
+      "last_modified_date": "2024-12-12",
+      "base_score": 7.5,
       "severity": "HIGH",
-      "description": "A maliciously crafted MODEL file, when parsed through Autodesk AutoCAD, can force a Heap-Based Overflow vulnerability. A malicious actor can leverage this vulnerability to cause a crash, read sensitive data, or execute arbitrary code in the context of the current process.",
-      "cpe_name": "cpe:2.3:a:autodesk:autocad_architecture:2022.1.5:*:*:*:*:*:*:*"
+      "description": "CData RSB Connect v22.0.8336 was discovered to contain a Server-Side Request Forgery (SSRF).",
+      "cpe_name": "cpe:2.3:a:cdata:arc:-:*:*:*:*:*:*:*"
     },
     {
-      "cve_id": "CVE-2025-1652",
-      "published_date": "2025-03-13",
-      "last_modified_date": "2025-05-08",
-      "base_score": 7.8,
+      "cve_id": "CVE-2021-45891",
+      "published_date": "2022-04-05",
+      "last_modified_date": "2024-11-21",
+      "base_score": 8.8,
       "severity": "HIGH",
-      "description": "A maliciously crafted MODEL file, when parsed through Autodesk AutoCAD, can force an Out-of-Bounds Read vulnerability. A malicious actor can leverage this vulnerability to cause a crash, read sensitive data, or execute arbitrary code in the context of the current process.",
-      "cpe_name": "cpe:2.3:a:autodesk:autocad_architecture:2022.1.5:*:*:*:*:*:*:*"
+      "description": "An issue was discovered in Softwarebuero Zauner ARC 4.2.0.4., that allows attackers to escalate privileges within the application, since all permission checks are done client-side, not server-side.",
+      "cpe_name": "cpe:2.3:a:zauner:arc:4.2.0.4:*:*:*:*:*:*:*"
     },
     {
-      "cve_id": "CVE-2025-1429",
-      "published_date": "2025-03-13",
-      "last_modified_date": "2025-05-08",
-      "base_score": 7.8,
-      "severity": "HIGH",
-      "description": "A maliciously crafted MODEL file, when parsed through Autodesk AutoCAD, can force a Heap-Based Overflow vulnerability. A malicious actor can leverage this vulnerability to cause a crash, read sensitive data, or execute arbitrary code in the context of the current process.",
-      "cpe_name": "cpe:2.3:a:autodesk:autocad_architecture:2022.1.5:*:*:*:*:*:*:*"
+      "cve_id": "CVE-2021-45892",
+      "published_date": "2022-04-05",
+      "last_modified_date": "2024-11-21",
+      "base_score": 5.9,
+      "severity": "MEDIUM",
+      "description": "An issue was discovered in Softwarebuero Zauner ARC 4.2.0.4. There is storage of Passwords in a Recoverable Format.",
+      "cpe_name": "cpe:2.3:a:zauner:arc:4.2.0.4:*:*:*:*:*:*:*"
     },
     {
-      "cve_id": "CVE-2025-1430",
-      "published_date": "2025-03-13",
-      "last_modified_date": "2025-05-08",
-      "base_score": 7.8,
+      "cve_id": "CVE-2021-45893",
+      "published_date": "2022-04-05",
+      "last_modified_date": "2024-11-21",
+      "base_score": 7.5,
       "severity": "HIGH",
-      "description": "A maliciously crafted SLDPRT file, when parsed through Autodesk AutoCAD, can force a Memory Corruption vulnerability. A malicious actor can leverage this vulnerability to execute arbitrary code in the context of the current process.",
-      "cpe_name": "cpe:2.3:a:autodesk:autocad_architecture:2022.1.5:*:*:*:*:*:*:*"
+      "description": "An issue was discovered in Softwarebuero Zauner ARC 4.2.0.4. There is Improper Handling of Case Sensitivity, which makes password guessing easier.",
+      "cpe_name": "cpe:2.3:a:zauner:arc:4.2.0.4:*:*:*:*:*:*:*"
     },
     {
-      "cve_id": "CVE-2025-1431",
-      "published_date": "2025-03-13",
-      "last_modified_date": "2025-05-08",
-      "base_score": 7.8,
-      "severity": "HIGH",
-      "description": "A maliciously crafted SLDPRT file, when parsed through Autodesk AutoCAD, can force an Out-of-Bounds Read vulnerability. A malicious actor can leverage this vulnerability to cause a crash, read sensitive data, or execute arbitrary code in the context of the current process.",
-      "cpe_name": "cpe:2.3:a:autodesk:autocad_architecture:2022.1.5:*:*:*:*:*:*:*"
+      "cve_id": "CVE-2021-45894",
+      "published_date": "2022-04-05",
+      "last_modified_date": "2024-11-21",
+      "base_score": 5.9,
+      "severity": "MEDIUM",
+      "description": "An issue was discovered in Softwarebuero Zauner ARC 4.2.0.4. There is Cleartext Transmission of Sensitive Information.",
+      "cpe_name": "cpe:2.3:a:zauner:arc:4.2.0.4:*:*:*:*:*:*:*"
     }
   ]
 }

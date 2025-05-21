@@ -1,15 +1,24 @@
 {
   "app_name": "OnyX",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2024-0113",
-      "published_date": "2024-08-12",
-      "last_modified_date": "2024-12-26",
+      "cve_id": "CVE-2023-43784",
+      "published_date": "2023-09-22",
+      "last_modified_date": "2024-11-21",
       "base_score": 7.5,
       "severity": "HIGH",
-      "description": "NVIDIA Mellanox OS, ONYX, Skyway, and MetroX-3 XCC contain a vulnerability in the web support, where an attacker can cause a CGI path traversal by a specially crafted URI. A successful exploit of this vulnerability might lead to escalation of privileges and information disclosure.",
-      "cpe_name": "cpe:2.3:o:nvidia:onyx:3.10.4402:*:*:*:lts:*:*:*"
+      "description": "Plesk Onyx 17.8.11 has accessKeyId and secretAccessKey fields that are related to an Amazon AWS Firehose component. NOTE: the vendor's position is that there is no security threat.",
+      "cpe_name": "cpe:2.3:a:plesk:onyx:17.8.11:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2020-11584",
+      "published_date": "2020-08-03",
+      "last_modified_date": "2024-11-21",
+      "base_score": 6.1,
+      "severity": "MEDIUM",
+      "description": "A GET-based XSS reflected vulnerability in Plesk Onyx 17.8.11 allows remote unauthenticated users to inject arbitrary JavaScript, HTML, or CSS via a GET parameter.",
+      "cpe_name": "cpe:2.3:a:plesk:onyx:17.8.11:*:*:*:*:*:*:*"
     }
   ]
 }

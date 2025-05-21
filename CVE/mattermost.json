@@ -1,51 +1,15 @@
 {
   "app_name": "Mattermost",
-  "last_updated": "2025-05-18",
+  "last_updated": "2025-05-21",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2025-27933",
-      "published_date": "2025-03-21",
-      "last_modified_date": "2025-03-27",
-      "base_score": 5.4,
-      "severity": "MEDIUM",
-      "description": "Mattermost versions 10.4.x <= 10.4.2, 10.3.x <= 10.3.3, 9.11.x <= 9.11.8 fail to fail to enforce channel conversion restrictions, which allows members with permission to convert public channels to private ones to also convert private ones to public",
-      "cpe_name": "cpe:2.3:a:mattermost:mattermost_server:10.3.0:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2025-30179",
-      "published_date": "2025-03-21",
-      "last_modified_date": "2025-03-27",
-      "base_score": 4.3,
-      "severity": "MEDIUM",
-      "description": "Mattermost versions 10.4.x <= 10.4.2, 10.3.x <= 10.3.3, 9.11.x <= 9.11.8 fail to enforce MFA on certain search APIs, which allows authenticated attackers to bypass MFA protections via user search, channel search, or team search queries.",
-      "cpe_name": "cpe:2.3:a:mattermost:mattermost_server:10.3.0:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2025-24920",
-      "published_date": "2025-03-21",
-      "last_modified_date": "2025-03-27",
-      "base_score": 4.3,
-      "severity": "MEDIUM",
-      "description": "Mattermost versions 10.4.x <= 10.4.2, 10.3.x <= 10.3.3, 9.11.x <= 9.11.8, 10.5.x <= 10.5.0\u00a0fail to restrict bookmark creation and updates in archived channels, which allows authenticated users created or update bookmarked in archived channels",
-      "cpe_name": "cpe:2.3:a:mattermost:mattermost_server:10.3.0:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2025-25068",
-      "published_date": "2025-03-21",
-      "last_modified_date": "2025-03-27",
-      "base_score": 7.5,
-      "severity": "HIGH",
-      "description": "Mattermost versions 10.4.x <= 10.4.2, 10.3.x <= 10.3.3, 9.11.x <= 9.11.8, 10.5.x <= 10.5.0 fail to enforce MFA on plugin endpoints, which allows authenticated attackers to bypass MFA protections via API requests to plugin-specific routes.",
-      "cpe_name": "cpe:2.3:a:mattermost:mattermost_server:10.3.0:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2025-25274",
-      "published_date": "2025-03-21",
-      "last_modified_date": "2025-03-27",
-      "base_score": 4.3,
-      "severity": "MEDIUM",
-      "description": "Mattermost versions 10.4.x <= 10.4.2, 10.3.x <= 10.3.3, 9.11.x <= 9.11.8\u00a0fail to restrict command execution in archived channels, which allows authenticated users to run commands in archived channels.",
-      "cpe_name": "cpe:2.3:a:mattermost:mattermost_server:10.3.0:*:*:*:*:*:*:*"
+      "cve_id": "CVE-2024-10214",
+      "published_date": "2024-10-28",
+      "last_modified_date": "2024-11-05",
+      "base_score": 3.5,
+      "severity": "LOW",
+      "description": "Mattermost versions 9.11.X <= 9.11.1, 9.5.x <= 9.5.9 icorrectly issues two sessions when using desktop SSO - one in the browser and one in desktop with incorrect settings.",
+      "cpe_name": "cpe:2.3:a:mattermost:mattermost:9.5.8:-:*:*:*:*:*:*"
     }
   ]
 }
