@@ -34,8 +34,8 @@ jobs:
 
       - name: Find apps to process in batch
         id: find-apps
+        shell: bash
         run: |
-          #!/bin/bash
           echo "Finding apps to process in batch..."
 
           # Get inputs
