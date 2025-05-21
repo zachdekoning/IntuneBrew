@@ -8,7 +8,7 @@
   "fileName": "AdGuard-2.16.4.1870.dmg",
   "sha": "63c18e868820fc6bf9e34cefa6602e74b02c959de94c8c793bb6d3eb46939deb",
   "qa_info": {
-    "qa_timestamp": "2025-05-14T08:39:16Z",
+    "qa_timestamp": "2025-05-19T07:58:58Z",
     "qa_result": "No .app found in DMG",
     "download_status": "success",
     "sha_status": "verified",

@@ -1,33 +1,15 @@
 {
   "app_name": "OBS",
-  "last_updated": "2025-05-11",
+  "last_updated": "2025-05-18",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2023-44487",
-      "published_date": "2023-10-10",
-      "last_modified_date": "2025-04-12",
-      "base_score": 7.5,
-      "severity": "HIGH",
-      "description": "The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023.",
-      "cpe_name": "cpe:2.3:a:redhat:network_observability_operator:-:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2023-37404",
-      "published_date": "2023-10-04",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.4,
+      "cve_id": "CVE-2022-36677",
+      "published_date": "2024-02-29",
+      "last_modified_date": "2025-05-08",
+      "base_score": 6.1,
       "severity": "MEDIUM",
-      "description": "IBM Observability with Instana 1.0.243 through 1.0.254 could allow an attacker on the network to execute arbitrary code on the host after a successful DNS poisoning attack.  IBM X-Force ID:  259789.",
-      "cpe_name": "cpe:2.3:a:ibm:observability_with_instana:1.0.243:*:*:*:*:*:*:*"
-    },
-    {
-      "cve_id": "CVE-2023-0813",
-      "published_date": "2023-09-15",
-      "last_modified_date": "2024-11-21",
-      "base_score": 7.5,
-      "severity": "HIGH",
-      "description": "A flaw was found in the Network Observability plugin for OpenShift console. Unless the Loki authToken configuration is set to FORWARD mode, authentication is no longer enforced, allowing any user who can connect to the OpenShift Console in an OpenShift cluster to retrieve flows without authentication.",
-      "cpe_name": "cpe:2.3:a:redhat:network_observability:1.0:*:*:*:*:*:*:*"
+      "description": "Obsidian Mind Map v1.1.0 allows attackers to execute arbitrary code via a crafted payload injected into an uploaded document.",
+      "cpe_name": "cpe:2.3:a:lynchjames:obsidian_mind_map:1.1.0:*:*:*:*:*:*:*"
     }
   ]
 }

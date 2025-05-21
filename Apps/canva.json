@@ -9,14 +9,14 @@
   "sha": "3f07cdbf202904b793ba6ce8f90714c69c00a449379413fd74dc271bb5711d5b",
   "changelog": "https://www.canva.com/help/canva-desktop-app/",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T11:46:37Z",
+    "qa_timestamp": "2025-05-16T13:25:36Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "1.107.0"
+    "installed_version": "1.108.0"
   },
-  "previous_version": "1.107.0"
+  "previous_version": "1.108.0"
 }

@@ -1,22 +1,22 @@
 {
   "name": "Anki",
   "description": "Memory training application",
-  "version": "25.02.4",
-  "url": "https://github.com/ankitects/anki/releases/download/25.02.4/anki-25.02.4-mac-apple-qt6.dmg",
+  "version": "25.02.5",
+  "url": "https://github.com/ankitects/anki/releases/download/25.02.5/anki-25.02.5-mac-apple-qt6.dmg",
   "bundleId": "net.ankiweb.dtop",
   "homepage": "https://apps.ankiweb.net/",
-  "fileName": "anki-25.02.4-mac-apple-qt6.dmg",
-  "sha": "e5cc1ca0ac696de1a805633fe3ada5a08f61c142a0ea2417e958ecc08f2703b5",
+  "fileName": "anki-25.02.5-mac-apple-qt6.dmg",
+  "sha": "46a7061d7376f460c61ae15bad00819a3ddc72dce845067cb2f47984c60f871b",
   "changelog": "https://github.com/ankitects/anki/releases",
   "qa_info": {
-    "qa_timestamp": "2025-05-12T10:31:49Z",
+    "qa_timestamp": "2025-05-19T06:52:25Z",
     "qa_result": "Installation successful and verified",
     "download_status": "success",
     "sha_status": "verified",
     "install_status": "success",
     "verify_status": "app_found",
     "bundle_id_status": "verified",
-    "installed_version": "25.02.4"
+    "installed_version": "25.02.5"
   },
-  "previous_version": "25.02.4"
+  "previous_version": "25.02.5"
 }

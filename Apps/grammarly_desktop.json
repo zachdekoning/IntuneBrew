@@ -1,12 +1,12 @@
 {
   "name": "Grammarly Desktop",
   "description": "Grammarly for desktop",
-  "version": "1.118.2.0",
-  "url": "https://download-mac.grammarly.com/versions/1.118.2.0/Grammarly.dmg",
+  "version": "1.119.0.0",
+  "url": "https://download-mac.grammarly.com/versions/1.119.0.0/Grammarly.dmg",
   "bundleId": "com.grammarly.keyboard",
   "homepage": "https://www.grammarly.com/desktop",
   "fileName": "Grammarly.dmg",
-  "sha": "f10043e67cd7780061fc1663f828332b89b20ccca0287690b476a50d18f0627b",
+  "sha": "c72ae0e92b0fe28539e1de960e5ef7aa0ad533bc3c021f70321f8465c2f1e2c6",
   "changelog": "https://www.grammarly.com/desktop/release-notes",
   "previous_version": "1.118.2.0"
 }
