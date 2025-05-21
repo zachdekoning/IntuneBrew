@@ -28,13 +28,14 @@ jobs:
         run: |
           echo "Finding apps with missing bundleIds..."
 
-          # Create an array to store apps with missing bundleIds
-          APPS_TO_PROCESS=()
+          # Create an array to store apps to verify bundleIds for
+          APPS_TO_VERIFY=()
 
-          # Create arrays to track missing, processed, and skipped files
+          # Create arrays to track missing, updated, no-change, and skipped files for summary
           MISSING_FILES=()
-          PROCESSED_FILES=()
-          SKIPPED_APPS=()
+          UPDATED_APPS=()
+          NO_CHANGE_APPS=()
+          SKIPPED_APPS=() # Apps skipped due to issues like no .app file found
 
           # List all files in the Apps directory for debugging
           echo "Listing all files in Apps directory:"
@@ -62,13 +63,6 @@ jobs:
             # Extract app name from filename
             APP_NAME=$(basename "$APP_JSON_PATH" .json)
             
-            # Check if bundleId is null or empty
-            BUNDLE_ID=$(jq -r '.bundleId' "$APP_JSON_PATH" 2>/dev/null)
-            if [ $? -ne 0 ]; then
-              echo "Warning: Failed to parse $APP_JSON_PATH, skipping"
-              continue
-            fi
-            
             # Check if required fields exist
             APP_NAME_FROM_JSON=$(jq -r '.name' "$APP_JSON_PATH" 2>/dev/null)
             APP_URL=$(jq -r '.url' "$APP_JSON_PATH" 2>/dev/null)
@@ -79,32 +73,34 @@ jobs:
               echo "  url: $APP_URL"
               continue
             fi
-            
-            if [ "$BUNDLE_ID" = "null" ] || [ -z "$BUNDLE_ID" ]; then
-              echo "Found app with missing bundleId: $APP_NAME"
-              APPS_TO_PROCESS+=("$APP_JSON_PATH")
-            fi
+            echo "Adding $APP_JSON_PATH to list of apps to verify."
+            APPS_TO_VERIFY+=("$APP_JSON_PATH")
           done
 
-          # Save the list of apps to process
-          echo "APPS_COUNT=${#APPS_TO_PROCESS[@]}" >> $GITHUB_ENV
+          # Save the list of apps to verify
+          echo "APPS_COUNT=${#APPS_TO_VERIFY[@]}" >> $GITHUB_ENV
 
-          if [ ${#APPS_TO_PROCESS[@]} -eq 0 ]; then
-            echo "No apps with missing bundleIds found."
-            echo "APPS_TO_PROCESS=" >> $GITHUB_ENV
+          if [ ${#APPS_TO_VERIFY[@]} -eq 0 ]; then
+            echo "No apps to verify bundleIds for."
+            echo "APPS_TO_VERIFY=" >> $GITHUB_ENV
           else
             # Convert array to newline-separated string and save to a file
-            printf "%s\n" "${APPS_TO_PROCESS[@]}" > /tmp/apps_to_process.txt
-            echo "Found ${#APPS_TO_PROCESS[@]} apps with missing bundleIds."
+            printf "%s\n" "${APPS_TO_VERIFY[@]}" > /tmp/apps_to_verify.txt
+            echo "Found ${#APPS_TO_VERIFY[@]} apps to verify bundleIds for."
           fi
 
-      - name: Process apps with missing bundleIds
+      - name: Process and Verify BundleIDs
         if: env.APPS_COUNT != '0'
         run: |
-          echo "Processing ${APPS_COUNT} apps with missing bundleIds..."
+          echo "Processing and verifying bundleIds for ${APPS_COUNT} apps..."
 
           # Initialize a flag to track if any changes were made
           echo "CHANGES_MADE=false" >> $GITHUB_ENV
+
+          # Initialize arrays for summary
+          UPDATED_APPS=()
+          NO_CHANGE_APPS=()
+          SKIPPED_APPS_PROCESSING=() # Apps skipped during this processing step
 
           # Process each app from the file
           while IFS= read -r APP_JSON_PATH || [ -n "$APP_JSON_PATH" ]; do
@@ -117,10 +113,12 @@ jobs:
             APP_URL=$(echo "$APP_JSON" | jq -r '.url')
             APP_VERSION=$(echo "$APP_JSON" | jq -r '.version')
             APP_SHA=$(echo "$APP_JSON" | jq -r '.sha')
+            EXISTING_BUNDLE_ID=$(echo "$APP_JSON" | jq -r '.bundleId')
             
             echo "App Name: $APP_NAME"
             echo "Version: $APP_VERSION"
             echo "URL: $APP_URL"
+            echo "Existing Bundle ID: $EXISTING_BUNDLE_ID"
             
             # Create a temporary directory for this app
             TEMP_DIR="temp_${APP_NAME// /_}"
@@ -423,9 +421,9 @@ jobs:
               echo "Available apps:"
               ls -la /Applications
               echo "Skipping this app as it doesn't have a .app file in Applications folder"
-              
-              # Add to skipped apps list for summary
-              SKIPPED_APPS+=("$APP_JSON_PATH - No .app file found")
+              SKIPPED_APPS_PROCESSING+=("$APP_JSON_PATH - No .app file found")
+              cd "$GITHUB_WORKSPACE"
+              rm -rf "$TEMP_DIR"
               continue
             fi
             
@@ -481,33 +479,44 @@ jobs:
             
             echo "🆔 Extracted Bundle ID: $ACTUAL_BUNDLE_ID"
             
-            # Update the JSON file if a valid bundleId was found
+            # Compare and update the JSON file if necessary
             if [ "$ACTUAL_BUNDLE_ID" != "Not found" ] && [ "$ACTUAL_BUNDLE_ID" != "(null)" ]; then
-              echo "🔄 Updating bundleId in JSON file..."
-              
-              # Get absolute path to the JSON file
-              ABSOLUTE_JSON_PATH="$GITHUB_WORKSPACE/$APP_JSON_PATH"
-              echo "JSON file path: $ABSOLUTE_JSON_PATH"
-              
-              # Verify the JSON file exists
-              if [ ! -f "$ABSOLUTE_JSON_PATH" ]; then
-                echo "❌ JSON file not found at $ABSOLUTE_JSON_PATH"
-                echo "Current directory: $(pwd)"
-                echo "Listing workspace directory:"
-                ls -la "$GITHUB_WORKSPACE"
-                echo "Listing Apps directory:"
-                ls -la "$GITHUB_WORKSPACE/Apps" || echo "Apps directory not found"
-                continue
+              if [ "$ACTUAL_BUNDLE_ID" != "$EXISTING_BUNDLE_ID" ]; then
+                echo "🔄 BundleId mismatch: Existing '$EXISTING_BUNDLE_ID', Actual '$ACTUAL_BUNDLE_ID'"
+                echo "Updating bundleId in JSON file..."
+                
+                # Get absolute path to the JSON file
+                ABSOLUTE_JSON_PATH="$GITHUB_WORKSPACE/$APP_JSON_PATH"
+                echo "JSON file path: $ABSOLUTE_JSON_PATH"
+                
+                # Verify the JSON file exists
+                if [ ! -f "$ABSOLUTE_JSON_PATH" ]; then
+                  echo "❌ JSON file not found at $ABSOLUTE_JSON_PATH"
+                  echo "Current directory: $(pwd)"
+                  echo "Listing workspace directory:"
+                  ls -la "$GITHUB_WORKSPACE"
+                  echo "Listing Apps directory:"
+                  ls -la "$GITHUB_WORKSPACE/Apps" || echo "Apps directory not found"
+                  SKIPPED_APPS_PROCESSING+=("$APP_JSON_PATH - JSON file not found during update")
+                  cd "$GITHUB_WORKSPACE"
+                  rm -rf "$TEMP_DIR"
+                  continue
+                fi
+                
+                # Update the bundleId in the JSON file using jq
+                jq --arg new_bundle_id "$ACTUAL_BUNDLE_ID" '.bundleId = $new_bundle_id' "$ABSOLUTE_JSON_PATH" > "${ABSOLUTE_JSON_PATH}.tmp"
+                mv "${ABSOLUTE_JSON_PATH}.tmp" "$ABSOLUTE_JSON_PATH"
+                
+                echo "✅ Updated bundleId in $ABSOLUTE_JSON_PATH to '$ACTUAL_BUNDLE_ID'"
+                echo "CHANGES_MADE=true" >> $GITHUB_ENV
+                UPDATED_APPS+=("$APP_NAME|$EXISTING_BUNDLE_ID|$ACTUAL_BUNDLE_ID")
+              else
+                echo "✅ BundleId is correct: '$ACTUAL_BUNDLE_ID'"
+                NO_CHANGE_APPS+=("$APP_NAME|$ACTUAL_BUNDLE_ID")
               fi
-              
-              # Update the bundleId in the JSON file using jq
-              jq --arg new_bundle_id "$ACTUAL_BUNDLE_ID" '.bundleId = $new_bundle_id' "$ABSOLUTE_JSON_PATH" > "${ABSOLUTE_JSON_PATH}.tmp"
-              mv "${ABSOLUTE_JSON_PATH}.tmp" "$ABSOLUTE_JSON_PATH"
-              
-              echo "✅ Updated bundleId in $ABSOLUTE_JSON_PATH to '$ACTUAL_BUNDLE_ID'"
-              echo "CHANGES_MADE=true" >> $GITHUB_ENV
             else
-              echo "⚠️ Could not extract a valid bundleId"
+              echo "⚠️ Could not extract a valid bundleId for $APP_NAME"
+              SKIPPED_APPS_PROCESSING+=("$APP_JSON_PATH - Could not extract valid bundleId")
             fi
             
             # Clean up the temporary directory
@@ -515,24 +524,32 @@ jobs:
             rm -rf "$TEMP_DIR"
             
             echo "==============================================="
-            
-            # Add to processed files list
-            PROCESSED_FILES+=("$APP_JSON_PATH")
-          done < /tmp/apps_to_process.txt
+          done < /tmp/apps_to_verify.txt
 
-          # Save the lists to environment variables for the summary step
+          # Save the lists to files for the summary step
           echo "MISSING_FILES_COUNT=${#MISSING_FILES[@]}" >> $GITHUB_ENV
-          echo "PROCESSED_FILES_COUNT=${#PROCESSED_FILES[@]}" >> $GITHUB_ENV
-          echo "SKIPPED_APPS_COUNT=${#SKIPPED_APPS[@]}" >> $GITHUB_ENV
+          echo "UPDATED_APPS_COUNT=${#UPDATED_APPS[@]}" >> $GITHUB_ENV
+          echo "NO_CHANGE_APPS_COUNT=${#NO_CHANGE_APPS[@]}" >> $GITHUB_ENV
+          echo "SKIPPED_APPS_PROCESSING_COUNT=${#SKIPPED_APPS_PROCESSING[@]}" >> $GITHUB_ENV
 
-          # Save missing files to a file for the summary step
+          # Save missing files from find-apps step to a file for the summary step
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
             printf "%s\n" "${MISSING_FILES[@]}" > /tmp/missing_files.txt
           fi
 
-          # Save skipped apps to a file for the summary step
-          if [ ${#SKIPPED_APPS[@]} -gt 0 ]; then
-            printf "%s\n" "${SKIPPED_APPS[@]}" > /tmp/skipped_apps.txt
+          # Save updated apps to a file for the summary step
+          if [ ${#UPDATED_APPS[@]} -gt 0 ]; then
+            printf "%s\n" "${UPDATED_APPS[@]}" > /tmp/updated_apps.txt
+          fi
+
+          # Save no-change apps to a file for the summary step
+          if [ ${#NO_CHANGE_APPS[@]} -gt 0 ]; then
+            printf "%s\n" "${NO_CHANGE_APPS[@]}" > /tmp/no_change_apps.txt
+          fi
+
+          # Save skipped apps from processing step to a file for the summary step
+          if [ ${#SKIPPED_APPS_PROCESSING[@]} -gt 0 ]; then
+            printf "%s\n" "${SKIPPED_APPS_PROCESSING[@]}" > /tmp/skipped_apps_processing.txt
           fi
 
       - name: Commit and push changes
@@ -572,14 +589,15 @@ jobs:
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
           echo "| Apps Processed | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
           echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
-          echo "| Missing Files | $MISSING_FILES_COUNT |" >> $GITHUB_STEP_SUMMARY
-          echo "| Skipped Apps | $SKIPPED_APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
-          echo "| Successfully Processed | $PROCESSED_FILES_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Updated Apps | $UPDATED_APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| No Change Apps | $NO_CHANGE_APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Missing Files (Find Step) | $MISSING_FILES_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Skipped Apps (Processing Step) | $SKIPPED_APPS_PROCESSING_COUNT |" >> $GITHUB_STEP_SUMMARY
 
-          # Add missing files section if any
+          # Add missing files section if any (from find-apps step)
           if [ -f "/tmp/missing_files.txt" ]; then
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "## Missing JSON Files" >> $GITHUB_STEP_SUMMARY
+            echo "## Missing JSON Files (Find Step)" >> $GITHUB_STEP_SUMMARY
             echo "The following JSON files were not found and need to be fixed manually:" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
@@ -587,25 +605,39 @@ jobs:
             echo "```" >> $GITHUB_STEP_SUMMARY
           fi
 
-          # Add skipped apps section if any
-          if [ -f "/tmp/skipped_apps.txt" ]; then
+          # Add updated apps section if any
+          if [ -f "/tmp/updated_apps.txt" ]; then
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "## Skipped Apps" >> $GITHUB_STEP_SUMMARY
-            echo "The following apps were skipped because they don't have a .app file in the Applications folder:" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
-            cat /tmp/skipped_apps.txt >> $GITHUB_STEP_SUMMARY
-            echo "```" >> $GITHUB_STEP_SUMMARY
-          fi
-
-          if [ "$CHANGES_MADE" = "true" ]; then
+            echo "## Updated Apps" >> $GITHUB_STEP_SUMMARY
             echo "The following apps had their bundleIds updated:" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            
-            # List all modified JSON files
-            git diff --name-only -- "Apps/" | while read -r file; do
-              app_name=$(basename "$file" .json)
-              bundle_id=$(jq -r '.bundleId' "$file")
-              echo "- $app_name: $bundle_id" >> $GITHUB_STEP_SUMMARY
-            done
+            echo "| App Name | Old Bundle ID | New Bundle ID |" >> $GITHUB_STEP_SUMMARY
+            echo "|---|---|---|" >> $GITHUB_STEP_SUMMARY
+            while IFS='|' read -r app_name old_bundle_id new_bundle_id; do
+              echo "| $app_name | $old_bundle_id | $new_bundle_id |" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/updated_apps.txt
+          fi
+
+          # Add no-change apps section if any
+          if [ -f "/tmp/no_change_apps.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## No Change Apps" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps already had the correct bundleIds:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "| App Name | Bundle ID |" >> $GITHUB_STEP_SUMMARY
+            echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+            while IFS='|' read -r app_name bundle_id; do
+              echo "| $app_name | $bundle_id |" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/no_change_apps.txt
+          fi
+
+          # Add skipped apps section if any (from processing step)
+          if [ -f "/tmp/skipped_apps_processing.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Skipped Apps (Processing Step)" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps were skipped during processing:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            cat /tmp/skipped_apps_processing.txt >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
           fi
