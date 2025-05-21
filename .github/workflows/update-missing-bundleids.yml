@@ -127,7 +127,7 @@ jobs:
             # Convert array to newline-separated string and save to a file
             printf "%s\n" "${CURRENT_BATCH_APPS[@]}" > /tmp/apps_to_verify.txt
             echo "Found ${#CURRENT_BATCH_APPS[@]} apps to process in this batch."
-          fi
+          fi # Closing fi for the if [ ${#CURRENT_BATCH_APPS[@]} -eq 0 ] block
 
           # Save missing files to a file for the summary step
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
