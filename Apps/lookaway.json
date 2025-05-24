@@ -1,12 +1,12 @@
 {
   "name": "LookAway",
   "description": "Break time reminder app",
-  "version": "1.12.3",
-  "url": "https://github.com/mysticalbits/lookaway-releases/releases/download/1.12.3/LookAway.dmg",
+  "version": "1.12.4",
+  "url": "https://github.com/mysticalbits/lookaway-releases/releases/download/1.12.4/LookAway.dmg",
   "bundleId": "com.mysticalbits.lookaway",
   "homepage": "https://lookaway.app/",
   "fileName": "LookAway.dmg",
-  "sha": "b05ed91666158ad993210ac1c3591b2df966ff5d15c1ed7778533ba14b3d6cd1",
+  "sha": "520f78ec8b7e8c9e8e1fcea1577e4cb8547d5f4c0ae268ef5c0d9c6867088332",
   "changelog": "https://github.com/mysticalbits/lookaway-releases/releases",
-  "previous_version": "1.12.3"
+  "previous_version": "1.12.4"
 }
