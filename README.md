@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                                                  <p>
+                                                                                                                                                                                                                                                                                                                                    <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-506-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -80,21 +80,18 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 
 
+
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-24 00:29 UTC*
+*Last checked: 2025-05-25 00:33 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| ProcessSpy | 1.7.1 | 1.7.2 |
-| RsyncUI | 2.5.3 | 2.5.5 |
-| ChatWise | 0.8.54 | 0.8.55 |
-| Zed | 0.187.6 | 0.187.8 |
-| Microsoft Edge | 136.0.3240.76 | 136.0.3240.92 |
-| Windsurf | 1.9.1 | 1.9.2 |
-| OneDrive | 25.070.0413.0001 | 25.075.0420.0002 |
-| Apidog | 2.7.13 | 2.7.14 |
-| Amazon Q | 1.10.1 | 1.10.2 |
+| Highlight | 1.2.31 | 1.2.44 |
+| Binary Ninja | 5.0.7290 | 5.0.7486 |
+| Rocket.Chat | 4.4.1 | 4.4.0 |
+| Apifox | 2.7.12 | 2.7.14 |
+| Yaak | 2025.2.2 | 2025.2.3 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -172,7 +169,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.2 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.14 |
-| <img src='Logos/apifox.png' width='32' height='32'> Apifox | 2.7.12 |
+| <img src='Logos/apifox.png' width='32' height='32'> Apifox | 2.7.14 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.95.1 |
 | <img src='Logos/archaeology.png' width='32' height='32'> Archaeology | 1.2 |
@@ -200,7 +197,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.429 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
-| <img src='Logos/binary_ninja.png' width='32' height='32'> Binary Ninja | 5.0.7290 |
+| <img src='Logos/binary_ninja.png' width='32' height='32'> Binary Ninja | 5.0.7486 |
 | <img src='Logos/bitwarden.png' width='32' height='32'> Bitwarden | 2025.4.2 |
 | <img src='Logos/bitwig_studio.png' width='32' height='32'> Bitwig Studio | 5.3.8 |
 | <img src='Logos/blender.png' width='32' height='32'> Blender | 4.4.3 |
@@ -333,7 +330,7 @@ Follow the interactive prompts to:
 | <img src='Logos/headlamp.png' width='32' height='32'> Headlamp | 0.30.0 |
 | <img src='Logos/hey.png' width='32' height='32'> HEY | 1.2.17 |
 | <img src='Logos/hidden_bar.png' width='32' height='32'> Hidden Bar | 1.9 |
-| <img src='Logos/highlight.png' width='32' height='32'> Highlight | 1.2.31 |
+| <img src='Logos/highlight.png' width='32' height='32'> Highlight | 1.2.44 |
 | <img src='Logos/home_assistant.png' width='32' height='32'> Home Assistant | 2025.5 |
 | <img src='Logos/homerow.png' width='32' height='32'> Homerow | 1.4.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0 |
@@ -419,7 +416,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mindmanager.png' width='32' height='32'> Mindmanager | 24.1.155 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.11.99 |
 | <img src='Logos/mist.png' width='32' height='32'> Mist | 0.20.1 |
-| <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 12.0.1 |
+| <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 12.1.0 |
 | <img src='Logos/mixxx.png' width='32' height='32'> Mixxx | 2.5.1 |
 | <img src='Logos/mobirise.png' width='32' height='32'> Mobirise | 6.0.5 |
 | <img src='Logos/mockoon.png' width='32' height='32'> Mockoon | 9.2.0 |
@@ -545,7 +542,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rive.png' width='32' height='32'> Rive | 0.8.3006 |
 | <img src='Logos/rocket.png' width='32' height='32'> Rocket | 1.9.4 |
 | <img src='Logos/rocket_typist.png' width='32' height='32'> Rocket Typist | 3.2.2 |
-| <img src='Logos/rocketchat.png' width='32' height='32'> Rocket.Chat | 4.4.1 |
+| <img src='Logos/rocketchat.png' width='32' height='32'> Rocket.Chat | 4.4.0 |
 | <img src='Logos/rode_central.png' width='32' height='32'> Rode Central | 2.0.97 |
 | <img src='Logos/rode_connect.png' width='32' height='32'> Rode Connect | 1.3.43 |
 | <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
@@ -642,7 +639,7 @@ Follow the interactive prompts to:
 | <img src='Logos/xca.png' width='32' height='32'> XCA | 2.9.0 |
 | <img src='Logos/xmind.png' width='32' height='32'> XMind | 25.04.03033-202505120608 |
 | <img src='Logos/xnapper.png' width='32' height='32'> Xnapper | 1.17.1 |
-| <img src='Logos/yaak.png' width='32' height='32'> Yaak | 2025.2.2 |
+| <img src='Logos/yaak.png' width='32' height='32'> Yaak | 2025.2.3 |
 | <img src='Logos/yubikey_manager.png' width='32' height='32'> Yubikey Manager | 1.2.5 |
 | <img src='Logos/zed.png' width='32' height='32'> Zed | 0.187.8 |
 | <img src='Logos/zed_attack_proxy.png' width='32' height='32'> Zed Attack Proxy | 2.16.1 |

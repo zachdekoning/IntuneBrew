@@ -1,12 +1,11 @@
 {
   "name": "Apifox",
   "description": "Platform for API documentation, debugging, and testing",
-  "version": "2.7.12",
-  "url": "https://file-assets.apifox.com/download/2.7.12/Apifox-macOS-arm64-2.7.12.dmg",
+  "version": "2.7.14",
+  "url": "https://file-assets.apifox.com/download/2.7.14/Apifox-macOS-arm64-2.7.14.dmg",
   "bundleId": "cn.apifox.app",
   "homepage": "https://www.apifox.com/",
-  "fileName": "Apifox-macOS-arm64-2.7.12.dmg",
-  "sha": "edffb5a27045325f7b3c07a14f44de4b20a4a706b65155669260b26421a0d6ea",
+  "fileName": "Apifox-macOS-arm64-2.7.14.dmg",
   "qa_info": {
     "qa_timestamp": "2025-05-19T06:52:32Z",
     "qa_result": "Installation successful and verified",
