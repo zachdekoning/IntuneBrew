@@ -6,6 +6,7 @@
   "bundleId": "cn.apifox.app",
   "homepage": "https://www.apifox.com/",
   "fileName": "Apifox-macOS-arm64-2.7.14.dmg",
+  "sha": "d72470521b7e9197e758b0c6e571db2750b3eb814778d9aaa6b5b33b95294d13",
   "qa_info": {
     "qa_timestamp": "2025-05-19T06:52:32Z",
     "qa_result": "Installation successful and verified",
@@ -16,5 +17,5 @@
     "bundle_id_status": "verified",
     "installed_version": "2.7.12"
   },
-  "previous_version": "2.7.12"
+  "previous_version": "2.7.14"
 }

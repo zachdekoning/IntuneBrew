@@ -1,12 +1,12 @@
 {
   "name": "Antinote",
   "description": "Temporary notes with calculations and extensible features",
-  "version": "1.1.5",
-  "url": "https://antinote.io/updates/Antinote_1.1.5.dmg",
+  "version": "1.1.7",
+  "url": "https://antinote.io/updates/Antinote_1.1.7.dmg",
   "bundleId": "com.chabomakers.Antinote",
   "homepage": "https://antinote.io/",
-  "fileName": "Antinote_1.1.5.dmg",
-  "sha": "0b26a98389da595299d24f3485d3ba54be88b8a3e6dd66a152b1df6bd2e30a41",
+  "fileName": "Antinote_1.1.7.dmg",
+  "sha": "f0a900697929d981ba2ab1aaa7b538a232d895ff53e38d42e1e6c9b9a769e7e5",
   "qa_info": {
     "qa_timestamp": "2025-05-12T10:31:53Z",
     "qa_result": "Installation successful and verified",

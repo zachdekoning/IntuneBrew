@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                                                    <p>
+                                                                                                                                                                                                                                                                                                                                      <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-506-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -81,17 +81,22 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 
 
+
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-25 00:33 UTC*
+*Last checked: 2025-05-26 00:30 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Highlight | 1.2.31 | 1.2.44 |
-| Binary Ninja | 5.0.7290 | 5.0.7486 |
-| Rocket.Chat | 4.4.1 | 4.4.0 |
-| Apifox | 2.7.12 | 2.7.14 |
-| Yaak | 2025.2.2 | 2025.2.3 |
+| Antinote | 1.1.5 | 1.1.7 |
+| Highlight | 1.2.44 | 1.2.45 |
+| Clop | 2.9.3 | 2.10.0 |
+| Syncovery | 11.3.5 | 11.4.0 |
+| Requestly | 25.5.21 | 25.5.25 |
+| Stats | 2.11.43 | 2.11.44 |
+| gifox | 2.6.5+0 | 2.7.0+0 |
+| Rotato | 147 | 151 |
+| Chrome Remote Desktop | 136.0.7103.19 | 137.0.7151.18 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -165,7 +170,7 @@ Follow the interactive prompts to:
 | <img src='Logos/android_studio.png' width='32' height='32'> Android Studio | 2024.3.2.14 |
 | <img src='Logos/angry_ip_scanner.png' width='32' height='32'> Angry IP Scanner | 3.9.1 |
 | <img src='Logos/anki.png' width='32' height='32'> Anki | 25.02.5 |
-| <img src='Logos/antinote.png' width='32' height='32'> Antinote | 1.1.5 |
+| <img src='Logos/antinote.png' width='32' height='32'> Antinote | 1.1.7 |
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.2 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.14 |
@@ -214,7 +219,7 @@ Follow the interactive prompts to:
 | <img src='Logos/bruno.png' width='32' height='32'> Bruno | 2.3.0 |
 | <img src='Logos/busycal.png' width='32' height='32'> BusyCal | 2025.2.1 |
 | <img src='Logos/busycontacts.png' width='32' height='32'> BusyContacts | 2025.2.1 |
-| <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5.1 |
+| <img src='Logos/caffeine.png' width='32' height='32'> Caffeine | 1.5.2 |
 | <img src='Logos/calibre.png' width='32' height='32'> calibre | 8.4.0 |
 | <img src='Logos/calmly_writer.png' width='32' height='32'> Calmly Writer | 2.0.59 |
 | <img src='Logos/camtasia.png' width='32' height='32'> Camtasia | 25.1.0 |
@@ -222,7 +227,7 @@ Follow the interactive prompts to:
 | <img src='Logos/capcut.png' width='32' height='32'> CapCut | 3.3.0.1159 |
 | <img src='Logos/chatgpt.png' width='32' height='32'> ChatGPT | 1.2025.133 |
 | <img src='Logos/chatwise.png' width='32' height='32'> ChatWise | 0.8.55 |
-| <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 136.0.7103.19 |
+| <img src='Logos/chrome_remote_desktop.png' width='32' height='32'> Chrome Remote Desktop | 137.0.7151.18 |
 | <img src='Logos/cisco_jabber.png' width='32' height='32'> Cisco Jabber | 20250430033337 |
 | <img src='Logos/citrix_workspace.png' width='32' height='32'> Citrix Workspace | 25.03.10.24 |
 | <img src='Logos/claude.png' width='32' height='32'> Claude | 0.9.3 |
@@ -230,7 +235,7 @@ Follow the interactive prompts to:
 | <img src='Logos/cleanshot.png' width='32' height='32'> CleanShot | 4.7.6 |
 | <img src='Logos/clion.png' width='32' height='32'> CLion | 2025.1.1 |
 | <img src='Logos/clipy.png' width='32' height='32'> Clipy | 1.2.1 |
-| <img src='Logos/clop.png' width='32' height='32'> Clop | 2.9.3 |
+| <img src='Logos/clop.png' width='32' height='32'> Clop | 2.10.0 |
 | <img src='Logos/cloudflare_warp.png' width='32' height='32'> Cloudflare WARP | 2025.4.943.0 |
 | <img src='Logos/codeedit.png' width='32' height='32'> CodeEdit | 0.3.4 |
 | <img src='Logos/coderunner.png' width='32' height='32'> CodeRunner | 4.4.1 |
@@ -240,7 +245,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coteditor.png' width='32' height='32'> CotEditor | 5.1.6 |
 | <img src='Logos/cryptomator.png' width='32' height='32'> Cryptomator | 1.16.2 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.50.6 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.50.7 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.4 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.9.0 |
@@ -308,7 +313,7 @@ Follow the interactive prompts to:
 | <img src='Logos/gemini.png' width='32' height='32'> Gemini | 2.9.11 |
 | <img src='Logos/gephi.png' width='32' height='32'> Gephi | 0.10.1 |
 | <img src='Logos/ghostty.png' width='32' height='32'> Ghostty | 1.1.3 |
-| <img src='Logos/gifox.png' width='32' height='32'> gifox | 2.6.5+0 |
+| <img src='Logos/gifox.png' width='32' height='32'> gifox | 2.7.0+0 |
 | <img src='Logos/gimp.png' width='32' height='32'> GIMP | 3.0.4 |
 | <img src='Logos/git_credential_manager.png' width='32' height='32'> Git Credential Manager | 2.6.1 |
 | <img src='Logos/gitfinder.png' width='32' height='32'> GitFinder | 1.7.11 |
@@ -330,12 +335,12 @@ Follow the interactive prompts to:
 | <img src='Logos/headlamp.png' width='32' height='32'> Headlamp | 0.30.0 |
 | <img src='Logos/hey.png' width='32' height='32'> HEY | 1.2.17 |
 | <img src='Logos/hidden_bar.png' width='32' height='32'> Hidden Bar | 1.9 |
-| <img src='Logos/highlight.png' width='32' height='32'> Highlight | 1.2.44 |
+| <img src='Logos/highlight.png' width='32' height='32'> Highlight | 1.2.45 |
 | <img src='Logos/home_assistant.png' width='32' height='32'> Home Assistant | 2025.5 |
 | <img src='Logos/homerow.png' width='32' height='32'> Homerow | 1.4.0 |
 | <img src='Logos/hp_easy_admin.png' width='32' height='32'> HP Easy Admin | 2.15.0 |
 | <img src='Logos/huggingchat.png' width='32' height='32'> HuggingChat | 0.7.0 |
-| <img src='Logos/huly.png' width='32' height='32'> Huly | 0.6.501 |
+| <img src='Logos/huly.png' width='32' height='32'> Huly | 0.6.502 |
 | <img src='Logos/hyper.png' width='32' height='32'> Hyper | 3.4.1 |
 | <img src='Logos/hyperkey.png' width='32' height='32'> Hyperkey | 0.47 |
 | <img src='Logos/ice.png' width='32' height='32'> Ice | 0.11.12 |
@@ -416,7 +421,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mindmanager.png' width='32' height='32'> Mindmanager | 24.1.155 |
 | <img src='Logos/miro.png' width='32' height='32'> Miro | 0.11.99 |
 | <img src='Logos/mist.png' width='32' height='32'> Mist | 0.20.1 |
-| <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 12.1.0 |
+| <img src='Logos/mitmproxy.png' width='32' height='32'> mitmproxy | 12.1.1 |
 | <img src='Logos/mixxx.png' width='32' height='32'> Mixxx | 2.5.1 |
 | <img src='Logos/mobirise.png' width='32' height='32'> Mobirise | 6.0.5 |
 | <img src='Logos/mockoon.png' width='32' height='32'> Mockoon | 9.2.0 |
@@ -536,7 +541,7 @@ Follow the interactive prompts to:
 | <img src='Logos/remote_desktop_manager.png' width='32' height='32'> Remote Desktop Manager | 2025.1.16.3 |
 | <img src='Logos/remote_help.png' width='32' height='32'> Remote Help | 1.0.2404171 |
 | <img src='Logos/reqable.png' width='32' height='32'> Reqable | 2.33.12 |
-| <img src='Logos/requestly.png' width='32' height='32'> Requestly | 25.5.21 |
+| <img src='Logos/requestly.png' width='32' height='32'> Requestly | 25.5.25 |
 | <img src='Logos/retcon.png' width='32' height='32'> Retcon | 1.3.0 |
 | <img src='Logos/rhinoceros.png' width='32' height='32'> Rhinoceros | 8.19.25132.01002 |
 | <img src='Logos/rive.png' width='32' height='32'> Rive | 0.8.3006 |
@@ -545,7 +550,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rocketchat.png' width='32' height='32'> Rocket.Chat | 4.4.0 |
 | <img src='Logos/rode_central.png' width='32' height='32'> Rode Central | 2.0.97 |
 | <img src='Logos/rode_connect.png' width='32' height='32'> Rode Connect | 1.3.43 |
-| <img src='Logos/rotato.png' width='32' height='32'> Rotato | 147 |
+| <img src='Logos/rotato.png' width='32' height='32'> Rotato | 151 |
 | <img src='Logos/rstudio.png' width='32' height='32'> RStudio | 2025.05.0 |
 | <img src='Logos/rsyncui.png' width='32' height='32'> RsyncUI | 2.5.5 |
 | <img src='Logos/rustdesk.png' width='32' height='32'> RustDesk | 1.4.0 |
@@ -572,7 +577,7 @@ Follow the interactive prompts to:
 | <img src='Logos/sqlpro_for_sqlite.png' width='32' height='32'> SQLPro for SQLite | 2025.07 |
 | <img src='Logos/sqlpro_studio.png' width='32' height='32'> SQLPro Studio | 2025.10 |
 | <img src='Logos/squirrel.png' width='32' height='32'> Squirrel | 1.0.3 |
-| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.43 |
+| <img src='Logos/stats.png' width='32' height='32'> Stats | 2.11.44 |
 | <img src='Logos/steam.png' width='32' height='32'> Steam | 4.0 |
 | <img src='Logos/steermouse.png' width='32' height='32'> SteerMouse | 5.7.4 |
 | <img src='Logos/stretchly.png' width='32' height='32'> Stretchly | 1.17.2 |
@@ -584,7 +589,7 @@ Follow the interactive prompts to:
 | <img src='Logos/suspicious_package.png' width='32' height='32'> Suspicious Package | 4.5 |
 | <img src='Logos/swift_shift.png' width='32' height='32'> Swift Shift | 0.27.1 |
 | <img src='Logos/sync.png' width='32' height='32'> Sync | 2.2.48 |
-| <img src='Logos/syncovery.png' width='32' height='32'> Syncovery | 11.3.5 |
+| <img src='Logos/syncovery.png' width='32' height='32'> Syncovery | 11.4.0 |
 | <img src='Logos/synology_drive.png' width='32' height='32'> Synology Drive | 3.5.2 |
 | <img src='Logos/tableau_desktop.png' width='32' height='32'> Tableau Desktop | 2025.1.2 |
 | <img src='Logos/tabtab.png' width='32' height='32'> TabTab | 1.3.4 |
