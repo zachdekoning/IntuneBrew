@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                                                      <p>
+                                                                                                                                                                                                                                                                                                                                        <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-506-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -82,21 +82,18 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 
 
+
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-26 00:30 UTC*
+*Last checked: 2025-05-27 00:30 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Antinote | 1.1.5 | 1.1.7 |
-| Highlight | 1.2.44 | 1.2.45 |
-| Clop | 2.9.3 | 2.10.0 |
-| Syncovery | 11.3.5 | 11.4.0 |
-| Requestly | 25.5.21 | 25.5.25 |
-| Stats | 2.11.43 | 2.11.44 |
-| gifox | 2.6.5+0 | 2.7.0+0 |
-| Rotato | 147 | 151 |
-| Chrome Remote Desktop | 136.0.7103.19 | 137.0.7151.18 |
+| NetBeans IDE | 25 | 26 |
+| DuckDuckGo | 1.139.0 | 1.140.0 |
+| draw.io Desktop | 27.0.5 | 27.0.9 |
+| Foxit PDF Editor | 13.1.7 | 13.1.7.63027 |
+| Podman Desktop | 1.18.1 | 1.19.1 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -199,7 +196,7 @@ Follow the interactive prompts to:
 | <img src='Logos/beeper.png' width='32' height='32'> Beeper | 4.0.710 |
 | <img src='Logos/betterdisplay.png' width='32' height='32'> BetterDisplay | 3.5.5 |
 | <img src='Logos/bettermouse.png' width='32' height='32'> BetterMouse | 1.6 |
-| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.429 |
+| <img src='Logos/bettertouchtool.png' width='32' height='32'> BetterTouchTool | 5.436 |
 | <img src='Logos/betterzip.png' width='32' height='32'> BetterZip | 5.3.4 |
 | <img src='Logos/beyond_compare.png' width='32' height='32'> Beyond Compare | 5.0.7.30840 |
 | <img src='Logos/binary_ninja.png' width='32' height='32'> Binary Ninja | 5.0.7486 |
@@ -267,13 +264,13 @@ Follow the interactive prompts to:
 | <img src='Logos/dosbox.png' width='32' height='32'> DOSBox | 0.74-3 |
 | <img src='Logos/doughnut.png' width='32' height='32'> Doughnut | 2.0.1 |
 | <img src='Logos/downie.png' width='32' height='32'> Downie | 4.9.16 |
-| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 27.0.5 |
+| <img src='Logos/drawio_desktop.png' width='32' height='32'> draw.io Desktop | 27.0.9 |
 | <img src='Logos/drawbot.png' width='32' height='32'> DrawBot | 3.132 |
 | <img src='Logos/drivedx.png' width='32' height='32'> DriveDX | 1.12.1 |
 | <img src='Logos/dropbox.png' width='32' height='32'> Dropbox | 224.4.4811 |
 | <img src='Logos/dropdmg.png' width='32' height='32'> DropDMG | 3.6.8 |
 | <img src='Logos/dropshare.png' width='32' height='32'> Dropshare | 6.3 |
-| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.139.0 |
+| <img src='Logos/duckduckgo.png' width='32' height='32'> DuckDuckGo | 1.140.0 |
 | <img src='Logos/easydict.png' width='32' height='32'> Easydict | 2.14.1 |
 | <img src='Logos/easyfind.png' width='32' height='32'> EasyFind | 5.0.2 |
 | <img src='Logos/eclipse_temurin_java_development_kit.png' width='32' height='32'> Eclipse Temurin Java Development Kit | 24.0.1 |
@@ -299,7 +296,7 @@ Follow the interactive prompts to:
 | <img src='Logos/flowvision.png' width='32' height='32'> FlowVision | 1.6.3 |
 | <img src='Logos/flycut.png' width='32' height='32'> Flycut | 1.9.6 |
 | <img src='Logos/forecast.png' width='32' height='32'> Forecast | 0.9.6 |
-| <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.7 |
+| <img src='Logos/foxit_pdf_editor.png' width='32' height='32'> Foxit PDF Editor | 13.1.7.63027 |
 | <img src='Logos/free_ruler.png' width='32' height='32'> Free Ruler | 2.0.8 |
 | <img src='Logos/freecad.png' width='32' height='32'> FreeCAD | 1.0.1 |
 | <img src='Logos/freelens.png' width='32' height='32'> Freelens | 1.3.0 |
@@ -443,7 +440,7 @@ Follow the interactive prompts to:
 | <img src='Logos/mysql_workbench.png' width='32' height='32'> MySQL Workbench | 8.0.42 |
 | <img src='Logos/name_mangler.png' width='32' height='32'> Name Mangler | 3.9.3 |
 | <img src='Logos/neofinder.png' width='32' height='32'> NeoFinder | 8.9 |
-| <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 25 |
+| <img src='Logos/netbeans_ide.png' width='32' height='32'> NetBeans IDE | 26 |
 | <img src='Logos/netiquette.png' width='32' height='32'> Netiquette | 2.3.0 |
 | <img src='Logos/netnewswire.png' width='32' height='32'> NetNewsWire | 6.1.9 |
 | <img src='Logos/nextcloud.png' width='32' height='32'> Nextcloud | 3.16.4 |
@@ -503,7 +500,7 @@ Follow the interactive prompts to:
 | <img src='Logos/platypus.png' width='32' height='32'> Platypus | 5.4.1 |
 | <img src='Logos/plex.png' width='32' height='32'> Plex | 1.109.0.329 |
 | <img src='Logos/plistedit_pro.png' width='32' height='32'> PlistEdit Pro | 1.9.7 |
-| <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.18.1 |
+| <img src='Logos/podman_desktop.png' width='32' height='32'> Podman Desktop | 1.19.1 |
 | <img src='Logos/popchar_x.png' width='32' height='32'> PopChar X | 10.4 |
 | <img src='Logos/portx.png' width='32' height='32'> portx | 2.2.12 |
 | <img src='Logos/postico.png' width='32' height='32'> Postico | 2.1.2 |

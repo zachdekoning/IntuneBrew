@@ -1,7 +1,7 @@
 {
   "name": "Foxit PDF Editor",
   "description": "PDF Editor",
-  "version": "13.1.7",
+  "version": "13.1.7.63027",
   "url": "https://cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/13.x/13.1.7/FoxitPDFEditor1317.L10N.Setup.pkg",
   "bundleId": "com.foxit.pkg.pdfeditor",
   "homepage": "https://www.foxit.com/pdf-editor/",
