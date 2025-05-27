@@ -25,12 +25,36 @@ elif [ -f "/Applications/GeForceNOW.app" ]; then
     rm -f "/Applications/GeForceNOW.app" 2>/dev/null || true
 fi
 
+# Remove $HOME/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf
+echo "Removing $HOME/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf..."
+if [ -d "$HOME/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf" ]; then
+    rm -rf "$HOME/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf" ]; then
+    rm -f "$HOME/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/Application Support/NVIDIA/GeForceNOW
 echo "Removing $HOME/Library/Application Support/NVIDIA/GeForceNOW..."
 if [ -d "$HOME/Library/Application Support/NVIDIA/GeForceNOW" ]; then
     rm -rf "$HOME/Library/Application Support/NVIDIA/GeForceNOW" 2>/dev/null || true
 elif [ -f "$HOME/Library/Application Support/NVIDIA/GeForceNOW" ]; then
     rm -f "$HOME/Library/Application Support/NVIDIA/GeForceNOW" 2>/dev/null || true
+fi
+
+# Remove $HOME/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall
+echo "Removing $HOME/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall..."
+if [ -d "$HOME/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall" ]; then
+    rm -rf "$HOME/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall" ]; then
+    rm -f "$HOME/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall" 2>/dev/null || true
+fi
+
+# Remove $HOME/Library/Caches/NVIDIA/GeForceNOW
+echo "Removing $HOME/Library/Caches/NVIDIA/GeForceNOW..."
+if [ -d "$HOME/Library/Caches/NVIDIA/GeForceNOW" ]; then
+    rm -rf "$HOME/Library/Caches/NVIDIA/GeForceNOW" 2>/dev/null || true
+elif [ -f "$HOME/Library/Caches/NVIDIA/GeForceNOW" ]; then
+    rm -f "$HOME/Library/Caches/NVIDIA/GeForceNOW" 2>/dev/null || true
 fi
 
 # Remove $HOME/Library/HTTPStorages/com.nvidia.gfnpc.mall
