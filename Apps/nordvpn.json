@@ -7,5 +7,5 @@
   "homepage": "https://nordvpn.com/",
   "fileName": "NordVPN.pkg",
   "type": "pkg_in_pkg",
-  "previous_version": "8.38.1"
+  "previous_version": "8.39.0"
 }
