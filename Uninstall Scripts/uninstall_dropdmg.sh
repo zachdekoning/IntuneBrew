@@ -57,6 +57,22 @@ elif [ -f "$HOME/Library/Caches/com.c-command.DropDMG" ]; then
     rm -f "$HOME/Library/Caches/com.c-command.DropDMG" 2>/dev/null || true
 fi
 
+# Remove $HOME/Library/HTTPStorages/com.c-command.DropDMG
+echo "Removing $HOME/Library/HTTPStorages/com.c-command.DropDMG..."
+if [ -d "$HOME/Library/HTTPStorages/com.c-command.DropDMG" ]; then
+    rm -rf "$HOME/Library/HTTPStorages/com.c-command.DropDMG" 2>/dev/null || true
+elif [ -f "$HOME/Library/HTTPStorages/com.c-command.DropDMG" ]; then
+    rm -f "$HOME/Library/HTTPStorages/com.c-command.DropDMG" 2>/dev/null || true
+fi
+
+# Remove $HOME/Library/Logs/DropDMG
+echo "Removing $HOME/Library/Logs/DropDMG..."
+if [ -d "$HOME/Library/Logs/DropDMG" ]; then
+    rm -rf "$HOME/Library/Logs/DropDMG" 2>/dev/null || true
+elif [ -f "$HOME/Library/Logs/DropDMG" ]; then
+    rm -f "$HOME/Library/Logs/DropDMG" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/Preferences/com.c-command.DropDMG.plist
 echo "Removing $HOME/Library/Preferences/com.c-command.DropDMG.plist..."
 if [ -d "$HOME/Library/Preferences/com.c-command.DropDMG.plist" ]; then
