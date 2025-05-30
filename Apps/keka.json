@@ -1,12 +1,12 @@
 {
   "name": "Keka",
   "description": "File archiver",
-  "version": "1.5.0",
-  "url": "https://github.com/aonez/Keka/releases/download/v1.5.0/Keka-1.5.0.dmg",
+  "version": "1.5.1",
+  "url": "https://github.com/aonez/Keka/releases/download/v1.5.1/Keka-1.5.1.dmg",
   "bundleId": "com.aone.keka",
   "homepage": "https://www.keka.io/",
-  "fileName": "Keka-1.5.0.dmg",
-  "sha": "fa7566042c428b436c43c50fc9b1953904874ed87f337365a909f09d3dd51699",
+  "fileName": "Keka-1.5.1.dmg",
+  "sha": "2ee2648ab029b323298f841257c02dc5c4e19a1e081efcb4728f536f28263df3",
   "changelog": "https://github.com/aonez/Keka/releases",
   "previous_version": "1.5.0"
 }

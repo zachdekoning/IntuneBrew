@@ -8,5 +8,5 @@
   "fileName": "Rancher.Desktop-1.19.0.aarch64.dmg",
   "sha": "1b5c90261bcba90afb5d1372e78f1f68487b888b5a847623ab5177eb16acf112",
   "changelog": "https://github.com/rancher-sandbox/rancher-desktop/releases",
-  "previous_version": "1.18.2"
+  "previous_version": "1.19.0"
 }

@@ -1,12 +1,12 @@
 {
   "name": "Mattermost",
   "description": "Open-source, self-hosted Slack-alternative",
-  "version": "5.12.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/mattermost_5.12.0.pkg",
+  "version": "5.12.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/mattermost_5.12.1.pkg",
   "bundleId": "Mattermost.Desktop",
   "homepage": "https://mattermost.com/",
-  "fileName": "mattermost_5.12.0.pkg",
+  "fileName": "mattermost_5.12.1.pkg",
   "type": "app",
-  "sha": "9d90154793ac2b144968e22d76753e99db1ce99ed9403a2108381348cf1ef0ea",
-  "previous_version": "5.12.0"
+  "sha": "cbca41531ea6b678f42720008709ba08a4804b8d18a5e10a684337a7d3824349",
+  "previous_version": "5.12.1"
 }

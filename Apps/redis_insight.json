@@ -7,5 +7,5 @@
   "homepage": "https://redis.com/redis-enterprise/redis-insight/",
   "fileName": "Redis-Insight-mac-arm64.dmg",
   "sha": "2a81adadd09d3d51eb55560c8c8e45efba5aa9ca3667aba8ba9cbd28e98c8e43",
-  "previous_version": "2.68.0"
+  "previous_version": "2.70.0"
 }
