@@ -218,11 +218,18 @@ jobs:
               # Mount DMG file
               echo "💿 Mounting DMG file..."
               MOUNT_POINT="/Volumes/AppDMG"
-              hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse
+              # Use additional flags to handle DMGs with license agreements
+              hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse -noverify -noautoopen -agree
               
               if [ $? -ne 0 ]; then
-                echo "❌ Failed to mount DMG file"
-                continue
+                echo "⚠️ Failed to mount DMG with -agree flag, trying alternative method..."
+                # Try mounting without -agree flag but with yes pipe for license acceptance
+                yes | hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse -noverify -noautoopen
+                
+                if [ $? -ne 0 ]; then
+                  echo "❌ Failed to mount DMG file"
+                  continue
+                fi
               fi
               
               # Find the .app file in the mounted DMG
