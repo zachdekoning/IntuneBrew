@@ -219,32 +219,13 @@ jobs:
               echo "💿 Mounting DMG file..."
               MOUNT_POINT="/Volumes/AppDMG"
               
-              # First, try to mount with yes pipe to auto-accept any license agreements
-              echo "Attempting to mount DMG with auto-accept for licenses..."
-              yes | hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse -noverify -noautoopen 2>/dev/null
+              # Use printf with yes to handle license agreements
+              echo "Attempting to mount DMG..."
+              printf 'yes\nyes\nyes\n' | hdiutil attach -mountpoint "$MOUNT_POINT" app_package.dmg -nobrowse -noverify -noautoopen
               
               if [ $? -ne 0 ]; then
-                echo "⚠️ First attempt failed, trying with expect script..."
-                # Create an expect script to handle interactive license agreements
-                cat > mount_dmg.exp << 'EOF'
-#!/usr/bin/expect -f
-set timeout 30
-spawn hdiutil attach -mountpoint "/Volumes/AppDMG" app_package.dmg -nobrowse -noverify -noautoopen
-expect {
-  "agree" { send "yes\r"; exp_continue }
-  "Accept" { send "A\r"; exp_continue }
-  "Y/N" { send "Y\r"; exp_continue }
-  "Agree Y/N?" { send "Y\r"; exp_continue }
-  eof
-}
-EOF
-                chmod +x mount_dmg.exp
-                expect mount_dmg.exp
-                
-                if [ $? -ne 0 ]; then
-                  echo "❌ Failed to mount DMG file even with expect script"
-                  continue
-                fi
+                echo "⚠️ Failed to mount DMG file, it may require manual license acceptance"
+                continue
               fi
               
               # Find the .app file in the mounted DMG
