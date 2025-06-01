@@ -260,6 +260,15 @@ switch ($authChoice) {
         $configPath = $ConfigFile ? $ConfigFile : (Show-FilePickerDialog -Title "Select Certificate Configuration JSON File")
         if ($configPath -and (Test-AuthConfig $configPath)) {
             $authenticated = Connect-WithCertificate $configPath
+        } else {
+            Write-Host "The provided configuration file is invalid. Please select a valid file." -ForegroundColor Red
+            $configPath = Show-FilePickerDialog -Title "Select Certificate Configuration JSON File"
+            if ($configPath -and (Test-AuthConfig $configPath)) {
+                $authenticated = Connect-WithCertificate $configPath
+            } else {
+                Write-Host "Failed to authenticate. Exiting script." -ForegroundColor Red
+                exit
+            }
         }
     }
     "2" {
