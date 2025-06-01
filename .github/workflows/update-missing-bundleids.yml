@@ -451,23 +451,23 @@ jobs:
             
             # Print app details for debugging
             echo "📋 App details:"
-            ls -la "$APP_PATH"
+            sudo ls -la "$APP_PATH" || echo "Could not access app directory"
             echo "App bundle contents:"
-            ls -la "$APP_PATH/Contents" || echo "Could not access Contents directory"
+            sudo ls -la "$APP_PATH/Contents" || echo "Could not access Contents directory"
             
             # Get app bundle ID using multiple methods
             echo "🔍 Extracting bundleId..."
             
             # Method 1: Using mdls
             echo "Trying mdls method..."
-            ACTUAL_BUNDLE_ID=$(mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
+            ACTUAL_BUNDLE_ID=$(sudo mdls -name kMDItemCFBundleIdentifier -raw "$APP_PATH" 2>/dev/null || echo "Not found")
             echo "mdls result: $ACTUAL_BUNDLE_ID"
             
             # Method 2: Using PlistBuddy
             if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
               echo "Trying PlistBuddy method..."
-              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
-                ACTUAL_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
+              if sudo test -f "$APP_PATH/Contents/Info.plist"; then
+                ACTUAL_BUNDLE_ID=$(sudo /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" 2>/dev/null || echo "Not found")
                 echo "PlistBuddy result: $ACTUAL_BUNDLE_ID"
               else
                 echo "Info.plist not found at expected location"
@@ -477,8 +477,8 @@ jobs:
             # Method 3: Using defaults command
             if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
               echo "Trying defaults command method..."
-              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
-                ACTUAL_BUNDLE_ID=$(defaults read "$APP_PATH/Contents/Info" CFBundleIdentifier 2>/dev/null || echo "Not found")
+              if sudo test -f "$APP_PATH/Contents/Info.plist"; then
+                ACTUAL_BUNDLE_ID=$(sudo defaults read "$APP_PATH/Contents/Info" CFBundleIdentifier 2>/dev/null || echo "Not found")
                 echo "defaults command result: $ACTUAL_BUNDLE_ID"
               fi
             fi
@@ -486,9 +486,9 @@ jobs:
             # Method 4: Using grep on the Info.plist file
             if [ "$ACTUAL_BUNDLE_ID" = "Not found" ] || [ "$ACTUAL_BUNDLE_ID" = "(null)" ]; then
               echo "Trying grep method..."
-              if [ -f "$APP_PATH/Contents/Info.plist" ]; then
+              if sudo test -f "$APP_PATH/Contents/Info.plist"; then
                 # Extract the line with CFBundleIdentifier and the value after it
-                BUNDLE_ID_LINE=$(grep -A1 "CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" | grep -v "CFBundleIdentifier" | grep -o ">.*<" | sed 's/>//;s/<//g')
+                BUNDLE_ID_LINE=$(sudo grep -A1 "CFBundleIdentifier" "$APP_PATH/Contents/Info.plist" | grep -v "CFBundleIdentifier" | grep -o ">.*<" | sed 's/>//;s/<//g')
                 if [ -n "$BUNDLE_ID_LINE" ]; then
                   ACTUAL_BUNDLE_ID="$BUNDLE_ID_LINE"
                   echo "grep method result: $ACTUAL_BUNDLE_ID"
