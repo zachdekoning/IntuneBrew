@@ -132,7 +132,7 @@ jobs:
             
             if [ $? -ne 0 ]; then
               echo "❌ Failed to download file"
-              cd ..
+              cd "$GITHUB_WORKSPACE"
               rm -rf "$TEMP_DIR"
               continue
             fi
@@ -196,6 +196,8 @@ jobs:
                 echo "✅ SHA256 checksum verified successfully"
               else
                 echo "❌ SHA256 checksum verification failed"
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
             fi
@@ -208,6 +210,8 @@ jobs:
               
               if [ $? -ne 0 ]; then
                 echo "❌ Installation failed"
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
               
@@ -225,6 +229,8 @@ jobs:
               
               if [ $? -ne 0 ]; then
                 echo "⚠️ Failed to mount DMG file, it may require manual license acceptance"
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
               
@@ -235,6 +241,8 @@ jobs:
               if [ -z "$DMG_APP" ]; then
                 echo "❌ Could not find .app file in DMG"
                 hdiutil detach "$MOUNT_POINT" -force
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
               
@@ -247,6 +255,8 @@ jobs:
               if [ $? -ne 0 ]; then
                 echo "❌ Failed to copy app to Applications folder"
                 hdiutil detach "$MOUNT_POINT" -force
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
               
@@ -266,6 +276,8 @@ jobs:
               
               if [ $? -ne 0 ]; then
                 echo "❌ Failed to extract ZIP file"
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
               
@@ -276,6 +288,8 @@ jobs:
               if [ -z "$ZIP_APP" ]; then
                 echo "❌ Could not find .app file in ZIP contents"
                 rm -rf "$EXTRACT_DIR"
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
               
@@ -288,6 +302,8 @@ jobs:
               if [ $? -ne 0 ]; then
                 echo "❌ Failed to copy app to Applications folder"
                 rm -rf "$EXTRACT_DIR"
+                cd "$GITHUB_WORKSPACE"
+                rm -rf "$TEMP_DIR"
                 continue
               fi
               
