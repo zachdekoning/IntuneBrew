@@ -18,7 +18,7 @@
     <a href="https://www.powershellgallery.com/packages/IntuneBrew">
       <img src="https://img.shields.io/powershellgallery/dt/IntuneBrew?style=flat&label=PSGallery%20Downloads&color=brightgreen" alt="PowerShell Gallery Downloads"/>
     </a>
-                                                                                                                                                                                                                                                                                                                                                <p>
+                                                                                                                                                                                                                                                                                                                                                  <p>
     <a href="#-supported-applications">
       <img src="https://img.shields.io/badge/Apps_Available-506-2ea44f?style=flat" alt="TotalApps"/>
     </a>
@@ -87,25 +87,16 @@ This project uses publicly available metadata from Homebrew’s JSON API. Homebr
 
 
 
+
 ## 🔄 Latest Updates
 
-*Last checked: 2025-05-31 00:29 UTC*
+*Last checked: 2025-06-01 00:37 UTC*
 
 | Application | Previous Version | New Version |
 |-------------|-----------------|-------------|
-| Mozilla Firefox Developer Edition | 140.0b2 | 140.0b3 |
-| Rive | 0.8.3006 | 0.8.3009 |
-| DockDoor | 1.11 | 1.12.1 |
-| Headlamp | 0.30.0 | 0.31.0 |
-| LibreWolf | 139.0 | 139.0.1 |
-| Company Portal | 5.2504.0 | 5.2504.1 |
-| Todoist | 9.15.0 | 9.16.1 |
-| Notion | 4.12.0 | 4.12.1 |
-| Krisp | 3.1.6 | 3.2.6 |
-| OrbStack | 1.11.0 | 1.11.1 |
-| Bruno | 2.3.0 | 2.4.0 |
-| Zed | 0.188.3 | 0.188.5 |
-| Okta Advanced Server Access | 1.89.1 | 1.90.0 |
+| Readest | 0.9.50 | 0.9.51 |
+| Apifox | 2.7.14 | 2.7.15 |
+| VeraCrypt | 1.26.20 | 1.26.24 |
 ## ✨ Features
 
 - 🚀 Automated app uploads to Microsoft Intune
@@ -183,7 +174,7 @@ Follow the interactive prompts to:
 | <img src='Logos/anydo.png' width='32' height='32'> Any.do | 5.0.68 |
 | <img src='Logos/anydesk.png' width='32' height='32'> AnyDesk | 9.0.2 |
 | <img src='Logos/apidog.png' width='32' height='32'> Apidog | 2.7.14 |
-| <img src='Logos/apifox.png' width='32' height='32'> Apifox | 2.7.14 |
+| <img src='Logos/apifox.png' width='32' height='32'> Apifox | 2.7.15 |
 | <img src='Logos/apparency.png' width='32' height='32'> Apparency | 2.2 |
 | <img src='Logos/arc.png' width='32' height='32'> Arc | 1.97.0 |
 | <img src='Logos/archaeology.png' width='32' height='32'> Archaeology | 1.2 |
@@ -254,7 +245,7 @@ Follow the interactive prompts to:
 | <img src='Logos/coteditor.png' width='32' height='32'> CotEditor | 5.1.6 |
 | <img src='Logos/cryptomator.png' width='32' height='32'> Cryptomator | 1.16.2 |
 | <img src='Logos/crystalfetch.png' width='32' height='32'> Crystalfetch | 2.2.0 |
-| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.50.7 |
+| <img src='Logos/cursor.png' width='32' height='32'> Cursor | 0.51.1 |
 | <img src='Logos/cyberduck.png' width='32' height='32'> Cyberduck | 9.1.4 |
 | <img src='Logos/daisydisk.png' width='32' height='32'> DaisyDisk | 4.31 |
 | <img src='Logos/dangerzone.png' width='32' height='32'> Dangerzone | 0.9.0 |
@@ -540,7 +531,7 @@ Follow the interactive prompts to:
 | <img src='Logos/rancher_desktop.png' width='32' height='32'> Rancher Desktop | 1.19.0 |
 | <img src='Logos/raycast.png' width='32' height='32'> Raycast | 1.99.3 |
 | <img src='Logos/reactotron.png' width='32' height='32'> Reactotron | 3.7.7 |
-| <img src='Logos/readest.png' width='32' height='32'> Readest | 0.9.50 |
+| <img src='Logos/readest.png' width='32' height='32'> Readest | 0.9.51 |
 | <img src='Logos/real_vnc_viewer.png' width='32' height='32'> Real VNC Viewer | 7.13.1 |
 | <img src='Logos/rectangle.png' width='32' height='32'> Rectangle | 0.87 |
 | <img src='Logos/rectangle_pro.png' width='32' height='32'> Rectangle Pro | 3.53 |
@@ -629,9 +620,9 @@ Follow the interactive prompts to:
 | <img src='Logos/updf.png' width='32' height='32'> UPDF | 2.0.0 |
 | <img src='Logos/upscayl.png' width='32' height='32'> Upscayl | 2.15.0 |
 | <img src='Logos/utm.png' width='32' height='32'> UTM | 4.6.5 |
-| <img src='Logos/veracrypt.png' width='32' height='32'> VeraCrypt | 1.26.20 |
+| <img src='Logos/veracrypt.png' width='32' height='32'> VeraCrypt | 1.26.24 |
 | <img src='Logos/vimcal.png' width='32' height='32'> Vimcal | 1.0.35 |
-| <img src='Logos/vimr.png' width='32' height='32'> VimR | 0.53.0 |
+| <img src='Logos/vimr.png' width='32' height='32'> VimR | 0.54.0 |
 | <img src='Logos/visualvm.png' width='32' height='32'> VisualVM | 2.2 |
 | <img src='Logos/vivaldi.png' width='32' height='32'> Vivaldi | 7.4.3684.43 |
 | <img src='Logos/viz.png' width='32' height='32'> Viz | 2.2.1 |
@@ -641,7 +632,7 @@ Follow the interactive prompts to:
 | <img src='Logos/webex_teams.png' width='32' height='32'> Webex Teams | 45.5.0.32411 |
 | <img src='Logos/webstorm.png' width='32' height='32'> WebStorm | 2025.1.1 |
 | <img src='Logos/wechat_for_mac.png' width='32' height='32'> WeChat for Mac | 4.0.3.93 |
-| <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.15.75 |
+| <img src='Logos/whatsapp.png' width='32' height='32'> WhatsApp | 2.25.16.81 |
 | <img src='Logos/windowkeys.png' width='32' height='32'> WindowKeys | 2.0 |
 | <img src='Logos/windows_app.png' width='32' height='32'> Windows App | 11.1.7 |
 | <img src='Logos/windsurf.png' width='32' height='32'> Windsurf | 1.9.2 |

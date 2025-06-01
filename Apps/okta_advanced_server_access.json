@@ -7,5 +7,5 @@
   "homepage": "https://help.okta.com/asa/en-us/Content/Topics/Adv_Server_Access/docs/sft-osx.htm",
   "fileName": "ScaleFT-1.90.0.pkg",
   "type": "pkg_in_pkg",
-  "previous_version": "1.89.1"
+  "previous_version": "1.90.0"
 }
