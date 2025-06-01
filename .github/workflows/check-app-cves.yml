@@ -137,7 +137,7 @@ jobs:
                   # Query the NVD API for CPE names
                   # Construct the URL directly to ensure exact format
                   search_term_encoded = quote(search_term)
-                  url = f"https://services.nvd.nist.gov/rest/json/cpes/2.0?keywordSearch={search_term_encoded}&keywordExactMatch"
+                  url = f"https://services.nvd.nist.gov/rest/json/cpes/2.0?keywordSearch={search_term_encoded}"
                   params = {}  # No params as they're included in the URL
                   
                   # Set up headers with API key
@@ -184,27 +184,29 @@ jobs:
                       print(f"First product structure: {list(products[0].keys()) if isinstance(products[0], dict) else 'Not a dict'}")
                   
                   # Process the products based on their structure
-                  processed_products = []
-                  
-                  # Check if products is a list of dictionaries with 'cpe' key
-                  if all(isinstance(p, dict) and 'cpe' in p for p in products if isinstance(p, dict)):
-                      processed_products = products
-                  else:
-                      # The API response might have a different structure
-                      # Try to extract CPE objects from the response
-                      print("Trying alternative product structure extraction...")
+                  # Filter products to ensure exact match for app_name in the CPE name
+                  filtered_products = []
+                  for product in products:
+                      cpe_obj = product.get('cpe', {})
+                      cpe_name = cpe_obj.get('cpeName', '')
                       
-                      # Check if the response has numeric indices in the products array
-                      # This handles the case where products looks like [0: {cpe: {...}}, 1: {cpe: {...}}]
-                      for i in range(len(products)):
-                          if i < len(products) and isinstance(products[i], dict) and 'cpe' in products[i]:
-                              processed_products.append(products[i])
-                  
-                  if not processed_products:
-                      print(f"No valid CPE entries found for {app_name}.")
+                      # Example cpeName: cpe:2.3:a:slackware:slackware:9.0:*:*:*:*:*:*:*
+                      # We want to match the 'product' part, which is the 5th component (index 4)
+                      # after splitting by ':'
+                      
+                      # Ensure it's an application CPE and has enough components
+                      if cpe_name.startswith('cpe:2.3:a:') and len(cpe_name.split(':')) > 4:
+                          product_name_in_cpe = cpe_name.split(':')[4]
+                          
+                          # Perform a case-insensitive exact match on the product name
+                          if product_name_in_cpe.lower() == app_name.lower():
+                              filtered_products.append(product)
+                              
+                  if not filtered_products:
+                      print(f"No valid CPE entries found for {app_name} after filtering.")
                       return []
                   
-                  print(f"Processed {len(processed_products)} valid CPE entries.")
+                  print(f"Processed {len(filtered_products)} valid CPE entries after filtering.")
                   
                   # Sort by published date (descending) to get the most recent ones
                   def extract_date_for_sorting(product):
@@ -221,7 +223,7 @@ jobs:
                           return datetime.min
                   
                   # Sort by published date in descending order (newest first)
-                  sorted_cpes = sorted(processed_products, key=extract_date_for_sorting, reverse=True)
+                  sorted_cpes = sorted(filtered_products, key=extract_date_for_sorting, reverse=True)
                   
                   # Take the 5 most recent CPEs
                   recent_cpes = sorted_cpes[:5]

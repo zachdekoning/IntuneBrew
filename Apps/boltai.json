@@ -1,12 +1,22 @@
 {
   "name": "BoltAI",
   "description": "AI chat client",
-  "version": "1.35.2",
-  "url": "https://download.boltai.com/releases/BoltAI-1.35.2.dmg",
+  "version": "1.35.3",
+  "url": "https://download.boltai.com/releases/BoltAI-1.35.3.dmg",
   "bundleId": "co.podzim.BoltGPT",
   "homepage": "https://boltai.com/",
-  "fileName": "BoltAI-1.35.2.dmg",
-  "sha": "96654c2b9c6dfd55372809807d17494202ac027d317a2c2c81b76d306610051f",
+  "fileName": "BoltAI-1.35.3.dmg",
+  "sha": "26d163bc564f3dc7cdc990bd128c9e3856dd4009f8236ca60dcffacc31d75360",
   "changelog": "https://boltai.com/changelog",
-  "previous_version": "1.35.2"
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:27:25Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.35.2"
+  },
+  "previous_version": "1.35.3"
 }

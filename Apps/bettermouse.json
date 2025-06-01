@@ -8,5 +8,15 @@
   "fileName": "bettermouse_1.6.pkg",
   "type": "app",
   "sha": "44d3127bc966b45b2f6db43d880dd69871f2d53dfe4b4b694cfe08ab491db102",
-  "previous_version": "1.6"
+  "previous_version": "1.6",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:23:28Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.6"
+  }
 }

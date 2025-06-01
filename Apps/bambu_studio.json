@@ -7,5 +7,15 @@
   "homepage": "https://bambulab.com/en/download/studio",
   "fileName": "Bambu_Studio_mac-v02.00.03.54-20250424182834.dmg",
   "sha": "4deb540ea668a3ba9699674ef000b27236d4441792afc200ae52e2e9df8e7852",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:36:08Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "02.00.03.54"
+  },
   "previous_version": "02.00.03.54"
 }

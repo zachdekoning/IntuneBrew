@@ -1,11 +1,11 @@
 {
   "name": "Rhinoceros",
   "description": "3D model creator",
-  "version": "8.18.25100.11002",
-  "url": "https://files.mcneel.com/rhino/8/mac/releases/rhino_8.18.25100.11002.dmg",
-  "bundleId": null,
+  "version": "8.19.25132.01002",
+  "url": "https://files.mcneel.com/rhino/8/mac/releases/rhino_8.19.25132.01002.dmg",
+  "bundleId": "com.mcneel.rhinoceros.8",
   "homepage": "https://www.rhino3d.com/",
-  "fileName": "rhino_8.18.25100.11002.dmg",
-  "sha": "765916c0d7df10e8c6b6f7e897dbce7a8e9dd1cedb63ed6c72fdbfa4c2174872",
-  "previous_version": "8.18.25100.11002"
+  "fileName": "rhino_8.19.25132.01002.dmg",
+  "sha": "c2ee79e1c39569c9328b01a7caa24212396f5f6b4926a5d932636e6c83c2367f",
+  "previous_version": "8.19.25132.01002"
 }

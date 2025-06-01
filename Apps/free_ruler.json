@@ -1,0 +1,22 @@
+{
+  "name": "Free Ruler",
+  "description": "Horizontal and vertical rulers",
+  "version": "2.0.8",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/free_ruler_2.0.8.pkg",
+  "bundleId": "com.pascal.freeruler",
+  "homepage": "https://www.pascal.com/freeruler",
+  "fileName": "free_ruler_2.0.8.pkg",
+  "type": "app",
+  "sha": "bc9df3bf2761bd23d547632e824bda09501014706c7c13723b00e06c698304c7",
+  "previous_version": "2.0.8",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:12:34Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.0.8"
+  }
+}

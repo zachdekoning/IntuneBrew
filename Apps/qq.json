@@ -1,11 +1,11 @@
 {
   "name": "QQ",
   "description": "Instant messaging tool",
-  "version": "6.9.70",
-  "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Mac/QQ_6.9.70_250429_01.dmg",
+  "version": "6.9.73",
+  "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Mac/QQ_6.9.73_250523_01.dmg",
   "bundleId": "com.tencent.qq",
   "homepage": "https://im.qq.com/macqq/index.shtml",
-  "fileName": "QQ_6.9.70_250429_01.dmg",
-  "sha": "986170b7245f63d88dc2cac62ca1cac208ef17b60620a4bb3bf41603c3741a5e",
-  "previous_version": "6.9.70"
+  "fileName": "QQ_6.9.73_250523_01.dmg",
+  "sha": "8c1f10ed9118ea99b7057a3aae820bfa27dedde1b5a563a30aed8502048c024f",
+  "previous_version": "6.9.73"
 }

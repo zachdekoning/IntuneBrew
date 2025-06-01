@@ -3,7 +3,7 @@
   "description": "Digital media asset manager",
   "version": "8.9",
   "url": "https://intunebrew.blob.core.windows.net/pkg/neofinder_8.9.pkg",
-  "bundleId": null,
+  "bundleId": "de.wfs-apps.neofinder",
   "homepage": "https://www.cdfinder.de/",
   "fileName": "neofinder_8.9.pkg",
   "type": "app",

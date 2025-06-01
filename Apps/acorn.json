@@ -8,5 +8,15 @@
   "fileName": "acorn_8.1.1.pkg",
   "type": "app",
   "sha": "9c51947b9af2d0bfe7ce8469aeefe1d53d62a4247d5e5dfae61e05d09a8c8d46",
-  "previous_version": "8.1.1"
+  "previous_version": "8.1.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T07:44:24Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "8.1.1"
+  }
 }

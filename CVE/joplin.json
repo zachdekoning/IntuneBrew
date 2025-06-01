@@ -1,7 +1,25 @@
 {
   "app_name": "Joplin",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-25",
   "vulnerabilities": [
+    {
+      "cve_id": "CVE-2025-27409",
+      "published_date": "2025-04-30",
+      "last_modified_date": "2025-05-16",
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "description": "Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks. Prior to version 3.3.3, path traversal is possible in Joplin Server if static file path starts with `css/pluginAssets` or `js/pluginAssets`. The `findLocalFile` function in the `default route` calls `localFileFromUrl` to check for special `pluginAssets` paths. If the function returns a path, the result is returned directly, without checking for path traversal. The vulnerability allows attackers to read files outside the intended directories. This issue has been patched in version 3.3.3.",
+      "cpe_name": "cpe:2.3:a:joplin_project:joplin:3.0.15:*:*:*:*:-:*:*"
+    },
+    {
+      "cve_id": "CVE-2025-27134",
+      "published_date": "2025-04-30",
+      "last_modified_date": "2025-05-16",
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "description": "Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks. Prior to version 3.3.3, a privilege escalation vulnerability exists in the Joplin server, allowing non-admin users to exploit the API endpoint `PATCH /api/users/:id` to set the `is_admin` field to 1. The vulnerability allows malicious low-privileged users to perform administrative actions without proper authorization. This issue has been patched in version 3.3.3.",
+      "cpe_name": "cpe:2.3:a:joplin_project:joplin:3.0.15:*:*:*:*:-:*:*"
+    },
     {
       "cve_id": "CVE-2025-24028",
       "published_date": "2025-02-07",
@@ -28,24 +46,6 @@
       "severity": "LOW",
       "description": "Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks. Joplin's HTML sanitizer allows the `name` attribute to be specified. If `name` is set to the same value as an existing `document` property (e.g. `querySelector`), that property is replaced with the element. This vulnerability's only known impact is denial of service. The note viewer fails to refresh until closed and re-opened with a different note. This issue has been addressed in version 3.2.8 and all users are advised to upgrade. There are no known workarounds for this vulnerability.",
       "cpe_name": "cpe:2.3:a:joplin_project:joplin:3.0.15:*:*:*:*:-:*:*"
-    },
-    {
-      "cve_id": "CVE-2024-40643",
-      "published_date": "2024-09-09",
-      "last_modified_date": "2024-09-17",
-      "base_score": 9.6,
-      "severity": "CRITICAL",
-      "description": "Joplin is a free, open source note taking and to-do application. Joplin fails to take into account that \"<\" followed by a non letter character will not be considered html. As such it is possible to do an XSS by putting an \"illegal\" tag within a tag.",
-      "cpe_name": "cpe:2.3:a:joplin_project:joplin:-:*:*:*:*:-:*:*"
-    },
-    {
-      "cve_id": "CVE-2023-38506",
-      "published_date": "2024-06-21",
-      "last_modified_date": "2025-04-11",
-      "base_score": 8.2,
-      "severity": "HIGH",
-      "description": "Joplin is a free, open source note taking and to-do application. A Cross-site Scripting (XSS) vulnerability allows pasting untrusted data into the rich text editor to execute arbitrary code. HTML pasted into the rich text editor is not sanitized (or not sanitized properly). As such, the `onload` attribute of pasted images can execute arbitrary code. Because the TinyMCE editor frame does not use the `sandbox` attribute, such scripts can access NodeJS's `require` through the `top` variable. From this, an attacker can run arbitrary commands. This issue has been addressed in version 2.12.10 and users are advised to upgrade. There are no known workarounds for this vulnerability.",
-      "cpe_name": "cpe:2.3:a:joplin_project:joplin:-:*:*:*:*:-:*:*"
     }
   ]
 }

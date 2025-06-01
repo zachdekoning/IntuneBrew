@@ -1,12 +1,22 @@
 {
   "name": "Asana",
   "description": "Manage team projects and tasks",
-  "version": "2.4.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/asana_2.4.0.pkg",
+  "version": "2.4.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/asana_2.4.1.pkg",
   "bundleId": "com.electron.asana",
   "homepage": "https://asana.com/",
-  "fileName": "asana_2.4.0.pkg",
+  "fileName": "asana_2.4.1.pkg",
   "type": "app",
-  "sha": "5a604ffc577dd58c4ae5ebb7d07699a24ae4af2ead2d57a16016a807e3c4a9d8",
-  "previous_version": "2.4.0"
+  "sha": "ddcc7e88468ab93e400a1a91a6265a4e40c37c16a0d6bd66bfd8b563b7c45dcf",
+  "previous_version": "2.4.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:33:56Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.4.0"
+  }
 }

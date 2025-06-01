@@ -1,0 +1,244 @@
+name: Quality Assurance App Installation
+
+on:
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      apps:
+        description: "Specific apps to test (comma-separated, leave empty for all)"
+        required: false
+        default: ""
+      force_all:
+        description: "Force testing all apps even if already verified"
+        required: false
+        type: boolean
+        default: false
+      batch_size:
+        description: "Number of apps to process in each batch (for disk space management)"
+        required: false
+        default: "10"
+      max_apps:
+        description: "Maximum number of apps to process (0 for all apps)"
+        required: false
+        default: "0"
+
+jobs:
+  qa-installation:
+    runs-on: macos-latest
+    permissions:
+      contents: write # This gives the job permission to write to the repository
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      # Removed disk space check
+
+      - name: Determine apps to test
+        id: determine-apps
+        run: |
+          echo "Setting up apps to test..."
+
+          # Check if specific apps were provided
+          if [ -n "${{ github.event.inputs.apps }}" ]; then
+            # Convert comma-separated list to array
+            IFS=',' read -ra SPECIFIED_APPS <<< "${{ github.event.inputs.apps }}"
+            
+            # Create an array to store valid app paths
+            APPS_TO_TEST=()
+            
+            for APP_NAME in "${SPECIFIED_APPS[@]}"; do
+              # Trim whitespace
+              APP_NAME=$(echo "$APP_NAME" | xargs)
+              APP_JSON_PATH="Apps/${APP_NAME}.json"
+              
+              if [ -f "$APP_JSON_PATH" ]; then
+                echo "Adding specified app: $APP_NAME"
+                APPS_TO_TEST+=("$APP_JSON_PATH")
+              else
+                echo "Warning: Specified app $APP_NAME not found (looked for $APP_JSON_PATH)"
+              fi
+            done
+          else
+            # Default to all apps in the Apps directory
+            echo "No specific apps provided, checking all apps in Apps directory"
+            APPS_TO_TEST=()
+            for APP_JSON_PATH in Apps/*.json; do
+              if [ -f "$APP_JSON_PATH" ]; then
+                APP_NAME=$(basename "$APP_JSON_PATH" .json)
+                echo "Adding app: $APP_NAME"
+                APPS_TO_TEST+=("$APP_JSON_PATH")
+              fi
+            done
+          fi
+
+          # Apply max_apps limit if specified
+          MAX_APPS="${{ github.event.inputs.max_apps }}"
+          if [ -n "$MAX_APPS" ] && [ "$MAX_APPS" -gt 0 ]; then
+            echo "Limiting to maximum of $MAX_APPS apps"
+            if [ ${#APPS_TO_TEST[@]} -gt $MAX_APPS ]; then
+              echo "Truncating list from ${#APPS_TO_TEST[@]} to $MAX_APPS apps"
+              APPS_TO_TEST=("${APPS_TO_TEST[@]:0:$MAX_APPS}")
+            fi
+          fi
+
+          # Save the list of apps to test
+          echo "APPS_COUNT=${#APPS_TO_TEST[@]}" >> $GITHUB_ENV
+          echo "MAX_APPS=$MAX_APPS" >> $GITHUB_ENV
+
+          # Set force_all flag
+          echo "FORCE_ALL=${{ github.event.inputs.force_all }}" >> $GITHUB_ENV
+
+          # Set batch size
+          BATCH_SIZE="${{ github.event.inputs.batch_size }}"
+          if [ -z "$BATCH_SIZE" ] || [ "$BATCH_SIZE" -lt 1 ]; then
+            BATCH_SIZE=10
+          fi
+          echo "BATCH_SIZE=$BATCH_SIZE" >> $GITHUB_ENV
+
+          if [ ${#APPS_TO_TEST[@]} -eq 0 ]; then
+            echo "No valid apps to test."
+            echo "APPS_TO_TEST=" >> $GITHUB_ENV
+          else
+            # Convert array to newline-separated string and save to a file
+            printf "%s\n" "${APPS_TO_TEST[@]}" > /tmp/apps_to_test.txt
+            echo "Found ${#APPS_TO_TEST[@]} apps to test."
+            
+            # Calculate number of batches
+            BATCH_COUNT=$(( (${#APPS_TO_TEST[@]} + BATCH_SIZE - 1) / BATCH_SIZE ))
+            echo "Will process in $BATCH_COUNT batches of up to $BATCH_SIZE apps each"
+            echo "BATCH_COUNT=$BATCH_COUNT" >> $GITHUB_ENV
+          fi
+
+      - name: Make script executable
+        if: env.APPS_COUNT != '0'
+        run: chmod +x .github/scripts/qa-app-test.sh
+
+      - name: Run QA tests
+        if: env.APPS_COUNT != '0'
+        run: |
+          # Pass force_all flag and batch_size to the script
+          ARGS=""
+
+          if [ "$FORCE_ALL" = "true" ]; then
+            echo "Force testing all apps regardless of previous QA status"
+            ARGS="$ARGS --force"
+          fi
+
+          echo "Using batch size of $BATCH_SIZE"
+          ARGS="$ARGS --batch-size=$BATCH_SIZE"
+
+          if [ -n "$MAX_APPS" ] && [ "$MAX_APPS" -gt 0 ]; then
+            echo "Using maximum apps limit of $MAX_APPS"
+            ARGS="$ARGS --max-apps=$MAX_APPS"
+          fi
+
+          ./.github/scripts/qa-app-test.sh $ARGS
+
+      # Removed disk space check after testing
+
+      - name: Commit and push changes
+        if: env.CHANGES_MADE == 'true'
+        run: |
+          echo "📝 Committing QA info changes to repository..."
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Check if there are changes to commit
+          if git diff --quiet -- "Apps/"; then
+            echo "No changes to commit"
+          else
+            echo "Changes detected, committing..."
+            # Add all files in Apps directory
+            git add Apps/*.json
+            git commit -m "Update QA info for tested apps"
+            
+            # Push using the PAT for authentication
+            echo "Pushing changes to repository..."
+            git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+            
+            if [ $? -eq 0 ]; then
+              echo "✅ Successfully pushed changes to repository"
+            else
+              echo "❌ Failed to push changes to repository"
+              echo "Trying alternative push method..."
+              git push
+            fi
+          fi
+
+      - name: Output summary
+        run: |
+          # Create a summary for GitHub Actions
+          echo "## QA Installation Results" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Apps Tested | $APPS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          if [ -n "$MAX_APPS" ] && [ "$MAX_APPS" -gt 0 ]; then
+            echo "| Max Apps Limit | $MAX_APPS |" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "| Batch Size | $BATCH_SIZE |" >> $GITHUB_STEP_SUMMARY
+          echo "| Batches Processed | $BATCH_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Successful Installations | $SUCCESSFUL_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Failed Installations | $FAILED_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Skipped Installations | $SKIPPED_INSTALLS_COUNT |" >> $GITHUB_STEP_SUMMARY
+          # Removed disk space used from summary
+          echo "| Changes Made | $CHANGES_MADE |" >> $GITHUB_STEP_SUMMARY
+
+          # Add successful installs section if any
+          if [ -f "/tmp/successful_installs.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Successfully Installed Apps" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps were successfully installed and verified:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # Display each app on a separate line with a bullet point
+            echo "<ul>" >> $GITHUB_STEP_SUMMARY
+            while IFS= read -r app || [ -n "$app" ]; do
+              echo "<li>$app</li>" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/successful_installs.txt
+            echo "</ul>" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Successfully Installed Apps" >> $GITHUB_STEP_SUMMARY
+            echo "No apps were successfully installed in this run." >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Add failed installs section if any
+          if [ -f "/tmp/failed_installs.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Failed Installations" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps failed during installation or verification:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # Display each app on a separate line with a bullet point
+            echo "<ul>" >> $GITHUB_STEP_SUMMARY
+            while IFS= read -r app || [ -n "$app" ]; do
+              echo "<li>$app</li>" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/failed_installs.txt
+            echo "</ul>" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Failed Installations" >> $GITHUB_STEP_SUMMARY
+            echo "No apps failed installation in this run." >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Add skipped installs section if any
+          if [ -f "/tmp/skipped_installs.txt" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Skipped Installations" >> $GITHUB_STEP_SUMMARY
+            echo "The following apps were skipped because they were already verified:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # Display each app on a separate line with a bullet point
+            echo "<ul>" >> $GITHUB_STEP_SUMMARY
+            while IFS= read -r app || [ -n "$app" ]; do
+              echo "<li>$app</li>" >> $GITHUB_STEP_SUMMARY
+            done < /tmp/skipped_installs.txt
+            echo "</ul>" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## Skipped Installations" >> $GITHUB_STEP_SUMMARY
+            echo "No apps were skipped in this run." >> $GITHUB_STEP_SUMMARY
+          fi

@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "251667fd40c0ab3f8603e05328ff6311329c371118628f7f5325563aa0867500",
   "changelog": "https://docs.anthropic.com/en/release-notes/claude-apps",
-  "previous_version": "0.9.3"
+  "previous_version": "0.9.3",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:47:38Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "0.9.3"
+  }
 }

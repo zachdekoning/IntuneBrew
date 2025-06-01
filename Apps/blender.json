@@ -8,5 +8,15 @@
   "fileName": "blender-4.4.3-macos-arm64.dmg",
   "sha": "9b592fdc758b9069c210494f10108b06ef82fd65a4aa8c0cc07d6eba0585578b",
   "changelog": "https://www.blender.org/download/releases/",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:26:41Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "4.4.3"
+  },
   "previous_version": "4.4.3"
 }

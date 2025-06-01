@@ -8,5 +8,15 @@
   "fileName": "angry_ip_scanner_3.9.1.pkg",
   "type": "app",
   "sha": "7831db1b05ed4cfff9ed915646f9c181a194c9c1ce2135209a94dbc89c6081e8",
-  "previous_version": "3.9.1"
+  "previous_version": "3.9.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-19T08:02:27Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "File Doesn't Exist, Will Create: /Applications/Angry IP Scanner.app/Contents/Info.plist"
+  }
 }

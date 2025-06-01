@@ -8,5 +8,15 @@
   "fileName": "copyclip_2.9.99.2.pkg",
   "type": "app",
   "sha": "cf66602df1bc2af1b6b26e6d21f39c5ea3d461ac4e87f0b008267d4c217f2682",
-  "previous_version": "2.9.99.2"
+  "previous_version": "2.9.99.2",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:49:47Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.9.99.2"
+  }
 }

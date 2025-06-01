@@ -8,5 +8,15 @@
   "fileName": "busycal_2025.2.1.pkg",
   "type": "app",
   "sha": "b74878669d9b497dd62e7899a97ed050557605bf661abc7c7a6bd5b2cebad210",
-  "previous_version": "2025.2.1"
+  "previous_version": "2025.2.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:45:22Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "2025.2.1"
+  }
 }

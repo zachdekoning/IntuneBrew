@@ -1,24 +1,51 @@
 {
   "app_name": "Stats",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-25",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2024-8738",
-      "published_date": "2024-09-24",
-      "last_modified_date": "2024-09-26",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "The Seriously Simple Stats plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in all versions up to, and including, 1.6.0. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",
-      "cpe_name": "cpe:2.3:a:castos:seriously_simple_stats:1.6.0:*:*:*:*:wordpress:*:*"
+      "cve_id": "CVE-2017-18287",
+      "published_date": "2018-06-12",
+      "last_modified_date": "2024-11-21",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in PvPGN Stats 2.4.6. SQL Injection exists in ladder/stats.php via the POST user_search parameter.",
+      "cpe_name": "cpe:2.3:a:pvpgn:stats:2.4.6:*:*:*:*:*:*:*"
     },
     {
-      "cve_id": "CVE-2024-22289",
-      "published_date": "2024-01-31",
+      "cve_id": "CVE-2017-18288",
+      "published_date": "2018-06-12",
       "last_modified_date": "2024-11-21",
-      "base_score": 7.1,
-      "severity": "HIGH",
-      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in cybernetikz Post views Stats allows Reflected XSS.This issue affects Post views Stats: from n/a through 1.3.\n\n",
-      "cpe_name": "cpe:2.3:a:cybernetikz:post_views_stats:1.3:*:*:*:*:wordpress:*:*"
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in PvPGN Stats 2.4.6. SQL Injection exists in ladder/stats.php via the GET game parameter.",
+      "cpe_name": "cpe:2.3:a:pvpgn:stats:2.4.6:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2017-18289",
+      "published_date": "2018-06-12",
+      "last_modified_date": "2024-11-21",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in PvPGN Stats 2.4.6. SQL Injection exist in ladder/stats.php via the GET type parameter.",
+      "cpe_name": "cpe:2.3:a:pvpgn:stats:2.4.6:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2017-18290",
+      "published_date": "2018-06-12",
+      "last_modified_date": "2024-11-21",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in PvPGN Stats 2.4.6. SQL Injection exists in ladder/stats.php via the GET sort_direction parameter.",
+      "cpe_name": "cpe:2.3:a:pvpgn:stats:2.4.6:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2017-18291",
+      "published_date": "2018-06-12",
+      "last_modified_date": "2024-11-21",
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in PvPGN Stats 2.4.6. SQL Injection exists in ladder/stats.php via the GET user parameter.",
+      "cpe_name": "cpe:2.3:a:pvpgn:stats:2.4.6:*:*:*:*:*:*:*"
     }
   ]
 }

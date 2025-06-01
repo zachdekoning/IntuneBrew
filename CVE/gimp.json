@@ -1,7 +1,25 @@
 {
   "app_name": "GIMP",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-25",
   "vulnerabilities": [
+    {
+      "cve_id": "CVE-2022-32990",
+      "published_date": "2022-06-24",
+      "last_modified_date": "2024-11-21",
+      "base_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "An issue in gimp_layer_invalidate_boundary of GNOME GIMP 2.10.30 allows attackers to trigger an unhandled exception via a crafted XCF file, causing a Denial of Service (DoS).",
+      "cpe_name": "cpe:2.3:a:gimp:gimp:2.10.30:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2022-30067",
+      "published_date": "2022-05-17",
+      "last_modified_date": "2024-11-21",
+      "base_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "GIMP 2.10.30 and 2.99.10 are vulnerable to Buffer Overflow. Through a crafted XCF file, the program will allocate for a huge amount of memory, resulting in insufficient memory or program crash.",
+      "cpe_name": "cpe:2.3:a:gimp:gimp:2.10.30:*:*:*:*:*:*:*"
+    },
     {
       "cve_id": "CVE-2021-45463",
       "published_date": "2021-12-23",
@@ -10,6 +28,15 @@
       "severity": "HIGH",
       "description": "load_cache in GEGL before 0.4.34 allows shell expansion when a pathname in a constructed command line is not escaped or filtered. This is caused by use of the system library function for execution of the ImageMagick convert fallback in magick-load. NOTE: GEGL releases before 0.4.34 are used in GIMP releases before 2.10.30; however, this does not imply that GIMP builds enable the vulnerable feature.",
       "cpe_name": "cpe:2.3:a:gimp:gimp:2.10.18:*:*:*:*:*:*:*"
+    },
+    {
+      "cve_id": "CVE-2018-12713",
+      "published_date": "2018-06-24",
+      "last_modified_date": "2024-11-21",
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "description": "GIMP through 2.10.2 makes g_get_tmp_dir calls to establish temporary filenames, which may result in a filename that already exists, as demonstrated by the gimp_write_and_read_file function in app/tests/test-xcf.c. This might be leveraged by attackers to overwrite files or read file content that was intended to be private.",
+      "cpe_name": "cpe:2.3:a:gimp:gimp:2.10.0:rc2:*:*:*:*:*:*"
     }
   ]
 }

@@ -1,12 +1,22 @@
 {
   "name": "Etcher",
   "description": "Tool to flash OS images to SD cards & USB drives",
-  "version": "2.1.0",
-  "url": "https://github.com/balena-io/etcher/releases/download/v2.1.0/balenaEtcher-2.1.0-arm64.dmg",
+  "version": "2.1.2",
+  "url": "https://github.com/balena-io/etcher/releases/download/v2.1.2/balenaEtcher-2.1.2-arm64.dmg",
   "bundleId": "io.balena.etcher.*",
   "homepage": "https://balena.io/etcher",
-  "fileName": "balenaEtcher-2.1.0-arm64.dmg",
-  "sha": "7b6ef50c0f20a421e58766b77d6c4ccb4af4912c15f4cd9a029e7e5aa439677f",
+  "fileName": "balenaEtcher-2.1.2-arm64.dmg",
+  "sha": "b2a5db16d98253e1fd7467a4cd467003c526a29e2d498282c74766f051c19606",
   "changelog": "https://github.com/balena-io/etcher/releases",
-  "previous_version": "2.1.0"
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:57:19Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "2.1.2"
+  },
+  "previous_version": "2.1.2"
 }

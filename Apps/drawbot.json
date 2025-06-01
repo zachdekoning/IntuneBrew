@@ -8,5 +8,15 @@
   "fileName": "DrawBot.dmg",
   "sha": "e7e39a6b4d2345ed7e81d84914c7681bcc7ee9601a5f4d09e6f3dfce64d1903d",
   "changelog": "https://github.com/typemytype/drawbot/releases",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:23:05Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "3.132"
+  },
   "previous_version": "3.132"
 }

@@ -8,5 +8,15 @@
   "fileName": "freemacsoft_appcleaner_3.6.8.pkg",
   "type": "app",
   "sha": "0b6be17568243b5204a7371a96e889483674c617802e588a7077b268cb91810a",
-  "previous_version": "3.6.8"
+  "previous_version": "3.6.8",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:15:14Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "3.6.8"
+  }
 }

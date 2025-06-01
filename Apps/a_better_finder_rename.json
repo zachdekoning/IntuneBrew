@@ -3,9 +3,19 @@
   "description": "Renamer for files, music and photos",
   "version": "12.12",
   "url": "https://www.publicspace.net/download/ABFRX12.dmg",
-  "bundleId": null,
+  "bundleId": "net.publicspace.abfr12",
   "homepage": "https://www.publicspace.net/ABetterFinderRename/",
   "fileName": "ABFRX12.dmg",
   "sha": "e4cb0b943563723a156114c738e89b4720c6548430c5acb5fcd8541bf29c0c51",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T08:52:11Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "12.12"
+  },
   "previous_version": "12.12"
 }

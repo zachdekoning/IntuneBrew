@@ -1,11 +1,21 @@
 {
   "name": "Ente Auth",
   "description": "Desktop client for Ente Auth",
-  "version": "4.3.5",
-  "url": "https://github.com/ente-io/ente/releases/download/auth-v4.3.5/ente-auth-v4.3.5.dmg",
-  "bundleId": null,
+  "version": "4.3.6",
+  "url": "https://github.com/ente-io/ente/releases/download/auth-v4.3.6/ente-auth-v4.3.6.dmg",
+  "bundleId": "io.ente.auth.mac",
   "homepage": "https://ente.io/auth/",
-  "fileName": "ente-auth-v4.3.5.dmg",
-  "sha": "e1be474a546653b3b348fdd3a590e68c89e09e0c45828e2a6cfc0d6dbcebf159",
-  "previous_version": "4.3.5"
+  "fileName": "ente-auth-v4.3.6.dmg",
+  "sha": "264639709b0e81c70e3ed5a6adb96047cc8ecfbf224ebf1cb35a7dd3e4be797c",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T14:57:02Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "4.3.5"
+  },
+  "previous_version": "4.3.6"
 }

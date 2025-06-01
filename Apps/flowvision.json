@@ -1,12 +1,22 @@
 {
   "name": "FlowVision",
   "description": "Waterfall-style image viewer",
-  "version": "1.6.2",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/flowvision_1.6.2.pkg",
-  "bundleId": null,
+  "version": "1.6.4",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/flowvision_1.6.4.pkg",
+  "bundleId": "netdcy.FlowVision",
   "homepage": "https://flowvision.app/",
-  "fileName": "flowvision_1.6.2.pkg",
+  "fileName": "flowvision_1.6.4.pkg",
   "type": "app",
-  "sha": "e6d52febce2000529351a57754fda101b4a8a1642335eff50f6816853584ead0",
-  "previous_version": "1.6.2"
+  "sha": "f8557e60e587d7b06909eeb8cba668598fec7a5a49be2cf166dd86d1e7e1186d",
+  "previous_version": "1.6.4",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:11:12Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.6.3"
+  }
 }

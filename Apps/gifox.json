@@ -1,12 +1,22 @@
 {
   "name": "gifox",
   "description": "GIF recording and sharing",
-  "version": "2.6.5+0",
-  "url": "https://d1fqctmfkpkkcg.cloudfront.net/gifox/020605.00.dmg",
+  "version": "2.7.0+0",
+  "url": "https://d1fqctmfkpkkcg.cloudfront.net/gifox/020700.00.dmg",
   "bundleId": "com.gifox.gifox2",
   "homepage": "https://gifox.io/",
-  "fileName": "020605.00.dmg",
-  "sha": "2b4de3907ffd92eabbabb765f874d7968048f257d1bd60c8d5e43589bb634590",
+  "fileName": "020700.00.dmg",
+  "sha": "7991f3718e482a72bb6f9c03f281e2df3ea9203c80eb5eea409e71a9490afebb",
   "changelog": "https://gifox.io/changelog/",
-  "previous_version": "2.6.5+0"
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:18:02Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.6.5"
+  },
+  "previous_version": "2.7.0+0"
 }

@@ -1,6 +1,6 @@
 {
   "app_name": "Basecamp",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-25",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2023-36612",
@@ -10,15 +10,6 @@
       "severity": "HIGH",
       "description": "Directory traversal can occur in the Basecamp com.basecamp.bc3 application before 4.2.1 for Android, which may allow an attacker to write arbitrary files in the application's private directory. Additionally, by using a malicious intent, the attacker may redirect the server's responses (containing sensitive information) to third-party applications by using a custom-crafted deeplink scheme.",
       "cpe_name": "cpe:2.3:a:basecamp:basecamp:4.2.0:*:*:*:*:android:*:*"
-    },
-    {
-      "cve_id": "CVE-2018-1000855",
-      "published_date": "2018-12-20",
-      "last_modified_date": "2024-11-21",
-      "base_score": 6.1,
-      "severity": "MEDIUM",
-      "description": "easymon version 1.4 and earlier contains a Cross Site Scripting (XSS) vulnerability in Endpoint where monitoring is mounted that can result in Reflected XSS that affects Firefox. Can be used to steal cookies, depending on the cookie settings.. This attack appear to be exploitable via The victim must click on a crafted URL that contains the XSS payload. This vulnerability appears to have been fixed in 1.4.1 and later.",
-      "cpe_name": "cpe:2.3:a:basecamp:easymon:-:*:*:*:*:ruby:*:*"
     }
   ]
 }

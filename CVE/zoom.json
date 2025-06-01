@@ -1,0 +1,42 @@
+{
+  "app_name": "Zoom",
+  "last_updated": "2025-05-25",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2024-24698",
+      "published_date": "2024-02-14",
+      "last_modified_date": "2024-11-21",
+      "base_score": 4.9,
+      "severity": "MEDIUM",
+      "description": "Improper authentication in some Zoom clients may allow a privileged user to conduct a disclosure of information via local access.",
+      "cpe_name": "cpe:2.3:a:zoom:zoom:5.16.5:*:*:*:*:iphone_os:*:*"
+    },
+    {
+      "cve_id": "CVE-2024-24696",
+      "published_date": "2024-02-14",
+      "last_modified_date": "2024-11-21",
+      "base_score": 6.8,
+      "severity": "MEDIUM",
+      "description": "Improper input validation in Zoom Desktop Client for Windows, Zoom VDI Client for Windows, and Zoom Meeting SDK for Windows may allow an authenticated user to conduct a disclosure of information via network access.\n\n",
+      "cpe_name": "cpe:2.3:a:zoom:zoom:5.16.5:*:*:*:*:windows:*:*"
+    },
+    {
+      "cve_id": "CVE-2024-24697",
+      "published_date": "2024-02-14",
+      "last_modified_date": "2024-11-21",
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "description": "Untrusted search path in some Zoom 32 bit Windows clients may allow an authenticated user to conduct an escalation of privilege via local access.\n",
+      "cpe_name": "cpe:2.3:a:zoom:zoom:5.16.5:*:*:*:*:windows:*:*"
+    },
+    {
+      "cve_id": "CVE-2023-49647",
+      "published_date": "2024-01-12",
+      "last_modified_date": "2024-11-21",
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "description": "Improper access control in Zoom Desktop Client for Windows, Zoom VDI Client for Windows, and Zoom SDKs for Windows before version 5.16.10 may allow an authenticated user to conduct an escalation of privilege via local access.",
+      "cpe_name": "cpe:2.3:a:zoom:zoom:5.16.5:*:*:*:*:windows:*:*"
+    }
+  ]
+}

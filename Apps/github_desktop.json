@@ -1,12 +1,22 @@
 {
   "name": "GitHub Desktop",
   "description": "Desktop client for GitHub repositories",
-  "version": "3.4.19-d147b1a3",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/github_desktop_3.4.19-d147b1a3.pkg",
+  "version": "3.4.20-d2e01c60",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/github_desktop_3.4.20-d2e01c60.pkg",
   "bundleId": "com.github.GitHubClient",
   "homepage": "https://desktop.github.com/",
   "fileName": "github_desktop_3.4.19-d147b1a3.pkg",
   "type": "app",
-  "sha": "0bb33c2575fdbb34a90f7595f43068bdf2f6f89a6482ab9770a1f7608bd74c7a",
-  "previous_version": "3.4.19-d147b1a3"
+  "sha": "528999df50bee7815a21884c9982818879f3b79764023ea44d99ddf2acf892ce",
+  "previous_version": "3.4.20-d2e01c60",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:18:31Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "3.4.19"
+  }
 }

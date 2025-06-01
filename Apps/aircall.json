@@ -3,9 +3,19 @@
   "description": "Cloud-based call center and phone system software",
   "version": "3.1.66",
   "url": "https://download-electron.aircall.io/Aircall-3.1.66.dmg",
-  "bundleId": null,
+  "bundleId": "io.aircall.phone",
   "homepage": "https://aircall.io/",
   "fileName": "Aircall-3.1.66.dmg",
   "sha": "d61c50d9f3466fe3751abe4945bc45d68cc9f6b71865b8ffa2a9bfd616fdb35b",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:29:43Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "3.1.66"
+  },
   "previous_version": "3.1.66"
 }

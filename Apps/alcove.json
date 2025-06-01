@@ -3,10 +3,20 @@
   "description": "Utility to add Dynamic Island like features to notch area",
   "version": "1.2.5",
   "url": "https://intunebrew.blob.core.windows.net/pkg/alcove_1.2.5.pkg",
-  "bundleId": null,
+  "bundleId": "com.henrikruscon.Alcove",
   "homepage": "https://tryalcove.com/",
   "fileName": "alcove_1.2.5.pkg",
   "type": "app",
   "sha": "266328af825fdda3cd1a883652c2a52f2133fe842d82e23adb85ad4dc005c648",
-  "previous_version": "1.2.5"
+  "previous_version": "1.2.5",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:30:05Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.2.5"
+  }
 }

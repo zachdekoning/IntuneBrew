@@ -1,6 +1,6 @@
 {
   "app_name": "VLC media player",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-18",
   "vulnerabilities": [
     {
       "cve_id": "CVE-2023-46814",

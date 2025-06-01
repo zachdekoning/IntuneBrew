@@ -3,7 +3,7 @@
   "description": "Automatically checks computer's security",
   "version": "2.11",
   "url": "https://intunebrew.blob.core.windows.net/pkg/silentknight_2.11.pkg",
-  "bundleId": null,
+  "bundleId": "co.eclecticlight.SilentKnight",
   "homepage": "https://eclecticlight.co/lockrattler-systhist/",
   "fileName": "silentknight_2.11.pkg",
   "type": "app",

@@ -9,5 +9,15 @@
   "type": "app",
   "sha": "3eebd0a2ffc6324d2024a9fb22f95de36c757e80e29cf1a60e58fd375bd5bf06",
   "changelog": "https://fsmonitor.com/history.html",
-  "previous_version": "1.2"
+  "previous_version": "1.2",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:15:21Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "1.2"
+  }
 }

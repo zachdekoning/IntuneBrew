@@ -1,12 +1,12 @@
 {
   "name": "Taskbar",
   "description": "Windows-style taskbar as a Dock replacement",
-  "version": "1.4.3",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/taskbar_1.4.3.pkg",
-  "bundleId": null,
+  "version": "1.4.5",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/taskbar_1.4.5.pkg",
+  "bundleId": "com.fpfxtknjju.wbgcdolfev",
   "homepage": "https://lawand.io/taskbar/",
-  "fileName": "taskbar_1.4.3.pkg",
+  "fileName": "taskbar_1.4.5.pkg",
   "type": "app",
-  "sha": "7b0894cc8cacad51e6d51b5e1203b753913c481be93142cd828fd7e8e2b5fd58",
-  "previous_version": "1.4.3"
+  "sha": "e1f8c89f10ca33a8ce82d2da2c9a473c376c8e2f145b4fc3c562170ec66c3c0f",
+  "previous_version": "1.4.5"
 }

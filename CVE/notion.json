@@ -1,16 +1,7 @@
 {
   "app_name": "Notion",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-25",
   "vulnerabilities": [
-    {
-      "cve_id": "CVE-2024-23745",
-      "published_date": "2024-01-31",
-      "last_modified_date": "2024-11-21",
-      "base_score": 9.8,
-      "severity": "CRITICAL",
-      "description": "In Notion Web Clipper 1.0.3(7), a .nib file is susceptible to the Dirty NIB attack. NIB files can be manipulated to execute arbitrary commands. Additionally, even if a NIB file is modified within an application, Gatekeeper may still permit the execution of the application, enabling the execution of arbitrary commands within the application's context. NOTE: the vendor's perspective is that this is simply an instance of CVE-2022-48505, cannot properly be categorized as a product-level vulnerability, and cannot have a product-level fix because it is about incorrect caching of file signatures on macOS.",
-      "cpe_name": "cpe:2.3:a:notion:web_clipper:1.0.3\\(7\\):*:*:*:*:*:*:*"
-    },
     {
       "cve_id": "CVE-2024-23743",
       "published_date": "2024-01-28",

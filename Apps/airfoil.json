@@ -8,5 +8,15 @@
   "fileName": "airfoil_5.12.4.pkg",
   "type": "app",
   "sha": "e0235a7f56d645f53a15845f22bde13bcb2a59969d9b63aadbceb36f92738801",
-  "previous_version": "5.12.4"
+  "previous_version": "5.12.4",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:29:48Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "5.12.4"
+  }
 }

@@ -1,15 +1,15 @@
 {
   "app_name": "Viz",
-  "last_updated": "2025-05-05",
+  "last_updated": "2025-05-25",
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2024-36400",
-      "published_date": "2024-06-04",
-      "last_modified_date": "2024-11-21",
-      "base_score": 9.4,
-      "severity": "CRITICAL",
-      "description": "nano-id is a unique string ID generator for Rust. Affected versions of the nano-id crate incorrectly generated IDs using a reduced character set in the `nano_id::base62` and `nano_id::base58` functions. Specifically, the `base62` function used a character set of 32 symbols instead of the intended 62 symbols, and the `base58` function used a character set of 16 symbols instead of the intended 58 symbols. Additionally, the `nano_id::gen` macro is also affected when a custom character set that is not a power of 2 in size is specified. It should be noted that `nano_id::base64` is not affected by this vulnerability. This can result in a significant reduction in entropy, making the generated IDs predictable and vulnerable to brute-force attacks when the IDs are used in security-sensitive contexts such as session tokens or unique identifiers. The vulnerability is fixed in 0.4.0.",
-      "cpe_name": "cpe:2.3:a:viz:nano_id:-:*:*:*:*:rust:*:*"
+      "cve_id": "CVE-2005-4710",
+      "published_date": "2005-12-31",
+      "last_modified_date": "2025-04-03",
+      "base_score": 4.6,
+      "severity": "MEDIUM",
+      "description": "Unspecified vulnerability in multiple Autodesk and AutoCAD products and product families from 2006 and earlier allows remote attackers to \"gain inappropriate access to another local user's computer,\" aka ID DL5549329.",
+      "cpe_name": "cpe:2.3:a:autodesk:viz:2006:*:*:*:*:*:*:*"
     }
   ]
 }

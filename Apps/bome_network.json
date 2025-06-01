@@ -3,9 +3,19 @@
   "description": "Create MIDI connections between computers",
   "version": "1.6.0",
   "url": "https://download.bome.com/BomeNet1.6.0_macOS.dmg",
-  "bundleId": null,
+  "bundleId": "com.bome.network",
   "homepage": "https://www.bome.com/products/bomenet",
   "fileName": "BomeNet1.6.0_macOS.dmg",
   "sha": "24f99bdf3356bf1218c65b315ca63085d8d41cd21f73a67c374cd73acf02d959",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:27:26Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.6.0"
+  },
   "previous_version": "1.6.0"
 }

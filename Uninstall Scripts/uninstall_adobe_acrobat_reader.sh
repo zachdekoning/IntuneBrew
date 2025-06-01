@@ -47,6 +47,22 @@ killall -9 "com.adobe.AdobeRdrCEFHelper" 2>/dev/null || true
 echo "Stopping application with bundle ID com.adobe.Reader if running..."
 killall -9 "com.adobe.Reader" 2>/dev/null || true
 
+# Remove $HOME/Library/Application Support/Adobe/Acrobat
+echo "Removing $HOME/Library/Application Support/Adobe/Acrobat..."
+if [ -d "$HOME/Library/Application Support/Adobe/Acrobat" ]; then
+    rm -rf "$HOME/Library/Application Support/Adobe/Acrobat" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/Adobe/Acrobat" ]; then
+    rm -f "$HOME/Library/Application Support/Adobe/Acrobat" 2>/dev/null || true
+fi
+
+# Remove $HOME/Library/Application Support/Adobe/AcroCef
+echo "Removing $HOME/Library/Application Support/Adobe/AcroCef..."
+if [ -d "$HOME/Library/Application Support/Adobe/AcroCef" ]; then
+    rm -rf "$HOME/Library/Application Support/Adobe/AcroCef" 2>/dev/null || true
+elif [ -f "$HOME/Library/Application Support/Adobe/AcroCef" ]; then
+    rm -f "$HOME/Library/Application Support/Adobe/AcroCef" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/Caches/com.adobe.Reader
 echo "Removing $HOME/Library/Caches/com.adobe.Reader..."
 if [ -d "$HOME/Library/Caches/com.adobe.Reader" ]; then

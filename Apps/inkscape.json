@@ -1,12 +1,12 @@
 {
   "name": "Inkscape",
   "description": "Vector graphics editor",
-  "version": "1.4.028868",
-  "url": "https://media.inkscape.org/dl/resources/file/Inkscape-1.4.028868_arm64.dmg",
+  "version": "1.4.230579",
+  "url": "https://media.inkscape.org/dl/resources/file/Inkscape-1.4.230579_arm64.dmg",
   "bundleId": "org.inkscape.Inkscape",
   "homepage": "https://inkscape.org/",
-  "fileName": "Inkscape-1.4.028868_arm64.dmg",
-  "sha": "c2d89809ad8d85021e7784e72e28aee2231b0b8675ec3ede3e6fb9f1ffedb4b3",
+  "fileName": "Inkscape-1.4.230579_arm64.dmg",
+  "sha": "118e9e23190eea1265592a8b2053f5fb67e13a55b9311b2ab284df7008a896b4",
   "changelog": "https://inkscape.org/release/",
-  "previous_version": "1.4.028868"
+  "previous_version": "1.4.230579"
 }

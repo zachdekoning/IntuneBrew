@@ -1,12 +1,12 @@
 {
   "name": "Nota Gyazo GIF",
   "description": "Screenshot and screen recording tool",
-  "version": "9.9.0",
-  "url": "https://files.gyazo.com/setup/Gyazo-9.9.0.pkg",
+  "version": "9.10.0",
+  "url": "https://files.gyazo.com/setup/Gyazo-9.10.0.pkg",
   "bundleId": "com.gyazo.pkg",
   "homepage": "https://gyazo.com/",
-  "fileName": "Gyazo-9.9.0.pkg",
+  "fileName": "Gyazo-9.10.0.pkg",
   "type": "pkg_in_pkg",
   "changelog": "https://support.gyazo.com/hc/en-us/articles/204411615-Release-Notes",
-  "previous_version": "9.9.0"
+  "previous_version": "9.10.0"
 }

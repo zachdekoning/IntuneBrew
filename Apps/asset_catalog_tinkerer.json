@@ -3,10 +3,20 @@
   "description": "Browse/extract images from .car files",
   "version": "2.9",
   "url": "https://intunebrew.blob.core.windows.net/pkg/asset_catalog_tinkerer_2.9.pkg",
-  "bundleId": null,
+  "bundleId": "br.com.guilhermerambo.Asset-Catalog-Tinkerer",
   "homepage": "https://github.com/insidegui/AssetCatalogTinkerer",
   "fileName": "asset_catalog_tinkerer_2.9.pkg",
   "type": "app",
   "sha": "1d6c67c9ecf9d838afa8bf6e3ade456e428ae2acbf3fd4a5a0bb2bb5f015a679",
-  "previous_version": "2.9"
+  "previous_version": "2.9",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:34:11Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.9"
+  }
 }

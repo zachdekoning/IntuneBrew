@@ -53,6 +53,14 @@ elif [ -f "$HOME/Library/Caches/dev.kdrag0n.MacVirt" ]; then
     rm -f "$HOME/Library/Caches/dev.kdrag0n.MacVirt" 2>/dev/null || true
 fi
 
+# Remove $HOME/Library/Group Containers/*.dev.orbstack
+echo "Removing $HOME/Library/Group Containers/*.dev.orbstack..."
+if [ -d "$HOME/Library/Group Containers/*.dev.orbstack" ]; then
+    rm -rf "$HOME/Library/Group Containers/*.dev.orbstack" 2>/dev/null || true
+elif [ -f "$HOME/Library/Group Containers/*.dev.orbstack" ]; then
+    rm -f "$HOME/Library/Group Containers/*.dev.orbstack" 2>/dev/null || true
+fi
+
 # Remove $HOME/Library/HTTPStorages/dev.kdrag0n.MacVirt
 echo "Removing $HOME/Library/HTTPStorages/dev.kdrag0n.MacVirt..."
 if [ -d "$HOME/Library/HTTPStorages/dev.kdrag0n.MacVirt" ]; then

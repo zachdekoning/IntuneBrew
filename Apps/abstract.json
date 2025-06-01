@@ -1,12 +1,22 @@
 {
   "name": "Abstract",
   "description": "Collaborative design tool with support for Sketch files",
-  "version": "98.6.0",
-  "url": "https://intunebrew.blob.core.windows.net/pkg/abstract_98.6.0.pkg",
-  "bundleId": null,
+  "version": "98.6.1",
+  "url": "https://intunebrew.blob.core.windows.net/pkg/abstract_98.6.1.pkg",
+  "bundleId": "com.elasticprojects.abstract-desktop",
   "homepage": "https://www.abstract.com/",
-  "fileName": "abstract_98.6.0.pkg",
+  "fileName": "abstract_98.6.1.pkg",
   "type": "app",
-  "sha": "9d611b1c8d5bf11fdf7b341a2b1a3e352c6bea2335674d8a3fef2b48c1579958",
-  "previous_version": "98.6.0"
+  "sha": "f62510d7a05a233288bb1f7f98c3236fdb2b3e124ab8b3dbd4786e428aa69656",
+  "previous_version": "98.6.1",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:15:17Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "98.6.1"
+  }
 }

@@ -1,12 +1,22 @@
 {
   "name": "GIMP",
   "description": "Free and open-source image editor",
-  "version": "3.0.2",
-  "url": "https://download.gimp.org/gimp/v3.0/macos/gimp-3.0.2-arm64.dmg",
+  "version": "3.0.4",
+  "url": "https://download.gimp.org/gimp/v3.0/macos/gimp-3.0.4-arm64.dmg",
   "bundleId": "org.gimp.gimp-2.10",
   "homepage": "https://www.gimp.org/",
-  "fileName": "gimp-3.0.2-arm64.dmg",
-  "sha": "847e1d57e937ffd23c3b3a8c0a1ce50e04b1706b75e0184d6f6f6b3f941be9d3",
+  "fileName": "gimp-3.0.4-arm64.dmg",
+  "sha": "bc3002d9221ebed220b9687378275d139b4fd0ea066fe3a2b5788ef2ee4377f3",
   "changelog": "https://www.gimp.org/release-notes/",
-  "previous_version": "3.0.2"
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:18:04Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "mismatch",
+    "installed_version": "3.0.2"
+  },
+  "previous_version": "3.0.4"
 }

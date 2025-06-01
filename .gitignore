@@ -1,0 +1,5 @@
+# Ignore backup files
+*.bak
+.prettierignore
+
+.claude/

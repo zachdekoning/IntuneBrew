@@ -7,5 +7,15 @@
   "homepage": "https://www.arduino.cc/en/software",
   "fileName": "arduino-ide_2.3.6_macOS_ARM64.dmg",
   "sha": "18dbf23f7f87133a8c139b14df8a647f12fd97b5f612344688f7150255a9391f",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T10:33:50Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.3.6"
+  },
   "previous_version": "2.3.6"
 }

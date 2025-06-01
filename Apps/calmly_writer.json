@@ -8,5 +8,15 @@
   "fileName": "Calmly%20Writer-2.0.59-arm64.dmg",
   "sha": "f96af9da430bc222b7e389e05e3af65b5064902e20d9608a11f55398d81c6867",
   "changelog": "https://calmlywriter.com/blog/",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:46:15Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "2.0.59"
+  },
   "previous_version": "2.0.59"
 }

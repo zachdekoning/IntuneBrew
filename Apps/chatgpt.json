@@ -1,12 +1,22 @@
 {
   "name": "ChatGPT",
   "description": "OpenAI's official ChatGPT desktop app",
-  "version": "1.2025.112",
-  "url": "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_1.2025.112_1745628785.dmg",
+  "version": "1.2025.140",
+  "url": "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_1.2025.140_1748052662.dmg",
   "bundleId": "com.openai.chat",
   "homepage": "https://chatgpt.com/",
-  "fileName": "ChatGPT_Desktop_public_1.2025.112_1745628785.dmg",
-  "sha": "abc20f44729e141e6c8de5171d529c63913c67c45f1d25deb8e989c733b5489e",
+  "fileName": "ChatGPT_Desktop_public_1.2025.140_1748052662.dmg",
+  "sha": "a9b9aa13c905e8a2509c2ebcc7bd49dcdeb62438fbdaff5339b5685b3ee37ccb",
   "changelog": "https://help.openai.com/en/articles/9703738-macos-app-release-notes",
-  "previous_version": "1.2025.112"
+  "qa_info": {
+    "qa_timestamp": "2025-05-16T13:26:17Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.2025.126"
+  },
+  "previous_version": "1.2025.140"
 }

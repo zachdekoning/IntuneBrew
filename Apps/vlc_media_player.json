@@ -7,6 +7,5 @@
   "homepage": "https://www.videolan.org/vlc/",
   "fileName": "vlc-3.0.21-arm64.dmg",
   "sha": "15dd65bf6489da9ec6a67f5585c74c40a58993acff41a82958a916dd74178044",
-  "changelog": "https://www.videolan.org/vlc/releases/",
   "previous_version": "3.0.21"
 }

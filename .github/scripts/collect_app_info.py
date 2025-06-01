@@ -16,6 +16,12 @@ preserve_filename_apps = [
 
 # zip, tar etc
 app_urls = [
+    "https://formulae.brew.sh/api/cask/signal.json",
+    "https://formulae.brew.sh/api/cask/medis.json",
+    "https://formulae.brew.sh/api/cask/sourcetree.json",
+    "https://formulae.brew.sh/api/cask/sequel-ace.json",
+    "https://formulae.brew.sh/api/cask/textmate.json",
+    "https://formulae.brew.sh/api/cask/free-ruler.json",
     "https://formulae.brew.sh/api/cask/superlist.json",
     "https://formulae.brew.sh/api/cask/viz.json",
     "https://formulae.brew.sh/api/cask/huggingchat.json",
@@ -77,12 +83,11 @@ app_urls = [
     "https://formulae.brew.sh/api/cask/shortcat.json",
     "https://formulae.brew.sh/api/cask/copilot-for-xcode.json",
     "https://formulae.brew.sh/api/cask/macs-fan-control.json",
-    "https://formulae.brew.sh/api/cask/copyq.json",
     "https://formulae.brew.sh/api/cask/plex.json",
     "https://formulae.brew.sh/api/cask/macwhisper.json",
     "https://formulae.brew.sh/api/cask/reactotron.json",
     "https://formulae.brew.sh/api/cask/macdown.json",
-    "https://formulae.brew.sh/api/cask/middleclick.json"
+    "https://formulae.brew.sh/api/cask/middleclick.json",
     "https://formulae.brew.sh/api/cask/openmtp.json",
     "https://formulae.brew.sh/api/cask/pearcleaner.json",
     "https://formulae.brew.sh/api/cask/notunes.json",
@@ -175,6 +180,7 @@ app_urls = [
 
 # DMG
 homebrew_cask_urls = [
+    "https://formulae.brew.sh/api/cask/mysqlworkbench.json",
     "https://formulae.brew.sh/api/cask/multiapp.json",
     "https://formulae.brew.sh/api/cask/recut.json",
     "https://formulae.brew.sh/api/cask/firefox@esr.json",
@@ -264,8 +270,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/rocket-chat.json",
     "https://formulae.brew.sh/api/cask/rocket.json",
     "https://formulae.brew.sh/api/cask/rsyncui.json",
-    "https://formulae.brew.sh/api/cask/soapui.json",
-    "https://formulae.brew.sh/api/cask/sound-siphon.json",
     "https://formulae.brew.sh/api/cask/pika.json",
     "https://formulae.brew.sh/api/cask/requestly.json",
     "https://formulae.brew.sh/api/cask/adguard.json",
@@ -297,7 +301,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/grandperspective.json",
     "https://formulae.brew.sh/api/cask/moonlight.json",
     "https://formulae.brew.sh/api/cask/freetube.json",
-    "https://formulae.brew.sh/api/cask/zenmap.json",
     "https://formulae.brew.sh/api/cask/chatwise.json",
     "https://formulae.brew.sh/api/cask/motrix.json",
     "https://formulae.brew.sh/api/cask/phpstorm.json",
@@ -319,7 +322,7 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/wechat.json",
     "https://formulae.brew.sh/api/cask/redis-insight.json",
     "https://formulae.brew.sh/api/cask/mos.json",
-    "https://formulae.brew.sh/api/cask/localsend.json"
+    "https://formulae.brew.sh/api/cask/localsend.json",
     "https://formulae.brew.sh/api/cask/qbittorrent.json",
     "https://formulae.brew.sh/api/cask/monitorcontrol.json",
     "https://formulae.brew.sh/api/cask/lulu.json",
@@ -360,7 +363,6 @@ homebrew_cask_urls = [
     "https://formulae.brew.sh/api/cask/mongodb-compass.json",
     "https://formulae.brew.sh/api/cask/suspicious-package.json",
     "https://formulae.brew.sh/api/cask/notion.json",
-    "https://formulae.brew.sh/api/cask/signal.json",
     "https://formulae.brew.sh/api/cask/anydesk.json",
     "https://formulae.brew.sh/api/cask/android-studio.json",
     "https://formulae.brew.sh/api/cask/brave-browser.json",
@@ -547,7 +549,6 @@ pkg_urls = [
     "https://formulae.brew.sh/api/cask/quarto.json",
     "https://formulae.brew.sh/api/cask/squirrel.json",
     "https://formulae.brew.sh/api/cask/displaylink.json",
-    "https://formulae.brew.sh/api/cask/metasploit.json",
     "https://formulae.brew.sh/api/cask/background-music.json",
     "https://formulae.brew.sh/api/cask/nextcloud.json",
     "https://formulae.brew.sh/api/cask/cloudflare-warp.json",
@@ -795,35 +796,37 @@ def update_readme_with_latest_changes(apps_info):
     else:
         updates_section += "> All applications are up to date! 🎉\n"
 
-    # Find where to insert the updates section (after the Public Preview notice)
-    preview_notice_end = "Thank you for being an early adopter! 🙏"
+    # Find where to insert the updates section (before the Features section)
     features_section = "## ✨ Features"
     
-    if preview_notice_end in content and features_section in content:
-        parts = content.split(preview_notice_end, 1)
+    if features_section in content:
+        parts = content.split(features_section, 1)
         if len(parts) == 2:
-            second_parts = parts[1].split(features_section, 1)
-            if len(second_parts) == 2:
-                # Remove existing updates section if it exists
-                if "## 🔄 Latest Updates" in second_parts[0]:
-                    second_parts[0] = "\n\n"
-                
-                # Construct new content with updates section in the new location
-                new_content = (
-                    parts[0] + 
-                    preview_notice_end + 
-                    "\n\n" +
-                    updates_section +
-                    features_section +
-                    second_parts[1]
-                )
-                
-                # Write the updated content back to README.md
-                with open(readme_path, 'w') as f:
-                    f.write(new_content)
-                return
+            # Remove existing updates section if it exists
+            if "## 🔄 Latest Updates" in parts[0]:
+                # Find the start of the updates section
+                updates_start = parts[0].find("## 🔄 Latest Updates")
+                # Find the last newline before the updates section
+                last_newline = parts[0].rfind("\n\n", 0, updates_start)
+                if last_newline != -1:
+                    # Keep everything before the updates section
+                    parts[0] = parts[0][:last_newline] + "\n\n"
+            
+            # Construct new content with updates section in the new location
+            new_content = (
+                parts[0] +
+                updates_section +
+                features_section +
+                parts[1]
+            )
+            
+            # Write the updated content back to README.md
+            with open(readme_path, 'w') as f:
+                f.write(new_content)
+            print(f"Updated README.md with latest changes and timestamp: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC")
+            return
     
-    print("Could not find the correct location to insert the updates section")
+    print("Could not find the Features section in README.md")
 
 def main():
     apps_folder = "Apps"

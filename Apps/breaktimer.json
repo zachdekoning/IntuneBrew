@@ -8,5 +8,15 @@
   "fileName": "BreakTimer.dmg",
   "sha": "d6e46421ec302431132040cbdd148e3ba634b609c42a152ad85c27f00ea440b0",
   "changelog": "https://github.com/tom-james-watson/breaktimer-app/releases",
+  "qa_info": {
+    "qa_timestamp": "2025-05-12T11:45:14Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.3.2"
+  },
   "previous_version": "1.3.2"
 }

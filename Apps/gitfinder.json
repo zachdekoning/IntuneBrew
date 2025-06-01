@@ -7,5 +7,15 @@
   "homepage": "https://gitfinder.com/",
   "fileName": "GitFinder1_7_11.dmg",
   "sha": "7e44b01f839cbf3004af918a18d4479b0962450c7befcf5785ca4c4d28906cce",
+  "qa_info": {
+    "qa_timestamp": "2025-05-13T08:18:28Z",
+    "qa_result": "Installation successful and verified",
+    "download_status": "success",
+    "sha_status": "verified",
+    "install_status": "success",
+    "verify_status": "app_found",
+    "bundle_id_status": "verified",
+    "installed_version": "1.7.11"
+  },
   "previous_version": "1.7.11"
 }
