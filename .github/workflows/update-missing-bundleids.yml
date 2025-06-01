@@ -206,7 +206,7 @@ jobs:
             if [ "$FILE_TYPE" = "pkg" ]; then
               # Install PKG file
               echo "📦 Installing $APP_NAME from PKG..."
-              sudo installer -pkg app_package.pkg -target /
+              sudo installer -pkg "$DOWNLOAD_PATH" -target /
               
               if [ $? -ne 0 ]; then
                 echo "❌ Installation failed"
