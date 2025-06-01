@@ -56,7 +56,7 @@ Version 0.3.7: Fix Parse Errors
 
 .PARAMETER UseExistingIntuneApp
  Specifies whether the script should update existing Intune app entries (if they exist) instead of creating new ones
- Example: IntuneBrew -UpdateAll UseExistingIntuneApp
+ Example: IntuneBrew -UpdateAll -UseExistingIntuneApp
 
  .PARAMETER ConfigFile
  Specifies the path to a the configuration file containing authentication information (see clientSecret_Template.json and certificateThumbprint_Template.json for configuration layout)
