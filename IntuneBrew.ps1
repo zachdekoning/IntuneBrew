@@ -1231,7 +1231,7 @@ function Test-ValidUrl {
         [string]$url
     )
 
-    if ($url -match "^$gitHubRespositoryRawUrl/main/Apps/.*\.json$") {
+    if ($url -match "^$([regex]::Escape($gitHubRespositoryRawUrl))/main/Apps/.*\.json$") {
         return $true
     }
     else {
